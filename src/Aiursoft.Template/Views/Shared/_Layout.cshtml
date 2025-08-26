@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <title>@ViewData["Title"] - 飞行员课程登记管理系统</title>
+    <link rel="stylesheet" href="~/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/node_modules/@@aiursoft/autodark.js/dist/css/autodark.min.css" />
+    <link rel="stylesheet" href="~/node_modules/@@fortawesome/fontawesome-free/css/all.min.css" />
+</head>
+
+<body class="d-flex flex-column h-100 pt-5">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">飞行员课程登记管理系统</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Submit" asp-action="Index">记录</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Submit" asp-action="Log">日志</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Levels" asp-action="Index">级别</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Teachers" asp-action="Index">用户</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Sites" asp-action="Index">校区</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="ClassTypes" asp-action="Index">课程</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="MoneyMaps" asp-action="Index">课时费</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Report" asp-action="Index">统计</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin") || User.IsInRole("Reviewer"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="TeachEvents" asp-action="Index">历史</a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">关于</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline">
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            &copy; @DateTime.UtcNow.Year - Aiursoft.Template - <a
+                href="https://gitlab.aiursoft.cn/anduin/FlyClass">源代码</a>
+        </div>
+    </footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module">
+        import { autoTheme } from '/node_modules/@@aiursoft/autodark.js/dist/esm/autodark.js';
+        autoTheme();
+    </script>
+
+    @(await RenderSectionAsync("scripts", false))
+</body>
+
+</html>

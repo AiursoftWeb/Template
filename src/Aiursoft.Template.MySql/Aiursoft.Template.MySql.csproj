@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>Aiursoft.Template.MySql</AssemblyName>
+    <RootNamespace>Aiursoft.Template.MySql</RootNamespace>
+    <IsTestProject>false</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aiursoft.Template.Entities\Aiursoft.Template.Entities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aiursoft.DbTools.MySql" Version="9.0.22" />
+  </ItemGroup>
+</Project>
