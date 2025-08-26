@@ -13,14 +13,7 @@
     <dl class="dl-horizontal">
         <dt>密码:</dt>
         <dd>
-            @if (Model.HasPassword)
-            {
-                <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">修改</a>
-            }
-            else
-            {
-                <a asp-controller="Manage" asp-action="SetPassword" class="btn-bracketed">创建</a>
-            }
+            <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">修改</a>
         </dd>
     </dl>
 </div>

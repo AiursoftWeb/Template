@@ -6,92 +6,13 @@ namespace Aiursoft.Template;
 
 public static class ProgramExtends
 {
-    private static async Task AddPaymentOption(FlyClassDbContext db, string levelType, string classType, int payment)
-    {
-        var classTypeId = await db.ClassTypes.Where(t => t.Name == classType).Select(t => t.Id).FirstAsync();
-        var levelTypeId = await db.Levels.Where(t => t.Name == levelType).Select(t => t.Id).FirstAsync();
-
-        await db.AddAsync(new MoneyMap
-        {
-            ClassTypeId = classTypeId,
-            LevelId = levelTypeId,
-            Bonus = payment
-        });
-    }
-
     public static async Task<IHost> SeedAsync(this IHost host)
     {
         using var scope = host.Services.CreateScope();
         var services = scope.ServiceProvider;
-        var db = services.GetRequiredService<FlyClassDbContext>();
-        var userManager = services.GetRequiredService<UserManager<Teacher>>();
+        var db = services.GetRequiredService<TemplateDbContext>();
+        var userManager = services.GetRequiredService<UserManager<User>>();
         var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-        if (!await db.Levels.AnyAsync())
-        {
-            await db.Levels.AddAsync(new Level
-            {
-                Name = "实习老师"
-            });
-            await db.Levels.AddAsync(new Level
-            {
-                Name = "初级老师"
-            });
-            await db.Levels.AddAsync(new Level
-            {
-                Name = "中级老师"
-            });
-            await db.Levels.AddAsync(new Level
-            {
-                Name = "高级老师"
-            });
-            await db.SaveChangesAsync();
-        }
-        if (!await db.Sites.AnyAsync())
-        {
-            await db.Sites.AddAsync(new Site
-            {
-                SiteName = "昆山校区"
-            });
-            await db.Sites.AddAsync(new Site
-            {
-                SiteName = "相城校区"
-            });
-            await db.SaveChangesAsync();
-        }
-        if (!await db.ClassTypes.AnyAsync())
-        {
-            await db.ClassTypes.AddAsync(new ClassType
-            {
-                Name = "45分钟正式课"
-            });
-            await db.ClassTypes.AddAsync(new ClassType
-            {
-                Name = "60分钟正式课"
-            });
-            await db.ClassTypes.AddAsync(new ClassType
-            {
-                Name = "90分钟正式课"
-            });
-            await db.SaveChangesAsync();
-        }
-
-        if (!await db.MoneyMaps.AnyAsync())
-        {
-            await AddPaymentOption(db, "实习老师", "45分钟正式课", 120);
-            await AddPaymentOption(db, "实习老师", "60分钟正式课", 140);
-            await AddPaymentOption(db, "实习老师", "90分钟正式课", 160);
-            await AddPaymentOption(db, "初级老师", "45分钟正式课", 160);
-            await AddPaymentOption(db, "初级老师", "60分钟正式课", 200);
-            await AddPaymentOption(db, "初级老师", "90分钟正式课", 300);
-            await AddPaymentOption(db, "中级老师", "45分钟正式课", 200);
-            await AddPaymentOption(db, "中级老师", "60分钟正式课", 260);
-            await AddPaymentOption(db, "中级老师", "90分钟正式课", 400);
-            await AddPaymentOption(db, "高级老师", "45分钟正式课", 240);
-            await AddPaymentOption(db, "高级老师", "60分钟正式课", 300);
-            await AddPaymentOption(db, "高级老师", "90分钟正式课", 440);
-            await db.SaveChangesAsync();
-        }
-
         var role = await roleManager.FindByNameAsync("Admin");
         if (role == null)
         {
@@ -99,22 +20,12 @@ public static class ProgramExtends
             await roleManager.CreateAsync(role);
         }
 
-        role = await roleManager.FindByNameAsync("Reviewer");
-        if (role == null)
+        if (!await db.Users.AnyAsync())
         {
-            role = new IdentityRole("Reviewer");
-            await roleManager.CreateAsync(role);
-        }
-
-        if (!await db.Teachers.AnyAsync())
-        {
-            var defaultLevel = await db.Levels.OrderByDescending(t => t.Id).FirstAsync();
-            var user = new Teacher
+            var user = new User
             {
-                ChineseName = "管理员",
-                UserName = "admin@default.com",
+                UserName = "admin",
                 Email = "admin@default.com",
-                LevelId = defaultLevel.Id,
             };
             _ = await userManager.CreateAsync(user, "admin123");
             await userManager.AddToRoleAsync(user, "Admin");

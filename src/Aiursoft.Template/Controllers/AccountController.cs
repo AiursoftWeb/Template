@@ -3,15 +3,13 @@ using Aiursoft.Template.Models.AccountViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class AccountController(
-    FlyClassDbContext context,
-    UserManager<Teacher> userManager,
-    SignInManager<Teacher> signInManager,
+    UserManager<User> userManager,
+    SignInManager<User> signInManager,
     ILoggerFactory loggerFactory)
     : Controller
 {
@@ -37,9 +35,19 @@ public class AccountController(
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-            var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, true, lockoutOnFailure: false);
+            var possibleUser = await userManager.FindByEmailAsync(model.EmailOrUserName);
+            if (possibleUser == null)
+            {
+                possibleUser = await userManager.FindByNameAsync(model.EmailOrUserName);
+            }
+
+            if (possibleUser == null)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                return View("Login");
+            }
+
+            var result = await signInManager.PasswordSignInAsync(possibleUser, model.Password, true, lockoutOnFailure: true);
             if (result.Succeeded)
             {
                 _logger.LogInformation(1, "User logged in");
@@ -81,13 +89,10 @@ public class AccountController(
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            var defaultLevel = await context.Levels.FirstAsync();
-            var user = new Teacher
+            var user = new User
             {
-                ChineseName = model.Name,
-                UserName = model.Email,
+                UserName = model.Email.Split('@')[0],
                 Email = model.Email,
-                LevelId = defaultLevel.Id,
             };
             var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)

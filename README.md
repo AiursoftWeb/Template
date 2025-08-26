@@ -1,13 +1,13 @@
-# Template - A simple class registration system
+# Template - A sample project
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/template.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/commits/master?ref_type=heads)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Ftemplate.aiursoft.cn)](https://template.aiursoft.cn)
-[![Docker](https://img.shields.io/docker/pulls/aiursoft2019/template.svg)](https://hub.docker.com/r/aiursoft2019/template)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/template.svg)](https://hub.docker.com/r/aiursoft/template)
 
-Template is a simple class registration system.
+Template is a sample project.
 
 Default user name is `admin@default.com` and default password is `admin123`.
 

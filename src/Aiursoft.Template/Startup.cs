@@ -25,7 +25,7 @@ public class Startup : IWebStartup
             ]);
 
         services.AddMemoryCache();
-        services.AddIdentity<Teacher, IdentityRole>(options => options.Password = new PasswordOptions
+        services.AddIdentity<User, IdentityRole>(options => options.Password = new PasswordOptions
         {
             RequireNonAlphanumeric = false,
             RequireDigit = false,
@@ -34,7 +34,7 @@ public class Startup : IWebStartup
             RequireLowercase = false,
             RequireUppercase = false
         })
-        .AddEntityFrameworkStores<FlyClassDbContext>()
+        .AddEntityFrameworkStores<TemplateDbContext>()
         .AddDefaultTokenProviders();
 
         services.AddControllersWithViews().AddApplicationPart(typeof(Startup).Assembly);

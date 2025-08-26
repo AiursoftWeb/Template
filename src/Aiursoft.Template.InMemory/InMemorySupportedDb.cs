@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.Template.InMemory;
 
-public class InMemorySupportedDb : SupportedDatabaseType<FlyClassDbContext>
+public class InMemorySupportedDb : SupportedDatabaseType<TemplateDbContext>
 {
     public override string DbType => "InMemory";
 
@@ -14,7 +14,7 @@ public class InMemorySupportedDb : SupportedDatabaseType<FlyClassDbContext>
         return services.AddAiurInMemoryDb<InMemoryContext>();
     }
 
-    public override FlyClassDbContext ContextResolver(IServiceProvider serviceProvider)
+    public override TemplateDbContext ContextResolver(IServiceProvider serviceProvider)
     {
         return serviceProvider.GetRequiredService<InMemoryContext>();
     }

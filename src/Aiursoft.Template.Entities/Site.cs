@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Aiursoft.Template.Entities;
 
@@ -9,7 +8,4 @@ public class Site
     [Display(Name = "校区名称")]
     [MaxLength(100)]
     public required string SiteName { get; init; }
-
-    [InverseProperty(nameof(TeachEvent.Site))]
-    public IEnumerable<TeachEvent> TeachEvents { get; init; } = new List<TeachEvent>();
 }

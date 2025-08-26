@@ -5,10 +5,6 @@ namespace Aiursoft.Template.Models.AccountViewModels;
 public class RegisterViewModel
 {
     [Required]
-    [Display(Name = "姓名")]
-    public required string Name { get; set; }
-
-    [Required]
     [EmailAddress]
     [Display(Name = "Email地址（用于登录）")]
     public required string Email { get; set; }

@@ -1,7 +1,6 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
@@ -25,7 +24,7 @@ public class BasicTests
     public async Task CreateServer()
     {
         _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<FlyClassDbContext>();
+        await _server.UpdateDbAsync<TemplateDbContext>();
         await _server.SeedAsync();
         await _server.StartAsync();
     }

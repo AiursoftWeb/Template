@@ -4,14 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Template.Entities;
 
-public abstract class FlyClassDbContext(DbContextOptions options) : IdentityDbContext<Teacher>(options), ICanMigrate
+public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
-    public DbSet<Teacher> Teachers => Set<Teacher>();
-    public DbSet<TeachEvent> TeachEvents => Set<TeachEvent>();
-    public DbSet<Level> Levels => Set<Level>();
     public DbSet<Site> Sites => Set<Site>();
-    public DbSet<ClassType> ClassTypes => Set<ClassType>();
-    public DbSet<MoneyMap> MoneyMaps => Set<MoneyMap>();
 
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);

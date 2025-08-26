@@ -23,4 +23,29 @@
     <ProjectReference Include="..\Aiursoft.Template.MySql\Aiursoft.Template.MySql.csproj" />
     <ProjectReference Include="..\Aiursoft.Template.Sqlite\Aiursoft.Template.Sqlite.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\ClassTypes\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\ClassTypes\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\ClassTypes\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\ClassTypes\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\ClassTypes\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Levels\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Levels\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Levels\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Levels\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Levels\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\MoneyMaps\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\MoneyMaps\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\MoneyMaps\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\MoneyMaps\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\MoneyMaps\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Report\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Submit\Index.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Submit\Log.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\TeachEvents\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\TeachEvents\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\TeachEvents\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\TeachEvents\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\TeachEvents\Index.cshtml" />
+  </ItemGroup>
 </Project>

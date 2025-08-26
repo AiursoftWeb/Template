@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 namespace Aiursoft.Template.Controllers;
 
 [Authorize(Roles = "Admin")]
-public class SitesController(FlyClassDbContext context) : Controller
+public class SitesController(TemplateDbContext context) : Controller
 {
     // GET: Sites
     public async Task<IActionResult> Index()

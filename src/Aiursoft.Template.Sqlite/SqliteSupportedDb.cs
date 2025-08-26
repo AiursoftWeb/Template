@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.Template.Sqlite;
 
-public class SqliteSupportedDb(bool allowCache, bool splitQuery) : SupportedDatabaseType<FlyClassDbContext>
+public class SqliteSupportedDb(bool allowCache, bool splitQuery) : SupportedDatabaseType<TemplateDbContext>
 {
     public override string DbType => "Sqlite";
 
@@ -17,7 +17,7 @@ public class SqliteSupportedDb(bool allowCache, bool splitQuery) : SupportedData
             allowCache: allowCache);
     }
 
-    public override FlyClassDbContext ContextResolver(IServiceProvider serviceProvider)
+    public override TemplateDbContext ContextResolver(IServiceProvider serviceProvider)
     {
         return serviceProvider.GetRequiredService<SqliteContext>();
     }

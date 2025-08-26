@@ -8,8 +8,8 @@ namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class ManageController(
-    UserManager<Teacher> userManager,
-    SignInManager<Teacher> signInManager,
+    UserManager<User> userManager,
+    SignInManager<User> signInManager,
     ILoggerFactory loggerFactory)
     : Controller
 {
@@ -18,24 +18,14 @@ public class ManageController(
     //
     // GET: /Manage/Index
     [HttpGet]
-    public async Task<IActionResult> Index(ManageMessageId? message = null)
+    public IActionResult Index(ManageMessageId? message = null)
     {
         ViewData["StatusMessage"] =
             message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-            : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-            : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
             : message == ManageMessageId.Error ? "An error has occurred."
-            : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
-            : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
             : "";
 
-        var user = await GetCurrentUserAsync();
-        var model = new IndexViewModel
-        {
-            HasPassword = await userManager.HasPasswordAsync(user!),
-            TwoFactor = await userManager.GetTwoFactorEnabledAsync(user!),
-            BrowserRemembered = await signInManager.IsTwoFactorClientRememberedAsync(user!)
-        };
+        var model = new IndexViewModel();
         return View(model);
     }
 
@@ -73,40 +63,6 @@ public class ManageController(
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
     }
 
-    //
-    // GET: /Manage/SetPassword
-    [HttpGet]
-    public IActionResult SetPassword()
-    {
-        return View();
-    }
-
-    //
-    // POST: /Manage/SetPassword
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> SetPassword(SetPasswordViewModel model)
-    {
-        if (!ModelState.IsValid)
-        {
-            return View(model);
-        }
-
-        var user = await GetCurrentUserAsync();
-        if (user != null)
-        {
-            var result = await userManager.AddPasswordAsync(user, model.NewPassword);
-            if (result.Succeeded)
-            {
-                await signInManager.SignInAsync(user, isPersistent: false);
-                return RedirectToAction(nameof(Index), new { Message = ManageMessageId.SetPasswordSuccess });
-            }
-            AddErrors(result);
-            return View(model);
-        }
-        return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
-    }
-
     #region Helpers
 
     private void AddErrors(IdentityResult result)
@@ -119,17 +75,11 @@ public class ManageController(
 
     public enum ManageMessageId
     {
-        AddPhoneSuccess,
-        AddLoginSuccess,
         ChangePasswordSuccess,
-        SetTwoFactorSuccess,
-        SetPasswordSuccess,
-        RemoveLoginSuccess,
-        RemovePhoneSuccess,
         Error
     }
 
-    private Task<Teacher?> GetCurrentUserAsync()
+    private Task<User?> GetCurrentUserAsync()
     {
         return userManager.GetUserAsync(HttpContext.User);
     }
