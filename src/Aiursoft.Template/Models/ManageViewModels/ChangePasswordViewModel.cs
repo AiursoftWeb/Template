@@ -1,9 +1,16 @@
 using System.ComponentModel.DataAnnotations;
+using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.ManageViewModels;
 
-public class ChangePasswordViewModel
+public class ChangePasswordViewModel: UiStackLayoutViewModel
 {
+    public ChangePasswordViewModel(HttpContext context)
+    {
+        ViewModelArgsInjector.Inject(context, this, "Change Password");
+    }
+
     [Required]
     [DataType(DataType.Password)]
     [Display(Name = "当前密码")]

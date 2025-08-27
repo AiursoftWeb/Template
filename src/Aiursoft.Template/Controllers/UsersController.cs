@@ -80,7 +80,7 @@ public class UsersController(
             return NotFound();
         }
 
-        return View(new EditTeacherViewModel
+        return View(new EditTeacherViewModel(HttpContext)
         {
             Id = id,
             Email = teacher.Email!,

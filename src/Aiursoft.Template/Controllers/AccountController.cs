@@ -22,7 +22,7 @@ public class AccountController(
     public IActionResult Login(string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
-        return View();
+        return View(new LoginViewModel(HttpContext));
     }
 
     //
@@ -35,10 +35,10 @@ public class AccountController(
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
-            var possibleUser = await userManager.FindByEmailAsync(model.EmailOrUserName);
+            var possibleUser = await userManager.FindByEmailAsync(model.EmailOrUserName!);
             if (possibleUser == null)
             {
-                possibleUser = await userManager.FindByNameAsync(model.EmailOrUserName);
+                possibleUser = await userManager.FindByNameAsync(model.EmailOrUserName!);
             }
 
             if (possibleUser == null)
@@ -47,7 +47,7 @@ public class AccountController(
                 return View("Login");
             }
 
-            var result = await signInManager.PasswordSignInAsync(possibleUser, model.Password, true, lockoutOnFailure: true);
+            var result = await signInManager.PasswordSignInAsync(possibleUser, model.Password!, true, lockoutOnFailure: true);
             if (result.Succeeded)
             {
                 _logger.LogInformation(1, "User logged in");

@@ -5,6 +5,7 @@ using Aiursoft.Template.Entities;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Sqlite;
+using Aiursoft.UiStack.Layout;
 using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template;
@@ -37,7 +38,8 @@ public class Startup : IWebStartup
         .AddEntityFrameworkStores<TemplateDbContext>()
         .AddDefaultTokenProviders();
 
-        services.AddControllersWithViews().AddApplicationPart(typeof(Startup).Assembly);
+        services.AddControllersWithViews()
+            .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly);
     }
 
     public void Configure(WebApplication app)

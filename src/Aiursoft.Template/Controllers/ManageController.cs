@@ -25,7 +25,7 @@ public class ManageController(
             : message == ManageMessageId.Error ? "An error has occurred."
             : "";
 
-        var model = new IndexViewModel();
+        var model = new IndexViewModel(HttpContext);
         return View(model);
     }
 

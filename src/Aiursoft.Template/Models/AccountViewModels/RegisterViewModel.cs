@@ -1,9 +1,16 @@
 using System.ComponentModel.DataAnnotations;
+using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.AccountViewModels;
 
-public class RegisterViewModel
+public class RegisterViewModel: UiStackLayoutViewModel
 {
+    public RegisterViewModel(HttpContext context)
+    {
+        ViewModelArgsInjector.Inject(context, this, "Register");
+    }
+
     [Required]
     [EmailAddress]
     [Display(Name = "Email地址（用于登录）")]

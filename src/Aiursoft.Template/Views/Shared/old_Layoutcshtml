@@ -53,7 +53,7 @@
     <footer class="footer mt-auto py-3">
         <div class="container">
             &copy; @DateTime.UtcNow.Year - Aiursoft.Template - <a
-                href="https://gitlab.aiursoft.cn/anduin/FlyClass">源代码</a>
+                href="https://gitlab.aiursoft.cn/aiursoft/template">Source Code</a>
         </div>
     </footer>
 

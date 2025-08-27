@@ -1,9 +1,16 @@
 using System.ComponentModel.DataAnnotations;
+using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
-public class CreateTeacherAddressModel
+public class CreateTeacherAddressModel: UiStackLayoutViewModel
 {
+    public CreateTeacherAddressModel(HttpContext context)
+    {
+        ViewModelArgsInjector.Inject(context, this, "Create User");
+    }
+
     [EmailAddress]
     [Display(Name = "Email地址")]
     [Required]
