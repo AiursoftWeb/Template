@@ -1,23 +1,29 @@
 using System.ComponentModel.DataAnnotations;
+using Aiursoft.CSTools.Attributes;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
-public class CreateTeacherAddressModel: UiStackLayoutViewModel
+public class CreateViewModel: UiStackLayoutViewModel
 {
-    public CreateTeacherAddressModel()
+    public CreateViewModel()
     {
         PageTitle = "Create Teacher";
     }
 
+    [Required]
+    [Display(Name = "用户名")]
+    [ValidDomainName]
+    public string? UserName { get; set; }
+
     [EmailAddress]
     [Display(Name = "Email地址")]
     [Required]
-    public required string Email { get; set; }
+    public string? Email { get; set; }
 
     [Required]
     [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
     [DataType(DataType.Password)]
     [Display(Name = "密码")]
-    public required string Password { get; set; }
+    public string? Password { get; set; }
 }

@@ -4,9 +4,9 @@ using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
-public class EditTeacherViewModel: UiStackLayoutViewModel
+public class EditViewModel: UiStackLayoutViewModel
 {
-    public EditTeacherViewModel()
+    public EditViewModel()
     {
         PageTitle = "Edit Teacher";
     }

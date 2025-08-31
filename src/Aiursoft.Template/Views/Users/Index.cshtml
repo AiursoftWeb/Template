@@ -1,6 +1,6 @@
 @using Aiursoft.Template.Entities
 @using Microsoft.AspNetCore.Identity
-@model IEnumerable<Aiursoft.Template.Entities.User>
+@model Aiursoft.Template.Models.UsersViewModels.IndexViewModel
 @inject UserManager<User> UserManager
 @{
     ViewData["Title"] = "教师管理";
@@ -9,25 +9,25 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">添加教师</a>
+    <a asp-action="Create">添加用户</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.UserName)
+                User name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                Email
             </th>
             <th>
-                是管理员
+                Is Admin
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Users)
         {
             <tr>
                 <td>
@@ -39,7 +39,7 @@
                     @{
                         var isAdmin = await UserManager.IsInRoleAsync(item, "Admin");
                     }
-                    @(isAdmin ? "是" : string.Empty)
+                    @(isAdmin ? "Yes" : string.Empty)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">编辑</a> |

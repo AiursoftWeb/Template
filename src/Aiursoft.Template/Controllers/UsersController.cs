@@ -15,7 +15,11 @@ public class UsersController(
 {
     public async Task<IActionResult> Index()
     {
-          return View(await context.Users.ToListAsync());
+        var users = await context.Users.ToListAsync();
+        return this.StackView(new IndexViewModel
+        {
+            Users = users
+        });
     }
 
     public async Task<IActionResult> Details(string? id)
@@ -25,45 +29,48 @@ public class UsersController(
             return NotFound();
         }
 
-        var teacher = await context.Users
+        var user = await context.Users
             .FirstOrDefaultAsync(m => m.Id == id);
-        if (teacher == null)
+        if (user == null)
         {
             return NotFound();
         }
 
-        return View(teacher);
+        return this.StackView(new DetailsViewModel
+        {
+            User = user
+        });
     }
 
     public IActionResult Create()
     {
-        return View();
+        return this.StackView(new CreateViewModel());
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CreateTeacherAddressModel newTeacher)
+    public async Task<IActionResult> Create(CreateViewModel newTeacher)
     {
         if (ModelState.IsValid)
         {
             var user = new User
             {
-                UserName = newTeacher.Email,
+                UserName = newTeacher.UserName,
                 Email = newTeacher.Email,
             };
-            var result = await userManager.CreateAsync(user, newTeacher.Password);
+            var result = await userManager.CreateAsync(user, newTeacher.Password!);
             if (!result.Succeeded)
             {
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                return View(newTeacher);
+                return this.StackView(newTeacher);
             }
 
             return RedirectToAction(nameof(Index));
         }
-        return View(newTeacher);
+        return this.StackView(newTeacher);
     }
 
     // GET: Teachers/Edit/5
@@ -80,7 +87,7 @@ public class UsersController(
             return NotFound();
         }
 
-        return this.StackView(new EditTeacherViewModel()
+        return this.StackView(new EditViewModel
         {
             Id = id,
             Email = teacher.Email!,
@@ -95,7 +102,7 @@ public class UsersController(
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(string id, EditTeacherViewModel model)
+    public async Task<IActionResult> Edit(string id, EditViewModel model)
     {
         if (id != model.Id)
         {
@@ -156,14 +163,17 @@ public class UsersController(
             return NotFound();
         }
 
-        var teacher = await context.Users
+        var user = await context.Users
             .FirstOrDefaultAsync(m => m.Id == id);
-        if (teacher == null)
+        if (user == null)
         {
             return NotFound();
         }
 
-        return View(teacher);
+        return this.StackView(new DeleteViewModel
+        {
+            User = user,
+        });
     }
 
     // POST: Teachers/Delete/5
@@ -171,14 +181,14 @@ public class UsersController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
-        var teacher = await context.Users.FindAsync(id);
-        if (teacher == null)
+        var user = await context.Users.FindAsync(id);
+        if (user == null)
         {
-            return Problem("Entity set 'ApplicationDbContext.Teachers'  is null.");
+            return NotFound();
         }
 
-        await userManager.RemoveFromRoleAsync(teacher, "Admin");
-        context.Users.Remove(teacher);
+        await userManager.RemoveFromRoleAsync(user, "Admin");
+        context.Users.Remove(user);
 
         await context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));

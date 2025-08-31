@@ -1,14 +1,18 @@
+using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
+using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
 using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
 using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
+using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
+using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template.Services;
 
-public class ViewModelArgsInjector
+public class ViewModelArgsInjector(SignInManager<User> signInManager)
 {
     public void Inject(
         HttpContext context,
@@ -20,13 +24,14 @@ public class ViewModelArgsInjector
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = "ManHours", Href = "/" },
+            AppBrand = new Link { Text = "Template", Href = "/" },
             Links =
             [
                 new Link { Text = "Home", Href = "/" },
                 new Link { Text = "Aiursoft", Href = "https://www.aiursoft.cn" },
             ]
         };
+        toInject.Navbar = new NavbarViewModel();
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
@@ -89,7 +94,35 @@ public class ViewModelArgsInjector
             }
         };
 
-        if (!context.User.Identity?.IsAuthenticated == true)
+        if (signInManager.IsSignedIn(context.User))
+        {
+            toInject.Navbar.UserDropdown = new UserDropdownViewModel
+            {
+                UserName = context.User.Identity?.Name ?? "Anonymous",
+                UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
+                IconLinkGroups =
+                [
+                    new IconLinkGroup
+                    {
+                        Links =
+                        [
+                            new IconLink { Icon = "user", Text = "Profile", Href = "#" },
+                            new IconLink { Icon = "pie-chart", Text = "Analytics", Href = "#" }
+                        ]
+                    },
+                    new IconLinkGroup
+                    {
+                        Links =
+                        [
+                            new IconLink { Text = "Settings", Href = "/Manage", Icon = "settings" },
+                            new IconLink { Text = "Help", Href = "#", Icon = "help-circle" },
+                            new IconLink { Text = "Sign out", Href = "/Account/Logoff", Icon = "log-out" }
+                        ]
+                    }
+                ]
+            };
+        }
+        else
         {
             toInject.Sidebar.SideAdvertisement = new SideAdvertisementViewModel
             {
@@ -97,6 +130,22 @@ public class ViewModelArgsInjector
                 Description = "Login to get access to all features.",
                 Href = "/Account/Login",
                 ButtonText = "Login"
+            };
+            toInject.Navbar.UserDropdown = new UserDropdownViewModel
+            {
+                UserName = "Anonymous",
+                UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
+                IconLinkGroups =
+                [
+                    new IconLinkGroup
+                    {
+                        Links =
+                        [
+                            new IconLink { Text = "Login", Href = "/Account/Login", Icon = "settings" },
+                            new IconLink { Text = "Register", Href = "/Account/Register", Icon = "help-circle" },
+                        ]
+                    }
+                ]
             };
         }
     }
