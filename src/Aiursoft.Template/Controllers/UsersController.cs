@@ -80,7 +80,7 @@ public class UsersController(
             return NotFound();
         }
 
-        return View(new EditTeacherViewModel(HttpContext)
+        return this.StackView(new EditTeacherViewModel()
         {
             Id = id,
             Email = teacher.Email!,
@@ -145,7 +145,7 @@ public class UsersController(
             }
             return RedirectToAction(nameof(Index));
         }
-        return View(model);
+        return this.StackView(model);
     }
 
     // GET: Teachers/Delete/5

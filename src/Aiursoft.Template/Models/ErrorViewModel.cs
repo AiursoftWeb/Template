@@ -1,13 +1,12 @@
-using Aiursoft.Template.Services;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models;
 
 public class ErrorViewModel: UiStackLayoutViewModel
 {
-    public ErrorViewModel(HttpContext context)
+    public ErrorViewModel()
     {
-        ViewModelArgsInjector.Inject(context, this, "Error");
+        PageTitle = "Error";
     }
 
     public required string RequestId { get; set; }

@@ -1,20 +1,13 @@
 using System.ComponentModel.DataAnnotations;
-using Aiursoft.Template.Services;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.AccountViewModels;
 
 public class LoginViewModel: UiStackLayoutViewModel
 {
-    // ReSharper disable once UnusedMember.Global
-    // This constructor is used by the MVC framework.
     public LoginViewModel()
     {
-    }
-
-    public LoginViewModel(HttpContext context)
-    {
-        ViewModelArgsInjector.Inject(context, this, "Login");
+        PageTitle = "Login";
     }
 
     [Required]

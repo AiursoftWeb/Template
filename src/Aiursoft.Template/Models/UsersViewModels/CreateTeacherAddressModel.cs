@@ -1,14 +1,13 @@
 using System.ComponentModel.DataAnnotations;
-using Aiursoft.Template.Services;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
 public class CreateTeacherAddressModel: UiStackLayoutViewModel
 {
-    public CreateTeacherAddressModel(HttpContext context)
+    public CreateTeacherAddressModel()
     {
-        ViewModelArgsInjector.Inject(context, this, "Create User");
+        PageTitle = "Create Teacher";
     }
 
     [EmailAddress]

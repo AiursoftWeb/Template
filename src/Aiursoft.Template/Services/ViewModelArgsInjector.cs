@@ -8,14 +8,12 @@ using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 
 namespace Aiursoft.Template.Services;
 
-public static class ViewModelArgsInjector
+public class ViewModelArgsInjector
 {
-    public static void Inject(
+    public void Inject(
         HttpContext context,
-        UiStackLayoutViewModel toInject,
-        string pageTitle)
+        UiStackLayoutViewModel toInject)
     {
-        toInject.PageTitle = pageTitle;
         toInject.AppName = "Template";
         toInject.Theme = UiTheme.Dark;
         toInject.SidebarTheme = UiSidebarTheme.Dark;

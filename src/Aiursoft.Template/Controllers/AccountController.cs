@@ -22,7 +22,7 @@ public class AccountController(
     public IActionResult Login(string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
-        return View(new LoginViewModel(HttpContext));
+        return this.StackView(new LoginViewModel());
     }
 
     //
@@ -44,7 +44,7 @@ public class AccountController(
             if (possibleUser == null)
             {
                 ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return View("Login");
+                return this.StackView(new LoginViewModel());
             }
 
             var result = await signInManager.PasswordSignInAsync(possibleUser, model.Password!, true, lockoutOnFailure: true);
@@ -56,17 +56,17 @@ public class AccountController(
             if (result.IsLockedOut)
             {
                 _logger.LogWarning(2, "User account locked out");
-                return View("Lockout");
+                return this.StackView(new LockoutViewModel());
             }
             else
             {
                 ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return View(model);
+                return this.StackView(model);
             }
         }
 
         // If we got this far, something failed, redisplay form
-        return View(model);
+        return this.StackView(model);
     }
 
     //
@@ -76,7 +76,7 @@ public class AccountController(
     public IActionResult Register(string? returnUrl = null)
     {
         ViewData["ReturnUrl"] = returnUrl;
-        return View();
+        return this.StackView(new RegisterViewModel());
     }
 
     //
@@ -91,10 +91,10 @@ public class AccountController(
         {
             var user = new User
             {
-                UserName = model.Email.Split('@')[0],
+                UserName = model.Email!.Split('@')[0],
                 Email = model.Email,
             };
-            var result = await userManager.CreateAsync(user, model.Password);
+            var result = await userManager.CreateAsync(user, model.Password!);
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user, isPersistent: false);
@@ -105,7 +105,7 @@ public class AccountController(
         }
 
         // If we got this far, something failed, redisplay form
-        return View(model);
+        return this.StackView(model);
     }
 
     //

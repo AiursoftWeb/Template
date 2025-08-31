@@ -1,15 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using Aiursoft.CSTools.Attributes;
-using Aiursoft.Template.Services;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
 public class EditTeacherViewModel: UiStackLayoutViewModel
 {
-    public EditTeacherViewModel(HttpContext context)
+    public EditTeacherViewModel()
     {
-        ViewModelArgsInjector.Inject(context, this, "Edit User");
+        PageTitle = "Edit Teacher";
     }
 
     [Required]

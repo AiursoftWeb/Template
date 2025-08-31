@@ -25,8 +25,8 @@ public class ManageController(
             : message == ManageMessageId.Error ? "An error has occurred."
             : "";
 
-        var model = new IndexViewModel(HttpContext);
-        return View(model);
+        var model = new IndexViewModel();
+        return this.StackView(model);
     }
 
     //
@@ -34,7 +34,7 @@ public class ManageController(
     [HttpGet]
     public IActionResult ChangePassword()
     {
-        return View();
+        return this.StackView(new ChangePasswordViewModel());
     }
 
     //
@@ -45,12 +45,12 @@ public class ManageController(
     {
         if (!ModelState.IsValid)
         {
-            return View(model);
+            return this.StackView(model);
         }
         var user = await GetCurrentUserAsync();
         if (user != null)
         {
-            var result = await userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            var result = await userManager.ChangePasswordAsync(user, model.OldPassword!, model.NewPassword!);
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user, isPersistent: false);
@@ -58,7 +58,7 @@ public class ManageController(
                 return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);
-            return View(model);
+            return this.StackView(model);
         }
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
     }
