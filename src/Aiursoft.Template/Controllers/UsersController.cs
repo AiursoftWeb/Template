@@ -82,8 +82,8 @@ public class UsersController(
             return NotFound();
         }
 
-        var teacher = await context.Users.FindAsync(id);
-        if (teacher == null)
+        var user = await context.Users.FindAsync(id);
+        if (user == null)
         {
             return NotFound();
         }
@@ -91,14 +91,14 @@ public class UsersController(
         return this.StackView(new EditViewModel
         {
             Id = id,
-            Email = teacher.Email!,
-            IsAdmin = await userManager.IsInRoleAsync(teacher, "Admin"),
-            UserName = teacher.UserName!,
+            Email = user.Email!,
+            IsAdmin = await userManager.IsInRoleAsync(user, "Admin"),
+            UserName = user.UserName!,
             Password = "you-cant-read-it",
         });
     }
 
-    // POST: Teachers/Edit/5
+    // POST: Users/Edit/5
     // To protect from overposting attacks, enable the specific properties you want to bind to.
     // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
@@ -114,35 +114,35 @@ public class UsersController(
         {
             try
             {
-                var teacherInDb = await context.Users.FindAsync(id);
-                if (teacherInDb == null)
+                var userInDb = await context.Users.FindAsync(id);
+                if (userInDb == null)
                 {
                     return NotFound();
                 }
 
-                teacherInDb.Email = model.Email;
-                teacherInDb.UserName = model.UserName;
+                userInDb.Email = model.Email;
+                userInDb.UserName = model.UserName;
                 if (model.IsAdmin)
                 {
-                    await userManager.AddToRoleAsync(teacherInDb, "Admin");
+                    await userManager.AddToRoleAsync(userInDb, "Admin");
                 }
                 else
                 {
-                    await userManager.RemoveFromRoleAsync(teacherInDb, "Admin");
+                    await userManager.RemoveFromRoleAsync(userInDb, "Admin");
                 }
 
-                context.Update(teacherInDb);
+                context.Update(userInDb);
                 await context.SaveChangesAsync();
 
                 if (!string.IsNullOrWhiteSpace(model.Password))
                 {
-                    var token = await userManager.GeneratePasswordResetTokenAsync(teacherInDb);
-                    await userManager.ResetPasswordAsync(teacherInDb, token, model.Password);
+                    var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
+                    await userManager.ResetPasswordAsync(userInDb, token, model.Password);
                 }
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TeacherExists(model.Id))
+                if (!UserExists(model.Id))
                 {
                     return NotFound();
                 }
@@ -156,7 +156,7 @@ public class UsersController(
         return this.StackView(model);
     }
 
-    // GET: Teachers/Delete/5
+    // GET: Users/Delete/5
     public async Task<IActionResult> Delete(string? id)
     {
         if (id == null)
@@ -195,7 +195,7 @@ public class UsersController(
         return RedirectToAction(nameof(Index));
     }
 
-    private bool TeacherExists(string id)
+    private bool UserExists(string id)
     {
         return context.Users.Any(e => e.Id == id);
     }

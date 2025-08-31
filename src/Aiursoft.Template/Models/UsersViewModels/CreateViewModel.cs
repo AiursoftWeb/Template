@@ -8,7 +8,7 @@ public class CreateViewModel: UiStackLayoutViewModel
 {
     public CreateViewModel()
     {
-        PageTitle = "Create Teacher";
+        PageTitle = "Create User";
     }
 
     [Required]
