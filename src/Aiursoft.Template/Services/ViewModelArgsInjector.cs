@@ -32,6 +32,62 @@ public class ViewModelArgsInjector(SignInManager<User> signInManager)
             ]
         };
         toInject.Navbar = new NavbarViewModel();
+        var currentViewingController = context.GetRouteValue("controller")?.ToString();
+        var navGroups = new List<NavGroup>
+        {
+            new()
+            {
+                Name = "Home",
+                Items =
+                [
+                    new CascadedSideBarItem
+                    {
+                        UniqueId = "dashboards",
+                        Text = "Dashboards",
+                        IsActive = currentViewingController == "Home",
+                        LucideIcon = "layout",
+                        Decoration = new Decoration
+                        {
+                            Text = "5",
+                            ColorClass = "primary"
+                        },
+                        Links =
+                        [
+                            new CascadedLink
+                            {
+                                Href = "/",
+                                Text = "Default",
+                                IsActive = true
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        if (context.User.IsInRole("Admin"))
+        {
+            navGroups.Add(new NavGroup
+            {
+                Name = "Admin",
+                Items =
+                [
+                    new CascadedSideBarItem
+                    {
+                        UniqueId = "admin",
+                        Text = "Admin",
+                        IsActive = currentViewingController == "Users" || currentViewingController == "Sites",
+                        LucideIcon = "sliders",
+                        Links =
+                        [
+                            new CascadedLink { Href = "/Sites", Text = "Sites" },
+                            new CascadedLink { Href = "/Users", Text = "Users" }
+                        ]
+                    },
+                ]
+            });
+        }
+
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
@@ -42,55 +98,7 @@ public class ViewModelArgsInjector(SignInManager<User> signInManager)
             },
             SideMenu = new SideMenuViewModel
             {
-                Groups =
-                [
-                    new NavGroup
-                    {
-                        Name = "Home",
-                        Items =
-                        [
-                            new CascadedSideBarItem
-                            {
-                                UniqueId = "dashboards",
-                                Text = "Dashboards",
-                                IsActive = true,
-                                LucideIcon = "sliders",
-                                Decoration = new Decoration
-                                {
-                                    Text = "5",
-                                    ColorClass = "primary"
-                                },
-                                Links =
-                                [
-                                    new CascadedLink
-                                    {
-                                        Href = "/",
-                                        Text = "Default",
-                                        IsActive = true
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    new NavGroup
-                    {
-                        Name = "Admin",
-                        Items =
-                        [
-                            new CascadedSideBarItem
-                            {
-                                UniqueId = "Manage",
-                                Text = "Manage",
-                                LucideIcon = "layout",
-                                Links =
-                                [
-                                    new CascadedLink { Href = "/Sites", Text = "Sites" },
-                                    new CascadedLink { Href = "/Users", Text = "Users" }
-                                ]
-                            },
-                        ]
-                    }
-                ]
+                Groups = navGroups.ToArray()
             }
         };
 

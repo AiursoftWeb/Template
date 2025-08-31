@@ -1,6 +1,6 @@
 using Aiursoft.UiStack.Layout;
 
-namespace Aiursoft.Template.Models;
+namespace Aiursoft.Template.Models.ErrorViewModels;
 
 public class ErrorViewModel: UiStackLayoutViewModel
 {
