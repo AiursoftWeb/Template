@@ -9,10 +9,13 @@ using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
 using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Services;
 
-public class ViewModelArgsInjector(SignInManager<User> signInManager)
+public class ViewModelArgsInjector(
+    IOptions<AppSettings> appSettings,
+    SignInManager<User> signInManager)
 {
     public void Inject(
         HttpContext context,
@@ -92,8 +95,8 @@ public class ViewModelArgsInjector(SignInManager<User> signInManager)
         {
             SideLogo = new SideLogoViewModel
             {
-                AppName = "Aiursoft UI Stack",
-                LogoUrl = "https://docs.anduinos.com/Assets/logo.svg",
+                AppName = "Aiursoft Template",
+                LogoUrl = "/logo.svg",
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
@@ -139,6 +142,26 @@ public class ViewModelArgsInjector(SignInManager<User> signInManager)
                 Href = "/Account/Login",
                 ButtonText = "Login"
             };
+
+            var allowRegister = appSettings.Value.Local.AllowRegister;
+            var links = new List<IconLink>
+            {
+                new()
+                {
+                    Text = "Login",
+                    Href = "/Account/Login",
+                    Icon = "user"
+                }
+            };
+            if (allowRegister)
+            {
+                links.Add(new IconLink
+                {
+                    Text = "Register", Href = "/Account/Register",
+                    Icon = "user-plus"
+                });
+            }
+
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = "Anonymous",
@@ -147,11 +170,7 @@ public class ViewModelArgsInjector(SignInManager<User> signInManager)
                 [
                     new IconLinkGroup
                     {
-                        Links =
-                        [
-                            new IconLink { Text = "Login", Href = "/Account/Login", Icon = "settings" },
-                            new IconLink { Text = "Register", Href = "/Account/Register", Icon = "help-circle" },
-                        ]
+                        Links = links.ToArray()
                     }
                 ]
             };
