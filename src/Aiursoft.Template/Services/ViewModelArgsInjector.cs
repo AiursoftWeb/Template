@@ -1,3 +1,4 @@
+using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;

@@ -1,14 +1,17 @@
+using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.AccountViewModels;
 using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class AccountController(
+    IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
     ILoggerFactory loggerFactory)
@@ -76,6 +79,11 @@ public class AccountController(
     [AllowAnonymous]
     public IActionResult Register(string? returnUrl = null)
     {
+        var allowRegister = appSettings.Value.Local.AllowRegister;
+        if (!allowRegister)
+        {
+            return BadRequest("Register is not allowed.");
+        }
         ViewData["ReturnUrl"] = returnUrl;
         return this.StackView(new RegisterViewModel());
     }
@@ -87,6 +95,11 @@ public class AccountController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel model, string? returnUrl = null)
     {
+        var allowRegister = appSettings.Value.Local.AllowRegister;
+        if (!allowRegister)
+        {
+            return BadRequest("Register is not allowed.");
+        }
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
