@@ -1,6 +1,5 @@
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
-using Microsoft.AspNetCore.Components.Web;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 

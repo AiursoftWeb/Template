@@ -42,6 +42,7 @@ public class Startup : IWebStartup
         services.AddScoped<ViewModelArgsInjector>();
 
         services.AddControllersWithViews()
+            .AddApplicationPart(typeof(Startup).Assembly)
             .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly);
     }
 

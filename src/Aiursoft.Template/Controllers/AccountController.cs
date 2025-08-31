@@ -1,5 +1,6 @@
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.AccountViewModels;
+using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
