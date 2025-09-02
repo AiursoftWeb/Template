@@ -12,22 +12,22 @@ public class EditViewModel: UiStackLayoutViewModel
     }
 
     [Required]
-    [Display(Name = "用户名")]
+    [Display(Name = "User name")]
     [ValidDomainName]
     public required string UserName { get; set; }
 
     [Required]
     [EmailAddress]
-    [Display(Name = "Email地址（用于登录）")]
+    [Display(Name = "Email Address")]
     public required string Email { get; set; }
 
     [DataType(DataType.Password)]
-    [Display(Name = "重置密码（不填不会修改密码）")]
+    [Display(Name = "Reset Password (leave empty to keep the same password)")]
     public string? Password { get; set; }
 
     [Required]
     public required string Id { get; set; }
 
-    [Display(Name = "具有管理员权限（能够修改数据库和审批课程）")]
+    [Display(Name = "Is Admin")]
     public bool IsAdmin { get; set; }
 }
