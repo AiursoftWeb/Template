@@ -13,6 +13,7 @@ namespace Aiursoft.Template.Controllers;
 [Authorize]
 public class RolesController(
     UserManager<User> userManager,
+    TemplateDbContext context,
     RoleManager<IdentityRole> roleManager)
     : Controller
 {
@@ -20,16 +21,25 @@ public class RolesController(
     [Authorize(Policy = AppPermissionNames.CanReadRoles)]
     public async Task<IActionResult> Index()
     {
-        var roles = await roleManager.Roles
-            .Select(role => new IdentityRoleWithCount
+        var roleUserCounts = await context.UserRoles
+            .GroupBy(userRole => userRole.RoleId)
+            .Select(group => new
             {
-                Role = role,
-                UserCount = userManager.GetUsersInRoleAsync(role.Name!).Result.Count
+                RoleId = group.Key,
+                Count = group.Count()
             })
-            .ToListAsync();
+            .ToDictionaryAsync(x => x.RoleId, x => x.Count);
+
+        var allRoles = await roleManager.Roles.ToListAsync();
+        var rolesWithCount = allRoles.Select(role => new IdentityRoleWithCount
+        {
+            Role = role,
+            UserCount = roleUserCounts.GetValueOrDefault(role.Id, 0)
+        }).ToList();
+
         return this.StackView(new IndexViewModel
         {
-            Roles = roles
+            Roles = rolesWithCount
         });
     }
 
