@@ -10,7 +10,6 @@
             <div class="card-header">User Details</div>
             <div class="card-body">
                 <form asp-action="Edit" asp-route-id="@Model.Id">
-                    <input type="hidden" asp-for="Id" />
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group mb-3">
                         <label asp-for="UserName" class="control-label"></label>

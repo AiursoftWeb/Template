@@ -136,14 +136,13 @@ public class UsersController(
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Policy = AppPermissionNames.CanEditUsers)]
-    public async Task<IActionResult> Edit(string id, EditViewModel model)
+    public async Task<IActionResult> Edit(EditViewModel model)
     {
-        if (id != model.Id) return NotFound();
         if (!ModelState.IsValid)
         {
             return this.StackView(model);
         }
-        var userInDb = await userManager.FindByIdAsync(id);
+        var userInDb = await userManager.FindByIdAsync(model.Id);
         if (userInDb == null) return NotFound();
 
         userInDb.Email = model.Email;

@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Aiursoft.CSTools.Attributes;
 using Aiursoft.UiStack.Layout;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
@@ -34,6 +35,7 @@ public class EditViewModel : UiStackLayoutViewModel
     public string? Password { get; set; }
 
     [Required]
+    [FromRoute]
     public required string Id { get; set; }
 
     public List<UserRoleViewModel> AllRoles { get; set; }

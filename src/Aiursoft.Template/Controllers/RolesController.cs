@@ -134,13 +134,11 @@ public class RolesController(
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Policy = AppPermissionNames.CanEditRoles)]
-    public async Task<IActionResult> Edit(string id, EditViewModel model)
+    public async Task<IActionResult> Edit(EditViewModel model)
     {
-        if (id != model.Id) return NotFound();
-
         if (ModelState.IsValid)
         {
-            var role = await roleManager.FindByIdAsync(id);
+            var role = await roleManager.FindByIdAsync(model.Id);
             if (role == null) return NotFound();
 
             role.Name = model.RoleName;

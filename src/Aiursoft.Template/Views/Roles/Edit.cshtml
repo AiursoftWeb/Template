@@ -6,9 +6,8 @@
 <hr />
 <div class="row">
     <div class="col-md-8">
-        <form asp-action="Edit">
+        <form asp-action="Edit" asp-route-id="@Model.Id">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
             <div class="form-group mb-3">
                 <label asp-for="RoleName" class="control-label"></label>
                 <input asp-for="RoleName" class="form-control" />

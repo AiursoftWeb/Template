@@ -2,6 +2,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using Aiursoft.UiStack.Layout;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Models.RolesViewModels;
 
@@ -15,7 +16,6 @@ public class RoleClaimViewModel
 
 public class EditViewModel: UiStackLayoutViewModel
 {
-    // No changes needed here, as it already contains the List<RoleClaimViewModel>.
     public EditViewModel()
     {
         PageTitle = "Edit Role";
@@ -23,6 +23,7 @@ public class EditViewModel: UiStackLayoutViewModel
     }
 
     [Required]
+    [FromRoute]
     public required string Id { get; set; }
 
     [Required]
