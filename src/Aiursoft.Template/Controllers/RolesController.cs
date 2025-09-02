@@ -128,7 +128,15 @@ public class RolesController(
             if (role == null) return NotFound();
 
             role.Name = model.RoleName;
-            await roleManager.UpdateAsync(role);
+            var updateResult = await roleManager.UpdateAsync(role);
+            if (updateResult != IdentityResult.Success)
+            {
+                foreach (var error in updateResult.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return this.StackView(model);
+            }
 
             var existingClaims = await roleManager.GetClaimsAsync(role);
 

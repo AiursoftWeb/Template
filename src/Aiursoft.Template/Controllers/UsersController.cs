@@ -76,28 +76,28 @@ public class UsersController(
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CreateViewModel newTeacher)
+    public async Task<IActionResult> Create(CreateViewModel newUser)
     {
         if (ModelState.IsValid)
         {
             var user = new User
             {
-                UserName = newTeacher.UserName,
-                Email = newTeacher.Email,
+                UserName = newUser.UserName,
+                Email = newUser.Email,
             };
-            var result = await userManager.CreateAsync(user, newTeacher.Password!);
+            var result = await userManager.CreateAsync(user, newUser.Password!);
             if (!result.Succeeded)
             {
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                return this.StackView(newTeacher);
+                return this.StackView(newUser);
             }
 
             return RedirectToAction(nameof(Details), new { id = user.Id });
         }
-        return this.StackView(newTeacher);
+        return this.StackView(newUser);
     }
 
     // GET: Users/Edit/5
@@ -107,10 +107,7 @@ public class UsersController(
         var user = await context.Users.FindAsync(id);
         if (user == null) return NotFound();
 
-        // 2. 获取用户当前拥有的所有角色
         var userRoles = await userManager.GetRolesAsync(user);
-
-        // 3. 获取系统中的所有角色
         var allRoles = await roleManager.Roles.ToListAsync();
 
         var model = new EditViewModel
@@ -119,7 +116,6 @@ public class UsersController(
             Email = user.Email!,
             UserName = user.UserName!,
             Password = "you-cant-read-it",
-            // 4. 构建视图模型所需的数据
             AllRoles = allRoles.Select(role => new UserRoleViewModel
             {
                 RoleName = role.Name!,
@@ -145,7 +141,15 @@ public class UsersController(
 
             userInDb.Email = model.Email;
             userInDb.UserName = model.UserName;
-            await userManager.UpdateAsync(userInDb);
+            var updateResult = await userManager.UpdateAsync(userInDb);
+            if (!updateResult.Succeeded)
+            {
+                foreach (var error in updateResult.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+                return this.StackView(model);
+            }
 
             var userCurrentRoles = await userManager.GetRolesAsync(userInDb);
             var selectedRoles = model
@@ -192,7 +196,7 @@ public class UsersController(
         });
     }
 
-    // POST: Teachers/Delete/5
+    // POST: Users/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(string id)
