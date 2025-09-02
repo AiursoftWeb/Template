@@ -1,12 +1,7 @@
 @model Aiursoft.Template.Models.UsersViewModels.CreateViewModel
+<h1>Create</h1>
 
-@{
-    ViewData["Title"] = "创建教师";
-}
-
-<h1>@ViewData["Title"]</h1>
-
-<h4>教师</h4>
+<h4>User</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,14 +19,14 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="注册新的教师" class="btn btn-primary" />
+                <input type="submit" value="Create a new user" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">返回教师列表</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 

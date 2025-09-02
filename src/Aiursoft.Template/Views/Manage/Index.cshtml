@@ -1,19 +1,15 @@
 @model Aiursoft.Template.Models.ManageViewModels.IndexViewModel
-@{
-    ViewData["Title"] = "管理账户";
-}
-
-<h2>@ViewData["Title"].</h2>
+<h2>Manage your account</h2>
 
 <p class="text-success">@ViewData["StatusMessage"]</p>
 
 <div>
-    <h4>修改账户设置</h4>
+    <h4>Change your account settings</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>密码:</dt>
+        <dt>Password</dt>
         <dd>
-            <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">修改</a>
+            <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">Change your password</a>
         </dd>
     </dl>
 </div>

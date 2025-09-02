@@ -62,11 +62,9 @@ public class AccountController(
                 _logger.LogWarning(2, "User account locked out");
                 return this.StackView(new LockoutViewModel());
             }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                return this.StackView(model);
-            }
+
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return this.StackView(model);
         }
 
         // If we got this far, something failed, redisplay form
@@ -122,8 +120,6 @@ public class AccountController(
         return this.StackView(model);
     }
 
-    //
-    // POST: /Account/LogOff
     public async Task<IActionResult> LogOff()
     {
         await signInManager.SignOutAsync();
@@ -147,10 +143,8 @@ public class AccountController(
         {
             return Redirect(returnUrl);
         }
-        else
-        {
-            return RedirectToAction(nameof(HomeController.Index), "Home");
-        }
+
+        return RedirectToAction(nameof(HomeController.Index), "Home");
     }
 
     #endregion

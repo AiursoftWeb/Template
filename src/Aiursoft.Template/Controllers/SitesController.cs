@@ -95,10 +95,8 @@ public class SitesController(TemplateDbContext context) : Controller
                 {
                     return NotFound();
                 }
-                else
-                {
-                    throw;
-                }
+
+                throw;
             }
             return RedirectToAction(nameof(Index));
         }
