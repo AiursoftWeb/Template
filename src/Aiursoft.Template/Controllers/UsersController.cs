@@ -9,13 +9,14 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template.Controllers;
 
-[Authorize(Roles = "Admin")]
+[Authorize]
 public class UsersController(
     RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
     TemplateDbContext context)
     : Controller
 {
+    [Authorize(Policy = AppPermissionNames.CanReadUsers)]
     public async Task<IActionResult> Index()
     {
         var allUsers = await context.Users.ToListAsync();
@@ -35,6 +36,7 @@ public class UsersController(
         });
     }
 
+    [Authorize(Policy = AppPermissionNames.CanReadUsers)]
     public async Task<IActionResult> Details(string? id)
     {
         if (id == null) return NotFound();
@@ -50,13 +52,13 @@ public class UsersController(
         foreach (var role in roles)
         {
             var claims = await roleManager.GetClaimsAsync(role);
-            foreach (var claim in claims.Where(c => c.Type == AppClaims.Type))
+            foreach (var claim in claims.Where(c => c.Type == AppPermissions.Type))
             {
                 allPermissionValues.Add(claim.Value);
             }
         }
 
-        var permissions = AppClaims.AllPermissions
+        var permissions = AppPermissions.AllPermissions
             .Where(p => allPermissionValues.Contains(p.Key))
             .OrderBy(p => p.Name)
             .ToList();
@@ -69,11 +71,13 @@ public class UsersController(
         });
     }
 
+    [Authorize(Policy = AppPermissionNames.CanAddUsers)]
     public IActionResult Create()
     {
         return this.StackView(new CreateViewModel());
     }
 
+    [Authorize(Policy = AppPermissionNames.CanAddUsers)]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(CreateViewModel newUser)
@@ -101,6 +105,7 @@ public class UsersController(
     }
 
     // GET: Users/Edit/5
+    [Authorize(Policy = AppPermissionNames.CanEditUsers)]
     public async Task<IActionResult> Edit(string? id)
     {
         if (id == null) return NotFound();
@@ -127,55 +132,60 @@ public class UsersController(
         return this.StackView(model);
     }
 
-    // POST: Users/Edit/5
+    // POST: /Users/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanEditUsers)]
     public async Task<IActionResult> Edit(string id, EditViewModel model)
     {
         if (id != model.Id) return NotFound();
-
-        if (ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
-            var userInDb = await userManager.FindByIdAsync(id);
-            if (userInDb == null) return NotFound();
-
-            userInDb.Email = model.Email;
-            userInDb.UserName = model.UserName;
-            var updateResult = await userManager.UpdateAsync(userInDb);
-            if (!updateResult.Succeeded)
-            {
-                foreach (var error in updateResult.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-                return this.StackView(model);
-            }
-
-            var userCurrentRoles = await userManager.GetRolesAsync(userInDb);
-            var selectedRoles = model
-                .AllRoles
-                .Where(r => r.IsSelected)
-                .Select(r => r.RoleName)
-                .ToArray();
-
-            var rolesToAdd = selectedRoles.Except(userCurrentRoles);
-            await userManager.AddToRolesAsync(userInDb, rolesToAdd);
-
-            var rolesToRemove = userCurrentRoles.Except(selectedRoles);
-            await userManager.RemoveFromRolesAsync(userInDb, rolesToRemove);
-
-            if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
-            {
-                var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
-                await userManager.ResetPasswordAsync(userInDb, token, model.Password);
-            }
-
-            return RedirectToAction(nameof(Details), new { id = userInDb.Id });
+            return this.StackView(model);
         }
-        return this.StackView(model);
+        var userInDb = await userManager.FindByIdAsync(id);
+        if (userInDb == null) return NotFound();
+
+        userInDb.Email = model.Email;
+        userInDb.UserName = model.UserName;
+        await userManager.UpdateAsync(userInDb);
+
+        if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
+        {
+            var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
+            await userManager.ResetPasswordAsync(userInDb, token, model.Password);
+        }
+
+        return RedirectToAction(nameof(Details), new { id = userInDb.Id });
+    }
+
+    // POST: /Users/ManageRoles/5
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanAssignRoleToUser)]
+    public async Task<IActionResult> ManageRoles(string id, EditViewModel model)
+    {
+        var userInDb = await userManager.FindByIdAsync(id);
+        if (userInDb == null) return NotFound();
+
+        var userCurrentRoles = await userManager.GetRolesAsync(userInDb);
+        var selectedRoles = model
+            .AllRoles
+            .Where(r => r.IsSelected)
+            .Select(r => r.RoleName)
+            .ToArray();
+
+        var rolesToAdd = selectedRoles.Except(userCurrentRoles);
+        await userManager.AddToRolesAsync(userInDb, rolesToAdd);
+
+        var rolesToRemove = userCurrentRoles.Except(selectedRoles);
+        await userManager.RemoveFromRolesAsync(userInDb, rolesToRemove);
+
+        return RedirectToAction(nameof(Details), new { id = userInDb.Id });
     }
 
     // GET: Users/Delete/5
+    [Authorize(Policy = AppPermissionNames.CanDeleteUsers)]
     public async Task<IActionResult> Delete(string? id)
     {
         if (id == null)
@@ -199,6 +209,7 @@ public class UsersController(
     // POST: Users/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanDeleteUsers)]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
         var user = await context.Users.FindAsync(id);

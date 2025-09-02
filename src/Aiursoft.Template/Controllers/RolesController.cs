@@ -10,13 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Template.Controllers;
 
-[Authorize(Roles = "Admin")]
+[Authorize]
 public class RolesController(
     UserManager<User> userManager,
     RoleManager<IdentityRole> roleManager)
     : Controller
 {
     // GET: Roles
+    [Authorize(Policy = AppPermissionNames.CanReadRoles)]
     public async Task<IActionResult> Index()
     {
         var roles = await roleManager.Roles
@@ -33,6 +34,7 @@ public class RolesController(
     }
 
     // GET: Roles/Details/5
+    [Authorize(Policy = AppPermissionNames.CanReadRoles)]
     public async Task<IActionResult> Details(string? id)
     {
         if (id == null) return NotFound();
@@ -41,11 +43,11 @@ public class RolesController(
 
         var claims = await roleManager.GetClaimsAsync(role);
         var claimValues = claims
-            .Where(c => c.Type == AppClaims.Type)
+            .Where(c => c.Type == AppPermissions.Type)
             .Select(c => c.Value)
             .ToList();
 
-        var permissions = AppClaims.AllPermissions
+        var permissions = AppPermissions.AllPermissions
             .Where(p => claimValues.Contains(p.Key))
             .ToList();
 
@@ -60,6 +62,7 @@ public class RolesController(
     }
 
     // GET: Roles/Create
+    [Authorize(Policy = AppPermissionNames.CanAddRoles)]
     public IActionResult Create()
     {
         return this.StackView(new CreateViewModel());
@@ -67,6 +70,7 @@ public class RolesController(
 
     // POST: Roles/Create
     [HttpPost]
+    [Authorize(Policy = AppPermissionNames.CanAddRoles)]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(CreateViewModel model)
     {
@@ -87,6 +91,7 @@ public class RolesController(
     }
 
     // GET: Roles/Edit/5
+    [Authorize(Policy = AppPermissionNames.CanEditRoles)]
     public async Task<IActionResult> Edit(string? id)
     {
         if (id == null) return NotFound();
@@ -101,14 +106,14 @@ public class RolesController(
 
         var existingClaims = await roleManager.GetClaimsAsync(role);
 
-        foreach (var permission in AppClaims.AllPermissions)
+        foreach (var permission in AppPermissions.AllPermissions)
         {
             model.Claims.Add(new RoleClaimViewModel
             {
                 Key = permission.Key,
                 Name = permission.Name,
                 Description = permission.Description,
-                IsSelected = existingClaims.Any(c => c.Type == AppClaims.Type && c.Value == permission.Key)
+                IsSelected = existingClaims.Any(c => c.Type == AppPermissions.Type && c.Value == permission.Key)
             });
         }
 
@@ -118,6 +123,7 @@ public class RolesController(
     // POST: Roles/Edit/5
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanEditRoles)]
     public async Task<IActionResult> Edit(string id, EditViewModel model)
     {
         if (id != model.Id) return NotFound();
@@ -157,7 +163,7 @@ public class RolesController(
                 if (claimViewModel.IsSelected && existingClaims.All(c => c.Value != claimViewModel.Key))
                 {
                     // Add the claim using the Key
-                    await roleManager.AddClaimAsync(role, new Claim(AppClaims.Type, claimViewModel.Key));
+                    await roleManager.AddClaimAsync(role, new Claim(AppPermissions.Type, claimViewModel.Key));
                 }
             }
 
@@ -167,6 +173,7 @@ public class RolesController(
     }
 
     // GET: Roles/Delete/5
+    [Authorize(Policy = AppPermissionNames.CanDeleteRoles)]
     public async Task<IActionResult> Delete(string? id)
     {
         if (id == null)
@@ -189,6 +196,7 @@ public class RolesController(
     // POST: Roles/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
+    [Authorize(Policy = AppPermissionNames.CanDeleteRoles)]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
         var role = await roleManager.FindByIdAsync(id);

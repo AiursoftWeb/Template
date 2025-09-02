@@ -1,5 +1,6 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
+using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.Entities;
@@ -43,6 +44,16 @@ public class Startup : IWebStartup
         })
         .AddEntityFrameworkStores<TemplateDbContext>()
         .AddDefaultTokenProviders();
+
+        services.AddAuthorization(options =>
+        {
+            foreach (var permission in AppPermissions.AllPermissions)
+            {
+                options.AddPolicy(
+                    name: permission.Key,
+                    policy => policy.RequireClaim(AppPermissions.Type, permission.Key));
+            }
+        });
 
         services.AddScoped<ViewModelArgsInjector>();
 
