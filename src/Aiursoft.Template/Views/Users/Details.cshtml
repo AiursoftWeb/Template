@@ -35,7 +35,7 @@
                     foreach (var role in Model.Roles)
                     {
                         <a asp-controller="Roles" asp-action="Details" asp-route-id="@role.Id"
-                           class="btn btn-info m-1">
+                           class="btn btn-outline-primary m-1">
                             @role.Name
                         </a>
                     }
