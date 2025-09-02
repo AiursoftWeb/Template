@@ -109,7 +109,7 @@ public class UsersController(
     public async Task<IActionResult> Edit(string? id)
     {
         if (id == null) return NotFound();
-        var user = await context.Users.FindAsync(id);
+        var user = await userManager.FindByIdAsync(id);
         if (user == null) return NotFound();
 
         var userRoles = await userManager.GetRolesAsync(user);
@@ -206,22 +206,17 @@ public class UsersController(
         });
     }
 
-    // POST: Users/Delete/5
     [HttpPost, ActionName("Delete")]
     [ValidateAntiForgeryToken]
     [Authorize(Policy = AppPermissionNames.CanDeleteUsers)]
     public async Task<IActionResult> DeleteConfirmed(string id)
     {
-        var user = await context.Users.FindAsync(id);
+        var user = await userManager.FindByIdAsync(id);
         if (user == null)
         {
             return NotFound();
         }
-
-        await userManager.RemoveFromRoleAsync(user, "Admin");
-        context.Users.Remove(user);
-
-        await context.SaveChangesAsync();
+        await userManager.DeleteAsync(user);
         return RedirectToAction(nameof(Index));
     }
 }
