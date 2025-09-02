@@ -1,62 +1,70 @@
 @model Aiursoft.Template.Models.UsersViewModels.EditViewModel
 
+@{
+    ViewData["Title"] = "Edit User";
+}
+
 <h1>Edit User: @Model.UserName</h1>
-<p>Modify user details or manage their assigned roles.</p>
+<p>Modify user details or manage their assigned roles below.</p>
 <hr />
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">User Details</div>
-            <div class="card-body">
-                <form asp-action="Edit" asp-route-id="@Model.Id">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <div class="form-group mb-3">
-                        <label asp-for="UserName" class="control-label"></label>
-                        <input asp-for="UserName" class="form-control" />
-                        <span asp-validation-for="UserName" class="text-danger"></span>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" />
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" />
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Save Details" class="btn btn-primary" />
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-user"></i> Basic Information
     </div>
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">Manage Roles</div>
-            <div class="card-body">
-                <form asp-action="ManageRoles" asp-route-id="@Model.Id">
-                    @for (var i = 0; i < Model.AllRoles.Count; i++)
-                    {
-                        <div class="form-check m-1">
-                            <input type="hidden" asp-for="@Model.AllRoles[i].RoleName" />
-                            <input asp-for="@Model.AllRoles[i].IsSelected" class="form-check-input" />
-                            <label class="form-check-label" for="@Html.IdFor(m => m.AllRoles[i].IsSelected)">
-                                @Model.AllRoles[i].RoleName
-                            </label>
-                        </div>
-                    }
-                    <div class="form-group mt-3">
-                        <input type="submit" value="Save Roles" class="btn btn-primary" />
-                    </div>
-                </form>
+    <div class="card-body">
+        <form asp-action="Edit" asp-route-id="@Model.Id">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-6 form-group mb-3">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 form-group mb-3">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col-md-12 form-group mb-3">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <input type="submit" value="Save User Details" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <i class="fas fa-user-tag"></i> Assigned Roles
+    </div>
+    <div class="card-body">
+        <form asp-action="ManageRoles" asp-route-id="@Model.Id">
+            <div class="row">
+                @for (var i = 0; i < Model.AllRoles.Count; i++)
+                {
+                    <div class="col-md-4 form-check m-1 ms-3">
+                        <input type="hidden" asp-for="@Model.AllRoles[i].RoleName" />
+                        <input asp-for="@Model.AllRoles[i].IsSelected" class="form-check-input" />
+                        <label class="form-check-label" for="@Html.IdFor(m => m.AllRoles[i].IsSelected)">
+                            @Model.AllRoles[i].RoleName
+                        </label>
+                    </div>
+                }
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Save Role Assignments" class="btn btn-primary" />
+            </div>
+        </form>
     </div>
 </div>
 
 <div class="mt-4">
+    <a asp-action="Details" asp-route-id="@Model.Id">Back to Details</a> |
     <a asp-action="Index">Back to Users List</a>
 </div>
