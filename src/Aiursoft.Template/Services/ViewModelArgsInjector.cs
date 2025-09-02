@@ -85,7 +85,8 @@ public class ViewModelArgsInjector(
                         Links =
                         [
                             new CascadedLink { Href = "/Sites", Text = "Sites" },
-                            new CascadedLink { Href = "/Users", Text = "Users" }
+                            new CascadedLink { Href = "/Users", Text = "Users" },
+                            new CascadedLink { Href = "/Roles", Text = "Roles" },
                         ]
                     },
                 ]
