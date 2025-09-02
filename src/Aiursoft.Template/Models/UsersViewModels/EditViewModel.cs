@@ -4,11 +4,19 @@ using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
-public class EditViewModel: UiStackLayoutViewModel
+// Manage if a role is selected or not in the UI.
+public class UserRoleViewModel
+{
+    public required string RoleName { get; set; }
+    public bool IsSelected { get; set; }
+}
+
+public class EditViewModel : UiStackLayoutViewModel
 {
     public EditViewModel()
     {
-        PageTitle = "Edit Teacher";
+        PageTitle = "Edit User";
+        AllRoles = [];
     }
 
     [Required]
@@ -28,6 +36,5 @@ public class EditViewModel: UiStackLayoutViewModel
     [Required]
     public required string Id { get; set; }
 
-    [Display(Name = "Is Admin")]
-    public bool IsAdmin { get; set; }
+    public List<UserRoleViewModel> AllRoles { get; set; }
 }

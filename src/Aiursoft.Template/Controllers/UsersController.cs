@@ -10,6 +10,7 @@ namespace Aiursoft.Template.Controllers;
 
 [Authorize(Roles = "Admin")]
 public class UsersController(
+    RoleManager<IdentityRole> roleManager,
     UserManager<User> userManager,
     TemplateDbContext context)
     : Controller
@@ -74,81 +75,77 @@ public class UsersController(
         return this.StackView(newTeacher);
     }
 
-    // GET: Teachers/Edit/5
+    // GET: Users/Edit/5
     public async Task<IActionResult> Edit(string? id)
     {
-        if (id == null)
-        {
-            return NotFound();
-        }
-
+        if (id == null) return NotFound();
         var user = await context.Users.FindAsync(id);
-        if (user == null)
-        {
-            return NotFound();
-        }
+        if (user == null) return NotFound();
 
-        return this.StackView(new EditViewModel
+        // 2. 获取用户当前拥有的所有角色
+        var userRoles = await userManager.GetRolesAsync(user);
+
+        // 3. 获取系统中的所有角色
+        var allRoles = await roleManager.Roles.ToListAsync();
+
+        var model = new EditViewModel
         {
             Id = id,
             Email = user.Email!,
-            IsAdmin = await userManager.IsInRoleAsync(user, "Admin"),
             UserName = user.UserName!,
             Password = "you-cant-read-it",
-        });
+            // 4. 构建视图模型所需的数据
+            AllRoles = allRoles.Select(role => new UserRoleViewModel
+            {
+                RoleName = role.Name!,
+                // 如果用户拥有该角色，则 IsSelected 为 true
+                IsSelected = userRoles.Contains(role.Name!)
+            }).ToList()
+        };
+
+        return this.StackView(model);
     }
 
     // POST: Users/Edit/5
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(string id, EditViewModel model)
     {
-        if (id != model.Id)
-        {
-            return NotFound();
-        }
+        if (id != model.Id) return NotFound();
 
         if (ModelState.IsValid)
         {
-            try
+            var userInDb = await userManager.FindByIdAsync(id);
+            if (userInDb == null) return NotFound();
+
+            userInDb.Email = model.Email;
+            userInDb.UserName = model.UserName;
+            // 更新用户信息
+            await userManager.UpdateAsync(userInDb);
+
+            // 5. 更新用户的角色
+            var userCurrentRoles = await userManager.GetRolesAsync(userInDb);
+            var selectedRoles = model
+                .AllRoles
+                .Where(r => r.IsSelected)
+                .Select(r => r.RoleName)
+                .ToArray();
+
+            // 5.1 计算需要添加的角色
+            var rolesToAdd = selectedRoles.Except(userCurrentRoles);
+            await userManager.AddToRolesAsync(userInDb, rolesToAdd);
+
+            // 5.2 计算需要移除的角色
+            var rolesToRemove = userCurrentRoles.Except(selectedRoles);
+            await userManager.RemoveFromRolesAsync(userInDb, rolesToRemove);
+
+            // 6. 处理密码重置
+            if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
             {
-                var userInDb = await context.Users.FindAsync(id);
-                if (userInDb == null)
-                {
-                    return NotFound();
-                }
-
-                userInDb.Email = model.Email;
-                userInDb.UserName = model.UserName;
-                if (model.IsAdmin)
-                {
-                    await userManager.AddToRoleAsync(userInDb, "Admin");
-                }
-                else
-                {
-                    await userManager.RemoveFromRoleAsync(userInDb, "Admin");
-                }
-
-                context.Update(userInDb);
-                await context.SaveChangesAsync();
-
-                if (!string.IsNullOrWhiteSpace(model.Password))
-                {
-                    var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
-                    await userManager.ResetPasswordAsync(userInDb, token, model.Password);
-                }
+                var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
+                await userManager.ResetPasswordAsync(userInDb, token, model.Password);
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(model.Id))
-                {
-                    return NotFound();
-                }
 
-                throw;
-            }
             return RedirectToAction(nameof(Index));
         }
         return this.StackView(model);
@@ -191,10 +188,5 @@ public class UsersController(
 
         await context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
-    }
-
-    private bool UserExists(string id)
-    {
-        return context.Users.Any(e => e.Id == id);
     }
 }
