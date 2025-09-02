@@ -17,10 +17,20 @@ public class UsersController(
 {
     public async Task<IActionResult> Index()
     {
-        var users = await context.Users.ToListAsync();
+        var allUsers = await context.Users.ToListAsync();
+        var usersWithRoles = new List<UserWithRolesViewModel>();
+        foreach (var user in allUsers)
+        {
+            usersWithRoles.Add(new UserWithRolesViewModel
+            {
+                User = user,
+                Roles = await userManager.GetRolesAsync(user)
+            });
+        }
+
         return this.StackView(new IndexViewModel
         {
-            Users = users
+            Users = usersWithRoles
         });
     }
 

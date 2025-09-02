@@ -1,7 +1,4 @@
-@using Aiursoft.Template.Entities
-@using Microsoft.AspNetCore.Identity
 @model Aiursoft.Template.Models.UsersViewModels.IndexViewModel
-@inject UserManager<User> UserManager
 
 <h1>Manage Users</h1>
 
@@ -10,40 +7,52 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                User name
-            </th>
-            <th>
-                Email
-            </th>
-            <th>
-                Is Admin
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            User name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Roles
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Users)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                <td>
-                    @{
-                        var isAdmin = await UserManager.IsInRoleAsync(item, "Admin");
+    @foreach (var item in Model.Users)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.Email)
+            </td>
+            <td>
+                @{
+                    const int maxRolesToShow = 3;
+                    var roles = item.Roles;
+                    string displayRoles;
+
+                    if (roles.Count > maxRolesToShow)
+                    {
+                        displayRoles = string.Join(", ", roles.Take(maxRolesToShow)) + "...";
                     }
-                    @(isAdmin ? "Yes" : string.Empty)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
+                    else
+                    {
+                        displayRoles = string.Join(", ", roles);
+                    }
+                }
+                @displayRoles
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.User.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.User.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.User.Id">Delete</a>
+            </td>
+        </tr>
+    }
     </tbody>
 </table>
