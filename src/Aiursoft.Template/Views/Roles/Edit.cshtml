@@ -5,7 +5,7 @@
 <h4>Role</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
@@ -14,7 +14,28 @@
                 <input asp-for="RoleName" class="form-control" />
                 <span asp-validation-for="RoleName" class="text-danger"></span>
             </div>
+
+            <hr />
+
             <div class="form-group">
+                <h5>Manage Claims for this Role</h5>
+                <div class="card">
+                    <div class="card-body">
+                        @for (var i = 0; i < Model.Claims.Count; i++)
+                        {
+                            <div class="form-check m-1">
+                                <input type="hidden" asp-for="@Model.Claims[i].ClaimType" />
+                                <input asp-for="@Model.Claims[i].IsSelected" class="form-check-input" />
+                                <label class="form-check-label" for="@Model.Claims[i].IsSelected">
+                                    @Model.Claims[i].ClaimType
+                                </label>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mt-3">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>

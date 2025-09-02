@@ -80,7 +80,10 @@ public class ViewModelArgsInjector(
                     {
                         UniqueId = "admin",
                         Text = "Admin",
-                        IsActive = currentViewingController == "Users" || currentViewingController == "Sites",
+                        IsActive =
+                            currentViewingController == "Users" ||
+                            currentViewingController == "Sites" ||
+                            currentViewingController == "Roles",
                         LucideIcon = "sliders",
                         Links =
                         [

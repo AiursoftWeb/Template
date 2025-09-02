@@ -1,3 +1,6 @@
+using System.Reflection;
+using System.Security.Claims;
+using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.RolesViewModels;
 using Aiursoft.Template.Services;
@@ -91,11 +94,30 @@ public class RolesController(
             return NotFound();
         }
 
-        return this.StackView(new EditViewModel
+        var model = new EditViewModel
         {
             Id = role.Id,
             RoleName = role.Name!
-        });
+        };
+
+        var existingClaims = await roleManager.GetClaimsAsync(role);
+
+        var allPossibleClaims = typeof(AppClaims)
+            .GetFields(BindingFlags.Public | BindingFlags.Static)
+            .Where(fi => fi.FieldType == typeof(string) && fi.Name != nameof(AppClaims.Type))
+            .Select(fi => (string)fi.GetValue(null)!)
+            .ToList();
+
+        foreach (var claimValue in allPossibleClaims)
+        {
+            model.Claims.Add(new RoleClaimViewModel
+            {
+                ClaimType = claimValue,
+                IsSelected = existingClaims.Any(c => c.Type == AppClaims.Type && c.Value == claimValue)
+            });
+        }
+
+        return this.StackView(model);
     }
 
     // POST: Roles/Edit/5
@@ -110,24 +132,35 @@ public class RolesController(
 
         if (ModelState.IsValid)
         {
-            try
+            var role = await roleManager.FindByIdAsync(id);
+            if (role == null)
             {
-                var role = await roleManager.FindByIdAsync(id);
-                if (role == null)
-                {
-                    return NotFound();
-                }
-                role.Name = model.RoleName;
-                await roleManager.UpdateAsync(role);
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
+
+            role.Name = model.RoleName;
+            await roleManager.UpdateAsync(role);
+
+            var existingClaims = await roleManager.GetClaimsAsync(role);
+
+            // Remove unselected claims
+            foreach (var existingClaim in existingClaims)
             {
-                if (!await RoleExists(model.Id))
+                if (!model.Claims.Any(c => c.ClaimType == existingClaim.Value && c.IsSelected))
                 {
-                    return NotFound();
+                    await roleManager.RemoveClaimAsync(role, existingClaim);
                 }
-                throw;
             }
+
+            // Add newly selected claims
+            foreach (var claimViewModel in model.Claims)
+            {
+                if (claimViewModel.IsSelected && existingClaims.All(c => c.Value != claimViewModel.ClaimType))
+                {
+                    await roleManager.AddClaimAsync(role, new Claim(AppClaims.Type, claimViewModel.ClaimType));
+                }
+            }
+
             return RedirectToAction(nameof(Index));
         }
         return this.StackView(model);
@@ -166,10 +199,5 @@ public class RolesController(
 
         await roleManager.DeleteAsync(role);
         return RedirectToAction(nameof(Index));
-    }
-
-    private async Task<bool> RoleExists(string id)
-    {
-        return await roleManager.RoleExistsAsync(await roleManager.FindByIdAsync(id).ContinueWith(t => t.Result?.Name ?? string.Empty));
     }
 }
