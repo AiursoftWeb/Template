@@ -35,20 +35,27 @@ public class RolesController(
     // GET: Roles/Details/5
     public async Task<IActionResult> Details(string? id)
     {
-        if (id == null)
-        {
-            return NotFound();
-        }
-
+        if (id == null) return NotFound();
         var role = await roleManager.FindByIdAsync(id);
-        if (role == null)
-        {
-            return NotFound();
-        }
+        if (role == null) return NotFound();
+
+        var claims = await roleManager.GetClaimsAsync(role);
+        var claimValues = claims
+            .Where(c => c.Type == AppClaims.Type)
+            .Select(c => c.Value)
+            .ToList();
+
+        var permissions = AppClaims.AllPermissions
+            .Where(p => claimValues.Contains(p.Key))
+            .ToList();
+
+        var usersInRole = await userManager.GetUsersInRoleAsync(role.Name!);
 
         return this.StackView(new DetailsViewModel
         {
-            Role = role
+            Role = role,
+            Permissions = permissions,
+            UsersInRole = usersInRole
         });
     }
 
@@ -69,7 +76,7 @@ public class RolesController(
             var result = await roleManager.CreateAsync(role);
             if (result.Succeeded)
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details), new { id = role.Id });
             }
             foreach (var error in result.Errors)
             {
@@ -146,7 +153,7 @@ public class RolesController(
                 }
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details), new { id = role.Id });
         }
         return this.StackView(model);
     }

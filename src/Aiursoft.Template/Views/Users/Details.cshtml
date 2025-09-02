@@ -1,21 +1,82 @@
 @model Aiursoft.Template.Models.UsersViewModels.DetailsViewModel
 
+@{
+    ViewData["Title"] = "User Details";
+}
 
-<h1>Details</h1>
+<h1>User Details: @Model.User.UserName</h1>
+<p>An overview of the user's profile, assigned roles, and effective permissions.</p>
+<hr />
 
-<div>
-    <h4>User</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.User.UserName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.User.UserName)
-        </dd>
-    </dl>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-user"></i> Basic Information
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">User Name</dt>
+            <dd class="col-sm-9">@Model.User.UserName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.User.Email</dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.User.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-user-tag"></i> Assigned Roles
+            </div>
+            <div class="card-body">
+                @if (Model.Roles.Any())
+                {
+                    foreach (var role in Model.Roles)
+                    {
+                        <a asp-controller="Roles" asp-action="Details" asp-route-id="@role.Id"
+                           class="btn btn-info m-1">
+                            @role.Name
+                        </a>
+                    }
+                }
+                else
+                {
+                    <p class="text-muted">This user has not been assigned any roles.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-shield-alt"></i> Effective Permissions (from all roles)
+            </div>
+            @if (Model.Permissions.Any())
+            {
+                <ul class="list-group list-group-flush">
+                    @foreach (var permission in Model.Permissions)
+                    {
+                        <li class="list-group-item">
+                            <strong>@permission.Name</strong>
+                            <small class="d-block text-muted">@permission.Description</small>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                 <div class="card-body">
+                    <p class="text-muted">This user has no effective permissions.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.User.Id" class="btn btn-primary">Edit this User</a> |
+    <a asp-action="Index">Back to Users List</a>
 </div>

@@ -1,10 +1,8 @@
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
-using System.Collections.Generic;
 
 namespace Aiursoft.Template.Models.UsersViewModels;
 
-// User with roles view model.
 public class UserWithRolesViewModel
 {
     public required User User { get; set; }

@@ -1,3 +1,4 @@
+using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.UsersViewModels;
 using Aiursoft.Template.Services;
@@ -36,21 +37,35 @@ public class UsersController(
 
     public async Task<IActionResult> Details(string? id)
     {
-        if (id == null)
+        if (id == null) return NotFound();
+        var user = await userManager.FindByIdAsync(id);
+        if (user == null) return NotFound();
+
+        var roleNames = await userManager.GetRolesAsync(user);
+        var roles = await roleManager.Roles
+            .Where(r => roleNames.Contains(r.Name!))
+            .ToListAsync();
+
+        var allPermissionValues = new HashSet<string>();
+        foreach (var role in roles)
         {
-            return NotFound();
+            var claims = await roleManager.GetClaimsAsync(role);
+            foreach (var claim in claims.Where(c => c.Type == AppClaims.Type))
+            {
+                allPermissionValues.Add(claim.Value);
+            }
         }
 
-        var user = await context.Users
-            .FirstOrDefaultAsync(m => m.Id == id);
-        if (user == null)
-        {
-            return NotFound();
-        }
+        var permissions = AppClaims.AllPermissions
+            .Where(p => allPermissionValues.Contains(p.Key))
+            .OrderBy(p => p.Name)
+            .ToList();
 
         return this.StackView(new DetailsViewModel
         {
-            User = user
+            User = user,
+            Roles = roles,
+            Permissions = permissions
         });
     }
 
@@ -80,7 +95,7 @@ public class UsersController(
                 return this.StackView(newTeacher);
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details), new { id = user.Id });
         }
         return this.StackView(newTeacher);
     }
@@ -130,10 +145,8 @@ public class UsersController(
 
             userInDb.Email = model.Email;
             userInDb.UserName = model.UserName;
-            // 更新用户信息
             await userManager.UpdateAsync(userInDb);
 
-            // 5. 更新用户的角色
             var userCurrentRoles = await userManager.GetRolesAsync(userInDb);
             var selectedRoles = model
                 .AllRoles
@@ -141,22 +154,19 @@ public class UsersController(
                 .Select(r => r.RoleName)
                 .ToArray();
 
-            // 5.1 计算需要添加的角色
             var rolesToAdd = selectedRoles.Except(userCurrentRoles);
             await userManager.AddToRolesAsync(userInDb, rolesToAdd);
 
-            // 5.2 计算需要移除的角色
             var rolesToRemove = userCurrentRoles.Except(selectedRoles);
             await userManager.RemoveFromRolesAsync(userInDb, rolesToRemove);
 
-            // 6. 处理密码重置
             if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
             {
                 var token = await userManager.GeneratePasswordResetTokenAsync(userInDb);
                 await userManager.ResetPasswordAsync(userInDb, token, model.Password);
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details), new { id = userInDb.Id });
         }
         return this.StackView(model);
     }
