@@ -9,7 +9,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="RoleName" class="control-label"></label>
                 <input asp-for="RoleName" class="form-control" />
                 <span asp-validation-for="RoleName" class="text-danger"></span>
@@ -24,11 +24,18 @@
                         @for (var i = 0; i < Model.Claims.Count; i++)
                         {
                             <div class="form-check m-1">
-                                <input type="hidden" asp-for="@Model.Claims[i].ClaimType" />
+                                <input type="hidden" asp-for="@Model.Claims[i].Key" />
+                                <input type="hidden" asp-for="@Model.Claims[i].Name" />
+                                <input type="hidden" asp-for="@Model.Claims[i].Description" />
+
                                 <input asp-for="@Model.Claims[i].IsSelected" class="form-check-input" />
-                                <label class="form-check-label" for="@Model.Claims[i].IsSelected">
-                                    @Model.Claims[i].ClaimType
+
+                                <label class="form-check-label" for="@Html.IdFor(m => m.Claims[i].IsSelected)">
+                                    <strong>@Model.Claims[i].Name</strong>
                                 </label>
+                                <div class="text-muted ms-4">
+                                    <small>@Model.Claims[i].Description</small>
+                                </div>
                             </div>
                         }
                     </div>

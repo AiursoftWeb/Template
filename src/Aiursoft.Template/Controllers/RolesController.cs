@@ -1,4 +1,3 @@
-using System.Reflection;
 using System.Security.Claims;
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
@@ -83,16 +82,9 @@ public class RolesController(
     // GET: Roles/Edit/5
     public async Task<IActionResult> Edit(string? id)
     {
-        if (id == null)
-        {
-            return NotFound();
-        }
-
+        if (id == null) return NotFound();
         var role = await roleManager.FindByIdAsync(id);
-        if (role == null)
-        {
-            return NotFound();
-        }
+        if (role == null) return NotFound();
 
         var model = new EditViewModel
         {
@@ -102,18 +94,14 @@ public class RolesController(
 
         var existingClaims = await roleManager.GetClaimsAsync(role);
 
-        var allPossibleClaims = typeof(AppClaims)
-            .GetFields(BindingFlags.Public | BindingFlags.Static)
-            .Where(fi => fi.FieldType == typeof(string) && fi.Name != nameof(AppClaims.Type))
-            .Select(fi => (string)fi.GetValue(null)!)
-            .ToList();
-
-        foreach (var claimValue in allPossibleClaims)
+        foreach (var permission in AppClaims.AllPermissions)
         {
             model.Claims.Add(new RoleClaimViewModel
             {
-                ClaimType = claimValue,
-                IsSelected = existingClaims.Any(c => c.Type == AppClaims.Type && c.Value == claimValue)
+                Key = permission.Key,
+                Name = permission.Name,
+                Description = permission.Description,
+                IsSelected = existingClaims.Any(c => c.Type == AppClaims.Type && c.Value == permission.Key)
             });
         }
 
@@ -125,18 +113,12 @@ public class RolesController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(string id, EditViewModel model)
     {
-        if (id != model.Id)
-        {
-            return NotFound();
-        }
+        if (id != model.Id) return NotFound();
 
         if (ModelState.IsValid)
         {
             var role = await roleManager.FindByIdAsync(id);
-            if (role == null)
-            {
-                return NotFound();
-            }
+            if (role == null) return NotFound();
 
             role.Name = model.RoleName;
             await roleManager.UpdateAsync(role);
@@ -146,7 +128,8 @@ public class RolesController(
             // Remove unselected claims
             foreach (var existingClaim in existingClaims)
             {
-                if (!model.Claims.Any(c => c.ClaimType == existingClaim.Value && c.IsSelected))
+                // Compare against the Key
+                if (!model.Claims.Any(c => c.Key == existingClaim.Value && c.IsSelected))
                 {
                     await roleManager.RemoveClaimAsync(role, existingClaim);
                 }
@@ -155,9 +138,11 @@ public class RolesController(
             // Add newly selected claims
             foreach (var claimViewModel in model.Claims)
             {
-                if (claimViewModel.IsSelected && existingClaims.All(c => c.Value != claimViewModel.ClaimType))
+                // Check against the Key
+                if (claimViewModel.IsSelected && existingClaims.All(c => c.Value != claimViewModel.Key))
                 {
-                    await roleManager.AddClaimAsync(role, new Claim(AppClaims.Type, claimViewModel.ClaimType));
+                    // Add the claim using the Key
+                    await roleManager.AddClaimAsync(role, new Claim(AppClaims.Type, claimViewModel.Key));
                 }
             }
 
