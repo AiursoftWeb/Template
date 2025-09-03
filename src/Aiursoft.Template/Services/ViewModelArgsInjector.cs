@@ -1,7 +1,7 @@
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
-using Aiursoft.Template.Navigation;
 using Aiursoft.UiStack.Layout;
+using Aiursoft.UiStack.Navigation;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.Navbar;
@@ -17,7 +17,7 @@ using Microsoft.Extensions.Options;
 namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
-    NavigationState navigationState,
+    NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
     SignInManager<User> signInManager)
@@ -40,8 +40,6 @@ public class ViewModelArgsInjector(
             ]
         };
         toInject.Navbar = new NavbarViewModel();
-
-
 
         var currentViewingController = context.GetRouteValue("controller")?.ToString();
         var navGroupsForView = new List<NavGroup>();
@@ -79,7 +77,7 @@ public class ViewModelArgsInjector(
                         Text = itemDef.Text,
                         LucideIcon = itemDef.Icon,
                         IsActive = linksForView.Any(l => l.Href.StartsWith($"/{currentViewingController}")),
-                        Links = linksForView.ToArray()
+                        Links = linksForView
                     });
                 }
             }
@@ -89,7 +87,7 @@ public class ViewModelArgsInjector(
                 navGroupsForView.Add(new NavGroup
                 {
                     Name = groupDef.Name,
-                    Items = itemsForView.Select(t => (SideBarItem)t).ToArray()
+                    Items = itemsForView.Select(t => (SideBarItem)t).ToList()
                 });
             }
         }
@@ -104,7 +102,7 @@ public class ViewModelArgsInjector(
             },
             SideMenu = new SideMenuViewModel
             {
-                Groups = navGroupsForView.ToArray()
+                Groups = navGroupsForView
             }
         };
 

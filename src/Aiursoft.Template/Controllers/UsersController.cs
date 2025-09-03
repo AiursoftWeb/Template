@@ -1,8 +1,8 @@
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.UsersViewModels;
-using Aiursoft.Template.Navigation;
 using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;

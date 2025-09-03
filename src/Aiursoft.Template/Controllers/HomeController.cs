@@ -1,6 +1,6 @@
 using Aiursoft.Template.Models.HomeViewModels;
-using Aiursoft.Template.Navigation;
 using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;

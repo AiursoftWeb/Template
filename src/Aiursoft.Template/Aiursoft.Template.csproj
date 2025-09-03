@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="9.0.18" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.8" />
-    <PackageReference Include="Aiursoft.UiStack" Version="9.0.6" />
+    <PackageReference Include="Aiursoft.UiStack" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
