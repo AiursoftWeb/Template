@@ -17,22 +17,6 @@ namespace Aiursoft.Template.Sqlite.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.8");
 
-            modelBuilder.Entity("Aiursoft.Template.Entities.Site", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("SiteName")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sites");
-                });
-
             modelBuilder.Entity("Aiursoft.Template.Entities.User", b =>
                 {
                     b.Property<string>("Id")

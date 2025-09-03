@@ -51,19 +51,6 @@ namespace Aiursoft.Template.Sqlite.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Sites",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    SiteName = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Sites", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -224,9 +211,6 @@ namespace Aiursoft.Template.Sqlite.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "Sites");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

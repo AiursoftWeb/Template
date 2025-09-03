@@ -6,8 +6,6 @@ namespace Aiursoft.Template.Entities;
 
 public abstract class TemplateDbContext(DbContextOptions options) : IdentityDbContext<User>(options), ICanMigrate
 {
-    public DbSet<Site> Sites => Set<Site>();
-
     public virtual  Task MigrateAsync(CancellationToken cancellationToken) =>
         Database.MigrateAsync(cancellationToken);
 
