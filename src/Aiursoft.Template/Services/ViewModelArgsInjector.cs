@@ -93,8 +93,8 @@ public class ViewModelArgsInjector(
                 [
                     new CascadedSideBarItem
                     {
-                        UniqueId = "admin",
-                        Text = "Admin",
+                        UniqueId = "directory",
+                        Text = "Directory",
                         IsActive =
                             currentViewingController == "Users" ||
                             currentViewingController == "Sites" ||
