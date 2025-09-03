@@ -32,4 +32,6 @@ public class RenderInNavBarAttribute : Attribute
     /// The display order for the link within the item. Lower numbers appear first.
     /// </summary>
     public int LinkOrder { get; set; } = 100;
+
+    public int NavGroupOrder { get; set; } = 100;
 }

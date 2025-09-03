@@ -22,6 +22,7 @@ public class RolesController(
     [Authorize(Policy = AppPermissionNames.CanReadRoles)]
     [RenderInNavBar(
         NavGroupName = "Admin",
+        NavGroupOrder = 9999,
         CascadedLinksGroupName = "Directory",
         CascadedLinksIcon = "users",
         CascadedLinksOrder = 1,

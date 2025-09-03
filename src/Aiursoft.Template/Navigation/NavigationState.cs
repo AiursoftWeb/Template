@@ -6,7 +6,7 @@ namespace Aiursoft.Template.Navigation;
 
 public record NavLinkDefinition(string Href, string Text, int Order, string? RequiredPolicy);
 public record NavItemDefinition(string UniqueId, string Text, string Icon, int Order, List<NavLinkDefinition> Links);
-public record NavGroupDefinition(string Name, List<NavItemDefinition> Items);
+public record NavGroupDefinition(string Name, int Order, List<NavItemDefinition> Items);
 
 public class NavigationState
 {
@@ -33,14 +33,15 @@ public class NavigationState
                 var authorizeAttr = method.GetCustomAttribute<AuthorizeAttribute>();
                 var requiredPolicy = authorizeAttr?.Policy;
 
-                // 1. 找到或创建 NavGroup
                 if (!navGroups.TryGetValue(navAttr.NavGroupName, out var group))
                 {
-                    group = new NavGroupDefinition(navAttr.NavGroupName, new List<NavItemDefinition>());
+                    group = new NavGroupDefinition(
+                        navAttr.NavGroupName,
+                        navAttr.NavGroupOrder,
+                        new List<NavItemDefinition>());
                     navGroups[navAttr.NavGroupName] = group;
                 }
 
-                // 2. 找到或创建 NavItem
                 var item = group.Items.FirstOrDefault(i => i.Text == navAttr.CascadedLinksGroupName);
                 if (item == null)
                 {
@@ -48,7 +49,6 @@ public class NavigationState
                     group.Items.Add(item);
                 }
 
-                // 3. 添加 NavLink
                 item.Links.Add(new NavLinkDefinition(
                     Href: $"/{controllerName}/{actionName}",
                     Text: navAttr.LinkText,
@@ -66,6 +66,6 @@ public class NavigationState
             group.Items.Sort((a, b) => a.Order.CompareTo(b.Order));
         }
 
-        NavMap = navGroups.Values.ToList();
+        NavMap = navGroups.Values.OrderBy(g => g.Order).ToList();
     }
 }

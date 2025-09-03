@@ -8,11 +8,12 @@ namespace Aiursoft.Template.Controllers;
 public class HomeController : Controller
 {
     [RenderInNavBar(
-        NavGroupName = "Home",
-        CascadedLinksGroupName = "Dashboard",
+        NavGroupName = "Features",
+        NavGroupOrder = 1,
+        CascadedLinksGroupName = "Home",
         CascadedLinksIcon = "home",
         CascadedLinksOrder = 1,
-        LinkText = "Main",
+        LinkText = "Index",
         LinkOrder = 1)]
     public IActionResult Index()
     {
