@@ -8,7 +8,7 @@ using Aiursoft.Template.Models.SystemViewModels;
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
-public class SystemController : Controller
+public class SystemController(ILogger<SystemController> logger) : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanViewSystemContext)]
     [RenderInNavBar(
@@ -22,5 +22,15 @@ public class SystemController : Controller
     public IActionResult Index()
     {
         return this.StackView(new IndexViewModel());
+    }
+
+    [HttpPost]
+    [Authorize(Policy = AppPermissionNames.CanRebootThisApp)] // Use the specific permission
+    [ProducesResponseType(StatusCodes.Status202Accepted)]
+    public IActionResult Shutdown([FromServices] IHostApplicationLifetime appLifetime)
+    {
+        logger.LogWarning("Application shutdown was requested by user: '{UserName}'", User.Identity?.Name);
+        appLifetime.StopApplication();
+        return Accepted();
     }
 }
