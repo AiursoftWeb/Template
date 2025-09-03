@@ -1,6 +1,6 @@
-using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
+using Aiursoft.Template.Navigation;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
@@ -17,6 +17,7 @@ using Microsoft.Extensions.Options;
 namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
+    NavigationState navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
     SignInManager<User> signInManager)
@@ -39,71 +40,58 @@ public class ViewModelArgsInjector(
             ]
         };
         toInject.Navbar = new NavbarViewModel();
+
+
+
         var currentViewingController = context.GetRouteValue("controller")?.ToString();
-        var navGroups = new List<NavGroup>
-        {
-            new()
-            {
-                Name = "Home",
-                Items =
-                [
-                    new CascadedSideBarItem
-                    {
-                        UniqueId = "dashboards",
-                        Text = "Dashboards",
-                        IsActive = currentViewingController == "Home",
-                        LucideIcon = "layout",
-                        Decoration = new Decoration
-                        {
-                            Text = "5",
-                            ColorClass = "primary"
-                        },
-                        Links =
-                        [
-                            new CascadedLink
-                            {
-                                Href = "/",
-                                Text = "Default",
-                                IsActive = true
-                            }
-                        ]
-                    }
-                ]
-            }
-        };
+        var navGroupsForView = new List<NavGroup>();
 
-        var canReadUsersResult = authorizationService.AuthorizeAsync(context.User, AppPermissionNames.CanReadUsers).Result;
-        var canReadRolesResult = authorizationService.AuthorizeAsync(context.User, AppPermissionNames.CanReadRoles).Result;
-
-        if (canReadUsersResult.Succeeded || canReadRolesResult.Succeeded)
+        foreach (var groupDef in navigationState.NavMap)
         {
-            var links = new List<CascadedLink>();
-            if (canReadUsersResult.Succeeded)
+            var itemsForView = new List<CascadedSideBarItem>();
+            foreach (var itemDef in groupDef.Items)
             {
-                links.Add(new CascadedLink { Href = "/Users", Text = "Users" });
-            }
-            if (canReadRolesResult.Succeeded)
-            {
-                links.Add(new CascadedLink { Href = "/Roles", Text = "Roles" });
-            }
-            navGroups.Add(new NavGroup
-            {
-                Name = "Admin",
-                Items =
-                [
-                    new CascadedSideBarItem
+                var linksForView = new List<CascadedLink>();
+                foreach (var linkDef in itemDef.Links)
+                {
+                    bool isVisible;
+                    if (string.IsNullOrEmpty(linkDef.RequiredPolicy))
                     {
-                        UniqueId = "directory",
-                        Text = "Directory",
-                        IsActive =
-                            currentViewingController == "Users" ||
-                            currentViewingController == "Sites" ||
-                            currentViewingController == "Roles",
-                        LucideIcon = "sliders",
-                        Links = links.ToArray()
+                        isVisible = true;
                     }
-                ]
-            });
+                    else
+                    {
+                        var authResult = authorizationService.AuthorizeAsync(context.User, linkDef.RequiredPolicy).Result;
+                        isVisible = authResult.Succeeded;
+                    }
+
+                    if (isVisible)
+                    {
+                        linksForView.Add(new CascadedLink { Href = linkDef.Href, Text = linkDef.Text });
+                    }
+                }
+
+                if (linksForView.Any())
+                {
+                    itemsForView.Add(new CascadedSideBarItem
+                    {
+                        UniqueId = itemDef.UniqueId,
+                        Text = itemDef.Text,
+                        LucideIcon = itemDef.Icon,
+                        IsActive = linksForView.Any(l => l.Href.StartsWith($"/{currentViewingController}")),
+                        Links = linksForView.ToArray()
+                    });
+                }
+            }
+
+            if (itemsForView.Any())
+            {
+                navGroupsForView.Add(new NavGroup
+                {
+                    Name = groupDef.Name,
+                    Items = itemsForView.Select(t => (SideBarItem)t).ToArray()
+                });
+            }
         }
 
         toInject.Sidebar = new SidebarViewModel
@@ -116,7 +104,7 @@ public class ViewModelArgsInjector(
             },
             SideMenu = new SideMenuViewModel
             {
-                Groups = navGroups.ToArray()
+                Groups = navGroupsForView.ToArray()
             }
         };
 

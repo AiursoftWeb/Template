@@ -6,6 +6,7 @@ using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
+using Aiursoft.Template.Navigation;
 using Aiursoft.Template.Services;
 using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
@@ -56,7 +57,7 @@ public class Startup : IWebStartup
         });
 
         services.AddScoped<ViewModelArgsInjector>();
-
+        services.AddScoped<NavigationState>();
         services.AddControllersWithViews()
             .AddApplicationPart(typeof(Startup).Assembly)
             .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly);

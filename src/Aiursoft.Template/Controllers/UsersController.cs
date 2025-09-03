@@ -1,6 +1,7 @@
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.UsersViewModels;
+using Aiursoft.Template.Navigation;
 using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,13 @@ public class UsersController(
     : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
+    [RenderInNavBar(
+        NavGroupName = "Admin",
+        CascadedLinksGroupName = "Directory",
+        CascadedLinksIcon = "users",
+        CascadedLinksOrder = 1,
+        LinkText = "Users",
+        LinkOrder = 1)]
     public async Task<IActionResult> Index()
     {
         var allUsers = await context.Users.ToListAsync();

@@ -2,6 +2,7 @@ using System.Security.Claims;
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.RolesViewModels;
+using Aiursoft.Template.Navigation;
 using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -19,6 +20,13 @@ public class RolesController(
 {
     // GET: Roles
     [Authorize(Policy = AppPermissionNames.CanReadRoles)]
+    [RenderInNavBar(
+        NavGroupName = "Admin",
+        CascadedLinksGroupName = "Directory",
+        CascadedLinksIcon = "users",
+        CascadedLinksOrder = 1,
+        LinkText = "Roles",
+        LinkOrder = 2)]
     public async Task<IActionResult> Index()
     {
         var roleUserCounts = await context.UserRoles
