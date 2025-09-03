@@ -41,6 +41,12 @@ public static class AppPermissions
             "Allows modification of role names and their assigned permissions."),
         new(AppPermissionNames.CanAssignRoleToUser,
             "Assign Roles to Users",
-            "Allows assigning or removing roles for any user.")
+            "Allows assigning or removing roles for any user."),
+        new (AppPermissionNames.CanViewSystemContext,
+            "View System Context",
+            "Allows viewing system-level information and settings."),
+        new (AppPermissionNames.CanRebootThisApp,
+            "Reboot This App",
+            "Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded.")
     ];
 }
