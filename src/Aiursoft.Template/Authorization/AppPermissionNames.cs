@@ -1,0 +1,18 @@
+namespace Aiursoft.Template.Authorization;
+
+/// <summary>
+/// Defines all permission keys as constants. This is the single source of truth.
+/// </summary>
+public static class AppPermissionNames
+{
+    public const string CanReadUsers = nameof(CanReadUsers);
+    public const string CanDeleteUsers = nameof(CanDeleteUsers);
+    public const string CanAddUsers = nameof(CanAddUsers);
+    public const string CanEditUsers = nameof(CanEditUsers);
+    public const string CanAssignRoleToUser = nameof(CanAssignRoleToUser);
+
+    public const string CanReadRoles = nameof(CanReadRoles);
+    public const string CanDeleteRoles = nameof(CanDeleteRoles);
+    public const string CanAddRoles = nameof(CanAddRoles);
+    public const string CanEditRoles = nameof(CanEditRoles);
+}

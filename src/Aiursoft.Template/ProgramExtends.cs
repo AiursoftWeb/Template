@@ -8,18 +8,33 @@ namespace Aiursoft.Template;
 
 public static class ProgramExtends
 {
+    private static async Task<bool> ShouldSeedAsync(TemplateDbContext dbContext)
+    {
+        var haveUsers = await dbContext.Users.AnyAsync();
+        var haveRoles = await dbContext.Roles.AnyAsync();
+        return !haveUsers && !haveRoles;
+    }
+
     public static async Task<IHost> SeedAsync(this IHost host)
     {
         using var scope = host.Services.CreateScope();
         var services = scope.ServiceProvider;
         var db = services.GetRequiredService<TemplateDbContext>();
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        var shouldSeed = await ShouldSeedAsync(db);
+        if (!shouldSeed)
+        {
+            logger.LogInformation("Do not need to seed the database. There are already users or roles present.");
+            return host;
+        }
+        logger.LogInformation("Seeding the database with initial data...");
         var userManager = services.GetRequiredService<UserManager<User>>();
         var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
-        var role = await roleManager.FindByNameAsync("Admin");
+        var role = await roleManager.FindByNameAsync("Administrators");
         if (role == null)
         {
-            role = new IdentityRole("Admin");
+            role = new IdentityRole("Administrators");
             await roleManager.CreateAsync(role);
         }
 
@@ -46,7 +61,7 @@ public static class ProgramExtends
                 Email = "admin@default.com",
             };
             _ = await userManager.CreateAsync(user, "admin123");
-            await userManager.AddToRoleAsync(user, "Admin");
+            await userManager.AddToRoleAsync(user, "Administrators");
         }
         return host;
     }

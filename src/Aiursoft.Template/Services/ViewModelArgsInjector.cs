@@ -1,3 +1,4 @@
+using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
@@ -9,12 +10,14 @@ using Aiursoft.UiStack.Views.Shared.Components.Sidebar;
 using Aiursoft.UiStack.Views.Shared.Components.SideLogo;
 using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
+    IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
     SignInManager<User> signInManager)
 {
@@ -69,8 +72,20 @@ public class ViewModelArgsInjector(
             }
         };
 
-        if (context.User.IsInRole("Admin"))
+        var canReadUsersResult = authorizationService.AuthorizeAsync(context.User, AppPermissionNames.CanReadUsers).Result;
+        var canReadRolesResult = authorizationService.AuthorizeAsync(context.User, AppPermissionNames.CanReadRoles).Result;
+
+        if (canReadUsersResult.Succeeded || canReadRolesResult.Succeeded)
         {
+            var links = new List<CascadedLink>();
+            if (canReadUsersResult.Succeeded)
+            {
+                links.Add(new CascadedLink { Href = "/Users", Text = "Users" });
+            }
+            if (canReadRolesResult.Succeeded)
+            {
+                links.Add(new CascadedLink { Href = "/Roles", Text = "Roles" });
+            }
             navGroups.Add(new NavGroup
             {
                 Name = "Admin",
@@ -85,13 +100,8 @@ public class ViewModelArgsInjector(
                             currentViewingController == "Sites" ||
                             currentViewingController == "Roles",
                         LucideIcon = "sliders",
-                        Links =
-                        [
-                            new CascadedLink { Href = "/Sites", Text = "Sites" },
-                            new CascadedLink { Href = "/Users", Text = "Users" },
-                            new CascadedLink { Href = "/Roles", Text = "Roles" },
-                        ]
-                    },
+                        Links = links.ToArray()
+                    }
                 ]
             });
         }
