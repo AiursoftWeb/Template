@@ -22,7 +22,9 @@
             <dd class="col-sm-9">@Model.User.Email</dd>
 
             <dt class="col-sm-3">Creation Time</dt>
-            <dd class="col-sm-9" data-utc-time="@Model.User.CreationTime.ToHtmlDateTime()"></dd>
+            <dd class="col-sm-9">
+                <label data-utc-time="@Model.User.CreationTime.ToHtmlDateTime()" class="text-monospace"></label>
+            </dd>
         </dl>
     </div>
 </div>

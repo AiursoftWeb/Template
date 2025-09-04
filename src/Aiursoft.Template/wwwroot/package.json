@@ -9,6 +9,6 @@
     "jquery-validation": "^1.19.5",
     "jquery-validation-unobtrusive": "^3.2.12",
     "@fortawesome/fontawesome-free": "^6.5.1",
-    "@aiursoft/uistack": "^1.0.3"
+    "@aiursoft/uistack": "^1.0.5"
   }
 }

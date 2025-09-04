@@ -49,11 +49,15 @@
                         </tr>
                         <tr>
                             <td>Start Time</td>
-                            <td data-utc-time="@process.StartTime.ToHtmlDateTime()"></td>
+                            <td>
+                                <label class="text-monospace" data-utc-time="@process.StartTime.ToHtmlDateTime()"></label>
+                            </td>
                         </tr>
                         <tr>
                             <td>Server Time</td>
-                            <td data-utc-time="@DateTime.UtcNow.ToHtmlDateTime()"></td>
+                            <td>
+                                <label data-utc-time="@DateTime.UtcNow.ToHtmlDateTime()" class="text-monospace"></label>
+                            </td>
                         </tr>
                         <tr>
                             <td>Memory Usage</td>
