@@ -1,5 +1,6 @@
 @using System.Diagnostics
 @using Aiursoft.Template.Authorization
+@using Aiursoft.WebTools
 @using Microsoft.AspNetCore.Authorization
 @inject IAuthorizationService AuthorizationService
 @{
@@ -48,7 +49,11 @@
                         </tr>
                         <tr>
                             <td>Start Time</td>
-                            <td>@process.StartTime.ToUniversalTime() (UTC)</td>
+                            <td data-utc-time="@process.StartTime.ToHtmlDateTime()"></td>
+                        </tr>
+                        <tr>
+                            <td>Server Time</td>
+                            <td data-utc-time="@DateTime.UtcNow.ToHtmlDateTime()"></td>
                         </tr>
                         <tr>
                             <td>Memory Usage</td>
