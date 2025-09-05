@@ -3,6 +3,7 @@ using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
+using Aiursoft.UiStack.Views.Shared.Components.LanguagesDropdown;
 using Aiursoft.UiStack.Views.Shared.Components.MegaMenu;
 using Aiursoft.UiStack.Views.Shared.Components.Navbar;
 using Aiursoft.UiStack.Views.Shared.Components.SideAdvertisement;
@@ -12,6 +13,7 @@ using Aiursoft.UiStack.Views.Shared.Components.SideMenu;
 using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Services;
@@ -106,6 +108,26 @@ public class ViewModelArgsInjector(
             }
         };
 
+        var currentCulture = context.Features
+            .Get<IRequestCultureFeature>()?
+            .RequestCulture.Culture.Name; // zh-CN
+        var suppportedCultures = WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures
+            .Select(c => new LanguageSelection
+            {
+                Link = $"/Culture/Set?culture={c.Key}&returnUrl={context.Request.Path}",
+                Name = c.Value // 中文 - 中国
+            })
+            .ToArray();
+        toInject.Navbar.LanguagesDropdown = new LanguagesDropdownViewModel
+        {
+            Languages = suppportedCultures,
+            SelectedLanguage = new LanguageSelection
+            {
+                Name = WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures[currentCulture ?? "en-US"],
+                Link = "#",
+            }
+        };
+
         if (signInManager.IsSignedIn(context.User))
         {
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
@@ -162,7 +184,6 @@ public class ViewModelArgsInjector(
                     Icon = "user-plus"
                 });
             }
-
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = "Anonymous",
