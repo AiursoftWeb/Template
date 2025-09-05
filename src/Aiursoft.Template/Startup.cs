@@ -11,6 +11,7 @@ using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace Aiursoft.Template;
 
@@ -60,7 +61,9 @@ public class Startup : IWebStartup
         services.AddScoped<ViewModelArgsInjector>();
         services.AddControllersWithViews()
             .AddApplicationPart(typeof(Startup).Assembly)
-            .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly);
+            .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly)
+            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+            .AddDataAnnotationsLocalization();
     }
 
     public void Configure(WebApplication app)
