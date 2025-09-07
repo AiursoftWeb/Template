@@ -1,4 +1,3 @@
-using System.Security.Claims;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -77,8 +76,7 @@ public static class AuthenticationExtensions
                         // 1. Get the user's information from the OIDC token
                         var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
                         var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
-                        var providerKey = principal.FindFirstValue(ClaimTypes.NameIdentifier) ??
-                                          principal.FindFirstValue("sub");
+                        var providerKey = principal.FindFirst(appSettings.OIDC.UserIdentityPropertyName)?.Value;
                         logger.LogInformation("User '{Username}' from OIDC with email '{Email}' is trying to log in. Provider key: '{ProviderKey}'", username, email, providerKey);
 
                         // 2. Ensure the user's information is valid
@@ -90,8 +88,6 @@ public static class AuthenticationExtensions
 
                         // 3. Try to find the user in the local database
                         var loginInfo = new UserLoginInfo(context.Scheme.Name, providerKey, context.Scheme.Name);
-                        var isNewUser = false;
-
                         logger.LogInformation("Try to find the user in the local database. With username: '{Username}', email: '{Email}', provider key: '{ProviderKey}'", username, email, providerKey);
                         var localUser = await userManager.FindByLoginAsync(loginInfo.LoginProvider, loginInfo.ProviderKey) ??
                                         await userManager.FindByNameAsync(username) ??
@@ -100,7 +96,6 @@ public static class AuthenticationExtensions
                         // 4. If the user doesn't exist, create a new one
                         if (localUser is null)
                         {
-                            isNewUser = true;
                             localUser = new User { UserName = username, Email = email };
                             logger.LogInformation("The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.", username, email);
                             var createUserResult = await userManager.CreateAsync(localUser);
@@ -136,9 +131,9 @@ public static class AuthenticationExtensions
 
                         // 6. If the user is new, add the default role.
                         var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value).ToHashSet();
-                        if (isNewUser && !string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
+                        if (!string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
                         {
-                            logger.LogInformation("The user is new. Add the default role '{Role}' to the user.", appSettings.DefaultRoleForNewUser);
+                            logger.LogInformation("Add the default role '{Role}' to the user.", appSettings.DefaultRoleForNewUser);
                             oidcRoles.Add(appSettings.DefaultRoleForNewUser);
                         }
 

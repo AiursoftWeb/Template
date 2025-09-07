@@ -90,7 +90,7 @@ public class AccountController(
     [AllowAnonymous]
     public IActionResult Register(string? returnUrl = null)
     {
-        // 如果 OIDC 启用，或本地注册被禁用，则不允许访问
+        // If in OIDC mode or registration is not allowed, return 400.
         if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
         {
             return BadRequest("Registration is not allowed in the current configuration.");
