@@ -7,6 +7,5 @@ public class OidcSettings
     public required string ClientSecret { get; init; } = "your-client-secret";
     public required string RolePropertyName { get; init; } = "groups";
     public required string UsernamePropertyName { get; init; } = "preferred_username";
-
     public required string EmailPropertyName { get; init; } = "email";
 }

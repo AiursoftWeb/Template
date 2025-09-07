@@ -1,7 +1,6 @@
+using System.Security.Claims;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
@@ -16,8 +15,6 @@ public static class AuthenticationExtensions
         IConfiguration configuration)
     {
         var appSettings = configuration.GetSection("AppSettings").Get<AppSettings>()!;
-
-        // 1. AddIdentity 依然是起点，它会“隐式地”注册基础的认证服务和方案
         services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireNonAlphanumeric = false;
@@ -30,148 +27,143 @@ public static class AuthenticationExtensions
             .AddEntityFrameworkStores<TemplateDbContext>()
             .AddDefaultTokenProviders();
 
+        var authBuilder = services.AddAuthentication(options =>
+        {
+            options.DefaultScheme = IdentityConstants.ApplicationScheme;
+            options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+        });
+
+        services.ConfigureApplicationCookie(options =>
+        {
+            options.LoginPath = "/Account/Login";
+            options.LogoutPath = "/Account/Logoff";
+            options.AccessDeniedPath = "/Home/Index";
+        });
+
         if (appSettings.OIDCEnabled)
         {
-            // 配置 OIDC 认证
-            services.AddAuthentication(options =>
-                {
-                    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
-                })
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-                {
-                    options.LoginPath = "/Account/Login";
-                    options.LogoutPath = "/Account/Logoff";
-                    options.AccessDeniedPath = "/Home/Index";
-                })
-                .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
-                {
-                    options.Authority = appSettings.OIDC.Authority;
-                    options.ClientId = appSettings.OIDC.ClientId;
-                    options.ClientSecret = appSettings.OIDC.ClientSecret;
-                    options.ResponseType = OpenIdConnectResponseType.Code;
-                    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            authBuilder.AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
+            {
+                options.Authority = appSettings.OIDC.Authority;
+                options.ClientId = appSettings.OIDC.ClientId;
+                options.ClientSecret = appSettings.OIDC.ClientSecret;
+                options.ResponseType = OpenIdConnectResponseType.Code;
+                options.SignInScheme = IdentityConstants.ExternalScheme;
 
-                    options.Scope.Clear();
-                    options.Scope.Add("openid");
-                    options.Scope.Add("profile");
-                    options.Scope.Add("email");
+                options.Scope.Clear();
+                options.Scope.Add("openid");
+                options.Scope.Add("profile");
+                options.Scope.Add("email");
 
-                    options.SaveTokens = true;
-                    options.GetClaimsFromUserInfoEndpoint = true;
-                    options.MapInboundClaims = false;
+                options.SaveTokens = true;
+                options.GetClaimsFromUserInfoEndpoint = true;
+                options.MapInboundClaims = false;
 
-                    options.TokenValidationParameters = new TokenValidationParameters
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = appSettings.OIDC.UsernamePropertyName,
+                    RoleClaimType = appSettings.OIDC.RolePropertyName
+                };
+
+                options.Events = new OpenIdConnectEvents
+                {
+                    OnTokenValidated = async context =>
                     {
-                        NameClaimType = appSettings.OIDC.UsernamePropertyName,
-                        RoleClaimType = appSettings.OIDC.RolePropertyName
-                    };
+                        var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
+                        var roleManager = context.HttpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+                        var logger = context.HttpContext.RequestServices.GetRequiredService<ILogger<Startup>>();
+                        var principal = context.Principal!;
 
-                    options.Events = new OpenIdConnectEvents
-                    {
-                        OnTokenValidated = async context =>
+                        // 1. Get the user's information from the OIDC token
+                        var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
+                        var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
+                        var providerKey = principal.FindFirstValue(ClaimTypes.NameIdentifier) ??
+                                          principal.FindFirstValue("sub");
+                        logger.LogInformation("User '{Username}' from OIDC with email '{Email}' is trying to log in. Provider key: '{ProviderKey}'", username, email, providerKey);
+
+                        // 2. Ensure the user's information is valid
+                        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(providerKey))
                         {
-                            var userManager =
-                                context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
-                            var signInManager = context.HttpContext.RequestServices
-                                .GetRequiredService<SignInManager<User>>();
-                            var roleManager = context.HttpContext.RequestServices
-                                .GetRequiredService<RoleManager<IdentityRole>>();
-                            var principal = context.Principal!;
-
-                            var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
-                            var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
-
-                            if (string.IsNullOrEmpty(username))
-                            {
-                                context.Fail("Could not find username claim.");
-                                return;
-                            }
-
-                            if (string.IsNullOrEmpty(email))
-                            {
-                                context.Fail("Could not find email claim.");
-                                return;
-                            }
-
-                            var localUser = await userManager.FindByNameAsync(username);
-                            if (localUser is not null)
-                            {
-                                if (!string.IsNullOrWhiteSpace(email) &&
-                                    !string.Equals(localUser.Email, email, StringComparison.OrdinalIgnoreCase))
-                                {
-                                    localUser.Email = email;
-                                    await userManager.UpdateAsync(localUser);
-                                }
-                            }
-                            else if (!string.IsNullOrWhiteSpace(email))
-                            {
-                                localUser = await userManager.FindByEmailAsync(email);
-                                if (localUser is not null)
-                                {
-                                    await userManager.SetUserNameAsync(localUser, username);
-                                }
-                            }
-
-                            if (localUser is null)
-                            {
-                                localUser = new User { UserName = username, Email = email };
-                                var createUserResult = await userManager.CreateAsync(localUser);
-                                if (!createUserResult.Succeeded)
-                                {
-                                    context.Fail(
-                                        $"创建本地用户失败: {string.Join(", ", createUserResult.Errors.Select(e => e.Description))}");
-                                    return;
-                                }
-
-                                if (!string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
-                                {
-                                    if (await roleManager.RoleExistsAsync(appSettings.DefaultRoleForNewUser))
-                                    {
-                                        await userManager.AddToRoleAsync(localUser, appSettings.DefaultRoleForNewUser);
-                                    }
-                                }
-                            }
-
-                            var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value)
-                                .ToHashSet();
-                            var localRoles = (await userManager.GetRolesAsync(localUser)).ToHashSet();
-                            var rolesToAdd = oidcRoles.Except(localRoles);
-                            foreach (var roleName in rolesToAdd)
-                            {
-                                if (!await roleManager.RoleExistsAsync(roleName))
-                                {
-                                    await roleManager.CreateAsync(new IdentityRole(roleName));
-                                }
-
-                                await userManager.AddToRoleAsync(localUser, roleName);
-                            }
-
-                            var rolesToRemove = localRoles.Except(oidcRoles).ToArray();
-                            if (rolesToRemove.Any())
-                            {
-                                await userManager.RemoveFromRolesAsync(localUser, rolesToRemove);
-                            }
-
-                            // 1. 像之前一样，创建 Identity 框架认可的 Principal
-                            var newPrincipal = await signInManager.CreateUserPrincipalAsync(localUser);
-
-                            // 2. 手动、显式地使用主应用 Cookie 方案来签发登录 Cookie
-                            // 这是 SignInManager.SignInAsync 的底层核心调用
-                            await context.HttpContext.SignInAsync(
-                                IdentityConstants.ApplicationScheme,
-                                newPrincipal,
-                                context.Properties); // 传递 OIDC 的属性，如 isPersistent
-                            //await signInManager.SignInAsync(localUser, context.Properties!);
-
-                            // 3. 告诉 OIDC 处理器，我们已经完全处理了这次认证响应，你不需要再做任何事了
-                            context.HandleResponse();
-
-                            // 4. 手动处理成功后的重定向
-                            context.Response.Redirect(context.Properties!.RedirectUri ?? "/");
+                            context.Fail("Could not find the required username, email, or sub claim in the OIDC token.");
+                            return;
                         }
-                    };
-                });
+
+                        // 3. Try to find the user in the local database
+                        var loginInfo = new UserLoginInfo(context.Scheme.Name, providerKey, context.Scheme.Name);
+                        var isNewUser = false;
+
+                        logger.LogInformation("Try to find the user in the local database. With username: '{Username}', email: '{Email}', provider key: '{ProviderKey}'", username, email, providerKey);
+                        var localUser = await userManager.FindByLoginAsync(loginInfo.LoginProvider, loginInfo.ProviderKey) ??
+                                        await userManager.FindByNameAsync(username) ??
+                                        await userManager.FindByEmailAsync(email);
+
+                        // 4. If the user doesn't exist, create a new one
+                        if (localUser is null)
+                        {
+                            isNewUser = true;
+                            localUser = new User { UserName = username, Email = email };
+                            logger.LogInformation("The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.", username, email);
+                            var createUserResult = await userManager.CreateAsync(localUser);
+                            if (!createUserResult.Succeeded)
+                            {
+                                var errors = string.Join(", ", createUserResult.Errors.Select(e => e.Description));
+                                context.Fail($"Failed to create a local user: {errors}");
+                                return;
+                            }
+                        }
+
+                        // 5. Patch the user's information if needed
+                        if (!string.Equals(localUser.UserName, username, StringComparison.OrdinalIgnoreCase))
+                        {
+                            logger.LogInformation("Setting the user's username to '{Username}' from OIDC.", username);
+                            await userManager.SetUserNameAsync(localUser, username);
+                        }
+                        if (!string.Equals(localUser.Email, email, StringComparison.OrdinalIgnoreCase))
+                        {
+                            logger.LogInformation("Setting the user's email to '{Email}' from OIDC.", email);
+                            await userManager.SetEmailAsync(localUser, email);
+                            localUser.EmailConfirmed = true;
+                            await userManager.UpdateAsync(localUser);
+                        }
+
+                        // 6. Add the user's login information if needed
+                        var userLogins = await userManager.GetLoginsAsync(localUser);
+                        if (!userLogins.Any(l => l.LoginProvider == loginInfo.LoginProvider && l.ProviderKey == loginInfo.ProviderKey))
+                        {
+                            logger.LogInformation("Adding the user's login information with provider '{Provider}' and key '{Key}' from OIDC.", loginInfo.LoginProvider, loginInfo.ProviderKey);
+                            await userManager.AddLoginAsync(localUser, loginInfo);
+                        }
+
+                        // 6. If the user is new, add the default role.
+                        var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value).ToHashSet();
+                        if (isNewUser && !string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
+                        {
+                            logger.LogInformation("The user is new. Add the default role '{Role}' to the user.", appSettings.DefaultRoleForNewUser);
+                            oidcRoles.Add(appSettings.DefaultRoleForNewUser);
+                        }
+
+                        // 7. Add or remove roles based on the user's roles in OIDC and local database.'
+                        var localRoles = (await userManager.GetRolesAsync(localUser)).ToHashSet();
+                        var rolesToAdd = oidcRoles.Except(localRoles);
+                        foreach (var roleName in rolesToAdd)
+                        {
+                            if (!await roleManager.RoleExistsAsync(roleName))
+                            {
+                                logger.LogInformation("The role '{Role}' doesn't exist. Create a new one.", roleName);
+                                await roleManager.CreateAsync(new IdentityRole(roleName));
+                            }
+                            logger.LogInformation("Add the role '{Role}' to the user.", roleName);
+                            await userManager.AddToRoleAsync(localUser, roleName);
+                        }
+                        var rolesToRemove = localRoles.Except(oidcRoles).ToArray();
+                        if (rolesToRemove.Any())
+                        {
+                            logger.LogInformation("Remove the roles '{Roles}' from the user.", string.Join(", ", rolesToRemove));
+                            await userManager.RemoveFromRolesAsync(localUser, rolesToRemove);
+                        }
+                    }
+                };
+            });
         }
 
         return services;
