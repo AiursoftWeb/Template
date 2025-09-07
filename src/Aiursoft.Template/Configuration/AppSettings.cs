@@ -8,4 +8,6 @@ public class AppSettings
 
     public required OidcSettings OIDC { get; init; }
     public required LocalSettings Local { get; init; }
+
+    public string? DefaultRoleForNewUser { get; init; } = string.Empty;
 }

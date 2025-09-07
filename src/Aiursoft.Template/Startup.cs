@@ -35,17 +35,18 @@ public class Startup : IWebStartup
             ]);
 
         services.AddMemoryCache();
-        services.AddIdentity<User, IdentityRole>(options => options.Password = new PasswordOptions
-        {
-            RequireNonAlphanumeric = false,
-            RequireDigit = false,
-            RequiredLength = 6,
-            RequiredUniqueChars = 0,
-            RequireLowercase = false,
-            RequireUppercase = false
-        })
-        .AddEntityFrameworkStores<TemplateDbContext>()
-        .AddDefaultTokenProviders();
+        services.AddTemplateAuthentication(configuration);
+        // services.AddIdentity<User, IdentityRole>(options => options.Password = new PasswordOptions
+        // {
+        //     RequireNonAlphanumeric = false,
+        //     RequireDigit = false,
+        //     RequiredLength = 6,
+        //     RequiredUniqueChars = 0,
+        //     RequireLowercase = false,
+        //     RequireUppercase = false
+        // })
+        // .AddEntityFrameworkStores<TemplateDbContext>()
+        // .AddDefaultTokenProviders();
 
         services.AddAuthorization(options =>
         {

@@ -2,6 +2,9 @@ using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.AccountViewModels;
 using Aiursoft.Template.Services;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,27 +21,41 @@ public class AccountController(
     : Controller
 {
     private readonly ILogger _logger = loggerFactory.CreateLogger<AccountController>();
+    private readonly AppSettings _appSettings = appSettings.Value;
 
-    //
     // GET: /Account/Login
     [HttpGet]
     [AllowAnonymous]
     public IActionResult Login(string? returnUrl = null)
     {
+        // 如果 OIDC 启用，不显示登录页，直接挑战 OIDC Provider
+        if (_appSettings.OIDCEnabled)
+        {
+            var properties = new AuthenticationProperties { RedirectUri = returnUrl ?? "/" };
+            return Challenge(properties, OpenIdConnectDefaults.AuthenticationScheme);
+        }
+
+        // 否则，显示本地登录页
         ViewData["ReturnUrl"] = returnUrl;
         return this.StackView(new LoginViewModel());
     }
 
-    //
     // POST: /Account/Login
     [HttpPost]
     [AllowAnonymous]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
     {
+        // 如果 OIDC 启用，本地登录 POST 请求是无效的
+        if (_appSettings.OIDCEnabled)
+        {
+            return BadRequest("Local login is disabled when OIDC authentication is enabled.");
+        }
+
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
+            // ... (原有的本地登录逻辑保持不变)
             var possibleUser = await userManager.FindByEmailAsync(model.EmailOrUserName!);
             if (possibleUser == null)
             {
@@ -67,40 +84,40 @@ public class AccountController(
             return this.StackView(model);
         }
 
-        // If we got this far, something failed, redisplay form
         return this.StackView(model);
     }
 
-    //
     // GET: /Account/Register
     [HttpGet]
     [AllowAnonymous]
     public IActionResult Register(string? returnUrl = null)
     {
-        var allowRegister = appSettings.Value.Local.AllowRegister;
-        if (!allowRegister)
+        // 如果 OIDC 启用，或本地注册被禁用，则不允许访问
+        if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
         {
-            return BadRequest("Register is not allowed.");
+            return BadRequest("Registration is not allowed in the current configuration.");
         }
+
         ViewData["ReturnUrl"] = returnUrl;
         return this.StackView(new RegisterViewModel());
     }
 
-    //
     // POST: /Account/Register
     [HttpPost]
     [AllowAnonymous]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel model, string? returnUrl = null)
     {
-        var allowRegister = appSettings.Value.Local.AllowRegister;
-        if (!allowRegister)
+        // 如果 OIDC 启用，或本地注册被禁用，则不允许注册
+        if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
         {
-            return BadRequest("Register is not allowed.");
+            return BadRequest("Registration is not allowed in the current configuration.");
         }
+
         ViewData["ReturnUrl"] = returnUrl;
         if (ModelState.IsValid)
         {
+            // ... (原有的本地注册逻辑保持不变)
             var user = new User
             {
                 UserName = model.Email!.Split('@')[0],
@@ -116,19 +133,28 @@ public class AccountController(
             AddErrors(result);
         }
 
-        // If we got this far, something failed, redisplay form
         return this.StackView(model);
     }
 
+    // 优化后的 LogOff 方法
     public async Task<IActionResult> LogOff()
     {
+        if (_appSettings.OIDCEnabled)
+        {
+            // 对于 OIDC，需要同时登出本地 Cookie 和 OIDC Provider
+            _logger.LogInformation(4, "User logged out with OIDC.");
+            var properties = new AuthenticationProperties { RedirectUri = "/" };
+            // 同时指定两个认证方案，实现联合登出
+            return SignOut(properties, CookieAuthenticationDefaults.AuthenticationScheme, OpenIdConnectDefaults.AuthenticationScheme);
+        }
+
+        // 对于本地登录，只需登出本地 Cookie
         await signInManager.SignOutAsync();
-        _logger.LogInformation(4, "User logged out");
+        _logger.LogInformation(4, "User logged out locally.");
         return RedirectToAction(nameof(HomeController.Index), "Home");
     }
 
     #region Helpers
-
     private void AddErrors(IdentityResult result)
     {
         foreach (var error in result.Errors)
@@ -143,9 +169,7 @@ public class AccountController(
         {
             return Redirect(returnUrl);
         }
-
         return RedirectToAction(nameof(HomeController.Index), "Home");
     }
-
     #endregion
 }
