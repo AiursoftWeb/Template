@@ -81,7 +81,6 @@ public class AccountController(
             }
 
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-            return this.StackView(model);
         }
 
         return this.StackView(model);

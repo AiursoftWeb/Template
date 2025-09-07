@@ -3,14 +3,12 @@ using Aiursoft.DbTools.Switchable;
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
-using Aiursoft.Template.Entities;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Services;
 using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace Aiursoft.Template;
@@ -36,18 +34,6 @@ public class Startup : IWebStartup
 
         services.AddMemoryCache();
         services.AddTemplateAuthentication(configuration);
-        // services.AddIdentity<User, IdentityRole>(options => options.Password = new PasswordOptions
-        // {
-        //     RequireNonAlphanumeric = false,
-        //     RequireDigit = false,
-        //     RequiredLength = 6,
-        //     RequiredUniqueChars = 0,
-        //     RequireLowercase = false,
-        //     RequireUppercase = false
-        // })
-        // .AddEntityFrameworkStores<TemplateDbContext>()
-        // .AddDefaultTokenProviders();
-
         services.AddAuthorization(options =>
         {
             foreach (var permission in AppPermissions.AllPermissions)

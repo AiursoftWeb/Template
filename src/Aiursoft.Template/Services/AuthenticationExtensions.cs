@@ -1,6 +1,6 @@
-using System.Security.Claims;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Identity;
@@ -17,7 +17,7 @@ public static class AuthenticationExtensions
     {
         var appSettings = configuration.GetSection("AppSettings").Get<AppSettings>()!;
 
-        // 这部分对两种认证类型都是通用的
+        // 1. AddIdentity 依然是起点，它会“隐式地”注册基础的认证服务和方案
         services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireNonAlphanumeric = false;
@@ -49,7 +49,6 @@ public static class AuthenticationExtensions
                     options.Authority = appSettings.OIDC.Authority;
                     options.ClientId = appSettings.OIDC.ClientId;
                     options.ClientSecret = appSettings.OIDC.ClientSecret;
-
                     options.ResponseType = OpenIdConnectResponseType.Code;
                     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 
@@ -60,40 +59,44 @@ public static class AuthenticationExtensions
 
                     options.SaveTokens = true;
                     options.GetClaimsFromUserInfoEndpoint = true;
+                    options.MapInboundClaims = false;
 
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
-                        NameClaimType = "name",
-                        RoleClaimType = appSettings.OIDC.RolePropertyNames
+                        NameClaimType = appSettings.OIDC.UsernamePropertyName,
+                        RoleClaimType = appSettings.OIDC.RolePropertyName
                     };
 
                     options.Events = new OpenIdConnectEvents
                     {
                         OnTokenValidated = async context =>
                         {
-                            var userManager = context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
-                            var roleManager = context.HttpContext.RequestServices.GetRequiredService<RoleManager<IdentityRole>>();
+                            var userManager =
+                                context.HttpContext.RequestServices.GetRequiredService<UserManager<User>>();
+                            var signInManager = context.HttpContext.RequestServices
+                                .GetRequiredService<SignInManager<User>>();
+                            var roleManager = context.HttpContext.RequestServices
+                                .GetRequiredService<RoleManager<IdentityRole>>();
                             var principal = context.Principal!;
 
-                            // ==================== 新的用户同步逻辑 开始 ====================
-
-                            // 1. 从 OIDC claims 中提取关键信息
-                            var username = principal.FindFirst("name")?.Value;
-                            var email = principal.FindFirst(ClaimTypes.Email)?.Value;
+                            var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
+                            var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
 
                             if (string.IsNullOrEmpty(username))
                             {
-                                context.Fail("OIDC 令牌中未找到用户名 ('name') claim。");
+                                context.Fail("Could not find username claim.");
                                 return;
                             }
 
-                            User? localUser;
+                            if (string.IsNullOrEmpty(email))
+                            {
+                                context.Fail("Could not find email claim.");
+                                return;
+                            }
 
-                            // 2. 第一步：优先按用户名查找
-                            localUser = await userManager.FindByNameAsync(username);
+                            var localUser = await userManager.FindByNameAsync(username);
                             if (localUser is not null)
                             {
-                                // 找到了！如果 Email 不一致，则更新本地 Email
                                 if (!string.IsNullOrWhiteSpace(email) &&
                                     !string.Equals(localUser.Email, email, StringComparison.OrdinalIgnoreCase))
                                 {
@@ -103,26 +106,24 @@ public static class AuthenticationExtensions
                             }
                             else if (!string.IsNullOrWhiteSpace(email))
                             {
-                                // 3. 第二步：如果按用户名找不到，且 Email 存在，则按 Email 查找
                                 localUser = await userManager.FindByEmailAsync(email);
                                 if (localUser is not null)
                                 {
-                                    // 找到了！说明用户在 OIDC 端修改了用户名，同步更新本地用户名
                                     await userManager.SetUserNameAsync(localUser, username);
                                 }
                             }
 
-                            // 4. 第三步：如果都找不到，则创建新用户
                             if (localUser is null)
                             {
-                                localUser = new User
+                                localUser = new User { UserName = username, Email = email };
+                                var createUserResult = await userManager.CreateAsync(localUser);
+                                if (!createUserResult.Succeeded)
                                 {
-                                    UserName = username,
-                                    Email = email
-                                };
-                                await userManager.CreateAsync(localUser); // OIDC 用户无需密码
+                                    context.Fail(
+                                        $"创建本地用户失败: {string.Join(", ", createUserResult.Errors.Select(e => e.Description))}");
+                                    return;
+                                }
 
-                                // 如果配置了，则分配默认角色
                                 if (!string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
                                 {
                                     if (await roleManager.RoleExistsAsync(appSettings.DefaultRoleForNewUser))
@@ -132,12 +133,9 @@ public static class AuthenticationExtensions
                                 }
                             }
 
-                            // ==================== 新的用户同步逻辑 结束 ====================
-
-                            // 5. 同步角色 (这部分逻辑不变)
-                            var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyNames).Select(c => c.Value).ToHashSet();
+                            var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value)
+                                .ToHashSet();
                             var localRoles = (await userManager.GetRolesAsync(localUser)).ToHashSet();
-
                             var rolesToAdd = oidcRoles.Except(localRoles);
                             foreach (var roleName in rolesToAdd)
                             {
@@ -145,6 +143,7 @@ public static class AuthenticationExtensions
                                 {
                                     await roleManager.CreateAsync(new IdentityRole(roleName));
                                 }
+
                                 await userManager.AddToRoleAsync(localUser, roleName);
                             }
 
@@ -154,30 +153,24 @@ public static class AuthenticationExtensions
                                 await userManager.RemoveFromRolesAsync(localUser, rolesToRemove);
                             }
 
-                            // 6. 为应用程序会话创建新的 claims identity (这部分逻辑不变)
-                            var finalRoles = await userManager.GetRolesAsync(localUser);
-                            var newIdentity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
-                            newIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, localUser.Id));
-                            newIdentity.AddClaim(new Claim(ClaimTypes.Name, localUser.UserName!));
-                            foreach (var role in finalRoles)
-                            {
-                                newIdentity.AddClaim(new Claim(ClaimTypes.Role, role));
-                            }
+                            // 1. 像之前一样，创建 Identity 框架认可的 Principal
+                            var newPrincipal = await signInManager.CreateUserPrincipalAsync(localUser);
 
-                            // 用我们自己的 principal 替换 OIDC 的 principal
-                            context.Principal = new ClaimsPrincipal(newIdentity);
+                            // 2. 手动、显式地使用主应用 Cookie 方案来签发登录 Cookie
+                            // 这是 SignInManager.SignInAsync 的底层核心调用
+                            await context.HttpContext.SignInAsync(
+                                IdentityConstants.ApplicationScheme,
+                                newPrincipal,
+                                context.Properties); // 传递 OIDC 的属性，如 isPersistent
+                            //await signInManager.SignInAsync(localUser, context.Properties!);
+
+                            // 3. 告诉 OIDC 处理器，我们已经完全处理了这次认证响应，你不需要再做任何事了
+                            context.HandleResponse();
+
+                            // 4. 手动处理成功后的重定向
+                            context.Response.Redirect(context.Properties!.RedirectUri ?? "/");
                         }
                     };
-                });
-        }
-        else // 回退到 "Local" 本地认证
-        {
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
-                {
-                    options.LoginPath = "/Account/Login";
-                    options.LogoutPath = "/Account/Logoff";
-                    options.AccessDeniedPath = "/Home/Index";
                 });
         }
 
