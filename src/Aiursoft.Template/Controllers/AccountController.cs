@@ -66,7 +66,7 @@ public class AccountController(
             }
 
             var result =
-                await signInManager.PasswordSignInAsync(possibleUser, model.Password!, true, lockoutOnFailure: true);
+                await signInManager.PasswordSignInAsync(possibleUser, model.Password!, _appSettings.PersistsSignIn, lockoutOnFailure: true);
             if (result.Succeeded)
             {
                 _logger.LogInformation(1, "User logged in");
@@ -122,6 +122,16 @@ public class AccountController(
             var result = await userManager.CreateAsync(user, model.Password!);
             if (result.Succeeded)
             {
+                if (!string.IsNullOrWhiteSpace(_appSettings.DefaultRole))
+                {
+                    var addToRoleResult = await userManager.AddToRoleAsync(user, _appSettings.DefaultRole);
+                    if (!addToRoleResult.Succeeded)
+                    {
+                        AddErrors(addToRoleResult);
+                        return this.StackView(model);
+                    }
+                }
+
                 await signInManager.SignInAsync(user, isPersistent: false);
                 _logger.LogInformation(3, "User created a new account with password");
                 return RedirectToLocal(returnUrl ?? "/");
@@ -164,7 +174,7 @@ public class AccountController(
         }
 
         var result = await signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey,
-            isPersistent: false, bypassTwoFactor: true);
+            isPersistent: _appSettings.PersistsSignIn, bypassTwoFactor: true);
         if (result.Succeeded)
         {
             _logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);

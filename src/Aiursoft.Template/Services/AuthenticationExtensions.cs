@@ -150,10 +150,10 @@ public static class AuthenticationExtensions
 
         // 7. Add the default role based on settings
         var oidcRoles = principal.FindAll(appSettings.OIDC.RolePropertyName).Select(c => c.Value).ToHashSet();
-        if (!string.IsNullOrWhiteSpace(appSettings.DefaultRoleForNewUser))
+        if (!string.IsNullOrWhiteSpace(appSettings.DefaultRole))
         {
-            logger.LogInformation("Add the default role '{Role}' to the user.", appSettings.DefaultRoleForNewUser);
-            oidcRoles.Add(appSettings.DefaultRoleForNewUser);
+            logger.LogInformation("Add the default role '{Role}' to the user.", appSettings.DefaultRole);
+            oidcRoles.Add(appSettings.DefaultRole);
         }
 
         // 8. Add or remove roles based on the user's roles in OIDC and local database.'
