@@ -5,23 +5,23 @@
     ViewData["Title"] = "User Details";
 }
 
-<h1>User Details: @Model.User.UserName</h1>
-<p>An overview of the user's profile, assigned roles, and effective permissions.</p>
+<h1>@Localizer["User Details:"] @Model.User.UserName</h1>
+<p>@Localizer["An overview of the user's profile, assigned roles, and effective permissions."]</p>
 <hr />
 
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-user"></i> Basic Information
+        <i class="fas fa-user"></i> @Localizer["Basic Information"]
     </div>
     <div class="card-body">
         <dl class="row">
-            <dt class="col-sm-3">User Name</dt>
+            <dt class="col-sm-3">@Localizer["Name"]</dt>
             <dd class="col-sm-9">@Model.User.UserName</dd>
 
-            <dt class="col-sm-3">Email</dt>
+            <dt class="col-sm-3">@Localizer["Email"]</dt>
             <dd class="col-sm-9">@Model.User.Email</dd>
 
-            <dt class="col-sm-3">Creation Time</dt>
+            <dt class="col-sm-3">@Localizer["Creation Time"]</dt>
             <dd class="col-sm-9">
                 <label data-utc-time="@Model.User.CreationTime.ToHtmlDateTime()" class="text-monospace"></label>
             </dd>
@@ -33,7 +33,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <i class="fas fa-user-tag"></i> Assigned Roles
+                <i class="fas fa-user-tag"></i> @Localizer["Assigned Roles"]
             </div>
             <div class="card-body">
                 @if (Model.Roles.Any())
@@ -48,7 +48,7 @@
                 }
                 else
                 {
-                    <p class="text-muted">This user has not been assigned any roles.</p>
+                    <p class="text-muted">@Localizer["This user has not been assigned any roles."]</p>
                 }
             </div>
         </div>
@@ -57,7 +57,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">
-                <i class="fas fa-shield-alt"></i> Effective Permissions (from all roles)
+                <i class="fas fa-shield-alt"></i> @Localizer["Effective Permissions (from all roles)"]
             </div>
             @if (Model.Permissions.Any())
             {
@@ -74,7 +74,7 @@
             else
             {
                  <div class="card-body">
-                    <p class="text-muted">This user has no effective permissions.</p>
+                    <p class="text-muted">@Localizer["This user has no effective permissions."]</p>
                 </div>
             }
         </div>
@@ -83,7 +83,7 @@
 
 
 <div class="mt-4">
-    <a asp-action="Edit" asp-route-id="@Model.User.Id" class="btn btn-primary">Edit this User</a>
-    <a asp-action="Delete" asp-route-id="@Model.User.Id" class="btn btn-danger">Delete this User</a>
-    <a asp-action="Index" class="ml-3">Back to list</a>
+    <a asp-action="Edit" asp-route-id="@Model.User.Id" class="btn btn-primary">@Localizer["Edit this User"]</a>
+    <a asp-action="Delete" asp-route-id="@Model.User.Id" class="btn btn-danger">@Localizer["Delete this User"]</a>
+    <a asp-action="Index" class="ml-3">@Localizer["Back to list"]</a>
 </div>

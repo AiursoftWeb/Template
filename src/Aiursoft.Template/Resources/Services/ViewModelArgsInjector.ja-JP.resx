@@ -42,5 +42,26 @@
   <data name="Index" xml:space="preserve">
     <value>インデックス</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>ディレクトリ</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>ロール</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>システム</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>情報</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理者</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
 
 </root>

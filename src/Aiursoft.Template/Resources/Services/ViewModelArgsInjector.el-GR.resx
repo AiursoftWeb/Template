@@ -42,5 +42,23 @@
   <data name="Register" xml:space="preserve">
     <value>Εγγραφή</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Κατάλογος</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Χρήστες</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Ρόλοι</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Διαχειριστής</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Σύστημα</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Πληροφορίες</value>
+  </data>
 
 </root>

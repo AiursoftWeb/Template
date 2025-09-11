@@ -42,5 +42,23 @@
   <data name="Index" xml:space="preserve">
     <value>Index</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Gebruikers</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rollen</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Beheerder</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Systeem</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informatie</value>
+  </data>
 
 </root>

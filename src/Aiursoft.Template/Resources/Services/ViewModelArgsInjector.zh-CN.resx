@@ -18,28 +18,50 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Aiursoft Template" xml:space="preserve">
-      <value>Aiursoft 模板项目</value>
-    </data>
-    <data name="Template" xml:space="preserve">
-      <value>模板</value>
-    </data>
-    <data name="Home" xml:space="preserve">
-      <value>主页</value>
-    </data>
-    <data name="Index" xml:space="preserve">
-      <value>首页</value>
-    </data>
-    <data name="Features" xml:space="preserve">
-      <value>功能</value>
-    </data>
-    <data name="Login" xml:space="preserve">
-      <value>登录</value>
-    </data>
-    <data name="Register" xml:space="preserve">
-      <value>注册</value>
-    </data>
-    <data name="Login to get access to all features." xml:space="preserve">
-      <value>登录以使用所有功能。</value>
-    </data>
+      <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft 模板项目</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>模板</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>功能</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="Login to get access to all features." xml:space="preserve">
+    <value>登录以使用所有功能。</value>
+  </data>
+  <data name="Directory" xml:space="preserve">
+    <value>目录</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>系统</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理员</value>
+  </data>
+
 </root>

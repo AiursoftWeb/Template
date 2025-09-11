@@ -42,5 +42,23 @@
   <data name="Register" xml:space="preserve">
     <value>पंजीकरण करें</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>निर्देशिका</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>उपयोगकर्ता</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>भूमिकाएँ</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>प्रशासक</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>सिस्टम</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>जानकारी</value>
+  </data>
 
 </root>

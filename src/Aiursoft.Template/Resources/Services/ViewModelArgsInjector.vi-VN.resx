@@ -42,5 +42,26 @@
   <data name="Index" xml:space="preserve">
     <value>Trang chủ</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Thư mục</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Người dùng</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Quản trị viên</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Ẩn danh</value>
+  </data>
 
 </root>

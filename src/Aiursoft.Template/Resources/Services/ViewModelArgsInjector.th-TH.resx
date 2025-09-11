@@ -42,5 +42,26 @@
   <data name="Index" xml:space="preserve">
     <value>หน้าหลัก</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>ไดเรกทอรี</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>ผู้ใช้</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>บทบาท</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>ระบบ</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>ข้อมูล</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>ผู้ดูแลระบบ</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>ไม่ระบุชื่อ</value>
+  </data>
 
 </root>

@@ -1,15 +1,21 @@
+@using Aiursoft.Template.Configuration
+@using Microsoft.Extensions.Options
 @model Aiursoft.Template.Models.ManageViewModels.IndexViewModel
-<h2>Manage your account</h2>
+@inject IOptions<AppSettings> AppSettings
+<h2>@Localizer["Account Management"]</h2>
 
 <p class="text-success">@ViewData["StatusMessage"]</p>
 
 <div>
-    <h4>Change your account settings</h4>
+    <h4>@Localizer["Change your account settings"]</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Password</dt>
-        <dd>
-            <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">Change your password</a>
-        </dd>
+        @if (AppSettings.Value.LocalEnabled)
+        {
+            <dt>Password</dt>
+            <dd>
+                <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">@Localizer["Change your password"]</a>
+            </dd>
+        }
     </dl>
 </div>

@@ -42,5 +42,23 @@
   <data name="Register" xml:space="preserve">
     <value>Kayıt Ol</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Dizin</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Kullanıcılar</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roller</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Yönetici</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Bilgi</value>
+  </data>
 
 </root>

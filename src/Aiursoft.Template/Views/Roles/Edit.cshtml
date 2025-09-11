@@ -1,8 +1,8 @@
 @model Aiursoft.Template.Models.RolesViewModels.EditViewModel
 
-<h1>Edit</h1>
+<h1>@Localizer["Edit"]</h1>
 
-<h4>Role</h4>
+<h4>@Localizer["Role"]</h4>
 <hr />
 <div class="row">
     <div class="col-md-8">
@@ -17,7 +17,7 @@
             <hr />
 
             <div class="form-group">
-                <h5>Manage Claims for this Role</h5>
+                <h5>@Localizer["Manage Claims for this Role"]</h5>
                 <div class="card">
                     <div class="card-body">
                         @for (var i = 0; i < Model.Claims.Count; i++)
@@ -42,12 +42,12 @@
             </div>
 
             <div class="form-group mt-3">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="@Localizer["Save"]" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Localizer["Back to List"]</a>
 </div>

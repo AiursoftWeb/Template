@@ -42,5 +42,23 @@
   <data name="Register" xml:space="preserve">
     <value>Rekisteröidy</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Hakemisto</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Käyttäjät</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roolit</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Ylläpitäjä</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Järjestelmä</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Tiedot</value>
+  </data>
 
 </root>

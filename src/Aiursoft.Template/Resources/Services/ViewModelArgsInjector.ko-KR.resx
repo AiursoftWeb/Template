@@ -42,5 +42,26 @@
   <data name="Index" xml:space="preserve">
     <value>인덱스</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>디렉터리</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>사용자</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>역할</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>시스템</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>관리자</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>익명</value>
+  </data>
 
 </root>

@@ -42,5 +42,26 @@
   <data name="Index" xml:space="preserve">
     <value>首頁</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>目錄</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>系統</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>匿名</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理員</value>
+  </data>
 
 </root>

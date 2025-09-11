@@ -7,64 +7,66 @@
     var process = Process.GetCurrentProcess();
 }
 
-<h1>System Information</h1>
-<p class="text-muted">An overview of the application's server environment, process, and current request context.</p>
+<h1>@Localizer["System Information"]</h1>
+<p class="text-muted">@Localizer["An overview of the application's server environment, process, and current request context."]</p>
 
 <div class="row mt-4">
     <div class="col-lg-8">
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-server me-2"></i>Server & Process Information
+                <i class="fas fa-server me-2"></i>@Localizer["Server & Process Information"]
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-sm mb-0">
                         <tr>
-                            <th class="w-25">Property</th>
-                            <th>Value</th>
+                            <th class="w-25">@Localizer["Property"]</th>
+                            <th>@Localizer["Value"]</th>
                         </tr>
                         <tr>
-                            <td>System</td>
+                            <td>@Localizer["System"]</td>
                             <td>@Aiursoft.CSTools.Services.OperatingSystemExtensions.TryGetFullOsVersion() @(Environment.Is64BitOperatingSystem ? "(64-bit)" : "(32-bit)")</td>
                         </tr>
                         <tr>
-                            <td>Machine Name</td>
+                            <td>@Localizer["Machine Name"]</td>
                             <td>@Environment.MachineName</td>
                         </tr>
                         <tr>
-                            <td>User Name</td>
+                            <td>@Localizer["User Name"]</td>
                             <td>@Environment.UserDomainName\@Environment.UserName</td>
                         </tr>
                         <tr>
-                            <td>Directory</td>
+                            <td>@Localizer["Directory"]</td>
                             <td>@Environment.CurrentDirectory</td>
                         </tr>
                         <tr>
-                            <td>.NET Version</td>
+                            <td>@Localizer[".NET Version"]</td>
                             <td>@Environment.Version</td>
                         </tr>
                         <tr>
-                            <td>Worker Process</td>
-                            <td>[@process.Id] @process.ProcessName @(Environment.Is64BitProcess ? "(64-bit)" : "(32-bit)")</td>
+                            <td>@Localizer["Worker Process"]</td>
+                            <td>
+                                [@process.Id] @process.ProcessName @(Environment.Is64BitProcess ? "(64-bit)" : "(32-bit)")</td>
                         </tr>
                         <tr>
-                            <td>Start Time</td>
+                            <td>@Localizer["Start Time"]</td>
                             <td>
-                                <label class="text-monospace" data-utc-time="@process.StartTime.ToHtmlDateTime()"></label>
+                                <label class="text-monospace"
+                                       data-utc-time="@process.StartTime.ToHtmlDateTime()"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td>Server Time</td>
+                            <td>@Localizer["Server Time"]</td>
                             <td>
                                 <label data-utc-time="@DateTime.UtcNow.ToHtmlDateTime()" class="text-monospace"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td>Memory Usage</td>
+                            <td>@Localizer["Memory Usage"]</td>
                             <td>@(process.WorkingSet64 / 1024 / 1024) MB</td>
                         </tr>
                         <tr>
-                            <td>Docker Container</td>
+                            <td>@Localizer["Docker Container"]</td>
                             <td>@(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")</td>
                         </tr>
                     </table>
@@ -74,24 +76,24 @@
 
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-stream me-2"></i>Request HTTP Headers
+                <i class="fas fa-stream me-2"></i>@Localizer["Request HTTP Headers"]
             </div>
             <div class="card-body">
                 <div class="table-responsive" style="max-height: 400px;">
                     <table class="table table-striped table-hover table-sm mb-0">
                         <thead>
                         <tr>
-                            <th>Header</th>
-                            <th>Value</th>
+                            <th>@Localizer["Header"]</th>
+                            <th>@Localizer["Value"]</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach (var item in Context.Request.Headers)
                         {
-                        <tr>
-                            <td>@item.Key</td>
-                            <td>@item.Value.ToString().SafeSubstring(200)</td>
-                        </tr>
+                            <tr>
+                                <td>@item.Key</td>
+                                <td>@item.Value.ToString().SafeSubstring(200)</td>
+                            </tr>
                         }
                         </tbody>
                     </table>
@@ -103,49 +105,49 @@
     <div class="col-lg-4">
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-info-circle me-2"></i>Request Properties
+                <i class="fas fa-info-circle me-2"></i>@Localizer["Request Properties"]
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-sm mb-0">
                         <tr>
-                            <th>Property</th>
-                            <th>Value</th>
+                            <th>@Localizer["Property"]</th>
+                            <th>@Localizer["Value"]</th>
                         </tr>
                         <tr>
-                            <td>Host</td>
+                            <td>@Localizer["Host"]</td>
                             <td>@Context.Request.Host</td>
                         </tr>
                         <tr>
-                            <td>Path</td>
+                            <td>@Localizer["Path"]</td>
                             <td>@Context.Request.Path</td>
                         </tr>
                         <tr>
-                            <td>Method</td>
+                            <td>@Localizer["Method"]</td>
                             <td>@Context.Request.Method</td>
                         </tr>
                         <tr>
-                            <td>Protocol</td>
+                            <td>@Localizer["Protocol"]</td>
                             <td>@Context.Request.Protocol</td>
                         </tr>
                         <tr>
-                            <td>Scheme</td>
+                            <td>@Localizer["Scheme"]</td>
                             <td>@Context.Request.Scheme</td>
                         </tr>
                         <tr>
-                            <td>Is HTTPS</td>
+                            <td>@Localizer["Is HTTPS"]</td>
                             <td>@Context.Request.IsHttps</td>
                         </tr>
                         <tr>
-                            <td>Remote IP</td>
+                            <td>@Localizer["Remote IP"]</td>
                             <td>@Context.Connection.RemoteIpAddress?.ToString()</td>
                         </tr>
                         <tr>
-                            <td>Remote Port</td>
+                            <td>@Localizer["Remote Port"]</td>
                             <td>@Context.Connection.RemotePort</td>
                         </tr>
                         <tr>
-                            <td>Local Port</td>
+                            <td>@Localizer["Local Port"]</td>
                             <td>@Context.Connection.LocalPort</td>
                         </tr>
                     </table>
@@ -155,20 +157,21 @@
 
         @if ((await AuthorizationService.AuthorizeAsync(User, AppPermissionNames.CanRebootThisApp)).Succeeded)
         {
-        <div class="card">
-            <div class="card-header bg-danger text-white">
-                <i class="fas fa-exclamation-triangle me-2"></i>Danger Zone
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle me-2"></i>@Localizer["Danger Zone"]
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">@Localizer["Restart Application"]</h5>
+                    <p class="card-text small">
+                        @Localizer["This will gracefully shut down the application. A process manager is expected to restart it."]
+                    </p>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#restartConfirmModal">
+                        @Localizer["Request Restart"]
+                    </button>
+                </div>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">Restart Application</h5>
-                <p class="card-text small">
-                    This will gracefully shut down the application. A process manager is expected to restart it.
-                </p>
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#restartConfirmModal">
-                    Request Restart
-                </button>
-            </div>
-        </div>
         }
     </div>
 </div>
@@ -177,55 +180,56 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="restartModalLabel">Confirm Application Restart</h5>
+                <h5 class="modal-title" id="restartModalLabel">@Localizer["Confirm Application Restart"]</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to restart the application? This action is irreversible and will terminate all active connections.
+                @Localizer["Are you sure you want to restart the application? This action is irreversible and will terminate all active connections."]
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger btn-restart">Yes, Restart Now</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
+                <button type="button" class="btn btn-danger btn-restart">@Localizer["Yes, Restart Now"]</button>
             </div>
         </div>
     </div>
 </div>
 
 @* ReSharper disable once Razor.SectionNotResolved *@
+
 @section scripts {
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const restartButton = document.querySelector('#restartConfirmModal .btn-restart');
-        if (!restartButton) return;
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const restartButton = document.querySelector('#restartConfirmModal .btn-restart');
+            if (!restartButton) return;
 
-        function startTimer(duration, displayElement) {
-            let timer = duration;
-            displayElement.textContent = `Restarting... (${timer}s)`;
-            const interval = setInterval(function () {
-                timer--;
-                displayElement.textContent = `Restarting... (${timer}s)`;
-                if (timer <= 0) {
-                    clearInterval(interval);
-                    displayElement.textContent = "Reloading page...";
-                }
-            }, 1000);
-        }
-
-        restartButton.addEventListener('click', function () {
-            fetch('/System/Shutdown', {
-                method: 'POST'
-            }).catch(error => console.error('Error sending shutdown request:', error));
-
-            restartButton.disabled = true;
-            const cancelButton = document.querySelector('#restartConfirmModal .btn-secondary');
-            if (cancelButton) {
-                cancelButton.disabled = true;
+            function startTimer(duration, displayElement) {
+                let timer = duration;
+                displayElement.textContent = `@Localizer["Restarting..."] (${timer}s)`;
+                const interval = setInterval(function () {
+                    timer--;
+                    displayElement.textContent = `@Localizer["Restarting..."] (${timer}s)`;
+                    if (timer <= 0) {
+                        clearInterval(interval);
+                        displayElement.textContent = `@Localizer["Reloading page..."]`;
+                    }
+                }, 1000);
             }
-            startTimer(10, restartButton);
-            setTimeout(function () {
-                window.location.reload();
-            }, 10000);
+
+            restartButton.addEventListener('click', function () {
+                fetch('/System/Shutdown', {
+                    method: 'POST'
+                }).catch(error => console.error('Error sending shutdown request:', error));
+
+                restartButton.disabled = true;
+                const cancelButton = document.querySelector('#restartConfirmModal .btn-secondary');
+                if (cancelButton) {
+                    cancelButton.disabled = true;
+                }
+                startTimer(10, restartButton);
+                setTimeout(function () {
+                    window.location.reload();
+                }, 10000);
+            });
         });
-    });
-</script>
+    </script>
 }

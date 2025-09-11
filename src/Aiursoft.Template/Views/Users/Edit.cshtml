@@ -1,16 +1,12 @@
 @model Aiursoft.Template.Models.UsersViewModels.EditViewModel
 
-@{
-    ViewData["Title"] = "Edit User";
-}
-
-<h1>Edit User: @Model.UserName</h1>
-<p>Modify user details or manage their assigned roles below.</p>
+<h1>@Localizer["Edit User:"] @Model.UserName</h1>
+<p>@Localizer["Modify user details or manage their assigned roles below."]</p>
 <hr />
 
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-user"></i> Basic Information
+        <i class="fas fa-user"></i> @Localizer["Basic Information"]
     </div>
     <div class="card-body">
         <form asp-action="Edit" asp-route-id="@Model.Id">
@@ -41,7 +37,7 @@
 
 <div class="card">
     <div class="card-header">
-        <i class="fas fa-user-tag"></i> Assigned Roles
+        <i class="fas fa-user-tag"></i> @Localizer["Assigned Roles"]
     </div>
     <div class="card-body">
         <form asp-action="ManageRoles" asp-route-id="@Model.Id">
@@ -65,6 +61,6 @@
 </div>
 
 <div class="mt-4">
-    <a asp-action="Details" asp-route-id="@Model.Id">Back to Details</a> |
-    <a asp-action="Index">Back to Users List</a>
+    <a asp-action="Details" asp-route-id="@Model.Id">@Localizer["Back to Details"]</a> |
+    <a asp-action="Index">@Localizer["Back to Users List"]</a>
 </div>

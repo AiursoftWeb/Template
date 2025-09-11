@@ -42,5 +42,23 @@
   <data name="Register" xml:space="preserve">
     <value>Înregistrare</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>Director</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilizatori</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roluri</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Administrator</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Sistem</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informații</value>
+  </data>
 
 </root>

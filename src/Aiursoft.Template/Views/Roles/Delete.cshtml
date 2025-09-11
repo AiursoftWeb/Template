@@ -1,10 +1,10 @@
 @model Aiursoft.Template.Models.RolesViewModels.DeleteViewModel
 
-<h1>Delete</h1>
+<h1>@Localizer["Delete"]</h1>
 
-<h3>Are you sure you want to delete this role?</h3>
+<h3>@Localizer["Are you sure you want to delete this role?"]</h3>
 <div>
-    <h4>Role</h4>
+    <h4>@Localizer["Role"]</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -17,7 +17,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="@Model.Role.Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="@Localizer["Delete"]" class="btn btn-danger" /> |
+        <a asp-action="Index">@Localizer["Back to List"]</a>
     </form>
 </div>

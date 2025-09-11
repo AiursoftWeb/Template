@@ -42,5 +42,23 @@
   <data name="Index" xml:space="preserve">
     <value>الفهرس</value>
   </data>
+  <data name="Directory" xml:space="preserve">
+    <value>دليل</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>الأدوار</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>المشرف</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>المعلومات</value>
+  </data>
 
 </root>
