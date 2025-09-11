@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
       <data name="Admin" xml:space="preserve">
-    <value>Administration</value>
+    <value>Administrator</value>
   </data>
   <data name="Directory" xml:space="preserve">
     <value>Directory</value>

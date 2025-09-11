@@ -1,52 +1,55 @@
 namespace Aiursoft.Template.Authorization;
 
-/// <summary>
-/// A record to describe a permission in a structured way.
-/// </summary>
-/// <param name="Key">The programmatic key stored in the database (e.g., "CanReadUsers").</param>
-/// <param name="Name">The user-friendly name displayed in the UI (e.g., "Read Users").</param>
-/// <param name="Description">A detailed explanation of what the permission allows.</param>
-public record PermissionDescriptor(string Key, string Name, string Description);
+public class FakeLocalizer
+{
+    public string this[string name] => name;
+}
 
-public static class AppPermissions
+public class AppPermissions
 {
     public const string Type = "Permission";
 
-    public static readonly List<PermissionDescriptor> AllPermissions =
-    [
-        // All keys are now referenced from the single source of truth.
-        new(AppPermissionNames.CanReadUsers,
-            "Read Users",
-            "Allows viewing the list of all users."),
-        new(AppPermissionNames.CanDeleteUsers,
-            "Delete Users",
-            "Allows the permanent deletion of user accounts."),
-        new(AppPermissionNames.CanAddUsers,
-            "Add New Users",
-            "Grants permission to create new user accounts."),
-        new(AppPermissionNames.CanEditUsers,
-            "Edit User Information",
-            "Allows modification of user details like email and roles, and can also reset user passwords."),
-        new(AppPermissionNames.CanReadRoles,
-            "Read Roles",
-            "Allows viewing the list of roles and their assigned permissions."),
-        new(AppPermissionNames.CanDeleteRoles,
-            "Delete Roles",
-            "Allows the permanent deletion of roles."),
-        new(AppPermissionNames.CanAddRoles,
-            "Add New Roles",
-            "Grants permission to create new roles."),
-        new(AppPermissionNames.CanEditRoles,
-            "Edit Role Information",
-            "Allows modification of role names and their assigned permissions."),
-        new(AppPermissionNames.CanAssignRoleToUser,
-            "Assign Roles to Users",
-            "Allows assigning or removing roles for any user."),
-        new (AppPermissionNames.CanViewSystemContext,
-            "View System Context",
-            "Allows viewing system-level information and settings."),
-        new (AppPermissionNames.CanRebootThisApp,
-            "Reboot This App",
-            "Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded.")
-    ];
+    public static List<PermissionDescriptor> GetAllPermissions()
+    {
+        // Make a fake localizer. This returns as is.
+        // This trick is to make auto scanning tools to detect these strings for localization.
+        var localizer = new FakeLocalizer();
+        List<PermissionDescriptor> allPermission =
+        [
+            new(AppPermissionNames.CanReadUsers,
+                localizer["Read Users"],
+                localizer["Allows viewing the list of all users."]),
+            new(AppPermissionNames.CanDeleteUsers,
+                localizer["Delete Users"],
+                localizer["Allows the permanent deletion of user accounts."]),
+            new(AppPermissionNames.CanAddUsers,
+                localizer["Add New Users"],
+                    localizer["Grants permission to create new user accounts."]),
+            new(AppPermissionNames.CanEditUsers,
+                localizer["Edit User Information"],
+                    localizer["Allows modification of user details like email and roles, and can also reset user passwords."]),
+            new(AppPermissionNames.CanReadRoles,
+                localizer["Read Roles"],
+                    localizer["Allows viewing the list of roles and their assigned permissions."]),
+            new(AppPermissionNames.CanDeleteRoles,
+                localizer["Delete Roles"],
+                localizer["Allows the permanent deletion of roles."]),
+            new(AppPermissionNames.CanAddRoles,
+                localizer["Add New Roles"],
+                localizer["Grants permission to create new roles."]),
+            new(AppPermissionNames.CanEditRoles,
+                localizer["Edit Role Information"],
+                localizer["Allows modification of role names and their assigned permissions."]),
+            new(AppPermissionNames.CanAssignRoleToUser,
+                localizer["Assign Roles to Users"],
+                localizer["Allows assigning or removing roles for any user."]),
+            new(AppPermissionNames.CanViewSystemContext,
+                localizer["View System Context"],
+                localizer["Allows viewing system-level information and settings."]),
+            new(AppPermissionNames.CanRebootThisApp,
+                localizer["Reboot This App"],
+                localizer["Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded."])
+        ];
+        return allPermission;
+    }
 }

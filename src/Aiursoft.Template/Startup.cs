@@ -37,7 +37,7 @@ public class Startup : IWebStartup
         services.AddTemplateAuthentication(configuration);
         services.AddAuthorization(options =>
         {
-            foreach (var permission in AppPermissions.AllPermissions)
+            foreach (var permission in AppPermissions.GetAllPermissions())
             {
                 options.AddPolicy(
                     name: permission.Key,

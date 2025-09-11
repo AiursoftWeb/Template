@@ -67,7 +67,7 @@ public class UsersController(
             }
         }
 
-        var permissions = AppPermissions.AllPermissions
+        var permissions = AppPermissions.GetAllPermissions()
             .Where(p => allPermissionValues.Contains(p.Key))
             .OrderBy(p => p.Name)
             .ToList();

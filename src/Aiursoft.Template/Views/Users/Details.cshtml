@@ -1,6 +1,8 @@
+@using Aiursoft.Template.Authorization
 @using Aiursoft.WebTools
+@using Microsoft.Extensions.Localization
 @model Aiursoft.Template.Models.UsersViewModels.DetailsViewModel
-
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
 @{
     ViewData["Title"] = "User Details";
 }
@@ -68,8 +70,8 @@
                     @foreach (var permission in Model.Permissions)
                     {
                         <li class="list-group-item">
-                            <strong>@permission.Name</strong>
-                            <small class="d-block text-muted">@permission.Description</small>
+                            <strong>@PermissionLocalizer[permission.Name]</strong>
+                            <small class="d-block text-muted">@PermissionLocalizer[permission.Description]</small>
                         </li>
                     }
                 </ul>

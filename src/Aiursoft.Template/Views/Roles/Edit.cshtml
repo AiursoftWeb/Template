@@ -1,4 +1,7 @@
+@using Aiursoft.Template.Authorization
+@using Microsoft.Extensions.Localization
 @model Aiursoft.Template.Models.RolesViewModels.EditViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
 
 <h1>@Localizer["Edit"]</h1>
 
@@ -30,10 +33,10 @@
                                 <input asp-for="@Model.Claims[i].IsSelected" class="form-check-input" />
 
                                 <label class="form-check-label" for="@Html.IdFor(m => m.Claims[i].IsSelected)">
-                                    <strong>@Model.Claims[i].Name</strong>
+                                    <strong>@PermissionLocalizer[Model.Claims[i].Name]</strong>
                                 </label>
                                 <div class="text-muted ms-4">
-                                    <small>@Model.Claims[i].Description</small>
+                                    <small>@PermissionLocalizer[Model.Claims[i].Description]</small>
                                 </div>
                             </div>
                         }

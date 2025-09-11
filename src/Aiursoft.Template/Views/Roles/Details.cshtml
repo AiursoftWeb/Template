@@ -1,4 +1,7 @@
+@using Aiursoft.Template.Authorization
+@using Microsoft.Extensions.Localization
 @model Aiursoft.Template.Models.RolesViewModels.DetailsViewModel
+@inject IStringLocalizer<AppPermissions> PermissionLocalizer
 
 <h1>@Localizer["Role Details:"] @Model.Role.Name</h1>
 <p>@Localizer["A comprehensive overview of the role, its permissions, and assigned users."]</p>
@@ -16,8 +19,8 @@
                     <dl>
                         @foreach (var permission in Model.Permissions)
                         {
-                            <dt>@permission.Name</dt>
-                            <dd class="pb-2">@permission.Description</dd>
+                            <dt>@PermissionLocalizer[permission.Name]</dt>
+                            <dd class="pb-2">@PermissionLocalizer[permission.Description]</dd>
                         }
                     </dl>
                 }

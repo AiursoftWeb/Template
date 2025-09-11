@@ -44,7 +44,7 @@ public static class ProgramExtends
             .Select(c => c.Value)
             .ToHashSet();
 
-        foreach (var permission in AppPermissions.AllPermissions)
+        foreach (var permission in AppPermissions.GetAllPermissions())
         {
             if (!existingClaimValues.Contains(permission.Key))
             {

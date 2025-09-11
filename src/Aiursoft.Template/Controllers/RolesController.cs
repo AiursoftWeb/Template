@@ -66,7 +66,7 @@ public class RolesController(
             .Select(c => c.Value)
             .ToList();
 
-        var permissions = AppPermissions.AllPermissions
+        var permissions = AppPermissions.GetAllPermissions()
             .Where(p => claimValues.Contains(p.Key))
             .ToList();
 
@@ -125,7 +125,7 @@ public class RolesController(
 
         var existingClaims = await roleManager.GetClaimsAsync(role);
 
-        foreach (var permission in AppPermissions.AllPermissions)
+        foreach (var permission in AppPermissions.GetAllPermissions())
         {
             model.Claims.Add(new RoleClaimViewModel
             {

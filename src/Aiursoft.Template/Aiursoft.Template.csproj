@@ -31,4 +31,7 @@
       <LastGenOutput>ViewModelArgsInjector.zh_CN.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Authorization\" />
+  </ItemGroup>
 </Project>
