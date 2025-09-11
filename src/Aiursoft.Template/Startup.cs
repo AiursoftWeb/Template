@@ -1,5 +1,6 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
+using Aiursoft.Scanner;
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
@@ -32,7 +33,7 @@ public class Startup : IWebStartup
                 new InMemorySupportedDb()
             ]);
 
-        services.AddMemoryCache();
+        // Authentication and Authorization
         services.AddTemplateAuthentication(configuration);
         services.AddAuthorization(options =>
         {
@@ -44,8 +45,12 @@ public class Startup : IWebStartup
             }
         });
 
+        // Services
+        services.AddMemoryCache();
+        services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
-        services.AddScoped<ViewModelArgsInjector>();
+
+        // Controllers and localization
         services.AddControllersWithViews()
             .AddApplicationPart(typeof(Startup).Assembly)
             .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly)

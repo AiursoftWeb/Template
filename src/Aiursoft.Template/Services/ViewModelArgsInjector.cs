@@ -1,3 +1,4 @@
+using Aiursoft.Scanner.Abstractions;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
@@ -24,7 +25,7 @@ public class ViewModelArgsInjector(
     NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
-    SignInManager<User> signInManager)
+    SignInManager<User> signInManager) : IScopedDependency
 {
 
     // ReSharper disable once UnusedMember.Local
