@@ -9,6 +9,6 @@ public class User : IdentityUser
     [MinLength(2)]
     public required string DisplayName { get; set; }
 
-    public required bool PreferDarkTheme { get; set; } = false;
+    public required bool PreferDarkTheme { get; set; }
     public DateTime CreationTime { get; init; } = DateTime.UtcNow;
 }
