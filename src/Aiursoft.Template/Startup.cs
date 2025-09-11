@@ -1,7 +1,6 @@
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools.Switchable;
 using Aiursoft.Scanner;
-using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.InMemory;
@@ -11,6 +10,8 @@ using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Aiursoft.Template;
 
@@ -34,24 +35,21 @@ public class Startup : IWebStartup
             ]);
 
         // Authentication and Authorization
-        services.AddTemplateAuthentication(configuration);
-        services.AddAuthorization(options =>
-        {
-            foreach (var permission in AppPermissions.GetAllPermissions())
-            {
-                options.AddPolicy(
-                    name: permission.Key,
-                    policy => policy.RequireClaim(AppPermissions.Type, permission.Key));
-            }
-        });
+        services.AddTemplateAuth(configuration);
 
         // Services
         services.AddMemoryCache();
+        services.AddHttpClient();
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
 
         // Controllers and localization
         services.AddControllersWithViews()
+            .AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
+                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+            })
             .AddApplicationPart(typeof(Startup).Assembly)
             .AddApplicationPart(typeof(UiStackLayoutViewModel).Assembly)
             .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)

@@ -1,3 +1,4 @@
+using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -10,7 +11,7 @@ namespace Aiursoft.Template.Services;
 
 public static class AuthenticationExtensions
 {
-    public static IServiceCollection AddTemplateAuthentication(
+    public static IServiceCollection AddTemplateAuth(
         this IServiceCollection services,
         IConfiguration configuration)
     {
@@ -74,6 +75,15 @@ public static class AuthenticationExtensions
             });
         }
 
+        services.AddAuthorization(options =>
+        {
+            foreach (var permission in AppPermissions.GetAllPermissions())
+            {
+                options.AddPolicy(
+                    name: permission.Key,
+                    policy => policy.RequireClaim(AppPermissions.Type, permission.Key));
+            }
+        });
         return services;
     }
 

@@ -12,9 +12,10 @@
   <ItemGroup>
     <PackageReference Include="Aiursoft.DbTools.Switchable" Version="9.0.19" />
     <PackageReference Include="Aiursoft.Scanner" Version="9.0.10" />
+    <PackageReference Include="Aiursoft.UiStack" Version="9.0.18" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="9.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.9" />
-    <PackageReference Include="Aiursoft.UiStack" Version="9.0.18" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -24,14 +25,5 @@
     <ProjectReference Include="..\Aiursoft.Template.InMemory\Aiursoft.Template.InMemory.csproj" />
     <ProjectReference Include="..\Aiursoft.Template.MySql\Aiursoft.Template.MySql.csproj" />
     <ProjectReference Include="..\Aiursoft.Template.Sqlite\Aiursoft.Template.Sqlite.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Resources\Services\ViewModelArgsInjector.zh-CN.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ViewModelArgsInjector.zh_CN.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Authorization\" />
   </ItemGroup>
 </Project>
