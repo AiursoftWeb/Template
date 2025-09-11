@@ -36,5 +36,8 @@
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0}은(는) 유효한 이메일 주소가 아닙니다.</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
 
 </root>

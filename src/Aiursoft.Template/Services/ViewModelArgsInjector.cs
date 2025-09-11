@@ -153,7 +153,7 @@ public class ViewModelArgsInjector(
         {
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
-                UserName = context.User.Identity?.Name ?? "Anonymous",
+                UserName = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.DisplayNameClaimType).Value,
                 UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
                 IconLinkGroups =
                 [

@@ -42,5 +42,8 @@
   <data name="Edit" xml:space="preserve">
     <value>编辑</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>姓名</value>
+  </data>
 
 </root>

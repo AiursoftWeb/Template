@@ -57,5 +57,8 @@
   <data name="Back to list" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="User name" xml:space="preserve">
+    <value>用户名</value>
+  </data>
 
 </root>

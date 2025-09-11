@@ -117,6 +117,7 @@ public class AccountController(
             var user = new User
             {
                 UserName = model.Email!.Split('@')[0],
+                DisplayName = model.Email!.Split('@')[0],
                 Email = model.Email,
             };
             var result = await userManager.CreateAsync(user, model.Password!);

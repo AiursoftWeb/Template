@@ -57,5 +57,8 @@
   <data name="This user has no effective permissions." xml:space="preserve">
     <value>Tällä käyttäjällä ei ole vaikuttavia käyttöoikeuksia.</value>
   </data>
+  <data name="User name" xml:space="preserve">
+    <value>Käyttäjätunnus</value>
+  </data>
 
 </root>

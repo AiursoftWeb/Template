@@ -42,5 +42,8 @@
   <data name="Delete" xml:space="preserve">
     <value>Șterge</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nume</value>
+  </data>
 
 </root>

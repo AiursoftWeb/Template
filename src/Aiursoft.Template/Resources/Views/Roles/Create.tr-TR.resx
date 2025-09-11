@@ -24,5 +24,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>Listeye Geri Dön</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
 
 </root>

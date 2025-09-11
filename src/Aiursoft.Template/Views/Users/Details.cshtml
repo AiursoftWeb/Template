@@ -15,8 +15,11 @@
     </div>
     <div class="card-body">
         <dl class="row">
-            <dt class="col-sm-3">@Localizer["Name"]</dt>
+            <dt class="col-sm-3">@Localizer["User name"]</dt>
             <dd class="col-sm-9">@Model.User.UserName</dd>
+
+            <dt class="col-sm-3">@Localizer["Name"]</dt>
+            <dd class="col-sm-9">@Model.User.DisplayName</dd>
 
             <dt class="col-sm-3">@Localizer["Email"]</dt>
             <dd class="col-sm-9">@Model.User.Email</dd>

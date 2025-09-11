@@ -27,6 +27,8 @@ public static class AuthenticationExtensions
             .AddEntityFrameworkStores<TemplateDbContext>()
             .AddDefaultTokenProviders();
 
+        services.AddScoped<IUserClaimsPrincipalFactory<User>, TemplateClaimsPrincipalFactory>();
+
         var authBuilder = services.AddAuthentication(options =>
         {
             options.DefaultScheme = IdentityConstants.ApplicationScheme;
@@ -85,6 +87,7 @@ public static class AuthenticationExtensions
 
         // 1. Get the user's information from the OIDC token
         var username = principal.FindFirst(appSettings.OIDC.UsernamePropertyName)?.Value;
+        var displayName = principal.FindFirst(appSettings.OIDC.UserDisplayNamePropertyName)?.Value;
         var email = principal.FindFirst(appSettings.OIDC.EmailPropertyName)?.Value;
         var providerKey = principal.FindFirst(appSettings.OIDC.UserIdentityPropertyName)?.Value;
         logger.LogInformation(
@@ -92,9 +95,13 @@ public static class AuthenticationExtensions
             username, email, providerKey);
 
         // 2. Ensure the user's information is valid
-        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(providerKey))
+        if (
+            string.IsNullOrEmpty(username) ||
+            string.IsNullOrEmpty(displayName) ||
+            string.IsNullOrEmpty(email) ||
+            string.IsNullOrEmpty(providerKey))
         {
-            context.Fail("Could not find the required username, email, or sub claim in the OIDC token.");
+            context.Fail("Could not find the required username, displayName, email, or sub claim in the OIDC token.");
             return;
         }
 
@@ -110,7 +117,12 @@ public static class AuthenticationExtensions
         // 4. If the user doesn't exist, create a new one
         if (localUser is null)
         {
-            localUser = new User { UserName = username, Email = email };
+            localUser = new User
+            {
+                UserName = username,
+                DisplayName = displayName,
+                Email = email
+            };
             logger.LogInformation(
                 "The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.",
                 username, email);

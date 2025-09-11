@@ -24,5 +24,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>Quay lại Danh sách</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>Vai trò</value>
+  </data>
 
 </root>

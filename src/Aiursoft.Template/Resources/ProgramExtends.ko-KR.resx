@@ -21,5 +21,8 @@
       <data name="admin" xml:space="preserve">
     <value>admin</value>
   </data>
+  <data name="Super Administrator (Default user)" xml:space="preserve">
+    <value>슈퍼 관리자 (기본 사용자)</value>
+  </data>
 
 </root>

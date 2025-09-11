@@ -42,5 +42,8 @@
   <data name="Delete" xml:space="preserve">
     <value>Hapus</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nama</value>
+  </data>
 
 </root>

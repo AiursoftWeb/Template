@@ -42,5 +42,8 @@
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
 
 </root>

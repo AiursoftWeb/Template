@@ -21,5 +21,8 @@
       <data name="admin" xml:space="preserve">
     <value>admin</value>
   </data>
+  <data name="Super Administrator (Default user)" xml:space="preserve">
+    <value>Quản trị viên Cấp cao (Người dùng mặc định)</value>
+  </data>
 
 </root>

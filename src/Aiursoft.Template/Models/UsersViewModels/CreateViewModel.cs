@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using Aiursoft.CSTools.Attributes;
 using Aiursoft.UiStack.Layout;
 
@@ -15,6 +16,11 @@ public class CreateViewModel: UiStackLayoutViewModel
     [Display(Name = "User name")]
     [ValidDomainName]
     public string? UserName { get; set; }
+
+    [Required(ErrorMessage = "The {0} is required.")]
+    [Display(Name = "Name")]
+    [NotNull]
+    public string? DisplayName { get; set; }
 
     [EmailAddress(ErrorMessage = "The {0} is not a valid email address.")]
     [Display(Name = "Email Address")]

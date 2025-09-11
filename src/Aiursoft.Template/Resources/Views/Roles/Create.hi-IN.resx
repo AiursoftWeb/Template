@@ -24,5 +24,8 @@
   <data name="Create" xml:space="preserve">
     <value>बनाएं</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>भूमिका</value>
+  </data>
 
 </root>

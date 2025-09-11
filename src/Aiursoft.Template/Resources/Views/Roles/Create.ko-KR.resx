@@ -24,5 +24,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>목록으로 돌아가기</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>역할</value>
+  </data>
 
 </root>

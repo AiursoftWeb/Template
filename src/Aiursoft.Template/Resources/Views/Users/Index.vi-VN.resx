@@ -42,5 +42,8 @@
   <data name="Edit" xml:space="preserve">
     <value>Chỉnh sửa</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Tên</value>
+  </data>
 
 </root>

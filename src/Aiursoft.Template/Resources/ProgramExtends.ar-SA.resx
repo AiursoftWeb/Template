@@ -21,5 +21,8 @@
       <data name="admin" xml:space="preserve">
     <value>مدير</value>
   </data>
+  <data name="Super Administrator (Default user)" xml:space="preserve">
+    <value>المشرف الفائق (المستخدم الافتراضي)</value>
+  </data>
 
 </root>

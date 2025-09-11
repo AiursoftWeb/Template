@@ -36,5 +36,8 @@
   <data name="The {0} is not a valid email address." xml:space="preserve">
     <value>{0} är inte en giltig e-postadress.</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Namn</value>
+  </data>
 
 </root>

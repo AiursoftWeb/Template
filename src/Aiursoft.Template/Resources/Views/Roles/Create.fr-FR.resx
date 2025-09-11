@@ -24,5 +24,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>Retour à la liste</value>
   </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rôle</value>
+  </data>
 
 </root>

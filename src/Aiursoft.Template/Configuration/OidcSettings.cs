@@ -33,6 +33,12 @@ public class OidcSettings
     public required string UsernamePropertyName { get; init; } = "preferred_username";
 
     /// <summary>
+    /// The name of the claim in the OIDC token that contains the user's display name.'
+    /// Common values include "name", "given_name", or "preferred_username".
+    /// </summary>
+    public required string UserDisplayNamePropertyName { get; init; } = "name";
+
+    /// <summary>
     /// The name of the claim in the OIDC token that contains the user's email address.
     /// Typically, this is simply "email".
     /// </summary>

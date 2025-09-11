@@ -96,6 +96,7 @@ public class UsersController(
             var user = new User
             {
                 UserName = newUser.UserName,
+                DisplayName = newUser.DisplayName,
                 Email = newUser.Email,
             };
             var result = await userManager.CreateAsync(user, newUser.Password!);
@@ -129,7 +130,9 @@ public class UsersController(
             Id = id,
             Email = user.Email!,
             UserName = user.UserName!,
+            DisplayName = user.DisplayName,
             Password = "you-cant-read-it",
+
             AllRoles = allRoles.Select(role => new UserRoleViewModel
             {
                 RoleName = role.Name!,
@@ -156,6 +159,7 @@ public class UsersController(
 
         userInDb.Email = model.Email;
         userInDb.UserName = model.UserName;
+        userInDb.DisplayName = model.DisplayName;
         await userManager.UpdateAsync(userInDb);
 
         if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")

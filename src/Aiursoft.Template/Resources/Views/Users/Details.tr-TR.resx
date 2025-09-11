@@ -57,5 +57,8 @@
   <data name="Delete this User" xml:space="preserve">
     <value>Bu Kullanıcıyı Sil</value>
   </data>
+  <data name="User name" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+  </data>
 
 </root>
