@@ -33,6 +33,11 @@ public class ViewModelArgsInjector(
     {
         _ = localizer["Features"];
         _ = localizer["Index"];
+        _ = localizer["Directory"];
+        _ = localizer["Users"];
+        _ = localizer["Roles"];
+        _ = localizer["System"];
+        _ = localizer["Info"];
     }
 
     public void Inject(
