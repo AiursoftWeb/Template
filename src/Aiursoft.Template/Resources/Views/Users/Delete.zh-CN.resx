@@ -21,5 +21,14 @@
       <data name="Back to List" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Are you sure you want to delete this user?" xml:space="preserve">
+    <value>您确定要删除此用户吗？</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+  </data>
 
 </root>

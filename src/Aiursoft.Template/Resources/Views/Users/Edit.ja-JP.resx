@@ -19,28 +19,22 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
       <data name="Edit User:" xml:space="preserve">
-    <value>編輯使用者：</value>
+    <value>ユーザー編集:</value>
   </data>
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
-    <value>請在下方修改使用者詳細資訊或管理其分配的角色。</value>
+    <value>以下のユーザー詳細の変更、または割り当てられたロールの管理を行います。</value>
   </data>
   <data name="Basic Information" xml:space="preserve">
-    <value>基本資訊</value>
+    <value>基本情報</value>
   </data>
   <data name="Assigned Roles" xml:space="preserve">
-    <value>已分配的角色</value>
+    <value>割り当てられたロール</value>
   </data>
   <data name="Back to Details" xml:space="preserve">
-    <value>返回詳細資料</value>
+    <value>詳細に戻る</value>
   </data>
   <data name="Back to Users List" xml:space="preserve">
-    <value>返回使用者列表</value>
-  </data>
-  <data name="Save User Details" xml:space="preserve">
-    <value>儲存使用者詳細資訊</value>
-  </data>
-  <data name="Save Role Assignments" xml:space="preserve">
-    <value>儲存角色分配</value>
+    <value>ユーザー一覧に戻る</value>
   </data>
 
 </root>

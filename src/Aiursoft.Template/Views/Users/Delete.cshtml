@@ -17,7 +17,7 @@
 
     <form asp-action="Delete">
         <input type="hidden" asp-for="@Model.User.Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="@Localizer["Delete"]" class="btn btn-danger" /> |
         <a asp-action="Index">@Localizer["Back to List"]</a>
     </form>
 </div>

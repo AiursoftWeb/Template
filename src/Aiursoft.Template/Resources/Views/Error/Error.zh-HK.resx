@@ -18,29 +18,20 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Edit User:" xml:space="preserve">
-    <value>編輯使用者：</value>
+      <data name="Error." xml:space="preserve">
+    <value>錯誤。</value>
   </data>
-  <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
-    <value>請在下方修改使用者詳細資訊或管理其分配的角色。</value>
+  <data name="An error occurred while processing your request." xml:space="preserve">
+    <value>處理您的請求時發生錯誤。</value>
   </data>
-  <data name="Basic Information" xml:space="preserve">
-    <value>基本資訊</value>
+  <data name="Request ID:" xml:space="preserve">
+    <value>請求編號：</value>
   </data>
-  <data name="Assigned Roles" xml:space="preserve">
-    <value>已分配的角色</value>
+  <data name="Please contact the administrator for help." xml:space="preserve">
+    <value>請聯絡管理員以獲得協助。</value>
   </data>
-  <data name="Back to Details" xml:space="preserve">
-    <value>返回詳細資料</value>
-  </data>
-  <data name="Back to Users List" xml:space="preserve">
-    <value>返回使用者列表</value>
-  </data>
-  <data name="Save User Details" xml:space="preserve">
-    <value>儲存使用者詳細資訊</value>
-  </data>
-  <data name="Save Role Assignments" xml:space="preserve">
-    <value>儲存角色分配</value>
+  <data name="Back to Home" xml:space="preserve">
+    <value>返回主頁</value>
   </data>
 
 </root>

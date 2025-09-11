@@ -36,5 +36,8 @@
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="Create a new role" xml:space="preserve">
+    <value>Create a new role</value>
+  </data>
 
 </root>

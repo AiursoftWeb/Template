@@ -18,29 +18,26 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Edit User:" xml:space="preserve">
-    <value>編輯使用者：</value>
+      <data name="Manage Roles" xml:space="preserve">
+    <value>ロールの管理</value>
   </data>
-  <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
-    <value>請在下方修改使用者詳細資訊或管理其分配的角色。</value>
+  <data name="Create a new role" xml:space="preserve">
+    <value>新しいロールを作成</value>
   </data>
-  <data name="Basic Information" xml:space="preserve">
-    <value>基本資訊</value>
+  <data name="Role Name" xml:space="preserve">
+    <value>ロール名</value>
   </data>
-  <data name="Assigned Roles" xml:space="preserve">
-    <value>已分配的角色</value>
+  <data name="User Count" xml:space="preserve">
+    <value>ユーザー数</value>
   </data>
-  <data name="Back to Details" xml:space="preserve">
-    <value>返回詳細資料</value>
+  <data name="Actions" xml:space="preserve">
+    <value>操作</value>
   </data>
-  <data name="Back to Users List" xml:space="preserve">
-    <value>返回使用者列表</value>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
   </data>
-  <data name="Save User Details" xml:space="preserve">
-    <value>儲存使用者詳細資訊</value>
-  </data>
-  <data name="Save Role Assignments" xml:space="preserve">
-    <value>儲存角色分配</value>
+  <data name="Delete" xml:space="preserve">
+    <value>削除</value>
   </data>
 
 </root>

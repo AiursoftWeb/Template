@@ -24,5 +24,11 @@
   <data name="Back to List" xml:space="preserve">
     <value>返回列表</value>
   </data>
+  <data name="User" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>创建新用户</value>
+  </data>
 
 </root>

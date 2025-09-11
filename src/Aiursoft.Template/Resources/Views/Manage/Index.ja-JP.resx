@@ -18,17 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Create" xml:space="preserve">
-    <value>Create</value>
+      <data name="Account Management" xml:space="preserve">
+    <value>アカウント管理</value>
   </data>
-  <data name="Back to List" xml:space="preserve">
-    <value>Back to List</value>
+  <data name="Change your account settings" xml:space="preserve">
+    <value>アカウント設定の変更</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Create a new user</value>
+  <data name="Change your password" xml:space="preserve">
+    <value>パスワードを変更</value>
   </data>
 
 </root>

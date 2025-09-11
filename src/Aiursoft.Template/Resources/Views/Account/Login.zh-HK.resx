@@ -18,17 +18,14 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Create" xml:space="preserve">
-    <value>Create</value>
+      <data name="Login" xml:space="preserve">
+    <value>登入</value>
   </data>
-  <data name="Back to List" xml:space="preserve">
-    <value>Back to List</value>
+  <data name="Use a local account to log in." xml:space="preserve">
+    <value>使用本地帳戶登入。</value>
   </data>
-  <data name="User" xml:space="preserve">
-    <value>User</value>
-  </data>
-  <data name="Create a new user" xml:space="preserve">
-    <value>Create a new user</value>
+  <data name="Register as a new user" xml:space="preserve">
+    <value>註冊成為新用戶</value>
   </data>
 
 </root>
