@@ -26,6 +26,14 @@ public class ViewModelArgsInjector(
     IOptions<AppSettings> appSettings,
     SignInManager<User> signInManager)
 {
+
+    // ReSharper disable once UnusedMember.Local
+    private void _useless_for_localizer()
+    {
+        _ = localizer["Features"];
+        _ = localizer["Index"];
+    }
+
     public void Inject(
         HttpContext context,
         UiStackLayoutViewModel toInject)
