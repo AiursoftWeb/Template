@@ -30,5 +30,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Nulstil adgangskode (lad være tom for at beholde den samme adgangskode)</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} er ikke en gyldig e-mailadresse.</value>
+  </data>
 
 </root>

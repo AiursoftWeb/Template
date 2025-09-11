@@ -30,5 +30,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>पासवर्ड रीसेट करें (यदि पासवर्ड वही रखना है तो खाली छोड़ दें)</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} एक मान्य ईमेल पता नहीं है।</value>
+  </data>
 
 </root>

@@ -33,5 +33,8 @@
   <data name="The {0} is required." xml:space="preserve">
     <value>Il {0} è obbligatorio.</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>L&apos;{0} non è un indirizzo email valido.</value>
+  </data>
 
 </root>

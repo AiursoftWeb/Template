@@ -36,5 +36,11 @@
   <data name="Create a new user" xml:space="preserve">
     <value>Benutzer erstellen</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
 
 </root>

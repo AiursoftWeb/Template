@@ -36,5 +36,11 @@
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكتروني</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
 
 </root>

@@ -33,5 +33,8 @@
   <data name="The {0} is required." xml:space="preserve">
     <value>{0} 是必需的。</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} 不是有效的電郵地址。</value>
+  </data>
 
 </root>

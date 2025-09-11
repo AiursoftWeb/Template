@@ -36,5 +36,11 @@
   <data name="Manage Users" xml:space="preserve">
     <value>Керування користувачами</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Видалити</value>
+  </data>
 
 </root>

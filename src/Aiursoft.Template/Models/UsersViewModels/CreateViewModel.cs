@@ -16,7 +16,7 @@ public class CreateViewModel: UiStackLayoutViewModel
     [ValidDomainName]
     public string? UserName { get; set; }
 
-    [EmailAddress]
+    [EmailAddress(ErrorMessage = "The {0} is not a valid email address.")]
     [Display(Name = "Email Address")]
     [Required(ErrorMessage = "The {0} is required.")]
     public string? Email { get; set; }

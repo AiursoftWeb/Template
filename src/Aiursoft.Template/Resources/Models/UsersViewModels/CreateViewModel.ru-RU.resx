@@ -33,5 +33,8 @@
   <data name="The {0} is required." xml:space="preserve">
     <value>Поле {0} обязательно для заполнения.</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>Поле {0} не является допустимым адресом электронной почты.</value>
+  </data>
 
 </root>

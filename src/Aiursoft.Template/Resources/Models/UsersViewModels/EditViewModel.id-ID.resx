@@ -30,5 +30,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Atur Ulang Kata Sandi (biarkan kosong untuk menggunakan kata sandi yang sama)</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} bukan alamat email yang valid.</value>
+  </data>
 
 </root>

@@ -33,5 +33,8 @@
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>{0} trebuie să aibă cel puțin {2} și maximum {1} de caractere.</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} nu este o adresă de email validă.</value>
+  </data>
 
 </root>

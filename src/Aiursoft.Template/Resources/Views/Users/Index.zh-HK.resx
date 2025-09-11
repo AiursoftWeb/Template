@@ -36,5 +36,11 @@
   <data name="Actions" xml:space="preserve">
     <value>操作</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編輯</value>
+  </data>
 
 </root>

@@ -46,10 +46,10 @@
             </td>
             <td class="text-end">
                 <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">
-                    <i class="fas fa-user-edit"></i> Edit
+                    <i class="fas fa-user-edit"></i> @Localizer["Edit"]
                 </a>
                 <a asp-action="Delete" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-danger">
-                    <i class="fas fa-user-times"></i> Delete
+                    <i class="fas fa-user-times"></i> @Localizer["Delete"]
                 </a>
             </td>
         </tr>

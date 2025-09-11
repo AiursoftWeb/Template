@@ -30,5 +30,8 @@
   <data name="Email Address" xml:space="preserve">
     <value>Διεύθυνση Email</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>Το {0} δεν είναι έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.</value>
+  </data>
 
 </root>

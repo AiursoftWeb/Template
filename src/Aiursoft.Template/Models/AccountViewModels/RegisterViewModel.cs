@@ -11,7 +11,7 @@ public class RegisterViewModel: UiStackLayoutViewModel
     }
 
     [Required(ErrorMessage = "The {0} is required.")]
-    [EmailAddress]
+    [EmailAddress(ErrorMessage = "The {0} is not a valid email address.")]
     [Display(Name = "Email Address (For login)")]
     public string? Email { get; set; }
 

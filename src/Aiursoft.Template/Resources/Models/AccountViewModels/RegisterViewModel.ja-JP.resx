@@ -36,5 +36,8 @@
   <data name="The {0} is required." xml:space="preserve">
     <value>{0}は必須です。</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0}は有効なメールアドレスではありません。</value>
+  </data>
 
 </root>

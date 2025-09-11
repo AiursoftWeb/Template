@@ -36,5 +36,8 @@
   <data name="The {0} is required." xml:space="preserve">
     <value>ต้องระบุ {0}</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} ไม่ใช่ที่อยู่อีเมลที่ถูกต้อง</value>
+  </data>
 
 </root>

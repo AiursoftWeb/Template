@@ -30,5 +30,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Скинути пароль (залиште порожнім, щоб залишити той самий пароль)</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>Поле {0} не є дійсною email-адресою.</value>
+  </data>
 
 </root>

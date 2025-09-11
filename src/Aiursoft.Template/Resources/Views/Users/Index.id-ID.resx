@@ -36,5 +36,11 @@
   <data name="User name" xml:space="preserve">
     <value>Nama Pengguna</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Hapus</value>
+  </data>
 
 </root>

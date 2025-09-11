@@ -36,5 +36,11 @@
   <data name="Manage Users" xml:space="preserve">
     <value>Gestisci Utenti</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
 
 </root>

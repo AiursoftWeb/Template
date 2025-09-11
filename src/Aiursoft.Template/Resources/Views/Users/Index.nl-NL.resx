@@ -36,5 +36,11 @@
   <data name="Create a new user" xml:space="preserve">
     <value>Maak een nieuwe gebruiker aan</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
 
 </root>

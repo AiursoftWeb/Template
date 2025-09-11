@@ -26,7 +26,7 @@ public class EditViewModel : UiStackLayoutViewModel
     public required string UserName { get; set; }
 
     [Required(ErrorMessage = "The {0} is required.")]
-    [EmailAddress]
+    [EmailAddress(ErrorMessage = "The {0} is not a valid email address.")]
     [Display(Name = "Email Address")]
     public required string Email { get; set; }
 

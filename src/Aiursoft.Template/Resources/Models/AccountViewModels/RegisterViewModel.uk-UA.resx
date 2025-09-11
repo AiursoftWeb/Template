@@ -36,5 +36,8 @@
   <data name="The {0} must be at least {2} and at max {1} characters long." xml:space="preserve">
     <value>Поле {0} має містити щонайменше {2} та не більше {1} символів.</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>Поле {0} не є дійсною email-адресою.</value>
+  </data>
 
 </root>

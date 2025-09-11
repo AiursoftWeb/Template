@@ -30,5 +30,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Nollaa salasana (jätä tyhjäksi säilyttääksesi nykyinen salasana)</value>
   </data>
+  <data name="The {0} is not a valid email address." xml:space="preserve">
+    <value>{0} ei ole kelvollinen sähköpostiosoite.</value>
+  </data>
 
 </root>

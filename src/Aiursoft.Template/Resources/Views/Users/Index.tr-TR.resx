@@ -36,5 +36,11 @@
   <data name="Create a new user" xml:space="preserve">
     <value>Yeni kullanıcı oluştur</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
 
 </root>

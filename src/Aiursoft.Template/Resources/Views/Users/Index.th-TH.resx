@@ -36,5 +36,11 @@
   <data name="Email" xml:space="preserve">
     <value>อีเมล</value>
   </data>
+  <data name="Edit" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>ลบ</value>
+  </data>
 
 </root>
