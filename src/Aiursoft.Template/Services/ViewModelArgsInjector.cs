@@ -14,11 +14,13 @@ using Aiursoft.UiStack.Views.Shared.Components.UserDropdown;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
+    IStringLocalizer<ViewModelArgsInjector> localizer,
     NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
@@ -28,16 +30,16 @@ public class ViewModelArgsInjector(
         HttpContext context,
         UiStackLayoutViewModel toInject)
     {
-        toInject.AppName = "Template";
+        toInject.AppName = localizer["Template"];
         toInject.Theme = UiTheme.Dark;
         toInject.SidebarTheme = UiSidebarTheme.Dark;
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = "Template", Href = "/" },
+            AppBrand = new Link { Text = localizer["Template"], Href = "https://gitlab.aiursoft.cn/aiursoft/template" },
             Links =
             [
-                new Link { Text = "Home", Href = "/" },
+                new Link { Text = localizer["Home"], Href = "/" },
                 new Link { Text = "Aiursoft", Href = "https://www.aiursoft.cn" },
             ]
         };
@@ -67,7 +69,11 @@ public class ViewModelArgsInjector(
 
                     if (isVisible)
                     {
-                        linksForView.Add(new CascadedLink { Href = linkDef.Href, Text = linkDef.Text });
+                        linksForView.Add(new CascadedLink
+                        {
+                            Href = linkDef.Href,
+                            Text = localizer[linkDef.Text]
+                        });
                     }
                 }
 
@@ -76,7 +82,7 @@ public class ViewModelArgsInjector(
                     itemsForView.Add(new CascadedSideBarItem
                     {
                         UniqueId = itemDef.UniqueId,
-                        Text = itemDef.Text,
+                        Text = localizer[itemDef.Text],
                         LucideIcon = itemDef.Icon,
                         IsActive = linksForView.Any(l => l.Href.StartsWith($"/{currentViewingController}")),
                         Links = linksForView
@@ -88,7 +94,7 @@ public class ViewModelArgsInjector(
             {
                 navGroupsForView.Add(new NavGroup
                 {
-                    Name = groupDef.Name,
+                    Name = localizer[groupDef.Name],
                     Items = itemsForView.Select(t => (SideBarItem)t).ToList()
                 });
             }
@@ -98,7 +104,7 @@ public class ViewModelArgsInjector(
         {
             SideLogo = new SideLogoViewModel
             {
-                AppName = "Aiursoft Template",
+                AppName = localizer["Aiursoft Template"],
                 LogoUrl = "/logo.svg",
                 Href = "/"
             },
@@ -160,10 +166,10 @@ public class ViewModelArgsInjector(
         {
             toInject.Sidebar.SideAdvertisement = new SideAdvertisementViewModel
             {
-                Title = "Login",
-                Description = "Login to get access to all features.",
+                Title = localizer["Login"],
+                Description = localizer["Login to get access to all features."],
                 Href = "/Account/Login",
-                ButtonText = "Login"
+                ButtonText = localizer["Login"]
             };
 
             var allowRegister = appSettings.Value.Local.AllowRegister;
@@ -171,7 +177,7 @@ public class ViewModelArgsInjector(
             {
                 new()
                 {
-                    Text = "Login",
+                    Text = localizer["Login"],
                     Href = "/Account/Login",
                     Icon = "user"
                 }
@@ -180,7 +186,8 @@ public class ViewModelArgsInjector(
             {
                 links.Add(new IconLink
                 {
-                    Text = "Register", Href = "/Account/Register",
+                    Text = localizer["Register"],
+                    Href = "/Account/Register",
                     Icon = "user-plus"
                 });
             }
