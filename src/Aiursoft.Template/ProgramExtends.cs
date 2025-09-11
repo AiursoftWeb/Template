@@ -60,6 +60,7 @@ public static class ProgramExtends
                 UserName = "admin",
                 DisplayName = "Super Administrator (Default user)",
                 Email = "admin@default.com",
+                PreferDarkTheme = false,
             };
             _ = await userManager.CreateAsync(user, "admin123");
             await userManager.AddToRoleAsync(user, "Administrators");

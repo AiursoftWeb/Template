@@ -45,9 +45,15 @@ public class ViewModelArgsInjector(
         HttpContext context,
         UiStackLayoutViewModel toInject)
     {
+        var preferDarkTheme = false;
+        if (signInManager.IsSignedIn(context.User))
+        {
+            preferDarkTheme = context.User.Claims.FirstOrDefault(c => c.Type == TemplateClaimsPrincipalFactory.PreferDarkThemeClaimType)?.Value == true.ToString();
+        }
+
         toInject.AppName = localizer["Template"];
-        toInject.Theme = UiTheme.Dark;
-        toInject.SidebarTheme = UiSidebarTheme.Dark;
+        toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
+        toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
@@ -58,7 +64,10 @@ public class ViewModelArgsInjector(
                 new Link { Text = "Aiursoft", Href = "https://www.aiursoft.cn" },
             ]
         };
-        toInject.Navbar = new NavbarViewModel();
+        toInject.Navbar = new NavbarViewModel
+        {
+            ThemeSwitchApiCallEndpoint = "/api/switch-theme"
+        };
 
         var currentViewingController = context.GetRouteValue("controller")?.ToString();
         var navGroupsForView = new List<NavGroup>();

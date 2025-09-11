@@ -16,6 +16,22 @@ public class ManageController(
 {
     private readonly ILogger _logger = loggerFactory.CreateLogger<ManageController>();
 
+    [Route("api/switch-theme")]
+    [HttpPost]
+    public async Task<IActionResult> SwitchTheme([FromBody]SwitchThemeViewModel model)
+    {
+        var preferDark = model.Theme == "dark";
+        var user = await GetCurrentUserAsync();
+        if (user == null)
+        {
+            return NotFound();
+        }
+        user.PreferDarkTheme = preferDark;
+        await userManager.UpdateAsync(user);
+        await signInManager.SignInAsync(user, isPersistent: false);
+        return Ok();
+    }
+
     //
     // GET: /Manage/Index
     [HttpGet]

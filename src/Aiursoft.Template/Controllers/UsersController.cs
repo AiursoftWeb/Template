@@ -98,6 +98,7 @@ public class UsersController(
                 UserName = newUser.UserName,
                 DisplayName = newUser.DisplayName,
                 Email = newUser.Email,
+                PreferDarkTheme = false
             };
             var result = await userManager.CreateAsync(user, newUser.Password!);
             if (!result.Succeeded)

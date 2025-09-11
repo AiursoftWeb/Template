@@ -21,5 +21,8 @@
       <data name="admin" xml:space="preserve">
     <value>ylläpitäjä</value>
   </data>
+  <data name="Super Administrator (Default user)" xml:space="preserve">
+    <value>Super-administraattori (Oletuskäyttäjä)</value>
+  </data>
 
 </root>

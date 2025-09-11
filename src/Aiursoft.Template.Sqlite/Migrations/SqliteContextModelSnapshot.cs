@@ -67,6 +67,9 @@ namespace Aiursoft.Template.Sqlite.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("PreferDarkTheme")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("TEXT");
 

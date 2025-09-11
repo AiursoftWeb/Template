@@ -21,5 +21,8 @@
       <data name="admin" xml:space="preserve">
     <value>yönetici</value>
   </data>
+  <data name="Super Administrator (Default user)" xml:space="preserve">
+    <value>Süper Yönetici (Varsayılan kullanıcı)</value>
+  </data>
 
 </root>

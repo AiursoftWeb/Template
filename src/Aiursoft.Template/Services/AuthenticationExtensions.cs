@@ -121,7 +121,8 @@ public static class AuthenticationExtensions
             {
                 UserName = username,
                 DisplayName = displayName,
-                Email = email
+                Email = email,
+                PreferDarkTheme = false
             };
             logger.LogInformation(
                 "The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.",
@@ -140,6 +141,13 @@ public static class AuthenticationExtensions
         {
             logger.LogInformation("Setting the user's username to '{Username}' from OIDC.", username);
             await userManager.SetUserNameAsync(localUser, username);
+        }
+
+        if (!string.Equals(localUser.DisplayName, displayName, StringComparison.OrdinalIgnoreCase))
+        {
+            logger.LogInformation("Setting the user's display name to '{DisplayName}' from OIDC.", displayName);
+            localUser.DisplayName = displayName;
+            await userManager.UpdateAsync(localUser);
         }
 
         if (!string.Equals(localUser.Email, email, StringComparison.OrdinalIgnoreCase))

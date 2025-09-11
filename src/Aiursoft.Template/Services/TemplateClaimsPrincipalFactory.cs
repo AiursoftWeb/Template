@@ -13,10 +13,12 @@ public class TemplateClaimsPrincipalFactory(
     : UserClaimsPrincipalFactory<User, IdentityRole>(userManager, roleManager, optionsAccessor)
 {
     public static string DisplayNameClaimType = "DisplayName";
+    public static string PreferDarkThemeClaimType = "PreferDT";
 
     protected override async Task<ClaimsIdentity> GenerateClaimsAsync(User user)
     {
         var identity = await base.GenerateClaimsAsync(user);
+        identity.AddClaim(new Claim(PreferDarkThemeClaimType, user.PreferDarkTheme.ToString()));
         if (!string.IsNullOrWhiteSpace(user.DisplayName))
         {
             identity.AddClaim(new Claim(DisplayNameClaimType, user.DisplayName));
