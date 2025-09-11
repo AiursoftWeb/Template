@@ -27,5 +27,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Đặt lại mật khẩu (để trống nếu muốn giữ nguyên mật khẩu hiện tại)</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0} là bắt buộc.</value>
+  </data>
 
 </root>

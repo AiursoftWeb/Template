@@ -10,18 +10,18 @@ public class RegisterViewModel: UiStackLayoutViewModel
         PageTitle = "Register";
     }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [EmailAddress]
     [Display(Name = "Email Address (For login)")]
     public string? Email { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
     [DataType(DataType.Password)]
     [Display(Name = "Password")]
     public string? Password { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [DataType(DataType.Password)]
     [Display(Name = "Confirm Password")]
     [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]

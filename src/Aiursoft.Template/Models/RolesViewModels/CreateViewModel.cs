@@ -10,7 +10,7 @@ public class CreateViewModel: UiStackLayoutViewModel
         PageTitle = "Create Role";
     }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [Display(Name = "Role Name")]
     public string? RoleName { get; set; }
 }

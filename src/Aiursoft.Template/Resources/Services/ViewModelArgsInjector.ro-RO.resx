@@ -60,5 +60,8 @@
   <data name="Info" xml:space="preserve">
     <value>Informații</value>
   </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonim</value>
+  </data>
 
 </root>

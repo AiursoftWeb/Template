@@ -27,5 +27,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>Reset Password (leave blank to keep the same password)</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>The {0} is required.</value>
+  </data>
 
 </root>

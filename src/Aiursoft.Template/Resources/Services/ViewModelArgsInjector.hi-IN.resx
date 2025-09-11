@@ -60,5 +60,8 @@
   <data name="Info" xml:space="preserve">
     <value>जानकारी</value>
   </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>अनाम</value>
+  </data>
 
 </root>

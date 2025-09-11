@@ -36,5 +36,11 @@
   <data name="Back to Users List" xml:space="preserve">
     <value>ユーザー一覧に戻る</value>
   </data>
+  <data name="Save User Details" xml:space="preserve">
+    <value>ユーザー詳細を保存</value>
+  </data>
+  <data name="Save Role Assignments" xml:space="preserve">
+    <value>ロール割り当てを保存</value>
+  </data>
 
 </root>

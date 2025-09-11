@@ -27,5 +27,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>リストに戻る</value>
   </data>
+  <data name="Create a new user" xml:space="preserve">
+    <value>新規ユーザーを作成</value>
+  </data>
 
 </root>

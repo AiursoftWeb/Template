@@ -11,17 +11,17 @@ public class CreateViewModel: UiStackLayoutViewModel
         PageTitle = "Create User";
     }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [Display(Name = "User name")]
     [ValidDomainName]
     public string? UserName { get; set; }
 
     [EmailAddress]
     [Display(Name = "Email Address")]
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     public string? Email { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
     [DataType(DataType.Password)]
     [Display(Name = "Password")]

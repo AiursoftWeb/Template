@@ -27,5 +27,8 @@
   <data name="Reset Password (leave empty to keep the same password)" xml:space="preserve">
     <value>비밀번호 재설정 (기존 비밀번호 유지 시 공백으로 남겨두세요)</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}은(는) 필수 항목입니다.</value>
+  </data>
 
 </root>

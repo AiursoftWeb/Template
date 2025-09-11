@@ -60,5 +60,8 @@
   <data name="Info" xml:space="preserve">
     <value>Tiedot</value>
   </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Anonyymi</value>
+  </data>
 
 </root>

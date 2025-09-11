@@ -21,5 +21,8 @@
       <data name="Role Name" xml:space="preserve">
     <value>角色名称</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}是必填的。</value>
+  </data>
 
 </root>

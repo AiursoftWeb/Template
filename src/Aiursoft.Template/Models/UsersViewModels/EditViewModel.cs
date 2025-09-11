@@ -20,12 +20,12 @@ public class EditViewModel : UiStackLayoutViewModel
         AllRoles = [];
     }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [Display(Name = "User name")]
     [ValidDomainName]
     public required string UserName { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [EmailAddress]
     [Display(Name = "Email Address")]
     public required string Email { get; set; }
@@ -34,7 +34,7 @@ public class EditViewModel : UiStackLayoutViewModel
     [Display(Name = "Reset Password (leave empty to keep the same password)")]
     public string? Password { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "The {0} is required.")]
     [FromRoute]
     public required string Id { get; set; }
 

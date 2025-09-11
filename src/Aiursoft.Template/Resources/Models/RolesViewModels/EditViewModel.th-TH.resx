@@ -21,5 +21,8 @@
       <data name="Role Name" xml:space="preserve">
     <value>ชื่อบทบาท</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>ต้องระบุ {0}</value>
+  </data>
 
 </root>

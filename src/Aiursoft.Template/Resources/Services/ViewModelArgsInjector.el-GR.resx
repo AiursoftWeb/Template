@@ -60,5 +60,8 @@
   <data name="Info" xml:space="preserve">
     <value>Πληροφορίες</value>
   </data>
+  <data name="Anonymous" xml:space="preserve">
+    <value>Ανώνυμος</value>
+  </data>
 
 </root>

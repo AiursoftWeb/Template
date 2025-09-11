@@ -21,5 +21,8 @@
       <data name="Role Name" xml:space="preserve">
     <value>역할 이름</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}은(는) 필수 항목입니다.</value>
+  </data>
 
 </root>

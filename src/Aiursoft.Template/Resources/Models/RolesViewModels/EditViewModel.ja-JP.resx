@@ -21,5 +21,8 @@
       <data name="Role Name" xml:space="preserve">
     <value>ロール名</value>
   </data>
+  <data name="The {0} is required." xml:space="preserve">
+    <value>{0}は必須です。</value>
+  </data>
 
 </root>
