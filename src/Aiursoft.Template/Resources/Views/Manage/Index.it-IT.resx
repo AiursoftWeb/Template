@@ -27,5 +27,8 @@
   <data name="Change your account settings" xml:space="preserve">
     <value>Modifica le impostazioni del tuo account</value>
   </data>
+  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+    <value>Non puoi cambiare la tua password perché l&apos;autenticazione locale è disabilitata. Modifica il tuo profilo dal provider di autenticazione.</value>
+  </data>
 
 </root>

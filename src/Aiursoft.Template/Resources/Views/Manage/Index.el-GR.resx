@@ -27,5 +27,8 @@
   <data name="Change your account settings" xml:space="preserve">
     <value>Αλλαγή των ρυθμίσεων του λογαριασμού σας</value>
   </data>
+  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+    <value>Δεν μπορείτε να αλλάξετε τον κωδικό πρόσβασής σας, επειδή η τοπική πιστοποίηση είναι απενεργοποιημένη. Παρακαλούμε επεξεργαστείτε το προφίλ σας από τον πάροχο ταυτοποίησης.</value>
+  </data>
 
 </root>

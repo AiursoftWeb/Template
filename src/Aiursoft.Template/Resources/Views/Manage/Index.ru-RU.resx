@@ -27,5 +27,8 @@
   <data name="Change your account settings" xml:space="preserve">
     <value>Изменить настройки аккаунта</value>
   </data>
+  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+    <value>Вы не можете изменить свой пароль, так как локальная аутентификация отключена. Пожалуйста, отредактируйте свой профиль у поставщика аутентификации.</value>
+  </data>
 
 </root>
