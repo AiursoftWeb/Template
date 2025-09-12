@@ -202,7 +202,7 @@ public class ViewModelArgsInjector(
                     Icon = "user"
                 }
             };
-            if (allowRegister)
+            if (allowRegister && appSettings.Value.LocalEnabled)
             {
                 links.Add(new IconLink
                 {
