@@ -1,14 +1,17 @@
+using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.ManageViewModels;
 using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class ManageController(
+    IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
     ILoggerFactory loggerFactory)
@@ -35,6 +38,10 @@ public class ManageController(
     [HttpGet]
     public IActionResult ChangePassword()
     {
+        if (appSettings.Value.OIDCEnabled)
+        {
+            return BadRequest("Local password is disabled when OIDC authentication is enabled.");
+        }
         return this.StackView(new ChangePasswordViewModel());
     }
 
@@ -44,6 +51,10 @@ public class ManageController(
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
     {
+        if (appSettings.Value.OIDCEnabled)
+        {
+            return BadRequest("Local password is disabled when OIDC authentication is enabled.");
+        }
         if (!ModelState.IsValid)
         {
             return this.StackView(model);

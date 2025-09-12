@@ -17,5 +17,9 @@
                 <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">@Localizer["Change your password"]</a>
             </dd>
         }
+        else
+        {
+            <p class="text-warning">@Localizer["You can't change your password becasue local authentication is disabled. Please edit your profile from the auth provider."]</p>
+        }
     </dl>
 </div>
