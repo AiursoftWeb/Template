@@ -132,7 +132,6 @@ public static class AuthenticationExtensions
                 UserName = username,
                 DisplayName = displayName,
                 Email = email,
-                PreferDarkTheme = false
             };
             logger.LogInformation(
                 "The user with name '{Username}' and email '{Email}' doesn't exist in the local database. Create a new one.",

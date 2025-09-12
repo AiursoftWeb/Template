@@ -1,5 +1,6 @@
 using Aiursoft.Scanner.Abstractions;
 using Aiursoft.Template.Configuration;
+using Aiursoft.Template.Controllers;
 using Aiursoft.Template.Entities;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
@@ -45,12 +46,7 @@ public class ViewModelArgsInjector(
         HttpContext context,
         UiStackLayoutViewModel toInject)
     {
-        var preferDarkTheme = false;
-        if (signInManager.IsSignedIn(context.User))
-        {
-            preferDarkTheme = context.User.Claims.FirstOrDefault(c => c.Type == TemplateClaimsPrincipalFactory.PreferDarkThemeClaimType)?.Value == true.ToString();
-        }
-
+        var preferDarkTheme = context.Request.Cookies[ThemeController.ThemeCookieKey] == true.ToString();
         toInject.AppName = localizer["Template"];
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
         toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;
