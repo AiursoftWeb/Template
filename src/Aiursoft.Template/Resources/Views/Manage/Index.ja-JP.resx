@@ -30,5 +30,8 @@
   <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>ローカル認証が無効になっているため、パスワードを変更できません。認証プロバイダーからプロフィールを編集してください。</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
 
 </root>

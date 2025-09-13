@@ -63,5 +63,11 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Аноним</value>
   </data>
+  <data name="Sign out" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
 
 </root>

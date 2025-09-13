@@ -30,5 +30,8 @@
   <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Et voi vaihtaa salasanaasi, koska paikallinen tunnistautuminen on poistettu käytöstä. Muokkaa profiiliasi tunnistautumispalvelun kautta.</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Salasana</value>
+  </data>
 
 </root>

@@ -18,10 +18,9 @@ public class AccountController(
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
-    ILoggerFactory loggerFactory)
+    ILogger<AccountController> logger)
     : Controller
 {
-    private readonly ILogger _logger = loggerFactory.CreateLogger<AccountController>();
     private readonly AppSettings _appSettings = appSettings.Value;
 
     // GET: /Account/Login
@@ -63,7 +62,7 @@ public class AccountController(
 
             if (possibleUser == null)
             {
-                _logger.LogWarning(0, "Invalid login attempt with username or email: {UsernameOrEmail}", model.EmailOrUserName);
+                logger.LogWarning(0, "Invalid login attempt with username or email: {UsernameOrEmail}", model.EmailOrUserName);
                 ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);
                 return this.StackView(new LoginViewModel());
             }
@@ -72,13 +71,13 @@ public class AccountController(
                 await signInManager.PasswordSignInAsync(possibleUser, model.Password!, _appSettings.PersistsSignIn, lockoutOnFailure: true);
             if (result.Succeeded)
             {
-                _logger.LogInformation(1, "User logged in");
+                logger.LogInformation(1, "User logged in");
                 return RedirectToLocal(returnUrl ?? "/");
             }
 
             if (result.IsLockedOut)
             {
-                _logger.LogWarning(2, "User account locked out");
+                logger.LogWarning(2, "User account locked out");
                 ModelState.AddModelError(string.Empty, localizer["This account has been locked out, please try again later."]);
                 return this.StackView(new LockoutViewModel());
             }
@@ -138,7 +137,7 @@ public class AccountController(
                 }
 
                 await signInManager.SignInAsync(user, isPersistent: false);
-                _logger.LogInformation(3, "User created a new account with password");
+                logger.LogInformation(3, "User created a new account with password");
                 return RedirectToLocal(returnUrl ?? "/");
             }
 
@@ -152,13 +151,13 @@ public class AccountController(
     {
         if (_appSettings.OIDCEnabled)
         {
-            _logger.LogInformation(4, "User logged out with OIDC.");
+            logger.LogInformation(4, "User logged out with OIDC.");
             var properties = new AuthenticationProperties { RedirectUri = "/" };
             return SignOut(properties, IdentityConstants.ApplicationScheme, OpenIdConnectDefaults.AuthenticationScheme);
         }
 
         await signInManager.SignOutAsync();
-        _logger.LogInformation(4, "User logged out locally.");
+        logger.LogInformation(4, "User logged out locally.");
         return RedirectToAction(nameof(HomeController.Index), "Home");
     }
 
@@ -182,7 +181,7 @@ public class AccountController(
             isPersistent: _appSettings.PersistsSignIn, bypassTwoFactor: true);
         if (result.Succeeded)
         {
-            _logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
+            logger.LogInformation("User logged in with {Name} provider.", info.LoginProvider);
             return RedirectToLocal(returnUrl ?? "/");
         }
 

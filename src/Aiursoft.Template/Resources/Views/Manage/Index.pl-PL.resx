@@ -30,5 +30,8 @@
   <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Nie możesz zmienić swojego hasła, ponieważ lokalne uwierzytelnianie jest wyłączone. Edytuj swój profil u dostawcy uwierzytelniania.</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
 
 </root>

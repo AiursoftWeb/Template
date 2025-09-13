@@ -30,5 +30,8 @@
   <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Anda tidak dapat mengubah kata sandi karena autentikasi lokal dinonaktifkan. Silakan edit profil Anda dari penyedia autentikasi.</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Kata Sandi</value>
+  </data>
 
 </root>

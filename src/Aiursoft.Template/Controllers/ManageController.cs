@@ -5,28 +5,28 @@ using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class ManageController(
+    IStringLocalizer<ManageController> localizer,
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
-    ILoggerFactory loggerFactory)
+    ILogger<ManageController> logger)
     : Controller
 {
-    private readonly ILogger _logger = loggerFactory.CreateLogger<ManageController>();
-
     //
     // GET: /Manage/Index
     [HttpGet]
     public IActionResult Index(ManageMessageId? message = null)
     {
         ViewData["StatusMessage"] =
-            message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-            : message == ManageMessageId.Error ? "An error has occurred."
+            message == ManageMessageId.ChangePasswordSuccess ? localizer["Your password has been changed."]
+            : message == ManageMessageId.Error ? localizer["An error has occurred."]
             : "";
 
         var model = new IndexViewModel();
@@ -66,7 +66,7 @@ public class ManageController(
             if (result.Succeeded)
             {
                 await signInManager.SignInAsync(user, isPersistent: false);
-                _logger.LogInformation(3, "User changed their password successfully");
+                logger.LogInformation(3, "User changed their password successfully");
                 return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);

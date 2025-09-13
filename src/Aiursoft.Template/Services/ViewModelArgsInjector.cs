@@ -166,17 +166,14 @@ public class ViewModelArgsInjector(
                     {
                         Links =
                         [
-                            new IconLink { Icon = "user", Text = "Profile", Href = "#" },
-                            new IconLink { Icon = "pie-chart", Text = "Analytics", Href = "#" }
+                            new IconLink { Icon = "user", Text = localizer["Profile"], Href = "/Manage" },
                         ]
                     },
                     new IconLinkGroup
                     {
                         Links =
                         [
-                            new IconLink { Text = "Settings", Href = "/Manage", Icon = "settings" },
-                            new IconLink { Text = "Help", Href = "#", Icon = "help-circle" },
-                            new IconLink { Text = "Sign out", Href = "/Account/Logoff", Icon = "log-out" }
+                            new IconLink { Icon = "log-out", Text = localizer["Sign out"], Href = "/Account/Logoff" }
                         ]
                     }
                 ]
