@@ -7,12 +7,14 @@ using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
 [Authorize]
 public class AccountController(
+    IStringLocalizer<AccountController> localizer,
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
     SignInManager<User> signInManager,
@@ -61,7 +63,8 @@ public class AccountController(
 
             if (possibleUser == null)
             {
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                _logger.LogWarning(0, "Invalid login attempt with username or email: {UsernameOrEmail}", model.EmailOrUserName);
+                ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);
                 return this.StackView(new LoginViewModel());
             }
 
@@ -76,10 +79,11 @@ public class AccountController(
             if (result.IsLockedOut)
             {
                 _logger.LogWarning(2, "User account locked out");
+                ModelState.AddModelError(string.Empty, localizer["This account has been locked out, please try again later."]);
                 return this.StackView(new LockoutViewModel());
             }
 
-            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);
         }
 
         return this.StackView(model);
