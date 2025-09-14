@@ -24,5 +24,8 @@
   <data name="This account has been locked out, please try again later." xml:space="preserve">
     <value>Tämä tili on lukittu, yritä myöhemmin uudelleen.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>Käyttäjätunnus on jo olemassa. Yritä toista käyttäjätunnusta.</value>
+  </data>
 
 </root>

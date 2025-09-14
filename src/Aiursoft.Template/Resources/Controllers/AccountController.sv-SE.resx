@@ -24,5 +24,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>Ogiltigt inloggningsförsök. Kontrollera användarnamn och lösenord.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>Användarnamnet finns redan. Vänligen prova ett annat användarnamn.</value>
+  </data>
 
 </root>

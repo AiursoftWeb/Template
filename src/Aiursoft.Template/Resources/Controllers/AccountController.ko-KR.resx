@@ -27,5 +27,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>잘못된 로그인 시도입니다. 사용자 이름과 비밀번호를 확인해 주세요.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>이미 사용 중인 사용자 이름입니다. 다른 사용자 이름을 사용해 주세요.</value>
+  </data>
 
 </root>

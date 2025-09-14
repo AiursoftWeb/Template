@@ -27,5 +27,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>Đăng nhập không hợp lệ. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>Tên người dùng đã tồn tại. Vui lòng thử tên người dùng khác.</value>
+  </data>
 
 </root>

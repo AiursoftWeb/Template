@@ -24,5 +24,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>محاولة تسجيل دخول غير صالحة. يرجى التحقق من اسم المستخدم وكلمة المرور.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>اسم المستخدم موجود بالفعل. يرجى تجربة اسم مستخدم آخر.</value>
+  </data>
 
 </root>

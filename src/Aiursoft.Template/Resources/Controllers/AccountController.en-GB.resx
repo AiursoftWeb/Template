@@ -27,5 +27,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>Invalid login attempt. Please check your username and password.</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>That username is already taken. Please try a different username.</value>
+  </data>
 
 </root>

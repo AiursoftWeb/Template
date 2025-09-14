@@ -203,6 +203,10 @@ public class AccountController(
     {
         foreach (var error in result.Errors)
         {
+            if (error.Code == "DuplicateUserName")
+            {
+                error.Description = localizer["The username already exists. Please try another username."];
+            }
             ModelState.AddModelError(string.Empty, error.Description);
         }
     }

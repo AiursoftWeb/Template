@@ -27,5 +27,8 @@
   <data name="Invalid login attempt. Please check username and password." xml:space="preserve">
     <value>การเข้าสู่ระบบไม่ถูกต้อง กรุณาตรวจสอบชื่อผู้ใช้และรหัสผ่าน</value>
   </data>
+  <data name="The username already exists. Please try another username." xml:space="preserve">
+    <value>ชื่อผู้ใช้นี้มีอยู่แล้ว โปรดลองใช้ชื่อผู้ใช้อื่น</value>
+  </data>
 
 </root>
