@@ -42,5 +42,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Измените данные пользователя или управляйте назначенными ему ролями ниже.</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Внимание!</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>Эта учётная запись синхронизирована с провайдером OpenID Connect (OIDC). Любые изменения, внесённые здесь (например, отображаемого имени или адреса электронной почты), могут быть перезаписаны во время следующей синхронизации данных. Для постоянных изменений, пожалуйста, обновите профиль пользователя непосредственно у вашего провайдера OIDC.</value>
+  </data>
 
 </root>

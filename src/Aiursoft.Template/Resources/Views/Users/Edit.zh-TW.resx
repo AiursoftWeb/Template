@@ -42,5 +42,11 @@
   <data name="Save Role Assignments" xml:space="preserve">
     <value>儲存角色分配</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>警告！</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>此使用者帳戶已與 OpenID Connect (OIDC) 提供者同步。在此進行的任何修改（例如顯示名稱或電子郵件）可能會在下次資料同步時被覆蓋。如需永久變更，請直接在您的 OIDC 提供者上更新使用者個人資料。</value>
+  </data>
 
 </root>

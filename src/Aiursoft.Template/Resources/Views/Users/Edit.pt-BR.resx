@@ -42,5 +42,11 @@
   <data name="Assigned Roles" xml:space="preserve">
     <value>Funções Atribuídas</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Aviso!</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>Esta conta de usuário está sincronizada com um provedor OpenID Connect (OIDC). Quaisquer modificações feitas aqui (por exemplo, no nome de exibição ou e-mail) podem ser sobrescritas durante a próxima sincronização de dados. Para alterações permanentes, atualize o perfil do usuário diretamente no seu provedor OIDC.</value>
+  </data>
 
 </root>

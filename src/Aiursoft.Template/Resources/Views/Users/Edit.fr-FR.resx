@@ -42,5 +42,11 @@
   <data name="Modify user details or manage their assigned roles below." xml:space="preserve">
     <value>Modifiez les détails de l&apos;utilisateur ou gérez ses rôles attribués ci-dessous.</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Attention !</value>
+  </data>
+  <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
+    <value>Ce compte utilisateur est synchronisé avec un fournisseur OpenID Connect (OIDC). Toute modification effectuée ici (par exemple, sur le nom d&apos;affichage ou l&apos;adresse e-mail) pourrait être écrasée lors de la prochaine synchronisation des données. Pour des modifications permanentes, veuillez mettre à jour le profil de l&apos;utilisateur directement sur votre fournisseur OIDC.</value>
+  </data>
 
 </root>

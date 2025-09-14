@@ -30,5 +30,11 @@
   <data name="Create a new user" xml:space="preserve">
     <value>Luo uusi käyttäjä</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Varoitus!</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) on käytössä. Käyttäjätilit synkronoidaan ulkoisesta identiteetin tarjoajasta. Suosittelemme vahvasti, että luot uudet käyttäjät OIDC-palveluntarjoajallasi, jotta niitä hallitaan keskitetysti. Tämä lomake luo vain paikallisen tilin, joka on olemassa ainoastaan tässä sovelluksessa.</value>
+  </data>
 
 </root>

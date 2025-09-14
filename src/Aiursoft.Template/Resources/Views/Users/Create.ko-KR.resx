@@ -30,5 +30,11 @@
   <data name="Back to List" xml:space="preserve">
     <value>목록으로 돌아가기</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>경고!</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect(OIDC)가 활성화되었습니다. 사용자 계정은 외부 신원 공급자로부터 동기화됩니다. 사용자를 중앙에서 관리할 수 있도록 새로운 사용자는 OIDC 공급자에서 생성하는 것을 강력히 권장합니다. 이 양식은 이 애플리케이션 내에서만 존재하는 로컬 전용 계정을 생성합니다.</value>
+  </data>
 
 </root>
