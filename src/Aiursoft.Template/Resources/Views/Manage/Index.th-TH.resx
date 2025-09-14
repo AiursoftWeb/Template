@@ -39,5 +39,8 @@
   <data name="Avatar settings" xml:space="preserve">
     <value>การตั้งค่าอวาตาร์</value>
   </data>
+  <data name="Success!" xml:space="preserve">
+    <value>สำเร็จ!</value>
+  </data>
 
 </root>

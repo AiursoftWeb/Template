@@ -39,5 +39,8 @@
   <data name="Avatar settings" xml:space="preserve">
     <value>Impostazioni dell&apos;avatar</value>
   </data>
+  <data name="Success!" xml:space="preserve">
+    <value>Operazione riuscita!</value>
+  </data>
 
 </root>

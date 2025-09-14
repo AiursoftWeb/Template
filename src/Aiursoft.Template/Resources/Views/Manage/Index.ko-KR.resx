@@ -39,5 +39,8 @@
   <data name="Avatar settings" xml:space="preserve">
     <value>아바타 설정</value>
   </data>
+  <data name="Success!" xml:space="preserve">
+    <value>성공!</value>
+  </data>
 
 </root>

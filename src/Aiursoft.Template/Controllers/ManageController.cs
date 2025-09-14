@@ -28,8 +28,9 @@ public class ManageController(
     public IActionResult Index(ManageMessageId? message = null)
     {
         ViewData["StatusMessage"] =
-            message == ManageMessageId.ChangePasswordSuccess ? localizer["Your password has been changed."]
-            : message == ManageMessageId.Error ? localizer["An error has occurred."]
+            message == ManageMessageId.ChangeAvatarSuccess ? localizer["Your avatar has been saved."] :
+            message == ManageMessageId.ChangePasswordSuccess ? localizer["Your password has been changed."] :
+            message == ManageMessageId.Error ? localizer["An error has occurred."]
             : "";
 
         var model = new IndexViewModel();
@@ -98,7 +99,16 @@ public class ManageController(
         }
 
         // Save the new avatar in database.
-        await Task.Delay(0);
+        var user = await GetCurrentUserAsync();
+        if (user != null)
+        {
+            user.AvatarRelativePath = model.AvatarUrl;
+            await userManager.UpdateAsync(user);
+
+            // Sign in the user to refresh the avatar.
+            await signInManager.SignInAsync(user, isPersistent: false);
+            return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangeAvatarSuccess });
+        }
 
         return this.StackView(model);
     }
@@ -115,6 +125,7 @@ public class ManageController(
 
     public enum ManageMessageId
     {
+        ChangeAvatarSuccess,
         ChangePasswordSuccess,
         Error
     }

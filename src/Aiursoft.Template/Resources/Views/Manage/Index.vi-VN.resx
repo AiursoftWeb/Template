@@ -39,5 +39,8 @@
   <data name="Change your avatar" xml:space="preserve">
     <value>Thay đổi ảnh đại diện của bạn</value>
   </data>
+  <data name="Success!" xml:space="preserve">
+    <value>Thành công!</value>
+  </data>
 
 </root>

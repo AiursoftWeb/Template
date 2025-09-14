@@ -24,5 +24,8 @@
   <data name="Your password has been changed." xml:space="preserve">
     <value>आपका पासवर्ड बदल दिया गया है।</value>
   </data>
+  <data name="Your avatar has been saved." xml:space="preserve">
+    <value>आपका अवतार सहेजा गया है।</value>
+  </data>
 
 </root>

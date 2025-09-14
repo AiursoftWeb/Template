@@ -24,5 +24,8 @@
   <data name="Your password has been changed." xml:space="preserve">
     <value>Uw wachtwoord is gewijzigd.</value>
   </data>
+  <data name="Your avatar has been saved." xml:space="preserve">
+    <value>Uw avatar is opgeslagen.</value>
+  </data>
 
 </root>

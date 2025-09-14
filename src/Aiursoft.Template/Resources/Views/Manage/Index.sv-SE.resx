@@ -39,5 +39,8 @@
   <data name="Change your avatar" xml:space="preserve">
     <value>Ändra din avatar</value>
   </data>
+  <data name="Success!" xml:space="preserve">
+    <value>Framgång!</value>
+  </data>
 
 </root>

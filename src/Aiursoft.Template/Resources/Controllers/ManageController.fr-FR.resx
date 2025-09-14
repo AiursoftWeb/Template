@@ -24,5 +24,8 @@
   <data name="An error has occurred." xml:space="preserve">
     <value>Une erreur s&apos;est produite.</value>
   </data>
+  <data name="Your avatar has been saved." xml:space="preserve">
+    <value>Votre avatar a été enregistré.</value>
+  </data>
 
 </root>

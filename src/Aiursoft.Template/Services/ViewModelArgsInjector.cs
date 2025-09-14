@@ -23,6 +23,7 @@ namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
     IStringLocalizer<ViewModelArgsInjector> localizer,
+    StorageService storageService,
     NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
@@ -156,10 +157,12 @@ public class ViewModelArgsInjector(
 
         if (signInManager.IsSignedIn(context.User))
         {
+            var avatarPath = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.AvatarClaimType)
+                .Value;
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.DisplayNameClaimType).Value,
-                UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
+                UserAvatarUrl = storageService.RelativePathToInternetUrl(avatarPath, context),
                 IconLinkGroups =
                 [
                     new IconLinkGroup

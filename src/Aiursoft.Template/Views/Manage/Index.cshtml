@@ -4,7 +4,19 @@
 @inject IOptions<AppSettings> AppSettings
 <h2>@Localizer["Account Management"]</h2>
 
-<p class="text-success">@ViewData["StatusMessage"]</p>
+@if (!string.IsNullOrWhiteSpace(ViewData["StatusMessage"] as string))
+{
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert-icon">
+            <i class="far fa-fw fa-bell"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Success!"]</strong>
+            @ViewData["StatusMessage"]
+        </div>
+    </div>
+}
 
 <div>
     <h4>@Localizer["Change your account settings"]</h4>

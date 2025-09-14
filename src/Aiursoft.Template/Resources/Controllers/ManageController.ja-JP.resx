@@ -24,5 +24,8 @@
   <data name="Your password has been changed." xml:space="preserve">
     <value>パスワードが変更されました。</value>
   </data>
+  <data name="Your avatar has been saved." xml:space="preserve">
+    <value>アバターが保存されました。</value>
+  </data>
 
 </root>

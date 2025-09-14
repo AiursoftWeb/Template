@@ -13,6 +13,7 @@ public class TemplateClaimsPrincipalFactory(
     : UserClaimsPrincipalFactory<User, IdentityRole>(userManager, roleManager, optionsAccessor)
 {
     public static string DisplayNameClaimType = "DisplayName";
+    public static string AvatarClaimType = "Avatar";
 
     protected override async Task<ClaimsIdentity> GenerateClaimsAsync(User user)
     {
@@ -21,6 +22,7 @@ public class TemplateClaimsPrincipalFactory(
         {
             identity.AddClaim(new Claim(DisplayNameClaimType, user.DisplayName));
         }
+        identity.AddClaim(new Claim(AvatarClaimType, user.AvatarRelativePath));
         return identity;
     }
 }
