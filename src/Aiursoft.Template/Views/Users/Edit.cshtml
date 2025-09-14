@@ -1,8 +1,20 @@
+@using Aiursoft.Template.Configuration
+@using Microsoft.Extensions.Options
 @model Aiursoft.Template.Models.UsersViewModels.EditViewModel
+@inject IOptions<AppSettings> AppSettings
 
 <h1>@Localizer["Edit User:"] @Model.DisplayName</h1>
 <p>@Localizer["Modify user details or manage their assigned roles below."]</p>
 <hr />
+
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-exclamation-triangle"></i>
+        <strong>@Localizer["Warning!"]</strong>
+        @Localizer["This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user's profile directly on your OIDC provider."]
+    </div>
+}
 
 <div class="card mb-4">
     <div class="card-header">

@@ -1,8 +1,21 @@
+@using Aiursoft.Template.Configuration
+@using Microsoft.Extensions.Options
 @model Aiursoft.Template.Models.UsersViewModels.CreateViewModel
+@inject IOptions<AppSettings> AppSettings
 <h1>@Localizer["Create"]</h1>
 
 <h4>@Localizer["User"]</h4>
 <hr />
+
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-exclamation-triangle"></i>
+        <strong>@Localizer["Warning!"]</strong>
+        @Localizer["OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application."]
+    </div>
+}
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
