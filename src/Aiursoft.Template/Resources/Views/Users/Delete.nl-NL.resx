@@ -36,5 +36,17 @@
   <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
     <value>Dit gebruikersaccount wordt beheerd door een OpenID Connect (OIDC)-provider. Het verwijderen van de gebruiker hier zal alleen hun toegang en gegevens uit deze applicatie verwijderen. Het account blijft bestaan op uw OIDC-provider en kan opnieuw verschijnen na de volgende synchronisatie of als de gebruiker opnieuw inlogt. Om deze gebruiker permanent te verwijderen, moet u deze uit uw OIDC-provider verwijderen.</value>
   </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Aanmaaktijd</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Gebruikersnaam</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
 
 </root>

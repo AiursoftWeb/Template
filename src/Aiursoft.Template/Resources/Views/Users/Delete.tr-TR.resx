@@ -36,5 +36,17 @@
   <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
     <value>Bu kullanıcı hesabı bir OpenID Connect (OIDC) sağlayıcısı tarafından yönetilmektedir. Kullanıcıyı buradan silmek, yalnızca bu uygulamadaki erişimini ve verilerini kaldıracaktır. Hesap, OIDC sağlayıcınızda hala var olacak ve bir sonraki senkronizasyondan sonra veya kullanıcı tekrar giriş yaptığında yeniden görünebilir. Bu kullanıcıyı kalıcı olarak silmek için, onu OIDC sağlayıcınızdan kaldırmanız gerekir.</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-posta</value>
+  </data>
+  <data name="User name" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>Oluşturulma Zamanı</value>
+  </data>
 
 </root>

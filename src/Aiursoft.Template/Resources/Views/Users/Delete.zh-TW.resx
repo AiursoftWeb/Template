@@ -36,5 +36,17 @@
   <data name="This user account is managed by an OpenID Connect (OIDC) provider. Deleting the user here will only remove their access and data from this application. The account will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this user, you must remove them from your OIDC provider." xml:space="preserve">
     <value>此使用者帳戶由 OpenID Connect (OIDC) 提供者管理。在此刪除使用者僅會移除他們在此應用程式中的存取權和資料。該帳戶仍會存在於您的 OIDC 提供者上，並可能在下次同步時或使用者再次登入後重新出現。若要永久刪除此使用者，您必須從您的 OIDC 提供者中移除他們。</value>
   </data>
+  <data name="User name" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="Creation Time" xml:space="preserve">
+    <value>建立時間</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
 
 </root>
