@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to change the current culture.
+/// </summary>
 public class CultureController : ControllerBase
 {
     public IActionResult Set(string culture, string returnUrl)

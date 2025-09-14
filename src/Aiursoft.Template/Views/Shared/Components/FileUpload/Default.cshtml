@@ -1,7 +1,7 @@
 @using Aiursoft.Template.Services
 @model Aiursoft.Template.Views.Shared.Components.FileUpload.FileUploadViewModel
 @inject StorageService Storage
-@inject Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator HtmlGenerator
+@inject IHtmlGenerator HtmlGenerator
 @{
     var fileInputId = $"file-input-{Model.UniqueId}";
     var progressId = $"progress-{Model.UniqueId}";

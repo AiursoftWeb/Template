@@ -7,6 +7,9 @@ using Aiursoft.Template.Models.SystemViewModels;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle system related actions like shutdown.
+/// </summary>
 [Authorize]
 public class SystemController(ILogger<SystemController> logger) : Controller
 {

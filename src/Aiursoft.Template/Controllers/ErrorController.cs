@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to show error pages.
+/// </summary>
 public class ErrorController : Controller
 {
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

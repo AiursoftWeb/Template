@@ -12,7 +12,9 @@ using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
-[Authorize]
+/// <summary>
+/// This controller is used to handle account related actions like login, register, log off.
+/// </summary>
 public class AccountController(
     IStringLocalizer<AccountController> localizer,
     IOptions<AppSettings> appSettings,
@@ -25,7 +27,6 @@ public class AccountController(
 
     // GET: /Account/Login
     [HttpGet]
-    [AllowAnonymous]
     public IActionResult Login(string? returnUrl = null)
     {
         if (_appSettings.OIDCEnabled)
@@ -42,7 +43,6 @@ public class AccountController(
 
     // POST: /Account/Login
     [HttpPost]
-    [AllowAnonymous]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
     {
@@ -90,7 +90,6 @@ public class AccountController(
 
     // GET: /Account/Register
     [HttpGet]
-    [AllowAnonymous]
     public IActionResult Register(string? returnUrl = null)
     {
         // If in OIDC mode or registration is not allowed, return 400.
@@ -105,7 +104,6 @@ public class AccountController(
 
     // POST: /Account/Register
     [HttpPost]
-    [AllowAnonymous]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel model, string? returnUrl = null)
     {
@@ -147,6 +145,7 @@ public class AccountController(
         return this.StackView(model);
     }
 
+    [Authorize]
     public async Task<IActionResult> LogOff()
     {
         if (_appSettings.OIDCEnabled)
@@ -162,7 +161,6 @@ public class AccountController(
     }
 
     [HttpGet]
-    [AllowAnonymous]
     public async Task<IActionResult> ExternalLoginCallback(string? returnUrl = null, string? remoteError = null)
     {
         if (remoteError != null)

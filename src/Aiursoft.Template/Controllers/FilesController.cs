@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle file operations like upload and download.
+/// </summary>
 public class FilesController(
     StorageService storage) : ControllerBase
 {

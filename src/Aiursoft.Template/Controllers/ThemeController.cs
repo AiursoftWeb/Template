@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle theme related actions like switch theme.
+/// </summary>
 public class ThemeController : ControllerBase
 {
     public const string ThemeCookieKey = "prefer-dark";

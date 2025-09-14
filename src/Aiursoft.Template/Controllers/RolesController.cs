@@ -11,6 +11,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle roles related actions like create, edit, delete, etc.
+/// </summary>
 [Authorize]
 public class RolesController(
     UserManager<User> userManager,

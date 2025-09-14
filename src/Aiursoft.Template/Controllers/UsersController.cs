@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle users related actions like create, edit, delete, etc.
+/// </summary>
 [Authorize]
 public class UsersController(
     RoleManager<IdentityRole> roleManager,

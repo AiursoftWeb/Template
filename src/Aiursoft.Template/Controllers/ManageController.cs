@@ -10,6 +10,9 @@ using Microsoft.Extensions.Options;
 
 namespace Aiursoft.Template.Controllers;
 
+/// <summary>
+/// This controller is used to handle user related actions like change password, change avatar.
+/// </summary>
 [Authorize]
 public class ManageController(
     IStringLocalizer<ManageController> localizer,
@@ -95,6 +98,7 @@ public class ManageController(
         }
 
         // Save the new avatar in database.
+        await Task.Delay(0);
 
         return this.StackView(model);
     }
