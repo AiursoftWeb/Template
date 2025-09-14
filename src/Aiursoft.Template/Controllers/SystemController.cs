@@ -15,7 +15,7 @@ public class SystemController(ILogger<SystemController> logger) : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanViewSystemContext)]
     [RenderInNavBar(
-        NavGroupName = "Admin",
+        NavGroupName = "Administration",
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "System",
         CascadedLinksIcon = "cog",

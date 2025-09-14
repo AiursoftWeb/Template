@@ -38,7 +38,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Directory"];
         _ = localizer["Users"];
         _ = localizer["Roles"];
-        _ = localizer["Admin"];
+        _ = localizer["Administration"];
         _ = localizer["System"];
         _ = localizer["Info"];
     }

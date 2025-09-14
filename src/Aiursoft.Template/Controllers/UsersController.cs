@@ -22,7 +22,7 @@ public class UsersController(
 {
     [Authorize(Policy = AppPermissionNames.CanReadUsers)]
     [RenderInNavBar(
-        NavGroupName = "Admin",
+        NavGroupName = "Administration",
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "Directory",
         CascadedLinksIcon = "users",

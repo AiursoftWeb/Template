@@ -69,5 +69,8 @@
   <data name="Sign out" xml:space="preserve">
     <value>Logga ut</value>
   </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
 
 </root>
