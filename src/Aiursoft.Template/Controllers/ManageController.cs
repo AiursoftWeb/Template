@@ -75,6 +75,30 @@ public class ManageController(
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
     }
 
+    //
+    // GET: /Manage/ChangeAvatar
+    [HttpGet]
+    public IActionResult ChangeAvatar()
+    {
+        return this.StackView(new ChangeAvatarViewModel());
+    }
+
+    //
+    // POST: /Manage/ChangeAvatar
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ChangeAvatar(ChangeAvatarViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return this.StackView(model);
+        }
+
+        // Save the new avatar in database.
+
+        return this.StackView(model);
+    }
+
     #region Helpers
 
     private void AddErrors(IdentityResult result)

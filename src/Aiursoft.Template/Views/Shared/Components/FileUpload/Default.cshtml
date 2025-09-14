@@ -1,0 +1,67 @@
+@using Aiursoft.Template.Services
+@model Aiursoft.Template.Views.Shared.Components.FileUpload.FileUploadViewModel
+@inject StorageService Storage
+@inject Microsoft.AspNetCore.Mvc.ViewFeatures.IHtmlGenerator HtmlGenerator
+@{
+    var fileInputId = $"file-input-{Model.UniqueId}";
+    var progressId = $"progress-{Model.UniqueId}";
+    var progressbarId = $"progressbar-{Model.UniqueId}";
+
+    var extensionAttributes = " ";
+    if (!string.IsNullOrWhiteSpace(Model.AllowedExtensions))
+    {
+        extensionAttributes += $"data-allowed-file-extensions=\"{Model.AllowedExtensions}\" ";
+    }
+    var defaultValue = Model.AspFor.Model as string;
+    if (!string.IsNullOrWhiteSpace(defaultValue))
+    {
+        extensionAttributes += $"data-default-file=\"{Storage.RelativePathToInternetUrl(defaultValue, Context)}\" ";
+    }
+    if (Model.MaxSizeInMb > 0)
+    {
+        extensionAttributes += $"data-max-file-size=\"{Model.MaxSizeInMb}M\"";
+    }
+
+    var hiddenInputTag = HtmlGenerator.GenerateTextBox(
+        ViewContext,
+        Model.AspFor.ModelExplorer,
+        Model.AspFor.Name,
+        Model.AspFor.Model,
+        format: null,
+        htmlAttributes: new { style = "width:0;height:0;padding:0;border:none;" });
+}
+
+<input
+    form="fakeForm"
+    type="file"
+    id="@fileInputId"
+    class="dropify"
+    data-show-remove="false"
+    @Html.Raw(extensionAttributes) />
+<div id="@progressId" class="progress mb-3 mt-3 d-none">
+    <div id="@progressbarId" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
+</div>
+@hiddenInputTag
+
+<script type="module">
+    import Uploader from "/scripts/uploader.js";
+    window.addEventListener('load', function () {
+
+        const fileInput = $(`#@fileInputId`);
+        const progress = $(`#@progressId`);
+        const progressbar = $(`#@progressbarId`);
+
+        const addressInput = $(`[name="@Model.AspFor.Name"]`);
+
+        new Uploader({
+            fileInput: fileInput,
+            progress: progress,
+            progressbar: progressbar,
+            addressInput: addressInput,
+
+            sizeInMb: @Model.MaxSizeInMb,
+            validExtensions: ('@Model.AllowedExtensions' || '').split(' ').filter(Boolean),
+            uploadUrl: '@Model.UploadEndpoint'
+        }).init();
+    })
+</script>

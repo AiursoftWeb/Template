@@ -1,0 +1,31 @@
+@model Aiursoft.Template.Models.ManageViewModels.ChangeAvatarViewModel
+<h2>@Localizer["Change your avatar"]</h2>
+
+<form asp-controller="Manage" asp-action="ChangeAvatar" method="post" class="form-horizontal">
+    <h4>@Localizer["Upload the new avatar file."]</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="AvatarUrl" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <vc:file-upload asp-for="@Model.AvatarUrl" upload-endpoint="/upload/avatar" allowed-extensions="png bmp jpg" max-size-in-mb="10"></vc:file-upload>
+            <span asp-validation-for="AvatarUrl" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-secondary">@Localizer["Change avatar"]</button>
+        </div>
+    </div>
+</form>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles{
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" />
+    <link rel="stylesheet" href="~/styles/uploader.css" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts{
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js"></script>
+}
