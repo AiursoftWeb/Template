@@ -96,13 +96,13 @@ class Uploader {
         });
     }
 
-    init() {
+    init(dropifyOptions = {}) {
         const that = this;
         that.fileInput.unbind('change');
         that.fileInput.on('change', () => {
             that.tryUpload(that);
         });
-        const dropify = that.fileInput.dropify();
+        const dropify = that.fileInput.dropify(dropifyOptions);
         dropify.on('dropify.afterClear', () => {
             that.reset(that);
         });

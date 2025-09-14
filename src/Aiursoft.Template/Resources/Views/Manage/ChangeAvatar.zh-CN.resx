@@ -27,5 +27,8 @@
   <data name="Change your avatar" xml:space="preserve">
     <value>更换头像</value>
   </data>
+  <data name="Save the avatar" xml:space="preserve">
+    <value>保存头像</value>
+  </data>
 
 </root>

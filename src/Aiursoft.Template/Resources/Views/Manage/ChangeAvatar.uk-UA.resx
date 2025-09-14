@@ -27,5 +27,8 @@
   <data name="Upload the new avatar file." xml:space="preserve">
     <value>Завантажте новий файл аватара.</value>
   </data>
+  <data name="Save the avatar" xml:space="preserve">
+    <value>Зберегти аватар</value>
+  </data>
 
 </root>

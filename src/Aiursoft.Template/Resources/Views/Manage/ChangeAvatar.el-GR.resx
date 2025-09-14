@@ -27,5 +27,8 @@
   <data name="Change avatar" xml:space="preserve">
     <value>Αλλαγή εικονιδίου</value>
   </data>
+  <data name="Save the avatar" xml:space="preserve">
+    <value>Αποθήκευση της εικόνας προφίλ</value>
+  </data>
 
 </root>

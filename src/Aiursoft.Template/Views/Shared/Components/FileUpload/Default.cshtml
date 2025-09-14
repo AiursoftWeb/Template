@@ -1,5 +1,6 @@
 @using Aiursoft.Template.Services
 @model Aiursoft.Template.Views.Shared.Components.FileUpload.FileUploadViewModel
+@inject IViewLocalizer Localizer
 @inject StorageService Storage
 @inject IHtmlGenerator HtmlGenerator
 @{
@@ -62,6 +63,34 @@
             sizeInMb: @Model.MaxSizeInMb,
             validExtensions: ('@Model.AllowedExtensions' || '').split(' ').filter(Boolean),
             uploadUrl: '@Model.UploadEndpoint'
-        }).init();
+        }).init({
+            messages: {
+                'default': @Json.Serialize(Localizer["Drag and drop a file here or click"].Value),
+                'replace': @Json.Serialize(Localizer["Drag and drop or click to replace"].Value),
+                'remove':  @Json.Serialize(Localizer["Remove"].Value),
+                'error':   @Json.Serialize(Localizer["Ooops, something wrong happended."].Value)
+            },
+            error: {
+                'fileSize': @Json.Serialize(Localizer["The file size is too big ({{ value }} max)."].Value),
+                'minWidth': @Json.Serialize(Localizer["The image width is too small ({{ value }}px min)."].Value),
+                'maxWidth': @Json.Serialize(Localizer["The image width is too big ({{ value }}px max)."].Value),
+                'minHeight': @Json.Serialize(Localizer["The image height is too small ({{ value }}px min)."].Value),
+                'maxHeight': @Json.Serialize(Localizer["The image height is too big ({{ value }}px max)."].Value),
+                'imageFormat': @Json.Serialize(Localizer["The image format is not allowed ({{ value }} only)."].Value),
+                'fileExtension': @Json.Serialize(Localizer["The file is not allowed ({{ value }} only)."].Value),
+            }
+        });
     })
 </script>
+
+@* @Localizer["Drag and drop a file here or click"] *@
+@* @Localizer["Drag and drop or click to replace"] *@
+@* @Localizer["Remove"] *@
+@* @Localizer["Ooops, something wrong happended."] *@
+@* @Localizer["The file size is too big ({{ value }} max)."] *@
+@* @Localizer["The image width is too small ({{ value }}px min)."] *@
+@* @Localizer["The image width is too big ({{ value }}px max)."] *@
+@* @Localizer["The image height is too small ({{ value }}px min)."] *@
+@* @Localizer["The image height is too big ({{ value }}px max)."] *@
+@* @Localizer["The image format is not allowed ({{ value }} only)."] *@
+@* @Localizer["The file is not allowed ({{ value }} only)."] *@

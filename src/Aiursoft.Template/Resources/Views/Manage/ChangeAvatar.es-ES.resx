@@ -27,5 +27,8 @@
   <data name="Change avatar" xml:space="preserve">
     <value>Cambiar avatar</value>
   </data>
+  <data name="Save the avatar" xml:space="preserve">
+    <value>Guardar el avatar</value>
+  </data>
 
 </root>
