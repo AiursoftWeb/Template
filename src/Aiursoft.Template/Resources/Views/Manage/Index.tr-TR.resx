@@ -33,5 +33,11 @@
   <data name="Password" xml:space="preserve">
     <value>Şifre</value>
   </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>Avatarınızı değiştirin</value>
+  </data>
+  <data name="Avatar settings" xml:space="preserve">
+    <value>Avatar Ayarları</value>
+  </data>
 
 </root>

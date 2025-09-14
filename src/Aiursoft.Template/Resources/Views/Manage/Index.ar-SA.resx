@@ -33,5 +33,11 @@
   <data name="Password" xml:space="preserve">
     <value>كلمة المرور</value>
   </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>غير صورتك الشخصية</value>
+  </data>
+  <data name="Avatar settings" xml:space="preserve">
+    <value>إعدادات الصورة الرمزية</value>
+  </data>
 
 </root>

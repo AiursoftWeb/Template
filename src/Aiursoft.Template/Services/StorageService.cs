@@ -3,7 +3,7 @@ using Aiursoft.Scanner.Abstractions;
 namespace Aiursoft.Template.Services;
 
 /// <summary>
-/// Represents a service for storing and retrieving files.
+/// Represents a service for storing and managing files.
 /// </summary>
 public class StorageService(IConfiguration configuration) : ISingletonDependency
 {
@@ -40,7 +40,9 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
                 finalFilePath = Path.Combine(finalFolder!, expectedFileName);
             }
 
-            // Create a new file.
+            // This is to avoid the case that the file already exists.
+            // However, we can't copy the stream to the new file. Because this is running in a lock and we need to release the lock ASAP.
+            // So we create a new file and close it to ensure the file is valid and can be copied to.
             File.Create(finalFilePath).Close();
         }
         finally
@@ -55,16 +57,21 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
         return Path.GetRelativePath(WorkspaceFolder, finalFilePath);
     }
 
+    /// <summary>
+    /// Retrieves the physical file path for a given file name within the storage workspace folder.
+    /// </summary>
+    /// <param name="fileName">The name of the file for which the physical path is required.</param>
+    /// <returns>The full physical path of the file within the workspace folder.</returns>
     public string GetFilePhysicalPath(string fileName)
     {
         return Path.Combine(WorkspaceFolder, fileName);
     }
 
-    public string AbsolutePathToRelativePath(string absolutePath)
-    {
-        return Path.GetRelativePath(WorkspaceFolder, absolutePath);
-    }
-
+    /// <summary>
+    /// Converts a relative path to a URI-compatible path.
+    /// </summary>
+    /// <param name="relativePath">The relative file path to be converted.</param>
+    /// <returns>A URI-compatible path derived from the relative path.</returns>
     private string RelativePathToUriPath(string relativePath)
     {
         var urlPath = Uri.EscapeDataString(relativePath)

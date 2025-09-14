@@ -33,5 +33,11 @@
   <data name="Password" xml:space="preserve">
     <value>密碼</value>
   </data>
+  <data name="Avatar settings" xml:space="preserve">
+    <value>頭像設定</value>
+  </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>變更您的頭像</value>
+  </data>
 
 </root>

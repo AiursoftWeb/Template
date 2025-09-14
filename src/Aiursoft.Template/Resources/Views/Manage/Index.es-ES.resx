@@ -33,5 +33,11 @@
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
   </data>
+  <data name="Change your avatar" xml:space="preserve">
+    <value>Cambiar tu avatar</value>
+  </data>
+  <data name="Avatar settings" xml:space="preserve">
+    <value>Configuración del avatar</value>
+  </data>
 
 </root>

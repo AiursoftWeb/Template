@@ -61,11 +61,6 @@ public class FilesController(
             return BadRequest();
         }
 
-        if (folderNames.Contains(".."))
-        {
-            return BadRequest("Invalid path!");
-        }
-
         var physicalPath = storage.GetFilePhysicalPath(folderNames);
         var workspaceFullPath = Path.GetFullPath(storage.WorkspaceFolder);
         if (!physicalPath.StartsWith(workspaceFullPath))
