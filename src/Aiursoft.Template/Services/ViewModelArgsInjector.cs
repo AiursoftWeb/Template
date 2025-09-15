@@ -162,7 +162,7 @@ public class ViewModelArgsInjector(
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.DisplayNameClaimType).Value,
-                UserAvatarUrl = storageService.RelativePathToInternetUrl(avatarPath, context),
+                UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath, context)}?w=100&square=true",
                 IconLinkGroups =
                 [
                     new IconLinkGroup

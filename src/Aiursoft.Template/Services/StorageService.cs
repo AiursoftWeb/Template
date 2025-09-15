@@ -7,7 +7,7 @@ namespace Aiursoft.Template.Services;
 /// </summary>
 public class StorageService(IConfiguration configuration) : ISingletonDependency
 {
-    public readonly string WorkspaceFolder = configuration["Storage:Path"]!;
+    public readonly string StorageRootFolder = configuration["Storage:Path"]!;
 
     // Async lock.
     private readonly SemaphoreSlim _lock = new(1, 1);
@@ -20,7 +20,7 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
     /// <returns>The actual path where the file is saved relative to the workspace folder.</returns>
     public async Task<string> Save(string savePath, IFormFile file)
     {
-        var finalFilePath = Path.Combine(WorkspaceFolder, savePath);
+        var finalFilePath = Path.Combine(StorageRootFolder, "Workspace", savePath);
         var finalFolder = Path.GetDirectoryName(finalFilePath);
 
         // Create the folder if it does not exist.
@@ -54,7 +54,7 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
         await file.CopyToAsync(fileStream);
         fileStream.Close();
 
-        return Path.GetRelativePath(WorkspaceFolder, finalFilePath);
+        return Path.GetRelativePath(StorageRootFolder, finalFilePath);
     }
 
     /// <summary>
@@ -64,7 +64,7 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
     /// <returns>The full physical path of the file within the workspace folder.</returns>
     public string GetFilePhysicalPath(string fileName)
     {
-        return Path.Combine(WorkspaceFolder, fileName);
+        return Path.Combine(StorageRootFolder, fileName);
     }
 
     /// <summary>
