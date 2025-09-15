@@ -27,5 +27,8 @@
   <data name="Your avatar has been saved." xml:space="preserve">
     <value>您的頭像已儲存。</value>
   </data>
+  <data name="The file is not a valid image." xml:space="preserve">
+    <value>該檔案不是有效的圖片。</value>
+  </data>
 
 </root>

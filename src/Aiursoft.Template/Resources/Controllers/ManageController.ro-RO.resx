@@ -27,5 +27,8 @@
   <data name="Your avatar has been saved." xml:space="preserve">
     <value>Avatarul tău a fost salvat.</value>
   </data>
+  <data name="The file is not a valid image." xml:space="preserve">
+    <value>Fișierul nu este o imagine validă.</value>
+  </data>
 
 </root>

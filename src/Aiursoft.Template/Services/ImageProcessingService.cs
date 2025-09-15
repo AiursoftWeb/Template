@@ -9,6 +9,21 @@ public class ImageProcessingService(
     ILogger<ImageProcessingService> logger,
     FileLockProvider fileLockProvider) : ITransientDependency
 {
+    public async Task<bool> IsValidImageAsync(string imagePath)
+    {
+        try
+        {
+            _ = await Image.DetectFormatAsync(imagePath);
+            logger.LogTrace("File with path {ImagePath} is a valid image", imagePath);
+            return true;
+        }
+        catch (Exception e)
+        {
+            logger.LogWarning(e, "File with path {ImagePath} is not a valid image", imagePath);
+            return false;
+        }
+    }
+
     /// <summary>
     /// Clears the EXIF data while retaining the same resolution,
     /// then writes the result to the "ClearedEXIF" subdirectory.

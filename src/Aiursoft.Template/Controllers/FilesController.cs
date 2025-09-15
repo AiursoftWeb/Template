@@ -2,7 +2,6 @@ using Aiursoft.CSTools.Attributes;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.Template.Services;
 using Microsoft.AspNetCore.Mvc;
-using SixLabors.ImageSharp;
 
 namespace Aiursoft.Template.Controllers;
 
@@ -60,6 +59,8 @@ public class FilesController(
     [Route("download/{**folderNames}")]
     public async Task<IActionResult> Download([FromRoute] string folderNames)
     {
+        logger.LogInformation("File download requested for path: {FolderNames}", folderNames);
+
         if (!ModelState.IsValid)
         {
             return BadRequest();
@@ -75,27 +76,14 @@ public class FilesController(
         {
             return NotFound();
         }
-        if (physicalPath.IsStaticImage() && await IsValidImageAsync(physicalPath))
+        if (physicalPath.IsStaticImage() && await imageCompressor.IsValidImageAsync(physicalPath))
         {
+            logger.LogInformation("Processing image compression request for path: {Path}", physicalPath);
             return await FileWithImageCompressor(physicalPath);
         }
 
+        logger.LogInformation("Processing file download request for path: {Path}", physicalPath);
         return this.WebFile(physicalPath);
-    }
-
-    private async Task<bool> IsValidImageAsync(string imagePath)
-    {
-        try
-        {
-            _ = await Image.DetectFormatAsync(imagePath);
-            logger.LogTrace("File with path {ImagePath} is a valid image", imagePath);
-            return true;
-        }
-        catch (Exception e)
-        {
-            logger.LogWarning(e, "File with path {ImagePath} is not a valid image", imagePath);
-            return false;
-        }
     }
 
     private async Task<IActionResult> FileWithImageCompressor(string path)
@@ -105,19 +93,28 @@ public class FilesController(
         if (width > 0 && passedWidth)
         {
             width = SizeCalculator.Ceiling(width);
+            logger.LogInformation("Compressing image '{Path}' to width: {Width}", path, width);
             if (square && passedSquare)
             {
                 var compressedPath = await imageCompressor.CompressAsync(path, width, width);
+                logger.LogInformation("Image compressed to square format: {CompressedPath}", compressedPath);
                 return this.WebFile(compressedPath);
             }
             else
             {
                 var compressedPath = await imageCompressor.CompressAsync(path, width, 0);
+                logger.LogInformation("Image compressed to rectangular format: {CompressedPath}", compressedPath);
                 return this.WebFile(compressedPath);
             }
         }
+        else
+        {
+            logger.LogInformation("No valid width parameter provided for {Path}, width={Width}, passedWidth={PassedWidth}",
+                path, width, passedWidth);
+        }
 
         // If no width or invalid, just clear EXIF
+        logger.LogInformation("Clearing EXIF data for image: {Path}", path);
         var clearedPath = await imageCompressor.ClearExifAsync(path);
         return this.WebFile(clearedPath);
     }

@@ -15,6 +15,8 @@ namespace Aiursoft.Template.Controllers;
 /// </summary>
 [Authorize]
 public class ManageController(
+    ImageProcessingService image,
+    StorageService storageService,
     IStringLocalizer<ManageController> localizer,
     IOptions<AppSettings> appSettings,
     UserManager<User> userManager,
@@ -95,6 +97,14 @@ public class ManageController(
     {
         if (!ModelState.IsValid)
         {
+            return this.StackView(model);
+        }
+
+        // Make sure the file is actually a photo.
+        var absolutePath = storageService.GetFilePhysicalPath(model.AvatarUrl);
+        if (!await image.IsValidImageAsync(absolutePath))
+        {
+            ModelState.AddModelError(string.Empty, localizer["The file is not a valid image."]);
             return this.StackView(model);
         }
 

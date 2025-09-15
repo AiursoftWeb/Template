@@ -60,11 +60,11 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
     /// <summary>
     /// Retrieves the physical file path for a given file name within the storage workspace folder.
     /// </summary>
-    /// <param name="fileName">The name of the file for which the physical path is required.</param>
+    /// <param name="relativePath">The name of the file for which the physical path is required.</param>
     /// <returns>The full physical path of the file within the workspace folder.</returns>
-    public string GetFilePhysicalPath(string fileName)
+    public string GetFilePhysicalPath(string relativePath)
     {
-        return Path.Combine(StorageRootFolder, fileName);
+        return Path.Combine(StorageRootFolder, relativePath);
     }
 
     /// <summary>
