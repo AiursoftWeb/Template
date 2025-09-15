@@ -58,7 +58,7 @@ public static class ProgramExtends
             var user = new User
             {
                 UserName = "admin",
-                DisplayName = "Super Administrator (Default user)",
+                DisplayName = "Super Administrator",
                 Email = "admin@default.com",
             };
             _ = await userManager.CreateAsync(user, "admin123");
