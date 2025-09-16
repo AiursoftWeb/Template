@@ -213,8 +213,8 @@ public class ViewModelArgsInjector(
             }
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
-                UserName = "Anonymous",
-                UserAvatarUrl = "/node_modules/@aiursoft/uistack/dist/img/avatars/avatar.jpg",
+                UserName = localizer["Click to login"],
+                UserAvatarUrl = string.Empty,
                 IconLinkGroups =
                 [
                     new IconLinkGroup

@@ -72,5 +72,8 @@
   <data name="Administration" xml:space="preserve">
     <value>प्रशासन</value>
   </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>लॉगिन करने के लिए क्लिक करें</value>
+  </data>
 
 </root>

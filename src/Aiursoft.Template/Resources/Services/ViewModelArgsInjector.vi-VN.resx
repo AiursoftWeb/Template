@@ -72,5 +72,8 @@
   <data name="Administration" xml:space="preserve">
     <value>Quản trị</value>
   </data>
+  <data name="Click to login" xml:space="preserve">
+    <value>Nhấp để đăng nhập</value>
+  </data>
 
 </root>
