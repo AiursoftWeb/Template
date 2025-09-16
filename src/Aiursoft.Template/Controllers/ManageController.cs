@@ -84,9 +84,13 @@ public class ManageController(
     //
     // GET: /Manage/ChangeAvatar
     [HttpGet]
-    public IActionResult ChangeAvatar()
+    public async Task<IActionResult> ChangeAvatar()
     {
-        return this.StackView(new ChangeAvatarViewModel());
+        var user = await GetCurrentUserAsync();
+        return this.StackView(new ChangeAvatarViewModel
+        {
+            AvatarUrl = user!.AvatarRelativePath
+        });
     }
 
     //
@@ -108,7 +112,7 @@ public class ManageController(
             return this.StackView(model);
         }
 
-        // Save the new avatar in database.
+        // Save the new avatar in the database.
         var user = await GetCurrentUserAsync();
         if (user != null)
         {

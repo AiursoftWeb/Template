@@ -2,7 +2,8 @@ using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System.Security.Claims; // 确保添加此 using 语句
+using System.Security.Claims;
+using Aiursoft.Template.Services;
 
 namespace Aiursoft.Template;
 
@@ -13,6 +14,37 @@ public static class ProgramExtends
         var haveUsers = await dbContext.Users.AnyAsync();
         var haveRoles = await dbContext.Roles.AnyAsync();
         return !haveUsers && !haveRoles;
+    }
+
+    public static Task<IHost> CopyAvatarFileAsync(this IHost host)
+    {
+        using var scope = host.Services.CreateScope();
+        var services = scope.ServiceProvider;
+        var storageService = services.GetRequiredService<StorageService>();
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        var avatarFilePath = Path.Combine(host.Services.GetRequiredService<IHostEnvironment>().ContentRootPath,
+            "wwwroot", "images", "default-avatar.jpg");
+        var physicalPath = storageService.GetFilePhysicalPath(User.DefaultAvatarPath);
+        if (!File.Exists(avatarFilePath))
+        {
+            logger.LogWarning("Avatar file does not exist. Skip copying.");
+            return Task.FromResult(host);
+        }
+
+        if (File.Exists(physicalPath))
+        {
+            logger.LogInformation("Avatar file already exists. Skip copying.");
+            return Task.FromResult(host);
+        }
+
+        if (!Directory.Exists(Path.GetDirectoryName(physicalPath)))
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(physicalPath)!);
+        }
+
+        File.Copy(avatarFilePath, physicalPath);
+        logger.LogInformation("Avatar file copied to {Path}", physicalPath);
+        return Task.FromResult(host);
     }
 
     public static async Task<IHost> SeedAsync(this IHost host)
@@ -27,6 +59,7 @@ public static class ProgramExtends
             logger.LogInformation("Do not need to seed the database. There are already users or roles present.");
             return host;
         }
+
         logger.LogInformation("Seeding the database with initial data...");
         var userManager = services.GetRequiredService<UserManager<User>>();
         var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
@@ -64,6 +97,7 @@ public static class ProgramExtends
             _ = await userManager.CreateAsync(user, "admin123");
             await userManager.AddToRoleAsync(user, "Administrators");
         }
+
         return host;
     }
 }
