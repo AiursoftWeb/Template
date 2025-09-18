@@ -36,5 +36,38 @@
   <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
     <value>OpenID Connect (OIDC) etkinleştirilmiştir. Kullanıcı hesapları harici bir kimlik sağlayıcıdan senkronize edilmektedir. Kullanıcıların merkezi olarak yönetilebilmesi için yeni kullanıcıları OIDC sağlayıcınızda oluşturmanızı şiddetle tavsiye ederiz. Bu form, yalnızca bu uygulama içinde var olan, yalnızca yerel bir hesap oluşturacaktır.</value>
   </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-posta Adresi</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Görünen Ad</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>E-posta adresini girin</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Görünen adı girin</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Yeni Kullanıcı Oluştur</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Kullanıcı adını girin</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Kullanıcı Hesap Detayları</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Kullanıcı Oluştur</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Yeni kullanıcı için bir şifre oluşturun</value>
+  </data>
 
 </root>

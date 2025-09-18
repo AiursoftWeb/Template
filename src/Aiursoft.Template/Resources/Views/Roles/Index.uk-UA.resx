@@ -39,5 +39,11 @@
   <data name="Manage Roles" xml:space="preserve">
     <value>Керування ролями</value>
   </data>
+  <data name="All Roles" xml:space="preserve">
+    <value>Усі ролі</value>
+  </data>
+  <data name="Select a role to view its details, or use the actions to edit or delete." xml:space="preserve">
+    <value>Виберіть роль, щоб переглянути її деталі, або скористайтеся діями для редагування чи видалення.</value>
+  </data>
 
 </root>

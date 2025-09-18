@@ -48,5 +48,20 @@
   <data name="Email" xml:space="preserve">
     <value>Ηλεκτρονικό ταχυδρομείο</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Ακύρωση</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Είστε σίγουρος;</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Διαγραφή Χρήστη</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ναι, διαγραφή αυτού του χρήστη</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Αυτή η ενέργεια είναι μη αναστρέψιμη. Πρόκειται να διαγράψετε μόνιμα τον ακόλουθο χρήστη και όλα τα συσχετιζόμενα δεδομένα του:</value>
+  </data>
 
 </root>

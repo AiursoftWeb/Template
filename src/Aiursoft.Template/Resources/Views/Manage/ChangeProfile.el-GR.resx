@@ -24,5 +24,23 @@
   <data name="Edit your profile" xml:space="preserve">
     <value>Επεξεργαστείτε το προφίλ σας</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Ακύρωση</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Αποθήκευση αλλαγών</value>
+  </data>
+  <data name="Profile Information" xml:space="preserve">
+    <value>Πληροφορίες Προφίλ</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Εμφανιζόμενο Όνομα</value>
+  </data>
+  <data name="Enter your display name" xml:space="preserve">
+    <value>Εισάγετε το εμφανιζόμενο όνομά σας</value>
+  </data>
+  <data name="This name will be displayed publicly across the application." xml:space="preserve">
+    <value>Αυτό το όνομα θα εμφανίζεται δημόσια σε όλη την εφαρμογή.</value>
+  </data>
 
 </root>

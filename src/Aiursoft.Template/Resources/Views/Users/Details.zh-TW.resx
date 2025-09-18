@@ -60,5 +60,8 @@
   <data name="User name" xml:space="preserve">
     <value>使用者名稱</value>
   </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>有效權限</value>
+  </data>
 
 </root>

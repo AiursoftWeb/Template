@@ -30,5 +30,23 @@
   <data name="Save the avatar" xml:space="preserve">
     <value>Сохранить аватар</value>
   </data>
+  <data name="Save New Avatar" xml:space="preserve">
+    <value>Сохранить новый аватар</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Avatar Settings" xml:space="preserve">
+    <value>Настройки аватара</value>
+  </data>
+  <data name="Current Avatar" xml:space="preserve">
+    <value>Текущий аватар</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Новый файл аватара</value>
+  </data>
+  <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
+    <value>Для достижения наилучших результатов используйте квадратное изображение в формате .jpg или .png.</value>
+  </data>
 
 </root>

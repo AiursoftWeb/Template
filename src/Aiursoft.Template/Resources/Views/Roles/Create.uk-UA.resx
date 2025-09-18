@@ -33,5 +33,20 @@
   <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
     <value>Увімкнено OpenID Connect (OIDC). Ролі синхронізуються з зовнішнього провайдера ідентичності. Ми настійно рекомендуємо створювати нові ролі або групи у вашому провайдері OIDC, щоб забезпечити їх централізоване керування. Ця форма створить локальну роль, яка існуватиме виключно в межах цього додатку.</value>
   </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>Створити нову роль</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Створити роль</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Назва ролі</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>Введіть назву нової ролі</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Деталі ролі</value>
+  </data>
 
 </root>

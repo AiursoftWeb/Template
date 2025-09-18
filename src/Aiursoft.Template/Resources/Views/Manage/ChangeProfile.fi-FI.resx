@@ -24,5 +24,23 @@
   <data name="Edit your profile" xml:space="preserve">
     <value>Muokkaa profiiliasi</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="Profile Information" xml:space="preserve">
+    <value>Profiilitiedot</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Näyttönimi</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Tallenna muutokset</value>
+  </data>
+  <data name="Enter your display name" xml:space="preserve">
+    <value>Kirjoita näyttönimesi</value>
+  </data>
+  <data name="This name will be displayed publicly across the application." xml:space="preserve">
+    <value>Tämä nimi näytetään julkisesti koko sovelluksessa.</value>
+  </data>
 
 </root>

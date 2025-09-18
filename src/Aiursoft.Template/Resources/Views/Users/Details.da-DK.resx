@@ -60,5 +60,8 @@
   <data name="User name" xml:space="preserve">
     <value>Brugernavn</value>
   </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Effektive tilladelser</value>
+  </data>
 
 </root>

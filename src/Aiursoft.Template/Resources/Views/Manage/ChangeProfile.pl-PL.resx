@@ -24,5 +24,23 @@
   <data name="Change profile" xml:space="preserve">
     <value>Zmień profil</value>
   </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Zapisz zmiany</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anuluj</value>
+  </data>
+  <data name="Profile Information" xml:space="preserve">
+    <value>Informacje o profilu</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Wyświetlana nazwa</value>
+  </data>
+  <data name="Enter your display name" xml:space="preserve">
+    <value>Wprowadź swoją nazwę wyświetlaną</value>
+  </data>
+  <data name="This name will be displayed publicly across the application." xml:space="preserve">
+    <value>Ta nazwa będzie publicznie wyświetlana w całej aplikacji.</value>
+  </data>
 
 </root>

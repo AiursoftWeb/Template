@@ -39,5 +39,20 @@
   <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
     <value>บทบาทนี้ถูกซิงโครไนซ์มาจากผู้ให้บริการ OpenID Connect (OIDC) การแก้ไขใดๆ ที่ทำในหน้านี้ (เช่น การเปลี่ยนชื่อ) อาจทำให้เกิดความขัดแย้งในการซิงโครไนซ์ข้อมูลครั้งถัดไป สำหรับการเปลี่ยนแปลงที่ถาวร โปรดอัปเดตบทบาทโดยตรงบนผู้ให้บริการ OIDC ของคุณ</value>
   </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>บันทึกการเปลี่ยนแปลง</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>ชื่อบทบาท</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>แก้ไขบทบาท</value>
+  </data>
+  <data name="Manage Permissions for this Role" xml:space="preserve">
+    <value>จัดการสิทธิ์สำหรับบทบาทนี้</value>
+  </data>
+  <data name="Role Details and Permissions" xml:space="preserve">
+    <value>รายละเอียดบทบาทและสิทธิ์</value>
+  </data>
 
 </root>

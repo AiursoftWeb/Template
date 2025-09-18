@@ -45,5 +45,11 @@
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
+  <data name="All Users" xml:space="preserve">
+    <value>Tất Cả Người Dùng</value>
+  </data>
+  <data name="A list of all user accounts registered in the system." xml:space="preserve">
+    <value>Danh sách tất cả tài khoản người dùng đã đăng ký trong hệ thống.</value>
+  </data>
 
 </root>

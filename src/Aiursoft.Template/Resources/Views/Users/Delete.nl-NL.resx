@@ -48,5 +48,20 @@
   <data name="Email" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Gebruiker verwijderen</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Weet u het zeker?</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ja, verwijder deze gebruiker</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Deze actie is onomkeerbaar. U staat op het punt om de volgende gebruiker en alle bijbehorende gegevens permanent te verwijderen:</value>
+  </data>
 
 </root>

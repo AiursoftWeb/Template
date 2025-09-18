@@ -39,5 +39,20 @@
   <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
     <value>يتم مزامنة هذا الدور من موفر OpenID Connect (OIDC). أي تعديلات تُجرى هنا (مثل تعديل الاسم) قد تتسبب في حدوث تعارضات أثناء مزامنة البيانات التالية. للتغييرات الدائمة، يرجى تحديث الدور مباشرةً على موفر OIDC الخاص بك.</value>
   </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>اسم الدور</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>تعديل الدور</value>
+  </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>حفظ التغييرات</value>
+  </data>
+  <data name="Role Details and Permissions" xml:space="preserve">
+    <value>تفاصيل الدور والصلاحيات</value>
+  </data>
+  <data name="Manage Permissions for this Role" xml:space="preserve">
+    <value>إدارة الصلاحيات لهذه الدور</value>
+  </data>
 
 </root>

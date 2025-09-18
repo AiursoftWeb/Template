@@ -30,5 +30,23 @@
   <data name="Save the avatar" xml:space="preserve">
     <value>Tallenna avatar</value>
   </data>
+  <data name="Avatar Settings" xml:space="preserve">
+    <value>Avatar-asetukset</value>
+  </data>
+  <data name="Current Avatar" xml:space="preserve">
+    <value>Nykyinen avatar</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Uusi avatar-tiedosto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="Save New Avatar" xml:space="preserve">
+    <value>Tallenna uusi avatar</value>
+  </data>
+  <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
+    <value>Parhaiden tulosten saavuttamiseksi käytä neliömäistä kuvaa .jpg- tai .png-muodossa.</value>
+  </data>
 
 </root>

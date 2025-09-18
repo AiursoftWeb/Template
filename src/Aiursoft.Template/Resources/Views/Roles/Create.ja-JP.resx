@@ -33,5 +33,20 @@
   <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
     <value>OpenID Connect (OIDC) が有効になっています。ロールは外部のアイデンティティプロバイダーから同期されます。一元管理を確実にするため、新しいロールまたはグループは OIDC プロバイダー上で作成することを強く推奨します。このフォームでは、このアプリケーション内にのみ存在するローカルのみのロールが作成されます。</value>
   </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>ロールの詳細</value>
+  </data>
+  <data name="Create New Role" xml:space="preserve">
+    <value>新規ロールの作成</value>
+  </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>ロール名</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>ロールを作成</value>
+  </data>
+  <data name="Enter the new role name" xml:space="preserve">
+    <value>新しいロール名を入力</value>
+  </data>
 
 </root>

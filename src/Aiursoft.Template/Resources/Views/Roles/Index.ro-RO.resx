@@ -39,5 +39,11 @@
   <data name="Create a new role" xml:space="preserve">
     <value>Creează un rol nou</value>
   </data>
+  <data name="All Roles" xml:space="preserve">
+    <value>Toate Rolurile</value>
+  </data>
+  <data name="Select a role to view its details, or use the actions to edit or delete." xml:space="preserve">
+    <value>Selectați un rol pentru a vedea detaliile acestuia sau utilizați acțiunile pentru a-l edita sau șterge.</value>
+  </data>
 
 </root>

@@ -48,5 +48,20 @@
   <data name="Email" xml:space="preserve">
     <value>電郵</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>你確定嗎？</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>刪除用戶</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>是的，刪除此用戶</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>此操作無法還原。你即將永久刪除以下用戶及其所有相關數據：</value>
+  </data>
 
 </root>

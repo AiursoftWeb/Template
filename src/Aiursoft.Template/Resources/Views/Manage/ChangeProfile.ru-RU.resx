@@ -24,5 +24,23 @@
   <data name="Edit your profile" xml:space="preserve">
     <value>Редактировать профиль</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Profile Information" xml:space="preserve">
+    <value>Информация профиля</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Сохранить изменения</value>
+  </data>
+  <data name="Enter your display name" xml:space="preserve">
+    <value>Введите ваше отображаемое имя</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Отображаемое имя</value>
+  </data>
+  <data name="This name will be displayed publicly across the application." xml:space="preserve">
+    <value>Это имя будет публично отображаться во всем приложении.</value>
+  </data>
 
 </root>

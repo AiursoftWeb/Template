@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>Назад до списку ролей</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>Перегляд</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>Надані дозволи</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>Призначені користувачі</value>
+  </data>
 
 </root>

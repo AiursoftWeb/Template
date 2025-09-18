@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>Время создания</value>
   </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Вы уверены?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Удалить пользователя</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Да, удалить этого пользователя</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Это действие необратимо. Вы собираетесь окончательно удалить следующего пользователя и все связанные с ним данные:</value>
+  </data>
 
 </root>

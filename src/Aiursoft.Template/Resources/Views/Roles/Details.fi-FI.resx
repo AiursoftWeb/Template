@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>Takaisin rooliluetteloon</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>Näytä</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>Määritetyt käyttäjät</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>Myönnetyt käyttöoikeudet</value>
+  </data>
 
 </root>

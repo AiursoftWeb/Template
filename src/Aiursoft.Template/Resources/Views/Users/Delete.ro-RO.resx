@@ -48,5 +48,20 @@
   <data name="Name" xml:space="preserve">
     <value>Nume</value>
   </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Sunteți sigur?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anulează</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Șterge utilizator</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Da, șterge acest utilizator</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Această acțiune este ireversibilă. Sunteți pe cale să ștergeți definitiv următorul utilizator și toate datele asociate acestuia:</value>
+  </data>
 
 </root>

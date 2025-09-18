@@ -48,5 +48,23 @@
   <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
     <value>Det här användarkontot är synkroniserat med en OpenID Connect (OIDC)-leverantör. Ändringar som görs här (t.ex. till visningsnamn eller e-postadress) kan skrivas över under nästa datasynkronisering. För permanenta ändringar, uppdatera användarens profil direkt hos din OIDC-leverantör.</value>
   </data>
+  <data name="Username" xml:space="preserve">
+    <value>Användarnamn</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Visningsnamn</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>E-postadress</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Nytt lösenord</value>
+  </data>
+  <data name="View Details" xml:space="preserve">
+    <value>Visa detaljer</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>Lämna tomt om du inte vill ändra lösenordet.</value>
+  </data>
 
 </root>

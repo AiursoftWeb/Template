@@ -33,5 +33,14 @@
   <data name="Please contact the administrator for help." xml:space="preserve">
     <value>กรุณาติดต่อผู้ดูแลระบบเพื่อขอความช่วยเหลือ</value>
   </data>
+  <data name="An Error Occurred" xml:space="preserve">
+    <value>เกิดข้อผิดพลาด</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>ขออภัย เกิดข้อผิดพลาดบางอย่างในการประมวลผลคำขอของคุณ</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>กรุณาลองใหม่อีกครั้งในภายหลัง หรือติดต่อฝ่ายสนับสนุนหากปัญหายังคงอยู่</value>
+  </data>
 
 </root>

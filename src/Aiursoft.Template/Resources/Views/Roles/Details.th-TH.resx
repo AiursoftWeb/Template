@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>กลับไปยังรายการบทบาท</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>ดู</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>สิทธิ์ที่ได้รับ</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>ผู้ใช้ที่ถูกกำหนด</value>
+  </data>
 
 </root>

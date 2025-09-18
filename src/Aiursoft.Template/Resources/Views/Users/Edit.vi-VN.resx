@@ -48,5 +48,23 @@
   <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
     <value>Tài khoản người dùng này được đồng bộ hóa với nhà cung cấp OpenID Connect (OIDC). Mọi thay đổi được thực hiện tại đây (ví dụ: tên hiển thị hoặc email) có thể bị ghi đè trong lần đồng bộ dữ liệu tiếp theo. Để thay đổi vĩnh viễn, vui lòng cập nhật hồ sơ người dùng trực tiếp trên nhà cung cấp OIDC của bạn.</value>
   </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Địa chỉ Email</value>
+  </data>
+  <data name="View Details" xml:space="preserve">
+    <value>Xem Chi Tiết</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Tên hiển thị</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Tên người dùng</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>Để trống nếu bạn không muốn thay đổi mật khẩu.</value>
+  </data>
 
 </root>

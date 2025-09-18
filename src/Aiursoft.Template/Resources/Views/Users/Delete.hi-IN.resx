@@ -48,5 +48,20 @@
   <data name="User name" xml:space="preserve">
     <value>उपयोगकर्ता नाम</value>
   </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>उपयोगकर्ता हटाएं</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करें</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>हाँ, इस उपयोगकर्ता को हटाएं</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>यह क्रिया अपरिवर्तनीय है। आप निम्नलिखित उपयोगकर्ता और उससे संबंधित सभी डेटा को स्थायी रूप से हटाने वाले हैं:</value>
+  </data>
 
 </root>

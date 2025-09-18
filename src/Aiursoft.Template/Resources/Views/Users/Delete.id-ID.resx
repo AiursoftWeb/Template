@@ -48,5 +48,20 @@
   <data name="Name" xml:space="preserve">
     <value>Nama</value>
   </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Apakah Anda yakin?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Hapus Pengguna</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ya, hapus pengguna ini</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Tindakan ini tidak dapat dibatalkan. Anda akan menghapus secara permanen pengguna berikut dan semua data yang terkait:</value>
+  </data>
 
 </root>

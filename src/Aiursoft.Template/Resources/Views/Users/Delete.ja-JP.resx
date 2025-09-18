@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>作成日時</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>本当によろしいですか？</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ユーザーを削除</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>はい、このユーザーを削除します</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>この操作は取り消せません。以下のユーザーとその関連データすべてを完全に削除しようとしています：</value>
+  </data>
 
 </root>

@@ -48,5 +48,23 @@
   <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
     <value>Цей обліковий запис синхронізовано з провайдером OpenID Connect (OIDC). Будь-які зміни, внесені тут (наприклад, до відображуваного імені чи електронної пошти), можуть бути перезаписані під час наступної синхронізації даних. Для постійних змін будь ласка оновіть профіль користувача безпосередньо у вашому провайдері OIDC.</value>
   </data>
+  <data name="View Details" xml:space="preserve">
+    <value>Переглянути деталі</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>Новий пароль</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Електронна адреса</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Відображуване ім&apos;я</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Ім&apos;я користувача</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>Залиште порожнім, якщо ви не хочете змінювати пароль.</value>
+  </data>
 
 </root>

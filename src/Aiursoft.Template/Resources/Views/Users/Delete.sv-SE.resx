@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>Skapad</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Är du säker?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Ta bort användare</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ja, ta bort den här användaren</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Denna åtgärd går inte att ångra. Du håller på att permanent ta bort följande användare och all tillhörande data:</value>
+  </data>
 
 </root>

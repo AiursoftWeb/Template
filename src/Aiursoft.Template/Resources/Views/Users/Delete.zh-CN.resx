@@ -48,5 +48,20 @@
   <data name="Email" xml:space="preserve">
     <value>电子邮件</value>
   </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>删除用户</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>您确定吗？</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>此操作不可逆。您即将永久删除以下用户及其所有关联数据：</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>是的，删除此用户</value>
+  </data>
 
 </root>

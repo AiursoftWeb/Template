@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>Oluşturulma Zamanı</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Emin misiniz?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Kullanıcıyı Sil</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Evet, bu kullanıcıyı sil</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Bu işlem geri alınamaz. Aşağıdaki kullanıcıyı ve onunla ilişkili tüm verileri kalıcı olarak silmek üzeresiniz:</value>
+  </data>
 
 </root>

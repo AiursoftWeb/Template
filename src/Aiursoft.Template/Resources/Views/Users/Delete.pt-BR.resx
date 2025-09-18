@@ -48,5 +48,20 @@
   <data name="User name" xml:space="preserve">
     <value>Nome de usuário</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Tem certeza?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Excluir Usuário</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Esta ação é irreversível. Você está prestes a excluir permanentemente o seguinte usuário e todos os seus dados associados:</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Sim, excluir este usuário</value>
+  </data>
 
 </root>

@@ -30,5 +30,23 @@
   <data name="Save the avatar" xml:space="preserve">
     <value>Avatarı kaydet</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Current Avatar" xml:space="preserve">
+    <value>Mevcut Avatar</value>
+  </data>
+  <data name="Save New Avatar" xml:space="preserve">
+    <value>Yeni Avatarı Kaydet</value>
+  </data>
+  <data name="Avatar Settings" xml:space="preserve">
+    <value>Avatar Ayarları</value>
+  </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Yeni avatar dosyası</value>
+  </data>
+  <data name="For best results, use a square image in .jpg or .png format." xml:space="preserve">
+    <value>En iyi sonuçlar için, kare bir görseli .jpg veya .png formatında kullanın.</value>
+  </data>
 
 </root>

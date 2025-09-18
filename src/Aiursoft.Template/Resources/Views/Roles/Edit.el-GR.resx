@@ -39,5 +39,20 @@
   <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
     <value>Αυτός ο ρόλος συγχρονίζεται από έναν πάροχο OpenID Connect (OIDC). Οποιεσδήποτε αλλαγές γίνουν εδώ (π.χ., στο όνομα) μπορεί να προκαλέσουν συγκρούσεις κατά τον επόμενο συγχρονισμό δεδομένων. Για μόνιμες αλλαγές, παρακαλούμε ενημερώστε τον ρόλο απευθείας στον πάροχο OIDC σας.</value>
   </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Όνομα Ρόλου</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Επεξεργασία Ρόλου</value>
+  </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>Αποθήκευση Αλλαγών</value>
+  </data>
+  <data name="Manage Permissions for this Role" xml:space="preserve">
+    <value>Διαχείριση Δικαιωμάτων για αυτόν τον Ρόλο</value>
+  </data>
+  <data name="Role Details and Permissions" xml:space="preserve">
+    <value>Λεπτομέρειες και Δικαιώματα Ρόλου</value>
+  </data>
 
 </root>

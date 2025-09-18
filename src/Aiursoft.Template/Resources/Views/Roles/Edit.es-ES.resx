@@ -39,5 +39,20 @@
   <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
     <value>Este rol está sincronizado desde un proveedor de OpenID Connect (OIDC). Cualquier modificación realizada aquí (por ejemplo, al nombre) podría causar conflictos durante la próxima sincronización de datos. Para cambios permanentes, actualice el rol directamente en su proveedor de OIDC.</value>
   </data>
+  <data name="Role Name" xml:space="preserve">
+    <value>Nombre del Rol</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Editar rol</value>
+  </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>Guardar Cambios</value>
+  </data>
+  <data name="Role Details and Permissions" xml:space="preserve">
+    <value>Detalles y Permisos del Rol</value>
+  </data>
+  <data name="Manage Permissions for this Role" xml:space="preserve">
+    <value>Gestionar permisos para este rol</value>
+  </data>
 
 </root>

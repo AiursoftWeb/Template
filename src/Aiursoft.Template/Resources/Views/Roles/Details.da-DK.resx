@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>Tilbage til rolliste</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>Se</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>Tildelte tilladelser</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>Tilknyttede brugere</value>
+  </data>
 
 </root>

@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>Luontiaika</value>
   </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Poista käyttäjä</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Peruuta</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Oletko varma?</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Kyllä, poista tämä käyttäjä</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Tämä toiminto on peruuttamaton. Olet poistamassa pysyvästi seuraavan käyttäjän ja kaikki siihen liittyvät tiedot:</value>
+  </data>
 
 </root>

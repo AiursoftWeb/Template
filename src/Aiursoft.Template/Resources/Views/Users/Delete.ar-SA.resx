@@ -48,5 +48,20 @@
   <data name="Email" xml:space="preserve">
     <value>البريد الإلكتروني</value>
   </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>حذف المستخدم</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>نعم، احذف هذا المستخدم</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>هل أنت متأكد؟</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>هذا الإجراء لا يمكن التراجع عنه. أنت على وشك حذف المستخدم التالي وجميع البيانات المرتبطة به بشكل دائم:</value>
+  </data>
 
 </root>

@@ -36,5 +36,38 @@
   <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
     <value>OpenID Connect (OIDC) đã được bật. Các tài khoản người dùng được đồng bộ từ một nhà cung cấp danh tính bên ngoài. Chúng tôi khuyến nghị nên tạo người dùng mới trên nhà cung cấp OIDC của bạn để đảm bảo họ được quản lý tập trung. Biểu mẫu này sẽ tạo một tài khoản chỉ tồn tại cục bộ và chỉ có trong ứng dụng này.</value>
   </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Tạo Người Dùng Mới</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Nhập tên đăng nhập</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Địa chỉ Email</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Nhập tên hiển thị</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Thông tin Tài khoản Người dùng</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Tên hiển thị</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>Nhập địa chỉ email</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Tạo Người Dùng</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Tạo mật khẩu cho người dùng mới</value>
+  </data>
 
 </root>

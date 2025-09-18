@@ -45,5 +45,11 @@
   <data name="Name" xml:space="preserve">
     <value>Full Name</value>
   </data>
+  <data name="All Users" xml:space="preserve">
+    <value>All Users</value>
+  </data>
+  <data name="A list of all user accounts registered in the system." xml:space="preserve">
+    <value>A list of all user accounts registered on the system.</value>
+  </data>
 
 </root>

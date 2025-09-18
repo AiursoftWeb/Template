@@ -36,5 +36,38 @@
   <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
     <value>Włączono OpenID Connect (OIDC). Konta użytkowników są synchronizowane z zewnętrznego dostawcy tożsamości. Zdecydowanie zalecamy tworzenie nowych użytkowników w swoim dostawcy OIDC, aby zapewnić ich centralne zarządzanie. Ten formularz utworzy konto lokalne, które istnieje wyłącznie w obrębie tej aplikacji.</value>
   </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>Wpisz adres e-mail</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Wprowadź nazwę wyświetlaną</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Adres e-mail</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Wyświetlana nazwa</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Dane konta użytkownika</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Wprowadź nazwę użytkownika</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Utwórz nowego użytkownika</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Utwórz hasło dla nowego użytkownika</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Utwórz użytkownika</value>
+  </data>
 
 </root>

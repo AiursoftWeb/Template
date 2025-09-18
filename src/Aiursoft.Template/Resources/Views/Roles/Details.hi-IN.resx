@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>रोल सूची पर वापस जाएं</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>देखें</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>नियुक्त उपयोगकर्ता</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>अनुमतियाँ प्रदान की गईं</value>
+  </data>
 
 </root>

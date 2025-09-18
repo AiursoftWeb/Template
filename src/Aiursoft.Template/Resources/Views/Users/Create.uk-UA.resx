@@ -36,5 +36,38 @@
   <data name="OpenID Connect (OIDC) is enabled. User accounts are synchronized from an external identity provider. We strongly recommend creating new users on your OIDC provider to ensure they are managed centrally. This form will create a local-only account that exists solely within this application." xml:space="preserve">
     <value>Увімкнено OpenID Connect (OIDC). Облікові записи користувачів синхронізуються з зовнішнього провайдера ідентичності. Ми настійно рекомендуємо створювати нових користувачів у вашому провайдері OIDC, щоб забезпечити їх централізоване керування. Ця форма створить обліковий запис, який існує лише локально в межах цього додатку.</value>
   </data>
+  <data name="Username" xml:space="preserve">
+    <value>Ім&apos;я користувача</value>
+  </data>
+  <data name="Enter username" xml:space="preserve">
+    <value>Введіть ім&apos;я користувача</value>
+  </data>
+  <data name="Create New User" xml:space="preserve">
+    <value>Створити нового користувача</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Відображуване ім&apos;я</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Електронна адреса</value>
+  </data>
+  <data name="User Account Details" xml:space="preserve">
+    <value>Деталі облікового запису користувача</value>
+  </data>
+  <data name="Enter display name" xml:space="preserve">
+    <value>Введіть відображуване ім&apos;я</value>
+  </data>
+  <data name="Enter email address" xml:space="preserve">
+    <value>Введіть адресу електронної пошти</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Створити користувача</value>
+  </data>
+  <data name="Create a password for the new user" xml:space="preserve">
+    <value>Створіть пароль для нового користувача</value>
+  </data>
 
 </root>

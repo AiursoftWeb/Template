@@ -39,5 +39,20 @@
   <data name="This role is managed by an OpenID Connect (OIDC) provider. Deleting the role here will only remove it from this application. The role will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this role, you must remove them from your OIDC provider." xml:space="preserve">
     <value>บทบาทนี้ถูกจัดการโดยผู้ให้บริการ OpenID Connect (OIDC) การลบบทบาทที่นี่จะลบออกจากแอปพลิเคชันนี้เท่านั้น บทบาทจะยังคงอยู่บนผู้ให้บริการ OIDC ของคุณและอาจปรากฏขึ้นอีกครั้งหลังจากซิงค์ครั้งถัดไปหรือหากผู้ใช้เข้าสู่ระบบอีกครั้ง หากต้องการลบบทบาทนี้อย่างถาวร คุณต้องลบบทบาทออกจากผู้ให้บริการ OIDC ของคุณ</value>
   </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่?</value>
+  </data>
+  <data name="Yes, delete this role" xml:space="preserve">
+    <value>ใช่ ลบบทบาทนี้</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>ลบบทบาท</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following role:" xml:space="preserve">
+    <value>การดำเนินการนี้ไม่สามารถย้อนกลับได้ คุณกำลังจะลบบทบาทต่อไปนี้อย่างถาวร:</value>
+  </data>
 
 </root>

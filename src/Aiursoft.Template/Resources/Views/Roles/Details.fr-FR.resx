@@ -48,5 +48,14 @@
   <data name="Delete this Role" xml:space="preserve">
     <value>Supprimer ce rôle</value>
   </data>
+  <data name="View" xml:space="preserve">
+    <value>Voir</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>Utilisateurs assignés</value>
+  </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>Permissions accordées</value>
+  </data>
 
 </root>

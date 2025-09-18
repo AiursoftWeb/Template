@@ -24,5 +24,23 @@
   <data name="Change profile" xml:space="preserve">
     <value>Rediger profil</value>
   </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Gem ændringer</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>Visningsnavn</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuller</value>
+  </data>
+  <data name="Profile Information" xml:space="preserve">
+    <value>Profiloplysninger</value>
+  </data>
+  <data name="Enter your display name" xml:space="preserve">
+    <value>Indtast dit visningsnavn</value>
+  </data>
+  <data name="This name will be displayed publicly across the application." xml:space="preserve">
+    <value>Dette navn vil blive vist offentligt i hele applikationen.</value>
+  </data>
 
 </root>

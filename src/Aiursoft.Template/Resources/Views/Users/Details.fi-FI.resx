@@ -60,5 +60,8 @@
   <data name="User name" xml:space="preserve">
     <value>Käyttäjätunnus</value>
   </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Vaikuttavat käyttöoikeudet</value>
+  </data>
 
 </root>

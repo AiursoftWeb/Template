@@ -60,5 +60,8 @@
   <data name="User name" xml:space="preserve">
     <value>Ім&apos;я користувача</value>
   </data>
+  <data name="Effective Permissions" xml:space="preserve">
+    <value>Ефективні дозволи</value>
+  </data>
 
 </root>

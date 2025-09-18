@@ -48,5 +48,20 @@
   <data name="User name" xml:space="preserve">
     <value>사용자 이름</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>확실합니까?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>사용자 삭제</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>예, 이 사용자를 삭제합니다</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>이 작업은 되돌릴 수 없습니다. 다음 사용자와 관련된 모든 데이터를 영구적으로 삭제하려고 합니다:</value>
+  </data>
 
 </root>

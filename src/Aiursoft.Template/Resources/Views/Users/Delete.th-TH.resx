@@ -48,5 +48,20 @@
   <data name="User name" xml:space="preserve">
     <value>ชื่อผู้ใช้</value>
   </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ลบผู้ใช้</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>คุณแน่ใจหรือไม่?</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>การดำเนินการนี้ไม่สามารถย้อนกลับได้ คุณกำลังจะลบผู้ใช้รายต่อไปนี้และข้อมูลที่เกี่ยวข้องทั้งหมดอย่างถาวร:</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>ใช่ ลบผู้ใช้นี้</value>
+  </data>
 
 </root>

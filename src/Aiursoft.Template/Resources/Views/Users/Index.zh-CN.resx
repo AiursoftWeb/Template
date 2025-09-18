@@ -45,5 +45,11 @@
   <data name="Name" xml:space="preserve">
     <value>姓名</value>
   </data>
+  <data name="A list of all user accounts registered in the system." xml:space="preserve">
+    <value>系统中所有已注册用户账户的列表。</value>
+  </data>
+  <data name="All Users" xml:space="preserve">
+    <value>所有用户</value>
+  </data>
 
 </root>

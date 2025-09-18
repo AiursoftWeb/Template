@@ -48,5 +48,23 @@
   <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
     <value>このユーザーアカウントはOpenID Connect（OIDC）プロバイダーと同期されています。ここで行われた変更（表示名やメールアドレスなど）は、次のデータ同期時に上書きされる可能性があります。恒久的な変更を行うには、OIDCプロバイダー上で直接ユーザーのプロファイルを更新してください。</value>
   </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>メールアドレス</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>表示名</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="View Details" xml:space="preserve">
+    <value>詳細を表示</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>新しいパスワード</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>パスワードを変更しない場合は空欄のままにしてください。</value>
+  </data>
 
 </root>

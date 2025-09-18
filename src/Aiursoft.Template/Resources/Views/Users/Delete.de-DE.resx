@@ -48,5 +48,20 @@
   <data name="Creation Time" xml:space="preserve">
     <value>Erstellungszeit</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Are you sure?" xml:space="preserve">
+    <value>Sind Sie sicher?</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Benutzer löschen</value>
+  </data>
+  <data name="Yes, delete this user" xml:space="preserve">
+    <value>Ja, diesen Benutzer löschen</value>
+  </data>
+  <data name="This action is irreversible. You are about to permanently delete the following user and all their associated data:" xml:space="preserve">
+    <value>Diese Aktion ist unwiderruflich. Sie sind dabei, den folgenden Benutzer und alle damit verbundenen Daten dauerhaft zu löschen:</value>
+  </data>
 
 </root>

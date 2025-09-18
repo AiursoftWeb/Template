@@ -33,5 +33,14 @@
   <data name="Please contact the administrator for help." xml:space="preserve">
     <value>Lütfen yardım için yönetici ile iletişime geçin.</value>
   </data>
+  <data name="An Error Occurred" xml:space="preserve">
+    <value>Bir Hata Oluştu</value>
+  </data>
+  <data name="We&apos;re sorry, something went wrong while processing your request." xml:space="preserve">
+    <value>Üzgünüz, isteğiniz işlenirken bir sorun oluştu.</value>
+  </data>
+  <data name="Please try again later or contact support if the problem persists." xml:space="preserve">
+    <value>Lütfen daha sonra tekrar deneyin veya sorun devam ederse destek ekibiyle iletişime geçin.</value>
+  </data>
 
 </root>

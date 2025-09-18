@@ -48,5 +48,23 @@
   <data name="This user account is synchronized with an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the display name or email) may be overwritten during the next data sync. For permanent changes, please update the user&apos;s profile directly on your OIDC provider." xml:space="preserve">
     <value>บัญชีผู้ใช้นี้ถูกซิงโครไนซ์กับผู้ให้บริการ OpenID Connect (OIDC) การแก้ไขใด ๆ ที่ทำที่นี่ (เช่น ชื่อที่แสดงหรืออีเมล) อาจถูกเขียนทับระหว่างการซิงค์ข้อมูลครั้งถัดไป สำหรับการเปลี่ยนแปลงอย่างถาวร โปรดอัปเดตโปรไฟล์ผู้ใช้โดยตรงบนผู้ให้บริการ OIDC ของคุณ</value>
   </data>
+  <data name="View Details" xml:space="preserve">
+    <value>ดูรายละเอียด</value>
+  </data>
+  <data name="Display Name" xml:space="preserve">
+    <value>ชื่อที่แสดง</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ชื่อผู้ใช้</value>
+  </data>
+  <data name="New Password" xml:space="preserve">
+    <value>รหัสผ่านใหม่</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>ที่อยู่อีเมล</value>
+  </data>
+  <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
+    <value>หากไม่ต้องการเปลี่ยนรหัสผ่าน ให้ปล่อยว่างไว้</value>
+  </data>
 
 </root>

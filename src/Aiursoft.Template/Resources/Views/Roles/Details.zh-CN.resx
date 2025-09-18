@@ -48,5 +48,14 @@
   <data name="Back to Roles List" xml:space="preserve">
     <value>返回角色列表</value>
   </data>
+  <data name="Permissions Granted" xml:space="preserve">
+    <value>已授予权限</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="Assigned Users" xml:space="preserve">
+    <value>已分配用户</value>
+  </data>
 
 </root>
