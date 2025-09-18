@@ -30,6 +30,7 @@ public class ManageController(
     public IActionResult Index(ManageMessageId? message = null)
     {
         ViewData["StatusMessage"] =
+            message == ManageMessageId.ChangeProfileSuccess ? localizer["Your profile has been saved."] :
             message == ManageMessageId.ChangeAvatarSuccess ? localizer["Your avatar has been saved."] :
             message == ManageMessageId.ChangePasswordSuccess ? localizer["Your password has been changed."] :
             message == ManageMessageId.Error ? localizer["An error has occurred."]
@@ -77,6 +78,39 @@ public class ManageController(
             }
             AddErrors(result);
             return this.StackView(model);
+        }
+        return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
+    }
+
+    //
+    // GET: /Manage/ChangeProfile
+    [HttpGet]
+    public async Task<IActionResult> ChangeProfile()
+    {
+        var user = await GetCurrentUserAsync();
+        return this.StackView(new ChangeProfileViewModel
+        {
+            Name = user!.DisplayName
+        });
+    }
+
+    //
+    // POST: /Manage/ChangeProfile
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ChangeProfile(ChangeProfileViewModel model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return this.StackView(model);
+        }
+
+        var user = await GetCurrentUserAsync();
+        if (user != null)
+        {
+            user.DisplayName = model.Name;
+            await userManager.UpdateAsync(user);
+            return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangeProfileSuccess });
         }
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
     }
@@ -141,6 +175,7 @@ public class ManageController(
     {
         ChangeAvatarSuccess,
         ChangePasswordSuccess,
+        ChangeProfileSuccess,
         Error
     }
 

@@ -30,5 +30,8 @@
   <data name="The file is not a valid image." xml:space="preserve">
     <value>Het bestand is geen geldige afbeelding.</value>
   </data>
+  <data name="Your profile has been saved." xml:space="preserve">
+    <value>Uw profiel is opgeslagen.</value>
+  </data>
 
 </root>

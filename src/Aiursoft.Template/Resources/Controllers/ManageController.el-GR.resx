@@ -30,5 +30,8 @@
   <data name="The file is not a valid image." xml:space="preserve">
     <value>Το αρχείο δεν είναι έγκυρη εικόνα.</value>
   </data>
+  <data name="Your profile has been saved." xml:space="preserve">
+    <value>Το προφίλ σας αποθηκεύτηκε.</value>
+  </data>
 
 </root>

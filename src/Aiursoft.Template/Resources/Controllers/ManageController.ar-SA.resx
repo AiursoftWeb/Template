@@ -30,5 +30,8 @@
   <data name="The file is not a valid image." xml:space="preserve">
     <value>الملف ليس صورة صالحة.</value>
   </data>
+  <data name="Your profile has been saved." xml:space="preserve">
+    <value>تم حفظ ملفك الشخصي.</value>
+  </data>
 
 </root>

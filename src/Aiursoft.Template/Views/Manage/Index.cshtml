@@ -28,6 +28,11 @@
         </dd>
         @if (AppSettings.Value.LocalEnabled)
         {
+            <dt>@Localizer["Profile"]</dt>
+            <dd>
+                <a asp-controller="Manage" asp-action="ChangeProfile" class="btn-bracketed">@Localizer["Change your profile"]</a>
+            </dd>
+
             <dt>@Localizer["Password"]</dt>
             <dd>
                 <a asp-controller="Manage" asp-action="ChangePassword" class="btn-bracketed">@Localizer["Change your password"]</a>

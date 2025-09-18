@@ -42,5 +42,11 @@
   <data name="Success!" xml:space="preserve">
     <value>สำเร็จ!</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>โปรไฟล์</value>
+  </data>
+  <data name="Change your profile" xml:space="preserve">
+    <value>เปลี่ยนโปรไฟล์ของคุณ</value>
+  </data>
 
 </root>

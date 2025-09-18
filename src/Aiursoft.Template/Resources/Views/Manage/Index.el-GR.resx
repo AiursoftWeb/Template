@@ -42,5 +42,11 @@
   <data name="Success!" xml:space="preserve">
     <value>Επιτυχία!</value>
   </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Προφίλ</value>
+  </data>
+  <data name="Change your profile" xml:space="preserve">
+    <value>Αλλαγή του προφίλ σας</value>
+  </data>
 
 </root>

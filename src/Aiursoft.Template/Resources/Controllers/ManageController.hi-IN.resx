@@ -30,5 +30,8 @@
   <data name="The file is not a valid image." xml:space="preserve">
     <value>यह फ़ाइल एक वैध छवि नहीं है।</value>
   </data>
+  <data name="Your profile has been saved." xml:space="preserve">
+    <value>आपकी प्रोफ़ाइल सहेज ली गई है।</value>
+  </data>
 
 </root>

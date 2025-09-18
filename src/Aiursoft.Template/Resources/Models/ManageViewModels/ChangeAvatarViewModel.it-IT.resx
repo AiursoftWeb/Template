@@ -27,5 +27,11 @@
   <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
     <value>Il file dell&apos;avatar non è valido. Caricalo nuovamente.</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="The name is required." xml:space="preserve">
+    <value>Il nome è obbligatorio.</value>
+  </data>
 
 </root>

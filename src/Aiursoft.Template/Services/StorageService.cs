@@ -87,4 +87,9 @@ public class StorageService(IConfiguration configuration) : ISingletonDependency
     {
         return $"{context.Request.Scheme}://{context.Request.Host}/download/{RelativePathToUriPath(relativePath)}";
     }
+
+    public string RelativePathToInternetUrl(string relativePath)
+    {
+        return $"/download/{RelativePathToUriPath(relativePath)}";
+    }
 }
