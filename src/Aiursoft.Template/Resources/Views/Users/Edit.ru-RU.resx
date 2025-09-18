@@ -66,5 +66,8 @@
   <data name="Username" xml:space="preserve">
     <value>Имя пользователя</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Назад к списку</value>
+  </data>
 
 </root>

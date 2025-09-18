@@ -114,5 +114,14 @@
   <data name="Create User" xml:space="preserve">
     <value>Gebruiker aanmaken</value>
   </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Persoonlijk</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Profielinstellingen</value>
+  </data>
 
 </root>

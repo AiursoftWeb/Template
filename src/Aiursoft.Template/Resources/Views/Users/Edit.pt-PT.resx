@@ -66,5 +66,8 @@
   <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
     <value>Deixe em branco se não pretender alterar a palavra-passe.</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Voltar à Lista</value>
+  </data>
 
 </root>

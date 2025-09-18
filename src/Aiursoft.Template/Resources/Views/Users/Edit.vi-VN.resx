@@ -66,5 +66,8 @@
   <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
     <value>Để trống nếu bạn không muốn thay đổi mật khẩu.</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Quay lại Danh sách</value>
+  </data>
 
 </root>

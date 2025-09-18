@@ -114,5 +114,14 @@
   <data name="Change Password" xml:space="preserve">
     <value>Şifre Değiştir</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Kişisel</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Profil Ayarları</value>
+  </data>
 
 </root>

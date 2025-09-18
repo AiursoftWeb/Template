@@ -66,5 +66,8 @@
   <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
     <value>비밀번호를 변경하지 않으려면 비워두세요.</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>목록으로 돌아가기</value>
+  </data>
 
 </root>

@@ -111,5 +111,20 @@
   <data name="Change Profile" xml:space="preserve">
     <value>更改個人資料</value>
   </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>更改密碼</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>個人</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>帳戶設定</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>檔案設定</value>
+  </data>
 
 </root>

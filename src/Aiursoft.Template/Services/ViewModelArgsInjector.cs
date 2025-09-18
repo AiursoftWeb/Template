@@ -57,6 +57,9 @@ public class ViewModelArgsInjector(
         _ = localizer["Change Avatar"];
         _ = localizer["Change Password"];
         _ = localizer["Home"];
+        _ = localizer["Settings"];
+        _ = localizer["Profile Settings"];
+        _ = localizer["Personal"];
     }
 
     public void Inject(

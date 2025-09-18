@@ -66,5 +66,8 @@
   <data name="Display Name" xml:space="preserve">
     <value>Wyświetlana nazwa</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Powrót do listy</value>
+  </data>
 
 </root>

@@ -114,5 +114,17 @@
   <data name="Change Password" xml:space="preserve">
     <value>パスワードの変更</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>個人</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>アカウント設定</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>プロフィール設定</value>
+  </data>
 
 </root>

@@ -114,5 +114,17 @@
   <data name="Change Avatar" xml:space="preserve">
     <value>Changer l&apos;avatar</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personnel</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Paramètres du compte</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Paramètres du profil</value>
+  </data>
 
 </root>

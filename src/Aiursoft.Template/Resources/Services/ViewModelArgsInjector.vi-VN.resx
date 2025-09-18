@@ -114,5 +114,17 @@
   <data name="Change Password" xml:space="preserve">
     <value>Đổi Mật khẩu</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Cá nhân</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Cài đặt Tài khoản</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Cài đặt Hồ sơ</value>
+  </data>
 
 </root>

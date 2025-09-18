@@ -114,5 +114,17 @@
   <data name="Change Profile" xml:space="preserve">
     <value>เปลี่ยนโปรไฟล์</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>การตั้งค่า</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>ส่วนตัว</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>การตั้งค่าบัญชี</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>การตั้งค่าโปรไฟล์</value>
+  </data>
 
 </root>

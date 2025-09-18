@@ -66,5 +66,8 @@
   <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
     <value>Αφήστε το κενό αν δεν θέλετε να αλλάξετε τον κωδικό πρόσβασης.</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Πίσω στη Λίστα</value>
+  </data>
 
 </root>

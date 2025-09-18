@@ -114,5 +114,14 @@
   <data name="Change Password" xml:space="preserve">
     <value>Schimbare parolă</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Setări Profil</value>
+  </data>
 
 </root>

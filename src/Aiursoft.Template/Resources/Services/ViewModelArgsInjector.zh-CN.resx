@@ -105,5 +105,26 @@
   <data name="Delete Role" xml:space="preserve">
     <value>删除角色</value>
   </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>更换头像</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>修改个人资料</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>修改密码</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>个人</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>账户设置</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>资料设置</value>
+  </data>
 
 </root>

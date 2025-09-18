@@ -66,5 +66,8 @@
   <data name="Leave blank if you don&apos;t want to change the password." xml:space="preserve">
     <value>Biarkan kosong jika Anda tidak ingin mengubah kata sandi.</value>
   </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>Kembali ke Daftar</value>
+  </data>
 
 </root>

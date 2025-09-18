@@ -2,6 +2,7 @@ using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.ManageViewModels;
 using Aiursoft.Template.Services;
+using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,14 @@ public class ManageController(
 {
     //
     // GET: /Manage/Index
+    [RenderInNavBar(
+        NavGroupName = "Settings",
+        NavGroupOrder = 9998,
+        CascadedLinksGroupName = "Personal",
+        CascadedLinksIcon = "user-circle",
+        CascadedLinksOrder = 1,
+        LinkText = "Profile Settings",
+        LinkOrder = 3)]
     [HttpGet]
     public IActionResult Index(ManageMessageId? message = null)
     {

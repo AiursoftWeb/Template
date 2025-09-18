@@ -114,5 +114,17 @@
   <data name="Change Profile" xml:space="preserve">
     <value>Profil ändern</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Persönlich</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Kontoeinstellungen</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Profileinstellungen</value>
+  </data>
 
 </root>

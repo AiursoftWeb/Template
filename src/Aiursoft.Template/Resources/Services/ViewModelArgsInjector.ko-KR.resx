@@ -114,5 +114,17 @@
   <data name="Delete Role" xml:space="preserve">
     <value>역할 삭제</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>개인</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>계정 설정</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>프로필 설정</value>
+  </data>
 
 </root>

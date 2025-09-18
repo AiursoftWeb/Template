@@ -114,5 +114,14 @@
   <data name="Edit Role" xml:space="preserve">
     <value>भूमिका संपादित करें</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>सेटिंग्स</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>व्यक्तिगत</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>प्रोफ़ाइल सेटिंग्स</value>
+  </data>
 
 </root>

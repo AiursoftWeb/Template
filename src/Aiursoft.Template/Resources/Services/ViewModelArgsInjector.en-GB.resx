@@ -105,5 +105,26 @@
   <data name="Delete Role" xml:space="preserve">
     <value>Delete Role</value>
   </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Change Profile Picture</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Change Profile</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="Account Settings" xml:space="preserve">
+    <value>Account Settings</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Profile Settings</value>
+  </data>
 
 </root>

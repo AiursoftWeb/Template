@@ -114,5 +114,14 @@
   <data name="User Details" xml:space="preserve">
     <value>Szczegóły użytkownika</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="Personal" xml:space="preserve">
+    <value>Osobiste</value>
+  </data>
+  <data name="Profile Settings" xml:space="preserve">
+    <value>Ustawienia profilu</value>
+  </data>
 
 </root>
