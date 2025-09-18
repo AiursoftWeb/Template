@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Nhấp để đăng nhập</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Tạo Người Dùng</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Xóa Người Dùng</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Tạo Vai Trò</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Thông tin người dùng</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Thông tin Hệ thống</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Chi tiết Vai trò</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Chỉnh sửa Người dùng</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Chỉnh sửa Vai trò</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Xóa Vai trò</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Thay đổi Hồ sơ</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Thay đổi Ảnh đại diện</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Đổi Mật khẩu</value>
+  </data>
 
 </root>

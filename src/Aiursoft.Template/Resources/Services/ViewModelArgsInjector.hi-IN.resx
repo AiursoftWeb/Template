@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>लॉगिन करने के लिए क्लिक करें</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>प्रबंधित करें</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>सिस्टम जानकारी</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>उपयोगकर्ता संपादित करें</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>भूमिका विवरण</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>भूमिका बनाएं</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>उपयोगकर्ता विवरण</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>उपयोगकर्ता हटाएं</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>उपयोगकर्ता बनाएं</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>प्रोफ़ाइल बदलें</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>रोल हटाएं</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>अवतार बदलें</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>पासवर्ड बदलें</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>भूमिका संपादित करें</value>
+  </data>
 
 </root>

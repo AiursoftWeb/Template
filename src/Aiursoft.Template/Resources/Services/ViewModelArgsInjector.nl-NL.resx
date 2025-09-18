@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klik om in te loggen</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Beheren</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Rol bewerken</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Systeeminformatie</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Gebruiker verwijderen</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Gebruiker bewerken</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Rol verwijderen</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Rol aanmaken</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Wachtwoord wijzigen</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Avatar wijzigen</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rolgegevens</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Profiel wijzigen</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Gebruikersgegevens</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Gebruiker aanmaken</value>
+  </data>
 
 </root>

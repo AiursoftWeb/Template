@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Giriş yapmak için tıklayın</value>
   </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Rolü Sil</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Sistem Bilgisi</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Yönet</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Rol Oluştur</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Rolü Düzenle</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Kullanıcıyı Sil</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Kullanıcı Oluştur</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Kullanıcıyı Düzenle</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Profil Değiştir</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rol Detayları</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Profil Resmini Değiştir</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Kullanıcı Detayları</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Şifre Değiştir</value>
+  </data>
 
 </root>

@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Kliknij, aby się zalogować</value>
   </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informacje o systemie</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Usuń użytkownika</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Usuń rolę</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Edytuj rolę</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Utwórz rolę</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Zarządzaj</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Edytuj użytkownika</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Utwórz użytkownika</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Szczegóły roli</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Zmień Profil</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Zmień hasło</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Zmień awatar</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Szczegóły użytkownika</value>
+  </data>
 
 </root>

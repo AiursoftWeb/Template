@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>ログインするにはクリック</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>ロールの作成</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>システム情報</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>ロールを編集</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>ユーザー編集</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>ユーザー詳細</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>ロール詳細</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ユーザーを削除</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>ユーザーを作成</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>プロフィール変更</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>ロールを削除</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>アバターを変更</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>パスワードの変更</value>
+  </data>
 
 </root>

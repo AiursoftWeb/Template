@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klikkaa kirjautuaksesi</value>
   </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Roolin tiedot</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Poista käyttäjä</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Luo rooli</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Hallinnoi</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Muokkaa käyttäjää</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Käyttäjän tiedot</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Luo käyttäjä</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Järjestelmän tiedot</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Muokkaa roolia</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Poista rooli</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Muokkaa profiilia</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Vaihda avataria</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Vaihda salasana</value>
+  </data>
 
 </root>

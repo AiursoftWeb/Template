@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>انقر لتسجيل الدخول</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>إدارة</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>حذف الدور</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>حذف المستخدم</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>معلومات النظام</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>تعديل الدور</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>تعديل المستخدم</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>إنشاء مستخدم</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>تفاصيل الدور</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>إنشاء دور</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>تغيير الصورة الشخصية</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>تغيير الملف الشخصي</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>تفاصيل المستخدم</value>
+  </data>
 
 </root>

@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Apasă pentru a te autentifica</value>
   </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informații despre Sistem</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Creează Rol</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Șterge utilizator</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Detalii Utilizator</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Editează Utilizator</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Gestionează</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Creează utilizator</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Editează Rol</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Șterge Rol</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Detalii Rol</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Modifică Profilul</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Schimbă Avatarul</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Schimbare parolă</value>
+  </data>
 
 </root>

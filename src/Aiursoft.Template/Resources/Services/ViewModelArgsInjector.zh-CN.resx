@@ -75,5 +75,35 @@
   <data name="Click to login" xml:space="preserve">
     <value>点击登录</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>编辑用户</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>编辑角色</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>系统信息</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>用户详情</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>创建用户</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>删除用户</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>角色详情</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>创建角色</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>删除角色</value>
+  </data>
 
 </root>

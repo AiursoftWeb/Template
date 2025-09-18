@@ -33,6 +33,7 @@ public class ViewModelArgsInjector(
     // ReSharper disable once UnusedMember.Local
     private void _useless_for_localizer()
     {
+        // Titles, navbar strings.
         _ = localizer["Features"];
         _ = localizer["Index"];
         _ = localizer["Directory"];
@@ -41,6 +42,21 @@ public class ViewModelArgsInjector(
         _ = localizer["Administration"];
         _ = localizer["System"];
         _ = localizer["Info"];
+        _ = localizer["Manage"];
+        _ = localizer["Login"];
+        _ = localizer["System Info"];
+        _ = localizer["Create User"];
+        _ = localizer["User Details"];
+        _ = localizer["Edit User"];
+        _ = localizer["Delete User"];
+        _ = localizer["Create Role"];
+        _ = localizer["Role Details"];
+        _ = localizer["Edit Role"];
+        _ = localizer["Delete Role"];
+        _ = localizer["Change Profile"];
+        _ = localizer["Change Avatar"];
+        _ = localizer["Change Password"];
+        _ = localizer["Home"];
     }
 
     public void Inject(
@@ -48,6 +64,7 @@ public class ViewModelArgsInjector(
         UiStackLayoutViewModel toInject)
     {
         var preferDarkTheme = context.Request.Cookies[ThemeController.ThemeCookieKey] == true.ToString();
+        toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
         toInject.AppName = localizer["Template"];
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
         toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;

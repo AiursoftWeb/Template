@@ -75,5 +75,35 @@
   <data name="Click to login" xml:space="preserve">
     <value>Click to log in</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Edit Role</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Role Details</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Create Role</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>System Information</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Delete Role</value>
+  </data>
 
 </root>

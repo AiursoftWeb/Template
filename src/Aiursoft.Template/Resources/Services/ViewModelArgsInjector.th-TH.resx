@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>คลิกเพื่อเข้าสู่ระบบ</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>จัดการ</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>ข้อมูลระบบ</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>แก้ไขผู้ใช้</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>สร้างผู้ใช้</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>ลบผู้ใช้</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>แก้ไขบทบาท</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>สร้างบทบาท</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>รายละเอียดบทบาท</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>รายละเอียดผู้ใช้</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>ลบบทบาท</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>เปลี่ยนรูปโปรไฟล์</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>เปลี่ยนรหัสผ่าน</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>เปลี่ยนโปรไฟล์</value>
+  </data>
 
 </root>

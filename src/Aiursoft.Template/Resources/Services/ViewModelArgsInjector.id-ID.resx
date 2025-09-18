@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klik untuk masuk</value>
   </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Informasi Sistem</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Kelola</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Detail Pengguna</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Edit Pengguna</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Buat Pengguna</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Detail Peran</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Buat Peran</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Hapus Pengguna</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Ubah Kata Sandi</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Ubah Profil</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Ubah Avatar</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Hapus Peran</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Edit Peran</value>
+  </data>
 
 </root>

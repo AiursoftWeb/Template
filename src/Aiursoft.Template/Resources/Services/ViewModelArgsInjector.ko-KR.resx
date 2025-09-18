@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>로그인하려면 클릭</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>관리</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>사용자 생성</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>사용자 편집</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>역할 편집</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>역할 생성</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>사용자 세부 정보</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>역할 상세 정보</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>사용자 삭제</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>시스템 정보</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>비밀번호 변경</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>아바타 변경</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>프로필 변경</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>역할 삭제</value>
+  </data>
 
 </root>

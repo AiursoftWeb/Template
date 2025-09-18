@@ -75,5 +75,41 @@
   <data name="Click to login" xml:space="preserve">
     <value>點擊登入</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>系統資訊</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>建立角色</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>角色詳情</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>刪除用戶</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>建立用戶</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>用戶詳情</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>編輯角色</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>編輯用戶</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>更改頭像</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>刪除角色</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>更改個人資料</value>
+  </data>
 
 </root>

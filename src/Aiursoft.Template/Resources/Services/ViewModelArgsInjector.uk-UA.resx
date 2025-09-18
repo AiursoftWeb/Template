@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Натисніть, щоб увійти</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Керування</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Деталі користувача</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Видалити користувача</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Створити роль</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Редагувати користувача</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Інформація про систему</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Створити користувача</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Деталі ролі</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Редагувати роль</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Видалити роль</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Змінити профіль</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Змінити пароль</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Змінити аватар</value>
+  </data>
 
 </root>

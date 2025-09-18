@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Κάντε κλικ για σύνδεση</value>
   </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Διαχείριση</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Διαγραφή Χρήστη</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Στοιχεία Χρήστη</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Πληροφορίες Συστήματος</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Επεξεργασία Χρήστη</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Δημιουργία Χρήστη</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Λεπτομέρειες Ρόλου</value>
+  </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Δημιουργία Ρόλου</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Επεξεργασία Ρόλου</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Αλλαγή Προφίλ</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Αλλαγή Avatar</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Αλλαγή Κωδικού Πρόσβασης</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Διαγραφή Ρόλου</value>
+  </data>
 
 </root>

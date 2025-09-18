@@ -75,5 +75,44 @@
   <data name="Click to login" xml:space="preserve">
     <value>Klicka för att logga in</value>
   </data>
+  <data name="Create Role" xml:space="preserve">
+    <value>Skapa roll</value>
+  </data>
+  <data name="System Info" xml:space="preserve">
+    <value>Systeminformation</value>
+  </data>
+  <data name="Manage" xml:space="preserve">
+    <value>Hantera</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>Redigera användare</value>
+  </data>
+  <data name="Create User" xml:space="preserve">
+    <value>Skapa användare</value>
+  </data>
+  <data name="Edit Role" xml:space="preserve">
+    <value>Redigera roll</value>
+  </data>
+  <data name="Delete User" xml:space="preserve">
+    <value>Ta bort användare</value>
+  </data>
+  <data name="Delete Role" xml:space="preserve">
+    <value>Ta bort roll</value>
+  </data>
+  <data name="Role Details" xml:space="preserve">
+    <value>Rollinformation</value>
+  </data>
+  <data name="Change Avatar" xml:space="preserve">
+    <value>Byt avatar</value>
+  </data>
+  <data name="User Details" xml:space="preserve">
+    <value>Användardetaljer</value>
+  </data>
+  <data name="Change Password" xml:space="preserve">
+    <value>Ändra lösenord</value>
+  </data>
+  <data name="Change Profile" xml:space="preserve">
+    <value>Ändra profil</value>
+  </data>
 
 </root>
