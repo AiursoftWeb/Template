@@ -110,6 +110,7 @@ public class ManageController(
         {
             user.DisplayName = model.Name;
             await userManager.UpdateAsync(user);
+            await signInManager.SignInAsync(user, isPersistent: false);
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangeProfileSuccess });
         }
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });

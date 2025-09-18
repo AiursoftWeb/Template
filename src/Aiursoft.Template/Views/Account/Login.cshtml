@@ -3,44 +3,49 @@
 @using Microsoft.Extensions.Options
 @model Aiursoft.Template.Models.AccountViewModels.LoginViewModel
 
-<h2>@Localizer["Login"]</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section>
-            <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post"
-                  class="form-horizontal">
-                <h4>@Localizer["Use a local account to log in."]</h4>
-                <hr/>
-                <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="EmailOrUserName" class="col-md-2 control-label"></label>
-                    <div class="col-md-10">
-                        <input asp-for="EmailOrUserName" class="form-control"/>
+<div class="row justify-content-center">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="m-sm-3 text-center">
+                    <h1 class="h2">@Localizer["Welcome back!"]</h1>
+                    <p class="lead">
+                        @Localizer["Sign in to your account to continue"]
+                    </p>
+                </div>
+
+                <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+
+                    @* Validation summary is preserved and placed logically at the top of the form *@
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        @* The 'asp-for' tag links the label to the input, and we explicitly localize the visible text. *@
+                        <label asp-for="EmailOrUserName" class="form-label">@Localizer["Email or Username"]</label>
+                        <input asp-for="EmailOrUserName" class="form-control form-control-lg" placeholder="@Localizer["Enter your email or username"]" />
                         <span asp-validation-for="EmailOrUserName" class="text-danger"></span>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Password" class="col-md-2 control-label"></label>
-                    <div class="col-md-10">
-                        <input asp-for="Password" class="form-control"/>
+
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">@Localizer["Password"]</label>
+                        <input asp-for="Password" class="form-control form-control-lg" placeholder="@Localizer["Enter your password"]" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10 mt-3">
-                        <button type="submit" class="btn btn-secondary">@Localizer["Login"]</button>
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-lg btn-primary">@Localizer["Login"]</button>
                     </div>
-                </div>
+                </form>
 
+                @* The conditional register link is preserved and restyled *@
                 @if (AppSettings.Value.Local.AllowRegister)
                 {
-                    <p>
-                        <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@Localizer["Register as a new user"]</a>
-                    </p>
+                    <div class="text-center mt-3">
+                        @Localizer["Don't have an account?"] <a asp-action="Register" asp-route-returnurl="@ViewData["ReturnUrl"]">@Localizer["Sign up"]</a>
+                    </div>
                 }
-            </form>
-        </section>
+            </div>
+        </div>
     </div>
 </div>
-
