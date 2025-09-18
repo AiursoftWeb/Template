@@ -79,7 +79,7 @@ public class AccountController(
             {
                 logger.LogWarning(2, "User account locked out");
                 ModelState.AddModelError(string.Empty, localizer["This account has been locked out, please try again later."]);
-                return this.StackView(new LockoutViewModel());
+                return this.StackView(new LockoutViewModel(), "Lockout");
             }
 
             ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);

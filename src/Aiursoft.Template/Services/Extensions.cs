@@ -22,7 +22,7 @@ public static class Extensions
         var services = controller.HttpContext.RequestServices;
         var injector = services.GetRequiredService<ViewModelArgsInjector>();
         injector.Inject(controller.HttpContext, model);
-        return controller.View(model);
+        return controller.View(viewName, model);
     }
 
     private static (string etag, long length) GetFileHttpProperties(string path)
