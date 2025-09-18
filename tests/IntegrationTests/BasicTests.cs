@@ -254,7 +254,7 @@ public class BasicTests
         await _http.PostAsync("/Account/LogOff", logOffContent);
 
         // Step 2: Attempt to log in with the wrong password multiple times to trigger lockout.
-        HttpResponseMessage? loginResponse = null;
+        HttpResponseMessage loginResponse = null!;
         for (int i = 0; i < maxFailedAccessAttempts; i++)
         {
             var loginToken = await GetAntiCsrfToken("/Account/Login");
@@ -268,7 +268,6 @@ public class BasicTests
         }
 
         // Step 3: Assert that the account is now locked.
-        Assert.IsNotNull(loginResponse);
         Assert.AreEqual(HttpStatusCode.OK, loginResponse.StatusCode);
         var html = await loginResponse.Content.ReadAsStringAsync();
         Assert.IsTrue(html.Contains("This account has been locked out, please try again later."));
