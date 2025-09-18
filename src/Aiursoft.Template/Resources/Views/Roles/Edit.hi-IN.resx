@@ -33,5 +33,11 @@
   <data name="Manage Claims for this Role" xml:space="preserve">
     <value>इस भूमिका के लिए क्लेम प्रबंधित करें</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>चेतावनी!</value>
+  </data>
+  <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
+    <value>यह भूमिका एक OpenID Connect (OIDC) प्रदाता से सिंक्रोनाइज़ की गई है। यहाँ किए गए किसी भी संशोधन (जैसे, नाम में) से अगले डेटा सिंक के दौरान टकराव हो सकता है। स्थायी परिवर्तनों के लिए, कृपया अपने OIDC प्रदाता पर सीधे भूमिका को अपडेट करें।</value>
+  </data>
 
 </root>

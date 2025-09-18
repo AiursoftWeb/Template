@@ -1,12 +1,28 @@
 @using Aiursoft.Template.Authorization
+@using Aiursoft.Template.Configuration
 @using Microsoft.Extensions.Localization
+@using Microsoft.Extensions.Options
 @model Aiursoft.Template.Models.RolesViewModels.EditViewModel
 @inject IStringLocalizer<AppPermissions> PermissionLocalizer
+@inject IOptions<AppSettings> AppSettings
 
 <h1>@Localizer["Edit"]</h1>
 
 <h4>@Localizer["Role"]</h4>
 <hr />
+@if (AppSettings.Value.OIDCEnabled)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="alert-icon">
+            <i class="far fa-fw fa-bell"></i>
+        </div>
+        <div class="alert-message">
+            <strong>@Localizer["Warning!"]</strong>
+            @Localizer["This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider."]
+        </div>
+    </div>
+}
 <div class="row">
     <div class="col-md-8">
         <form asp-action="Edit" asp-route-id="@Model.Id">

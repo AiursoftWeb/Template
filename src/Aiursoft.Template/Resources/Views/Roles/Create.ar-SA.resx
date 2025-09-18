@@ -27,5 +27,11 @@
   <data name="Role" xml:space="preserve">
     <value>الدور</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>تحذير!</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>تم تمكين OpenID Connect (OIDC). يتم مزامنة الأدوار من موفر هوية خارجي. نوصي بشدة بإنشاء أدوار أو مجموعات جديدة على موفر OIDC الخاص بك لضمان إدارتها مركزيًا. هذا النموذج سينشئ دورًا محليًا فقط موجودًا حصريًا داخل هذا التطبيق.</value>
+  </data>
 
 </root>

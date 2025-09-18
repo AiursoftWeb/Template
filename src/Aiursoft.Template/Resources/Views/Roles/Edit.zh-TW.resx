@@ -33,5 +33,11 @@
   <data name="Back to List" xml:space="preserve">
     <value>返回清單</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>警告！</value>
+  </data>
+  <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
+    <value>此角色是從 OpenID Connect (OIDC) 提供者同步而來。在此進行的任何修改（例如：名稱變更）可能會在下次資料同步時造成衝突。如需永久變更，請直接於您的 OIDC 提供者上更新角色設定。</value>
+  </data>
 
 </root>

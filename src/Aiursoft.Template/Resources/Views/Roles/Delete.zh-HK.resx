@@ -33,5 +33,11 @@
   <data name="Role name" xml:space="preserve">
     <value>角色名稱</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>警告！</value>
+  </data>
+  <data name="This role is managed by an OpenID Connect (OIDC) provider. Deleting the role here will only remove it from this application. The role will still exist on your OIDC provider and may reappear after the next sync or if the user logs in again. To permanently delete this role, you must remove them from your OIDC provider." xml:space="preserve">
+    <value>此角色由 OpenID Connect (OIDC) 供應商管理。在此刪除角色只會將其從此應用程式中移除。該角色仍會存在於你的 OIDC 供應商上，並可能在下次同步或使用者重新登入後再次出現。要永久刪除此角色，你必須從你的 OIDC 供應商處移除他們。</value>
+  </data>
 
 </root>

@@ -33,5 +33,11 @@
   <data name="Manage Claims for this Role" xml:space="preserve">
     <value>Керування претензіями для цієї ролі</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Увага!</value>
+  </data>
+  <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
+    <value>Ця роль синхронізована з провайдера OpenID Connect (OIDC). Будь-які зміни, внесені тут (наприклад, до назви), можуть спричинити конфлікти під час наступної синхронізації даних. Для постійних змін, будь ласка, оновіть роль безпосередньо у вашому провайдері OIDC.</value>
+  </data>
 
 </root>

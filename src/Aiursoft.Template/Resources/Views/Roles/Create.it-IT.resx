@@ -27,5 +27,11 @@
   <data name="Role" xml:space="preserve">
     <value>Ruolo</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Attenzione!</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>OpenID Connect (OIDC) è abilitato. I ruoli vengono sincronizzati da un provider di identità esterno. Consigliamo vivamente di creare nuovi ruoli o gruppi sul proprio provider OIDC per garantirne una gestione centralizzata. Questo modulo creerà un ruolo esclusivamente locale che esiste solo all&apos;interno di questa applicazione.</value>
+  </data>
 
 </root>

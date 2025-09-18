@@ -27,5 +27,11 @@
   <data name="Role" xml:space="preserve">
     <value>Роль</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Увага!</value>
+  </data>
+  <data name="OpenID Connect (OIDC) is enabled. Roles are synchronized from an external identity provider. We strongly recommend creating new roles or groups on your OIDC provider to ensure they are managed centrally. This form will create a local-only role that exists solely within this application." xml:space="preserve">
+    <value>Увімкнено OpenID Connect (OIDC). Ролі синхронізуються з зовнішнього провайдера ідентичності. Ми настійно рекомендуємо створювати нові ролі або групи у вашому провайдері OIDC, щоб забезпечити їх централізоване керування. Ця форма створить локальну роль, яка існуватиме виключно в межах цього додатку.</value>
+  </data>
 
 </root>

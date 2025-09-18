@@ -33,5 +33,11 @@
   <data name="Manage Claims for this Role" xml:space="preserve">
     <value>Kelola Klaim untuk Peran Ini</value>
   </data>
+  <data name="Warning!" xml:space="preserve">
+    <value>Peringatan!</value>
+  </data>
+  <data name="This role is synchronized from an OpenID Connect (OIDC) provider. Any modifications made here (e.g., to the name) may cause conflicts during the next data sync. For permanent changes, please update the role directly on your OIDC provider." xml:space="preserve">
+    <value>Peran ini disinkronkan dari penyedia OpenID Connect (OIDC). Modifikasi apa pun yang dibuat di sini (misalnya, pada nama) dapat menyebabkan konflik selama sinkronisasi data berikutnya. Untuk perubahan permanen, harap perbarui peran langsung di penyedia OIDC Anda.</value>
+  </data>
 
 </root>
