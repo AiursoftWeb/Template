@@ -5,7 +5,7 @@
   "author": "Anduin Xue",
   "license": "MIT",
   "dependencies": {
-    "@aiursoft/uistack": "^1.0.7",
+    "@aiursoft/uistack": "^1.0.8",
     "dropify": "^0.2.2"
   }
 }
