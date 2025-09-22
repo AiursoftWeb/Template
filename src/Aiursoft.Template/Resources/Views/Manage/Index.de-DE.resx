@@ -27,7 +27,7 @@
   <data name="Change your account settings" xml:space="preserve">
     <value>Ändern Sie Ihre Kontoeinstellungen</value>
   </data>
-  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Sie können Ihr Passwort nicht ändern, da die lokale Authentifizierung deaktiviert ist. Bitte bearbeiten Sie Ihr Profil über den Authentifizierungsanbieter.</value>
   </data>
   <data name="Password" xml:space="preserve">
@@ -47,6 +47,12 @@
   </data>
   <data name="Change your profile" xml:space="preserve">
     <value>Profil ändern</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>Authentifizierungsanbieter</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
+    <value>Sie können Ihr Passwort nicht ändern, da die lokale Authentifizierung deaktiviert ist. Bitte bearbeiten Sie Ihr Profil über den</value>
   </data>
 
 </root>

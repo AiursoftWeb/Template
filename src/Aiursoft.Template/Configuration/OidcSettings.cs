@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Aiursoft.Template.Configuration;
 
 public class OidcSettings
@@ -7,6 +9,24 @@ public class OidcSettings
     /// Example: "https://auth.aiursoft.cn" or "https://accounts.google.com"
     /// </summary>
     public required string Authority { get; init; } = "https://your-oidc-provider.com";
+
+    /// <summary>
+    /// Extracts the scheme and host from the Authority URL.
+    /// For example, if Authority is "https://auth.aiursoft.cn/something", this returns "https://auth.aiursoft.cn".
+    /// If the Authority format is invalid, it returns the original full string.
+    /// </summary>
+    /// <returns>The base URL of the authority.</returns>
+    public string GetAuthProviderHomePage()
+    {
+        // This regex pattern matches "http://" or "https://" at the start of the string,
+        // followed by any characters that are not a forward slash.
+        const string pattern = @"^https?:\/\/[^/]+";
+        var match = Regex.Match(Authority, pattern);
+
+        // If a match is found, return the matched part (e.g., "https://auth.aiursoft.cn").
+        // Otherwise, return the original Authority string as a fallback.
+        return match.Success ? match.Value : Authority;
+    }
 
     /// <summary>
     /// The Client ID of your application, obtained after registering your application with the OIDC provider.

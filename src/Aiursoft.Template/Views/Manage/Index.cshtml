@@ -61,7 +61,10 @@
             <div class="list-group-item">
                 <div class="d-flex align-items-center text-warning">
                     <i class="align-middle me-2" data-lucide="alert-triangle"></i>
-                    <span>@Localizer["You can't change your password becasue local authentication is disabled. Please edit your profile from the auth provider."]</span>
+                    <span>
+                        @Localizer["You can't change your password because local authentication is disabled. Please edit your profile from the"]
+                        <a href="@AppSettings.Value.OIDC.GetAuthProviderHomePage()">@Localizer["auth provider"]</a>.
+                    </span>
                 </div>
             </div>
         }

@@ -27,7 +27,7 @@
   <data name="Change your password" xml:space="preserve">
     <value>เปลี่ยนรหัสผ่านของคุณ</value>
   </data>
-  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>คุณไม่สามารถเปลี่ยนรหัสผ่านได้ เนื่องจากการยืนยันตัวตนภายในระบบถูกปิดใช้งาน กรุณาแก้ไขโปรไฟล์ของคุณจากผู้ให้บริการยืนยันตัวตน</value>
   </data>
   <data name="Password" xml:space="preserve">
@@ -47,6 +47,12 @@
   </data>
   <data name="Change your profile" xml:space="preserve">
     <value>เปลี่ยนโปรไฟล์ของคุณ</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>ผู้ให้บริการการรับรองความถูกต้อง</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
+    <value>คุณไม่สามารถเปลี่ยนรหัสผ่านได้ เนื่องจากการยืนยันตัวตนภายในระบบถูกปิดใช้งาน กรุณาแก้ไขโปรไฟล์ของคุณจาก</value>
   </data>
 
 </root>

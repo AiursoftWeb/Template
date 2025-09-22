@@ -27,7 +27,7 @@
   <data name="Change your password" xml:space="preserve">
     <value>更改密碼</value>
   </data>
-  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>由於本地驗證功能已被停用，您無法更改密碼。請透過驗證提供者編輯您的個人資料。</value>
   </data>
   <data name="Password" xml:space="preserve">
@@ -47,6 +47,12 @@
   </data>
   <data name="Profile" xml:space="preserve">
     <value>個人檔案</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>驗證服務提供者</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
+    <value>由於本地驗證功能已停用，您無法更改密碼。請從</value>
   </data>
 
 </root>

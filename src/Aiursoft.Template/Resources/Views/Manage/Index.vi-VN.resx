@@ -27,7 +27,7 @@
   <data name="Change your password" xml:space="preserve">
     <value>Thay đổi mật khẩu của bạn</value>
   </data>
-  <data name="You can&apos;t change your password becasue local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the auth provider." xml:space="preserve">
     <value>Bạn không thể thay đổi mật khẩu vì tính năng xác thực cục bộ đã bị vô hiệu hóa. Vui lòng chỉnh sửa hồ sơ của bạn từ nhà cung cấp xác thực.</value>
   </data>
   <data name="Password" xml:space="preserve">
@@ -47,6 +47,12 @@
   </data>
   <data name="Change your profile" xml:space="preserve">
     <value>Thay đổi hồ sơ của bạn</value>
+  </data>
+  <data name="auth provider" xml:space="preserve">
+    <value>nhà cung cấp xác thực</value>
+  </data>
+  <data name="You can&apos;t change your password because local authentication is disabled. Please edit your profile from the" xml:space="preserve">
+    <value>Bạn không thể thay đổi mật khẩu vì xác thực cục bộ đã bị vô hiệu hóa. Vui lòng chỉnh sửa hồ sơ của bạn từ</value>
   </data>
 
 </root>
