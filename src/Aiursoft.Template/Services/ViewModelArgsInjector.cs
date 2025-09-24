@@ -158,19 +158,23 @@ public class ViewModelArgsInjector(
         var currentCulture = context.Features
             .Get<IRequestCultureFeature>()?
             .RequestCulture.Culture.Name; // zh-CN
-        var suppportedCultures = WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures
+
+        // ReSharper disable once RedundantNameQualifier
+        var suppportedCultures = Aiursoft.WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures
             .Select(c => new LanguageSelection
             {
                 Link = $"/Culture/Set?culture={c.Key}&returnUrl={context.Request.Path}",
                 Name = c.Value // 中文 - 中国
             })
             .ToArray();
+
+        // ReSharper disable once RedundantNameQualifier
         toInject.Navbar.LanguagesDropdown = new LanguagesDropdownViewModel
         {
             Languages = suppportedCultures,
             SelectedLanguage = new LanguageSelection
             {
-                Name = WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures[currentCulture ?? "en-US"],
+                Name = Aiursoft.WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures[currentCulture ?? "en-US"],
                 Link = "#",
             }
         };
