@@ -28,7 +28,7 @@ public class RolesController(
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "Directory",
         CascadedLinksIcon = "users",
-        CascadedLinksOrder = 1,
+        CascadedLinksOrder = 9998,
         LinkText = "Roles",
         LinkOrder = 2)]
     public async Task<IActionResult> Index()

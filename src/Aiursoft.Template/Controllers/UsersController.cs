@@ -26,7 +26,7 @@ public class UsersController(
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "Directory",
         CascadedLinksIcon = "users",
-        CascadedLinksOrder = 1,
+        CascadedLinksOrder = 9998,
         LinkText = "Users",
         LinkOrder = 1)]
     public async Task<IActionResult> Index()

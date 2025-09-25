@@ -19,7 +19,7 @@ public class SystemController(ILogger<SystemController> logger) : Controller
         NavGroupOrder = 9999,
         CascadedLinksGroupName = "System",
         CascadedLinksIcon = "cog",
-        CascadedLinksOrder = 1,
+        CascadedLinksOrder = 9999,
         LinkText = "Info",
         LinkOrder = 1)]
     public IActionResult Index()
