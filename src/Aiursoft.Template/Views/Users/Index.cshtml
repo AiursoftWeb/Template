@@ -1,5 +1,6 @@
+@using Aiursoft.Template.Services
 @model Aiursoft.Template.Models.UsersViewModels.IndexViewModel
-
+@inject StorageService StorageService
 @* The page-specific style is preserved. *@
 <style>
     .clickable-row {
@@ -32,6 +33,7 @@
         <table class="table table-hover mb-0">
             <thead>
             <tr>
+                <th>@Localizer["Avatar"]</th>
                 <th>@Localizer["User name"]</th>
                 <th>@Localizer["Name"]</th>
                 <th>@Localizer["Email"]</th>
@@ -44,6 +46,9 @@
             {
                 @* The clickable-row class and data-href attribute are fully preserved. *@
                 <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
+                    <td>
+                        <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath)?w=72&square=true" alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
+                    </td>
                     <td>@item.User.UserName</td>
                     <td>@item.User.DisplayName</td>
                     <td>@item.User.Email</td>
@@ -62,7 +67,14 @@
                                 displayRoles = string.Join(", ", roles);
                             }
                         }
-                        @displayRoles
+                        @if (!string.IsNullOrWhiteSpace(displayRoles))
+                        {
+                            <label>@displayRoles</label>
+                        }
+                        else
+                        {
+                            <span class="text-muted">@Localizer["(no role assigned)"]</span>
+                        }
                     </td>
                     <td class="text-end">
                         <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">

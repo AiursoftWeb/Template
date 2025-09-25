@@ -105,5 +105,14 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>Tukee täysin Docker-ympäristöä, mikä helpottaa, tehostaa ja luotettavistaa käyttöönottoa.</value>
   </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Lue dokumentti</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Aloita uusi projekti</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Tämä on malliprojekti, josta aloitamme matkan...</value>
+  </data>
 
 </root>

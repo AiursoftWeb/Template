@@ -105,5 +105,14 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>Incluye soporte completo para Docker con el fin de simplificar, estandarizar y garantizar despliegues confiables.</value>
   </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Leer la documentación</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Iniciar un nuevo proyecto</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Este es un proyecto plantilla, donde comenzamos el viaje...</value>
+  </data>
 
 </root>

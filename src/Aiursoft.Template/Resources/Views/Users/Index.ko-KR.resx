@@ -51,5 +51,11 @@
   <data name="A list of all user accounts registered in the system." xml:space="preserve">
     <value>시스템에 등록된 모든 사용자 계정 목록입니다.</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>아바타</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>(역할이 할당되지 않음)</value>
+  </data>
 
 </root>

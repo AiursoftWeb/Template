@@ -36,5 +36,14 @@
   <data name="Name" xml:space="preserve">
     <value>Tên</value>
   </data>
+  <data name="Avatar file" xml:space="preserve">
+    <value>Tập tin ảnh đại diện</value>
+  </data>
+  <data name="The avatar file is required." xml:space="preserve">
+    <value>Tập tin avatar là bắt buộc.</value>
+  </data>
+  <data name="The avatar file is invalid. Please upload it again." xml:space="preserve">
+    <value>Tập tin avatar không hợp lệ. Vui lòng tải lên lại.</value>
+  </data>
 
 </root>

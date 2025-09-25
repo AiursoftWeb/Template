@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>Permisiuni Efective</value>
   </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>Detalii Cont</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Detalii Profil</value>
+  </data>
 
 </root>

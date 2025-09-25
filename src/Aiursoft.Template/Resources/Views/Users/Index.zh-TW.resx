@@ -51,5 +51,11 @@
   <data name="A list of all user accounts registered in the system." xml:space="preserve">
     <value>系統中所有已註冊的使用者帳戶清單。</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>頭像</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>（未指派角色）</value>
+  </data>
 
 </root>

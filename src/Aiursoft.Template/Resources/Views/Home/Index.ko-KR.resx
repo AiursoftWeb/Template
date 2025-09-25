@@ -105,5 +105,14 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>완전한 Docker 지원을 통해 단순화되고 일관성 있으며 신뢰할 수 있는 배포가 가능합니다.</value>
   </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>문서 읽기</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>새 프로젝트 시작하기</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>이것은 템플릿 프로젝트로, 여기서 우리의 항해를 시작합니다...</value>
+  </data>
 
 </root>

@@ -2,7 +2,7 @@
 @model Aiursoft.Template.Models.ManageViewModels.ChangeAvatarViewModel
 @inject StorageService StorageService
 @* Standard page title, consistent with the rest of the template. *@
-<h1 class="h3 mb-3">@Localizer["Change your avatar"]</h1>
+<h1 class="h3 mb-3" xmlns="http://www.w3.org/1999/html">@Localizer["Change your avatar"]</h1>
 
 <div class="card">
     <div class="card-header">
@@ -13,7 +13,9 @@
             <div class="col-md-4 text-center">
                 @* UX Enhancement: Display the current avatar to provide context. The model's AvatarUrl is used here. *@
                 <p class="h5">@Localizer["Current Avatar"]</p>
-                <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
+                <a href="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)" target="_blank" rel="noopener noreferrer">
+                    <img src="@StorageService.RelativePathToInternetUrl(Model.AvatarUrl)?w=256&square=true" alt="@Localizer["Current Avatar"]" class="rounded-circle img-fluid mb-2" width="128" height="128" />
+                </a>
                 <p class="text-muted"><small>@Localizer["For best results, use a square image in .jpg or .png format."]</small></p>
             </div>
             <div class="col-md-8">

@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>Ефективні дозволи</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Деталі профілю</value>
+  </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>Деталі облікового запису</value>
+  </data>
 
 </root>

@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>Izin Efektif</value>
   </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>Detail Akun</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Detail Profil</value>
+  </data>
 
 </root>

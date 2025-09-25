@@ -105,5 +105,14 @@
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Адаптивный макет, который отлично выглядит как на настольных компьютерах, так и на мобильных устройствах.</value>
   </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Прочитать документацию</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Начать новый проект</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Это шаблонный проект, с которого мы начинаем путешествие...</value>
+  </data>
 
 </root>

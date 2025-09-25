@@ -51,5 +51,11 @@
   <data name="A list of all user accounts registered in the system." xml:space="preserve">
     <value>Lista wszystkich kont użytkowników zarejestrowanych w systemie.</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Awatar</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>(przypisano brak roli)</value>
+  </data>
 
 </root>

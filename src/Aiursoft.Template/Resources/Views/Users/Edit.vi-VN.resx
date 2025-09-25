@@ -69,5 +69,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>Quay lại Danh sách</value>
   </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>Tập tin ảnh đại diện mới</value>
+  </data>
 
 </root>

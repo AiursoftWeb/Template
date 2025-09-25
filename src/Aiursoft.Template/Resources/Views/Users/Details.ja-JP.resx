@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>有効な権限</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>プロフィール詳細</value>
+  </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>アカウント詳細</value>
+  </data>
 
 </root>

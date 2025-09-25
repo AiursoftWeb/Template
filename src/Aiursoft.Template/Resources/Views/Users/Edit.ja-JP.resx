@@ -69,5 +69,8 @@
   <data name="Back to List" xml:space="preserve">
     <value>リストに戻る</value>
   </data>
+  <data name="New avatar file" xml:space="preserve">
+    <value>新しいアバターファイル</value>
+  </data>
 
 </root>

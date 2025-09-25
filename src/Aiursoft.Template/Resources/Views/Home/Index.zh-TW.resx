@@ -105,5 +105,14 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智慧深色模式，可自動適應使用者的系統設定。</value>
   </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>開始新專案</value>
+  </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>閱讀文件</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>這是一個模板專案，我們從這裡開啟航程...</value>
+  </data>
 
 </root>

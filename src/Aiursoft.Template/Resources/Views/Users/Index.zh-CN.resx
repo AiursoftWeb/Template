@@ -51,5 +51,11 @@
   <data name="All Users" xml:space="preserve">
     <value>所有用户</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>头像</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>（未分配角色）</value>
+  </data>
 
 </root>

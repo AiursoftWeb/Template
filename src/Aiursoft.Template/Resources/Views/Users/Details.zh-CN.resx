@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>有效权限</value>
   </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>个人资料详情</value>
+  </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>账户详情</value>
+  </data>
 
 </root>

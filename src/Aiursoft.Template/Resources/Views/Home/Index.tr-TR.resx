@@ -105,5 +105,14 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Kullanıcının sistem ayarlarına otomatik olarak uyum sağlayan akıllı karanlık mod.</value>
   </data>
+  <data name="Read the document" xml:space="preserve">
+    <value>Belgeyi okuyun</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Yeni bir proje başlat</value>
+  </data>
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+    <value>Bu, yolculuğa başladığımız bir şablon projedir...</value>
+  </data>
 
 </root>

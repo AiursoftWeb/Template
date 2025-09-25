@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>유효 권한</value>
   </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>계정 정보</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>프로필 세부 정보</value>
+  </data>
 
 </root>

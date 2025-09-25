@@ -51,5 +51,11 @@
   <data name="A list of all user accounts registered in the system." xml:space="preserve">
     <value>قائمة بكافة حسابات المستخدمين المسجلة في النظام.</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>الصورة الشخصية</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>(لم يتم تعيين أي دور)</value>
+  </data>
 
 </root>

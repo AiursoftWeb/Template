@@ -63,5 +63,11 @@
   <data name="Effective Permissions" xml:space="preserve">
     <value>Etkin İzinler</value>
   </data>
+  <data name="Account Details" xml:space="preserve">
+    <value>Hesap Detayları</value>
+  </data>
+  <data name="Profile Details" xml:space="preserve">
+    <value>Profil Detayları</value>
+  </data>
 
 </root>

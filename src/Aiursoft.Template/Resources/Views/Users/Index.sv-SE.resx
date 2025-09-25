@@ -51,5 +51,11 @@
   <data name="All Users" xml:space="preserve">
     <value>Alla användare</value>
   </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="(no role assigned)" xml:space="preserve">
+    <value>(ingen roll tilldelad)</value>
+  </data>
 
 </root>

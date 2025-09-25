@@ -62,6 +62,11 @@
                     <span asp-validation-for="Password" class="text-danger"></span>
                     <small class="form-text text-muted">@Localizer["Leave blank if you don't want to change the password."]</small>
                 </div>
+                <div class="mb-3">
+                    <label asp-for="AvatarUrl" class="form-label">@Localizer["New avatar file"]</label>
+                    <vc:file-upload asp-for="@Model.AvatarUrl" upload-endpoint="/upload/avatar" allowed-extensions="png bmp jpg" max-size-in-mb="10"></vc:file-upload>
+                    <span asp-validation-for="AvatarUrl" class="text-danger"></span>
+                </div>
             </div>
         </div>
         <div class="card-footer">
@@ -104,3 +109,14 @@
         </div>
     </div>
 </form>
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" />
+    <link rel="stylesheet" href="~/styles/uploader.css" />
+}
+
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js"></script>
+}

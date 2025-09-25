@@ -135,7 +135,7 @@ public class UsersController(
             UserName = user.UserName!,
             DisplayName = user.DisplayName,
             Password = "you-cant-read-it",
-
+            AvatarUrl = user.AvatarRelativePath,
             AllRoles = allRoles.Select(role => new UserRoleViewModel
             {
                 RoleName = role.Name!,
@@ -163,6 +163,7 @@ public class UsersController(
         userInDb.Email = model.Email;
         userInDb.UserName = model.UserName;
         userInDb.DisplayName = model.DisplayName;
+        userInDb.AvatarRelativePath = model.AvatarUrl;
         await userManager.UpdateAsync(userInDb);
 
         if (!string.IsNullOrWhiteSpace(model.Password) && model.Password != "you-cant-read-it")
