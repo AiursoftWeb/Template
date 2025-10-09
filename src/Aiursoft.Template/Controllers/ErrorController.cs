@@ -17,8 +17,16 @@ public class ErrorController : Controller
     }
 
     [Route("Error/Unauthorized")]
-    public IActionResult UnauthorizedPage()
+    public IActionResult UnauthorizedPage([FromQuery]string returnUrl = "/")
     {
-        return this.StackView(new UnauthorizedViewModel(), viewName: "Unauthorized");
+        if (!Url.IsLocalUrl(returnUrl))
+        {
+            returnUrl = "/";
+        }
+
+        return this.StackView(new UnauthorizedViewModel
+        {
+            ReturnUrl = returnUrl
+        }, viewName: "Unauthorized");
     }
 }

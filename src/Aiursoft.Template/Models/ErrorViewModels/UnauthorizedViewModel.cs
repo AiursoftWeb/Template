@@ -8,4 +8,6 @@ public class UnauthorizedViewModel: UiStackLayoutViewModel
     {
         PageTitle = "Unauthorized";
     }
+
+    public required string ReturnUrl { get; init; }
 }

@@ -15,12 +15,15 @@
                 </p>
 
                 <p class="text-muted">
-                    @Localizer["If you believe you should have access, please contact your system administrator."]
+                    @Localizer["If you believe you should have access, please contact your system administrator. Or try signing out and signing in again."]
                 </p>
 
                 <div class="mt-4">
                     <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg">
                         <i class="align-middle me-2" data-lucide="home"></i> @Localizer["Back to Home"]
+                    </a>
+                    <a href="@Model.ReturnUrl" class="btn btn-secondary btn-lg">
+                        <i class="align-middle me-2" data-lucide="refresh-cw"></i> @Localizer["Try again"]
                     </a>
                 </div>
 
