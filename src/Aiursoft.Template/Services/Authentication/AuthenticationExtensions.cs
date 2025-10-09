@@ -52,7 +52,7 @@ public static class AuthenticationExtensions
         {
             options.LoginPath = "/Account/Login";
             options.LogoutPath = "/Account/Logoff";
-            options.AccessDeniedPath = "/Home/Index";
+            options.AccessDeniedPath = "/Error/Unauthorized";
         });
 
         if (appSettings.OIDCEnabled)

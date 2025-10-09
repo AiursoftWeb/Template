@@ -15,4 +15,10 @@ public class ErrorController : Controller
     {
         return this.StackView(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    [Route("Error/Unauthorized")]
+    public IActionResult UnauthorizedPage()
+    {
+        return this.StackView(new UnauthorizedViewModel(), viewName: "Unauthorized");
+    }
 }
