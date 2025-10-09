@@ -123,5 +123,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Impostazioni Profilo</value>
   </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Non autorizzato</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Errore</value>
+  </data>
 
 </root>

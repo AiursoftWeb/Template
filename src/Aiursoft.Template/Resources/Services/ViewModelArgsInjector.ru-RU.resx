@@ -123,5 +123,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Настройки профиля</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Неавторизованный</value>
+  </data>
 
 </root>

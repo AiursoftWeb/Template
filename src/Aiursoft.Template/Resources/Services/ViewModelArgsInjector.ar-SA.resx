@@ -123,5 +123,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>إعدادات الملف الشخصي</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>غير مصرح</value>
+  </data>
 
 </root>

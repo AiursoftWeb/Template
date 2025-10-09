@@ -62,6 +62,8 @@ public class ViewModelArgsInjector(
         _ = localizer["Settings"];
         _ = localizer["Profile Settings"];
         _ = localizer["Personal"];
+        _ = localizer["Unauthorized"];
+        _ = localizer["Error"];
     }
 
     public void Inject(

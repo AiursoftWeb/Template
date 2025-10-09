@@ -123,5 +123,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Profiilin asetukset</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Virhe</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Luvaton</value>
+  </data>
 
 </root>

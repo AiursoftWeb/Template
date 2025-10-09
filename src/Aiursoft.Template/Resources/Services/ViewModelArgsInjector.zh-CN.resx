@@ -126,5 +126,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>资料设置</value>
   </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>未授权</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
 
 </root>

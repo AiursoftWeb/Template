@@ -123,5 +123,11 @@
   <data name="Profile Settings" xml:space="preserve">
     <value>Profil Ayarları</value>
   </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Unauthorized" xml:space="preserve">
+    <value>Yetkisiz</value>
+  </data>
 
 </root>
