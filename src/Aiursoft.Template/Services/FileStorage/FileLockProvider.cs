@@ -1,7 +1,7 @@
 using System.Collections.Concurrent;
 using Aiursoft.Scanner.Abstractions;
 
-namespace Aiursoft.Template.Services;
+namespace Aiursoft.Template.Services.FileStorage;
 
 /// <summary>
 /// Provides a thread-safe mechanism to lock on certain file paths

@@ -1,4 +1,4 @@
-namespace Aiursoft.Template.Services;
+namespace Aiursoft.Template.Services.FileStorage;
 
 /// <summary>
 /// Provides functionality to calculate size based on powers of two.

@@ -6,6 +6,7 @@ using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Services;
+using Aiursoft.Template.Services.Authentication;
 using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;

@@ -2,6 +2,7 @@ using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.ManageViewModels;
 using Aiursoft.Template.Services;
+using Aiursoft.Template.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;

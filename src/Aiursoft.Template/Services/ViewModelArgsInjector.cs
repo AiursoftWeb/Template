@@ -2,6 +2,8 @@ using Aiursoft.Scanner.Abstractions;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Controllers;
 using Aiursoft.Template.Entities;
+using Aiursoft.Template.Services.Authentication;
+using Aiursoft.Template.Services.FileStorage;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.UiStack.Views.Shared.Components.FooterMenu;
@@ -181,11 +183,11 @@ public class ViewModelArgsInjector(
 
         if (signInManager.IsSignedIn(context.User))
         {
-            var avatarPath = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.AvatarClaimType)
+            var avatarPath = context.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.AvatarClaimType)
                 .Value;
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
-                UserName = context.User.Claims.First(c => c.Type == TemplateClaimsPrincipalFactory.DisplayNameClaimType).Value,
+                UserName = context.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.DisplayNameClaimType).Value,
                 UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath)}?w=100&square=true",
                 IconLinkGroups =
                 [

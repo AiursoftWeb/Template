@@ -1,6 +1,7 @@
 using Aiursoft.CSTools.Attributes;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.Template.Services;
+using Aiursoft.Template.Services.FileStorage;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;

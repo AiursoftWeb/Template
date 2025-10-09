@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Aiursoft.Template.Services;
+namespace Aiursoft.Template.Services.Authentication;
 
 public static class AuthenticationExtensions
 {
@@ -18,17 +18,29 @@ public static class AuthenticationExtensions
         var appSettings = configuration.GetSection("AppSettings").Get<AppSettings>()!;
         services.AddIdentity<User, IdentityRole>(options =>
             {
-                options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequireDigit = false;
-                options.Password.RequiredLength = 6;
-                options.Password.RequiredUniqueChars = 0;
-                options.Password.RequireLowercase = false;
-                options.Password.RequireUppercase = false;
+                if (appSettings.LocalEnabled && appSettings.Local.AllowWeakPassword)
+                {
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireDigit = false;
+                    options.Password.RequiredLength = 6;
+                    options.Password.RequiredUniqueChars = 0;
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireUppercase = false;
+                }
+                else
+                {
+                    options.Password.RequireNonAlphanumeric = true;
+                    options.Password.RequireDigit = true;
+                    options.Password.RequiredLength = 8;
+                    options.Password.RequiredUniqueChars = 1;
+                    options.Password.RequireLowercase = true;
+                    options.Password.RequireUppercase = true;
+                }
             })
             .AddEntityFrameworkStores<TemplateDbContext>()
             .AddDefaultTokenProviders();
 
-        services.AddScoped<IUserClaimsPrincipalFactory<User>, TemplateClaimsPrincipalFactory>();
+        services.AddScoped<IUserClaimsPrincipalFactory<User>, UserClaimsPrincipalFactory>();
 
         var authBuilder = services.AddAuthentication(options =>
         {
