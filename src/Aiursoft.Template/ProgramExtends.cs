@@ -3,7 +3,6 @@ using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-using Aiursoft.Template.Services;
 using Aiursoft.Template.Services.FileStorage;
 
 namespace Aiursoft.Template;
