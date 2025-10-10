@@ -119,7 +119,7 @@ public class BasicTests
         var finalHomePageResponse = await _http.GetAsync("/");
         finalHomePageResponse.EnsureSuccessStatusCode();
         var finalHtml = await finalHomePageResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(finalHtml.Contains(expectedUserName));
+        Assert.Contains(expectedUserName, finalHtml);
     }
 
     [TestMethod]
@@ -140,7 +140,7 @@ public class BasicTests
         // Step 2: Assert that the login fails and the correct error message is displayed.
         Assert.AreEqual(HttpStatusCode.OK, loginResponse.StatusCode);
         var html = await loginResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(html.Contains("Invalid login attempt."));
+        Assert.Contains("Invalid login attempt.", html);
     }
 
     [TestMethod]
@@ -182,7 +182,7 @@ public class BasicTests
         // Step 4: Assert the registration fails and the correct error message is displayed.
         Assert.AreEqual(HttpStatusCode.OK, secondRegisterResponse.StatusCode);
         var html = await secondRegisterResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(html.Contains("The username already exists. Please try another username."));
+        Assert.Contains("The username already exists. Please try another username.", html);
     }
 
     [TestMethod]
@@ -224,7 +224,7 @@ public class BasicTests
         // Step 4: Assert the login fails and displays an error message.
         Assert.AreEqual(HttpStatusCode.OK, loginResponse.StatusCode);
         var html = await loginResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(html.Contains("Invalid login attempt."));
+        Assert.Contains("Invalid login attempt.", html);
     }
 
     [TestMethod]
@@ -270,7 +270,7 @@ public class BasicTests
         // Step 3: Assert that the account is now locked.
         Assert.AreEqual(HttpStatusCode.OK, loginResponse.StatusCode);
         var html = await loginResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(html.Contains("This account has been locked out, please try again later."));
+        Assert.Contains("This account has been locked out, please try again later.", html);
 
         // Step 4: Verify that logging in with the correct password also fails while the account is locked.
         var finalLoginToken = await GetAntiCsrfToken("/Account/Login");
@@ -283,7 +283,7 @@ public class BasicTests
         var finalLoginResponse = await _http.PostAsync("/Account/Login", finalLoginContent);
         var finalHtml = await finalLoginResponse.Content.ReadAsStringAsync();
         Assert.AreEqual(HttpStatusCode.OK, finalLoginResponse.StatusCode);
-        Assert.IsTrue(finalHtml.Contains("This account has been locked out, please try again later."));
+        Assert.Contains("This account has been locked out, please try again later.", finalHtml);
     }
 
     private async Task<(string email, string password)> RegisterAndLoginAsync()
@@ -395,7 +395,7 @@ public class BasicTests
         var homePageResponse = await _http.GetAsync("/");
         homePageResponse.EnsureSuccessStatusCode();
         var html = await homePageResponse.Content.ReadAsStringAsync();
-        Assert.IsTrue(html.Contains(newUserName));
-        Assert.IsFalse(html.Contains(originalUserName));
+        Assert.Contains(newUserName, html);
+        Assert.DoesNotContain(originalUserName, html);
     }
 }
