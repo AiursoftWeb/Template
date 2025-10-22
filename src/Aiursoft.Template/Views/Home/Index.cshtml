@@ -2,23 +2,11 @@
 @section styles {
     <link rel="stylesheet" href="~/styles/site.css"/>
 }
-<div class="alert alert-dismissible fade show text-center mb-0 pt-2 pb-2 border-0 rounded-0 text-white" role="alert" style="background-color: #0d6efd;">
-    <div class="container">
-        <strong class="text-white">@Localizer["Welcome!"]</strong>
-        @Localizer["Aiursoft Template is now open source and free for everyone."]
-        <a href="https://github.com/AiursoftWeb/template" class="alert-link ms-2 text-white" target="_blank">@Localizer["Star on GitHub!"]</a>
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding: .8rem"></button>
-</div>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark landing-navbar">
     <div class="container">
         <a class="navbar-brand landing-brand text-white" href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
-            </svg>
+            <img src="~/logo.svg" alt="logo"/>
             @Localizer["Aiursoft Template"]
         </a>
         <ul class="navbar-nav ms-auto">
@@ -26,19 +14,16 @@
                 <a class="nav-link active text-lg px-lg-3" href="https://template-docs.aiursoft.cn/">@Localizer["Documentation"]</a>
             </li>
             <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://blog.aiursoft.cn/">@Localizer["Blog"]</a>
+                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template">@Localizer["Source Code"]</a>
             </li>
             <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://github.com/AiursoftWeb/template">@Localizer["Source Code"]</a>
-            </li>
-            <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://github.com/Aiursoft/template/discussions">@Localizer["Community"]</a>
+                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template/discussions">@Localizer["Community"]</a>
             </li>
         </ul>
-        <a href="https://template-docs.aiursoft.cn/Tutorial/before.html" class="btn btn-lg btn-primary btn-pill my-2 my-sm-0 ms-3">
-            <i class="align-middle" data-lucide="rocket"></i> @Localizer["Get Started"]
+        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-lg btn-primary btn-pill my-2 my-sm-0 ms-3">
+            <i class="align-middle" data-lucide="rocket"></i> @Localizer["Try the dashboard"]
         </a>
-        <a href="https://github.com/Aiursoft/template" target="_blank" rel="noreferer" class="btn btn-lg btn-outline-light btn-pill my-2 my-sm-0 ms-3">
+        <a href="https://github.com/aiursoftweb/template" target="_blank" rel="noreferer" class="btn btn-lg btn-outline-light btn-pill my-2 my-sm-0 ms-3">
             <i class="fa-brands fa-github me-1"></i> @Localizer["GitHub"]
         </a>
     </div>
@@ -59,8 +44,8 @@
                     <a class="btn btn-primary btn-lg btn-pill" href="https://template-docs.aiursoft.cn/Tutorial/before.html">
                         <i class="align-middle" data-lucide="rocket"></i> @Localizer["Start a new project"]
                     </a>
-                    <a href="https://template-docs.aiursoft.cn/" target="_blank" class="btn btn-outline-primary btn-lg btn-pill">
-                        <i class="align-middle" data-lucide="book"></i> @Localizer["Read the document"]
+                    <a asp-controller="Dashboard" asp-action="Index" class="btn btn-outline-primary btn-lg btn-pill">
+                        <i class="align-middle" data-lucide="grid"></i> @Localizer["Go to dashboard"]
                     </a>
                 </div>
             </div>
@@ -359,7 +344,7 @@
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="faqOne" data-bs-parent="#accordionFaq">
                             <div class="card-body py-3">
-                                @Localizer["You'll need the .NET SDK (version 8.0 or newer) and your favorite IDE, like Visual Studio 2022 or JetBrains Rider. You can find the full setup guide in our documentation."]
+                                @Localizer["You'll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation."]
                             </div>
                         </div>
                     </div>
@@ -379,7 +364,7 @@
                         </div>
                         <div id="collapseThree" class="collapse" aria-labelledby="faqThree" data-bs-parent="#accordionFaq">
                             <div class="card-body py-3">
-                                @Localizer["You can get community support via GitHub Discussions. Please visit our"] <a href="https://github.com/Aiursoft/template/discussions" target="_blank">@Localizer["Discussions page"]</a> @Localizer["for any inquiries or to report issues."]
+                                @Localizer["You can get community support via GitHub Discussions. Please visit our"] <a href="https://github.com/aiursoftweb/template/discussions" target="_blank">@Localizer["Discussions page"]</a> @Localizer["for any inquiries or to report issues."]
                             </div>
                         </div>
                     </div>
@@ -396,7 +381,7 @@
                 <h2 class="h1 mb-3">
                     @Localizer["Join our community and start building today!"]
                 </h2>
-                <a href="https://github.com/Aiursoft/template/discussions" class="align-middle btn btn-dark btn-pill btn-lg mt-n1" target="_blank">
+                <a href="https://github.com/aiursoftweb/template/discussions" class="align-middle btn btn-dark btn-pill btn-lg mt-n1" target="_blank">
                     <i class="fa-brands fa-github"></i>
                     <span class="ms-1">@Localizer["Join Discussions"]</span>
                 </a>
@@ -414,11 +399,7 @@
         <div class="row mb-4">
             <div class="col-12 col-lg-4">
                 <div class="mb-3">
-                    <svg style="fill:white;" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
-                    </svg>
+                    <img src="~/logo.svg" alt="logo"/>
                 </div>
                 <p class="text-white-50">
                     @Localizer["Aiursoft Template - A modern, feature-rich, and highly extensible foundation for your next web application."]
@@ -434,7 +415,7 @@
                         <a href="https://template-docs.aiursoft.cn/" class="text-white-50">@Localizer["Documentation"]</a>
                     </li>
                     <li class="mt-2">
-                        <a href="https://github.com/Aiursoft/template/discussions" class="text-white-50">@Localizer["Community"]</a>
+                        <a href="https://github.com/aiursoftweb/template/discussions" class="text-white-50">@Localizer["Community"]</a>
                     </li>
                 </ul>
             </div>
@@ -442,13 +423,13 @@
                 <h4 class="text-light fs-5">@Localizer["Project"]</h4>
                 <ul class="list-unstyled ps-0 mb-0 mt-3">
                     <li class="mt-2">
-                        <a href="https://github.com/Aiursoft/template" class="text-white-50">@Localizer["Source Code"]</a>
+                        <a href="https://github.com/aiursoftweb/template" class="text-white-50">@Localizer["Source Code"]</a>
                     </li>
                     <li class="mt-2">
-                        <a href="https://github.com/Aiursoft/template/issues" class="text-white-50">@Localizer["Report an Issue"]</a>
+                        <a href="https://github.com/aiursoftweb/template/issues" class="text-white-50">@Localizer["Report an Issue"]</a>
                     </li>
                     <li class="mt-2">
-                        <a href="https://github.com/Aiursoft/template/pulls" class="text-white-50">@Localizer["Contributions"]</a>
+                        <a href="https://github.com/aiursoftweb/template/pulls" class="text-white-50">@Localizer["Contributions"]</a>
                     </li>
                 </ul>
             </div>
@@ -456,7 +437,7 @@
                 <h4 class="text-light fs-5">@Localizer["Legal"]</h4>
                 <ul class="list-unstyled ps-0 mb-0 mt-3">
                     <li class="mt-2">
-                        <a href="https://github.com/Aiursoft/template/blob/main/LICENSE" class="text-white-50">@Localizer["Licence"]</a>
+                        <a href="https://github.com/aiursoftweb/template/blob/main/LICENSE" class="text-white-50">@Localizer["Licence"]</a>
                     </li>
                     <li class="mt-2">
                         <a href="https://www.aiursoft.cn/privacy.html" class="text-white-50">@Localizer["Privacy Policy"]</a>
@@ -471,15 +452,11 @@
                 <ul class="list-unstyled ps-0 mb-0 mt-3">
                     <li class="mt-2">
                         <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/Aiursoft" class="text-white-50" target="_blank">@Localizer["Github"]</a>
+                        <a href="https://github.com/aiursoftweb" class="text-white-50" target="_blank">@Localizer["Github"]</a>
                     </li>
                     <li class="mt-2">
                         <i class="fa-solid fa-comments"></i>
                         <a href="https://stt.aiursoft.cn/" class="text-white-50" target="_blank">@Localizer["Stoat"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <i class="fa-solid fa-blog"></i>
-                        <a href="https://blog.aiursoft.cn/" class="text-white-50" target="_blank">@Localizer["Blog"]</a>
                     </li>
                 </ul>
             </div>

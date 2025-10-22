@@ -1,5 +1,6 @@
 .landing-intro-screenshot img {
     transform: rotateY(-20deg) rotateX(2deg);
+    box-shadow: unset;
 }
 
 .row.py-4 {
