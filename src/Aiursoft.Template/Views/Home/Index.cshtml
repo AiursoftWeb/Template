@@ -1,33 +1,10 @@
+@using Microsoft.AspNetCore.Localization
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
     <link rel="stylesheet" href="~/styles/site.css"/>
 }
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark landing-navbar">
-    <div class="container">
-        <a class="navbar-brand landing-brand text-white" href="/">
-            <img src="~/logo.svg" alt="logo"/>
-            @Localizer["Aiursoft Template"]
-        </a>
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://template-docs.aiursoft.cn/">@Localizer["Documentation"]</a>
-            </li>
-            <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template">@Localizer["Source Code"]</a>
-            </li>
-            <li class="nav-item d-none d-md-inline-block">
-                <a class="nav-link active text-lg px-lg-3" href="https://github.com/aiursoftweb/template/discussions">@Localizer["Community"]</a>
-            </li>
-        </ul>
-        <a asp-controller="Dashboard" asp-action="Index" class="btn btn-lg btn-primary btn-pill my-2 my-sm-0 ms-3">
-            <i class="align-middle" data-lucide="rocket"></i> @Localizer["Try the dashboard"]
-        </a>
-        <a href="https://github.com/aiursoftweb/template" target="_blank" rel="noreferer" class="btn btn-lg btn-outline-light btn-pill my-2 my-sm-0 ms-3">
-            <i class="fa-brands fa-github me-1"></i> @Localizer["GitHub"]
-        </a>
-    </div>
-</nav>
+<vc:marketing-navbar></vc:marketing-navbar>
 
 <section class="landing-intro text-bg-dark pt-5 pt-lg-6 pb-5 pb-lg-7">
     <div class="landing-intro-content container h-100">
@@ -221,16 +198,16 @@
 
                 <div class="row">
                     <div class="col-md-4 py-3">
-                        <img gallery src="#" class="img-fluid rounded-3 landing-img" loading="lazy" alt="SaaS Application Example" />
-                        <h4 class="mt-3">@Localizer["SaaS Platform"]</h4>
+                        <img gallery src="https://gitlab.aiursoft.cn/aiursoft/template/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Dashboard Website" />
+                        <h4 class="mt-3">@Localizer["Dashboard Website"]</h4>
                     </div>
                     <div class="col-md-4 py-3">
-                        <img gallery src="#" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Admin Dashboard Example" />
-                        <h4 class="mt-3">@Localizer["Admin Dashboard"]</h4>
+                        <img gallery src="https://gitlab.aiursoft.cn/aiursoft/musictools/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Music Tools"/>
+                        <h4 class="mt-3">@Localizer["Music Tools"]</h4>
                     </div>
                     <div class="col-md-4 py-3">
-                        <img gallery src="#" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Corporate Website Example" />
-                        <h4 class="mt-3">@Localizer["Corporate Website"]</h4>
+                        <img gallery src="https://gitlab.aiursoft.cn/aiursoft/marktohtml/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Markdown To HTML"/>
+                        <h4 class="mt-3">@Localizer["Markdown To HTML"]</h4>
                     </div>
                 </div>
             </div>
@@ -252,67 +229,22 @@
                     <div class="card-body p-4">
                         <div class="d-flex align-items-center mb-3">
                             <div>
-                                <a href="#" target="_blank">
-                                    <img src="#" width="48" height="48" alt="User Aimer's avatar" loading="lazy" style="background-color: #eee; border-radius: 50%;" />
+                                <a href="https://anduin.aiursoft.com/" target="_blank">
+                                    <img src="https://anduin.aiursoft.com/avatar" width="48" height="48" alt="User Aimer's avatar" loading="lazy" style="background-color: #eee; border-radius: 50%;" />
                                 </a>
                             </div>
                             <div class="ps-3">
-                                <h5 class="mb-1 mt-2">@Localizer["Developer A"]</h5>
-                                <small class="d-block text-muted h5 fw-normal">@Localizer["Senior Backend Engineer"]</small>
+                                <h5 class="mb-1 mt-2">@Localizer["Anduin"]</h5>
+                                <small class="d-block text-muted h5 fw-normal">@Localizer["Technical Lead"]</small>
                             </div>
                         </div>
-                        <p class="lead mb-2">@Localizer["Aiursoft Template is our definitive choice for new projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management."]</p>
+                        <p class="lead mb-2">@Localizer["Aiursoft Template is our definitive choice for enterprise projects! It's built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management."]</p>
                         <div class="landing-stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </blockquote>
             </div>
-
-            <div class="flex-shrink-0 me-3" style="max-width: 380px;">
-                <blockquote class="landing-quote card border">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div>
-                                <a href="#" target="_blank">
-                                    <img src="#" width="48" height="48" alt="User Yuyuyuyu's avatar" loading="lazy" style="background-color: #eee; border-radius: 50%;" />
-                                </a>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="mb-1 mt-2">@Localizer["Developer B"]</h5>
-                                <small class="d-block text-muted h5 fw-normal">@Localizer["Full Stack Developer"]</small>
-                            </div>
-                        </div>
-                        <p class="lead mb-2">@Localizer["This template saved me weeks of work. The OpenID Connect integration and RBAC system work flawlessly right out of the box."]</p>
-                        <div class="landing-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </blockquote>
-            </div>
-
-            <div class="flex-shrink-0 me-3" style="max-width: 280px;">
-                <blockquote class="landing-quote card border">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center mb-3">
-                            <div>
-                                <a href="#" target="_blank">
-                                    <img src="#" width="48" height="48" loading="lazy" alt="User Cody Ray's avatar" style="background-color: #eee; border-radius: 50%;" />
-                                </a>
-                            </div>
-                            <div class="ps-3">
-                                <h5 class="mb-1 mt-2">@Localizer["Developer C"]</h5>
-                                <small class="d-block text-muted h5 fw-normal">@Localizer["DevOps Specialist"]</small>
-                            </div>
-                        </div>
-                        <p class="lead mb-2">@Localizer["The Docker support is fantastic. It profoundly streamlined our deployment process."]</p>
-                        <div class="landing-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </blockquote>
-            </div>
-
         </div>
     </div>
 </section>
@@ -329,10 +261,10 @@
             <div class="col-md-9 col-lg-8 mx-auto">
                 <div class="accordion" id="accordionFaq">
                     <div class="card border mb-3">
-                        <div class="card-header cursor-pointer" id="faqZero" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                        <div class="card-header cursor-pointer" id="faqZero" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
                             <h6 class="mb-0">@Localizer["Is it free to use Aiursoft Template?"]</h6>
                         </div>
-                        <div id="collapseZero" class="collapse show" aria-labelledby="faqZero" data-bs-parent="#accordionFaq">
+                        <div id="collapseZero" class="collapse" aria-labelledby="faqZero" data-bs-parent="#accordionFaq">
                             <div class="card-body py-3">
                                 @Localizer["Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost."]
                             </div>
@@ -394,79 +326,4 @@
     </div>
 </section>
 
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-12 col-lg-4">
-                <div class="mb-3">
-                    <img src="~/logo.svg" alt="logo"/>
-                </div>
-                <p class="text-white-50">
-                    @Localizer["Aiursoft Template - A modern, feature-rich, and highly extensible foundation for your next web application."]
-                </p>
-                </div>
-            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
-                <h4 class="text-light fs-5">@Localizer["Resources"]</h4>
-                <ul class="list-unstyled ps-0 mb-0 mt-3">
-                    <li class="mt-2">
-                        <a href="https://template-docs.aiursoft.cn/Tutorial/before.html" class="text-white-50">@Localizer["Get Started"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://template-docs.aiursoft.cn/" class="text-white-50">@Localizer["Documentation"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://github.com/aiursoftweb/template/discussions" class="text-white-50">@Localizer["Community"]</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
-                <h4 class="text-light fs-5">@Localizer["Project"]</h4>
-                <ul class="list-unstyled ps-0 mb-0 mt-3">
-                    <li class="mt-2">
-                        <a href="https://github.com/aiursoftweb/template" class="text-white-50">@Localizer["Source Code"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://github.com/aiursoftweb/template/issues" class="text-white-50">@Localizer["Report an Issue"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://github.com/aiursoftweb/template/pulls" class="text-white-50">@Localizer["Contributions"]</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
-                <h4 class="text-light fs-5">@Localizer["Legal"]</h4>
-                <ul class="list-unstyled ps-0 mb-0 mt-3">
-                    <li class="mt-2">
-                        <a href="https://github.com/aiursoftweb/template/blob/main/LICENSE" class="text-white-50">@Localizer["Licence"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.aiursoft.cn/privacy.html" class="text-white-50">@Localizer["Privacy Policy"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <a href="https://www.aiursoft.cn/terms.html" class="text-white-50">@Localizer["Terms"]</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2 mb-3 mb-md-0">
-                <h4 class="text-light fs-5">@Localizer["Social"]</h4>
-                <ul class="list-unstyled ps-0 mb-0 mt-3">
-                    <li class="mt-2">
-                        <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/aiursoftweb" class="text-white-50" target="_blank">@Localizer["Github"]</a>
-                    </li>
-                    <li class="mt-2">
-                        <i class="fa-solid fa-comments"></i>
-                        <a href="https://stt.aiursoft.cn/" class="text-white-50" target="_blank">@Localizer["Stoat"]</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <p class="text-white-50 mt-4 text-center mb-0">
-                    © @DateTime.Now.Year <a href="https://www.aiursoft.cn/" target="_blank">@Localizer["Aiursoft"]</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+<vc:marketing-footer></vc:marketing-footer>
