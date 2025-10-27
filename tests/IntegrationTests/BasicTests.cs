@@ -5,6 +5,8 @@ using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
 using static Aiursoft.WebTools.Extends;
 
+[assembly:DoNotParallelize]
+
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
 [TestClass]
@@ -116,7 +118,7 @@ public class BasicTests
         Assert.AreEqual("/", loginResponse.Headers.Location?.OriginalString);
 
         // Step 4: Verify the final login state by checking the home page content.
-        var finalHomePageResponse = await _http.GetAsync("/");
+        var finalHomePageResponse = await _http.GetAsync("/dashboard/index");
         finalHomePageResponse.EnsureSuccessStatusCode();
         var finalHtml = await finalHomePageResponse.Content.ReadAsStringAsync();
         Assert.Contains(expectedUserName, finalHtml);
@@ -392,7 +394,7 @@ public class BasicTests
         Assert.AreEqual("/Manage?Message=ChangeProfileSuccess", changeProfileResponse.Headers.Location?.OriginalString);
 
         // Step 5: Visit the home page and verify the new name is displayed.
-        var homePageResponse = await _http.GetAsync("/");
+        var homePageResponse = await _http.GetAsync("/dashboard/index");
         homePageResponse.EnsureSuccessStatusCode();
         var html = await homePageResponse.Content.ReadAsStringAsync();
         Assert.Contains(newUserName, html);
