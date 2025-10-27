@@ -114,5 +114,110 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο, από όπου ξεκινάμε το ταξίδι...</value>
   </data>
+  <data name="faster" xml:space="preserve">
+    <value>γρηγορότερα</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Χρήση</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Λειτουργίες</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Ανοιχτού Κώδικα</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Μετάβαση στον πίνακα ελέγχου</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Άδεια MIT</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Δωρεάν</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Δημιουργήστε το επόμενό σας μεγάλο πράγμα,</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Κερδίστε περισσότερα με το Aiursoft Template</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown σε HTML</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Κριτικές</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Εργαλεία Μουσικής</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Ιστοσελίδα Πίνακα Ελέγχου</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Τι λένε οι προγραμματιστές μας</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Αυτά έχουν να πουν οι προγραμματιστές από την κοινότητά μας.</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Τεχνικός Υπεύθυνος</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Συχνές ερωτήσεις</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Χρησιμοποιήστε το ως θεμέλιο για το SaaS σας, ως backend για την εφαρμογή του κινητού σας, ως εταιρική ιστοσελίδα ή ως προσωπικό ιστολόγιο. Οι δυνατότητες είναι ατελείωτες.</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>Συχνές Ερωτήσεις</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Ακολουθούν μερικές από τις απαντήσεις που ίσως ψάχνετε.</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Είναι δωρεάν η χρήση του Aiursoft Template;</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>Τι χρειάζομαι για να ξεκινήσω;</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Πώς μπορώ να αναπτύξω την εφαρμογή μου;</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Πώς μπορώ να λάβω υποστήριξη;</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Το Aiursoft Template είναι η απόλυτη μας επιλογή για εταιρικά έργα! Είναι φτιαγμένο για προγραμματιστές και είναι ελαφρύ αλλά και ισχυρό. Μπορούμε να παραλείψουμε όλο τον τυπικό κώδικα για την ταυτοποίηση και τη διαχείριση χρηστών.</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Ναι, το Aiursoft Template είναι εντελώς δωρεάν και ανοιχτού κώδικα υπό την άδεια MIT. Μπορείτε να το χρησιμοποιήσετε για προσωπικά και εμπορικά projects χωρίς κανένα κόστος.</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Μπορείτε να λάβετε υποστήριξη από την κοινότητα μέσω των Συζητήσεων GitHub. Παρακαλούμε επισκεφτείτε την</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Σελίδα Συζητήσεων</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Θα χρειαστείτε το .NET 9 SDK, το npm και το αγαπημένο σας περιβάλλον ανάπτυξης (IDE), όπως το Visual Studio ή το JetBrains Rider. Μπορείτε να βρείτε τον πλήρη οδηγό ρύθμισης στην τεκμηρίωσή μας.</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Συμμετέχετε στις Συζητήσεις</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>Ξεκινήστε ένα Νέο Έργο</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Γίνετε μέλος της κοινότητάς μας και ξεκινήστε να χτίζετε σήμερα!</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>Το πρότυπο είναι κατασκευασμένο για εύκολη ανάπτυξη. Περιλαμβάνει πλήρη υποστήριξη Docker, ώστε να μπορείτε να συσκευάσετε την εφαρμογή σας σε containers και να την εκτελέσετε οπουδήποτε. Μπορείτε επίσης να την αναπτύξετε απευθείας στο IIS, στο Azure App Service ή σε οποιονδήποτε διακομιστή που υποστηρίζει ASP.NET Core.</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>για οποιαδήποτε ερώτηση ή για να αναφέρετε προβλήματα.</value>
+  </data>
 
 </root>

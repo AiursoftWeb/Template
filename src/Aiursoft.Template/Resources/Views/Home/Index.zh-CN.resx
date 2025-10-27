@@ -114,5 +114,110 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
   </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>开源</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>免费</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>更快</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>MIT 许可证</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>构建你的下一个伟大项目，</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>功能特性</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>前往仪表盘</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown 转 HTML</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>音乐工具</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>仪表板网站</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>借助 Aiursoft Template 成就更多可能</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>以下是我们社区的开发者们的评价。</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>用户评价</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>无论是作为SaaS应用的基础、移动应用的后端、企业官网还是个人博客，它都能胜任。无限可能，任您探索。</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>我们的开发者怎么说</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>技术负责人</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>常见问题解答</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>常见问题</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>使用 Aiursoft Template 是否免费？</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>以下是一些您可能正在寻找的答案。</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template 是我们企业项目的最终选择！它专为开发者打造，轻量级却功能强大。我们可以跳过所有身份验证和用户管理的样板代码。</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>我需要准备什么才能开始？</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>是的，Aiursoft Template 在 MIT 许可证下完全免费且开源。您可以在个人和商业项目中免费使用它，无需任何费用。</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>如何部署我的应用程序？</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>讨论页面</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>如何获取支持？</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>您需要安装 .NET 9 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>您可以通过 GitHub Discussions 获取社区支持。请访问我们的</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>如有任何疑问或报告问题。</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>该模板专为简化部署而设计，内置完整的Docker支持，您可以将应用容器化后随处运行。也可直接部署到IIS、Azure应用服务或任何支持ASP.NET Core的服务器。</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>参与讨论</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>开始新项目</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>加入我们的社区，立即开始构建！</value>
+  </data>
 
 </root>
