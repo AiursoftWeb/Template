@@ -91,7 +91,7 @@ public class BasicTests
         });
         var registerResponse = await _http.PostAsync("/Account/Register", registerContent);
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
-        Assert.AreEqual("/", registerResponse.Headers.Location?.OriginalString);
+        Assert.AreEqual("/Dashboard/Index", registerResponse.Headers.Location?.OriginalString);
 
         // Step 2: Log off the user and assert a successful redirect.
         var homePageResponse = await _http.GetAsync("/Manage/Index");
@@ -115,7 +115,7 @@ public class BasicTests
         });
         var loginResponse = await _http.PostAsync("/Account/Login", loginContent);
         Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
-        Assert.AreEqual("/", loginResponse.Headers.Location?.OriginalString);
+        Assert.AreEqual("/Dashboard/Index", loginResponse.Headers.Location?.OriginalString);
 
         // Step 4: Verify the final login state by checking the home page content.
         var finalHomePageResponse = await _http.GetAsync("/dashboard/index");
