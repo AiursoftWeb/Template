@@ -66,6 +66,18 @@ public class ViewModelArgsInjector(
         _ = localizer["Error"];
     }
 
+    public void InjectSimple(
+        HttpContext context,
+        UiStackLayoutViewModel toInject)
+    {
+        toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
+        toInject.AppName = localizer["Template"];
+        toInject.Theme = UiTheme.Light;
+        toInject.SidebarTheme = UiSidebarTheme.Default;
+        toInject.Layout = UiLayout.Fluid;
+        toInject.ContentNoPadding = true;
+    }
+
     public void Inject(
         HttpContext context,
         UiStackLayoutViewModel toInject)

@@ -114,5 +114,110 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Acesta este un proiect tipic, de unde începem călătoria...</value>
   </data>
+  <data name="Free" xml:space="preserve">
+    <value>Gratuit</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Open Source</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Accesează panoul de control</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>mai rapid</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Funcționalități</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Utilizare</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Licență MIT</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Construiește-ți următorul proiect important,</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown în HTML</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Realizați mai multe cu Aiursoft Template</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Recenzii</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Ce spun dezvoltatorii noștri</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Instrumente Muzicale</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Site-ul Panoului de Control</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Folosește-l ca fundație pentru SaaS-ul tău, ca backend pentru aplicația ta mobilă, ca site corporativ sau ca blog personal. Posibilitățile sunt nelimitate.</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Iată ce au de spus dezvoltatorii din comunitatea noastră.</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Întrebări frecvente</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Conducător Tehnic</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>Întrebări frecvente</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Iată câteva dintre răspunsurile pe care le căutați.</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Este gratuit să folosești Aiursoft Template?</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>De ce am nevoie pentru a începe?</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Cum îmi implementez aplicația?</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template este alegerea noastră definitivă pentru proiectele enterprise! Este construit pentru dezvoltatori și este ușor, dar puternic. Putem sărim peste toate secțiunile repetitive pentru autentificare și managementul utilizatorilor.</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Da, Aiursoft Template este complet gratuit și open-source sub Licența MIT. Îl puteți utiliza pentru proiecte personale și comerciale fără niciun cost.</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Cum pot obține asistență?</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Vei avea nevoie de .NET 9 SDK, npm și IDE-ul tău preferat, cum ar fi Visual Studio sau JetBrains Rider. Poți găsi ghidul complet de configurare în documentația noastră.</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Puteți obține suport din partea comunității prin GitHub Discussions. Vă rugăm să vizitați pagina noastră de</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>pentru orice întrebări sau pentru a raporta probleme.</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Alătură-te discuțiilor</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Pagina de discuții</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Alăturați-vă comunității noastre și începeți să construiți astăzi!</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>Șablonul este construit pentru o implementare ușoară. Include suport complet pentru Docker, astfel încât poți containeriza aplicația și să o rulezi oriunde. De asemenea, îl poți implementa direct pe IIS, Azure App Service sau pe orice server care suportă ASP.NET Core.</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>Începeți un Proiect Nou</value>
+  </data>
 
 </root>

@@ -114,5 +114,110 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Это шаблонный проект, с которого мы начинаем путешествие...</value>
   </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Использование</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Открытое ПО</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Возможности</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>быстрее</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Бесплатно</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Лицензия MIT</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Перейти в панель управления</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Создайте свой следующий большой проект,</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Отзывы</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Музыкальные инструменты</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Веб-сайт панели управления</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Достигайте большего с Aiursoft Template</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Что говорят наши разработчики</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown в HTML</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Вот что говорят разработчики из нашего сообщества.</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Используйте его как основу для вашего SaaS, бэкенд для мобильного приложения, корпоративный сайт или личный блог. Возможности безграничны.</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Ведущий разработчик</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Андуин</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>ЧАВО</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Часто задаваемые вопросы</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Бесплатно ли использовать Aiursoft Template?</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Вот некоторые из ответов, которые вы, возможно, ищете.</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template — это наш окончательный выбор для корпоративных проектов! Он создан для разработчиков, легковесный, но мощный. Мы можем пропустить всю стандартную работу по аутентификации и управлению пользователями.</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>Что мне нужно, чтобы начать?</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Как развернуть моё приложение?</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Да, Aiursoft Template полностью бесплатен и имеет открытый исходный код под лицензией MIT. Вы можете использовать его для личных и коммерческих проектов без каких-либо затрат.</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Как я могу получить поддержку?</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Вы можете получить поддержку сообщества через GitHub Discussions. Пожалуйста, посетите нашу</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Страница обсуждений</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Вам понадобятся .NET 9 SDK, npm и ваша любимая IDE, например Visual Studio или JetBrains Rider. Полное руководство по настройке вы найдёте в нашей документации.</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>по любым вопросам или для сообщения о проблемах.</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>Шаблон создан для простого развертывания. Он включает полную поддержку Docker, что позволяет контейнеризировать ваше приложение и запускать его где угодно. Вы также можете развернуть его напрямую в IIS, Azure App Service или на любом сервере, который поддерживает ASP.NET Core.</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>Начать новый проект</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Присоединяйтесь к нашему сообществу и начните создавать уже сегодня!</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Присоединиться к обсуждениям</value>
+  </data>
 
 </root>

@@ -114,5 +114,110 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Ini adalah proyek templat, tempat kami memulai perjalanan...</value>
   </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Sumber Terbuka</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Penggunaan</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Fitur</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Lisensi MIT</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Buka dasbor</value>
+  </data>
+  <data name="Free" xml:space="preserve">
+    <value>Gratis</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>lebih cepat</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Bangun hal besar berikutnya Anda,</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Alat Musik</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Raih lebih banyak dengan Aiursoft Template</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Gunakan sebagai fondasi untuk SaaS Anda, backend untuk aplikasi seluler Anda, situs web perusahaan, atau blog pribadi. Kemungkinannya tidak terbatas.</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown ke HTML</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Ulasan</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Situs Web Dashboard</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Apa Kata Developer Kami</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Inilah yang dikatakan para pengembang dari komunitas kami.</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Pemimpin Teknis</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Pertanyaan yang Sering Diajukan</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Berikut adalah beberapa jawaban yang mungkin Anda cari.</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>Apakah Aiursoft Template gratis digunakan?</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>Apa yang saya perlukan untuk memulai?</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template adalah pilihan utama kami untuk proyek perusahaan! Template ini dibangun untuk pengembang, ringan namun bertenaga. Kami bisa melewati semua kode boilerplate untuk autentikasi dan manajemen pengguna.</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Bagaimana cara saya menerapkan aplikasi saya?</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Ya, Aiursoft Template sepenuhnya gratis dan open-source di bawah Lisensi MIT. Anda dapat menggunakannya untuk proyek pribadi dan komersial tanpa biaya apa pun.</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Anda akan memerlukan .NET 9 SDK, npm, dan IDE favorit Anda, seperti Visual Studio atau JetBrains Rider. Anda dapat menemukan panduan penyiapan lengkap di dokumentasi kami.</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Bagaimana saya bisa mendapatkan dukungan?</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Anda bisa mendapatkan dukungan komunitas melalui GitHub Discussions. Silakan kunjungi</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Halaman Diskusi</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>untuk pertanyaan apa pun atau untuk melaporkan masalah.</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>Template ini dibangun untuk kemudahan penerapan. Template ini mencakup dukungan Docker penuh, sehingga Anda dapat meng-container-kan aplikasi Anda dan menjalankannya di mana saja. Anda juga dapat menerapkannya langsung ke IIS, Azure App Service, atau server apa pun yang mendukung ASP.NET Core.</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Bergabung dalam Diskusi</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Bergabunglah dengan komunitas kami dan mulailah membangun hari ini!</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>Mulai Proyek Baru</value>
+  </data>
 
 </root>

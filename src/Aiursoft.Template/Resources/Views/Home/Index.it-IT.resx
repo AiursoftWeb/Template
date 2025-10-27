@@ -114,5 +114,110 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Avvia un nuovo progetto</value>
   </data>
+  <data name="Free" xml:space="preserve">
+    <value>Gratuito</value>
+  </data>
+  <data name="Open Source" xml:space="preserve">
+    <value>Open Source</value>
+  </data>
+  <data name="Go to dashboard" xml:space="preserve">
+    <value>Vai alla dashboard</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Funzionalità</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>più veloce</value>
+  </data>
+  <data name="Usage" xml:space="preserve">
+    <value>Utilizzo</value>
+  </data>
+  <data name="MIT Licence" xml:space="preserve">
+    <value>Licenza MIT</value>
+  </data>
+  <data name="Build your next big thing," xml:space="preserve">
+    <value>Costruisci la tua prossima grande idea,</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown in HTML</value>
+  </data>
+  <data name="Achieve more with Aiursoft Template" xml:space="preserve">
+    <value>Ottieni di più con Aiursoft Template</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Recensioni</value>
+  </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Sito Web del Cruscotto</value>
+  </data>
+  <data name="Music Tools" xml:space="preserve">
+    <value>Strumenti Musicali</value>
+  </data>
+  <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
+    <value>Ecco cosa hanno da dire gli sviluppatori della nostra community.</value>
+  </data>
+  <data name="What our developers say" xml:space="preserve">
+    <value>Cosa dicono i nostri sviluppatori</value>
+  </data>
+  <data name="Anduin" xml:space="preserve">
+    <value>Anduin</value>
+  </data>
+  <data name="Technical Lead" xml:space="preserve">
+    <value>Responsabile Tecnico</value>
+  </data>
+  <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
+    <value>Usalo come base per il tuo SaaS, un backend per la tua app mobile, un sito aziendale o un blog personale. Le possibilità sono infinite.</value>
+  </data>
+  <data name="Frequently asked questions" xml:space="preserve">
+    <value>Domande frequenti</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Here are some of the answers you might be looking for." xml:space="preserve">
+    <value>Ecco alcune delle risposte che potresti cercare.</value>
+  </data>
+  <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
+    <value>È gratuito usare Aiursoft Template?</value>
+  </data>
+  <data name="What do I need to get started?" xml:space="preserve">
+    <value>Di cosa ho bisogno per iniziare?</value>
+  </data>
+  <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
+    <value>Aiursoft Template è la nostra scelta definitiva per i progetti aziendali! È costruito per gli sviluppatori ed è leggero ma potente. Possiamo saltare tutto il codice boilerplate per l&apos;autenticazione e la gestione degli utenti.</value>
+  </data>
+  <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
+    <value>Sì, Aiursoft Template è completamente gratuito e open-source sotto la licenza MIT. Puoi utilizzarlo per progetti personali e commerciali senza alcun costo.</value>
+  </data>
+  <data name="How do I deploy my application?" xml:space="preserve">
+    <value>Come posso distribuire la mia applicazione?</value>
+  </data>
+  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Avrai bisogno del .NET 9 SDK, npm e del tuo IDE preferito, come Visual Studio o JetBrains Rider. Puoi trovare la guida completa per la configurazione nella nostra documentazione.</value>
+  </data>
+  <data name="How can I get support?" xml:space="preserve">
+    <value>Come posso ottenere supporto?</value>
+  </data>
+  <data name="Discussions page" xml:space="preserve">
+    <value>Pagina delle discussioni</value>
+  </data>
+  <data name="You can get community support via GitHub Discussions. Please visit our" xml:space="preserve">
+    <value>Puoi ricevere supporto dalla community tramite GitHub Discussions. Ti preghiamo di visitare la nostra</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>per qualsiasi richiesta o per segnalare problemi.</value>
+  </data>
+  <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
+    <value>Il template è progettato per una distribuzione semplificata. Include il supporto completo per Docker, così puoi containerizzare la tua app ed eseguirla ovunque. Puoi anche distribuirla direttamente su IIS, Azure App Service o qualsiasi server che supporti ASP.NET Core.</value>
+  </data>
+  <data name="Join our community and start building today!" xml:space="preserve">
+    <value>Unisciti alla nostra community e inizia a costruire oggi!</value>
+  </data>
+  <data name="Join Discussions" xml:space="preserve">
+    <value>Partecipa alle Discussioni</value>
+  </data>
+  <data name="Start a New Project" xml:space="preserve">
+    <value>Avvia un Nuovo Progetto</value>
+  </data>
 
 </root>
