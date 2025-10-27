@@ -4,7 +4,7 @@
 [![Pipeline stat](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
 [![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/template.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/commits/master?ref_type=heads)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Ftemplate.aiursoft.cn)](https://template.aiursoft.cn)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Ftemplate.aiursoft.com)](https://template.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/template.svg)](https://hub.docker.com/r/aiursoft/template)
 
 Template is a sample project.
