@@ -1,9 +1,9 @@
 # Template - A sample project
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/blob/master/LICENSE)
-[![Pipeline stat](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
-[![Test Coverage](https://gitlab.aiursoft.cn/aiursoft/template/badges/master/coverage.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/pipelines)
-[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.cn/aiursoft/template.svg)](https://gitlab.aiursoft.cn/aiursoft/template/-/commits/master?ref_type=heads)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/blob/master/LICENSE)
+[![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
+[![Test Coverage](https://gitlab.aiursoft.com/aiursoft/template/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
+[![ManHours](https://manhours.aiursoft.cn/r/gitlab.aiursoft.com/aiursoft/template.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/commits/master?ref_type=heads)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Ftemplate.aiursoft.com)](https://template.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/template.svg)](https://hub.docker.com/r/aiursoft/template)
 
@@ -24,13 +24,13 @@ The following script will install\update this app on your Ubuntu server. Support
 On your Ubuntu server, run the following command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.cn/aiursoft/template/-/raw/master/install.sh | sudo bash
+curl -sL https://gitlab.aiursoft.com/aiursoft/template/-/raw/master/install.sh | sudo bash
 ```
 
 Of course it is suggested that append a custom port number to the command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.cn/aiursoft/template/-/raw/master/install.sh | sudo bash -s 8080
+curl -sL https://gitlab.aiursoft.com/aiursoft/template/-/raw/master/install.sh | sudo bash -s 8080
 ```
 
 It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
