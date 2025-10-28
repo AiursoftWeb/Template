@@ -15,7 +15,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 
 ## Try
 
-Try a running Template [here](https://template.aiursoft.cn).
+Try a running Template [here](https://template.aiursoft.com).
 
 ## Run in Ubuntu
 
