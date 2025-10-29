@@ -1,6 +1,6 @@
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
-    <link rel="stylesheet" href="~/styles/site.css"/>
+    <link rel="stylesheet" href="~/styles/site.css" xmlns="http://www.w3.org/1999/html"/>
 }
 
 <vc:marketing-navbar></vc:marketing-navbar>
@@ -197,16 +197,22 @@
 
                 <div class="row">
                     <div class="col-md-4 py-3">
-                        <img gallery src="https://gitlab.aiursoft.com/aiursoft/template/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Dashboard Website" />
-                        <h4 class="mt-3">@Localizer["Dashboard Website"]</h4>
+                        <a href="https://stathub.aiursoft.com/" target="_blank">
+                            <img gallery src="https://gitlab.aiursoft.com/aiursoft/stathub/-/raw/master/screenshot.png" class="img-fluid" loading="lazy" alt="Dashboard Website" />
+                        </a>
+                        <h4 class="mt-3">StatHub</h4>
                     </div>
                     <div class="col-md-4 py-3">
-                        <img gallery src="https://gitlab.aiursoft.com/aiursoft/musictools/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Music Tools"/>
-                        <h4 class="mt-3">@Localizer["Music Tools"]</h4>
+                        <a href="https://musictools.aiursoft.com/" target="_blank">
+                            <img gallery src="https://gitlab.aiursoft.com/aiursoft/musictools/-/raw/master/screenshot.png" class="img-fluid" loading="lazy" alt="Music Tools"/>
+                        </a>
+                        <h4 class="mt-3">Music Tools</h4>
                     </div>
                     <div class="col-md-4 py-3">
-                        <img gallery src="https://gitlab.aiursoft.com/aiursoft/marktohtml/-/raw/master/screenshot.png" class="img-fluid rounded-3 landing-img" loading="lazy" alt="Markdown To HTML"/>
-                        <h4 class="mt-3">@Localizer["Markdown To HTML"]</h4>
+                        <a href="https://marktohtml.aiursoft.com/" target="_blank">
+                            <img gallery src="https://gitlab.aiursoft.com/aiursoft/marktohtml/-/raw/master/screenshot.png" class="img-fluid" loading="lazy" alt="Markdown To HTML"/>
+                        </a>
+                        <h4 class="mt-3">Markdown To HTML</h4>
                     </div>
                 </div>
             </div>
