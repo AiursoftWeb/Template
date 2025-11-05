@@ -1,10 +1,12 @@
 using Aiursoft.Template.Models.DashboardViewModels;
 using Aiursoft.Template.Services;
 using Aiursoft.UiStack.Navigation;
+using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 
+[LimitPerMin]
 public class DashboardController : Controller
 {
     [RenderInNavBar(

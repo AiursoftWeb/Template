@@ -4,6 +4,7 @@ using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Aiursoft.Template.Models.SystemViewModels;
+using Aiursoft.WebTools.Attributes;
 
 namespace Aiursoft.Template.Controllers;
 
@@ -11,6 +12,7 @@ namespace Aiursoft.Template.Controllers;
 /// This controller is used to handle system related actions like shutdown.
 /// </summary>
 [Authorize]
+[LimitPerMin]
 public class SystemController(ILogger<SystemController> logger) : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanViewSystemContext)]
