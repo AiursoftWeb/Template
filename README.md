@@ -13,6 +13,13 @@ Template is a sample project.
 
 Default user name is `admin@default.com` and default password is `admin123`.
 
+## Projects using Aiursoft Template
+
+* [Stathub](https://gitlab.aiursoft.com/aiursoft/stathub)
+* [MarkToHtml](https://gitlab.aiursoft.com/aiursoft/marktohtml)
+* [MusicTools](https://gitlab.aiursoft.com/aiursoft/musictools)
+* [AnduinOS Home](https://gitlab.aiursoft.com/anduin/AnduinOS-Home)
+
 ## Try
 
 Try a running Template [here](https://template.aiursoft.com).
