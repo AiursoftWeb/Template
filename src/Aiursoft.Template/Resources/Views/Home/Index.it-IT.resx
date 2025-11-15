@@ -111,10 +111,7 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Questo è un progetto template, da cui iniziamo il viaggio...</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Avvia un nuovo progetto</value>
-  </data>
-  <data name="Free" xml:space="preserve">
+   <data name="Free" xml:space="preserve">
     <value>Gratuito</value>
   </data>
   <data name="Open Source" xml:space="preserve">
@@ -192,8 +189,8 @@
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Come posso distribuire la mia applicazione?</value>
   </data>
-  <data name="You&apos;ll need the .NET 9 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
-    <value>Avrai bisogno del .NET 9 SDK, npm e del tuo IDE preferito, come Visual Studio o JetBrains Rider. Puoi trovare la guida completa per la configurazione nella nostra documentazione.</value>
+  <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
+    <value>Avrai bisogno del .NET 10 SDK, npm e del tuo IDE preferito, come Visual Studio o JetBrains Rider. Puoi trovare la guida completa per la configurazione nella nostra documentazione.</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Come posso ottenere supporto?</value>
@@ -216,8 +213,4 @@
   <data name="Join Discussions" xml:space="preserve">
     <value>Partecipa alle Discussioni</value>
   </data>
-  <data name="Start a New Project" xml:space="preserve">
-    <value>Avvia un Nuovo Progetto</value>
-  </data>
-
-</root>
+ </root>
