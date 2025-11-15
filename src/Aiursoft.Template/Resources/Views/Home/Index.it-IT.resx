@@ -111,7 +111,7 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Questo è un progetto template, da cui iniziamo il viaggio...</value>
   </data>
-   <data name="Free" xml:space="preserve">
+  <data name="Free" xml:space="preserve">
     <value>Gratuito</value>
   </data>
   <data name="Open Source" xml:space="preserve">
@@ -213,4 +213,8 @@
   <data name="Join Discussions" xml:space="preserve">
     <value>Partecipa alle Discussioni</value>
   </data>
- </root>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Avvia un nuovo progetto</value>
+  </data>
+
+</root>

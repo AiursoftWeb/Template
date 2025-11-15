@@ -108,7 +108,7 @@
   <data name="Read the document" xml:space="preserve">
     <value>Ler o documento</value>
   </data>
-   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
+  <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Este é um projeto modelo, onde iniciamos a jornada...</value>
   </data>
   <data name="Usage" xml:space="preserve">
@@ -207,11 +207,14 @@
   <data name="Discussions page" xml:space="preserve">
     <value>Página de Discussões</value>
   </data>
-   <data name="Join Discussions" xml:space="preserve">
+  <data name="Join Discussions" xml:space="preserve">
     <value>Participar das Discussões</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>O template foi desenvolvido para facilitar a implantação. Ele inclui suporte completo ao Docker, permitindo que você containerize seu aplicativo e execute em qualquer lugar. Você também pode implantá-lo diretamente no IIS, Azure App Service ou em qualquer servidor que suporte ASP.NET Core.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Iniciar um novo projeto</value>
   </data>
 
 </root>

@@ -105,7 +105,7 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Modo escuro inteligente que se adapta automaticamente às definições do sistema do utilizador.</value>
   </data>
-   <data name="Read the document" xml:space="preserve">
+  <data name="Read the document" xml:space="preserve">
     <value>Ler o documento</value>
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
@@ -213,4 +213,8 @@
   <data name="Join Discussions" xml:space="preserve">
     <value>Participar nas Discussões</value>
   </data>
- </root>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Iniciar um novo projeto</value>
+  </data>
+
+</root>
