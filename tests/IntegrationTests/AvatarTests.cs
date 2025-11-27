@@ -1,10 +1,8 @@
 using System.Net;
-using System.Net.Http.Json;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
@@ -63,6 +61,7 @@ public class AvatarTests
         return match.Groups[1].Value;
     }
 
+    // ReSharper disable once UnusedMethodReturnValue.Local
     private async Task<(string email, string password)> RegisterAndLoginAsync()
     {
         var email = $"test-{Guid.NewGuid()}@aiursoft.com";

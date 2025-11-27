@@ -1,7 +1,4 @@
 using Aiursoft.Template.Services.FileStorage;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
 namespace Aiursoft.Template.Tests;
@@ -76,7 +73,7 @@ public class FileAccessSecurityTest
         mockFile.Setup(f => f.FileName).Returns(fileName);
         mockFile.Setup(f => f.Length).Returns(ms.Length);
         mockFile.Setup(f => f.CopyToAsync(It.IsAny<Stream>(), It.IsAny<CancellationToken>()))
-            .Callback<Stream, CancellationToken>((stream, token) =>
+            .Callback<Stream, CancellationToken>((stream, _) =>
             {
                 ms.Position = 0;
                 ms.CopyTo(stream);
