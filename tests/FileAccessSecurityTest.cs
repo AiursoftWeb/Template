@@ -1,5 +1,4 @@
 using Aiursoft.Template.Services.FileStorage;
-using Moq;
 
 namespace Aiursoft.Template.Tests;
 
@@ -15,10 +14,14 @@ public class FileAccessSecurityTest
         _tempPath = Path.Combine(Path.GetTempPath(), "AiursoftTemplateTest_" + Guid.NewGuid());
         Directory.CreateDirectory(_tempPath);
 
-        var mockConfig = new Mock<IConfiguration>();
-        mockConfig.Setup(x => x["Storage:Path"]).Returns(_tempPath);
+        var config = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string?>
+            {
+                { "Storage:Path", _tempPath }
+            })
+            .Build();
 
-        _storageService = new StorageService(mockConfig.Object);
+        _storageService = new StorageService(config);
     }
 
     [TestCleanup]
@@ -60,7 +63,6 @@ public class FileAccessSecurityTest
     [TestMethod]
     public async Task TestSave_NormalAccess()
     {
-        var mockFile = new Mock<IFormFile>();
         var content = "Hello World";
         var fileName = "test_upload.txt";
         var ms = new MemoryStream();
@@ -69,18 +71,9 @@ public class FileAccessSecurityTest
         writer.Flush();
         ms.Position = 0;
 
-        mockFile.Setup(f => f.OpenReadStream()).Returns(ms);
-        mockFile.Setup(f => f.FileName).Returns(fileName);
-        mockFile.Setup(f => f.Length).Returns(ms.Length);
-        mockFile.Setup(f => f.CopyToAsync(It.IsAny<Stream>(), It.IsAny<CancellationToken>()))
-            .Callback<Stream, CancellationToken>((stream, _) =>
-            {
-                ms.Position = 0;
-                ms.CopyTo(stream);
-            })
-            .Returns(Task.CompletedTask);
+        var formFile = new FormFile(ms, 0, ms.Length, "file", fileName);
 
-        var savedPath = await _storageService.Save("uploads/" + fileName, mockFile.Object);
+        var savedPath = await _storageService.Save("uploads/" + fileName, formFile);
 
         StringAssert.Contains(savedPath, "uploads");
         StringAssert.Contains(savedPath, fileName);
@@ -92,10 +85,12 @@ public class FileAccessSecurityTest
     [DataRow("/absolute/path/malicious.txt")]
     public async Task TestSave_PathTraversal(string maliciousPath)
     {
-        var mockFile = new Mock<IFormFile>();
+        var ms = new MemoryStream();
+        var formFile = new FormFile(ms, 0, 0, "file", "dummy.txt");
+
         try
         {
-            await _storageService.Save(maliciousPath, mockFile.Object);
+            await _storageService.Save(maliciousPath, formFile);
             Assert.Fail("Expected ArgumentException was not thrown.");
         }
         catch (ArgumentException)
