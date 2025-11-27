@@ -181,7 +181,7 @@ public class AvatarTests
         Assert.AreEqual("image/png", compressedResponse.Content.Headers.ContentType?.MediaType);
 
         // Verify dimensions
-        using var stream = await compressedResponse.Content.ReadAsStreamAsync();
+        await using var stream = await compressedResponse.Content.ReadAsStreamAsync();
         using var image = await SixLabors.ImageSharp.Image.LoadAsync(stream);
         Assert.AreEqual(128, image.Width);
         Assert.AreEqual(256, image.Height);
@@ -216,7 +216,7 @@ public class AvatarTests
         Assert.AreEqual("image/png", compressedResponse.Content.Headers.ContentType?.MediaType);
 
         // Verify dimensions
-        using var stream = await compressedResponse.Content.ReadAsStreamAsync();
+        await using var stream = await compressedResponse.Content.ReadAsStreamAsync();
         using var image = await SixLabors.ImageSharp.Image.LoadAsync(stream);
         Assert.AreEqual(128, image.Width);
         Assert.AreEqual(128, image.Height);
@@ -224,7 +224,7 @@ public class AvatarTests
 
     private class UploadResult
     {
-        public string Path { get; set; } = string.Empty;
-        public string InternetPath { get; set; } = string.Empty;
+        public string Path { get; init; } = string.Empty;
+        public string InternetPath { get; init; } = string.Empty;
     }
 }
