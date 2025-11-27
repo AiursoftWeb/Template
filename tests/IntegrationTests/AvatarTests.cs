@@ -7,6 +7,9 @@ using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
+// JB scanner bug. Not a warning.
+#pragma warning disable CS8602
+
 [TestClass]
 public class AvatarTests
 {
@@ -231,3 +234,4 @@ public class AvatarTests
         public string InternetPath { get; init; } = string.Empty;
     }
 }
+#pragma warning restore CS8602
