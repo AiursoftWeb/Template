@@ -140,6 +140,7 @@ public class AvatarTests
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
         Assert.IsNotNull(uploadResult);
+        Assert.IsNotNull(uploadResult.InternetPath);
 
         // 3. Test Clear EXIF (Default download)
         var downloadResponse = await _http.GetAsync(uploadResult.InternetPath);
@@ -172,6 +173,7 @@ public class AvatarTests
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
         Assert.IsNotNull(uploadResult);
+        Assert.IsNotNull(uploadResult.InternetPath);
 
         // 3. Test Compression
         var compressedResponse = await _http.GetAsync(uploadResult.InternetPath + "?w=100");
@@ -207,6 +209,7 @@ public class AvatarTests
 
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
         Assert.IsNotNull(uploadResult);
+        Assert.IsNotNull(uploadResult.InternetPath);
 
         // 3. Test Compression
         var compressedResponse = await _http.GetAsync(uploadResult.InternetPath + "?w=100&square=true");
