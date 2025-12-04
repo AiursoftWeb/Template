@@ -19,6 +19,8 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [MarkToHtml](https://gitlab.aiursoft.com/aiursoft/marktohtml)
 * [MusicTools](https://gitlab.aiursoft.com/aiursoft/musictools)
 * [AnduinOS Home](https://gitlab.aiursoft.com/anduin/AnduinOS-Home)
+* [Manhours](https://gitlab.aiursoft.com/aiursoft/manhours)
+* [Tracer](https://gitlab.aiursoft.com/aiursoft/tracer)
 
 ## Try
 
