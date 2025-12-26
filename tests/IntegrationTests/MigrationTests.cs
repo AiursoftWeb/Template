@@ -1,7 +1,6 @@
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
