@@ -45,5 +45,11 @@
   <data name="All Roles" xml:space="preserve">
     <value>Все роли</value>
   </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Разрешения</value>
+  </data>
+  <data name="No permissions" xml:space="preserve">
+    <value>Нет разрешений</value>
+  </data>
 
 </root>

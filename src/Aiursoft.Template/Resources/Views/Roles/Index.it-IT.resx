@@ -45,5 +45,11 @@
   <data name="Select a role to view its details, or use the actions to edit or delete." xml:space="preserve">
     <value>Seleziona un ruolo per visualizzarne i dettagli, oppure utilizza le azioni per modificare o eliminare.</value>
   </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Autorizzazioni</value>
+  </data>
+  <data name="No permissions" xml:space="preserve">
+    <value>Nessuna autorizzazione</value>
+  </data>
 
 </root>
