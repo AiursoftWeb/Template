@@ -84,5 +84,11 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>एप्लिकेशन इंस्टेंस को पुनरारंभ करने की अनुमति प्रदान करता है। इससे उपलब्धता में व्यवधान हो सकता है, लेकिन सभी सेटिंग्स और कैश पुनः लोड हो जाएंगे।</value>
   </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>अनुमतियाँ पढ़ें</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>सभी अनुमतियों की सूची और उनके भूमिकाओं तथा उपयोगकर्ताओं को असाइनमेंट देखने की अनुमति देता है।</value>
+  </data>
 
 </root>

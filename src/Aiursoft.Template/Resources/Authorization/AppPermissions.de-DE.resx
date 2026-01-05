@@ -84,5 +84,11 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Erteilt die Berechtigung, die Anwendungsinstanz neu zu starten. Kann zu Verfügbarkeitsunterbrechungen führen, aber alle Einstellungen und der Cache werden neu geladen.</value>
   </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Berechtigungen lesen</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Ermöglicht das Anzeigen der Liste aller Berechtigungen und ihrer Zuweisungen zu Rollen und Benutzern.</value>
+  </data>
 
 </root>

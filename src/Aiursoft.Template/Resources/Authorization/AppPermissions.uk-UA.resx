@@ -84,5 +84,11 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Надає дозвіл на перезапуск екземпляра програми. Може призвести до перерв у доступності, але всі налаштування та кеш буде перезавантажено.</value>
   </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Читати дозволи</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Дозволяє переглядати список усіх дозволів та їх призначення ролям і користувачам.</value>
+  </data>
 
 </root>
