@@ -84,5 +84,11 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Grants permission to restart the application instance. May cause service interruptions, but all settings and cache will be reloaded.</value>
   </data>
+  <data name="Read Permissions" xml:space="preserve">
+    <value>Read Permissions</value>
+  </data>
+  <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
+    <value>Allows viewing the list of all permissions and their assignments to roles and users.</value>
+  </data>
 
 </root>
