@@ -18,38 +18,38 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Description" xml:space="preserve">
-    <value>Opis</value>
-  </data>
-  <data name="Permissions" xml:space="preserve">
-    <value>Uprawnienia</value>
-  </data>
-  <data name="Permission Name" xml:space="preserve">
-    <value>Nazwa uprawnienia</value>
-  </data>
-  <data name="role(s)" xml:space="preserve">
-    <value>rola/role</value>
-  </data>
-  <data name="All Permissions" xml:space="preserve">
+      <data name="All Permissions" xml:space="preserve">
     <value>Wszystkie uprawnienia</value>
   </data>
   <data name="Assigned to Roles" xml:space="preserve">
     <value>Przypisane do ról</value>
   </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Użytkownicy z uprawnieniem</value>
-  </data>
-  <data name="user(s)" xml:space="preserve">
-    <value>użytkownik(ów)</value>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
   </data>
   <data name="No users" xml:space="preserve">
     <value>Brak użytkowników</value>
   </data>
+  <data name="Not assigned" xml:space="preserve">
+    <value>Nieprzypisane</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>Nazwa uprawnienia</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Uprawnienia</value>
+  </data>
   <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
     <value>Uprawnienia są zdefiniowane przez aplikację i nie można ich edytować ani usuwać. Kliknij uprawnienie, aby zobaczyć, które role i użytkownicy je posiadają.</value>
   </data>
-  <data name="Not assigned" xml:space="preserve">
-    <value>Nieprzypisane</value>
+  <data name="role(s)" xml:space="preserve">
+    <value>rola/role</value>
+  </data>
+  <data name="user(s)" xml:space="preserve">
+    <value>użytkownik(ów)</value>
+  </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Użytkownicy z uprawnieniem</value>
   </data>
 
 </root>

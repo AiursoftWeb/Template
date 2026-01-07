@@ -18,14 +18,23 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Permission Key" xml:space="preserve">
-    <value>Klucz uprawnienia</value>
+      <data name="Back to Permissions" xml:space="preserve">
+    <value>Powrót do Uprawnień</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>Opis</value>
   </data>
-  <data name="Permission Name" xml:space="preserve">
-    <value>Nazwa uprawnienia</value>
+  <data name="Display Name" xml:space="preserve">
+    <value>Wyświetlana nazwa</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="No roles have this permission." xml:space="preserve">
+    <value>Żadne role nie mają tego uprawnienia.</value>
+  </data>
+  <data name="No users have this permission." xml:space="preserve">
+    <value>Żaden użytkownik nie ma tego uprawnienia.</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Szczegóły uprawnienia</value>
@@ -33,38 +42,29 @@
   <data name="Permission Information" xml:space="preserve">
     <value>Informacje o uprawnieniu</value>
   </data>
-  <data name="Roles with this Permission" xml:space="preserve">
-    <value>Role z tym uprawnieniem</value>
+  <data name="Permission Key" xml:space="preserve">
+    <value>Klucz uprawnienia</value>
   </data>
-  <data name="Back to Permissions" xml:space="preserve">
-    <value>Powrót do Uprawnień</value>
-  </data>
-  <data name="The following roles have been granted this permission." xml:space="preserve">
-    <value>Następujące role otrzymały to uprawnienie.</value>
+  <data name="Permission Name" xml:space="preserve">
+    <value>Nazwa uprawnienia</value>
   </data>
   <data name="Role Name" xml:space="preserve">
     <value>Nazwa roli</value>
   </data>
-  <data name="Users with this Permission" xml:space="preserve">
-    <value>Użytkownicy z tym uprawnieniem</value>
+  <data name="Roles with this Permission" xml:space="preserve">
+    <value>Role z tym uprawnieniem</value>
   </data>
-  <data name="No roles have this permission." xml:space="preserve">
-    <value>Żadne role nie mają tego uprawnienia.</value>
-  </data>
-  <data name="User Name" xml:space="preserve">
-    <value>Nazwa użytkownika</value>
-  </data>
-  <data name="Email" xml:space="preserve">
-    <value>E-mail</value>
+  <data name="The following roles have been granted this permission." xml:space="preserve">
+    <value>Następujące role otrzymały to uprawnienie.</value>
   </data>
   <data name="The following users have this permission through their role memberships." xml:space="preserve">
     <value>Następujący użytkownicy posiadają to uprawnienie dzięki członkostwu w rolach.</value>
   </data>
-  <data name="Display Name" xml:space="preserve">
-    <value>Wyświetlana nazwa</value>
+  <data name="User Name" xml:space="preserve">
+    <value>Nazwa użytkownika</value>
   </data>
-  <data name="No users have this permission." xml:space="preserve">
-    <value>Żaden użytkownik nie ma tego uprawnienia.</value>
+  <data name="Users with this Permission" xml:space="preserve">
+    <value>Użytkownicy z tym uprawnieniem</value>
   </data>
 
 </root>
