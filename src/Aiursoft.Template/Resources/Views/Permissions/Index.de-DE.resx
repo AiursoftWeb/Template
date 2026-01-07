@@ -18,38 +18,38 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Description" xml:space="preserve">
-    <value>Beschreibung</value>
-  </data>
-  <data name="role(s)" xml:space="preserve">
-    <value>Rolle(n)</value>
-  </data>
-  <data name="Permissions" xml:space="preserve">
-    <value>Berechtigungen</value>
-  </data>
-  <data name="Permission Name" xml:space="preserve">
-    <value>Berechtigungsname</value>
+      <data name="All Permissions" xml:space="preserve">
+    <value>Alle Berechtigungen</value>
   </data>
   <data name="Assigned to Roles" xml:space="preserve">
     <value>Rollen zugewiesen</value>
   </data>
-  <data name="All Permissions" xml:space="preserve">
-    <value>Alle Berechtigungen</value>
-  </data>
-  <data name="Users with Permission" xml:space="preserve">
-    <value>Benutzer mit Berechtigung</value>
-  </data>
-  <data name="user(s)" xml:space="preserve">
-    <value>Benutzer</value>
-  </data>
-  <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
-    <value>Berechtigungen werden von der Anwendung definiert und können nicht bearbeitet oder gelöscht werden. Klicken Sie auf eine Berechtigung, um zu sehen, welche Rollen und Benutzer sie besitzen.</value>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
   </data>
   <data name="No users" xml:space="preserve">
     <value>Keine Benutzer</value>
   </data>
   <data name="Not assigned" xml:space="preserve">
     <value>Nicht zugewiesen</value>
+  </data>
+  <data name="Permission Name" xml:space="preserve">
+    <value>Berechtigungsname</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Berechtigungen</value>
+  </data>
+  <data name="Permissions are defined by the application and cannot be edited or deleted. Click on a permission to see which roles and users have it." xml:space="preserve">
+    <value>Berechtigungen werden von der Anwendung definiert und können nicht bearbeitet oder gelöscht werden. Klicken Sie auf eine Berechtigung, um zu sehen, welche Rollen und Benutzer sie besitzen.</value>
+  </data>
+  <data name="role(s)" xml:space="preserve">
+    <value>Rolle(n)</value>
+  </data>
+  <data name="user(s)" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="Users with Permission" xml:space="preserve">
+    <value>Benutzer mit Berechtigung</value>
   </data>
 
 </root>
