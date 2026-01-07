@@ -5,11 +5,7 @@ using Aiursoft.Template.Models.BackgroundJobs;
 using Aiursoft.Template.Services.BackgroundJobs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Aiursoft.WebTools;
-using Aiursoft.Template.Models.HomeViewModels;
 using Aiursoft.Template.Services;
-using Aiursoft.WebTools.Attributes;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Aiursoft.Template.Controllers;
 

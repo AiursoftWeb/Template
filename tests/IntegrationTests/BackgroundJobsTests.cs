@@ -2,6 +2,9 @@ using System.Net;
 using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
+using Aiursoft.Template.Entities;
+using Aiursoft.Template.Models.BackgroundJobs;
+using Aiursoft.Template.Services.BackgroundJobs;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
