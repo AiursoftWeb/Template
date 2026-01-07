@@ -60,7 +60,10 @@ public class AppPermissions
                 localizer["Allows viewing system-level information and settings."]),
             new(AppPermissionNames.CanRebootThisApp,
                 localizer["Reboot This App"],
-                localizer["Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded."])
+                localizer["Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded."]),
+            new(AppPermissionNames.CanViewBackgroundJobs,
+                localizer["View Background Jobs"],
+                localizer["Allows viewing the background job dashboard and managing jobs."])
         ];
         return allPermission;
     }

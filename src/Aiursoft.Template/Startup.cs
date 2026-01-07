@@ -43,6 +43,10 @@ public class Startup : IWebStartup
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
 
+        // Background job queue
+        services.AddSingleton<Services.BackgroundJobs.BackgroundJobQueue>();
+        services.AddHostedService<Services.BackgroundJobs.QueueWorkerService>();
+
         // Controllers and localization
         services.AddControllersWithViews()
             .AddNewtonsoftJson(options =>

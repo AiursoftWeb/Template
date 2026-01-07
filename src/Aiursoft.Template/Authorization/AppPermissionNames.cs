@@ -24,4 +24,5 @@ public static class AppPermissionNames
     // System Management
     public const string CanViewSystemContext = nameof(CanViewSystemContext);
     public const string CanRebootThisApp = nameof(CanRebootThisApp);
+    public const string CanViewBackgroundJobs = nameof(CanViewBackgroundJobs);
 }
