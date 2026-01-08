@@ -63,7 +63,10 @@ public class AppPermissions
                 localizer["Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded."]),
             new(AppPermissionNames.CanViewBackgroundJobs,
                 localizer["View Background Jobs"],
-                localizer["Allows viewing the background job dashboard and managing jobs."])
+                localizer["Allows viewing the background job dashboard and managing jobs."]),
+            new(AppPermissionNames.CanManageGlobalSettings,
+                localizer["Manage Global Settings"],
+                localizer["Allows viewing and modifying global application settings."])
         ];
         return allPermission;
     }

@@ -96,5 +96,10 @@
   <data name="View System Context" xml:space="preserve">
     <value>View System Context</value>
   </data>
-
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Manage Global Settings</value>
+  </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Allows viewing and modifying global application settings.</value>
+  </data>
 </root>
