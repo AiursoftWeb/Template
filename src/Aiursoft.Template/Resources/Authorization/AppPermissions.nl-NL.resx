@@ -39,6 +39,9 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Staat het permanent verwijderen van gebruikersaccounts toe.</value>
   </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Staats het bekijken en wijzigen van globale toepassingsinstellingen toe.</value>
+  </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Staat het bekijken van systeeminformatie en -instellingen toe.</value>
   </data>
@@ -77,6 +80,9 @@
   </data>
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Verleent toestemming om de applicatie-instantie opnieuw op te starten. Kan beschikbaarheidsonderbrekingen veroorzaken, maar alle instellingen en cache worden opnieuw geladen.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Algemene instellingen beheren</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Leesmachtigingen</value>

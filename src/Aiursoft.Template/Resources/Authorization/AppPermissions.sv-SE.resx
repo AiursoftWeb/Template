@@ -39,6 +39,9 @@
   <data name="Allows the permanent deletion of user accounts." xml:space="preserve">
     <value>Tillåter permanent borttagning av användarkonton.</value>
   </data>
+  <data name="Allows viewing and modifying global application settings." xml:space="preserve">
+    <value>Tillåter visning och ändring av globala programinställningar.</value>
+  </data>
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Ger tillgång att visa systemnivåinformation och inställningar.</value>
   </data>
@@ -77,6 +80,9 @@
   </data>
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Ger tillstånd att starta om applikationsinstansen. Kan orsaka tillgänglighetsavbrott men alla inställningar och cacheminnen kommer att laddas om.</value>
+  </data>
+  <data name="Manage Global Settings" xml:space="preserve">
+    <value>Hantera globala inställningar</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Läs behörigheter</value>
