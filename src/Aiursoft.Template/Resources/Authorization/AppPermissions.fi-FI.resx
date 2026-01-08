@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Mahdollistaa järjestelmätason tietojen ja asetusten tarkastelemisen.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Salli taustatehtävien hallintapaneelin tarkastelun ja tehtävien hallinnan.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Mahdollistaa kaikkien käyttöoikeuksien ja niiden määritysten tarkastelemisen rooleille ja käyttäjille.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Käynnistä tämä sovellus uudelleen</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Näytä taustatehtävät</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Näytä järjestelmän konteksti</value>

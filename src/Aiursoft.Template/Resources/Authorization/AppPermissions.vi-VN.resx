@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Cho phép xem thông tin và cài đặt ở cấp hệ thống.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Cho phép xem bảng điều khiển công việc nền và quản lý các công việc.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Cho phép xem danh sách tất cả các quyền và việc gán chúng cho vai trò và người dùng.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Khởi Động Lại Ứng Dụng Này</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Xem các nhiệm vụ nền</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Xem Ngữ cảnh Hệ thống</value>

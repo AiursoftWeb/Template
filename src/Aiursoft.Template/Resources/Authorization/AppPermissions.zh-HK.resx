@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>允許查看系統級資訊和設定。</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>容許檢視背景作業儀表板及管理作業。</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>允許查看所有權限及其分配給角色和用戶的清單。</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>重新啟動此應用程式</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>檢視背景作業</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>檢視系統內容</value>

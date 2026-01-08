@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Ermöglicht das Anzeigen von systemweiten Informationen und Einstellungen.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Erlaubt das Anzeigen der Hintergrundaufgabenübersicht und die Verwaltung von Aufgaben.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Ermöglicht das Anzeigen der Liste aller Berechtigungen und ihrer Zuweisungen zu Rollen und Benutzern.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Diese App neu starten</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Hintergrundaufträge anzeigen</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Systemkontext anzeigen</value>

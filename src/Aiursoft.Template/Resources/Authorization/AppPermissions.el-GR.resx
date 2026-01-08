@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Επιτρέπει την προβολή πληροφοριών και ρυθμίσεων σε επίπεδο συστήματος.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Επιτρέπει την προβολή του πίνακα ελέγχου των εργασιών στο παρασκήνιο και τη διαχείριση των εργασιών.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Επιτρέπει την προβολή της λίστας όλων των δικαιωμάτων και των αναθέσεών τους σε ρόλους και χρήστες.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Επανεκκίνηση αυτής της εφαρμογής</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Προβολή Εργασιών Παρασκηνίου</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Προβολή Συστημικού Περιεχομένου</value>
