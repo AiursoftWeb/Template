@@ -30,6 +30,9 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
+  <data name="Background Jobs" xml:space="preserve">
+    <value>Bakgrundsjobb</value>
+  </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Byt avatar</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Behörigheter</value>
   </data>
   <data name="Personal" xml:space="preserve">
     <value>Personligt</value>
