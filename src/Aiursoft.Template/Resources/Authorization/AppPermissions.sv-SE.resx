@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Ger tillgång att visa systemnivåinformation och inställningar.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Tillåter visning av bakgrundsjobbets instrumentpanel och hantering av jobb.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Tillåter att visa listan över alla behörigheter och deras tilldelningar till roller och användare.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Starta om den här appen</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Visa bakgrundsjobb</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Visa systemkontext</value>

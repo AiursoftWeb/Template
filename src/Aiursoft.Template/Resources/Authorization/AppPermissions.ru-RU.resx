@@ -42,6 +42,9 @@
   <data name="Allows viewing system-level information and settings." xml:space="preserve">
     <value>Разрешает просмотр системной информации и настроек.</value>
   </data>
+  <data name="Allows viewing the background job dashboard and managing jobs." xml:space="preserve">
+    <value>Позволяет просматривать панель мониторинга фоновых заданий и управлять заданиями.</value>
+  </data>
   <data name="Allows viewing the list of all permissions and their assignments to roles and users." xml:space="preserve">
     <value>Позволяет просматривать список всех разрешений и их назначений ролям и пользователям.</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Reboot This App" xml:space="preserve">
     <value>Перезапустить это приложение</value>
+  </data>
+  <data name="View Background Jobs" xml:space="preserve">
+    <value>Просмотр фоновых заданий</value>
   </data>
   <data name="View System Context" xml:space="preserve">
     <value>Просмотр контекста системы</value>
