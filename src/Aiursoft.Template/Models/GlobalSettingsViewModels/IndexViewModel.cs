@@ -19,6 +19,6 @@ public class SettingViewModel
     public required SettingType Type { get; set; }
     public string? Value { get; set; }
     public required string DefaultValue { get; set; }
-    public bool IsOverriddenByEnv { get; set; }
+    public bool IsOverriddenByConfig { get; set; }
     public Dictionary<string, string>? ChoiceOptions { get; set; }
 }

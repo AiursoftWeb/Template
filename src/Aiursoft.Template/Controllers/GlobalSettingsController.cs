@@ -34,7 +34,7 @@ public class GlobalSettingsController(GlobalSettingsService settingsService) : C
                 DefaultValue = definition.DefaultValue,
                 ChoiceOptions = definition.ChoiceOptions,
                 Value = await settingsService.GetSettingValueAsync(definition.Key),
-                IsOverriddenByEnv = settingsService.IsOverriddenByEnv(definition.Key)
+                IsOverriddenByConfig = settingsService.IsOverriddenByConfig(definition.Key)
             });
         }
         return this.StackView(model);

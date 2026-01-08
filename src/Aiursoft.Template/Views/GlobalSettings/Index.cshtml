@@ -10,7 +10,7 @@
 <div class="card">
     <div class="card-header">
         <h5 class="card-title">@Localizer["System Configuration"]</h5>
-        <h6 class="card-subtitle text-muted">@Localizer["Manage global application settings. Environment variable overrides are read-only."]</h6>
+        <h6 class="card-subtitle text-muted">@Localizer["Manage global application settings. Configuration overrides are read-only."]</h6>
     </div>
     <div class="table-responsive">
         <table class="table table-hover mb-0">
@@ -28,14 +28,14 @@
                 <tr>
                     <td>
                         <code>@item.Key</code>
-                        @if (item.IsOverriddenByEnv)
+                        @if (item.IsOverriddenByConfig)
                         {
-                            <span class="badge bg-warning text-dark ms-1" title="@Localizer["This setting is overridden by an environment variable."]"><i class="align-middle" data-lucide="shield-alert"></i> ENV</span>
+                            <span class="badge bg-warning text-dark ms-1" title="@Localizer["This setting is overridden by configuration."]"><i class="align-middle" data-lucide="shield-alert"></i> CFG</span>
                         }
                     </td>
                     <td>@item.Description</td>
                     <td>
-                        @if (item.IsOverriddenByEnv)
+                        @if (item.IsOverriddenByConfig)
                         {
                             <span class="text-muted">@item.Value</span>
                         }
@@ -78,7 +78,7 @@
                         }
                     </td>
                     <td class="text-end">
-                        @if (item.Value != item.DefaultValue && !item.IsOverriddenByEnv)
+                        @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
                         {
                             <form asp-action="Edit" method="post" class="d-inline">
                                 <input type="hidden" name="Key" value="@item.Key" />

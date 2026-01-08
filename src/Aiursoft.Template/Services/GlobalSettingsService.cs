@@ -10,11 +10,11 @@ public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration c
 {
     public async Task<string> GetSettingValueAsync(string key)
     {
-        // 1. Check environment variable
-        var envValue = configuration[key];
-        if (!string.IsNullOrWhiteSpace(envValue))
+        // 1. Check configuration (Environment variables, appsettings.json, etc.)
+        var configValue = configuration[$"GlobalSettings:{key}"] ?? configuration[key];
+        if (!string.IsNullOrWhiteSpace(configValue))
         {
-            return envValue;
+            return configValue;
         }
 
         // 2. Check database
@@ -35,16 +35,17 @@ public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration c
         return bool.TryParse(value, out var result) && result;
     }
 
-    public bool IsOverriddenByEnv(string key)
+    public bool IsOverriddenByConfig(string key)
     {
-        return !string.IsNullOrWhiteSpace(configuration[key]);
+        return !string.IsNullOrWhiteSpace(configuration[$"GlobalSettings:{key}"]) || 
+               !string.IsNullOrWhiteSpace(configuration[key]);
     }
 
     public async Task UpdateSettingAsync(string key, string value)
     {
-        if (IsOverriddenByEnv(key))
+        if (IsOverriddenByConfig(key))
         {
-            throw new InvalidOperationException($"Setting {key} is overridden by environment variable and cannot be updated in database.");
+            throw new InvalidOperationException($"Setting {key} is overridden by configuration and cannot be updated in database.");
         }
 
         var definition = SettingsMap.Definitions.FirstOrDefault(d => d.Key == key) 
@@ -97,10 +98,13 @@ public class GlobalSettingsService(TemplateDbContext dbContext, IConfiguration c
             var exists = await dbContext.GlobalSettings.AnyAsync(s => s.Key == definition.Key);
             if (!exists)
             {
+                var initialValue = configuration[$"GlobalSettings:{definition.Key}"] 
+                                   ?? configuration[definition.Key] 
+                                   ?? definition.DefaultValue;
                 dbContext.GlobalSettings.Add(new GlobalSetting
                 {
                     Key = definition.Key,
-                    Value = definition.DefaultValue
+                    Value = initialValue
                 });
             }
         }
