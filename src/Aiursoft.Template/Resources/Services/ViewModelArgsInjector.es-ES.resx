@@ -75,6 +75,9 @@
   <data name="Features" xml:space="preserve">
     <value>Características</value>
   </data>
+  <data name="Global Settings" xml:space="preserve">
+    <value>Ajustes globales</value>
+  </data>
   <data name="Home" xml:space="preserve">
     <value>Inicio</value>
   </data>
