@@ -2,6 +2,7 @@ using System.Net;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
+using Aiursoft.Template.Models.ManageViewModels;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
@@ -46,20 +47,14 @@ public class ThemeControllerTests
     }
 
     [TestMethod]
-    public async Task SwitchTheme()
+    public async Task TestSwitchTheme()
     {
-        // Theme/SwitchTheme is POST usually, let's check
-        // If it is POST, GET might return 405 or 404
+        var model = new SwitchThemeViewModel { Theme = "dark" };
+        var response = await _http.PostAsJsonAsync("/api/switch-theme", model);
+        response.EnsureSuccessStatusCode();
         
-        // Based on my grep, it takes [FromBody]SwitchThemeViewModel
-        // We can try to POST.
-        
-        var url = "/Theme/SwitchTheme";
-        var content = new StringContent("{}", System.Text.Encoding.UTF8, "application/json");
-        var response = await _http.PostAsync(url, content);
-        
-        // Assert
-        // We expect it to do something, maybe redirect or OK
-        Assert.IsNotNull(response);
+        // Verify cookie
+        var cookies = response.Headers.GetValues("Set-Cookie");
+        Assert.IsTrue(cookies.Any(c => c.Contains("prefer-dark=True")));
     }
 }

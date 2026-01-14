@@ -1,5 +1,7 @@
 using System.Net;
+using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
+using Aiursoft.Template.Services;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
 using static Aiursoft.WebTools.Extends;
@@ -45,19 +47,54 @@ public class ManageControllerTests
         _server.Dispose();
     }
 
-    [TestMethod]
-    public async Task GetIndex()
+    private async Task<string> GetAntiCsrfToken(string url)
     {
-        // This is a basic test to ensure the controller is reachable.
-        // Adjust the path as necessary for specific controllers.
-        var url = "/Manage/Index";
-        
         var response = await _http.GetAsync(url);
-        
-        // Assert
-        // For some controllers, it might redirect to login, which is 302.
-        // For others, it might be 200.
-        // We just check if we get a response.
-        Assert.IsNotNull(response);
+        response.EnsureSuccessStatusCode();
+        var html = await response.Content.ReadAsStringAsync();
+        var match = Regex.Match(html, @"<input name=""__RequestVerificationToken"" type=""hidden"" value=""([^""]+)"" />");
+        return match.Groups[1].Value;
+    }
+
+    private async Task LoginAsync(string email, string password)
+    {
+        var token = await GetAntiCsrfToken("/Account/Login");
+        var loginContent = new FormUrlEncodedContent(new Dictionary<string, string>
+        {
+            { "EmailOrUserName", email },
+            { "Password", password },
+            { "__RequestVerificationToken", token }
+        });
+        var response = await _http.PostAsync("/Account/Login", loginContent);
+        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestManageWorkflow()
+    {
+        await LoginAsync("admin@default.com", "admin123");
+
+        // Ensure AllowUserAdjustNickname is true
+        using (var scope = _server!.Services.CreateScope())
+        {
+            var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
+            await settingsService.UpdateSettingAsync(Configuration.SettingsMap.AllowUserAdjustNickname, "True");
+        }
+
+        // 1. Index
+        var indexResponse = await _http.GetAsync("/Manage/Index");
+        indexResponse.EnsureSuccessStatusCode();
+
+        // 2. ChangePassword (GET)
+        var changePasswordPage = await _http.GetAsync("/Manage/ChangePassword");
+        changePasswordPage.EnsureSuccessStatusCode();
+
+        // 3. ChangeProfile (GET)
+        var changeProfilePage = await _http.GetAsync("/Manage/ChangeProfile");
+        changeProfilePage.EnsureSuccessStatusCode();
+
+        // 4. ChangeAvatar (GET)
+        var changeAvatarPage = await _http.GetAsync("/Manage/ChangeAvatar");
+        changeAvatarPage.EnsureSuccessStatusCode();
     }
 }
