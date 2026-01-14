@@ -1,4 +1,3 @@
-using Aiursoft.Template.Authorization;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.PermissionsViewModels;
@@ -11,11 +10,4 @@ public class IndexViewModel : UiStackLayoutViewModel
     }
 
     public required List<PermissionWithRoleCount> Permissions { get; init; }
-}
-
-public class PermissionWithRoleCount
-{
-    public required PermissionDescriptor Permission { get; init; }
-    public required int RoleCount { get; init; }
-    public required int UserCount { get; init; }
 }

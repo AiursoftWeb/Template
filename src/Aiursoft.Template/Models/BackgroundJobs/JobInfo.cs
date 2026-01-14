@@ -1,18 +1,6 @@
 namespace Aiursoft.Template.Models.BackgroundJobs;
 
 /// <summary>
-/// Represents the status of a background job.
-/// </summary>
-public enum JobStatus
-{
-    Pending,
-    Processing,
-    Success,
-    Failed,
-    Cancelled
-}
-
-/// <summary>
 /// Represents a background job in the queue system.
 /// </summary>
 public class JobInfo

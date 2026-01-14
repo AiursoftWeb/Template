@@ -7,11 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace Aiursoft.Template.Models.UsersViewModels;
 
 // Manage if a role is selected or not in the UI.
-public class UserRoleViewModel
-{
-    public required string RoleName { get; set; }
-    public bool IsSelected { get; set; }
-}
 
 public class EditViewModel : UiStackLayoutViewModel
 {
@@ -42,7 +37,7 @@ public class EditViewModel : UiStackLayoutViewModel
     [NotNull]
     [Display(Name = "Avatar file")]
     [Required(ErrorMessage = "The avatar file is required.")]
-    [RegularExpression(@"^Workspace/avatar.*", ErrorMessage = "The avatar file is invalid. Please upload it again.")]
+    [RegularExpression(@"^avatar.*", ErrorMessage = "The avatar file is invalid. Please upload it again.")]
     [MaxLength(150)]
     [MinLength(2)]
     public string? AvatarUrl { get; set; }
