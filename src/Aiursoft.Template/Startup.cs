@@ -25,7 +25,7 @@ public class Startup : IWebStartup
         // Relational database
         var (connectionString, dbType, allowCache) = configuration.GetDbSettings();
         services.AddSwitchableRelationalDatabase(
-            dbType: EntryExtends.IsInUnitTests() ? "InMemory": dbType,
+            dbType: EntryExtends.IsInUnitTests() ? "InMemory" : dbType,
             connectionString: connectionString,
             supportedDbs:
             [
