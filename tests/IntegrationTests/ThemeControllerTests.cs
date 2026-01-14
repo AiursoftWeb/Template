@@ -1,56 +1,16 @@
-using System.Net;
-using Aiursoft.CSTools.Tools;
-using Aiursoft.DbTools;
-using Aiursoft.Template.Entities;
+using System.Net.Http.Json;
 using Aiursoft.Template.Models.ManageViewModels;
-using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
 [TestClass]
-public class ThemeControllerTests
+public class ThemeControllerTests : TestBase
 {
-    private readonly int _port;
-    private readonly HttpClient _http;
-    private IHost? _server;
-
-    public ThemeControllerTests()
-    {
-        var cookieContainer = new CookieContainer();
-        var handler = new HttpClientHandler
-        {
-            CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
-        };
-        _port = Network.GetAvailablePort();
-        _http = new HttpClient(handler)
-        {
-            BaseAddress = new Uri($"http://localhost:{_port}")
-        };
-    }
-
-    [TestInitialize]
-    public async Task CreateServer()
-    {
-        _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
-        await _server.SeedAsync();
-        await _server.StartAsync();
-    }
-
-    [TestCleanup]
-    public async Task CleanServer()
-    {
-        if (_server == null) return;
-        await _server.StopAsync();
-        _server.Dispose();
-    }
-
     [TestMethod]
     public async Task TestSwitchTheme()
     {
         var model = new SwitchThemeViewModel { Theme = "dark" };
-        var response = await _http.PostAsJsonAsync("/api/switch-theme", model);
+        var response = await Http.PostAsJsonAsync("/api/switch-theme", model);
         response.EnsureSuccessStatusCode();
         
         // Verify cookie

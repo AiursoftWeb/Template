@@ -1,11 +1,6 @@
 using System.Net;
-using System.Text.RegularExpressions;
-using Aiursoft.CSTools.Tools;
-using Aiursoft.DbTools;
-using Aiursoft.Template.Entities;
 using Aiursoft.Template.Models.BackgroundJobs;
 using Aiursoft.Template.Services.BackgroundJobs;
-using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
@@ -13,77 +8,13 @@ namespace Aiursoft.Template.Tests.IntegrationTests;
 /// 后台任务队列集成测试：测试BackgroundJobQueue的队列管理、任务执行、并行处理等核心功能
 /// </summary>
 [TestClass]
-public class BackgroundJobsTests
+public class BackgroundJobsTests : TestBase
 {
-    private readonly int _port;
-    private readonly HttpClient _http;
-    private IHost? _server;
-
-    public BackgroundJobsTests()
-    {
-        var cookieContainer = new CookieContainer();
-        var handler = new HttpClientHandler
-        {
-            CookieContainer = cookieContainer,
-            AllowAutoRedirect = false
-        };
-        _port = Network.GetAvailablePort();
-        _http = new HttpClient(handler)
-        {
-            BaseAddress = new Uri($"http://localhost:{_port}")
-        };
-    }
-
-    [TestInitialize]
-    public async Task CreateServer()
-    {
-        _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
-        await _server.SeedAsync();
-        await _server.StartAsync();
-    }
-
-    [TestCleanup]
-    public async Task CleanServer()
-    {
-        if (_server == null) return;
-        await _server.StopAsync();
-        _server.Dispose();
-    }
-
-    private async Task<string> GetAntiCsrfToken(string url)
-    {
-        var response = await _http.GetAsync(url);
-        response.EnsureSuccessStatusCode();
-        var html = await response.Content.ReadAsStringAsync();
-        var match = Regex.Match(html,
-            @"<input name=""__RequestVerificationToken"" type=""hidden"" value=""([^""]+)"" />");
-        if (!match.Success)
-        {
-            throw new InvalidOperationException($"Could not find anti-CSRF token on page: {url}");
-        }
-
-        return match.Groups[1].Value;
-    }
-
-    private async Task LoginAsAdminAsync()
-    {
-        var loginToken = await GetAntiCsrfToken("/Account/Login");
-        var loginContent = new FormUrlEncodedContent(new Dictionary<string, string>
-        {
-            { "EmailOrUserName", "admin@default.com" }, // Default admin email from SeedAsync
-            { "Password", "admin123" },
-            { "__RequestVerificationToken", loginToken }
-        });
-        var loginResponse = await _http.PostAsync("/Account/Login", loginContent);
-        Assert.AreEqual(HttpStatusCode.Found, loginResponse.StatusCode);
-    }
-
     [TestMethod]
     public async Task JobQueueBasicOperationsTest()
     {
         // 直接从服务容器获取BackgroundJobQueue实例
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
         // Step 1: 验证初始状态 - 没有任何任务
         var initialPending = queue.GetPendingJobs().Count();
@@ -120,7 +51,7 @@ public class BackgroundJobsTests
     [TestMethod]
     public async Task JobQueueParallelExecutionTest()
     {
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
         // Step 1: 向两个不同的队列添加任务
         var queueAStartTime = DateTime.MinValue;
@@ -163,7 +94,7 @@ public class BackgroundJobsTests
     [TestMethod]
     public async Task JobQueueSequentialExecutionInSameQueueTest()
     {
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
         // Step 1: 向同一个队列添加两个任务
         var job1StartTime = DateTime.MinValue;
@@ -206,7 +137,7 @@ public class BackgroundJobsTests
     [TestMethod]
     public async Task JobCancellationTest()
     {
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
         // Step 1: 先添加一个阻塞任务，确保后续任务保持在Pending状态
         queue.QueueWithDependency<ILogger<BackgroundJobsTests>>(
@@ -255,7 +186,7 @@ public class BackgroundJobsTests
     [TestMethod]
     public async Task JobFailureHandlingTest()
     {
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
         // Step 1: 添加一个会失败的任务
         queue.QueueWithDependency<ILogger<BackgroundJobsTests>>(
@@ -282,7 +213,7 @@ public class BackgroundJobsTests
     public async Task JobsPageAccessRequiresAuthenticationTest()
     {
         // Step 1: 未登录时访问后台任务页面
-        var response = await _http.GetAsync("/Jobs");
+        var response = await Http.GetAsync("/Jobs");
 
         // Step 2: 应该被重定向到登录页面
         Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
@@ -293,10 +224,10 @@ public class BackgroundJobsTests
     public async Task JobsPageAccessWithAdminTest()
     {
         // Step 1: 以管理员身份登录
-        await LoginAsAdminAsync();
+        await LoginAsAdmin();
 
         // Step 2: 访问后台任务页面
-        var response = await _http.GetAsync("/Jobs");
+        var response = await Http.GetAsync("/Jobs");
 
         // Step 3: 应该成功访问
         response.EnsureSuccessStatusCode();
@@ -309,32 +240,25 @@ public class BackgroundJobsTests
     public async Task CreateTestJobViaUITest()
     {
         // Step 1: 以管理员身份登录
-        await LoginAsAdminAsync();
+        await LoginAsAdmin();
 
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
         var initialJobCount = queue.GetAllJobs().Count();
 
-        // Step 2: 获取Jobs页面的CSRF令牌
-        var token = await GetAntiCsrfToken("/Jobs");
+        // Step 2: 创建测试Job A
+        var createJobResponse = await PostForm("/Jobs/CreateTestJobA", new Dictionary<string, string>(), tokenUrl: "/Jobs");
 
-        // Step 3: 创建测试Job A
-        var createJobContent = new FormUrlEncodedContent(new Dictionary<string, string>
-        {
-            { "__RequestVerificationToken", token }
-        });
-        var createJobResponse = await _http.PostAsync("/Jobs/CreateTestJobA", createJobContent);
-
-        // Step 4: 应该重定向回Jobs页面
+        // Step 3: 应该重定向回Jobs页面
         Assert.AreEqual(HttpStatusCode.Found, createJobResponse.StatusCode);
         var redirectUrl = createJobResponse.Headers.Location?.OriginalString;
         Assert.IsTrue(redirectUrl == "/Jobs/Index" || redirectUrl == "/Jobs");
 
-        // Step 5: 验证任务已被创建
+        // Step 4: 验证任务已被创建
         await Task.Delay(200); // 等待任务入队
         var currentJobCount = queue.GetAllJobs().Count();
         Assert.IsGreaterThan(initialJobCount, currentJobCount);
 
-        // Step 6: 验证创建的是Queue A的任务
+        // Step 5: 验证创建的是Queue A的任务
         var jobs = queue.GetAllJobs().ToList();
         var queueAJob = jobs.FirstOrDefault(j => j.QueueName == "Queue A");
         Assert.IsNotNull(queueAJob);
@@ -345,25 +269,15 @@ public class BackgroundJobsTests
     public async Task CreateBothJobsViaUIAndVerifyParallelExecutionTest()
     {
         // Step 1: 以管理员身份登录
-        await LoginAsAdminAsync();
+        await LoginAsAdmin();
 
-        var queue = _server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
 
-        // Step 2: 获取CSRF令牌并创建Job A
-        var tokenA = await GetAntiCsrfToken("/Jobs");
-        var createJobAContent = new FormUrlEncodedContent(new Dictionary<string, string>
-        {
-            { "__RequestVerificationToken", tokenA }
-        });
-        await _http.PostAsync("/Jobs/CreateTestJobA", createJobAContent);
+        // Step 2: 创建Job A
+        await PostForm("/Jobs/CreateTestJobA", new Dictionary<string, string>(), tokenUrl: "/Jobs");
 
-        // Step 3: 获取CSRF令牌并创建Job B
-        var tokenB = await GetAntiCsrfToken("/Jobs");
-        var createJobBContent = new FormUrlEncodedContent(new Dictionary<string, string>
-        {
-            { "__RequestVerificationToken", tokenB }
-        });
-        await _http.PostAsync("/Jobs/CreateTestJobB", createJobBContent);
+        // Step 3: 创建Job B
+        await PostForm("/Jobs/CreateTestJobB", new Dictionary<string, string>(), tokenUrl: "/Jobs");
 
         // Step 4: 等待任务入队
         await Task.Delay(500);
