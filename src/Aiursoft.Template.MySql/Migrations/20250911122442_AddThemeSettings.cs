@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
@@ -5,6 +6,7 @@
 namespace Aiursoft.Template.MySql.Migrations
 {
     /// <inheritdoc />
+    [ExcludeFromCodeCoverage]
     public partial class AddThemeSettings : Migration
     {
         /// <inheritdoc />
