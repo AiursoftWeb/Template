@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Aiursoft.DbTools;
 using Aiursoft.DbTools.MySql;
 using Aiursoft.Template.Entities;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aiursoft.Template.MySql;
 
+[ExcludeFromCodeCoverage]
 public class MySqlSupportedDb(bool allowCache, bool splitQuery) : SupportedDatabaseType<TemplateDbContext>
 {
     public override string DbType => "MySql";

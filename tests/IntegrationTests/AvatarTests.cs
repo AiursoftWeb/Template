@@ -228,6 +228,35 @@ public class AvatarTests
         Assert.AreEqual(128, image.Height);
     }
 
+    [TestMethod]
+    public async Task AvatarPngCompressionWidthOnlyTest()
+    {
+        // 1. Register and Login
+        await RegisterAndLoginAsync();
+
+        // 2. Upload a PNG file
+        var pngBytes = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAAEElEQVR4nGP4z8DAxMDAAAAHCQEClNBcOwAAAABJRU5ErkJggg==");
+        var fileContent = new ByteArrayContent(pngBytes);
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(fileContent, "file", "avatar.png");
+
+        var uploadResponse = await _http.PostAsync("/upload/avatars", multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // 3. Test Compression with width only
+        var compressedResponse = await _http.GetAsync(uploadResult.InternetPath + "?w=100");
+        compressedResponse.EnsureSuccessStatusCode();
+
+        await using var stream = await compressedResponse.Content.ReadAsStreamAsync();
+        using var image = await SixLabors.ImageSharp.Image.LoadAsync(stream);
+        Assert.AreEqual(128, image.Width);
+    }
+
     private class UploadResult
     {
         public string Path { get; init; } = string.Empty;

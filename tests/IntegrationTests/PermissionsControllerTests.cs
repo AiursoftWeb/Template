@@ -1,5 +1,7 @@
 using System.Net;
+using System.Text.RegularExpressions;
 using Aiursoft.CSTools.Tools;
+using Aiursoft.Template.Authorization;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
 using static Aiursoft.WebTools.Extends;
@@ -48,16 +50,58 @@ public class PermissionsControllerTests
     [TestMethod]
     public async Task GetIndex()
     {
-        // This is a basic test to ensure the controller is reachable.
-        // Adjust the path as necessary for specific controllers.
+        await LoginAsync("admin@default.com", "admin123");
         var url = "/Permissions/Index";
-        
         var response = await _http.GetAsync(url);
-        
-        // Assert
-        // For some controllers, it might redirect to login, which is 302.
-        // For others, it might be 200.
-        // We just check if we get a response.
-        Assert.IsNotNull(response);
+        response.EnsureSuccessStatusCode();
+        var html = await response.Content.ReadAsStringAsync();
+        Assert.Contains("Permissions", html);
+    }
+
+    [TestMethod]
+    public async Task GetDetails()
+    {
+        await LoginAsync("admin@default.com", "admin123");
+        var url = $"/Permissions/Details?key={AppPermissionNames.CanReadPermissions}";
+        var response = await _http.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+        var html = await response.Content.ReadAsStringAsync();
+        Assert.Contains("Permission Details", html);
+    }
+
+    [TestMethod]
+    public async Task GetDetailsInvalidKey()
+    {
+        await LoginAsync("admin@default.com", "admin123");
+        var url = "/Permissions/Details?key=invalid";
+        var response = await _http.GetAsync(url);
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task GetDetailsNullKey()
+    {
+        await LoginAsync("admin@default.com", "admin123");
+        var url = "/Permissions/Details";
+        var response = await _http.GetAsync(url);
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    private async Task LoginAsync(string email, string password)
+    {
+        var loginPageResponse = await _http.GetAsync("/Account/Login");
+        loginPageResponse.EnsureSuccessStatusCode();
+        var html = await loginPageResponse.Content.ReadAsStringAsync();
+        var match = Regex.Match(html, @"<input name=""__RequestVerificationToken"" type=""hidden"" value=""([^""]+)"" />");
+        var token = match.Groups[1].Value;
+
+        var loginContent = new FormUrlEncodedContent(new Dictionary<string, string>
+        {
+            { "EmailOrUserName", email },
+            { "Password", password },
+            { "__RequestVerificationToken", token }
+        });
+        var response = await _http.PostAsync("/Account/Login", loginContent);
+        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
     }
 }

@@ -52,4 +52,12 @@ public class ErrorControllerTests
         var response = await _http.GetAsync(url);
         response.EnsureSuccessStatusCode();
     }
+
+    [TestMethod]
+    public async Task GetUnauthorized()
+    {
+        var url = "/Error/Unauthorized?returnUrl=/dashboard";
+        var response = await _http.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+    }
 }

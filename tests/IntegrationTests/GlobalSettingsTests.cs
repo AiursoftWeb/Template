@@ -137,4 +137,27 @@ public class GlobalSettingsTests
             Assert.IsFalse(value);
         }
     }
+
+    [TestMethod]
+    public async Task TestGlobalSettingsServiceValidation()
+    {
+        using var scope = _server!.Services.CreateScope();
+        var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
+
+        // Test non-defined setting
+        try
+        {
+            await settingsService.UpdateSettingAsync("InvalidKey", "Value");
+            Assert.Fail("Should have thrown InvalidOperationException");
+        }
+        catch (InvalidOperationException) { }
+
+        // Test Bool validation
+        try
+        {
+            await settingsService.UpdateSettingAsync(SettingsMap.AllowUserAdjustNickname, "NotABool");
+            Assert.Fail("Should have thrown InvalidOperationException");
+        }
+        catch (InvalidOperationException) { }
+    }
 }
