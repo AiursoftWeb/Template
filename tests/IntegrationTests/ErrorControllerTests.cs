@@ -2,7 +2,6 @@ using System.Net;
 using Aiursoft.CSTools.Tools;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
