@@ -1,0 +1,130 @@
+You are working on an EXISTING Merge Request #51: 'Fix for issue #21: 项目的测试覆盖率达到了80%，但是UT很乱。'.
+Source Branch: fix-issue-21
+Target Branch: master
+
+Recent discussions and feedback (marked [NEW] if since last bot commit):
+
+
+Status: CI/CD PIPELINE FAILED.
+Pipeline URL: https://gitlab.aiursoft.com/gemini-bot/template/-/pipelines/42174
+
+Failure Logs:
+
+
+=== Job: lint (Stage: lint) ===
+2026-01-14T18:30:17.964574Z 00O [0KRunning with gitlab-runner 18.7.2 (1c855082)[0;m
+2026-01-14T18:30:17.964585Z 00O [0K  on deb91d213663 wjuYPY19y, system ID: s_2ac520b8d282[0;m
+2026-01-14T18:30:17.964597Z 00O section_start:1768415417:prepare_executor
+2026-01-14T18:30:17.964597Z 00O+[0K[0K[36;1mPreparing the "shell" executor[0;m[0;m
+2026-01-14T18:30:17.964655Z 00O [0KUsing Shell (bash) executor...[0;m
+2026-01-14T18:30:17.964656Z 00O section_end:1768415417:prepare_executor
+2026-01-14T18:30:17.964656Z 00O+[0Ksection_start:1768415417:prepare_script
+2026-01-14T18:30:17.964828Z 00O+[0K[0K[36;1mPreparing environment[0;m[0;m
+2026-01-14T18:30:17.977348Z 01O Running on deb91d213663...
+2026-01-14T18:30:17.979642Z 00O section_end:1768415417:prepare_script
+2026-01-14T18:30:17.979649Z 00O+[0Ksection_start:1768415417:get_sources
+2026-01-14T18:30:17.979923Z 00O+[0K[0K[36;1mGetting source from Git repository[0;m[0;m
+2026-01-14T18:30:18.001577Z 01O [32;1mGitaly correlation ID: 01KEYWBNE0G6ZPFXHGPQW1SH95[0;m
+2026-01-14T18:30:18.005538Z 01O [32;1mFetching changes with git depth set to 20...[0;m
+2026-01-14T18:30:18.007411Z 01O Initialized empty Git repository in /home/gitlab-runner/builds/template/42174/.git/
+2026-01-14T18:30:18.008568Z 01O [32;1mCreated fresh repository.[0;m
+2026-01-14T18:30:18.267839Z 01O [32;1mChecking out 9781eab1 as detached HEAD (ref is fix-issue-21)...[0;m
+2026-01-14T18:30:18.320743Z 01O [32;1mSkipping Git submodules setup[0;m
+2026-01-14T18:30:18.321792Z 00O section_end:1768415418:get_sources
+2026-01-14T18:30:18.321799Z 00O+[0Ksection_start:1768415418:step_script
+2026-01-14T18:30:18.322047Z 00O+[0K[0K[36;1mExecuting "step_script" stage of the job script[0;m[0;m
+2026-01-14T18:30:18.333755Z 01O [32;1m$ export DOTNET_CLI_TELEMETRY_OPTOUT=1[0;m
+2026-01-14T18:30:18.333774Z 01O [32;1m$ export PATH=$PATH:$HOME/.dotnet/tools[0;m
+2026-01-14T18:30:18.333775Z 01O [32;1m$ which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d[0;m
+2026-01-14T18:30:18.334352Z 01O /home/gitlab-runner/.dotnet/tools/jb
+2026-01-14T18:30:18.334565Z 01O [32;1m$ which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d[0;m
+2026-01-14T18:30:18.335019Z 01O /home/gitlab-runner/.dotnet/tools/reportgenerator
+2026-01-14T18:30:18.335064Z 01O [32;1m$ echo "Hostname: $(hostname)"[0;m
+2026-01-14T18:30:18.335537Z 01O Hostname: deb91d213663
+2026-01-14T18:30:18.335549Z 01O [32;1m$ dotnet --info[0;m
+2026-01-14T18:30:18.401198Z 01O .NET SDK:
+2026-01-14T18:30:18.401205Z 01O  Version:           10.0.100
+2026-01-14T18:30:18.401206Z 01O  Commit:            b0f34d51fc
+2026-01-14T18:30:18.420349Z 01O  Workload version:  10.0.100-manifests.4eab3e0f
+2026-01-14T18:30:18.420814Z 01O  MSBuild version:   18.0.2+b0f34d51f
+2026-01-14T18:30:18.420815Z 01O 
+2026-01-14T18:30:18.420836Z 01O Runtime Environment:
+2026-01-14T18:30:18.421220Z 01O  OS Name:     ubuntu
+2026-01-14T18:30:18.421221Z 01O  OS Version:  25.10
+2026-01-14T18:30:18.422163Z 01O  OS Platform: Linux
+2026-01-14T18:30:18.427227Z 01O  RID:         ubuntu.25.10-x64
+2026-01-14T18:30:18.427229Z 01O  Base Path:   /usr/lib/dotnet/sdk/10.0.100/
+2026-01-14T18:30:18.427231Z 01O 
+2026-01-14T18:30:18.427239Z 01O .NET workloads installed:
+2026-01-14T18:30:18.428683Z 01O There are no installed workloads to display.
+2026-01-14T18:30:18.428688Z 01O Configured to use workload sets when installing new manifests.
+2026-01-14T18:30:18.428690Z 01O No workload sets are installed. Run "dotnet workload restore" to install a workload set.
+2026-01-14T18:30:18.429631Z 01O 
+2026-01-14T18:30:18.429631Z 01O Host:
+2026-01-14T18:30:18.429632Z 01O   Version:      10.0.0
+2026-01-14T18:30:18.429632Z 01O   Architecture: x64
+2026-01-14T18:30:18.429632Z 01O   Commit:       b0f34d51fc
+2026-01-14T18:30:18.429632Z 01O 
+2026-01-14T18:30:18.429633Z 01O .NET SDKs installed:
+2026-01-14T18:30:18.429633Z 01O   10.0.100 [/usr/lib/dotnet/sdk]
+2026-01-14T18:30:18.429658Z 01O 
+2026-01-14T18:30:18.429658Z 01O .NET runtimes installed:
+2026-01-14T18:30:18.429659Z 01O   Microsoft.AspNetCore.App 10.0.0 [/usr/lib/dotnet/shared/Microsoft.AspNetCore.App]
+2026-01-14T18:30:18.429659Z 01O   Microsoft.NETCore.App 10.0.0 [/usr/lib/dotnet/shared/Microsoft.NETCore.App]
+2026-01-14T18:30:18.429659Z 01O 
+2026-01-14T18:30:18.429659Z 01O Other architectures found:
+2026-01-14T18:30:18.429660Z 01O   None
+2026-01-14T18:30:18.429660Z 01O 
+2026-01-14T18:30:18.429660Z 01O Environment variables:
+2026-01-14T18:30:18.429660Z 01O   DOTNET_BUNDLE_EXTRACT_BASE_DIR           [/home/gitlab-runner/.cache/dotnet_bundle_extract]
+2026-01-14T18:30:18.429661Z 01O   DOTNET_CLI_TELEMETRY_OPTOUT              [1]
+2026-01-14T18:30:18.429661Z 01O 
+2026-01-14T18:30:18.429661Z 01O global.json file:
+2026-01-14T18:30:18.429661Z 01O   Not found
+2026-01-14T18:30:18.429661Z 01O 
+2026-01-14T18:30:18.429661Z 01O Learn more:
+2026-01-14T18:30:18.429662Z 01O   https://aka.ms/dotnet/info
+2026-01-14T18:30:18.429662Z 01O 
+2026-01-14T18:30:18.429662Z 01O Download .NET:
+2026-01-14T18:30:18.429662Z 01O   https://aka.ms/dotnet/download
+2026-01-14T18:30:18.433410Z 01O [32;1m$ chmod +x ./lint.sh[0;m
+2026-01-14T18:30:18.434733Z 01O [32;1m$ ./lint.sh[0;m
+2026-01-14T18:30:18.436407Z 01O Checking for JetBrains ReSharper Global Tools...
+2026-01-14T18:30:18.436489Z 01O jb is already installed.
+2026-01-14T18:30:18.436507Z 01O Restoring dependencies...
+2026-01-14T18:30:18.917782Z 01O   Determining projects to restore...
+2026-01-14T18:30:19.443633Z 01O   Restored /home/gitlab-runner/builds/template/42174/src/Aiursoft.Template.Entities/Aiursoft.Template.Entities.csproj (in 260 ms).
+2026-01-14T18:30:19.443641Z 01O   Restored /home/gitlab-runner/builds/template/42174/src/Aiursoft.Template.Sqlite/Aiursoft.Template.Sqlite.csproj (in 260 ms).
+2026-01-14T18:30:19.443642Z 01O   Restored /home/gitlab-runner/builds/template/42174/src/Aiursoft.Template.MySql/Aiursoft.Template.MySql.csproj (in 260 ms).
+2026-01-14T18:30:19.443643Z 01O   Restored /home/gitlab-runner/builds/template/42174/src/Aiursoft.Template/Aiursoft.Template.csproj (in 266 ms).
+2026-01-14T18:30:19.443644Z 01O   Restored /home/gitlab-runner/builds/template/42174/tests/Aiursoft.Template.Tests.csproj (in 260 ms).
+2026-01-14T18:30:19.443644Z 01O   Restored /home/gitlab-runner/builds/template/42174/src/Aiursoft.Template.InMemory/Aiursoft.Template.InMemory.csproj (in 260 ms).
+2026-01-14T18:30:19.465556Z 01O Running ReSharper Code Inspection...
+2026-01-14T18:30:54.416592Z 01O Filtering known false positives...
+2026-01-14T18:30:54.425915Z 01O [0;31mLinting FAILED![0m
+2026-01-14T18:30:54.425920Z 01O Issues found:
+2026-01-14T18:30:54.436682Z 01O File: tests/IntegrationTests/TestBase.cs | Line: 94 | Reason: Use 'Assert.StartsWith' instead of 'Assert.IsTrue'
+2026-01-14T18:30:54.446966Z 01O File: tests/IntegrationTests/AvatarTests.cs | Line: Offset 0-17 | Reason: Using directive is not required by the code and can be safely removed
+2026-01-14T18:30:54.452284Z 01O File: tests/IntegrationTests/AvatarTests.cs | Line: 2 | Reason: Using directive is not required by the code and can be safely removed
+2026-01-14T18:30:54.457593Z 01O File: tests/IntegrationTests/FilesControllerTests.cs | Line: 2 | Reason: Using directive is not required by the code and can be safely removed
+2026-01-14T18:30:54.465488Z 01O File: tests/IntegrationTests/ThemeControllerTests.cs | Line: Offset 0-27 | Reason: Using directive is not required by the code and can be safely removed
+2026-01-14T18:30:54.468190Z 00O section_end:1768415454:step_script
+2026-01-14T18:30:54.468200Z 00O+[0Ksection_start:1768415454:upload_artifacts_on_failure
+2026-01-14T18:30:54.469200Z 00O+[0K[0K[36;1mUploading artifacts for failed job[0;m[0;m
+2026-01-14T18:30:54.524246Z 01O [32;1mUploading artifacts...[0;m
+2026-01-14T18:30:54.562761Z 01E Runtime platform                                  [0;m  arch[0;m=amd64 os[0;m=linux pid[0;m=71887 revision[0;m=1c855082 version[0;m=18.7.2
+2026-01-14T18:30:54.562808Z 01E ./analyze_output.xml: found 1 matching artifact files and directories[0;m 
+2026-01-14T18:30:54.661406Z 01E Uploading artifacts as "archive" to coordinator... 201 Created[0;m  correlation_id[0;m=01KEYWCSB3RAFRNXY5FCX84DAA id[0;m=242571 responseStatus[0;m=201 Created token[0;m=64_8TmMFJ
+2026-01-14T18:30:54.666147Z 00O section_end:1768415454:upload_artifacts_on_failure
+2026-01-14T18:30:54.666152Z 00O+[0Ksection_start:1768415454:cleanup_file_variables
+2026-01-14T18:30:54.666233Z 00O+[0K[0K[36;1mCleaning up project directory and file based variables[0;m[0;m
+2026-01-14T18:30:54.683373Z 00O section_end:1768415454:cleanup_file_variables
+2026-01-14T18:30:54.683381Z 00O+[0K
+2026-01-14T18:30:54.683468Z 00O [31;1mERROR: Job failed: exit status 1[0;m
+
+=== End of Job Log ===
+
+
+
+Please analyze the logs and the codebase to fix the failures.
+Don't forget to bump the version for updated nuget package projects after necessary changes, while do NOT add a version tag for projects doesn't publish nuget packages!

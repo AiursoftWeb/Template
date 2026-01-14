@@ -1,4 +1,3 @@
-using System.Net.Http.Json;
 using Aiursoft.Template.Models.ManageViewModels;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;

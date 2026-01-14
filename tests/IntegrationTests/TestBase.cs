@@ -91,8 +91,7 @@ public abstract class TestBase
         }
         else
         {
-            Assert.IsTrue(actualLocation.StartsWith(expectedLocation), 
-                $"Expected location to start with {expectedLocation}, but was {actualLocation}");
+            Assert.StartsWith(expectedLocation, actualLocation);
         }
     }
 
