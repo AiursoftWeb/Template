@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>دعم &quot;Fire-and-forget&quot; للمهام الطويلة (مثل البريد الإلكتروني أو الذكاء الاصطناعي)، مع ميزة واجهة مستخدم رسومية لإدارة الطابور، والمعالجة المتوازية، والإلغاء.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>نظام مدمج للتحكم في الوصول القائم على الأدوار (RBAC) لإدارة دقيقة للصلاحيات.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>حل متكامل لمصادقة المستخدم وإدارة الملف الشخصي جاهز للاستخدام مباشرة.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>حل كامل لإدارة المصادقة وملف التعريف للمستخدم.</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>تصميم متجاوب بالكامل يبدو رائعًا على كل من أجهزة الكمبيوتر المكتبية والهواتف المحمولة.</value>
@@ -51,8 +57,17 @@
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>حقن التبعيات التلقائي</value>
   </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>التعامل التلقائي مع التوقيت الزمني</value>
+  </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>ترجمة آلية مدعومة بالذكاء الاصطناعي إلى 28 لغة للوصول إلى جمهور عالمي.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>ترجمة تلقائية، مدعومة بالذكاء الاصطناعي، إلى 28 لغة.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>معالجة المهام الخلفية</value>
   </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>ابنِ مشروعك الكبير القادم،</value>
@@ -60,14 +75,23 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>إدارة المستخدمين المدمجة</value>
   </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>يأتي مع دعم Docker لDeployment مبسطة وثابتة.</value>
+  </data>
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>يأتي مع دعم كامل لـ Docker لنشر مبسط وموثوق ومتناسق.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>توثيق شامل</value>
   </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>التحقق من الاتساق</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>موقع لوحة التحكم</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>قم بتطوير النظام بشكل حصري باستخدام التوقيت العالمي الموحد (UTC) بينما يقوم النظام تلقائيًا بتحويل التواريخ وعرضها بتوقيت المستخدم المحلي.</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>صفحة المناقشات</value>
@@ -75,11 +99,20 @@
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>معبأ في حاويات للنشر</value>
   </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>مُحَوَّل إلى دوكير لDeployment سهل</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>شريط التنقل الديناميكي</value>
   </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>يمكنك بسهولة التبديل بين مزودي قواعد البيانات، بما في ذلك SQLite وMySQL وSQL Server، وقاعدة بيانات داخل الذاكرة للاختبار.</value>
+  </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>قم بالتبديل بسهولة بين مزودي الخدمة مثل SQLite وMySQL وSQL Server وقاعدة البيانات في الذاكرة لأغراض الاختبار.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>اكتب اختبارات التكامل بسهولة باستخدام قواعد بيانات الذاكرة، وأنظمة ملفات مؤقتة، والمحاكاة المدمجة، ومحاكاة طلبات HTTP الحقيقية.</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
@@ -89,6 +122,9 @@
   </data>
   <data name="Features" xml:space="preserve">
     <value>الميزات</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>يتميز بنظام إدارة ملفات مدمج مع ضغط الصور التلقائي وحماية الخصوصية.</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>يتميز بنظام مدمج لإدارة الملفات مع ضغط تلقائي للصور الشخصية.</value>
@@ -104,6 +140,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>انتقل إلى لوحة التحكم</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>إدارة المهام المتكررة مثل التنظيف والمزامنة باستخدام واجهة مستخدم شاملة لمراقبة سجلات التنفيذ والسجلات.</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>مرحبًا أيها العالم!</value>
@@ -141,6 +180,12 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>رخصة MIT</value>
   </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>يتم التحقق من النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>دعم مزود قواعد البيانات متعددة</value>
+  </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>دعم قواعد بيانات متعددة</value>
   </data>
@@ -165,14 +210,29 @@
   <data name="Reviews" xml:space="preserve">
     <value>التقييمات</value>
   </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>اختبارات التكامل القوية</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>إدارة المهام المجدولة</value>
+  </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>دمج سلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>تجاوزات الإعداد الذكية</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>وضع الظلام الذكي الذي يتكيف مع إعدادات نظام المستخدم.</value>
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>وضع الظلام الذكي الذي يتكيف تلقائيًا مع إعدادات نظام المستخدم.</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>بدء مشروع جديد</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>يدعم كلًا من متغيرات البيئة والإعدادات المخزنة في قاعدة البيانات، مع إعطاء الأولوية التلقائية لمتغيرات البيئة لضمان التفادي السلس.</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>القائد التقني</value>

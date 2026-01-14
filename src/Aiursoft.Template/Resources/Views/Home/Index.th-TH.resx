@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>การสนับสนุนแบบ &quot;Fire-and-forget&quot; สำหรับงานที่ใช้เวลานาน (เช่น อีเมลหรือ AI) พร้อมด้วย GUI สำหรับการจัดการคิว การประมวลผลแบบขนาน และการยกเลิก</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>ระบบควบคุมการเข้าถึงตามบทบาท (RBAC) ในตัว สำหรับการจัดการสิทธิ์แบบละเอียด</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>โซลูชันที่สมบูรณ์แบบสำหรับการยืนยันตัวตนผู้ใช้และการจัดการโปรไฟล์ พร้อมใช้งานทันที</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>โซลูชันครบวงจรสำหรับการยืนยันตัวตนของผู้ใช้และการจัดการโปรไฟล์</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>การจัดวางที่ตอบสนองได้อย่างสมบูรณ์ ซึ่งดูดีทั้งบนเดสก์ท็อปและอุปกรณ์มือถือ</value>
@@ -51,8 +57,17 @@
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>การฉีดการพึ่งพาอัตโนมัติ</value>
   </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>การจัดการเขตเวลาแบบอัตโนมัติ</value>
+  </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>การแปลอัตโนมัติด้วยระบบ AI ไปยัง 28 ภาษา เพื่อการเข้าถึงทั่วโลก</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>การแปลอัตโนมัติ ด้วยปัญญาประดิษฐ์ แบบรองรับ 28 ภาษา</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>การประมวลผลงานหลังบ้าน</value>
   </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>สร้างสิ่งที่ยิ่งใหญ่ครั้งต่อไปของคุณ</value>
@@ -60,14 +75,23 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>การจัดการผู้ใช้ในตัว</value>
   </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>มาพร้อมการสนับสนุน Docker สำหรับการปรับใช้งานที่ง่ายและมีความสม่ำเสมอ</value>
+  </data>
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>มาพร้อมการสนับสนุน Docker เต็มรูปแบบเพื่อให้การติดตั้งง่ายขึ้น สม่ำเสมอ และเชื่อถือได้</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>เอกสารคู่มือที่ครอบคลุม</value>
   </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>การตรวจสอบความสอดคล้อง</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>เว็บไซต์แดชบอร์ด</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>พัฒนาเฉพาะในเวลา UTC ในขณะที่ระบบจะแปลงและแสดงวันที่โดยอัตโนมัติในเขตเวลาท้องถิ่นของผู้ใช้</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>หน้าห้องสนทนา</value>
@@ -75,11 +99,20 @@
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>แพ็คเกจด้วย Docker สำหรับการปรับใช้งาน</value>
   </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>ใช้ Docker สำหรับการติดตั้งอย่างง่าย</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>แถบนำทางแบบไดนามิก</value>
   </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>สลับระหว่างผู้ให้บริการฐานข้อมูลได้อย่างง่ายดาย รวมถึง SQLite, MySQL, SQL Server และฐานข้อมูลในหน่วยความจำสำหรับการทดสอบ</value>
+  </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>เปลี่ยนระหว่างผู้ให้บริการอย่าง SQLite, MySQL, SQL Server และฐานข้อมูลในหน่วยความจำสำหรับการทดสอบได้อย่างง่ายดาย</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>เขียนการทดสอบการรวมระบบได้อย่างง่ายดายโดยใช้ฐานข้อมูลในหน่วยความจำ ระบบไฟล์ชั่วคราว การจำลองแบบที่มีอยู่ในตัว และการจำลองการร้องขอ HTTP แบบจริง</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>คำถามที่พบบ่อย</value>
@@ -89,6 +122,9 @@
   </data>
   <data name="Features" xml:space="preserve">
     <value>คุณสมบัติ</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>มีระบบจัดการไฟล์แบบฝังอยู่ภายใน พร้อมการบีบอัดภาพประจำตัวอัตโนมัติ และการรักษาความเป็นส่วนตัว</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>มีระบบจัดการไฟล์ในตัวพร้อมการบีบอัดอวาตาร์อัตโนมัติ</value>
@@ -104,6 +140,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>ไปยังแดชบอร์ด</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>จัดการงานที่เกิดซ้ำ เช่น การทำความสะอาดและซิงค์ข้อมูล พร้อมด้วยอินเทอร์เฟซผู้ใช้ที่ครอบคลุมสำหรับติดตามประวัติการดำเนินงานและบันทึก</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>สวัสดีชาวโลก!</value>
@@ -141,6 +180,12 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>สัญญาอนุญาต MIT</value>
   </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์โดยอิงจาก annotation ข้อมูล</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>การสนับสนุนผู้ให้บริการฐานข้อมูลหลายแห่ง</value>
+  </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>รองรับหลายฐานข้อมูล</value>
   </data>
@@ -165,14 +210,29 @@
   <data name="Reviews" xml:space="preserve">
     <value>รีวิว</value>
   </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>การทดสอบการรวมระบบที่มั่นคง</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>การจัดการงานที่กำหนดเวลา</value>
+  </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>ผสานรวมได้อย่างราบรื่นกับผู้ให้บริการ OpenID Connect ใดก็ได้ พร้อมการซิงโครไนซ์บทบาทอัตโนมัติ</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>การแทนที่การตั้งค่าที่ชาญฉลาด</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>โหมดมืดอัจฉริยะที่ปรับตัวตามการตั้งค่าระบบของผู้ใช้</value>
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>โหมดมืดอัจฉริยะที่ปรับเปลี่ยนอัตโนมัติตามการตั้งค่าระบบของผู้ใช้</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>เริ่มต้นโปรเจกต์ใหม่</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>รองรับตัวแปรสภาพแวดล้อมและตั้งค่าที่เก็บไว้ในฐานข้อมูล พร้อมให้ความสำคัญโดยอัตโนมัติแก่ตัวแปรสภาพแวดล้อมเพื่อการแทนที่อย่างราบรื่น</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>หัวหน้าฝ่ายเทคนิค</value>

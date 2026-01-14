@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>支持长时间运行的任务（如邮件或AI）的“Fire-and-forget”功能，配备用于队列管理、并行处理和取消的GUI。</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>内置基于角色的访问控制（RBAC）系统，用于细粒度权限管理。</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>开箱即用的完整用户认证与个人资料管理解决方案。</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>用户身份验证和资料管理的完整解决方案。</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>完全响应式布局，在桌面和移动设备上均呈现出色视觉效果。</value>
@@ -51,8 +57,17 @@
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>自动依赖注入</value>
   </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>自动时区处理</value>
+  </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>支持28种语言的自动AI驱动翻译，助力实现全球覆盖。</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>自动、由人工智能驱动的28种语言翻译。</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>后台任务处理</value>
   </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>构建你的下一个伟大项目，</value>
@@ -60,14 +75,23 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>内置用户管理</value>
   </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>自带 Docker 支持，可简化并统一部署流程。</value>
+  </data>
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>提供完整的 Docker 支持，实现简化、一致且可靠的部署。</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>全面文档支持</value>
   </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>一致性验证</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>仪表板网站</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>在 UTC 中进行开发，而系统会自动将日期转换并显示为用户的本地时区。</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>讨论页面</value>
@@ -75,11 +99,20 @@
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>支持 Docker 部署</value>
   </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Docker化以实现轻松部署</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>动态导航栏</value>
   </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>轻松在数据库提供程序之间切换，包括 SQLite、MySQL、SQL Server，以及用于测试的内存数据库。</value>
+  </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>可轻松在 SQLite、MySQL、SQL Server 等数据库提供程序以及用于测试的内存数据库之间切换。</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>轻松编写集成测试，使用内存数据库、临时文件系统、内置模拟和真实 HTTP 请求模拟。</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
@@ -89,6 +122,9 @@
   </data>
   <data name="Features" xml:space="preserve">
     <value>功能特性</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>提供内置的文件管理系统，支持自动头像压缩和隐私保护。</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持自动头像压缩。</value>
@@ -104,6 +140,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>使用全面的GUI来监控执行历史和日志，处理像清理和同步这样的重复任务。</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>你好，世界！</value>
@@ -141,6 +180,12 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT 许可证</value>
   </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>多数据库提供程序支持</value>
+  </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>多数据库支持</value>
   </data>
@@ -165,14 +210,29 @@
   <data name="Reviews" xml:space="preserve">
     <value>用户评价</value>
   </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>强大的集成测试</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>定时任务管理</value>
+  </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>智能配置覆盖</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>智能暗黑模式可自动适配用户的系统设置。</value>
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，可自动适应用户的系统设置。</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>支持环境变量和基于数据库的设置，环境变量会自动获得优先级，以实现无缝覆盖。</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>技术负责人</value>
