@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -5,6 +6,7 @@ namespace Aiursoft.Template.MySql;
 
 // This class will be scanned by Entity framework during migrations adding. Do NOT delete!
 // On production, real database will respect the appsettings.json.
+[ExcludeFromCodeCoverage]
 public class MySqlContextFactory : IDesignTimeDbContextFactory<MySqlContext>
 {
     public MySqlContext CreateDbContext(string[] args)
