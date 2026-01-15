@@ -1,6 +1,5 @@
-using System.Security.Cryptography;
-using System.Text;
 using Aiursoft.Scanner.Abstractions;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace Aiursoft.Template.Services.FileStorage;
 
@@ -10,7 +9,7 @@ namespace Aiursoft.Template.Services.FileStorage;
 public class StorageService(
     FeatureFoldersProvider folders,
     FileLockProvider fileLockProvider,
-    IConfiguration configuration) : ITransientDependency
+    IDataProtectionProvider dataProtectionProvider) : ITransientDependency
 {
     /// <summary>
     /// Saves a file to the storage.
@@ -87,58 +86,34 @@ public class StorageService(
 
     public string GetDownloadToken(string path)
     {
-        var expiry = DateTime.UtcNow.AddMinutes(60); 
-        var expiryTicks = expiry.Ticks;
-        var key = configuration["Storage:Key"] ?? throw new InvalidOperationException("Storage:Key is not configured!");
-        var signatureInput = $"{path}|{expiryTicks}";
+        // Create a time-limited data protector with 60-minute expiration
+        var protector = dataProtectionProvider
+            .CreateProtector("FileDownload")
+            .ToTimeLimitedDataProtector();
         
-        using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(key));
-        var signatureBytes = hmac.ComputeHash(Encoding.UTF8.GetBytes(signatureInput));
-        var signature = Convert.ToHexString(signatureBytes);
-        
-        var token = $"{path}|{expiryTicks}|{signature}";
-        return Convert.ToBase64String(Encoding.UTF8.GetBytes(token)); 
+        // Protect the path with time-limited encryption
+        var protectedData = protector.Protect(path, TimeSpan.FromMinutes(60));
+        return protectedData;
     }
 
     public bool ValidateDownloadToken(string requestPath, string tokenString)
     {
         try 
         {
-            var decoded = Encoding.UTF8.GetString(Convert.FromBase64String(tokenString));
-            var parts = decoded.Split('|');
+            // Create the same protector used for token generation
+            var protector = dataProtectionProvider
+                .CreateProtector("FileDownload")
+                .ToTimeLimitedDataProtector();
             
-            if (parts.Length < 3) return false;
+            // Unprotect and validate expiration automatically
+            var authorizedPath = protector.Unprotect(tokenString);
             
-            var signature = parts.Last();
-            var expiryTicksStr = parts[parts.Length - 2];
-            var authorizedPath = string.Join("|", parts.Take(parts.Length - 2));
-            
-            if (!long.TryParse(expiryTicksStr, out var expiryTicks)) return false;
-            
-            // Validate Expiry
-            var expiry = new DateTime(expiryTicks, DateTimeKind.Utc);
-            if (DateTime.UtcNow > expiry) return false;
-            
-            // Validate Signature
-            var key = configuration["Storage:Key"];
-             if (string.IsNullOrEmpty(key)) return false;
-
-            var signatureInput = $"{authorizedPath}|{expiryTicks}";
-            using var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(key));
-            var expectedSignatureBytes = hmac.ComputeHash(Encoding.UTF8.GetBytes(signatureInput));
-            var expectedSignature = Convert.ToHexString(expectedSignatureBytes);
-            
-            if (!CryptographicOperations.FixedTimeEquals(
-                Encoding.UTF8.GetBytes(signature), 
-                Encoding.UTF8.GetBytes(expectedSignature)))
-            {
-                return false;
-            }
-            
+            // Verify the token authorizes access to the requested path
             return requestPath.StartsWith(authorizedPath, StringComparison.OrdinalIgnoreCase);
         }
         catch
         {
+            // Token is invalid, expired, or tampered with
             return false;
         }
     }
