@@ -17,7 +17,9 @@ public class FilesController(
     StorageService storage) : ControllerBase
 {
     [Route("upload/{subfolder}")]
-    public async Task<IActionResult> Index([FromRoute][ValidDomainName] string subfolder)
+    public async Task<IActionResult> Index(
+        [FromRoute][ValidDomainName] string subfolder,
+        [FromQuery] bool useVault = false)
     {
         if (!ModelState.IsValid)
         {
@@ -53,29 +55,44 @@ public class FilesController(
             file.FileName);
         
         // Save returns the logical path (e.g. avatar/2026/01/14/logo.png)
-        var relativePath = await storage.Save(storePath, file);
+        var relativePath = await storage.Save(storePath, file, useVault);
         return Ok(new
         {
             Path = relativePath,
-            InternetPath = storage.RelativePathToInternetUrl(relativePath, HttpContext)
+            InternetPath = storage.RelativePathToInternetUrl(relativePath, HttpContext, useVault)
         });
     }
 
     [Route("download/{**folderNames}")]
     public async Task<IActionResult> Download([FromRoute] string folderNames)
     {
-        logger.LogInformation("File download requested for path: {FolderNames}", folderNames);
+        return await ProcessDownload(folderNames, isVault: false);
+    }
+
+    [Route("download-private/{**folderNames}")]
+    public async Task<IActionResult> DownloadPrivate([FromRoute] string folderNames, [FromQuery] string token)
+    {
+        if (!storage.ValidateDownloadToken(folderNames, token))
+        {
+            return Unauthorized("Invalid or expired token.");
+        }
+        return await ProcessDownload(folderNames, isVault: true);
+    }
+
+    private async Task<IActionResult> ProcessDownload(string folderNames, bool isVault)
+    {
+        logger.LogInformation("File download requested for path: {FolderNames} (Vault: {IsVault})", folderNames, isVault);
 
         if (!ModelState.IsValid)
         {
             return BadRequest();
         }
 
-        // 1. Check if resource exists in Workspace (using logical path to resolve)
+        // 1. Check if resource exists in Workspace/Vault (using logical path to resolve)
         string physicalPath;
         try
         {
-            physicalPath = storage.GetFilePhysicalPath(folderNames);
+            physicalPath = storage.GetFilePhysicalPath(folderNames, isVault);
         }
         catch (ArgumentException)
         {
@@ -92,7 +109,7 @@ public class FilesController(
         if (physicalPath.IsStaticImage() && await imageCompressor.IsValidImageAsync(physicalPath))
         {
             logger.LogInformation("Processing image compression/clearing request for logical path: {Path}", folderNames);
-            return await FileWithImageCompressor(folderNames);
+            return await FileWithImageCompressor(folderNames, isVault);
         }
 
         // 3. Standard File Download (Non-image)
@@ -100,7 +117,7 @@ public class FilesController(
         return this.WebFile(physicalPath);
     }
 
-    private async Task<IActionResult> FileWithImageCompressor(string logicalPath)
+    private async Task<IActionResult> FileWithImageCompressor(string logicalPath, bool isVault)
     {
         var passedWidth = int.TryParse(Request.Query["w"], out var width);
         var passedSquare = bool.TryParse(Request.Query["square"], out var square);
@@ -110,13 +127,13 @@ public class FilesController(
             logger.LogInformation("Compressing image '{Path}' to width: {Width}", logicalPath, width);
             if (square && passedSquare)
             {
-                var compressedPath = await imageCompressor.CompressAsync(logicalPath, width, width);
+                var compressedPath = await imageCompressor.CompressAsync(logicalPath, width, width, isVault);
                 logger.LogInformation("Image compressed to square format: {CompressedPath}", compressedPath);
                 return this.WebFile(compressedPath);
             }
             else
             {
-                var compressedPath = await imageCompressor.CompressAsync(logicalPath, width, 0);
+                var compressedPath = await imageCompressor.CompressAsync(logicalPath, width, 0, isVault);
                 logger.LogInformation("Image compressed to rectangular format: {CompressedPath}", compressedPath);
                 return this.WebFile(compressedPath);
             }
@@ -129,7 +146,7 @@ public class FilesController(
 
         // If no width or invalid, just clear EXIF (Privacy by Default)
         logger.LogInformation("Clearing EXIF data for image: {Path}", logicalPath);
-        var clearedPath = await imageCompressor.ClearExifAsync(logicalPath);
+        var clearedPath = await imageCompressor.ClearExifAsync(logicalPath, isVault);
         return this.WebFile(clearedPath);
     }
 }

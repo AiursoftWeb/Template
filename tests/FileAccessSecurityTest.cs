@@ -18,7 +18,8 @@ public class FileAccessSecurityTest
         var config = new ConfigurationBuilder()
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
-                { "Storage:Path", _tempPath }
+                { "Storage:Path", _tempPath },
+                { "Storage:Key", "test-key" }
             })
             .Build();
 
@@ -27,7 +28,7 @@ public class FileAccessSecurityTest
         var memoryCache = new MemoryCache(new MemoryCacheOptions());
         var fileLockProvider = new FileLockProvider(memoryCache);
 
-        _storageService = new StorageService(foldersProvider, fileLockProvider);
+        _storageService = new StorageService(foldersProvider, fileLockProvider, config);
     }
 
     [TestCleanup]

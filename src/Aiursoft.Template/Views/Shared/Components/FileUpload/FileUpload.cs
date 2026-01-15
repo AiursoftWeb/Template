@@ -9,7 +9,8 @@ public class FileUpload : ViewComponent
         ModelExpression aspFor,
         string uploadEndpoint,
         int maxSizeInMb = 2000,
-        string? allowedExtensions = null)
+        string? allowedExtensions = null,
+        bool isVault = false)
     {
         return View(new FileUploadViewModel
         {
@@ -17,6 +18,7 @@ public class FileUpload : ViewComponent
             UploadEndpoint = uploadEndpoint,
             MaxSizeInMb = maxSizeInMb,
             AllowedExtensions = allowedExtensions,
+            IsVault = isVault
         });
     }
 }
