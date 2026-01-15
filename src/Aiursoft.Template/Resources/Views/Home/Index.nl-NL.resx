@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
+      <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
+    <value>&quot;Fire-and-forget&quot;-ondersteuning voor langdurige taken (zoals e-mails of AI), met een GUI voor wachtrijbeheer, parallelle verwerking en annulering.</value>
+  </data>
+  <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Een ingebouwd Role-Based Access Control (RBAC) systeem voor gedetailleerd rechtenbeheer.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>Een complete oplossing voor gebruikersauthenticatie en profielbeheer, direct klaar voor gebruik.</value>
+  </data>
+  <data name="A complete solution for user authentication and profile management." xml:space="preserve">
+    <value>Een complete oplossing voor gebruikersverificatie en profielbeheer.</value>
   </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Een volledig responsieve lay-out die er geweldig uitziet op zowel desktop- als mobiele apparaten.</value>
@@ -51,8 +57,17 @@
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>Automatische Dependency Injection</value>
   </data>
+  <data name="Automatic Time Zone Handling" xml:space="preserve">
+    <value>Automatische tijdzoneafhandeling</value>
+  </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>Automatische, AI-gestuurde vertaling in 28 talen voor wereldwijde reikwijdte.</value>
+  </data>
+  <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
+    <value>Automatische, AI-gevoede vertaling in 28 talen.</value>
+  </data>
+  <data name="Background Job Processing" xml:space="preserve">
+    <value>Achtergrondtaakverwerking</value>
   </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>Bouw je volgende grote ding,</value>
@@ -60,14 +75,23 @@
   <data name="Built-in User Management" xml:space="preserve">
     <value>Ingebouwd gebruikersbeheer</value>
   </data>
+  <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
+    <value>Komt met Docker-ondersteuning voor vereenvoudigde en consistente implementaties.</value>
+  </data>
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>Biedt volledige Docker-ondersteuning voor vereenvoudigde, consistente en betrouwbare implementaties.</value>
   </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Uitgebreide documentatie</value>
   </data>
+  <data name="Consistency Validation" xml:space="preserve">
+    <value>Consistency Validatie</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Dashboardwebsite</value>
+  </data>
+  <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
+    <value>Ontwikkel uitsluitend in UTC terwijl het systeem automatisch datums converteert en weergeeft in de lokale tijdzone van de gebruiker.</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>Discussiespagina</value>
@@ -75,11 +99,20 @@
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Gedockeriseerd voor implementatie</value>
   </data>
+  <data name="Dockerized for Easy Deployment" xml:space="preserve">
+    <value>Dockerized voor eenvoudige implementatie</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>Dynamische navigatiebalk</value>
   </data>
+  <data name="Easily switch between database providers, including SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
+    <value>Schakel eenvoudig tussen databaseproviders, inclusief SQLite, MySQL, SQL Server en een in-memory database voor testdoeleinden.</value>
+  </data>
   <data name="Easily switch between providers like SQLite, MySQL, SQL Server, and an in-memory database for testing." xml:space="preserve">
     <value>Schakel eenvoudig tussen providers zoals SQLite, MySQL, SQL Server en een in-memory database voor testen.</value>
+  </data>
+  <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
+    <value>Schrijf integratietests zonder moeite met in-memory databases, tijdelijke bestandssystemen, ingebouwde mocking en simulatie van werkelijke HTTP-verzoeken.</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Veelgestelde vragen</value>
@@ -89,6 +122,9 @@
   </data>
   <data name="Features" xml:space="preserve">
     <value>Functies</value>
+  </data>
+  <data name="Features a built-in file management system with automatic avatar compression and privacy protection." xml:space="preserve">
+    <value>Heeft een ingebouwd bestandsbeheersysteem met automatische avatarcompressie en privacybescherming.</value>
   </data>
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Beschikt over een ingebouwd bestandsbeheersysteem met automatische avatarcompressie.</value>
@@ -104,6 +140,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Ga naar dashboard</value>
+  </data>
+  <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
+    <value>Verwerk herhalende taken zoals opschonen en synchronisatie met een uitgebreide GUI voor het monitoren van uitvoeringsgeschiedenis en logs.</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hallo Wereld!</value>
@@ -141,6 +180,12 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT-licentie</value>
   </data>
+  <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
+    <value>Modellen worden gevalideerd aan de client- en serverzijde op basis van gegevensannotaties.</value>
+  </data>
+  <data name="Multiple Database Provider Support" xml:space="preserve">
+    <value>Ondersteuning voor meerdere databaseproviders</value>
+  </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Ondersteuning voor meerdere databases</value>
   </data>
@@ -165,14 +210,29 @@
   <data name="Reviews" xml:space="preserve">
     <value>Beoordelingen</value>
   </data>
+  <data name="Robust Integration Testing" xml:space="preserve">
+    <value>Robuuste integratietests</value>
+  </data>
+  <data name="Scheduled Task Management" xml:space="preserve">
+    <value>Geplande taakbeheer</value>
+  </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integreer naadloos met elke OpenID Connect-provider, met automatische rollensynchronisatie.</value>
+  </data>
+  <data name="Smart Configuration Overrides" xml:space="preserve">
+    <value>Slimme configuratie-overschrijvingen</value>
+  </data>
+  <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
+    <value>Slimme donkere modus die zich aanpast aan de systeeminstellingen van de gebruiker.</value>
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Slimme donkere modus die automatisch aanpast aan de systeeminstellingen van de gebruiker.</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start een nieuw project</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>Technisch Leider</value>
