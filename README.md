@@ -22,6 +22,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [Manhours](https://gitlab.aiursoft.com/aiursoft/manhours)
 * [Tracer](https://gitlab.aiursoft.com/aiursoft/tracer)
 * [Warp](https://gitlab.aiursoft.com/aiursoft/warp)
+* [AiurDrive](https://gitlab.aiursoft.com/aiursoft/aiurdrive)
 
 ## Try
 
