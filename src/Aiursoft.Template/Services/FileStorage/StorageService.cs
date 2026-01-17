@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.DataProtection;
 
 namespace Aiursoft.Template.Services.FileStorage;
 
+public enum FilePermission
+{
+    Upload,
+    Download
+}
+
 /// <summary>
 /// Represents a service for storing and managing files. (Level 3: Business Gateway)
 /// </summary>
@@ -11,6 +17,12 @@ public class StorageService(
     FileLockProvider fileLockProvider,
     IDataProtectionProvider dataProtectionProvider) : ITransientDependency
 {
+    private class FileToken
+    {
+        public string Path { get; set; } = string.Empty;
+        public FilePermission Permission { get; set; }
+    }
+
     /// <summary>
     /// Saves a file to the storage.
     /// </summary>
@@ -84,29 +96,38 @@ public class StorageService(
         return physicalPath;
     }
 
-    public string GetDownloadToken(string path)
+    public string GetToken(string path, FilePermission permission)
     {
         // Create a time-limited data protector with 60-minute expiration
         var protector = dataProtectionProvider
-            .CreateProtector("FileDownload")
+            .CreateProtector("FileOperation")
             .ToTimeLimitedDataProtector();
         
+        var tokenData = $"{path}|{permission}";
+        
         // Protect the path with time-limited encryption
-        var protectedData = protector.Protect(path, TimeSpan.FromMinutes(60));
+        var protectedData = protector.Protect(tokenData, TimeSpan.FromMinutes(60));
         return protectedData;
     }
 
-    public bool ValidateDownloadToken(string requestPath, string tokenString)
+    public bool ValidateToken(string requestPath, string tokenString, FilePermission requiredPermission)
     {
         try 
         {
             // Create the same protector used for token generation
             var protector = dataProtectionProvider
-                .CreateProtector("FileDownload")
+                .CreateProtector("FileOperation")
                 .ToTimeLimitedDataProtector();
             
             // Unprotect and validate expiration automatically
-            var authorizedPath = protector.Unprotect(tokenString);
+            var tokenData = protector.Unprotect(tokenString);
+            var parts = tokenData.Split('|');
+            if (parts.Length != 2) return false;
+
+            var authorizedPath = parts[0];
+            var authorizedPermission = Enum.Parse<FilePermission>(parts[1]);
+
+            if (authorizedPermission != requiredPermission) return false;
             
             // Verify the token authorizes access to the requested path
             return requestPath.StartsWith(authorizedPath, StringComparison.OrdinalIgnoreCase);
@@ -117,6 +138,11 @@ public class StorageService(
             return false;
         }
     }
+
+    public string GetDownloadToken(string path) => GetToken(path, FilePermission.Download);
+
+    public bool ValidateDownloadToken(string requestPath, string tokenString) => 
+        ValidateToken(requestPath, tokenString, FilePermission.Download);
 
     /// <summary>
     /// Converts a logical path to a URI-compatible path.
@@ -150,5 +176,15 @@ public class StorageService(
             return $"/download-private/{RelativePathToUriPath(relativePath)}?token={token}";
         }
         return $"/download/{RelativePathToUriPath(relativePath)}";
+    }
+
+    public string GetUploadUrl(string subfolder, bool isVault = false)
+    {
+        if (isVault)
+        {
+            var token = GetToken(subfolder, FilePermission.Upload);
+            return $"/upload-private/{subfolder}?token={token}";
+        }
+        return $"/upload/{subfolder}";
     }
 }

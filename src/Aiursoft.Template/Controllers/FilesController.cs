@@ -16,10 +16,32 @@ public class FilesController(
     ILogger<FilesController> logger,
     StorageService storage) : ControllerBase
 {
+    [HttpPost]
     [Route("upload/{subfolder}")]
-    public async Task<IActionResult> Index(
+    [DisableRequestSizeLimit]
+    [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue, ValueLengthLimit = int.MaxValue)]
+    public async Task<IActionResult> Upload(
+        [FromRoute][ValidDomainName] string subfolder)
+    {
+        return await ProcessUpload(subfolder, isVault: false);
+    }
+
+    [HttpPost]
+    [Route("upload-private/{subfolder}")]
+    [DisableRequestSizeLimit]
+    [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue, ValueLengthLimit = int.MaxValue)]
+    public async Task<IActionResult> UploadPrivate(
         [FromRoute][ValidDomainName] string subfolder,
-        [FromQuery] bool useVault = false)
+        [FromQuery] string token)
+    {
+        if (!storage.ValidateToken(subfolder, token, FilePermission.Upload))
+        {
+            return Unauthorized("Invalid or expired token.");
+        }
+        return await ProcessUpload(subfolder, isVault: true);
+    }
+
+    private async Task<IActionResult> ProcessUpload(string subfolder, bool isVault)
     {
         if (!ModelState.IsValid)
         {
@@ -55,11 +77,11 @@ public class FilesController(
             file.FileName);
         
         // Save returns the logical path (e.g. avatar/2026/01/14/logo.png)
-        var relativePath = await storage.Save(storePath, file, useVault);
+        var relativePath = await storage.Save(storePath, file, isVault);
         return Ok(new
         {
             Path = relativePath,
-            InternetPath = storage.RelativePathToInternetUrl(relativePath, HttpContext, useVault)
+            InternetPath = storage.RelativePathToInternetUrl(relativePath, HttpContext, isVault)
         });
     }
 
