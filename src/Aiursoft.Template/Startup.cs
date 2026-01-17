@@ -63,6 +63,7 @@ public class Startup : IWebStartup
     public void Configure(WebApplication app)
     {
         app.UseExceptionHandler("/Error/Error");
+        app.UseStatusCodePagesWithReExecute("/Error/Code{0}");
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();

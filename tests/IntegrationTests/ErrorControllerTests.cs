@@ -18,4 +18,20 @@ public class ErrorControllerTests : TestBase
         var response = await Http.GetAsync(url);
         response.EnsureSuccessStatusCode();
     }
+
+    [TestMethod]
+    public async Task GetBadRequest()
+    {
+        var url = "/Error/BadRequestPage";
+        var response = await Http.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+    }
+
+    [TestMethod]
+    public async Task GetCode400()
+    {
+        var url = "/Error/Code400";
+        var response = await Http.GetAsync(url);
+        response.EnsureSuccessStatusCode();
+    }
 }

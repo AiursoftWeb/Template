@@ -13,7 +13,23 @@ public class ErrorController : Controller
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return this.StackView(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return this.StackView(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier }, viewName: "Error");
+    }
+
+    [Route("Error/Code{code}")]
+    public IActionResult Code(int code)
+    {
+        if (code == 400)
+        {
+            return BadRequestPage();
+        }
+
+        return Error();
+    }
+
+    public IActionResult BadRequestPage()
+    {
+        return this.StackView(new BadRequestViewModel(), viewName: "BadRequest");
     }
 
     [Route("Error/Unauthorized")]
