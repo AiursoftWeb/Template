@@ -17,12 +17,6 @@ public class StorageService(
     FileLockProvider fileLockProvider,
     IDataProtectionProvider dataProtectionProvider) : ITransientDependency
 {
-    private class FileToken
-    {
-        public string Path { get; set; } = string.Empty;
-        public FilePermission Permission { get; set; }
-    }
-
     /// <summary>
     /// Saves a file to the storage.
     /// </summary>

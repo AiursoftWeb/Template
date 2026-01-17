@@ -1,4 +1,5 @@
 using System.Net;
+using Aiursoft.Template.Services.FileStorage;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
@@ -29,7 +30,7 @@ public class FilesControllerTests : TestBase
     [TestMethod]
     public async Task TestPrivateUploadAndDownload()
     {
-        var storage = GetService<Aiursoft.Template.Services.FileStorage.StorageService>();
+        var storage = GetService<StorageService>();
         var subfolder = "private-test";
         var uploadUrl = storage.GetUploadUrl(subfolder, isVault: true);
 
@@ -44,7 +45,7 @@ public class FilesControllerTests : TestBase
         Assert.IsNotNull(uploadResult);
         Assert.IsNotNull(uploadResult.Path);
         Assert.IsNotNull(uploadResult.InternetPath);
-        Assert.IsTrue(uploadResult.InternetPath.Contains("token="));
+        Assert.Contains("token=", uploadResult.InternetPath);
 
         // 2. Download using InternetPath (which contains token)
         var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
