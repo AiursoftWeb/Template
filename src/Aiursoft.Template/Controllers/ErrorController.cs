@@ -10,26 +10,39 @@ namespace Aiursoft.Template.Controllers;
 /// </summary>
 public class ErrorController : Controller
 {
+    [Route("Error/Code{code:int}")]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return this.StackView(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier }, viewName: "Error");
-    }
-
-    [Route("Error/Code{code}")]
     public IActionResult Code(int code)
     {
-        if (code == 400)
+        var model = new ErrorViewModel
         {
-            return BadRequestPage();
+            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
+            ErrorCode = code
+        };
+
+        switch (code)
+        {
+            case 400:
+                model.PageTitle = "Bad Request";
+                break;
+            case 401:
+                model.PageTitle = "Unauthorized";
+                break;
+            case 403:
+                model.PageTitle = "Forbidden";
+                break;
+            case 404:
+                model.PageTitle = "Not Found";
+                break;
+            case 500:
+                model.PageTitle = "Internal Server Error";
+                break;
+            default:
+                model.PageTitle = $"Error {code}";
+                break;
         }
 
-        return Error();
-    }
-
-    public IActionResult BadRequestPage()
-    {
-        return this.StackView(new BadRequestViewModel(), viewName: "BadRequest");
+        return this.StackView(model, viewName: "Error");
     }
 
     [Route("Error/Unauthorized")]

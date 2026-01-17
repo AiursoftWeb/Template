@@ -1,0 +1,17 @@
+You are working on an EXISTING Merge Request #56: 'Fix for issue #23: 这个项目有漂亮的500页面，漂亮的403 页面，但是没有漂亮的BadRequest 400页面。做一个。'.
+Source Branch: fix-issue-23
+Target Branch: master
+
+Recent discussions and feedback (marked [NEW] if since last bot commit):
+[NEW] anduin: 既然你都使用了： 
+        app.UseExceptionHandler("/Error/Error");
+        app.UseStatusCodePagesWithReExecute("/Error/Code{0}");
+
+那干脆把老的 Error 扬了，直接合并进入你的 500 ，这样一个函数同时处理 404 和 500 不得了，何苦用两套不同的基础设施？ (1/17/2026 6:25:23 PM)
+
+
+Status: NEW HUMAN REVIEW/COMMENTS.
+A human has provided feedback on this MR. Please address the comments mentioned in the discussions above, especially those marked as [NEW].
+
+Please analyze the feedback and make the necessary changes.
+Don't forget to bump the version for updated nuget package projects after necessary changes, while do NOT add a version tag for projects doesn't publish nuget packages!
