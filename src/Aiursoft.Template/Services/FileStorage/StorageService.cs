@@ -124,7 +124,7 @@ public class StorageService(
             if (authorizedPermission != requiredPermission) return false;
 
             // Verify the token authorizes access to the requested path
-            return requestPath.StartsWith(authorizedPath, StringComparison.OrdinalIgnoreCase);
+            return requestPath.StartsWith(authorizedPath.TrimEnd('/'), StringComparison.OrdinalIgnoreCase);
         }
         catch
         {
