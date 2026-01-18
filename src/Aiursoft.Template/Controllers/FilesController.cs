@@ -17,7 +17,7 @@ public class FilesController(
     StorageService storage) : ControllerBase
 {
     [HttpPost]
-    [Route("upload/{subfolder}")]
+    [Route("upload/{**subfolder}")]
     [DisableRequestSizeLimit]
     [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue, ValueLengthLimit = int.MaxValue)]
     public async Task<IActionResult> Upload(
@@ -27,7 +27,7 @@ public class FilesController(
     }
 
     [HttpPost]
-    [Route("upload-private/{subfolder}")]
+    [Route("upload-private/{**subfolder}")]
     [DisableRequestSizeLimit]
     [RequestFormLimits(MultipartBodyLengthLimit = long.MaxValue, ValueLengthLimit = int.MaxValue)]
     public async Task<IActionResult> UploadPrivate(
