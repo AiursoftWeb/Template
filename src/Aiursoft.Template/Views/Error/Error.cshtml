@@ -14,6 +14,10 @@
                     {
                         <i class="align-middle text-info" data-lucide="help-circle" style="width: 64px; height: 64px;"></i>
                     }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        <i class="align-middle text-warning" data-lucide="shield-off" style="width: 64px; height: 64px;"></i>
+                    }
                     else
                     {
                         <i class="align-middle text-danger" data-lucide="alert-triangle" style="width: 64px; height: 64px;"></i>
@@ -31,6 +35,10 @@
                     {
                         @Localizer["The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."]
                     }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        @Localizer["Sorry, you do not have the necessary permissions to access this page."]
+                    }
                     else
                     {
                         @Localizer["We're sorry, something went wrong while processing your request."]
@@ -45,6 +53,10 @@
                     else if (Model.ErrorCode == 404)
                     {
                         @Localizer["Please check the URL and try again. If you believe this is a server error, please contact support."]
+                    }
+                    else if (Model.ErrorCode is 403 or 401)
+                    {
+                        @Localizer["If you believe you should have access, please contact your system administrator. Or try signing out and signing in again."]
                     }
                     else
                     {
@@ -65,6 +77,12 @@
                     <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg">
                         <i class="align-middle me-2" data-lucide="home"></i> @Localizer["Back to Home"]
                     </a>
+                    @if (!string.IsNullOrEmpty(Model.ReturnUrl))
+                    {
+                        <a href="@Model.ReturnUrl" class="btn btn-secondary btn-lg">
+                            <i class="align-middle me-2" data-lucide="refresh-cw"></i> @Localizer["Try again"]
+                        </a>
+                    }
                 </div>
 
             </div>

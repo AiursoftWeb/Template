@@ -12,12 +12,13 @@ public class ErrorController : Controller
 {
     [Route("Error/Code{code:int}")]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Code(int code)
+    public IActionResult Code(int code, [FromQuery] string? returnUrl = null)
     {
         var model = new ErrorViewModel
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
-            ErrorCode = code
+            ErrorCode = code,
+            ReturnUrl = returnUrl
         };
 
         switch (code)
@@ -29,7 +30,7 @@ public class ErrorController : Controller
                 model.PageTitle = "Unauthorized";
                 break;
             case 403:
-                model.PageTitle = "Forbidden";
+                model.PageTitle = "Access Denied"; // Changed from Forbidden to match "Access Denied" context usually
                 break;
             case 404:
                 model.PageTitle = "Not Found";
@@ -43,20 +44,5 @@ public class ErrorController : Controller
         }
 
         return this.StackView(model, viewName: "Error");
-    }
-
-    [Route("Error/Unauthorized")]
-    [HttpGet]
-    public IActionResult UnauthorizedPage([FromQuery]string returnUrl = "/")
-    {
-        if (!Url.IsLocalUrl(returnUrl))
-        {
-            returnUrl = "/";
-        }
-
-        return this.StackView(new UnauthorizedViewModel
-        {
-            ReturnUrl = returnUrl
-        }, viewName: "Unauthorized");
     }
 }

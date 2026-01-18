@@ -14,4 +14,6 @@ public class ErrorViewModel: UiStackLayoutViewModel
     public required string RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
+    public string? ReturnUrl { get; set; }
 }
