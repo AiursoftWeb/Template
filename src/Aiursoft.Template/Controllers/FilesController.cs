@@ -75,7 +75,7 @@ public class FilesController(
             DateTime.UtcNow.Month.ToString("D2"),
             DateTime.UtcNow.Day.ToString("D2"),
             file.FileName);
-        
+
         // Save returns the logical path (e.g. avatar/2026/01/14/logo.png)
         var relativePath = await storage.Save(storePath, file, isVault);
         return Ok(new
@@ -94,7 +94,7 @@ public class FilesController(
     [Route("download-private/{**folderNames}")]
     public async Task<IActionResult> DownloadPrivate([FromRoute] string folderNames, [FromQuery] string token)
     {
-        if (!storage.ValidateDownloadToken(folderNames, token))
+        if (!storage.ValidateToken(folderNames, token, requiredPermission: FilePermission.Download))
         {
             return Unauthorized("Invalid or expired token.");
         }
@@ -120,7 +120,7 @@ public class FilesController(
         {
             return BadRequest("Attempted to access a restricted path.");
         }
-        
+
         if (!System.IO.File.Exists(physicalPath))
         {
             return NotFound();

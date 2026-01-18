@@ -28,7 +28,7 @@ public class StorageService(
     {
         // 1. Get Workspace root
         var root = isVault ? folders.GetVaultFolder() : folders.GetWorkspaceFolder();
-        
+
         // 2. Resolve physical path
         var physicalPath = Path.GetFullPath(Path.Combine(root, logicalPath));
 
@@ -47,7 +47,7 @@ public class StorageService(
 
         // 5. Handle collisions (Renaming)
         // Lock on the directory to prevent race conditions during renaming
-        var lockObj = fileLockProvider.GetLock(directory!); 
+        var lockObj = fileLockProvider.GetLock(directory!);
         await lockObj.WaitAsync();
         try
         {
@@ -69,7 +69,7 @@ public class StorageService(
         // 6. Write file content
         await using var fileStream = new FileStream(physicalPath, FileMode.Create);
         await file.CopyToAsync(fileStream);
-        
+
         // 7. Return logical path (relative to Workspace)
         return Path.GetRelativePath(root, physicalPath).Replace("\\", "/");
     }
@@ -96,9 +96,9 @@ public class StorageService(
         var protector = dataProtectionProvider
             .CreateProtector("FileOperation")
             .ToTimeLimitedDataProtector();
-        
+
         var tokenData = $"{path}|{permission}";
-        
+
         // Protect the path with time-limited encryption
         var protectedData = protector.Protect(tokenData, TimeSpan.FromMinutes(60));
         return protectedData;
@@ -106,13 +106,13 @@ public class StorageService(
 
     public bool ValidateToken(string requestPath, string tokenString, FilePermission requiredPermission)
     {
-        try 
+        try
         {
             // Create the same protector used for token generation
             var protector = dataProtectionProvider
                 .CreateProtector("FileOperation")
                 .ToTimeLimitedDataProtector();
-            
+
             // Unprotect and validate expiration automatically
             var tokenData = protector.Unprotect(tokenString);
             var parts = tokenData.Split('|');
@@ -122,7 +122,7 @@ public class StorageService(
             var authorizedPermission = Enum.Parse<FilePermission>(parts[1]);
 
             if (authorizedPermission != requiredPermission) return false;
-            
+
             // Verify the token authorizes access to the requested path
             return requestPath.StartsWith(authorizedPath, StringComparison.OrdinalIgnoreCase);
         }
@@ -132,11 +132,6 @@ public class StorageService(
             return false;
         }
     }
-
-    public string GetDownloadToken(string path) => GetToken(path, FilePermission.Download);
-
-    public bool ValidateDownloadToken(string requestPath, string tokenString) => 
-        ValidateToken(requestPath, tokenString, FilePermission.Download);
 
     /// <summary>
     /// Converts a logical path to a URI-compatible path.
@@ -156,7 +151,7 @@ public class StorageService(
     {
         if (isVault)
         {
-            var token = GetDownloadToken(relativePath);
+            var token = GetToken(relativePath, FilePermission.Download);
             return $"{context.Request.Scheme}://{context.Request.Host}/download-private/{RelativePathToUriPath(relativePath)}?token={token}";
         }
         return $"{context.Request.Scheme}://{context.Request.Host}/download/{RelativePathToUriPath(relativePath)}";
@@ -166,7 +161,7 @@ public class StorageService(
     {
         if (isVault)
         {
-            var token = GetDownloadToken(relativePath);
+            var token = GetToken(relativePath, FilePermission.Download);
             return $"/download-private/{RelativePathToUriPath(relativePath)}?token={token}";
         }
         return $"/download/{RelativePathToUriPath(relativePath)}";

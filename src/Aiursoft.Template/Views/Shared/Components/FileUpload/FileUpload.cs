@@ -8,22 +8,12 @@ public class FileUpload(StorageService storage) : ViewComponent
 {
     public IViewComponentResult Invoke(
         ModelExpression aspFor,
-        string? subfolder = null,
-        string? uploadEndpoint = null,
+        string subfolder,
         int maxSizeInMb = 2000,
         string? allowedExtensions = null,
         bool isVault = false)
     {
-        if (string.IsNullOrWhiteSpace(uploadEndpoint) && !string.IsNullOrWhiteSpace(subfolder))
-        {
-            uploadEndpoint = storage.GetUploadUrl(subfolder, isVault);
-        }
-
-        if (string.IsNullOrWhiteSpace(uploadEndpoint))
-        {
-            throw new ArgumentException("Either uploadEndpoint or subfolder must be provided.");
-        }
-
+        var uploadEndpoint = storage.GetUploadUrl(subfolder, isVault);
         return View(new FileUploadViewModel
         {
             AspFor = aspFor,
