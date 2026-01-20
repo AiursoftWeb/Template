@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Aiursoft.Template.Sqlite.Migrations
 {
+    // THIS FILE IS AUTO GENERATED AND MAINTAINED BY ENTITY FRAMEWORK!
+    // NEVER EDIT THIS FILE MANUALLY!!!
     [DbContext(typeof(SqliteContext))]
     [ExcludeFromCodeCoverage]
     class SqliteContextModelSnapshot : ModelSnapshot
