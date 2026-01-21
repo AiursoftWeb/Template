@@ -10,11 +10,14 @@ public class FilesControllerTests : TestBase
     public async Task TestUploadAndDownload()
     {
         // 1. Upload
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("test", isVault: false);
+
         var content = new StringContent("Hello World");
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(content, "file", "test.txt");
 
-        var uploadResponse = await Http.PostAsync("/upload/test", multipartContent);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
         Assert.IsNotNull(uploadResult);
@@ -74,11 +77,14 @@ public class FilesControllerTests : TestBase
     [TestMethod]
     public async Task TestUploadInvalidFileName()
     {
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("test", isVault: false);
+
         var content = new StringContent("Hello World");
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(content, "file", "../test.txt");
 
-        var uploadResponse = await Http.PostAsync("/upload/test", multipartContent);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         Assert.AreEqual(HttpStatusCode.BadRequest, uploadResponse.StatusCode);
     }
 

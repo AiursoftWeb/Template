@@ -170,11 +170,11 @@ public class StorageService(
 
     public string GetUploadUrl(string subfolder, bool isVault = false)
     {
+        var token = GetToken(subfolder, FilePermission.Upload);
         if (isVault)
         {
-            var token = GetToken(subfolder, FilePermission.Upload);
             return $"/upload-private/{subfolder}?token={token}";
         }
-        return $"/upload/{subfolder}";
+        return $"/upload/{subfolder}?token={token}";
     }
 }
