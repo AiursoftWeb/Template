@@ -18,7 +18,10 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Admin" xml:space="preserve">
+      <data name="Access Denied" xml:space="preserve">
+    <value>Åtkomst nekad</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
     <value>Administratör</value>
   </data>
   <data name="Administration" xml:space="preserve">
@@ -32,6 +35,9 @@
   </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Bakgrundsjobb</value>
+  </data>
+  <data name="Bad Request" xml:space="preserve">
+    <value>Felaktig begäran</value>
   </data>
   <data name="Change Avatar" xml:space="preserve">
     <value>Byt avatar</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Create User" xml:space="preserve">
     <value>Skapa användare</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Instrumentbräda</value>
   </data>
   <data name="Delete Role" xml:space="preserve">
     <value>Ta bort roll</value>
@@ -84,6 +93,12 @@
   <data name="Info" xml:space="preserve">
     <value>Information</value>
   </data>
+  <data name="Internal Server Error" xml:space="preserve">
+    <value>Intern serverfel</value>
+  </data>
+  <data name="Lockout" xml:space="preserve">
+    <value>Låst ut</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Logga in</value>
   </data>
@@ -92,6 +107,12 @@
   </data>
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
+  </data>
+  <data name="Not Found" xml:space="preserve">
+    <value>Inte hittat</value>
+  </data>
+  <data name="Permission Details" xml:space="preserve">
+    <value>Behörighetsdetaljer</value>
   </data>
   <data name="Permissions" xml:space="preserve">
     <value>Behörigheter</value>
