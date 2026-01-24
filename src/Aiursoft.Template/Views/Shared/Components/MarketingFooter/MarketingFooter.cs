@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
+using Aiursoft.Template.Services;
 
 namespace Aiursoft.Template.Views.Shared.Components.MarketingFooter;
 
-public class MarketingFooter : ViewComponent
+public class MarketingFooter(GlobalSettingsService globalSettingsService) : ViewComponent
 {
-    public IViewComponentResult Invoke(MarketingFooterViewModel? model = null)
+    public async Task<IViewComponentResult> InvokeAsync(MarketingFooterViewModel? model = null)
     {
         model ??= new MarketingFooterViewModel();
+        model.BrandName = await globalSettingsService.GetSettingValueAsync("BrandName");
+        model.BrandHomeUrl = await globalSettingsService.GetSettingValueAsync("BrandHomeUrl");
+        model.Icp = await globalSettingsService.GetSettingValueAsync("Icp");
         return View(model);
     }
 }
