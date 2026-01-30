@@ -57,5 +57,8 @@
   <data name="Value" xml:space="preserve">
     <value>Τιμή</value>
   </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Μεταφόρτωση</value>
+  </data>
 
 </root>
