@@ -32,60 +32,61 @@
         @* The mb-0 class ensures the table fits snugly within the card. *@
         <table class="table table-hover mb-0">
             <thead>
-            <tr>
-                <th>@Localizer["Avatar"]</th>
-                <th>@Localizer["User name"]</th>
-                <th>@Localizer["Name"]</th>
-                <th>@Localizer["Email"]</th>
-                <th>@Localizer["Roles"]</th>
-                <th class="text-end">@Localizer["Actions"]</th>
-            </tr>
+                <tr>
+                    <th>@Localizer["Avatar"]</th>
+                    <th>@Localizer["User name"]</th>
+                    <th>@Localizer["Name"]</th>
+                    <th>@Localizer["Email"]</th>
+                    <th>@Localizer["Roles"]</th>
+                    <th class="text-end">@Localizer["Actions"]</th>
+                </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model.Users)
-            {
-                @* The clickable-row class and data-href attribute are fully preserved. *@
-                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
-                    <td>
-                        <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath)?w=72&square=true" alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
-                    </td>
-                    <td>@item.User.UserName</td>
-                    <td>@item.User.DisplayName</td>
-                    <td>@item.User.Email</td>
-                    <td>
-                        @* The complex C# presentation logic for roles is identified and fully preserved. *@
-                        @{
-                            const int maxRolesToShow = 3;
-                            var roles = item.Roles;
-                            string displayRoles;
-                            if (roles.Count > maxRolesToShow)
+                @foreach (var item in Model.Users)
+                {
+                    @* The clickable-row class and data-href attribute are fully preserved. *@
+                    <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
+                        <td>
+                            <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath, false)?w=72&square=true"
+                                alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
+                        </td>
+                        <td>@item.User.UserName</td>
+                        <td>@item.User.DisplayName</td>
+                        <td>@item.User.Email</td>
+                        <td>
+                            @* The complex C# presentation logic for roles is identified and fully preserved. *@
+                            @{
+                                const int maxRolesToShow = 3;
+                                var roles = item.Roles;
+                                string displayRoles;
+                                if (roles.Count > maxRolesToShow)
+                                {
+                                    displayRoles = string.Join(", ", roles.Take(maxRolesToShow)) + "...";
+                                }
+                                else
+                                {
+                                    displayRoles = string.Join(", ", roles);
+                                }
+                            }
+                            @if (!string.IsNullOrWhiteSpace(displayRoles))
                             {
-                                displayRoles = string.Join(", ", roles.Take(maxRolesToShow)) + "...";
+                                <label>@displayRoles</label>
                             }
                             else
                             {
-                                displayRoles = string.Join(", ", roles);
+                                <span class="text-muted">@Localizer["(no role assigned)"]</span>
                             }
-                        }
-                        @if (!string.IsNullOrWhiteSpace(displayRoles))
-                        {
-                            <label>@displayRoles</label>
-                        }
-                        else
-                        {
-                            <span class="text-muted">@Localizer["(no role assigned)"]</span>
-                        }
-                    </td>
-                    <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">
-                            <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
-                        </a>
-                        <a asp-action="Delete" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-danger">
-                            <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
-                        </a>
-                    </td>
-                </tr>
-            }
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">
+                                <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-danger">
+                                <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
+                            </a>
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

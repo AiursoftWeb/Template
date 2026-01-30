@@ -25,6 +25,7 @@ namespace Aiursoft.Template.Services;
 
 public class ViewModelArgsInjector(
     IStringLocalizer<ViewModelArgsInjector> localizer,
+    GlobalSettingsService globalSettingsService,
     StorageService storageService,
     NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
@@ -67,7 +68,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Permissions"];
         _ = localizer["Background Jobs"];
         _ = localizer["Global Settings"];
-    
+
         _ = localizer["Access Denied"];
         _ = localizer["Bad Request"];
         _ = localizer["Dashboard"];
@@ -175,12 +176,13 @@ public class ViewModelArgsInjector(
             }
         }
 
+        var brandLogo = globalSettingsService.GetSettingValueAsync("BrandLogo").Result;
         toInject.Sidebar = new SidebarViewModel
         {
             SideLogo = new SideLogoViewModel
             {
                 AppName = localizer["Aiursoft Template"],
-                LogoUrl = "/logo.svg",
+                LogoUrl = string.IsNullOrEmpty(brandLogo) ? "/logo.svg" : storageService.RelativePathToInternetUrl(brandLogo, context, false),
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
@@ -220,7 +222,7 @@ public class ViewModelArgsInjector(
             toInject.Navbar.UserDropdown = new UserDropdownViewModel
             {
                 UserName = context.User.Claims.First(c => c.Type == UserClaimsPrincipalFactory.DisplayNameClaimType).Value,
-                UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath)}?w=100&square=true",
+                UserAvatarUrl = $"{storageService.RelativePathToInternetUrl(avatarPath, context, false)}?w=100&square=true",
                 IconLinkGroups =
                 [
                     new IconLinkGroup

@@ -54,6 +54,14 @@ public class SettingsMap
             Description = Localizer["The name of the project displayed in the frontend."],
             Type = SettingType.Text,
             DefaultValue = "Aiursoft Template"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = "BrandLogo",
+            Name = Localizer["Brand Logo"],
+            Description = Localizer["The brand logo displayed in the navbar and sidebar. Will fallback to default logo if not set."],
+            Type = SettingType.File,
+            DefaultValue = ""
         }
     };
 }

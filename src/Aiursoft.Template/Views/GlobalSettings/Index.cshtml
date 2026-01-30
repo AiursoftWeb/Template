@@ -26,76 +26,89 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model.Settings)
-            {
-                <tr>
-                    <td>
-                        <div class="fw-bold">@SettingsLocalizer[item.Name]</div>
-                        <code class="small text-muted">@item.Key</code>
-                        @if (item.IsOverriddenByConfig)
-                        {
-                            <span class="badge bg-warning text-dark ms-1" title="@Localizer["This setting is overridden by configuration."]"><i class="align-middle" data-lucide="shield-alert"></i> CFG</span>
-                        }
-                    </td>
-                    <td>@SettingsLocalizer[item.Description]</td>
-                    <td>
-                        @if (item.IsOverriddenByConfig)
-                        {
-                            <span class="text-muted">@item.Value</span>
-                        }
-                        else
-                        {
-                            <form asp-action="Edit" method="post" id="form-@item.Key">
-                                <input type="hidden" name="Key" value="@item.Key" />
-                                @if (item.Type == SettingType.Bool)
-                                {
-                                    <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
-                                        <option value="True" selected="@(item.Value == "True" ? "selected" : null)">@Localizer["Enabled"]</option>
-                                        <option value="False" selected="@(item.Value == "False" ? "selected" : null)">@Localizer["Disabled"]</option>
-                                    </select>
-                                }
-                                else if (item.Type == SettingType.Choice && item.ChoiceOptions != null)
-                                {
-                                    <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
-                                        @foreach (var option in item.ChoiceOptions)
+                @foreach (var item in Model.Settings)
+                {
+                    <tr>
+                        <td>
+                            <div class="fw-bold">@SettingsLocalizer[item.Name]</div>
+                            <code class="small text-muted">@item.Key</code>
+                            @if (item.IsOverriddenByConfig)
+                            {
+                                    <span class="badge bg-warning text-dark ms-1" title="@Localizer["This setting is overridden by configuration."]"><i class="align-middle" data-lucide="shield-alert"></i> CFG</span>
+                            }
+                        </td>
+                        <td>@SettingsLocalizer[item.Description]</td>
+                        <td>
+                            @if (item.IsOverriddenByConfig)
+                            {
+                                    <span class="text-muted">@item.Value</span>
+                            }
+                            else
+                            {
+                                    <form asp-action="Edit" method="post" id="form-@item.Key" enctype="multipart/form-data">
+                                        <input type="hidden" name="Key" value="@item.Key" />
+                                    @if (item.Type == SettingType.Bool)
+                                    {
+                                                <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
+                                                    <option value="True" selected="@(item.Value == "True" ? "selected" : null)">@Localizer["Enabled"]</option>
+                                                    <option value="False" selected="@(item.Value == "False" ? "selected" : null)">@Localizer["Disabled"]</option>
+                                                </select>
+                                    }
+                                    else if (item.Type == SettingType.Choice && item.ChoiceOptions != null)
+                                    {
+                                                <select name="Value" class="form-select form-select-sm" onchange="document.getElementById('form-@item.Key').submit()">
+                                            @foreach (var option in item.ChoiceOptions)
+                                            {
+                                                            <option value="@option.Key" selected="@(item.Value == option.Key ? "selected" : null)">@SettingsLocalizer[option.Value]</option>
+                                            }
+                                                </select>
+                                    }
+                                    else if (item.Type == SettingType.File)
+                                    {
+                                                <div class="input-group input-group-sm">
+                                                    <input type="file" name="FileValue" class="form-control" accept="image/*,image/svg+xml" />
+                                                    <button class="btn btn-outline-secondary" type="submit">@Localizer["Upload"]</button>
+                                                </div>
+                                        @if (!string.IsNullOrEmpty(item.Value))
                                         {
-                                            <option value="@option.Key" selected="@(item.Value == option.Key ? "selected" : null)">@SettingsLocalizer[option.Value]</option>
+                                                        <div class="mt-2">
+                                                            <img src="/download/@item.Value" alt="logo" style="max-width: 100px; max-height: 100px;" />
+                                                        </div>
                                         }
-                                    </select>
-                                }
-                                else if (item.Type == SettingType.Number)
-                                {
-                                    <div class="input-group input-group-sm">
-                                        <input type="number" name="Value" value="@item.Value" class="form-control" />
-                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
-                                    </div>
-                                }
-                                else
-                                {
-                                    <div class="input-group input-group-sm">
-                                        <input type="text" name="Value" value="@item.Value" class="form-control" />
-                                        <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
-                                    </div>
-                                }
-                                @Html.AntiForgeryToken()
-                            </form>
-                        }
-                    </td>
-                    <td class="text-end">
-                        @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
-                        {
-                            <form asp-action="Edit" method="post" class="d-inline">
-                                <input type="hidden" name="Key" value="@item.Key" />
-                                <input type="hidden" name="Value" value="@item.DefaultValue" />
-                                @Html.AntiForgeryToken()
-                                <button type="submit" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]">
-                                    <i class="align-middle" data-lucide="rotate-ccw"></i> @Localizer["Reset"]
-                                </button>
-                            </form>
-                        }
-                    </td>
-                </tr>
-            }
+                                    }
+                                    else if (item.Type == SettingType.Number)
+                                    {
+                                                <div class="input-group input-group-sm">
+                                                    <input type="number" name="Value" value="@item.Value" class="form-control" />
+                                                    <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
+                                                </div>
+                                    }
+                                    else
+                                    {
+                                                <div class="input-group input-group-sm">
+                                                    <input type="text" name="Value" value="@item.Value" class="form-control" />
+                                                    <button class="btn btn-outline-secondary" type="submit">@Localizer["Save"]</button>
+                                                </div>
+                                    }
+                                    @Html.AntiForgeryToken()
+                                    </form>
+                            }
+                        </td>
+                        <td class="text-end">
+                            @if (item.Value != item.DefaultValue && !item.IsOverriddenByConfig)
+                            {
+                                    <form asp-action="Edit" method="post" class="d-inline">
+                                        <input type="hidden" name="Key" value="@item.Key" />
+                                        <input type="hidden" name="Value" value="@item.DefaultValue" />
+                                    @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary" title="@Localizer["Reset to default"]">
+                                            <i class="align-middle" data-lucide="rotate-ccw"></i> @Localizer["Reset"]
+                                        </button>
+                                    </form>
+                            }
+                        </td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>
@@ -103,7 +116,7 @@
 
 @if (ViewData.ModelState.Any(m => m.Value != null && m.Value.Errors.Any()))
 {
-    <div class="alert alert-danger mt-3">
-        <div asp-validation-summary="All"></div>
-    </div>
+        <div class="alert alert-danger mt-3">
+            <div asp-validation-summary="All"></div>
+        </div>
 }

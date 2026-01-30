@@ -24,20 +24,15 @@
     }
 
     var hiddenInputTag = HtmlGenerator.GenerateTextBox(
-        ViewContext,
-        Model.AspFor.ModelExplorer,
-        Model.AspFor.Name,
-        Model.AspFor.Model,
-        format: null,
-        htmlAttributes: new { style = "width:0;height:0;padding:0;border:none;" });
+    ViewContext,
+    Model.AspFor.ModelExplorer,
+    Model.AspFor.Name,
+    Model.AspFor.Model,
+    format: null,
+    htmlAttributes: new { style = "width:0;height:0;padding:0;border:none;" });
 }
 
-<input
-    form="fakeForm"
-    type="file"
-    id="@fileInputId"
-    class="dropify"
-    data-show-remove="false"
+<input form="fakeForm" type="file" id="@fileInputId" class="dropify" data-show-remove="false"
     @Html.Raw(extensionAttributes) />
 <div id="@progressId" class="progress mb-3 mt-3 d-none">
     <div id="@progressbarId" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"></div>
@@ -67,8 +62,8 @@
             messages: {
                 'default': @Json.Serialize(Localizer["Drag and drop a file here or click"].Value),
                 'replace': @Json.Serialize(Localizer["Drag and drop or click to replace"].Value),
-                'remove':  @Json.Serialize(Localizer["Remove"].Value),
-                'error':   @Json.Serialize(Localizer["Ooops, something wrong happended."].Value)
+                'remove': @Json.Serialize(Localizer["Remove"].Value),
+                'error': @Json.Serialize(Localizer["Ooops, something wrong happended."].Value)
             },
             error: {
                 'fileSize': @Json.Serialize(Localizer["The file size is too big ({{ value }} max)."].Value),

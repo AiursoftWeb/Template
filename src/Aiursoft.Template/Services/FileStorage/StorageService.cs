@@ -40,6 +40,10 @@ public class StorageService(
 
         // 4. Create directory if needed
         var directory = Path.GetDirectoryName(physicalPath);
+        if (File.Exists(directory))
+        {
+            File.Delete(directory);
+        }
         if (!Directory.Exists(directory))
         {
              Directory.CreateDirectory(directory!);
@@ -152,7 +156,7 @@ public class StorageService(
         return urlPath;
     }
 
-    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault = false)
+    public string RelativePathToInternetUrl(string relativePath, HttpContext context, bool isVault)
     {
         if (isVault)
         {
@@ -162,7 +166,7 @@ public class StorageService(
         return $"{context.Request.Scheme}://{context.Request.Host}/download/{RelativePathToUriPath(relativePath)}";
     }
 
-    public string RelativePathToInternetUrl(string relativePath, bool isVault = false)
+    public string RelativePathToInternetUrl(string relativePath, bool isVault)
     {
         if (isVault)
         {

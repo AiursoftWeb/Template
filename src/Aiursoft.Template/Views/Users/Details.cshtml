@@ -24,8 +24,8 @@
                 <h5 class="card-title mb-0">@Localizer["Profile Details"]</h5>
             </div>
             <div class="card-body text-center">
-                <a href="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)" target="_blank" rel="noopener noreferrer">
-                    <img src="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath)?w=256&square=true" alt="@Model.User.DisplayName" class="img-fluid rounded-circle mb-2" width="128" height="128"/>
+                <a href="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath, false)" target="_blank" rel="noopener noreferrer">
+                    <img src="@StorageService.RelativePathToInternetUrl(Model.User.AvatarRelativePath, false)?w=256&square=true" alt="@Model.User.DisplayName" class="img-fluid rounded-circle mb-2" width="128" height="128"/>
                 </a>
                 <h5 class="card-title mb-0">@Model.User.DisplayName</h5>
                 <div class="text-muted mb-2">@Model.User.Email</div>

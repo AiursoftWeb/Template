@@ -1,7 +1,9 @@
 using Aiursoft.Template.Authorization;
 using Aiursoft.Template.Configuration;
+using Aiursoft.Template.Models;
 using Aiursoft.Template.Models.GlobalSettingsViewModels;
 using Aiursoft.Template.Services;
+using Aiursoft.Template.Services.FileStorage;
 using Aiursoft.UiStack.Navigation;
 using Aiursoft.WebTools.Attributes;
 using Microsoft.AspNetCore.Authorization;
@@ -11,7 +13,9 @@ namespace Aiursoft.Template.Controllers;
 
 [Authorize(Policy = AppPermissionNames.CanManageGlobalSettings)]
 [LimitPerMin]
-public class GlobalSettingsController(GlobalSettingsService settingsService) : Controller
+public class GlobalSettingsController(
+    GlobalSettingsService settingsService,
+    StorageService storageService) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Administration",
@@ -52,7 +56,19 @@ public class GlobalSettingsController(GlobalSettingsService settingsService) : C
 
         try
         {
-            await settingsService.UpdateSettingAsync(model.Key, model.Value ?? string.Empty);
+            var definition = SettingsMap.Definitions.First(d => d.Key == model.Key);
+            if (definition.Type == SettingType.File)
+            {
+                if (model.FileValue is { Length: > 0 })
+                {
+                    var savedFilePath = await storageService.Save(Path.Combine("logos", model.FileValue.FileName), model.FileValue);
+                    await settingsService.UpdateSettingAsync(model.Key, savedFilePath);
+                }
+            }
+            else
+            {
+                await settingsService.UpdateSettingAsync(model.Key, model.Value ?? string.Empty);
+            }
         }
         catch (InvalidOperationException e)
         {
