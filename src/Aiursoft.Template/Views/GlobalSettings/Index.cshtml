@@ -90,8 +90,13 @@
                                             asp-for="@item.Value" 
                                             subfolder="@item.Subfolder" 
                                             allowed-extensions="@item.AllowedExtensions"
-                                            max-size-in-mb="@item.MaxSizeInMb">
+                                            max-size-in-mb="@item.MaxSizeInMb"
+                                            field-name="Value">
                                         </vc:file-upload>
+                                        
+                                        <div>
+                                            <button class="btn btn-outline-secondary btn-sm" type="submit">@Localizer["Save"]</button>
+                                        </div>
                                     </div>
                                 }
                                 else
@@ -130,4 +135,13 @@
     <div class="alert alert-danger mt-3">
         <div asp-validation-summary="All"></div>
     </div>
+}
+
+@section styles {
+    <link rel="stylesheet" href="~/node_modules/dropify/dist/css/dropify.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/styles/uploader.css" asp-append-version="true" />
+}
+
+@section scripts {
+    <script src="~/node_modules/dropify/dist/js/dropify.min.js" asp-append-version="true"></script>
 }
