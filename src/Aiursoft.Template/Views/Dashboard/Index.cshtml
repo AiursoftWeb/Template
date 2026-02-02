@@ -1,7 +1,25 @@
-<div class="text-center mt-5">
-    <h1 class="display-4">@Localizer["Hello World!"]</h1>
-    <p>@Localizer["This is a template project, where we start the voyager..."]</p>
-</div>
+@inject Aiursoft.Template.Services.GlobalSettingsService SettingsService
+@inject Aiursoft.Template.Services.FileStorage.StorageService Storage
+@{
+    var dashboardBanner = await SettingsService.GetSettingValueAsync("DashboardBanner");
+}
+
+@if (!string.IsNullOrWhiteSpace(dashboardBanner))
+{
+    <div class="text-center mt-3 mb-3">
+        <img src="@Storage.RelativePathToInternetUrl(dashboardBanner)" 
+             alt="Dashboard Banner" 
+             class="img-fluid rounded shadow-sm" 
+             style="max-height: 300px; width: auto;" />
+    </div>
+}
+else
+{
+    <div class="text-center mt-5">
+        <h1 class="display-4">@Localizer["Hello World!"]</h1>
+        <p>@Localizer["This is a template project, where we start the voyager..."]</p>
+    </div>
+}
 
 <div class="container-fluid p-5">
     <div class="row mb-2 mb-xl-3">

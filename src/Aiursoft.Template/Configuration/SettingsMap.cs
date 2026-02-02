@@ -54,6 +54,17 @@ public class SettingsMap
             Description = Localizer["The name of the project displayed in the frontend."],
             Type = SettingType.Text,
             DefaultValue = "Aiursoft Template"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = "DashboardBanner",
+            Name = Localizer["Dashboard Banner"],
+            Description = Localizer["The banner image displayed on the dashboard homepage."],
+            Type = SettingType.File,
+            DefaultValue = "",
+            Subfolder = "settings/banners",
+            AllowedExtensions = "jpg png gif webp",
+            MaxSizeInMb = 5
         }
     };
 }
