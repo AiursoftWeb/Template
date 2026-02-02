@@ -92,7 +92,7 @@ public class GlobalSettingsService(
                 try
                 {
                     var physicalPath = storageService.GetFilePhysicalPath(value, isVault: false);
-                    if (!System.IO.File.Exists(physicalPath))
+                    if (!File.Exists(physicalPath))
                     {
                         throw new InvalidOperationException($"File not found for setting {key}.");
                     }
