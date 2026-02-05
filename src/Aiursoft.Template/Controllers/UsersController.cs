@@ -44,7 +44,7 @@ public class UsersController(
             });
         }
 
-        return this.StackView(new IndexViewModel
+        return await this.StackViewAsync(new IndexViewModel
         {
             Users = usersWithRoles
         });
@@ -77,7 +77,7 @@ public class UsersController(
             .OrderBy(p => p.Name)
             .ToList();
 
-        return this.StackView(new DetailsViewModel
+        return await this.StackViewAsync(new DetailsViewModel
         {
             User = user,
             Roles = roles,
@@ -86,9 +86,9 @@ public class UsersController(
     }
 
     [Authorize(Policy = AppPermissionNames.CanAddUsers)]
-    public IActionResult Create()
+    public async Task<IActionResult> Create()
     {
-        return this.StackView(new CreateViewModel());
+        return await this.StackViewAsync(new CreateViewModel());
     }
 
     [Authorize(Policy = AppPermissionNames.CanAddUsers)]
@@ -111,12 +111,12 @@ public class UsersController(
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                return this.StackView(newUser);
+                return await this.StackViewAsync(newUser);
             }
 
             return RedirectToAction(nameof(Details), new { id = user.Id });
         }
-        return this.StackView(newUser);
+        return await this.StackViewAsync(newUser);
     }
 
     // GET: Users/Edit/5
@@ -146,7 +146,7 @@ public class UsersController(
             }).ToList()
         };
 
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     // POST: /Users/Edit/5
@@ -157,7 +157,7 @@ public class UsersController(
     {
         if (!ModelState.IsValid)
         {
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
         var userInDb = await userManager.FindByIdAsync(model.Id);
         if (userInDb == null) return NotFound();
@@ -218,7 +218,7 @@ public class UsersController(
             return NotFound();
         }
 
-        return this.StackView(new DeleteViewModel
+        return await this.StackViewAsync(new DeleteViewModel
         {
             User = user,
         });

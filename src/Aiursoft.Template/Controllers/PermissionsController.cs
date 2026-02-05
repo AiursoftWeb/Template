@@ -79,7 +79,7 @@ public class PermissionsController(
             UserCount = userCountByPermission.GetValueOrDefault(permission.Key, 0)
         }).ToList();
 
-        return this.StackView(new IndexViewModel
+        return await this.StackViewAsync(new IndexViewModel
         {
             Permissions = permissionsWithCounts
         });
@@ -117,7 +117,7 @@ public class PermissionsController(
             .Where(u => userIdsWithPermission.Contains(u.Id))
             .ToListAsync();
 
-        return this.StackView(new DetailsViewModel
+        return await this.StackViewAsync(new DetailsViewModel
         {
             Permission = permission,
             Roles = roles,

@@ -53,19 +53,19 @@ public class ManageController(
         {
             AllowUserAdjustNickname = await settingsService.GetBoolSettingAsync(SettingsMap.AllowUserAdjustNickname)
         };
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     //
     // GET: /Manage/ChangePassword
     [HttpGet]
-    public IActionResult ChangePassword()
+    public async Task<IActionResult> ChangePassword()
     {
         if (appSettings.Value.OIDCEnabled)
         {
             return BadRequest("Local password is disabled when OIDC authentication is enabled.");
         }
-        return this.StackView(new ChangePasswordViewModel());
+        return await this.StackViewAsync(new ChangePasswordViewModel());
     }
 
     //
@@ -80,7 +80,7 @@ public class ManageController(
         }
         if (!ModelState.IsValid)
         {
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
         var user = await GetCurrentUserAsync();
         if (user != null)
@@ -93,7 +93,7 @@ public class ManageController(
                 return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangePasswordSuccess });
             }
             AddErrors(result);
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
         return RedirectToAction(nameof(Index), new { Message = ManageMessageId.Error });
     }
@@ -109,7 +109,7 @@ public class ManageController(
         }
 
         var user = await GetCurrentUserAsync();
-        return this.StackView(new ChangeProfileViewModel
+        return await this.StackViewAsync(new ChangeProfileViewModel
         {
             Name = user!.DisplayName
         });
@@ -128,7 +128,7 @@ public class ManageController(
 
         if (!ModelState.IsValid)
         {
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
 
         var user = await GetCurrentUserAsync();
@@ -148,7 +148,7 @@ public class ManageController(
     public async Task<IActionResult> ChangeAvatar()
     {
         var user = await GetCurrentUserAsync();
-        return this.StackView(new ChangeAvatarViewModel
+        return await this.StackViewAsync(new ChangeAvatarViewModel
         {
             AvatarUrl = user!.AvatarRelativePath
         });
@@ -162,7 +162,7 @@ public class ManageController(
     {
         if (!ModelState.IsValid)
         {
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
 
         // Make sure the file is actually a photo.
@@ -170,7 +170,7 @@ public class ManageController(
         if (!await image.IsValidImageAsync(absolutePath))
         {
             ModelState.AddModelError(string.Empty, localizer["The file is not a valid image."]);
-            return this.StackView(model);
+            return await this.StackViewAsync(model);
         }
 
         // Save the new avatar in the database.
@@ -185,7 +185,7 @@ public class ManageController(
             return RedirectToAction(nameof(Index), new { Message = ManageMessageId.ChangeAvatarSuccess });
         }
 
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     #region Helpers

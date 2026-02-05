@@ -12,7 +12,7 @@ public class ErrorController : Controller
 {
     [Route("Error/Code{code:int}")]
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Code(int code, [FromQuery] string? returnUrl = null)
+    public async Task<IActionResult> Code(int code, [FromQuery] string? returnUrl = null)
     {
         var model = new ErrorViewModel
         {
@@ -43,6 +43,6 @@ public class ErrorController : Controller
                 break;
         }
 
-        return this.StackView(model, viewName: "Error");
+        return await this.StackViewAsync(model, viewName: "Error");
     }
 }

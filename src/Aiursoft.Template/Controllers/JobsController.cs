@@ -25,7 +25,7 @@ public class JobsController(BackgroundJobQueue backgroundJobQueue) : Controller
         CascadedLinksOrder = 9999,
         LinkText = "Background Jobs",
         LinkOrder = 2)]
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
         var oneHourAgo = TimeSpan.FromHours(1);
         var recentCompleted = backgroundJobQueue.GetRecentCompletedJobs(oneHourAgo);
@@ -44,7 +44,7 @@ public class JobsController(BackgroundJobQueue backgroundJobQueue) : Controller
             AllRecentJobs = allJobs
         };
 
-        return this.StackView(viewModel);
+        return await this.StackViewAsync(viewModel);
     }
 
     [HttpPost]

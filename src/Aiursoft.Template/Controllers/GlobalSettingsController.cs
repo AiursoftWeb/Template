@@ -42,7 +42,7 @@ public class GlobalSettingsController(GlobalSettingsService settingsService) : C
                 MaxSizeInMb = definition.MaxSizeInMb
             });
         }
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     [HttpPost]

@@ -29,7 +29,7 @@ public class AccountController(
 
     // GET: /Account/Login
     [HttpGet]
-    public IActionResult Login(string? returnUrl = null)
+    public async Task<IActionResult> Login(string? returnUrl = null)
     {
         if (_appSettings.OIDCEnabled)
         {
@@ -40,7 +40,7 @@ public class AccountController(
         }
 
         ViewData["ReturnUrl"] = returnUrl;
-        return this.StackView(new LoginViewModel());
+        return await this.StackViewAsync(new LoginViewModel());
     }
 
     // POST: /Account/Login
@@ -66,7 +66,7 @@ public class AccountController(
             {
                 logger.LogWarning(0, "Invalid login attempt with username or email: {UsernameOrEmail}", model.EmailOrUserName);
                 ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);
-                return this.StackView(new LoginViewModel());
+                return await this.StackViewAsync(new LoginViewModel());
             }
 
             var result =
@@ -81,18 +81,18 @@ public class AccountController(
             {
                 logger.LogWarning(2, "User account locked out");
                 ModelState.AddModelError(string.Empty, localizer["This account has been locked out, please try again later."]);
-                return this.StackView(new LockoutViewModel(), "Lockout");
+                return await this.StackViewAsync(new LockoutViewModel(), "Lockout");
             }
 
             ModelState.AddModelError(string.Empty, localizer["Invalid login attempt. Please check username and password."]);
         }
 
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     // GET: /Account/Register
     [HttpGet]
-    public IActionResult Register(string? returnUrl = null)
+    public async Task<IActionResult> Register(string? returnUrl = null)
     {
         // If in OIDC mode or registration is not allowed, return 400.
         if (_appSettings.OIDCEnabled || !_appSettings.Local.AllowRegister)
@@ -101,7 +101,7 @@ public class AccountController(
         }
 
         ViewData["ReturnUrl"] = returnUrl;
-        return this.StackView(new RegisterViewModel());
+        return await this.StackViewAsync(new RegisterViewModel());
     }
 
     // POST: /Account/Register
@@ -132,7 +132,7 @@ public class AccountController(
                     if (!addToRoleResult.Succeeded)
                     {
                         AddErrors(addToRoleResult);
-                        return this.StackView(model);
+                        return await this.StackViewAsync(model);
                     }
                 }
 
@@ -144,7 +144,7 @@ public class AccountController(
             AddErrors(result);
         }
 
-        return this.StackView(model);
+        return await this.StackViewAsync(model);
     }
 
     [Authorize]
@@ -187,7 +187,7 @@ public class AccountController(
 
         if (result.IsLockedOut)
         {
-            return this.StackView(new LockoutViewModel());
+            return await this.StackViewAsync(new LockoutViewModel());
         }
         else
         {

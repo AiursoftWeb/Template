@@ -8,8 +8,8 @@ namespace Aiursoft.Template.Controllers;
 [LimitPerMin]
 public class HomeController : Controller
 {
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return this.SimpleView(new IndexViewModel());
+        return await this.SimpleViewAsync(new IndexViewModel());
     }
 }
