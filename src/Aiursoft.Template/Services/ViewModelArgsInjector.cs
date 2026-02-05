@@ -29,6 +29,7 @@ public class ViewModelArgsInjector(
     NavigationState<Startup> navigationState,
     IAuthorizationService authorizationService,
     IOptions<AppSettings> appSettings,
+    GlobalSettingsService globalSettingsService,
     SignInManager<User> signInManager) : IScopedDependency
 {
 
@@ -83,7 +84,7 @@ public class ViewModelArgsInjector(
         UiStackLayoutViewModel toInject)
     {
         toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
-        toInject.AppName = localizer["Template"];
+        toInject.AppName = globalSettingsService.GetSettingValueAsync("ProjectName").GetAwaiter().GetResult();
         toInject.Theme = UiTheme.Light;
         toInject.SidebarTheme = UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
@@ -95,14 +96,15 @@ public class ViewModelArgsInjector(
         UiStackLayoutViewModel toInject)
     {
         var preferDarkTheme = context.Request.Cookies[ThemeController.ThemeCookieKey] == true.ToString();
+        var projectName = globalSettingsService.GetSettingValueAsync("ProjectName").GetAwaiter().GetResult();
         toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
-        toInject.AppName = localizer["Template"];
+        toInject.AppName = projectName;
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
         toInject.SidebarTheme = preferDarkTheme ? UiSidebarTheme.Dark : UiSidebarTheme.Default;
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = localizer["Template"], Href = "https://gitlab.aiursoft.com/aiursoft/template" },
+            AppBrand = new Link { Text = projectName, Href = "https://gitlab.aiursoft.com/aiursoft/template" },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },
@@ -132,7 +134,7 @@ public class ViewModelArgsInjector(
                     }
                     else
                     {
-                        var authResult = authorizationService.AuthorizeAsync(context.User, linkDef.RequiredPolicy).Result;
+                        var authResult = authorizationService.AuthorizeAsync(context.User, linkDef.RequiredPolicy).GetAwaiter().GetResult();
                         isVisible = authResult.Succeeded;
                     }
 
@@ -179,7 +181,7 @@ public class ViewModelArgsInjector(
         {
             SideLogo = new SideLogoViewModel
             {
-                AppName = localizer["Aiursoft Template"],
+                AppName = projectName,
                 LogoUrl = "/logo.svg",
                 Href = "/"
             },
