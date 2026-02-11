@@ -68,7 +68,7 @@ public class ViewModelArgsInjector(
         _ = localizer["Permissions"];
         _ = localizer["Background Jobs"];
         _ = localizer["Global Settings"];
-    
+
         _ = localizer["Access Denied"];
         _ = localizer["Bad Request"];
         _ = localizer["Dashboard"];
@@ -97,6 +97,8 @@ public class ViewModelArgsInjector(
     {
         var preferDarkTheme = context.Request.Cookies[ThemeController.ThemeCookieKey] == true.ToString();
         var projectName = globalSettingsService.GetSettingValueAsync("ProjectName").GetAwaiter().GetResult();
+        var bandName = globalSettingsService.GetSettingValueAsync("BrandName").GetAwaiter().GetResult();
+        var brandHomeUrl = globalSettingsService.GetSettingValueAsync("BrandHomeUrl").GetAwaiter().GetResult();
         toInject.PageTitle = localizer[toInject.PageTitle ?? "View"];
         toInject.AppName = projectName;
         toInject.Theme = preferDarkTheme ? UiTheme.Dark : UiTheme.Light;
@@ -104,7 +106,7 @@ public class ViewModelArgsInjector(
         toInject.Layout = UiLayout.Fluid;
         toInject.FooterMenu = new FooterMenuViewModel
         {
-            AppBrand = new Link { Text = projectName, Href = "https://gitlab.aiursoft.com/aiursoft/template" },
+            AppBrand = new Link { Text = bandName, Href = brandHomeUrl },
             Links =
             [
                 new Link { Text = localizer["Home"], Href = "/" },
@@ -182,7 +184,7 @@ public class ViewModelArgsInjector(
             SideLogo = new SideLogoViewModel
             {
                 AppName = projectName,
-                LogoUrl = "/logo.svg",
+                LogoUrl = GetLogoUrl(context).GetAwaiter().GetResult(),
                 Href = "/"
             },
             SideMenu = new SideMenuViewModel
@@ -284,5 +286,16 @@ public class ViewModelArgsInjector(
                 ]
             };
         }
+    }
+
+
+    private async Task<string> GetLogoUrl(HttpContext context)
+    {
+        var logoPath = await globalSettingsService.GetSettingValueAsync("ProjectLogo");
+        if (string.IsNullOrWhiteSpace(logoPath))
+        {
+            return "/logo.svg";
+        }
+        return storageService.RelativePathToInternetUrl(logoPath, context);
     }
 }

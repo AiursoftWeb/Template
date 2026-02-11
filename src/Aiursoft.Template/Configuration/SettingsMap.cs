@@ -54,6 +54,17 @@ public class SettingsMap
             Description = Localizer["The name of the project displayed in the frontend."],
             Type = SettingType.Text,
             DefaultValue = "Aiursoft Template"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = "ProjectLogo",
+            Name = Localizer["Project Logo"],
+            Description = Localizer["The logo of the project displayed in the navbar and footer. Support jpg, png, svg."],
+            Type = SettingType.File,
+            DefaultValue = "",
+            Subfolder = "project-logo",
+            AllowedExtensions = "jpg png svg",
+            MaxSizeInMb = 5
         }
     };
 }
