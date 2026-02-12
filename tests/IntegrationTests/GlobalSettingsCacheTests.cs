@@ -1,7 +1,6 @@
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Services;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
