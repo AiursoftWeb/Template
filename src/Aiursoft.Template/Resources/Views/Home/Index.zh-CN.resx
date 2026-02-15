@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>借助 Aiursoft Template 成就更多可能</value>
   </data>
+  <data name="AI Readable" xml:space="preserve">
+    <value>AI 可读</value>
+  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI 驱动翻译</value>
   </data>
@@ -69,8 +72,20 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
+  <data name="Beginner Friendly" xml:space="preserve">
+    <value>新手友好</value>
+  </data>
+  <data name="Bilingual Tutorials" xml:space="preserve">
+    <value>双语教程</value>
+  </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>构建你的下一个伟大项目，</value>
+  </data>
+  <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
+    <value>使用企业级但易于学习的原生 C# 构建。</value>
+  </data>
+  <data name="Built-in Auth" xml:space="preserve">
+    <value>内置认证</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>内置用户管理</value>
@@ -81,14 +96,38 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>提供完整的 Docker 支持，实现简化、一致且可靠的部署。</value>
   </data>
+  <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
+    <value>自带严格的单元测试，让测试驱动开发变得轻松简单。</value>
+  </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>全面文档支持</value>
+  </data>
+  <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
+    <value>完整的中英文使用教程</value>
+  </data>
+  <data name="Concise Docs" xml:space="preserve">
+    <value>简洁文档</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性验证</value>
   </data>
+  <data name="Coverage Report" xml:space="preserve">
+    <value>覆盖率报告</value>
+  </data>
+  <data name="Cross Platform" xml:space="preserve">
+    <value>跨平台</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>仪表板网站</value>
+  </data>
+  <data name="Default SQLite database, no configuration needed." xml:space="preserve">
+    <value>默认 SQLite 数据库，无需配置</value>
+  </data>
+  <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
+    <value>专为每个人设计，从新手到专家皆宜。</value>
+  </data>
+  <data name="Dev &amp; Prod" xml:space="preserve">
+    <value>开发与生产</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>在 UTC 中进行开发，而系统会自动将日期转换并显示为用户的本地时区。</value>
@@ -114,6 +153,9 @@
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>轻松编写集成测试，使用内存数据库、临时文件系统、内置模拟和真实 HTTP 请求模拟。</value>
   </data>
+  <data name="Enterprise C#" xml:space="preserve">
+    <value>企业级 C#</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
   </data>
@@ -138,11 +180,23 @@
   <data name="Frequently asked questions" xml:space="preserve">
     <value>常见问题</value>
   </data>
+  <data name="Full RBAC" xml:space="preserve">
+    <value>完整 RBAC</value>
+  </data>
+  <data name="Fully Offline" xml:space="preserve">
+    <value>完全离线</value>
+  </data>
+  <data name="GitLab CI" xml:space="preserve">
+    <value>GitLab CI</value>
+  </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>使用全面的GUI来监控执行历史和日志，处理像清理和同步这样的重复任务。</value>
+  </data>
+  <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
+    <value>适合计算机科学实习生的实践教程</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>你好，世界！</value>
@@ -153,17 +207,32 @@
   <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>以下是我们社区的开发者们的评价。</value>
   </data>
+  <data name="High Quality" xml:space="preserve">
+    <value>高质量</value>
+  </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>如何获取支持？</value>
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>如何部署我的应用程序？</value>
   </data>
+  <data name="IDE Support" xml:space="preserve">
+    <value>IDE 支持</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>包含</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>包含详尽的文档和实用示例，助您快速上手。</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>包含教程</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>集成文件管理</value>
+  </data>
+  <data name="Intern Friendly" xml:space="preserve">
+    <value>适合实习生</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>使用 Aiursoft Template 是否免费？</value>
@@ -173,6 +242,12 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>加入我们的社区，立即开始构建！</value>
+  </data>
+  <data name="Lint Check" xml:space="preserve">
+    <value>Lint 检查</value>
+  </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>保持高代码质量</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 转 HTML</value>
@@ -191,6 +266,15 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>音乐工具</value>
+  </data>
+  <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
+    <value>无需依赖任何云服务提供商。随时随地运行。</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>离线可用</value>
+  </data>
+  <data name="One Click Start" xml:space="preserve">
+    <value>一键启动</value>
   </data>
   <data name="Open Source" xml:space="preserve">
     <value>开源</value>
@@ -213,11 +297,20 @@
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>强大的集成测试</value>
   </data>
+  <data name="Runs without any internet connection required." xml:space="preserve">
+    <value>无需互联网连接即可运行。</value>
+  </data>
   <data name="Scheduled Task Management" xml:space="preserve">
     <value>定时任务管理</value>
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
+  </data>
+  <data name="Simple &amp; Easy" xml:space="preserve">
+    <value>简单且易于使用</value>
+  </data>
+  <data name="Single Container" xml:space="preserve">
+    <value>单容器</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智能配置覆盖</value>
@@ -231,8 +324,29 @@
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>
   </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>从一个单一的 &apos;docker run&apos; 命令开始。</value>
+  </data>
+  <data name="Strict Lint Rules" xml:space="preserve">
+    <value>严格代码检查规则</value>
+  </data>
+  <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
+    <value>严格的代码检查规则，且默认情况下无警告。</value>
+  </data>
+  <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
+    <value>严格的代码检查规则，默认项目中无警告。</value>
+  </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>严格单元测试</value>
+  </data>
+  <data name="Strongly Consistent Linting" xml:space="preserve">
+    <value>强一致性代码检查</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>支持环境变量和基于数据库的设置，环境变量会自动获得优先级，以实现无缝覆盖。</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>支持 JetBrains Rider，轻松修复代码样式。</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>技术负责人</value>
@@ -248,6 +362,9 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
+  </data>
+  <data name="Unified Env" xml:space="preserve">
+    <value>统一环境</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>使用</value>
@@ -267,6 +384,9 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>为何选择 Aiursoft 模板？</value>
   </data>
+  <data name="Win/Lin/Mac" xml:space="preserve">
+    <value>Windows/Linux/macOS</value>
+  </data>
   <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
     <value>是的，Aiursoft Template 在 MIT 许可证下完全免费且开源。您可以在个人和商业项目中免费使用它，无需任何费用。</value>
   </data>
@@ -275,6 +395,9 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要安装 .NET 10 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
+  </data>
+  <data name="Zero Configuration" xml:space="preserve">
+    <value>零配置</value>
   </data>
 
 </root>
