@@ -147,9 +147,9 @@
 </section>
 
 
-<section class="ai-section position-relative w-100 overflow-hidden d-flex align-items-center">
+<section class="immersive-section position-relative w-100 overflow-hidden d-flex align-items-center">
     
-    <div class="ai-immersive-bg">
+    <div class="immersive-bg">
         <div class="bg-image-wrapper">
              <a href="https://template-docs.aiursoft.com/Tutorial/before.html" target="_blank">
                  <img src="~/images/template_running_in_docker.webp" alt="Template Running in Docker" class="img-fluid object-fit-cover w-100 h-100">
@@ -354,9 +354,9 @@
     </div>
 </section>
 
-<section class="ai-section position-relative w-100 overflow-hidden d-flex align-items-center border-top border-white-10">
+<section class="immersive-section position-relative w-100 overflow-hidden d-flex align-items-center border-top border-white-10">
     
-    <div class="ai-immersive-bg-right">
+    <div class="immersive-bg-right">
         <div class="bg-image-wrapper">
              <a href="https://template-docs.aiursoft.com/index.html" target="_blank">
                 <img src="~/images/docs-photo.webp" alt="Simple and Easy" class="img-fluid object-fit-cover w-100 h-100">
@@ -540,9 +540,9 @@
     </div>
 </section>
 
-<section class="ai-section position-relative w-100 overflow-hidden d-flex align-items-center">
+<section class="immersive-section position-relative w-100 overflow-hidden d-flex align-items-center">
     
-    <div class="ai-immersive-bg">
+    <div class="immersive-bg">
         <div class="bg-image-wrapper">
              <a href="https://www.jetbrains.com/rider/" target="_blank">
                  <img src="~/images/running_lint.webp" alt="High Code Quality" class="img-fluid object-fit-cover w-100 h-100">
@@ -673,6 +673,110 @@
     </div>
 </section>
 
+<section class="immersive-section position-relative w-100 overflow-hidden d-flex align-items-center border-top border-white-10">
+    
+    <div class="immersive-bg-right">
+        <div class="bg-image-wrapper clean-wrapper">
+             <a href="https://template-docs.aiursoft.com/index.html" target="_blank">
+                <img src="~/images/authentik_login.webp" alt="Unified Identity Authentication" class="img-fluid object-fit-cover w-100 h-100">
+             </a>
+        </div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <div class="container position-relative z-2 py-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                
+                <div class="mb-5 text-start pe-lg-4">
+                    <div class="d-inline-flex align-items-center px-3 py-1 mb-3 rounded-pill border border-white-10 bg-dark-glass-sm backdrop-blur">
+                        <span class="text-primary me-2"><i class="fas fa-project-diagram"></i></span>
+                        <span class="text-gray-300 small fw-medium text-uppercase tracking-wider">@Localizer["Multiple Projects"]</span>
+                    </div>
+                    <h2 class="display-4 fw-bold text-white mb-3">
+                        <span class="text-primary">@Localizer["Unified Identity"]</span><br>
+                        @Localizer["Coordinate Comfortably"]
+                    </h2>
+                    <p class="lead text-gray-400 fs-5">
+                        @Localizer["Your enterprise users don't need to register repeatedly."]
+                    </p>
+                </div>
+
+                <div class="row g-3 pe-lg-4">
+                    
+                    @* Card 1: Authentik Integration *@
+                    <div class="col-md-6">
+                        <div class="card bg-dark-glass border-white-10 h-100 hover-lift">
+                            <a href="https://goauthentik.io/" target="_blank" class="text-decoration-none">
+                                <div class="card-body p-4">
+                                    <div class="icon-box-sm bg-white-10 rounded-3 me-3 mb-3 p-1">
+                                        <img src="~/images/authentik.png" alt="Authentik" class="img-fluid">
+                                    </div>
+                                    <h5 class="fw-bold text-white fs-6">@Localizer["Authentik & Okta"]</h5>
+                                    <p class="text-gray-400 mb-0 lh-sm"> @Localizer["Deep integration testing with Authentik. Compatible with Okta."]</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    @* Card 2: Standard OpenID *@
+                    <div class="col-md-6">
+                         <div class="card bg-dark-glass border-white-10 h-100 hover-lift">
+                            <a href="https://openid.net/developers/how-connect-works/" target="_blank" class="text-decoration-none">
+                                <div class="card-body p-4">
+                                    <div class="icon-box-sm bg-warning-subtle text-warning rounded-3 me-3 mb-3">
+                                        <i class="fab fa-openid fa-lg"></i>
+                                    </div>
+                                    <h5 class="fw-bold text-white fs-6">@Localizer["Standard OpenID"]</h5>
+                                    <p class="text-gray-400 mb-0 lh-sm"> @Localizer["Standard implementation. Switch providers without compilation."]</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    @* Card 3: Role Synchronization *@
+                    <div class="col-12">
+                        <div class="card bg-dark-glass border-white-10 h-100 hover-lift">
+                            <div class="card-body p-4 d-flex align-items-center">
+                                <div class="icon-box-sm bg-white-10 text-white rounded-3 me-3">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold text-white mb-1 fs-6"> @Localizer["Automatic Role Sync"]</h5>
+                                    <p class="text-gray-400 mb-0">@Localizer["Automatically sync OpenID roles. Unified Rule management."]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @* Card 4: Enterprise Security *@
+                    <div class="col-6">
+                        <div class="card bg-dark-glass border-white-10 h-100 hover-lift text-center py-2">
+                            <div class="card-body p-2">
+                                <i class="fas fa-shield-alt text-success mb-2 fs-5"></i>
+                                <div class="text-gray-300 fw-bold" style="font-size: 0.75rem">@Localizer["Enterprise Security"]</div>
+                                <div class="text-gray-500">@Localizer["Yubikey & TOTP"]</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    @* Card 5: Flexible API Auth *@
+                    <div class="col-6">
+                        <div class="card bg-dark-glass border-white-10 h-100 hover-lift text-center py-2">
+                            <div class="card-body p-2">
+                                <i class="fas fa-network-wired text-info mb-2 fs-5"></i>
+                                <div class="text-gray-300 fw-bold" style="font-size: 0.75rem">@Localizer["Flexible API"]</div>
+                                <div class="text-gray-500">@Localizer["Interoperability"]</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="py-6 bg-white">
     <div class="container">
         <div class="mb-5 text-center">
@@ -725,6 +829,61 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="immersive-section position-relative w-100 overflow-hidden d-flex align-items-center border-top border-white-10">
+    
+    <div class="immersive-bg">
+        <div class="bg-image-wrapper clean-wrapper">
+             <a href="https://github.com/aiursoftweb/template" target="_blank">
+                 <img src="~/images/github.webp" alt="GitHub Repository" class="img-fluid object-fit-cover w-100 h-100">
+             </a>
+        </div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <div class="container position-relative z-2 py-5">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6 col-md-12">
+                
+                <div class="mb-5 text-start ps-lg-4">
+                    <div class="d-inline-flex align-items-center px-3 py-1 mb-3 rounded-pill border border-white-10 bg-dark-glass-sm backdrop-blur">
+                        <span class="text-white me-2"><i class="fab fa-github"></i></span>
+                        <span class="text-gray-300 small fw-medium text-uppercase tracking-wider">@Localizer["Free Software"]</span>
+                    </div>
+                    <h2 class="display-4 fw-bold text-white mb-3">
+                        <span class="text-primary">@Localizer["Aiursoft Template"]</span><br>
+                        @Localizer["is Free Software"]
+                    </h2>
+                    <p class="lead text-gray-400 fs-5">
+                        @Localizer["Full stack open source. Completely free software, no paid features. Built entirely on open standards."]
+                    </p>
+                     <p class="text-gray-400">
+                         @Localizer["Join our growing community of developers building the next generation of web applications."]
+                    </p>
+                    
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle p-2">
+                            <i class="fas fa-balance-scale me-1"></i> @Localizer["MIT License"]
+                        </span>
+                        <span class="badge bg-info-subtle text-info border border-info-subtle p-2">
+                            <i class="fas fa-store me-1"></i> @Localizer["Free for Commercial Use"]
+                        </span>
+                        <span class="badge bg-warning-subtle text-warning border border-warning-subtle p-2">
+                            <i class="fas fa-code me-1"></i> @Localizer["Full Stack Open Source"]
+                        </span>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="https://github.com/aiursoftweb/template" target="_blank" class="btn btn-primary btn-lg btn-pill">
+                            <i class="fab fa-github me-2"></i> @Localizer["View on GitHub"]
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

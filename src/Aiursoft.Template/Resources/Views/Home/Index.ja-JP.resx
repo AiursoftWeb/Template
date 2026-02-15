@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Templateでさらに多くのことを実現</value>
   </data>
+  <data name="AI Readable" xml:space="preserve">
+    <value>AIで読み取り可能な</value>
+  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AIによる翻訳</value>
   </data>
@@ -69,8 +72,20 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>バックグラウンドジョブ処理</value>
   </data>
+  <data name="Beginner Friendly" xml:space="preserve">
+    <value>初心者向け</value>
+  </data>
+  <data name="Bilingual Tutorials" xml:space="preserve">
+    <value>二か国語チュートリアル</value>
+  </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>次の大きなプロジェクトを構築しよう、</value>
+  </data>
+  <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
+    <value>エンタープライズグレードでありながら、学びやすいネイティブC#で構築されています。</value>
+  </data>
+  <data name="Built-in Auth" xml:space="preserve">
+    <value>組み込み認証</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>組み込みユーザー管理</value>
@@ -81,14 +96,38 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>完全なDockerサポートにより、簡素化された一貫性のある信頼性の高いデプロイが可能です。</value>
   </data>
+  <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
+    <value>厳格なユニットテストが付属しており、テスト駆動開発を簡単にします。</value>
+  </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>包括的なドキュメント</value>
+  </data>
+  <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
+    <value>英語および中国語の両方での包括的な使用チュートリアル</value>
+  </data>
+  <data name="Concise Docs" xml:space="preserve">
+    <value>簡潔なドキュメント</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>整合性検証</value>
   </data>
+  <data name="Coverage Report" xml:space="preserve">
+    <value>カバレッジレポート</value>
+  </data>
+  <data name="Cross Platform" xml:space="preserve">
+    <value>クロスプラットフォーム</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>ダッシュボードウェブサイト</value>
+  </data>
+  <data name="Default SQLite database, no configuration needed." xml:space="preserve">
+    <value>デフォルトのSQLiteデータベース、設定は不要です。</value>
+  </data>
+  <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
+    <value>初心者から専門家まで、誰もが使えるように設計されています。</value>
+  </data>
+  <data name="Dev &amp; Prod" xml:space="preserve">
+    <value>開発 &amp; 本番</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>開発はUTCで行うだけで、システムが自動的に日付をユーザーのローカルタイムゾーンに変換して表示します。</value>
@@ -114,6 +153,9 @@
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>インメモリデータベース、一時ファイルシステム、組み込みモック、そして現実のHTTPリクエストシミュレーションを使用して、簡単に統合テストを書くことができます。</value>
   </data>
+  <data name="Enterprise C#" xml:space="preserve">
+    <value>Enterprise C#</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>よくある質問</value>
   </data>
@@ -138,11 +180,23 @@
   <data name="Frequently asked questions" xml:space="preserve">
     <value>よくある質問</value>
   </data>
+  <data name="Full RBAC" xml:space="preserve">
+    <value>フルRBAC</value>
+  </data>
+  <data name="Fully Offline" xml:space="preserve">
+    <value>オフライン完全対応</value>
+  </data>
+  <data name="GitLab CI" xml:space="preserve">
+    <value>GitLab CI</value>
+  </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>ダッシュボードへ</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>定期的なジョブ（クリーンアップや同期など）を処理し、実行履歴やログのモニタリングが可能な包括的なGUIを提供します。</value>
+  </data>
+  <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
+    <value>実践的なチュートリアルで、コンピュータサイエンスのインターン向けに適しています。</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>こんにちは、世界！</value>
@@ -153,17 +207,32 @@
   <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>コミュニティの開発者からの声をご紹介します。</value>
   </data>
+  <data name="High Quality" xml:space="preserve">
+    <value>高品質</value>
+  </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>サポートを受けるにはどうすればよいですか？</value>
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>アプリケーションをデプロイするにはどうすればよいですか？</value>
   </data>
+  <data name="IDE Support" xml:space="preserve">
+    <value>IDEサポート</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>含まれる</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>豊富なドキュメントと実用的な例を含んでいるため、すぐに使い始めることができます。</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>チュートリアルを含む</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>統合ファイル管理</value>
+  </data>
+  <data name="Intern Friendly" xml:space="preserve">
+    <value>インターンフレンドリー</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Templateは無料で使用できますか？</value>
@@ -173,6 +242,12 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>コミュニティに参加して、今すぐ構築を始めましょう！</value>
+  </data>
+  <data name="Lint Check" xml:space="preserve">
+    <value>Lintチェック</value>
+  </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>高品質なコードを維持する</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>MarkdownからHTMLへ</value>
@@ -191,6 +266,15 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>音楽ツール</value>
+  </data>
+  <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
+    <value>クラウドベンダーへの依存なし。どこでも、いつでも実行可能。</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>オフライン対応</value>
+  </data>
+  <data name="One Click Start" xml:space="preserve">
+    <value>ワンクリックスタート</value>
   </data>
   <data name="Open Source" xml:space="preserve">
     <value>オープンソース</value>
@@ -213,11 +297,20 @@
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>堅牢な統合テスト</value>
   </data>
+  <data name="Runs without any internet connection required." xml:space="preserve">
+    <value>インターネット接続は必要ありません。</value>
+  </data>
   <data name="Scheduled Task Management" xml:space="preserve">
     <value>スケジュールされたタスク管理</value>
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>あらゆるOpenID Connectプロバイダーとシームレスに統合し、自動的なロール同期を実現します。</value>
+  </data>
+  <data name="Simple &amp; Easy" xml:space="preserve">
+    <value>シンプルで簡単</value>
+  </data>
+  <data name="Single Container" xml:space="preserve">
+    <value>シングルコンテナ</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>スマートな設定オーバーライド</value>
@@ -231,8 +324,29 @@
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>
   </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>1つの &apos;docker run&apos; コマンドで開始します。</value>
+  </data>
+  <data name="Strict Lint Rules" xml:space="preserve">
+    <value>厳格なLintルール</value>
+  </data>
+  <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
+    <value>厳格なLintルールとデフォルトで警告ゼロ</value>
+  </data>
+  <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
+    <value>デフォルトプロジェクトでは厳格なLintルールと0件の警告です。</value>
+  </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>厳格なユニットテスト</value>
+  </data>
+  <data name="Strongly Consistent Linting" xml:space="preserve">
+    <value>強力で一貫したLintチェック</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>環境変数とデータベースベースの設定の両方をサポートしており、環境変数に自動的に優先順位が与えられ、スムーズな上書きが可能になります。</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>JetBrains Rider のサポートにより、コードスタイルの修正が簡単に行えます。</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>テクニカルリード</value>
@@ -248,6 +362,9 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>これはテンプレートプロジェクトであり、ここからボイジャーの旅が始まります...</value>
+  </data>
+  <data name="Unified Env" xml:space="preserve">
+    <value>統合環境</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方法</value>
@@ -267,6 +384,9 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoftテンプレートを使用する理由</value>
   </data>
+  <data name="Win/Lin/Mac" xml:space="preserve">
+    <value>Windows/Linux/Mac</value>
+  </data>
   <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
     <value>はい、Aiursoft TemplateはMITライセンスの下で完全に無料かつオープンソースです。個人プロジェクトや商用プロジェクトで無償でご利用いただけます。</value>
   </data>
@@ -275,6 +395,9 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK、npm、そしてVisual StudioやJetBrains Riderのようなお好みのIDEが必要です。完全なセットアップガイドはドキュメントでご覧いただけます。</value>
+  </data>
+  <data name="Zero Configuration" xml:space="preserve">
+    <value>ゼロ構成</value>
   </data>
 
 </root>

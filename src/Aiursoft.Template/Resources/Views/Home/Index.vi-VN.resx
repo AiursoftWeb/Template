@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Đạt được nhiều hơn với Aiursoft Template</value>
   </data>
+  <data name="AI Readable" xml:space="preserve">
+    <value>Đọc được bởi AI</value>
+  </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Dịch Thuật Hỗ Trợ Bởi AI</value>
   </data>
@@ -69,8 +72,20 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
+  <data name="Beginner Friendly" xml:space="preserve">
+    <value>Thân thiện với người mới</value>
+  </data>
+  <data name="Bilingual Tutorials" xml:space="preserve">
+    <value>Hướng dẫn song ngữ</value>
+  </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>Xây dựng dự án lớn tiếp theo của bạn,</value>
+  </data>
+  <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
+    <value>Được xây dựng với C# bản địa cấp doanh nghiệp nhưng dễ học.</value>
+  </data>
+  <data name="Built-in Auth" xml:space="preserve">
+    <value>Xác thực tích hợp</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
@@ -81,14 +96,38 @@
   <data name="Comes with full Docker support for simplified, consistent, and reliable deployments." xml:space="preserve">
     <value>Đi kèm với hỗ trợ Docker đầy đủ để triển khai đơn giản, nhất quán và đáng tin cậy.</value>
   </data>
+  <data name="Comes with strict unit tests, making test-driven development easy." xml:space="preserve">
+    <value>Được đi kèm với các bài kiểm thử đơn vị nghiêm ngặt, giúp phát triển theo phương pháp kiểm thử trước (test-driven development) trở nên dễ dàng.</value>
+  </data>
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Tài liệu Toàn diện</value>
+  </data>
+  <data name="Comprehensive usage tutorials in both English and Chinese." xml:space="preserve">
+    <value>Hướng dẫn sử dụng toàn diện bằng cả tiếng Anh và tiếng Trung.</value>
+  </data>
+  <data name="Concise Docs" xml:space="preserve">
+    <value>Tài liệu ngắn gọn</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
   </data>
+  <data name="Coverage Report" xml:space="preserve">
+    <value>Báo cáo độ bao phủ</value>
+  </data>
+  <data name="Cross Platform" xml:space="preserve">
+    <value>Đa nền tảng</value>
+  </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Trang Tổng quan</value>
+  </data>
+  <data name="Default SQLite database, no configuration needed." xml:space="preserve">
+    <value>Cơ sở dữ liệu SQLite mặc định, không cần cấu hình</value>
+  </data>
+  <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
+    <value>Thiết kế dành cho mọi người, từ người mới bắt đầu đến chuyên gia.</value>
+  </data>
+  <data name="Dev &amp; Prod" xml:space="preserve">
+    <value>Dev &amp; Prod</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Phát triển chỉ với UTC trong khi hệ thống tự động chuyển đổi và hiển thị ngày tháng theo múi giờ địa phương của người dùng.</value>
@@ -114,6 +153,9 @@
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Viết các bài kiểm thử tích hợp một cách dễ dàng bằng cách sử dụng cơ sở dữ liệu trong bộ nhớ, hệ thống tệp tạm thời, mô phỏng tích hợp sẵn và mô phỏng yêu cầu HTTP thực tế.</value>
   </data>
+  <data name="Enterprise C#" xml:space="preserve">
+    <value>Enterprise C#</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
   </data>
@@ -138,11 +180,23 @@
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Các câu hỏi thường gặp</value>
   </data>
+  <data name="Full RBAC" xml:space="preserve">
+    <value>RBAC đầy đủ</value>
+  </data>
+  <data name="Fully Offline" xml:space="preserve">
+    <value>Hoàn toàn ngoại tuyến</value>
+  </data>
+  <data name="GitLab CI" xml:space="preserve">
+    <value>GitLab CI</value>
+  </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Truy cập bảng điều khiển</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Xử lý các công việc lặp lại như dọn dẹp và đồng bộ hóa với một giao diện người dùng toàn diện để theo dõi lịch sử thực thi và nhật ký.</value>
+  </data>
+  <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
+    <value>Các bài hướng dẫn thực hành phù hợp với thực tập sinh ngành khoa học máy tính.</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Xin chào thế giới!</value>
@@ -153,17 +207,32 @@
   <data name="Here&apos;s what developers from our community have to say." xml:space="preserve">
     <value>Đây là những gì các nhà phát triển từ cộng đồng của chúng tôi nói.</value>
   </data>
+  <data name="High Quality" xml:space="preserve">
+    <value>Chất lượng cao</value>
+  </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Làm thế nào để tôi nhận được hỗ trợ?</value>
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Làm thế nào để tôi triển khai ứng dụng của mình?</value>
   </data>
+  <data name="IDE Support" xml:space="preserve">
+    <value>Hỗ trợ IDE</value>
+  </data>
+  <data name="Included" xml:space="preserve">
+    <value>Đã bao gồm</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Bao gồm tài liệu phong phú và các ví dụ thực tế để giúp bạn bắt đầu nhanh chóng.</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>Bao gồm Hướng dẫn</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>Quản lý Tập tin Tích hợp</value>
+  </data>
+  <data name="Intern Friendly" xml:space="preserve">
+    <value>Thân thiện với thực tập sinh</value>
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Có phải Aiursoft Template được sử dụng miễn phí không?</value>
@@ -173,6 +242,12 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Hãy tham gia cộng đồng của chúng tôi và bắt đầu xây dựng ngay hôm nay!</value>
+  </data>
+  <data name="Lint Check" xml:space="preserve">
+    <value>Kiểm tra Lint</value>
+  </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>Duy trì chất lượng mã nguồn cao</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Chuyển Đổi Markdown Sang HTML</value>
@@ -191,6 +266,15 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Công cụ Âm nhạc</value>
+  </data>
+  <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
+    <value>Không phụ thuộc vào nhà cung cấp dịch vụ đám mây nào. Chạy ở bất kỳ đâu, bất kỳ lúc nào.</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>Khả năng hoạt động ngoại tuyến</value>
+  </data>
+  <data name="One Click Start" xml:space="preserve">
+    <value>Một Click Bắt Đầu</value>
   </data>
   <data name="Open Source" xml:space="preserve">
     <value>Mã nguồn mở</value>
@@ -213,11 +297,20 @@
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Kiểm thử tích hợp mạnh mẽ</value>
   </data>
+  <data name="Runs without any internet connection required." xml:space="preserve">
+    <value>Chạy mà không cần kết nối internet.</value>
+  </data>
   <data name="Scheduled Task Management" xml:space="preserve">
     <value>Quản lý tác vụ định kỳ</value>
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với bất kỳ nhà cung cấp OpenID Connect nào, đồng thời tự động đồng bộ hóa vai trò.</value>
+  </data>
+  <data name="Simple &amp; Easy" xml:space="preserve">
+    <value>Đơn giản &amp; Dễ dàng</value>
+  </data>
+  <data name="Single Container" xml:space="preserve">
+    <value>Một Container</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
@@ -231,8 +324,29 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>
   </data>
+  <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
+    <value>Bắt đầu với một lệnh &apos;docker run&apos; duy nhất.</value>
+  </data>
+  <data name="Strict Lint Rules" xml:space="preserve">
+    <value>Quy tắc kiểm tra mã nghiêm ngặt</value>
+  </data>
+  <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
+    <value>Các quy tắc kiểm tra nghiêm ngặt và không có cảnh báo nào theo mặc định.</value>
+  </data>
+  <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
+    <value>Các quy tắc kiểm tra nghiêm ngặt với 0 cảnh báo trong dự án mặc định.</value>
+  </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>Kiểm thử đơn vị nghiêm ngặt</value>
+  </data>
+  <data name="Strongly Consistent Linting" xml:space="preserve">
+    <value>Kiểm tra mã nguồn nghiêm ngặt và nhất quán</value>
+  </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Hỗ trợ cả biến môi trường và cài đặt dựa trên cơ sở dữ liệu, với ưu tiên tự động cho biến môi trường để ghi đè một cách liền mạch.</value>
+  </data>
+  <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
+    <value>Hỗ trợ JetBrains Rider để dễ dàng sửa lỗi định dạng mã nguồn.</value>
   </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>Trưởng nhóm Kỹ thuật</value>
@@ -248,6 +362,9 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Đây là một dự án mẫu, nơi chúng ta bắt đầu hành trình khám phá...</value>
+  </data>
+  <data name="Unified Env" xml:space="preserve">
+    <value>Môi trường thống nhất</value>
   </data>
   <data name="Usage" xml:space="preserve">
     <value>Cách sử dụng</value>
@@ -267,6 +384,9 @@
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Tại sao nên sử dụng Mẫu Aiursoft?</value>
   </data>
+  <data name="Win/Lin/Mac" xml:space="preserve">
+    <value>Win/Lin/Mac</value>
+  </data>
   <data name="Yes, Aiursoft Template is completely free and open-source under the MIT License. You can use it for personal and commercial projects without any cost." xml:space="preserve">
     <value>Vâng, Aiursoft Template hoàn toàn miễn phí và mã nguồn mở theo Giấy phép MIT. Bạn có thể sử dụng nó cho các dự án cá nhân và thương mại mà không mất bất kỳ chi phí nào.</value>
   </data>
@@ -275,6 +395,9 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Bạn sẽ cần .NET 10 SDK, npm và IDE yêu thích của bạn, như Visual Studio hoặc JetBrains Rider. Bạn có thể tìm thấy hướng dẫn thiết lập đầy đủ trong tài liệu của chúng tôi.</value>
+  </data>
+  <data name="Zero Configuration" xml:space="preserve">
+    <value>Không cấu hình</value>
   </data>
 
 </root>

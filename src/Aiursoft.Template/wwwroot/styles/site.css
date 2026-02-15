@@ -12,6 +12,205 @@
     z-index: 0;
 }
 
+nav.navbar {
+    display: block;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid #4b4f5c;
+}
+
+.landing-intro {
+    padding-top: 160px !important;
+}
+
+/* =========================================
+   Immersive Section Styles
+   ========================================= */
+
+.immersive-section {
+    background-color: #161a27;
+    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Shared styles for background containers */
+.immersive-bg,
+.immersive-bg-right {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Specific positioning and masks */
+.immersive-bg {
+    left: 0;
+    padding-left: 2%;
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+}
+
+.immersive-bg-right {
+    right: 0;
+    padding-right: 2%;
+    -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
+    mask-image: linear-gradient(to left, black 85%, transparent 100%);
+}
+
+/* Shared styles for image wrappers */
+.immersive-bg .bg-image-wrapper,
+.immersive-bg-right .bg-image-wrapper {
+    width: 95%;
+    max-width: 900px;
+    transform-origin: center center;
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.8), 
+        0 0 40px rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    filter: blur(1px) brightness(0.85); 
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Individual Transforms */
+.immersive-bg .bg-image-wrapper {
+    transform: perspective(3000px) rotateX(4deg) rotateY(5deg) scale(0.95);
+}
+
+.immersive-bg-right .bg-image-wrapper {
+    transform: perspective(3000px) rotateX(4deg) rotateY(-5deg) scale(0.95);
+    filter: blur(1px) brightness(0.75); 
+}
+
+/* Shared Image Styles */
+.immersive-bg img,
+.immersive-bg-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Hover Effects */
+.immersive-section:hover .immersive-bg .bg-image-wrapper {
+    filter: blur(0px) brightness(0.95);
+    transform: perspective(3000px) rotateX(1deg) rotateY(2deg) scale(0.98);
+}
+
+.immersive-section:hover .immersive-bg-right .bg-image-wrapper {
+    filter: blur(0px) brightness(0.95);
+    transform: perspective(3000px) rotateX(1deg) rotateY(-2deg) scale(0.98);
+}
+
+.immersive-section:hover .immersive-bg .bg-image-wrapper,
+.immersive-section:hover .immersive-bg-right .bg-image-wrapper {
+    box-shadow: 
+        0 40px 100px rgba(0, 0, 0, 0.9), 
+        0 0 60px rgba(14, 165, 233, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .immersive-bg, 
+    .immersive-bg-right {
+        width: 100%; 
+        height: 100%;
+        opacity: 0.2; 
+        -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 90%); 
+        mask-image: linear-gradient(to bottom, black 0%, transparent 90%);
+        left: 0;
+        right: auto; 
+    }
+    
+    .immersive-bg .bg-image-wrapper, 
+    .immersive-bg-right .bg-image-wrapper {
+        transform: none; 
+        filter: blur(4px) brightness(0.4);
+    }
+}
+
+/* Clean Wrapper (Removes border/shadow for transparent images) */
+.bg-image-wrapper.clean-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+
+.bg-dark-glass {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bg-dark-glass-sm {
+    background: rgba(15, 23, 42, 0.4);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.hover-glow-purple:hover {
+    transform: translateY(-4px);
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(168, 85, 247, 0.3) !important;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.border-white-10 { border-color: rgba(255, 255, 255, 0.08) !important; }
+.bg-white-10 { background-color: rgba(255, 255, 255, 0.1); }
+
+.text-gray-300 { color: #cbd5e1 !important; }
+.text-gray-400 { color: #94a3b8 !important; }
+.text-gray-500 { color: #64748b !important; }
+
+.icon-box-sm {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tracking-wider { letter-spacing: 0.05em; }
+
+.extra-small {
+    font-size: 0.65rem;
+    line-height: 1.2;
+    margin-top: 4px;
+}
+
+.row.py-4 {
+    position: relative;
+}
+
+.row.py-4 .col-sm-4:nth-child(1),
+.row.py-4 .col-sm-4:nth-child(3) {
+    z-index: 0;
+}
+
 nav.navbar{
     display:block;
     z-index:10;
@@ -24,22 +223,20 @@ nav.navbar{
     padding-top:160px!important
 }
 
-/* 1. 区域设置 */
-.ai-section {
-    background-color: #161a27; /* 深蓝黑背景 */
-    min-height: 800px; /* 给足够的高度展示背景图 */
+.immersive-section {
+    background-color: #161a27;
+    min-height: 800px;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
 
-/* 2. 沉浸式背景容器 - 电影院布局 */
-.ai-immersive-bg {
+.immersive-bg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%; /* 占据左侧空间 */
+    width: 60%;
     height: 100%;
     z-index: 0;
     display: flex;
@@ -48,22 +245,17 @@ nav.navbar{
     padding-left: 2%;
     overflow: hidden;
     
-    /* 渐变遮罩，让边缘软化融入背景 */
     -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
     mask-image: linear-gradient(to right, black 85%, transparent 100%);
 }
 
-/* 3. 图片本身的特效 (电影院巨幕感) */
-.ai-immersive-bg .bg-image-wrapper {
+.immersive-bg .bg-image-wrapper {
     width: 95%;
     max-width: 900px;
     
-    /* 极微小透视：接近矩形，仅保留极少的纵深感 */
-    /* perspective 调大至 3000px 让透视更平 */
     transform: perspective(3000px) rotateX(4deg) rotateY(5deg) scale(0.95);
     transform-origin: center center;
     
-    /* 巨幕效果：阴影也相应调得更柔和 */
     box-shadow: 
         0 30px 80px rgba(0, 0, 0, 0.8), 
         0 0 40px rgba(14, 165, 233, 0.1);
@@ -75,24 +267,21 @@ nav.navbar{
     transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.ai-immersive-bg img {
+.immersive-bg img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
 }
 
-/* 4. 鼠标悬停时，几乎回正，极其微小的动效 */
-.ai-section:hover .ai-immersive-bg .bg-image-wrapper {
+.immersive-section:hover .immersive-bg .bg-image-wrapper {
     filter: blur(0px) brightness(0.95);
-    /* 几乎平行，只留 1-2 度的呼吸感 */
     transform: perspective(3000px) rotateX(1deg) rotateY(2deg) scale(0.98);
     box-shadow: 
         0 40px 100px rgba(0, 0, 0, 0.9), 
         0 0 60px rgba(14, 165, 233, 0.2);
 }
 
-/* 5. 卡片样式保持不变 (沿用之前的深色玻璃) */
 .bg-dark-glass {
     background: rgba(15, 23, 42, 0.6);
     backdrop-filter: blur(12px);
@@ -111,15 +300,13 @@ nav.navbar{
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Shell 卡片悬停时的微光紫色，代替原来的大紫块 */
 .hover-glow-purple:hover {
     transform: translateY(-4px);
     background: rgba(30, 41, 59, 0.9);
-    border-color: rgba(168, 85, 247, 0.3) !important; /* 紫色边框 */
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15); /* 紫色光晕 */
+    border-color: rgba(168, 85, 247, 0.3) !important;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
 }
 
-/* 边框辅助色 */
 .border-white-10 {
     border-color: rgba(255, 255, 255, 0.08) !important;
 }
@@ -128,12 +315,10 @@ nav.navbar{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 文字颜色协调方案 */
 .text-gray-300 { color: #cbd5e1 !important; }
-.text-gray-400 { color: #94a3b8 !important; } /* 正文主要颜色，不刺眼 */
+.text-gray-400 { color: #94a3b8 !important; }
 .text-gray-500 { color: #64748b !important; }
 
-/* 小图标容器 */
 .icon-box-sm {
     width: 42px;
     height: 42px;
@@ -142,36 +327,30 @@ nav.navbar{
     justify-content: center;
 }
 
-/* 字母间距微调 */
 .tracking-wider { letter-spacing: 0.05em; }
 
-/* 移动端适配 */
-
-/* Right-aligned immersive background */
-.ai-immersive-bg-right {
+.immersive-bg-right {
     position: absolute;
     top: 0;
-    right: 0; /* Align to right */
+    right: 0;
     width: 60%; 
     height: 100%;
     z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 2%; /* Padding on right */
+    padding-right: 2%;
     overflow: hidden;
     
-    /* Radial gradient mask from center */
     -webkit-mask-image: linear-gradient(to left, black 85%, transparent 100%);
     mask-image: linear-gradient(to left, black 85%, transparent 100%);
 }
 
-.ai-immersive-bg-right .bg-image-wrapper {
+.immersive-bg-right .bg-image-wrapper {
     width: 95%;
     max-width: 900px;
     
-    /* Perspective transformation mirrored for right side */
-    transform: perspective(3000px) rotateX(4deg) rotateY(-5deg) scale(0.95); /* rotateY is negative */
+    transform: perspective(3000px) rotateX(4deg) rotateY(-5deg) scale(0.95);
     transform-origin: center center;
     
     box-shadow: 
@@ -185,24 +364,23 @@ nav.navbar{
     transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.ai-immersive-bg-right img {
+.immersive-bg-right img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;
 }
 
-.ai-section:hover .ai-immersive-bg-right .bg-image-wrapper {
+.immersive-section:hover .immersive-bg-right .bg-image-wrapper {
     filter: blur(0px) brightness(0.95);
-    transform: perspective(3000px) rotateX(1deg) rotateY(-2deg) scale(0.98); /* rotateY negative */
+    transform: perspective(3000px) rotateX(1deg) rotateY(-2deg) scale(0.98);
     box-shadow: 
         0 40px 100px rgba(0, 0, 0, 0.9), 
         0 0 60px rgba(14, 165, 233, 0.2);
 }
 
-/* Mobile adaptation update */
 @media (max-width: 991px) {
-    .ai-immersive-bg, .ai-immersive-bg-right {
+    .immersive-bg, .immersive-bg-right {
         width: 100%; 
         height: 100%;
         opacity: 0.2; 
@@ -212,7 +390,7 @@ nav.navbar{
         right: auto; 
     }
     
-    .ai-immersive-bg .bg-image-wrapper, .ai-immersive-bg-right .bg-image-wrapper {
+    .immersive-bg .bg-image-wrapper, .immersive-bg-right .bg-image-wrapper {
         transform: none; 
         filter: blur(4px) brightness(0.4);
     }
@@ -223,4 +401,11 @@ nav.navbar{
     font-size: 0.65rem;
     line-height: 1.2;
     margin-top: 4px;
+}
+
+.bg-image-wrapper.clean-wrapper {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
 }

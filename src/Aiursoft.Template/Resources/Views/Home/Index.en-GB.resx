@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI-Powered Translations</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management.</value>
   </data>
@@ -54,11 +57,17 @@
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
   </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Automatic Dark Mode</value>
   </data>
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>Automatic Dependency Injection</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>Automatic Role Sync</value>
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Automatic Time Zone Handling</value>
@@ -68,6 +77,9 @@
   </data>
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automatic, AI-driven translation into 28 languages.</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>Automatically sync OpenID roles. Unified rule management.</value>
   </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Background Job Processing</value>
@@ -111,6 +123,9 @@
   <data name="Consistency Validation" xml:space="preserve">
     <value>Consistency Validation</value>
   </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>Coordinate Comfortably</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Coverage Report</value>
   </data>
@@ -119,6 +134,9 @@
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Control Panel Website</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>Deep integration testing with Authentik. Compatible with Okta.</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Default SQLite database, no configuration needed.</value>
@@ -156,6 +174,9 @@
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
   </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>Enterprise Security</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>Frequently Asked Questions</value>
   </data>
@@ -171,17 +192,26 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Features a built-in file management system with automatic profile picture compression.</value>
   </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>Flexible API</value>
+  </data>
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>for any enquiries or to report issues.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Free</value>
   </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>Free Software</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Frequently asked questions</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>Full RBAC</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>Full stack open source. Completely free software, no paid features. Built entirely on open standards.</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Fully Offline</value>
@@ -234,6 +264,12 @@
   <data name="Intern Friendly" xml:space="preserve">
     <value>Intern-friendly</value>
   </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>Interoperability</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>is Free Software</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Is it free to use Aiursoft Template?</value>
   </data>
@@ -242,6 +278,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Join our community and start building today!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>Join our growing community of developers building the next generation of web applications.</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint Check</value>
@@ -263,6 +302,9 @@
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Multiple Database Support</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>Multiple Projects</value>
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Music Tools</value>
@@ -321,6 +363,12 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>An intelligent dark mode that automatically adapts to the user&apos;s system settings.</value>
   </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>Standard implementation. Switch providers without compilation.</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>Standard OpenID</value>
+  </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start a new project</value>
   </data>
@@ -366,11 +414,17 @@
   <data name="Unified Env" xml:space="preserve">
     <value>Unified Env</value>
   </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>Unified Identity</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Usage</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless.</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>View on GitHub</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome</value>
@@ -395,6 +449,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>You&apos;ll need the .NET 10 SDK, npm and your favourite IDE, such as Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation.</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>Your enterprise users don&apos;t need to register repeatedly.</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
   </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Zero Configuration</value>

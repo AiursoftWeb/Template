@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI 驱动翻译</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template 是我们企业项目的最终选择！它专为开发者打造，轻量级却功能强大。我们可以跳过所有身份验证和用户管理的样板代码。</value>
   </data>
@@ -54,11 +57,17 @@
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
   </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自动深色模式</value>
   </data>
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>自动依赖注入</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>自动角色同步</value>
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>自动时区处理</value>
@@ -68,6 +77,9 @@
   </data>
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自动、由人工智能驱动的28种语言翻译。</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>自动同步 OpenID 角色。统一规则管理。</value>
   </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
@@ -111,6 +123,9 @@
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性验证</value>
   </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>协调自如</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>覆盖率报告</value>
   </data>
@@ -119,6 +134,9 @@
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>仪表板网站</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>与 Authentik 的深度集成测试。与 Okta 兼容。</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>默认 SQLite 数据库，无需配置</value>
@@ -156,6 +174,9 @@
   <data name="Enterprise C#" xml:space="preserve">
     <value>企业级 C#</value>
   </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>企业安全</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
   </data>
@@ -171,17 +192,26 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持自动头像压缩。</value>
   </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>灵活的 API</value>
+  </data>
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>如有任何疑问或报告问题。</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>免费</value>
   </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>自由软件</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>常见问题</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>完整 RBAC</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>全栈开源。完全免费的软件，无付费功能。完全基于开放标准构建。</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>完全离线</value>
@@ -234,6 +264,12 @@
   <data name="Intern Friendly" xml:space="preserve">
     <value>适合实习生</value>
   </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>互操作性</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>是自由软件</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>使用 Aiursoft Template 是否免费？</value>
   </data>
@@ -242,6 +278,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>加入我们的社区，立即开始构建！</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>加入我们不断壮大的开发者社区，共同构建下一代网络应用。</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint 检查</value>
@@ -263,6 +302,9 @@
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>多数据库支持</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>多项目</value>
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>音乐工具</value>
@@ -321,6 +363,12 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，可自动适应用户的系统设置。</value>
   </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>标准实现。无需重新编译即可切换提供者。</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>标准 OpenID</value>
+  </data>
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>
   </data>
@@ -366,11 +414,17 @@
   <data name="Unified Env" xml:space="preserve">
     <value>统一环境</value>
   </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>统一身份</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>无论是作为SaaS应用的基础、移动应用的后端、企业官网还是个人博客，它都能胜任。无限可能，任您探索。</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>在 GitHub 上查看</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>欢迎</value>
@@ -395,6 +449,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>您需要安装 .NET 10 SDK、npm 以及您喜欢的 IDE（如 Visual Studio 或 JetBrains Rider）。完整的设置指南可在我们的文档中找到。</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>您的企业用户无需重复注册。</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
   </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>零配置</value>
