@@ -23,3 +23,7 @@ nav.navbar {
 .landing-intro {
     padding-top: 160px !important;
 }
+
+.text-bg-dark {
+    background-color: #161a27 !important;
+}

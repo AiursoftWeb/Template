@@ -57,8 +57,20 @@
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
   </data>
+  <data name="Anduin Xue" xml:space="preserve">
+    <value>Anduin Xue</value>
+  </data>
+  <data name="Artificial Intelligence Translation" xml:space="preserve">
+    <value>人工智能翻译</value>
+  </data>
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
+  </data>
+  <data name="Auto Deployment" xml:space="preserve">
+    <value>自动部署</value>
+  </data>
+  <data name="Automatic AI translation into 28 languages." xml:space="preserve">
+    <value>自动 AI 翻译至 28 种语言。</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自动深色模式</value>
@@ -78,6 +90,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自动、由人工智能驱动的28种语言翻译。</value>
   </data>
+  <data name="Automatically deploy to Docker Swarm or Kubernetes clusters." xml:space="preserve">
+    <value>自动部署到 Docker Swarm 或 Kubernetes 集群。</value>
+  </data>
   <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
     <value>自动同步 OpenID 角色。统一规则管理。</value>
   </data>
@@ -90,11 +105,23 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>双语教程</value>
   </data>
+  <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
+    <value>一次构建，随处运行。完全容器化架构。</value>
+  </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>构建你的下一个伟大项目，</value>
   </data>
+  <data name="Built for engineers who care about quality." xml:space="preserve">
+    <value>为注重质量的工程师而生。</value>
+  </data>
+  <data name="Built with Aiursoft Template" xml:space="preserve">
+    <value>基于 Aiursoft 模板构建</value>
+  </data>
   <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
     <value>使用企业级但易于学习的原生 C# 构建。</value>
+  </data>
+  <data name="Built-in" xml:space="preserve">
+    <value>内置</value>
   </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>内置认证</value>
@@ -135,6 +162,12 @@
   <data name="Dashboard Website" xml:space="preserve">
     <value>仪表板网站</value>
   </data>
+  <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
+    <value>第一天合规与安全。</value>
+  </data>
+  <data name="Day 1 Ready" xml:space="preserve">
+    <value>第一天就准备就绪</value>
+  </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>与 Authentik 的深度集成测试。与 Okta 兼容。</value>
   </data>
@@ -144,14 +177,26 @@
   <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
     <value>专为每个人设计，从新手到专家皆宜。</value>
   </data>
+  <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
+    <value>专为容器时代而设计。包含为 GitLab 预配置的 CI/CD 流水线。推送代码，通过严格的代码检查，自动测试，并自动部署到 Docker Swarm 或 Kubernetes。</value>
+  </data>
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>开发与生产</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>在 UTC 中进行开发，而系统会自动将日期转换并显示为用户的本地时区。</value>
   </data>
+  <data name="Developer Experience" xml:space="preserve">
+    <value>开发者体验</value>
+  </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>DevOps 原生</value>
+  </data>
   <data name="Discussions page" xml:space="preserve">
     <value>讨论页面</value>
+  </data>
+  <data name="Docker Native" xml:space="preserve">
+    <value>Docker 原生</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>支持 Docker 部署</value>
@@ -171,8 +216,14 @@
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>轻松编写集成测试，使用内存数据库、临时文件系统、内置模拟和真实 HTTP 请求模拟。</value>
   </data>
+  <data name="Enforced" xml:space="preserve">
+    <value>强制执行</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>企业级 C#</value>
+  </data>
+  <data name="Enterprise Ready" xml:space="preserve">
+    <value>企业级就绪</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>企业安全</value>
@@ -198,8 +249,14 @@
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>如有任何疑问或报告问题。</value>
   </data>
+  <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
+    <value>创始人兼架构师 | Aiursoft</value>
+  </data>
   <data name="Free" xml:space="preserve">
     <value>免费</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>商业用途免费</value>
   </data>
   <data name="Free Software" xml:space="preserve">
     <value>自由软件</value>
@@ -207,8 +264,14 @@
   <data name="Frequently asked questions" xml:space="preserve">
     <value>常见问题</value>
   </data>
+  <data name="From the Architect" xml:space="preserve">
+    <value>来自架构师</value>
+  </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>完整 RBAC</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>全栈开源</value>
   </data>
   <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
     <value>全栈开源。完全免费的软件，无付费功能。完全基于开放标准构建。</value>
@@ -218,6 +281,12 @@
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="Global Scale" xml:space="preserve">
+    <value>全球规模</value>
+  </data>
+  <data name="Go global without extra effort." xml:space="preserve">
+    <value>全球拓展，无需额外努力。</value>
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
@@ -245,6 +314,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>如何部署我的应用程序？</value>
+  </data>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>我开发 Aiursoft Template 是因为我厌倦了为每个新的企业项目重复设置相同的 Auth、Log 和 CI/CD 流水线。这不仅仅是一个模板；它凝聚了多年高并发生产环境中的最佳实践。它让我的团队可以跳过枯燥的配置，直接专注于业务逻辑。</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
     <value>IDE 支持</value>
@@ -294,6 +366,9 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT 许可证</value>
   </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT 许可证</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
   </data>
@@ -324,6 +399,12 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
   </data>
+  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
+    <value>为 GitLab 专门预配置的 CI/CD 流水线</value>
+  </data>
+  <data name="Quality Gate" xml:space="preserve">
+    <value>质量门</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>基于角色的访问控制 (RBAC) 授权</value>
   </data>
@@ -347,6 +428,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
+  </data>
+  <data name="Shift with confidence" xml:space="preserve">
+    <value>自信迁移</value>
   </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>简单且易于使用</value>
@@ -372,8 +456,14 @@
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>
   </data>
+  <data name="Start Shipping Value." xml:space="preserve">
+    <value>开始交付价值。</value>
+  </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>从一个单一的 &apos;docker run&apos; 命令开始。</value>
+  </data>
+  <data name="Stop Coding Boilerplate." xml:space="preserve">
+    <value>停止编写样板代码。</value>
   </data>
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>严格代码检查规则</value>
@@ -396,11 +486,20 @@
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>支持 JetBrains Rider，轻松修复代码样式。</value>
   </data>
+  <data name="Task Runner" xml:space="preserve">
+    <value>任务运行器</value>
+  </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>技术负责人</value>
   </data>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>权威的、经过实战检验的 .NET 企业级基础架构。从身份认证到人工智能，我们已解决所有难题，您无需再费心。</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>导航栏会根据用户角色和权限自动调整显示内容。</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>哲学</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>该模板专为简化部署而设计，内置完整的Docker支持，您可以将应用容器化后随处运行。也可直接部署到IIS、Azure应用服务或任何支持ASP.NET Core的服务器。</value>
@@ -410,6 +509,9 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
+  </data>
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+    <value>被包括 AnduinOS、StatHub 和 Warp 在内的生产级应用所信赖。我们不仅仅分享这段代码；我们整个业务都运行在它之上。</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>统一环境</value>
