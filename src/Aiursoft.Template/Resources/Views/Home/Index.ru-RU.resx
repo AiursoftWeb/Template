@@ -57,8 +57,20 @@
   <data name="Anduin" xml:space="preserve">
     <value>Андуин</value>
   </data>
+  <data name="Anduin Xue" xml:space="preserve">
+    <value>Anduin Xue</value>
+  </data>
+  <data name="Artificial Intelligence Translation" xml:space="preserve">
+    <value>Искусственный интеллект — перевод</value>
+  </data>
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
+  </data>
+  <data name="Auto Deployment" xml:space="preserve">
+    <value>Автоматическая развертка</value>
+  </data>
+  <data name="Automatic AI translation into 28 languages." xml:space="preserve">
+    <value>Автоматический перевод с помощью ИИ на 28 языков.</value>
   </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Автоматический тёмный режим</value>
@@ -78,6 +90,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Автоматический перевод с использованием ИИ на 28 языков.</value>
   </data>
+  <data name="Automatically deploy to Docker Swarm or Kubernetes clusters." xml:space="preserve">
+    <value>Автоматически развертывайте на кластерах Docker Swarm или Kubernetes.</value>
+  </data>
   <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
     <value>Автоматически синхронизировать роли OpenID. Единое управление правилами.</value>
   </data>
@@ -90,11 +105,23 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Двухязычные руководства</value>
   </data>
+  <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
+    <value>Соберите один раз, запускайте где угодно. Полностью контейнерная архитектура.</value>
+  </data>
   <data name="Build your next big thing," xml:space="preserve">
     <value>Создайте свой следующий большой проект,</value>
   </data>
+  <data name="Built for engineers who care about quality." xml:space="preserve">
+    <value>Создано для инженеров, которым важны качество.</value>
+  </data>
+  <data name="Built with Aiursoft Template" xml:space="preserve">
+    <value>Создано с использованием шаблона Aiursoft</value>
+  </data>
   <data name="Built with enterprise-grade yet easy-to-learn native C#." xml:space="preserve">
     <value>Создано с использованием надежного, но простого для изучения нативного C#.</value>
+  </data>
+  <data name="Built-in" xml:space="preserve">
+    <value>Встроенная</value>
   </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Встроенная аутентификация</value>
@@ -135,6 +162,12 @@
   <data name="Dashboard Website" xml:space="preserve">
     <value>Веб-сайт панели управления</value>
   </data>
+  <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
+    <value>Соответствие и безопасность с первого дня</value>
+  </data>
+  <data name="Day 1 Ready" xml:space="preserve">
+    <value>Готово с первого дня</value>
+  </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Глубокое интеграционное тестирование с Authentik. Совместимо с Okta.</value>
   </data>
@@ -144,14 +177,26 @@
   <data name="Designed for everyone, from beginners to experts." xml:space="preserve">
     <value>Разработано для всех — от новичков до экспертов.</value>
   </data>
+  <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
+    <value>Разработано для эры контейнеров. Включает преднастроенные пайплайны CI/CD для GitLab. Загрузите код, пройдите строгую проверку линтинга, автоматическое тестирование и автоматическое развертывание на Docker Swarm или Kubernetes.</value>
+  </data>
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Разрабатывайте исключительно в UTC, в то время как система автоматически преобразует и отображает даты в локальном времени пользователя.</value>
   </data>
+  <data name="Developer Experience" xml:space="preserve">
+    <value>Опыт разработчика</value>
+  </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>DevOps-совместимый</value>
+  </data>
   <data name="Discussions page" xml:space="preserve">
     <value>Страница обсуждений</value>
+  </data>
+  <data name="Docker Native" xml:space="preserve">
+    <value>Docker Native</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Подготовлено для развертывания в Docker</value>
@@ -171,8 +216,14 @@
   <data name="Effortlessly write integration tests using in-memory databases, temporary file systems, built-in mocking, and real-world HTTP request simulation." xml:space="preserve">
     <value>Без усилий пишите интеграционные тесты с использованием баз данных в памяти, временных файловых систем, встроенной имитации и симуляции реальных HTTP-запросов.</value>
   </data>
+  <data name="Enforced" xml:space="preserve">
+    <value>Обязательный</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Ready" xml:space="preserve">
+    <value>Готово к использованию в корпоративной среде</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Безопасность корпоративных систем</value>
@@ -198,6 +249,9 @@
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>по любым вопросам или для сообщения о проблемах.</value>
   </data>
+  <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
+    <value>Основатель и архитектор компании Aiursoft</value>
+  </data>
   <data name="Free" xml:space="preserve">
     <value>Бесплатно</value>
   </data>
@@ -209,6 +263,9 @@
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Часто задаваемые вопросы</value>
+  </data>
+  <data name="From the Architect" xml:space="preserve">
+    <value>От архитектора</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>Полный RBAC</value>
@@ -224,6 +281,12 @@
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="Global Scale" xml:space="preserve">
+    <value>Глобальный масштаб</value>
+  </data>
+  <data name="Go global without extra effort." xml:space="preserve">
+    <value>Масштабируйтесь по всему миру без дополнительных усилий.</value>
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Перейти в панель управления</value>
@@ -251,6 +314,9 @@
   </data>
   <data name="How do I deploy my application?" xml:space="preserve">
     <value>Как развернуть моё приложение?</value>
+  </data>
+  <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
+    <value>Я создал шаблон Aiursoft, потому что устал настраивать одни и те же пайплайны Auth, Log и CI/CD для каждого нового корпоративного проекта. Это не просто шаблон; это кристаллизованные лучшие практики, накопленные за годы работы в высоконагруженных продакшн-средах. Это позволяет моей команде пропустить скучную настройку и сразу перейти к бизнес-логике.</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
     <value>Поддержка IDE</value>
@@ -333,6 +399,12 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Интеграция OpenID Connect</value>
   </data>
+  <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
+    <value>Преднастроенные пайплайны CI/CD специально для GitLab.</value>
+  </data>
+  <data name="Quality Gate" xml:space="preserve">
+    <value>Контроль качества</value>
+  </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Авторизация RBAC</value>
   </data>
@@ -356,6 +428,9 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Беспрепятственно интегрируйтесь с любым провайдером OpenID Connect с автоматической синхронизацией ролей.</value>
+  </data>
+  <data name="Shift with confidence" xml:space="preserve">
+    <value>Смените с уверенностью</value>
   </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>Просто и легко</value>
@@ -381,8 +456,14 @@
   <data name="Start a new project" xml:space="preserve">
     <value>Начать новый проект</value>
   </data>
+  <data name="Start Shipping Value." xml:space="preserve">
+    <value>Начните доставку ценности.</value>
+  </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Начните с одной команды &apos;docker run&apos;.</value>
+  </data>
+  <data name="Stop Coding Boilerplate." xml:space="preserve">
+    <value>Прекратите писать шаблонный код.</value>
   </data>
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>Строгие правила линтинга</value>
@@ -405,11 +486,20 @@
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>Поддерживает JetBrains Rider для простого исправления стиля кода.</value>
   </data>
+  <data name="Task Runner" xml:space="preserve">
+    <value>Планировщик задач</value>
+  </data>
   <data name="Technical Lead" xml:space="preserve">
     <value>Ведущий разработчик</value>
   </data>
+  <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
+    <value>Окончательная, проверенная на практике основа для корпоративных решений на .NET. От аутентификации до искусственного интеллекта — мы уже решили сложные задачи, чтобы вы не тратили на это время.</value>
+  </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Панель навигации автоматически настраивается в зависимости от ролей и разрешений пользователя.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Философия</value>
   </data>
   <data name="The template is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Шаблон создан для простого развертывания. Он включает полную поддержку Docker, что позволяет контейнеризировать ваше приложение и запускать его где угодно. Вы также можете развернуть его напрямую в IIS, Azure App Service или на любом сервере, который поддерживает ASP.NET Core.</value>
@@ -419,6 +509,9 @@
   </data>
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Это шаблонный проект, с которого мы начинаем путешествие...</value>
+  </data>
+  <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
+    <value>Надёжно проверено приложениями промышленного уровня, включая AnduinOS, StatHub и Warp. Мы не просто делимся этим кодом; мы используем его для ведения всей своей бизнес-деятельности.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>Единая среда</value>

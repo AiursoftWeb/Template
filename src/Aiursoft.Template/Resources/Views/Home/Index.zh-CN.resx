@@ -19,7 +19,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
-    <value>支持长时间运行的任务（如邮件或AI）的“Fire-and-forget”功能，配备用于队列管理、并行处理和取消的GUI。</value>
+    <value>支持“即发即弃”的长运行任务（如邮件发送或 AI 推理），内置队列管理、并行处理及任务取消的可视化面板。</value>
   </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>内置基于角色的访问控制（RBAC）系统，用于细粒度权限管理。</value>
@@ -112,7 +112,7 @@
     <value>构建你的下一个伟大项目，</value>
   </data>
   <data name="Built for engineers who care about quality." xml:space="preserve">
-    <value>为注重质量的工程师而生。</value>
+    <value>专为追求卓越的工程师打造。</value>
   </data>
   <data name="Built with Aiursoft Template" xml:space="preserve">
     <value>基于 Aiursoft 模板构建</value>
@@ -148,10 +148,10 @@
     <value>简洁文档</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
-    <value>一致性验证</value>
+    <value>前后端一致性验证</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
-    <value>协调自如</value>
+    <value>无缝协同 / 统一管理</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>覆盖率报告</value>
@@ -163,7 +163,7 @@
     <value>仪表板网站</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
-    <value>第一天合规与安全。</value>
+    <value>起步即合规，安全无死角。</value>
   </data>
   <data name="Day 1 Ready" xml:space="preserve">
     <value>第一天就准备就绪</value>
@@ -178,7 +178,7 @@
     <value>专为每个人设计，从新手到专家皆宜。</value>
   </data>
   <data name="Designed for the container era. Includes pre-configured CI/CD pipelines for GitLab. Push code, pass strictly linting, auto-test, and deploy to Docker Swarm or Kubernetes automatically." xml:space="preserve">
-    <value>专为容器时代而设计。包含为 GitLab 预配置的 CI/CD 流水线。推送代码，通过严格的代码检查，自动测试，并自动部署到 Docker Swarm 或 Kubernetes。</value>
+    <value>专为云原生时代设计。内置 GitLab CI/CD 流水线。代码提交即触发严格检查、自动测试，并自动部署至 Docker Swarm 或 Kubernetes 集群。</value>
   </data>
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>开发与生产</value>
@@ -286,7 +286,7 @@
     <value>全球规模</value>
   </data>
   <data name="Go global without extra effort." xml:space="preserve">
-    <value>全球拓展，无需额外努力。</value>
+    <value>天生具备全球化视野。</value>
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
@@ -316,7 +316,7 @@
     <value>如何部署我的应用程序？</value>
   </data>
   <data name="I built Aiursoft Template because I was tired of setting up the same Auth, Log, and CI/CD pipelines for every new enterprise project. This isn&apos;t just a template; it&apos;s the crystallized best practices from years of high-concurrency production environments. It allows my team to skip the boring setup and jump straight to business logic." xml:space="preserve">
-    <value>我开发 Aiursoft Template 是因为我厌倦了为每个新的企业项目重复设置相同的 Auth、Log 和 CI/CD 流水线。这不仅仅是一个模板；它凝聚了多年高并发生产环境中的最佳实践。它让我的团队可以跳过枯燥的配置，直接专注于业务逻辑。</value>
+    <value>&quot;我构建 Aiursoft Template 的初衷，是厌倦了为每个企业级项目重复搭建认证、日志和 CI/CD 流水线。这不仅仅是一个模板，它是多年高并发生产环境最佳实践的结晶。它让我的团队能够跳过繁琐的基础设施搭建，直击业务逻辑核心。&quot;</value>
   </data>
   <data name="IDE Support" xml:space="preserve">
     <value>IDE 支持</value>
@@ -370,7 +370,7 @@
     <value>MIT 许可证</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
-    <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
+    <value>基于数据注解 (Data Annotations)，自动实现客户端与服务端的双重逻辑验证。</value>
   </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>多数据库提供程序支持</value>
@@ -403,7 +403,7 @@
     <value>为 GitLab 专门预配置的 CI/CD 流水线</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
-    <value>质量门</value>
+    <value>质量门禁 - 强制合规</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>基于角色的访问控制 (RBAC) 授权</value>
@@ -430,7 +430,7 @@
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
   </data>
   <data name="Shift with confidence" xml:space="preserve">
-    <value>自信迁移</value>
+    <value>无忧迁移 - 发布即交付</value>
   </data>
   <data name="Simple &amp; Easy" xml:space="preserve">
     <value>简单且易于使用</value>
@@ -439,7 +439,7 @@
     <value>单容器</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
-    <value>智能配置覆盖</value>
+    <value>智能配置优先级</value>
   </data>
   <data name="Smart dark mode that adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能暗黑模式可自动适配用户的系统设置。</value>
@@ -457,19 +457,19 @@
     <value>开始新项目</value>
   </data>
   <data name="Start Shipping Value." xml:space="preserve">
-    <value>开始交付价值。</value>
+    <value>专注于核心价值交付。</value>
   </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>从一个单一的 &apos;docker run&apos; 命令开始。</value>
   </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
-    <value>停止编写样板代码。</value>
+    <value>告别重复造轮子。</value>
   </data>
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>严格代码检查规则</value>
   </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
-    <value>严格的代码检查规则，且默认情况下无警告。</value>
+    <value>实施严格的 Lint 规则，默认项目必须达到 0 警告 (Zero Warnings) 标准。</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>严格的代码检查规则，默认项目中无警告。</value>
@@ -478,10 +478,10 @@
     <value>严格单元测试</value>
   </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
-    <value>强一致性代码检查</value>
+    <value>零容忍代码检查</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>支持环境变量和基于数据库的设置，环境变量会自动获得优先级，以实现无缝覆盖。</value>
+    <value>支持环境变量与数据库配置双重驱动，环境变量自动拥有更高优先级，实现无缝覆盖。</value>
   </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>支持 JetBrains Rider，轻松修复代码样式。</value>
@@ -493,7 +493,7 @@
     <value>技术负责人</value>
   </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
-    <value>权威的、经过实战检验的 .NET 企业级基础架构。从身份认证到人工智能，我们已解决所有难题，您无需再费心。</value>
+    <value>权威的、经过实战检验的 .NET 企业级开发基座。从身份认证到 AI 集成，我们已为您扫清基础设施障碍，助您开箱即用。</value>
   </data>
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>导航栏会根据用户角色和权限自动调整显示内容。</value>
@@ -511,7 +511,7 @@
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
   </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
-    <value>被包括 AnduinOS、StatHub 和 Warp 在内的生产级应用所信赖。我们不仅仅分享这段代码；我们整个业务都运行在它之上。</value>
+    <value>深受生产级应用信赖，包括 AnduinOS、StatHub 和 Warp。我们不仅分享代码，我们的核心业务也完全构建于此。</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>统一环境</value>
