@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>การแปลด้วยพลัง AI</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template คือตัวเลือกที่ดีที่สุดสำหรับโครงการระดับองค์กร! มันถูกสร้างขึ้นสำหรับนักพัฒนา มีน้ำหนักเบาแต่ทรงพลัง เราสามารถข้ามขั้นตอนพื้นฐานสำหรับการยืนยันตัวตนและการจัดการผู้ใช้ได้ทั้งหมด</value>
   </data>
@@ -198,11 +201,23 @@
   <data name="Free" xml:space="preserve">
     <value>ฟรี</value>
   </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>ฟรีสำหรับการใช้งานเชิงพาณิชย์</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>ซอฟต์แวร์ฟรี</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>คำถามที่พบบ่อย</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>RBAC ครบถ้วน</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>เปิดตัวแบบครบวงจร</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>ระบบเปิดทั้งหมด โอเพนซอร์ส ซอฟต์แวร์ฟรีทั้งหมด ไม่มีฟีเจอร์เสียค่าใช้จ่าย สร้างขึ้นบนมาตรฐานโอเพนซอร์สทั้งหมด</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>ทำงานแบบออฟไลน์ทั้งหมด</value>
@@ -258,6 +273,9 @@
   <data name="Interoperability" xml:space="preserve">
     <value>ความเข้ากันได้</value>
   </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>เป็นซอฟต์แวร์เปิด</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Template ใช้ฟรีหรือไม่?</value>
   </data>
@@ -266,6 +284,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>เข้าร่วมชุมชนของเราและเริ่มสร้างสรรค์สิ่งใหม่วันนี้!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>ร่วมกับชุมชนนักพัฒนาที่กำลังเติบโตของเรา ในการสร้างแอปพลิเคชันเว็บรุ่นถัดไป</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>ตรวจสอบลินต์</value>
@@ -278,6 +299,9 @@
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>สัญญาอนุญาต MIT</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT License</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์โดยอิงจาก annotation ข้อมูล</value>
@@ -407,6 +431,9 @@
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>ใช้เป็นพื้นฐานสำหรับ SaaS ของคุณ, แบ็กเอนด์สำหรับแอปมือถือ, เว็บไซต์องค์กร, หรือบล็อกส่วนตัว ความเป็นไปได้นั้นไม่มีที่สิ้นสุด</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>ดูบน GitHub</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ยินดีต้อนรับ</value>

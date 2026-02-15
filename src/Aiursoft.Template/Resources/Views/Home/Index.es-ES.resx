@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Traducciones con IA</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>¡Aiursoft Template es nuestra elección definitiva para proyectos empresariales! Está construido para desarrolladores y es ligero pero potente. Podemos omitir todo el código repetitivo para autenticación y gestión de usuarios.</value>
   </data>
@@ -198,11 +201,23 @@
   <data name="Free" xml:space="preserve">
     <value>Gratis</value>
   </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>Gratis para uso comercial</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>Software libre</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Preguntas frecuentes</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>RBAC completo</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>Open Source de Pila Completa</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>Pila completa de código abierto. Software completamente gratuito, sin funciones de pago. Construido completamente sobre estándares abiertos.</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Totalmente sin conexión</value>
@@ -258,6 +273,9 @@
   <data name="Interoperability" xml:space="preserve">
     <value>Interoperabilidad</value>
   </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>es Software Libre</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>¿Es gratuito usar Aiursoft Template?</value>
   </data>
@@ -266,6 +284,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>¡Únete a nuestra comunidad y empieza a construir hoy!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>Únete a nuestra creciente comunidad de desarrolladores que construyen la próxima generación de aplicaciones web.</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Comprobación de Lint</value>
@@ -277,6 +298,9 @@
     <value>Markdown a HTML</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
+    <value>Licencia MIT</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
     <value>Licencia MIT</value>
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
@@ -407,6 +431,9 @@
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Úsalo como base para tu SaaS, como backend para tu aplicación móvil, como sitio web corporativo o como blog personal. Las posibilidades son infinitas.</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>Ver en GitHub</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenido</value>

@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Dịch Thuật Hỗ Trợ Bởi AI</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Template là lựa chọn tối ưu cho các dự án doanh nghiệp! Nó được xây dựng cho nhà phát triển, nhẹ nhàng nhưng mạnh mẽ. Chúng ta có thể bỏ qua tất cả các mã mẫu cho xác thực và quản lý người dùng.</value>
   </data>
@@ -54,11 +57,17 @@
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
   </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>Chế độ Tối Tự động</value>
   </data>
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>Tiêm phụ thuộc Tự động</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>Đồng bộ vai trò tự động</value>
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Xử lý múi giờ tự động</value>
@@ -68,6 +77,9 @@
   </data>
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Dịch tự động, được điều khiển bởi AI sang 28 ngôn ngữ.</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>Tự động đồng bộ vai trò OpenID. Quản lý quy tắc thống nhất.</value>
   </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
@@ -111,6 +123,9 @@
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
   </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>Hợp tác một cách thoải mái</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Báo cáo độ bao phủ</value>
   </data>
@@ -119,6 +134,9 @@
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Trang Tổng quan</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>Kiểm thử tích hợp sâu với Authentik. Hỗ trợ Okta.</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Cơ sở dữ liệu SQLite mặc định, không cần cấu hình</value>
@@ -156,6 +174,9 @@
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
   </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>Bảo mật doanh nghiệp</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
   </data>
@@ -171,17 +192,32 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Tích hợp hệ thống quản lý tập tin với tính năng nén ảnh đại diện tự động.</value>
   </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>API linh hoạt</value>
+  </data>
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>để có bất kỳ thắc mắc nào hoặc để báo cáo sự cố.</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Miễn phí</value>
   </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>Miễn phí sử dụng cho mục đích thương mại</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>Phần mềm miễn phí</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Các câu hỏi thường gặp</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>RBAC đầy đủ</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>Toàn bộ Mở nguồn</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>Mở nguồn toàn bộ stack. Phần mềm hoàn toàn miễn phí, không có tính năng trả phí. Được xây dựng hoàn toàn dựa trên các chuẩn mở.</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>Hoàn toàn ngoại tuyến</value>
@@ -234,6 +270,12 @@
   <data name="Intern Friendly" xml:space="preserve">
     <value>Thân thiện với thực tập sinh</value>
   </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>Tính tương tác</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>là Phần mềm miễn phí</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Có phải Aiursoft Template được sử dụng miễn phí không?</value>
   </data>
@@ -242,6 +284,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>Hãy tham gia cộng đồng của chúng tôi và bắt đầu xây dựng ngay hôm nay!</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>Tham gia cộng đồng phát triển đang ngày càng lớn mạnh của chúng tôi để xây dựng thế hệ ứng dụng web tiếp theo.</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Kiểm tra Lint</value>
@@ -255,6 +300,9 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>Giấy phép MIT</value>
   </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT License</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía khách và phía máy chủ dựa trên các chú thích dữ liệu.</value>
   </data>
@@ -263,6 +311,9 @@
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Hỗ trợ Đa Cơ sở Dữ liệu</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>Nhiều Dự án</value>
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Công cụ Âm nhạc</value>
@@ -321,6 +372,12 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Chế độ tối thông minh tự động điều chỉnh theo cài đặt hệ thống của người dùng.</value>
   </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>Thực thi chuẩn. Chuyển đổi nhà cung cấp mà không cần biên dịch.</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>Standard OpenID</value>
+  </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>
   </data>
@@ -366,11 +423,17 @@
   <data name="Unified Env" xml:space="preserve">
     <value>Môi trường thống nhất</value>
   </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>Đăng nhập thống nhất</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Cách sử dụng</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Hãy sử dụng nó làm nền tảng cho SaaS của bạn, backend cho ứng dụng di động, trang web doanh nghiệp, hoặc blog cá nhân. Các khả năng là vô tận.</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>Xem trên GitHub</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Chào mừng</value>
@@ -395,6 +458,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>Bạn sẽ cần .NET 10 SDK, npm và IDE yêu thích của bạn, như Visual Studio hoặc JetBrains Rider. Bạn có thể tìm thấy hướng dẫn thiết lập đầy đủ trong tài liệu của chúng tôi.</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>Người dùng doanh nghiệp của bạn không cần đăng ký lặp lại.</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
   </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Không cấu hình</value>

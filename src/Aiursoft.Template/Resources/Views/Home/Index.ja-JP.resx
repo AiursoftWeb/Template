@@ -45,6 +45,9 @@
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AIによる翻訳</value>
   </data>
+  <data name="Aiursoft Template" xml:space="preserve">
+    <value>Aiursoft Template</value>
+  </data>
   <data name="Aiursoft Template is our definitive choice for enterprise projects! It&apos;s built for developers and is lightweight yet powerful. We can skip all the boilerplate for authentication and user management." xml:space="preserve">
     <value>Aiursoft Templateは、エンタープライズプロジェクトにおける私たちの確固たる選択です！開発者のために構築されており、軽量でありながら強力です。認証やユーザー管理に関する定型コードをすべて省略できます。</value>
   </data>
@@ -54,11 +57,17 @@
   <data name="Anduin" xml:space="preserve">
     <value>Anduin</value>
   </data>
+  <data name="Authentik &amp; Okta" xml:space="preserve">
+    <value>Authentik &amp; Okta</value>
+  </data>
   <data name="Automatic Dark Mode" xml:space="preserve">
     <value>自動ダークモード</value>
   </data>
   <data name="Automatic Dependency Injection" xml:space="preserve">
     <value>自動依存性注入</value>
+  </data>
+  <data name="Automatic Role Sync" xml:space="preserve">
+    <value>自動ロール同期</value>
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>自動タイムゾーン処理</value>
@@ -68,6 +77,9 @@
   </data>
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>28か国語への自動的、AI駆動型の翻訳。</value>
+  </data>
+  <data name="Automatically sync OpenID roles. Unified Rule management." xml:space="preserve">
+    <value>OpenIDのロールを自動で同期します。統一されたルール管理。</value>
   </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>バックグラウンドジョブ処理</value>
@@ -111,6 +123,9 @@
   <data name="Consistency Validation" xml:space="preserve">
     <value>整合性検証</value>
   </data>
+  <data name="Coordinate Comfortably" xml:space="preserve">
+    <value>快適に連携する</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>カバレッジレポート</value>
   </data>
@@ -119,6 +134,9 @@
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>ダッシュボードウェブサイト</value>
+  </data>
+  <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
+    <value>Authentikとの深い統合テスト。Oktaと互換性あり。</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>デフォルトのSQLiteデータベース、設定は不要です。</value>
@@ -156,6 +174,9 @@
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
   </data>
+  <data name="Enterprise Security" xml:space="preserve">
+    <value>エンタープライズセキュリティ</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>よくある質問</value>
   </data>
@@ -171,17 +192,32 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>自動アバター圧縮機能を備えた組み込みファイル管理システムを特徴としています。</value>
   </data>
+  <data name="Flexible API" xml:space="preserve">
+    <value>柔軟なAPI</value>
+  </data>
   <data name="for any inquiries or to report issues." xml:space="preserve">
     <value>お問い合わせや問題の報告はこちらへ。</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>無料</value>
   </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>商用利用に無料</value>
+  </data>
+  <data name="Free Software" xml:space="preserve">
+    <value>フリーソフトウェア</value>
+  </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>よくある質問</value>
   </data>
   <data name="Full RBAC" xml:space="preserve">
     <value>フルRBAC</value>
+  </data>
+  <data name="Full Stack Open Source" xml:space="preserve">
+    <value>フルスタック オープンソース</value>
+  </data>
+  <data name="Full stack open source. Completely free software, no paid features. Built entirely on open standards." xml:space="preserve">
+    <value>フルスタックのオープンソース。完全に無料のソフトウェアで、有料機能は一切ありません。完全にオープンスタンダードに基づいて構築されています。</value>
   </data>
   <data name="Fully Offline" xml:space="preserve">
     <value>オフライン完全対応</value>
@@ -234,6 +270,12 @@
   <data name="Intern Friendly" xml:space="preserve">
     <value>インターンフレンドリー</value>
   </data>
+  <data name="Interoperability" xml:space="preserve">
+    <value>相互運用性</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>はフリー・ソフトウェアです</value>
+  </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Templateは無料で使用できますか？</value>
   </data>
@@ -242,6 +284,9 @@
   </data>
   <data name="Join our community and start building today!" xml:space="preserve">
     <value>コミュニティに参加して、今すぐ構築を始めましょう！</value>
+  </data>
+  <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
+    <value>次世代のWebアプリケーションを構築している開発者の増加するコミュニティに参加しましょう。</value>
   </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lintチェック</value>
@@ -255,6 +300,9 @@
   <data name="MIT Licence" xml:space="preserve">
     <value>MITライセンス</value>
   </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MITライセンス</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>モデルはデータ注釈に基づいて、クライアントおよびサーバーの両方で検証されます。</value>
   </data>
@@ -263,6 +311,9 @@
   </data>
   <data name="Multiple Database Support" xml:space="preserve">
     <value>複数データベースサポート</value>
+  </data>
+  <data name="Multiple Projects" xml:space="preserve">
+    <value>複数のプロジェクト</value>
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>音楽ツール</value>
@@ -321,6 +372,12 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>ユーザーのシステム設定に自動的に適応するスマートダークモード。</value>
   </data>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>標準実装。コンパイルなしでプロバイダを切り替えられます。</value>
+  </data>
+  <data name="Standard OpenID" xml:space="preserve">
+    <value>Standard OpenID</value>
+  </data>
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>
   </data>
@@ -366,11 +423,17 @@
   <data name="Unified Env" xml:space="preserve">
     <value>統合環境</value>
   </data>
+  <data name="Unified Identity" xml:space="preserve">
+    <value>統合ID</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用方法</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>SaaSの基盤として、モバイルアプリのバックエンドとして、コーポレートサイトとして、個人ブログとしてお使いいただけます。可能性は無限大です。</value>
+  </data>
+  <data name="View on GitHub" xml:space="preserve">
+    <value>GitHubで表示</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ようこそ</value>
@@ -395,6 +458,12 @@
   </data>
   <data name="You&apos;ll need the .NET 10 SDK, npm and your favorite IDE, like Visual Studio or JetBrains Rider. You can find the full setup guide in our documentation." xml:space="preserve">
     <value>.NET 10 SDK、npm、そしてVisual StudioやJetBrains Riderのようなお好みのIDEが必要です。完全なセットアップガイドはドキュメントでご覧いただけます。</value>
+  </data>
+  <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
+    <value>企業ユーザーは繰り返し登録する必要がありません。</value>
+  </data>
+  <data name="Yubikey &amp; TOTP" xml:space="preserve">
+    <value>Yubikey &amp; TOTP</value>
   </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>ゼロ構成</value>
