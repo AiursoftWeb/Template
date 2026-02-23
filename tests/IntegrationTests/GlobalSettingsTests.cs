@@ -2,10 +2,11 @@ using System.Net;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Configuration;
 using Aiursoft.Template.Entities;
-using Aiursoft.Template.Models;
 using Aiursoft.Template.Services;
 using Aiursoft.Template.Services.FileStorage;
 using Microsoft.EntityFrameworkCore;
+using Aiursoft.CSTools.Tools;
+using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
@@ -156,7 +157,6 @@ public class GlobalSettingsTests : TestBase
         var settingsService = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
         var dbContext = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
         
-        var key = "NewTestKey_" + Guid.NewGuid();
         // Since it's not in Definitions, we can't update it via service easily without it being defined.
         // But we can test hitting the database for an existing key after clearing cache.
         
@@ -205,11 +205,11 @@ public class GlobalSettingsTests : TestBase
     public async Task TestUpdateSettingOverriddenByConfig()
     {
         // Start a new server with an overridden setting
-        var port = Aiursoft.CSTools.Tools.Network.GetAvailablePort();
+        var port = Network.GetAvailablePort();
         Environment.SetEnvironmentVariable($"GlobalSettings__{SettingsMap.BrandName}", "OverriddenBrand");
         try
         {
-            var server = await Aiursoft.WebTools.Extends.AppAsync<Startup>([], port: port);
+            var server = await AppAsync<Startup>([], port: port);
             await server.UpdateDbAsync<TemplateDbContext>();
             await server.StartAsync();
 

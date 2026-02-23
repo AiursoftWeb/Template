@@ -2,6 +2,7 @@ using System.Net;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Identity;
+using Aiursoft.CSTools.Tools;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
@@ -16,7 +17,7 @@ public class SpecialAccountTests
     [TestInitialize]
     public async Task Setup()
     {
-        _port = Aiursoft.CSTools.Tools.Network.GetAvailablePort();
+        _port = Network.GetAvailablePort();
         var cookieContainer = new CookieContainer();
         var handler = new HttpClientHandler
         {

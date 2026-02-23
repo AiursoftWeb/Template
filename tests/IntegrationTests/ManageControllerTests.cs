@@ -1,5 +1,6 @@
 using System.Net;
 using Aiursoft.Template.Services;
+using Aiursoft.Template.Services.FileStorage;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
@@ -78,7 +79,7 @@ public class ManageControllerTests : TestBase
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(content, "file", "test.txt");
 
-        var storage = GetService<Aiursoft.Template.Services.FileStorage.StorageService>();
+        var storage = GetService<StorageService>();
         var uploadUrl = storage.GetUploadUrl("avatar", isVault: false);
         var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
         uploadResponse.EnsureSuccessStatusCode();

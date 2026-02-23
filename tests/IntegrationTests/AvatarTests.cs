@@ -239,7 +239,7 @@ public class AvatarTests : TestBase
     [TestMethod]
     public async Task TestIsValidImageWithNonExistingFile()
     {
-        var service = GetService<Aiursoft.Template.Services.FileStorage.ImageProcessingService>();
+        var service = GetService<ImageProcessingService>();
         var result = await service.IsValidImageAsync("/non/existing/path.jpg");
         Assert.IsFalse(result);
     }
