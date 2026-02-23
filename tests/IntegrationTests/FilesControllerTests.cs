@@ -119,6 +119,35 @@ public class FilesControllerTests : TestBase
         Assert.AreEqual(HttpStatusCode.Unauthorized, uploadResponse.StatusCode);
     }
 
+    [TestMethod]
+    public async Task TestDownloadWithETag()
+    {
+        // 1. Upload
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("test", isVault: false);
+
+        var content = new StringContent("ETag Test Content");
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(content, "file", "etag.txt");
+
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // 2. First download to get ETag
+        var downloadResponse = await Http.GetAsync("/download/" + uploadResult.Path);
+        downloadResponse.EnsureSuccessStatusCode();
+        var etag = downloadResponse.Headers.ETag?.Tag ?? downloadResponse.Headers.GetValues("ETag").FirstOrDefault();
+        Assert.IsNotNull(etag);
+
+        // 3. Second download with If-None-Match
+        var request = new HttpRequestMessage(HttpMethod.Get, "/download/" + uploadResult.Path);
+        request.Headers.TryAddWithoutValidation("If-None-Match", etag);
+        var response304 = await Http.SendAsync(request);
+        Assert.AreEqual(HttpStatusCode.NotModified, response304.StatusCode);
+    }
+
     private class UploadResult
     {
         public string Path { get; init; } = string.Empty;

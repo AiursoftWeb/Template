@@ -1,7 +1,9 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template.Entities;
 
+[ExcludeFromCodeCoverage]
 public class GlobalSetting
 {
     [Key]

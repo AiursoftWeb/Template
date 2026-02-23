@@ -12,9 +12,11 @@ using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template;
 
+[ExcludeFromCodeCoverage]
 public class Startup : IWebStartup
 {
     public void ConfigureServices(IConfiguration configuration, IWebHostEnvironment environment, IServiceCollection services)

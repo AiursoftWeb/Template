@@ -10,6 +10,8 @@ public class SettingsMap
     public const string ProjectLogo = "ProjectLogo";
     public const string AllowUserAdjustNickname = "Allow_User_Adjust_Nickname";
     public const string Icp = "Icp";
+    public const string DummyNumber = "DummyNumber";
+    public const string DummyChoice = "DummyChoice";
 
     public class FakeLocalizer
     {
@@ -70,6 +72,27 @@ public class SettingsMap
             Description = Localizer["The ICP license number for China mainland users. Leave empty to hide."],
             Type = SettingType.Text,
             DefaultValue = ""
+        },
+        new GlobalSettingDefinition
+        {
+            Key = DummyNumber,
+            Name = Localizer["Dummy Number"],
+            Description = Localizer["A dummy number for testing."],
+            Type = SettingType.Number,
+            DefaultValue = "0"
+        },
+        new GlobalSettingDefinition
+        {
+            Key = DummyChoice,
+            Name = Localizer["Dummy Choice"],
+            Description = Localizer["A dummy choice for testing."],
+            Type = SettingType.Choice,
+            DefaultValue = "A",
+            ChoiceOptions = new Dictionary<string, string>
+            {
+                { "A", "Option A" },
+                { "B", "Option B" }
+            }
         }
     };
 }

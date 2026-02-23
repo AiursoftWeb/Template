@@ -73,10 +73,63 @@ public class RolesControllerTests : TestBase
     }
 
     [TestMethod]
+    public async Task TestCreateRoleFailure()
+    {
+        await LoginAsAdmin();
+
+        // Test with invalid model (empty name)
+        var response = await PostForm("/Roles/Create", new Dictionary<string, string>
+        {
+            { "RoleName", "" }
+        });
+
+        Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestEditRoleFailure()
+    {
+        await LoginAsAdmin();
+        var roleName = "TestRole-" + Guid.NewGuid();
+        await PostForm("/Roles/Create", new Dictionary<string, string> { { "RoleName", roleName } });
+        
+        var indexResponse = await Http.GetAsync("/Roles/Index");
+        var indexHtml = await indexResponse.Content.ReadAsStringAsync();
+        // Extract role ID from HTML
+        var match = System.Text.RegularExpressions.Regex.Match(indexHtml, @"/Roles/Details/([^""]+)");
+        var roleId = match.Groups[1].Value;
+
+        // Test with invalid model (empty name)
+        var response = await PostForm($"/Roles/Edit/{roleId}", new Dictionary<string, string>
+        {
+            { "Id", roleId },
+            { "RoleName", "" }
+        });
+
+        Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [TestMethod]
     public async Task TestDetailsNotFound()
     {
         await LoginAsAdmin();
         var response = await Http.GetAsync("/Roles/Details/invalid-id");
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestDetailsNullId()
+    {
+        await LoginAsAdmin();
+        var response = await Http.GetAsync("/Roles/Details/");
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestDeleteConfirmedNotFound()
+    {
+        await LoginAsAdmin();
+        var response = await PostForm("/Roles/Delete/invalid-id", new Dictionary<string, string>());
         Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
     }
 

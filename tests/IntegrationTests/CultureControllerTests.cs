@@ -14,4 +14,25 @@ public class CultureControllerTests : TestBase
         // Assert
         Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
     }
+
+    [TestMethod]
+    public async Task SetCultureEmpty()
+    {
+        var url = "/Culture/Set?culture=&returnUrl=/";
+        var response = await Http.GetAsync(url);
+        
+        // Assert
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task SetCultureNonLocalReturn()
+    {
+        var url = "/Culture/Set?culture=en&returnUrl=https://google.com";
+        var response = await Http.GetAsync(url);
+        
+        // Assert
+        Assert.AreEqual(HttpStatusCode.Found, response.StatusCode);
+        Assert.AreEqual("/", response.Headers.Location?.OriginalString);
+    }
 }
