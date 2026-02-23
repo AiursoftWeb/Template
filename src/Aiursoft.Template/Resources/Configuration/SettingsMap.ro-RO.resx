@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>Linkul către pagina principală a mărcii.</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>O alegere dummy pentru testare.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Un număr dummy pentru testare.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Permite utilizatorului să-și ajusteze nickname-ul</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Numele mărcii</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Alegere Dummy</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Număr dummy</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Număr ICP</value>

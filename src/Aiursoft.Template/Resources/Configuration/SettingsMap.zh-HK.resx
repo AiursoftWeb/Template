@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>品牌主頁的連結</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>測試用的虛擬選擇</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>一個用於測試的虛擬數字。</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>允許用戶更改暱稱</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>品牌名稱</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>測試選項</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>測試用數字</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP編號</value>

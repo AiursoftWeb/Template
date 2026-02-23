@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>Il collegamento alla pagina principale del marchio.</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>Una scelta fittizia per il test.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Un numero fittizio per test.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Consenti all&apos;utente di modificare il soprannome</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Nome del marchio</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Scelta Fittizia</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Numero fittizio</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Numero ICP</value>

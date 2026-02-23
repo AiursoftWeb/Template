@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>The link to the brand&apos;s home page.</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>A dummy choice for testing.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>A dummy number for testing.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Allow User Adjust Nickname</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Brand Name</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Dummy Choice</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Dummy Number</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP Number</value>
