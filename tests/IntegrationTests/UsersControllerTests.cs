@@ -1,5 +1,6 @@
 using System.Net;
 using Aiursoft.Template.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
@@ -75,10 +76,64 @@ public class UsersControllerTests : TestBase
     }
 
     [TestMethod]
+    public async Task TestCreateUserFailure()
+    {
+        await LoginAsAdmin();
+
+        // Test with invalid model (empty password)
+        var response = await PostForm("/Users/Create", new Dictionary<string, string>
+        {
+            { "UserName", "testuser" },
+            { "Email", "test@test.com" },
+            { "Password", "" }
+        });
+
+        Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+        // Should stay on the same page with validation error
+    }
+
+    [TestMethod]
+    public async Task TestEditUserFailure()
+    {
+        await LoginAsAdmin();
+        var (email, _) = await RegisterAndLoginAsync();
+        var userInDb = await GetService<UserManager<User>>().FindByEmailAsync(email);
+        var userId = userInDb!.Id;
+        await LoginAsAdmin();
+
+        // Test with invalid model (empty email)
+        var response = await PostForm($"/Users/Edit/{userId}", new Dictionary<string, string>
+        {
+            { "Id", userId },
+            { "UserName", "updated" },
+            { "Email", "" },
+            { "DisplayName", "Updated" }
+        });
+
+        Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+    }
+
+    [TestMethod]
     public async Task TestDetailsNotFound()
     {
         await LoginAsAdmin();
         var response = await Http.GetAsync("/Users/Details/invalid-id");
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestDetailsNullId()
+    {
+        await LoginAsAdmin();
+        var response = await Http.GetAsync("/Users/Details/");
+        Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task TestDeleteConfirmedNotFound()
+    {
+        await LoginAsAdmin();
+        var response = await PostForm("/Users/Delete/invalid-id", new Dictionary<string, string>());
         Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
     }
 

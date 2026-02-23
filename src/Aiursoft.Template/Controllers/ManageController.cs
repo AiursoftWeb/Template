@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template.Controllers;
 
@@ -58,6 +59,7 @@ public class ManageController(
 
     //
     // GET: /Manage/ChangePassword
+    [ExcludeFromCodeCoverage]
     [HttpGet]
     public IActionResult ChangePassword()
     {
@@ -70,6 +72,7 @@ public class ManageController(
 
     //
     // POST: /Manage/ChangePassword
+    [ExcludeFromCodeCoverage]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)

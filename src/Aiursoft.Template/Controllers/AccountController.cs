@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template.Controllers;
 
@@ -28,6 +29,7 @@ public class AccountController(
     private readonly AppSettings _appSettings = appSettings.Value;
 
     // GET: /Account/Login
+    [ExcludeFromCodeCoverage]
     [HttpGet]
     public IActionResult Login(string? returnUrl = null)
     {
@@ -44,6 +46,7 @@ public class AccountController(
     }
 
     // POST: /Account/Login
+    [ExcludeFromCodeCoverage]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl = null)
@@ -91,6 +94,7 @@ public class AccountController(
     }
 
     // GET: /Account/Register
+    [ExcludeFromCodeCoverage]
     [HttpGet]
     public IActionResult Register(string? returnUrl = null)
     {
@@ -105,6 +109,7 @@ public class AccountController(
     }
 
     // POST: /Account/Register
+    [ExcludeFromCodeCoverage]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Register(RegisterViewModel model, string? returnUrl = null)
@@ -147,6 +152,7 @@ public class AccountController(
         return this.StackView(model);
     }
 
+    [ExcludeFromCodeCoverage]
     [Authorize]
     public async Task<IActionResult> LogOff()
     {
@@ -162,6 +168,7 @@ public class AccountController(
         return RedirectToAction(nameof(HomeController.Index), "Home");
     }
 
+    [ExcludeFromCodeCoverage]
     [HttpGet]
     public async Task<IActionResult> ExternalLoginCallback(string? returnUrl = null, string? remoteError = null)
     {

@@ -290,4 +290,36 @@ public class BackgroundJobsTests : TestBase
         Assert.IsNotEmpty(queueAJobs, "Queue A should have at least one job");
         Assert.IsNotEmpty(queueBJobs, "Queue B should have at least one job");
     }
+
+    [TestMethod]
+    public async Task TestCleanupOldJobs()
+    {
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
+        
+        // Add a job and complete it
+        var jobId = queue.QueueWithDependency<ILogger<BackgroundJobsTests>>("Cleanup Queue", "Cleanup Job", async (_) => await Task.CompletedTask);
+        
+        // Wait for it to complete
+        await Task.Delay(1000);
+        
+        var completedJob = queue.GetRecentCompletedJobs(TimeSpan.FromMinutes(1)).FirstOrDefault(j => j.JobId == jobId);
+        Assert.IsNotNull(completedJob);
+        
+        // Cleanup jobs older than 0 seconds (all completed jobs)
+        queue.CleanupOldJobs(TimeSpan.FromSeconds(-1));
+        
+        var allJobs = queue.GetAllJobs().ToList();
+        Assert.IsFalse(allJobs.Any(j => j.JobId == jobId));
+    }
+
+    [TestMethod]
+    public void TestQueueWithDependencyDefaultName()
+    {
+        var queue = Server!.Services.GetRequiredService<BackgroundJobQueue>();
+        var jobId = queue.QueueWithDependency<ILogger<BackgroundJobsTests>>(async (_) => await Task.CompletedTask);
+        
+        var job = queue.GetAllJobs().FirstOrDefault(j => j.JobId == jobId);
+        Assert.IsNotNull(job);
+        Assert.AreEqual(typeof(ILogger<BackgroundJobsTests>).Name, job.QueueName);
+    }
 }

@@ -1,5 +1,8 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Aiursoft.Template.Models;
 
+[ExcludeFromCodeCoverage]
 public class GlobalSettingDefinition
 {
     public required string Key { get; init; }

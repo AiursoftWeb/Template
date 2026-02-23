@@ -183,6 +183,67 @@ public class AvatarTests : TestBase
         Assert.AreEqual(128, image.Width);
     }
 
+    [TestMethod]
+    public async Task TestClearExif()
+    {
+        await RegisterAndLoginAsync();
+
+        // Upload a PNG file
+        var pngBytes = Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAAEElEQVR4nGP4z8DAxMDAAAAHCQEClNBcOwAAAABJRU5ErkJggg==");
+        var fileContent = new ByteArrayContent(pngBytes);
+        fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/png");
+
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(fileContent, "file", "avatar.png");
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("avatars", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // Download without any parameters should trigger ClearExif
+        var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
+        downloadResponse.EnsureSuccessStatusCode();
+        Assert.AreEqual("image/png", downloadResponse.Content.Headers.ContentType?.MediaType);
+    }
+
+    [TestMethod]
+    public async Task TestProcessNonImage()
+    {
+        await RegisterAndLoginAsync();
+
+        // Upload a text file but give it an image extension to try to trick the processor
+        var content = new StringContent("Not an image");
+        var multipartContent = new MultipartFormDataContent();
+        multipartContent.Add(content, "file", "fake.jpg");
+
+        var storage = GetService<StorageService>();
+        var uploadUrl = storage.GetUploadUrl("test", isVault: false);
+        var uploadResponse = await Http.PostAsync(uploadUrl, multipartContent);
+        uploadResponse.EnsureSuccessStatusCode();
+
+        var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
+        Assert.IsNotNull(uploadResult);
+
+        // Try to compress it. FilesController.Download will call physicalPath.IsStaticImage() 
+        // which might return true based on extension, but Image.LoadAsync will fail.
+        var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
+        
+        // It should still return the file (original) or successfully handle the error.
+        compressedResponse.EnsureSuccessStatusCode();
+    }
+
+    [TestMethod]
+    public async Task TestIsValidImageWithNonExistingFile()
+    {
+        var service = GetService<ImageProcessingService>();
+        var result = await service.IsValidImageAsync("/non/existing/path.jpg");
+        Assert.IsFalse(result);
+    }
+
     private class UploadResult
     {
         public string Path { get; init; } = string.Empty;

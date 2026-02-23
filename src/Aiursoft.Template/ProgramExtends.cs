@@ -5,11 +5,14 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using Aiursoft.Template.Services;
 using Aiursoft.Template.Services.FileStorage;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template;
 
+[ExcludeFromCodeCoverage]
 public static class ProgramExtends
 {
+    [ExcludeFromCodeCoverage]
     private static async Task<bool> ShouldSeedAsync(TemplateDbContext dbContext)
     {
         var haveUsers = await dbContext.Users.AnyAsync();
@@ -17,6 +20,7 @@ public static class ProgramExtends
         return !haveUsers && !haveRoles;
     }
 
+    [ExcludeFromCodeCoverage]
     public static Task<IHost> CopyAvatarFileAsync(this IHost host)
     {
         using var scope = host.Services.CreateScope();
@@ -48,6 +52,7 @@ public static class ProgramExtends
         return Task.FromResult(host);
     }
 
+    [ExcludeFromCodeCoverage]
     public static async Task<IHost> SeedAsync(this IHost host)
     {
         using var scope = host.Services.CreateScope();

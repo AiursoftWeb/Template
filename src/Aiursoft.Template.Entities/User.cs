@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Identity;
 
 namespace Aiursoft.Template.Entities;
 
+[ExcludeFromCodeCoverage]
 public class User : IdentityUser
 {
     public const string DefaultAvatarPath = "avatar/default-avatar.jpg";

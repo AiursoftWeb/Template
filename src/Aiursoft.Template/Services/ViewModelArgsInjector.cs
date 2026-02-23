@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Aiursoft.Template.Services;
 
@@ -33,6 +34,7 @@ public class ViewModelArgsInjector(
     SignInManager<User> signInManager) : IScopedDependency
 {
 
+    [ExcludeFromCodeCoverage]
     // ReSharper disable once UnusedMember.Local
     private void _useless_for_localizer()
     {

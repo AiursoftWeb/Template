@@ -1,7 +1,10 @@
 using System.Text.RegularExpressions;
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace Aiursoft.Template.Configuration;
 
+[ExcludeFromCodeCoverage]
 public class OidcSettings
 {
     /// <summary>
