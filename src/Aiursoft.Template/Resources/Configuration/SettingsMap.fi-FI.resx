@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>Linkki brändin kotisivulle.</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>Väliaikainen valinta testaukseen.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Väliaikainen luku testaamista varten.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Salli käyttäjän muokata nimimerkkiä</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Brändin nimi</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Väliaikainen valinta</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Väliaikainen luku</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-numero</value>

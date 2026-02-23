@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>Tautan ke halaman utama merek.</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>Pilihan dummy untuk pengujian.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Sebuah angka contoh untuk pengujian.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Izinkan Pengguna Mengatur Nama Panggilan</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Nama Merek</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Pilihan Contoh</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Nomor Palsu</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>Nomor ICP</value>

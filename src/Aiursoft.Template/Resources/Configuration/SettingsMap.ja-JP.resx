@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>ブランドのホームページへのリンク。</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>テスト用のダミー選択肢です。</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>テスト用のダミー番号です。</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>ユーザーがニックネームを変更できるようにする</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>ブランド名</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>ダミー選択</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>ダミー番号</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP番号</value>

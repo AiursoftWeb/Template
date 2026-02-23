@@ -21,6 +21,12 @@
       <data name=" The link to the brand&apos;s home page." xml:space="preserve">
     <value>Link til mærkets hjemmeside</value>
   </data>
+  <data name="A dummy choice for testing." xml:space="preserve">
+    <value>En dummyvalg til test.</value>
+  </data>
+  <data name="A dummy number for testing." xml:space="preserve">
+    <value>Et dummytal til test.</value>
+  </data>
   <data name="Allow User Adjust Nickname" xml:space="preserve">
     <value>Tillad bruger at ændre apelation</value>
   </data>
@@ -32,6 +38,12 @@
   </data>
   <data name="Brand Name" xml:space="preserve">
     <value>Varenavn</value>
+  </data>
+  <data name="Dummy Choice" xml:space="preserve">
+    <value>Dummyvalg</value>
+  </data>
+  <data name="Dummy Number" xml:space="preserve">
+    <value>Dummy-nummer</value>
   </data>
   <data name="ICP Number" xml:space="preserve">
     <value>ICP-nummer</value>
