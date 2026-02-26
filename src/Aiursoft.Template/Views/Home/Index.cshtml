@@ -576,6 +576,161 @@
                         </div>
                     </section>
 
+<section class="py-6 bg-light">
+    <div class="container">
+        <div class="mb-5 text-center px-4">
+            <span class="text-uppercase text-primary text-sm fw-medium mb-1 d-block">@Localizer["Framework vs. Solution"]</span>
+            <h2 class="h1">@Localizer["Why choose Aiursoft Template?"]</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <p class="text-muted fs-lg">
+                        @Localizer["Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC.", DateTime.Now.Year]
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-hover table-bordered bg-white mb-0 text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-start">@Localizer["Enterprise Features"]</th>
+                        <th>Aiursoft Template</th>
+                        <th>ASP.NET Core</th>
+                        <th>Spring Boot</th>
+                        <th>Django</th>
+                        <th>Laravel</th>
+                        <th>NestJS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Core Routing & DI"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["ORM & Migrations"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Entity Framework Core included"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs TypeORM or similar"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Zero Config (SQLite)"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Starts without any configuration"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs manual configuration"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs manual configuration"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Management Dashboard"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in administration panel"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Admin site included"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Jetstream or Filament"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["OIDC & SSO"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Pre-configured and tested"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs complex authentication logic"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Requires Spring Security configuration"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs third-party plugins"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Requires Laravel Socialite config"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Passport or similar"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Fine-grained RBAC"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Permission discovery and sync"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Handwritten based on Policies"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Spring Security config"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Spatie or similar"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs CASL or similar"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Built-in Job Queue GUI"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Dashboard for background tasks"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Celery + Flower"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Horizon included"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["File Mgmt & Optimization"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Auto compression and privacy"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Medialibrary"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Multi-timezone Handling"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Automatic UTC/Local conversion"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Timezone-aware fields"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["AI Driven Translation"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Deep integration with DotLang AI"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["K8s / Swarm Ready"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Optimized Docker & K8s config"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Generic Dockerfile only"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Generic configuration"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Generic configuration"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Laravel Sail"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Generic configuration"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["GitLab CI/CD Native"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Pre-configured pipelines for dev/prod"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Zero Tolerance Lint"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Enforced quality gate"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs ESLint/Prettier setup"]"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-4 d-flex justify-content-center flex-wrap gap-3 text-muted small">
+            <span><i class="fas fa-check-circle text-success"></i> @Localizer["Out-of-the-box"]</span>
+            <span><i class="fas fa-exclamation-circle text-warning"></i> @Localizer["Needs config/plugins"]</span>
+            <span><i class="fas fa-times-circle text-danger"></i> @Localizer["Custom dev required"]</span>
+        </div>
+    </div>
+</section>
+
 <section class="py-6 bg-white">
     <div class="container position-relative z-3">
         <div class="row">
@@ -1026,3 +1181,14 @@
 </section>
 
 <vc:marketing-footer></vc:marketing-footer>
+
+@section scripts {
+    <script>
+        window.addEventListener('load', function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+        });
+    </script>
+}
