@@ -45,13 +45,13 @@
             @foreach (var item in Model.Users)
             {
                 @* The clickable-row class and data-href attribute are fully preserved. *@
-                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.User.Id })">
+                <tr class="clickable-row" data-href="@Url.Action("Details", new { id = item.Id })">
                     <td>
-                        <img src="@StorageService.RelativePathToInternetUrl(item.User.AvatarRelativePath)?w=72&square=true" alt="@item.User.DisplayName" class="rounded-circle" width="36" height="36" />
+                        <img src="@StorageService.RelativePathToInternetUrl(item.AvatarRelativePath)?w=72&square=true" alt="@item.DisplayName" class="rounded-circle" width="36" height="36" />
                     </td>
-                    <td>@item.User.UserName</td>
-                    <td>@item.User.DisplayName</td>
-                    <td>@item.User.Email</td>
+                    <td>@item.UserName</td>
+                    <td>@item.DisplayName</td>
+                    <td>@item.Email</td>
                     <td>
                         @* The complex C# presentation logic for roles is identified and fully preserved. *@
                         @{
@@ -77,10 +77,10 @@
                         }
                     </td>
                     <td class="text-end">
-                        <a asp-action="Edit" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-primary">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">
                             <i class="align-middle" data-lucide="edit-2"></i> @Localizer["Edit"]
                         </a>
-                        <a asp-action="Delete" asp-route-id="@item.User.Id" class="btn btn-sm btn-outline-danger">
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">
                             <i class="align-middle" data-lucide="trash-2"></i> @Localizer["Delete"]
                         </a>
                     </td>

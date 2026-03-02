@@ -74,7 +74,9 @@ public class PermissionsController(
 
         var permissionsWithCounts = allPermissions.Select(permission => new PermissionWithRoleCount
         {
-            Permission = permission,
+            PermissionKey = permission.Key,
+            PermissionName = permission.Name,
+            PermissionDescription = permission.Description,
             RoleCount = roleCountByPermission.GetValueOrDefault(permission.Key, 0),
             UserCount = userCountByPermission.GetValueOrDefault(permission.Key, 0)
         }).ToList();
