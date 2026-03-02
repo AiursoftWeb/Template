@@ -64,7 +64,8 @@ public class RolesController(
 
             return new IdentityRoleWithCount
             {
-                Role = role,
+                RoleId = role.Id,
+                RoleName = role.Name!,
                 UserCount = roleUserCounts.GetValueOrDefault(role.Id, 0),
                 PermissionCount = matchedPermissions.Count,
                 PermissionNames = matchedPermissions.Select(p => p.Name).ToList()

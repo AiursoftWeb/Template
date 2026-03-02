@@ -15,6 +15,7 @@ public class EditViewModel: UiStackLayoutViewModel
     }
 
     [Required(ErrorMessage = "The {0} is required.")]
+    [Display(Name = "Id")]
     [FromRoute]
     public required string Id { get; set; }
 
@@ -22,5 +23,6 @@ public class EditViewModel: UiStackLayoutViewModel
     [Display(Name = "Role Name")]
     public required string RoleName { get; set; }
 
+    [Display(Name = "Claims")]
     public List<RoleClaimViewModel> Claims { get; set; }
 }

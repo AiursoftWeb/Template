@@ -23,6 +23,8 @@ public class EditViewModel : UiStackLayoutViewModel
 
     [Required(ErrorMessage = "The {0} is required.")]
     [Display(Name = "Name")]
+    [MaxLength(30, ErrorMessage = "The {0} must be at max {1} characters long.")]
+    [MinLength(2, ErrorMessage = "The {0} must be at least {1} characters long.")]
     public required string DisplayName { get; set; }
 
     [Required(ErrorMessage = "The {0} is required.")]
@@ -38,13 +40,15 @@ public class EditViewModel : UiStackLayoutViewModel
     [Display(Name = "Avatar file")]
     [Required(ErrorMessage = "The avatar file is required.")]
     [RegularExpression(@"^avatar.*", ErrorMessage = "The avatar file is invalid. Please upload it again.")]
-    [MaxLength(150)]
-    [MinLength(2)]
+    [MaxLength(150, ErrorMessage = "The {0} must be at max {1} characters long.")]
+    [MinLength(2, ErrorMessage = "The {0} must be at least {1} characters long.")]
     public string? AvatarUrl { get; set; }
 
     [Required(ErrorMessage = "The {0} is required.")]
+    [Display(Name = "Id")]
     [FromRoute]
     public required string Id { get; set; }
 
+    [Display(Name = "All roles")]
     public List<UserRoleViewModel> AllRoles { get; set; }
 }

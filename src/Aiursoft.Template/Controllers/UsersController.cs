@@ -39,7 +39,11 @@ public class UsersController(
         {
             usersWithRoles.Add(new UserWithRolesViewModel
             {
-                User = user,
+                Id = user.Id,
+                UserName = user.UserName!,
+                DisplayName = user.DisplayName,
+                Email = user.Email!,
+                AvatarRelativePath = user.AvatarRelativePath,
                 Roles = await userManager.GetRolesAsync(user)
             });
         }

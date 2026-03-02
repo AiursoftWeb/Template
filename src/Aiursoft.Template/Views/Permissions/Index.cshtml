@@ -38,9 +38,9 @@
                 @foreach (var item in Model.Permissions)
                 {
                     @* The clickable-row class and data-href attribute are fully preserved. *@
-                    <tr class="clickable-row" data-href="@Url.Action("Details", new { key = item.Permission.Key })">
-                        <td>@PermissionLocalizer[item.Permission.Name]</td>
-                        <td>@PermissionLocalizer[item.Permission.Description]</td>
+                    <tr class="clickable-row" data-href="@Url.Action("Details", new { key = item.PermissionKey })">
+                        <td>@PermissionLocalizer[item.PermissionName]</td>
+                        <td>@PermissionLocalizer[item.PermissionDescription]</td>
                         <td>
                             @if (item.RoleCount > 0)
                             {

@@ -20,8 +20,8 @@ public class CreateViewModel: UiStackLayoutViewModel
     [Required(ErrorMessage = "The {0} is required.")]
     [Display(Name = "Name")]
     [NotNull]
-    [MaxLength(30)]
-    [MinLength(2)]
+    [MaxLength(30, ErrorMessage = "The {0} must be at max {1} characters long.")]
+    [MinLength(2, ErrorMessage = "The {0} must be at least {1} characters long.")]
     public string? DisplayName { get; set; }
 
     [EmailAddress(ErrorMessage = "The {0} is not a valid email address.")]
