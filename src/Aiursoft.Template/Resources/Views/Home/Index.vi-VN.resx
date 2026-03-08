@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Đạt được nhiều hơn với Aiursoft Template</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Bao gồm trang quản trị</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>Dịch thuật do AI dẫn dắt</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>Đọc được bởi AI</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Nén tự động và bảo mật</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>Triển khai tự động</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Xử lý múi giờ tự động</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>Chuyển đổi UTC/Local tự động</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>Tự động dịch thuật bằng AI sang 28 ngôn ngữ để tiếp cận toàn cầu.</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>Tích hợp sẵn</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Bảng điều khiển quản trị tích hợp</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Xác thực tích hợp</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>Giao diện quản lý hàng đợi tác vụ tích hợp sẵn</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Hợp tác một cách thoải mái</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>Định tuyến cốt lõi &amp; DI</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Báo cáo độ bao phủ</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Đa nền tảng</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>Yêu cầu phát triển tùy chỉnh</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>Yêu cầu phát triển tùy chỉnh</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>Bảng điều khiển cho các tác vụ nền</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Trang Tổng quan</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Kiểm thử tích hợp sâu với Authentik. Hỗ trợ Okta.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>Tích hợp sâu với DotLang AI</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Cơ sở dữ liệu SQLite mặc định, không cần cấu hình</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>Bắt buộc</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>Rào cản chất lượng được thực thi</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>Tính năng doanh nghiệp</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>Sẵn sàng cho doanh nghiệp</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Bảo mật doanh nghiệp</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Đã bao gồm Entity Framework Core</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Tích hợp hệ thống quản lý tập tin với tính năng nén ảnh đại diện tự động.</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>Quản lý &amp; Tối ưu hóa tệp</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>RBAC chi tiết</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API linh hoạt</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Giám đốc sáng lập &amp; Kiến trúc sư tại Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>Khung làm việc so với Giải pháp</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Miễn phí</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>Hoàn toàn ngoại tuyến</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>Cấu hình chung</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Chỉ có Dockerfile chung chung</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD Native</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>Thang toàn cầu</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>Các bài hướng dẫn thực hành phù hợp với thực tập sinh ngành khoa học máy tính.</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>Viết tay dựa trên Chính sách</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Xin chào thế giới!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Chất lượng cao</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Đã bao gồm Horizon</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Làm thế nào để tôi nhận được hỗ trợ?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>Tham gia cộng đồng phát triển đang ngày càng lớn mạnh của chúng tôi để xây dựng thế hệ ứng dụng web tiếp theo.</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>Sẵn sàng cho K8s / Swarm</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Kiểm tra Lint</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Duy trì chất lượng mã nguồn cao</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Bảng Điều Khiển Quản Lý</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Chuyển Đổi Markdown Sang HTML</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía khách và phía máy chủ dựa trên các chú thích dữ liệu.</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>Xử lý đa múi giờ</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Hỗ trợ nhiều nhà cung cấp cơ sở dữ liệu</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Công cụ Âm nhạc</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>Cần CASL hoặc tương tự</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Cần Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Cần logic xác thực phức tạp</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Cần cấu hình/phần mở rộng</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>Cần thiết lập ESLint/Prettier</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Cần Jetstream hoặc Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Cần Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Cần cấu hình thủ công</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Cần thư viện phương tiện</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Cần Passport hoặc tương tự</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Cần Spatie hoặc tương tự</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Cần cấu hình Spring Security</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Cần các plugin bên thứ ba</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>Cần TypeORM hoặc tương tự</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Không phụ thuộc vào nhà cung cấp dịch vụ đám mây nào. Chạy ở bất kỳ đâu, bất kỳ lúc nào.</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Khả năng hoạt động ngoại tuyến</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Một Click Bắt Đầu</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>Cấu hình Docker &amp; K8s được tối ưu hóa</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM &amp; Di chuyển dữ liệu</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>Sẵn sàng sử dụng ngay</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>Phát hiện và đồng bộ quyền</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Đã được cấu hình sẵn và kiểm tra</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>Các pipeline CI/CD đã được cấu hình sẵn dành riêng cho GitLab.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>Quy trình đã cấu hình sẵn cho môi trường phát triển/sản xuất</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Cổng chất lượng</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Đọc tài liệu</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Yêu cầu cấu hình Laravel Socialite</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Yêu cầu cấu hình Spring Security</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Thiết kế đáp ứng</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Bắt đầu với một lệnh &apos;docker run&apos; duy nhất.</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>Bắt đầu mà không cần cấu hình</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>Ngừng viết mã boilerplate.</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Đây là một dự án mẫu, nơi chúng ta bắt đầu hành trình khám phá...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Trường nhận biết múi giờ</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Được tin tưởng bởi các ứng dụng sản xuất cấp độ cao, bao gồm AnduinOS, StatHub, và Warp. Chúng tôi không chỉ chia sẻ mã nguồn này; chúng tôi vận hành toàn bộ doanh nghiệp của mình dựa trên nó.</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Những gì nhà phát triển của chúng tôi nói</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>Tại sao nên chọn Aiursoft Template?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Tại sao nên sử dụng Mẫu Aiursoft?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>Không cần cấu hình (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Không cấu hình</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>Kiểm tra mã nghiêm ngặt không khoan nhượng</value>
   </data>
 
 </root>

@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>借助 Aiursoft Template 成就更多可能</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>包含管理站点</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>AI 驱动的翻译</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>AI 可读</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>自动压缩与隐私保护</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>自动部署</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>自动时区处理</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>自动 UTC/本地时间转换</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>支持28种语言的自动AI驱动翻译，助力实现全球覆盖。</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>内置</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>内置管理面板</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>内置认证</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>内置作业队列图形界面</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>内置用户管理</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>无缝协同 / 统一管理</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>核心路由与依赖注入</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>覆盖率报告</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>跨平台</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>需要定制开发</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>需要定制开发</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>后台任务仪表盘</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>仪表板网站</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>与 Authentik 的深度集成测试。与 Okta 兼容。</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>与 DotLang AI 深度集成</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>默认 SQLite 数据库，无需配置</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>强制执行</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>强制质量门禁</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>企业级 C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>企业级功能</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>企业级就绪</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>企业安全</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>包含 Entity Framework Core</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持自动头像压缩。</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>文件管理与优化</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>细粒度 RBAC</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>灵活的 API</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>创始人兼架构师 | Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>框架 vs. 解决方案</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>免费</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>完全离线</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>通用配置</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>仅提供通用 Dockerfile</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>原生支持 GitLab CI/CD</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>全球规模</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>适合计算机科学实习生的实践教程</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>基于策略手动编写</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>你好，世界！</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>高质量</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>包含 Horizon</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>如何获取支持？</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>加入我们不断壮大的开发者社区，共同构建下一代网络应用。</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm 就绪</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint 检查</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>保持高代码质量</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>管理仪表盘</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 转 HTML</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>基于数据注解 (Data Annotations)，自动实现客户端与服务端的双重逻辑验证。</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>多时区处理</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>多数据库提供程序支持</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>音乐工具</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>需要 CASL 或类似库</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>需要 Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>需要复杂的认证逻辑</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>需要配置/插件</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>需要配置 ESLint/Prettier</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>需要 Jetstream 或 Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>需要 Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>需要手动配置</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>需要 Medialibrary</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>需要 Passport 或类似工具</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>需要 Spatie 或类似库</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>需要配置 Spring Security</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>需要第三方插件</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>需要 TypeORM 或类似库</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>无需依赖任何云服务提供商。随时随地运行。</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>离线可用</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>一键启动</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>优化的 Docker &amp; K8s 配置</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM 与迁移</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>开箱即用</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>权限发现与同步</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>预配置且已测试</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>为 GitLab 专门预配置的 CI/CD 流水线</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>预配置的 Dev/Prod 流水线</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>质量门禁 - 强制合规</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>阅读文档</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>需要配置 Laravel Socialite</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>需要配置 Spring Security</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>响应式设计</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>从一个单一的 &apos;docker run&apos; 命令开始。</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>无需任何配置即可启动</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>告别重复造轮子。</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>这是一个模板项目，我们将从这里开启探索之旅...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>感知时区的字段</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>深受生产级应用信赖，包括 AnduinOS、StatHub 和 Warp。我们不仅分享代码，我们的核心业务也完全构建于此。</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>我们的开发者怎么说</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>为何选择 Aiursoft Template？</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>为何选择 Aiursoft 模板？</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>零配置 (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>零配置</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>零容忍代码检查</value>
   </data>
 
 </root>
