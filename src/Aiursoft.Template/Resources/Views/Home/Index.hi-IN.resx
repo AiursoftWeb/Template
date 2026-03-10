@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>प्रशासनिक साइट शामिल है</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>AI संचालित अनुवाद</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>AI पठनीय</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>स्वचालित संपीड़न और गोपनीयता</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>स्वचालित डेप्लॉयमेंट</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>स्वचालित समय क्षेत्र संभाल</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>स्वचालित यूटीसी/स्थानीय रूपांतरण</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>वैश्विक पहुंच के लिए 28 भाषाओं में स्वचालित, AI-संचालित अनुवाद।</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>निर्मित-अंदर</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>निर्मित प्रशासनिक पैनल</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>एम्बेडेड प्रमाणीकरण</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>निर्मित नौकरी कतार GUI</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>आराम से नियंत्रित करें</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>कोर राउटिंग और DI</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>कवरेज रिपोर्ट</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>क्रॉस प्लेटफॉर्म</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>कस्टम विकास आवश्यक है</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>कस्टम विकास आवश्यक है</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>पृष्ठभूमि कार्यों के लिए डैशबोर्ड</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>डैशबोर्ड वेबसाइट</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Authentik के साथ गहन एकीकरण परीक्षण। Okta के साथ संगत।</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>DotLang AI के साथ गहरा एकीकरण</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>डिफ़ॉल्ट SQLite डेटाबेस, कोई कॉन्फ़िगरेशन की आवश्यकता नहीं है।</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>लागू किया गया</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>लगाया गया गुणवत्ता गेट</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>एंटरप्राइजी C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>उद्यम सुविधाएं</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>एंटरप्राइज रेडी</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>एंटरप्राइज सिक्योरिटी</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core शामिल है</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>अक्सर पूछे जाने वाले प्रश्न</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>स्वचालित अवतार संपीड़न के साथ एक अंतर्निहित फ़ाइल प्रबंधन प्रणाली की सुविधा।</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>फ़ाइल प्रबंधन और अनुकूलन</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>सूक्ष्म-स्तरीय RBAC</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>लचीला API</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>संस्थापक और वास्तुकार, Aiursoft में</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>फ्रेमवर्क बनाम समाधान</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>मुफ़्त</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>पूरी तरह से ऑफलाइन</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>सामान्य कॉन्फ़िगरेशन</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>केवल सामान्य Dockerfile</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD नेटिव</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>वैश्विक स्केल</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>कंप्यूटर विज्ञान के अंतर्निहित के लिए उपयुक्त हैंड्स-ऑन ट्यूटोरियल।</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>नीतियों के आधार पर हस्तलिखित</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>नमस्ते दुनिया!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>उच्च गुणवत्ता</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>हॉराइज़न शामिल है</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>मुझे सहायता कैसे मिल सकती है?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>हमारे विकासकर्मियों के बढ़ते समुदाय में शामिल हों जो वेब एप्लिकेशन की अगली पीढ़ी के निर्माण में लगे हैं।</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm के लिए तैयार</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>लिंट चेक</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>उच्च कोड गुणवत्ता बनाए रखें</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>प्रबंधन डैशबोर्ड</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>मार्कडाउन से एचटीएमएल</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>मॉडल्स को डेटा एनोटेशन्स के आधार पर क्लाइंट और सर्वर दोनों तरफ मान्यता दी जाती है।</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>बहु-समय क्षेत्र संभाल</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Multiple Database Provider Support</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>संगीत उपकरण</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>CASL या समान की आवश्यकता है</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>सेलरी + फ्लॉवर की आवश्यकता है</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>जटिल प्रमाणीकरण तर्क की आवश्यकता है</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>ESLint/Prettier सेटअप की आवश्यकता है</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Jetstream या Filament की आवश्यकता है</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>लारवेल सेल की आवश्यकता है</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>मैनुअल कॉन्फ़िगरेशन की आवश्यकता है</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>मीडिया लाइब्रेरी की आवश्यकता है</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>पासपोर्ट या समान की आवश्यकता है</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Spatie या समान की आवश्यकता है</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Spring Security कॉन्फ़िगरेशन की आवश्यकता है</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>तीसरे पक्ष के प्लग-इन की आवश्यकता है</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>टाइपओआरएम या समान की आवश्यकता है</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>किसी भी क्लाउड वेंडर पर निर्भरता नहीं। कहीं भी, कभी भी चलाएं।</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>ऑफलाइन कैपेबल</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>एक क्लिक से शुरू करें</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>कृषित Docker &amp; K8s कॉन्फ़िगरेशन</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM और माइग्रेशन</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>बिना किसी सेटअप के तैयार</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>अनुमति खोज और समन्वय</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>गिटलैब के लिए विशेष रूप से पूर्व-संरचित CI/CD पाइपलाइन</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>dev/prod के लिए पूर्व-विन्यस्त पाइपलाइन्स</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>गुणवत्ता गेट</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>दस्तावेज़ पढ़ें</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>लारवेल सोशलिट कॉन्फ़िग की आवश्यकता है</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Spring Security विन्यास की आवश्यकता है</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>उत्तरदायी डिज़ाइन</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>एकल &apos;docker run&apos; कमांड के साथ शुरुआत करें।</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>बिना किसी कॉन्फ़िगरेशन के शुरू होता है</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>बॉयलरप्लेट कोडिंग बंद करें।</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है, जहाँ से हम वॉयजर की शुरुआत करते हैं...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>समय क्षेत्र-जागरूक क्षेत्र</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>उत्पादन-ग्रेड एप्लिकेशन जैसे AnduinOS, StatHub, और Warp द्वारा विश्वास किया गया। हम सिर्फ इस कोड को साझा नहीं करते; हम अपने पूरे व्यवसाय को इस पर चलाते हैं।</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>हमारे डेवलपर्स क्या कहते हैं</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>Aiursoft टेम्पलेट क्यों चुनें?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft टेम्पलेट का उपयोग क्यों करें?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>शून्य कॉन्फ़िगरेशन (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>शून्य कॉन्फ़िगरेशन</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>शून्य सहनशीलता लींट</value>
   </data>
 
 </root>

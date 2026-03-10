@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Saavuta enemmän Aiursoft Templatella</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Hallintaportaali sisältyy</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>Tekoälyllä ohjattu kääntäminen</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>AI-luettava</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Automaattinen pakkaus ja yksityisyys</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>Automaattinen käyttöönotto</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Automaattinen aikavyöhykkeen käsittely</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>Automaattinen UTC-/paikallisen ajan muunnos</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>Automaattinen, tekoälyavusteinen käännös 28 kielelle maailmanlaajuista saavutettavuutta varten.</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>Sisäänrakennettu</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Sisäänrakennettu hallintapaneeli</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Sisäänrakennettu käyttäjätunnistus</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>Sisäänrakennettu työjonojen käyttöliittymä</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Sisäänrakennettu käyttäjienhallinta</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Koordinoi mukavasti</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>Pääreititys &amp; DI</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Kattavuusraportti</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Useita alustoja</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>Mukautettu kehitys vaadittu</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>Mukautettu kehitys vaaditaan</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>Taustatehtävien ohjauspaneeli</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Kojelauta-sivusto</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Syvät integraatiotestit Authentikin kanssa. Yhteensopiva Oktan kanssa.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>Syvä integraatio DotLang AI:n kanssa</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Oletus SQLite-tietokanta, ei konfigurointia tarvita</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>Pakotettu</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>Pakotettu laadunvalvontaraja</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>Yritystason ominaisuudet</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>Yritysvalmis</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Yritysturvallisuus</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core mukana</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>UKK</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Sisältää sisäänrakennetun tiedostonhallintajärjestelmän automaattisella avatar-pakkauksella.</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>Tiedostonhallinta ja optimointi</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>Hienojakoinen RBAC</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Joustava API</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Perustaja ja arkkitehti Aiursoftissa</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>Kehys vs. Ratkaisu</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Ilmainen</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>Täysin offline</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>Yleinen konfiguraatio</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Vain yleinen Dockerfile</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD alkuperäinen</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>Kansainvälinen skaala</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>Käytännön opetusohjelmat tietotekniikan opiskelijavalmistukselle.</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>Käsin kirjoitettu perustuen Policies-käytäntöihin</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hei maailma!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Korkea laatu</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon mukana</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Miten saan tukea?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>Liity kasvavaan kehittäjien yhteisöömme, joka rakentaa seuraavan sukupolven web-sovelluksia.</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm -valmis</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint-tarkistus</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Ylläpidä korkeaa koodin laatua</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Hallintataulu</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdownista HTML:ksi</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Mallit tarkistetaan molemmilla puolilla, asiakas- ja palvelinpuolella, tietojen annotaatioiden perusteella.</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>Monen aikavyöhykkeen käsittely</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Useita tietokantapalvelintukea</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Musiikkityökalut</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>Vaatii CASL:n tai vastaavan</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Vaatii Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Vaatii monimutkaista tunnistautumislogiikkaa</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Vaatii konfiguraatiota tai lisäosia</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>Vaatii ESLint/Prettier-asetukset</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Vaatii Jetstream- tai Filament-paketin</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Vaatii Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Vaatii manuaalista konfigurointia</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Vaatii Medialibraryn</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Vaatii Passportsia tai vastaavaa</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Vaatii Spatie- tai vastaavan</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Vaatii Spring Security -konfiguroinnin</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Vaatii kolmansien osapuolten lisäosia</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>Vaatii TypeORM:n tai vastaavan</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Ei riippuvuutta mihinkään pilviliittymään. Suorita missä tahansa, milloin tahansa.</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Offline-kelpoisuus</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Yksi napsautus käynnistää</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect -integraatio</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>Optimoitu Docker &amp; K8s-konfiguraatio</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM ja migraatiot</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>Valmiina käytettävä</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>Oikeuksien havaitseminen ja synkronointi</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Ennalta määritetty ja testattu</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>Ennalta määritellyt CI/CD -putkistot erityisesti GitLab:lle.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>Ennalta määritellyt putket kehitys- ja tuotantoympäristöihin</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Laatuportti</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Lue dokumentti</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Vaatii Laravel Socialite -konfiguraation</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Vaatii Spring Security -konfiguraatiota</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Responsiivinen suunnittelu</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Aloita yhdellä &apos;docker run&apos;-komennolla.</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>Käynnistyy ilman minkäänlaista konfiguraatiota</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>Lopeta tyhjien koodikappaleiden kirjoittaminen.</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Tämä on malliprojekti, josta aloitamme matkan...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Aikavyöhyketietoiset kentät</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Luotettu tuotantotasoisissa sovelluksissa, kuten AnduinOS, StatHub ja Warp. Emme vain jakaneet tätä koodia; käytämme sitä koko liiketoimintamme käynnistämiseen.</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Mitä kehittäjämme sanovat</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>Miksi valita Aiursoft Template?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Miksi käyttää Aiursoft Templatea?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>Ei konfigurointia (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Nollakonfiguraatio</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>Nollasietosyyntä</value>
   </data>
 
 </root>

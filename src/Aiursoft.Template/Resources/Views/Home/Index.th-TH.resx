@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>บรรลุผลได้มากขึ้นด้วย Aiursoft Template</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>รวมเว็บไซต์ผู้ดูแลระบบ</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>การแปลที่ขับเคลื่อนด้วย AI</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>AI อ่านได้</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>การบีบอัดอัตโนมัติและความเป็นส่วนตัว</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>การติดตั้งอัตโนมัติ</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>การจัดการเขตเวลาแบบอัตโนมัติ</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>การแปลงเวลา UTC/ท้องถิ่นอัตโนมัติ</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>การแปลอัตโนมัติด้วยระบบ AI ไปยัง 28 ภาษา เพื่อการเข้าถึงทั่วโลก</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>ในตัว</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>แผงควบคุมการบริหารในตัว</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>ระบบผู้ใช้ภายใน</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>GUI แถวคิวงานในตัว</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>การจัดการผู้ใช้ในตัว</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>ประสานงานได้อย่างสะดวกสบาย</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>การกำหนดเส้นทางหลักและการฉีดการพึ่งพา</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>รายงานการครอบคลุม</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>ข้ามแพลตฟอร์ม</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>ต้องการการพัฒนาแบบกำหนดเอง</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>ต้องพัฒนาเพิ่มเติมเอง</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>แดชบอร์ดสำหรับงานพื้นหลัง</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>เว็บไซต์แดชบอร์ด</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>การทดสอบการผสานระบบอย่างลึกซึ้งกับ Authentik รองรับ Okta</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>การผสานรวมอย่างลึกซึ้งกับ DotLang AI</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>ฐานข้อมูล SQLite แบบเริ่มต้น ไม่ต้องตั้งค่า</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>บังคับใช้</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>ประตูคุณภาพที่บังคับใช้</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>ฟีเจอร์ระดับองค์กร</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>พร้อมใช้งานสำหรับองค์กร</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>ความปลอดภัยสำหรับองค์กร</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>รวม Entity Framework Core แล้ว</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>คำถามที่พบบ่อย</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>มีระบบจัดการไฟล์ในตัวพร้อมการบีบอัดอวาตาร์อัตโนมัติ</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>การจัดการและเพิ่มประสิทธิภาพไฟล์</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>RBAC แบบละเอียด</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API ที่ยืดหยุ่น</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>ผู้ก่อตั้งและสถาปนิกที่ Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>เฟรมเวิร์ก เทียบกับ โซลูชัน</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>ฟรี</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>ทำงานแบบออฟไลน์ทั้งหมด</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>การตั้งค่าทั่วไป</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>มีเฉพาะ Dockerfile แบบทั่วไปเท่านั้น</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD แบบเนทีฟ</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>ขนาดทั่วโลก</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>บทเรียนปฏิบัติการที่เหมาะสำหรับผู้ฝึกงานวิศวกรรมคอมพิวเตอร์</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>เขียนขึ้นเองโดยอิงตาม Policies</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>สวัสดีชาวโลก!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>คุณภาพสูง</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon รวมมาให้แล้ว</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>ฉันจะได้รับการสนับสนุนได้อย่างไร?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>ร่วมกับชุมชนนักพัฒนาที่กำลังเติบโตของเรา ในการสร้างแอปพลิเคชันเว็บรุ่นถัดไป</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>พร้อมใช้งานกับ K8s / Swarm</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>ตรวจสอบลินต์</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>รักษาคุณภาพโค้ดให้อยู่ในระดับสูง</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>แดชบอร์ดการจัดการ</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>มาร์กดาวน์เป็นเอชทีเอ็มแอล</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์โดยอิงจาก annotation ข้อมูล</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>การจัดการหลายเขตเวลา</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>การสนับสนุนผู้ให้บริการฐานข้อมูลหลายแห่ง</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>เครื่องมือด้านดนตรี</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>ต้องการ CASL หรือที่คล้ายกัน</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>ต้องใช้ Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>ต้องการตรรกะการตรวจสอบสิทธิ์ที่ซับซ้อน</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>ต้องการการตั้งค่า/ปลั๊กอิน</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>ต้องการการตั้งค่า ESLint/Prettier</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>ต้องการ Jetstream หรือ Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>ต้องการ Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>ต้องกำหนดค่าด้วยตนเอง</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>ต้องการ Medialibrary</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>ต้องการ Passport หรือคล้ายกัน</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>ต้องการ Spatie หรือที่คล้ายกัน</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>ต้องการการกำหนดค่า Spring Security</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>ต้องการปลั๊กอินจากบุคคลที่สาม</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>ต้องการ TypeORM หรือคล้ายกัน</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>ไม่มีการพึ่งพาผู้ให้บริการคลาวด์ใด ๆ ใช้งานได้ทุกที่ ทุกเวลา</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>รองรับการทำงานแบบออฟไลน์</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>เริ่มต้นด้วยคลิกเดียว</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>การผสานรวม OpenID Connect</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>การตั้งค่า Docker และ K8s ที่ได้รับการปรับให้เหมาะสม</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM และการย้ายฐานข้อมูล</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>พร้อมใช้งานทันที</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>การค้นพบและการซิงค์สิทธิ์</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>ตั้งค่าล่วงหน้าและผ่านการทดสอบแล้ว</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>พื้นที่ที่ตั้งค่าล่วงหน้าสำหรับการจัดการ CI/CD โดยเฉพาะสำหรับ GitLab</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>ท่อส่งงานที่พร้อมใช้งานสำหรับ dev/prod</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>เกตเวย์คุณภาพ</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>อ่านเอกสาร</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>ต้องมีการตั้งค่า Laravel Socialite</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>ต้องมีการกำหนดค่า Spring Security</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>การออกแบบที่ตอบสนองต่ออุปกรณ์</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>เริ่มต้นด้วยคำสั่ง &apos;docker run&apos; เพียงคำสั่งเดียว</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>เริ่มใช้งานได้ทันทีโดยไม่ต้องตั้งค่าใดๆ</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>หยุดเขียนโค้ดซ้ำซ้อน</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>นี่คือโครงการเทมเพลต ซึ่งเป็นจุดเริ่มต้นของการเดินทาง...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>ฟิลด์ที่ตระหนักถึงเขตเวลา</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>ได้รับการไว้วางใจจากแอปพลิเคชันระดับการผลิต รวมถึง AnduinOS, StatHub, และ Warp เรายังไม่เพียงแค่แบ่งปันโค้ดเท่านั้น แต่เราใช้โค้ดนี้ในการดำเนินธุรกิจทั้งหมดของเรา</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>นักพัฒนาของเราพูดว่าอย่างไร</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>ทำไมต้องเลือก Aiursoft Template?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>ทำไมจึงควรใช้ Aiursoft Template?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>ไม่ต้องตั้งค่า (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>การตั้งค่าศูนย์</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>การตรวจสอบโค้ดแบบไม่ยอมให้ผิดพลาดเลย</value>
   </data>
 
 </root>

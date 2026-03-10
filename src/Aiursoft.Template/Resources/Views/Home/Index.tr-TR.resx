@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template ile daha fazlasını başarın</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Yönetim sitesi dahil</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>Yapay Zeka Destekli Çeviri</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>AI Okunabilir</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Otomatik sıkıştırma ve gizlilik</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>Otomatik Dağıtım</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Otomatik Saat Dilimi İşleme</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>Otomatik UTC/Yerel dönüşüm</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>Küresel erişim için 28 dile otomatik, yapay zeka destekli çeviri.</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>Gömülü</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Yerleşik yönetim paneli</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Gömülü Kimlik Doğrulama</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>Yerleşik İş Kuyruğu Arayüzü</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Dahili Kullanıcı Yönetimi</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Konforlu Koordinasyon</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>Temel Yönlendirme &amp; DI</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Kapsam Raporu</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Çapraz Platform</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>Özel geliştirme gerekli</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>Özel geliştirme gerekli</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>Arka plan görevleri için kontrol paneli</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Kontrol Paneli Web Sitesi</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Authentik ile derin entegrasyon testleri. Okta ile uyumlu.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>DotLang AI ile derin entegrasyon</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Varsayılan SQLite veritabanı, yapılandırma gerekmez.</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>Zorunlu</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>Zorunlu kalite kontrolü</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>Enterprise C#</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>Kurumsal Özellikler</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>Kurumsal Hazır</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Kurumsal Güvenlik</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core dahil</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>SSS</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Otomatik avatar sıkıştırmalı, dahili bir dosya yönetim sistemi özelliği sunar.</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>Dosya Yönetimi ve Optimizasyon</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>İnce taneli RBAC</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Esnek API</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Founder &amp; Architect at Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>Çerçeve mi, Çözüm mü?</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Ücretsiz</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>Tamamen Çevrimdışı</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>Genel yapılandırma</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Sadece Genel Dockerfile</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD Yerel</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>Küresel Ölçek</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>Bilgisayar bilimi stajyerleri için uygun pratik öğreticiler.</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>Politikalar temelinde elle yazılmış</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Merhaba Dünya!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Yüksek Kalite</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon dahil</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Nasıl destek alabilirim?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>Gelişen geliştirici topluluğumuzla birlikte web uygulamalarının bir sonraki neslini inşa edin.</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>K8s / Swarm Hazır</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint Kontrolü</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Yüksek Kod Kalitesini Koruyun</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Yönetim Paneli</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown&apos;dan HTML&apos;e</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller, veri eklemelerine dayalı olarak hem istemci hem de sunucu tarafında doğrulanır.</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>Çoklu Saat Dilimi Yönetimi</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Çoklu Veritabanı Sağlayıcı Desteği</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Müzik Araçları</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>CASL veya benzeri gerektirir</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Celery + Flower gerektirir</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Karmaşık kimlik doğrulama mantığı gerektirir</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Yapılandırma/eklenti gerektirir</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>ESLint/Prettier kurulumu gerekli</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Jetstream veya Filament gerekli</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Laravel Sail Gerektirir</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Manuel yapılandırma gerektirir</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Medialibrary Gerektirir</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Passport veya benzeri gerektirir</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Spatie veya benzeri gerektirir</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Spring Security yapılandırması gerektirir</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Üçüncü taraf eklentiler gerekli</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>TypeORM veya benzeri gereklidir</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Herhangi bir bulut sağlayıcısına bağımlılık yok. Her yerde, her zaman çalıştırılabilir.</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Çevrimdışı Kullanım Destekli</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Bir Tıkla Başlat</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect Entegrasyonu</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>Optimize edilmiş Docker &amp; K8s yapılandırması</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM ve Göçler</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>Kutudan çıktığı gibi</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>İzin keşfi ve senkronizasyonu</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Ön yapılandırılmış ve test edilmiş</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>GitLab için özel olarak önceden yapılandırılmış CI/CD boruları.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>Geliştirme/üretim için önceden yapılandırılmış boru hatları</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Kalite Kapısı</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Belgeyi okuyun</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Laravel Socialite yapılandırması gerektirir</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Spring Security yapılandırması gerektirir</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Duyarlı Tasarım</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Tek bir &apos;docker run&apos; komutuyla başlayın.</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>Hiç yapılandırma gerektirmeden başlar</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>Kodlama Şablonlarından Vazgeçin.</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Bu, yolculuğa başladığımız bir şablon projedir...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Zaman dilimi farkındalığına sahip alanlar</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>AnduinOS, StatHub ve Warp gibi üretim düzeyindeki uygulamalar tarafından güvenilir. Sadece bu kodu paylaşmakla kalmıyoruz; tamamen bu kodla işimizi yürütüyoruz.</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Geliştiricilerimizin Görüşleri</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>Neden Aiursoft Template?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>Neden Aiursoft Template Kullanmalısınız?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>Sıfır Yapılandırma (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Sıfır Yapılandırma</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>Sıfır Tolerans Lint</value>
   </data>
 
 </root>

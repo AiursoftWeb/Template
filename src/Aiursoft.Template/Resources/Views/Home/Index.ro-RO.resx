@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Realizați mai multe cu Aiursoft Template</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Site de administrare inclus</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>Traducere condusă de IA</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>Ușor de citit de către AI</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Compresie automată și confidențialitate</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>Implementare automată</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>Gestionare automată a fusului orar</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>Conversie automată UTC/Locală</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>Traducere automată, bazată pe inteligență artificială, în 28 de limbi pentru o acoperire globală.</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>Introdus în mod nativ</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Panou de administrare integrat</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Autentificare integrată</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>Interfață GUI integrată pentru coada de sarcini</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestionare Utilizatori Integrată</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Coordonează ușor</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>Rutare și DI de bază</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Raport acoperire</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Platform Cruce</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>Se cere dezvoltare personalizată</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>Este necesară dezvoltarea personalizată</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>Panou de control pentru sarcini în fundal</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>Site-ul Panoului de Control</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>Testare de integrare profundă cu Authentik. Compatibil cu Okta.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>Integrare profundă cu DotLang AI</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>Bază de date SQLite implicită, fără necesitate de configurare.</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>Aplicat</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>Poartă de calitate impusă</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>C# Enterprise</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>Funcționalități Enterprise</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>Potrivit pentru întreprinderi</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>Securitate Enterprise</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>Entity Framework Core inclus</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>Întrebări frecvente</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Include un sistem integrat de gestionare a fișierelor cu compresie automată a avatarurilor.</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>Gestiune și optimizare fișiere</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>RBAC cu granulație fină</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API flexibilă</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Founder &amp; Architect la Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>Framework vs. Soluție</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratuit</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>Complet Offline</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>Configurație generică</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Doar un Dockerfile generic</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD Nativ</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>Scală globală</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>Tutoriale practice potrivite pentru stagiarii în informatică.</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>Scriere manuală bazată pe politici</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Salut Lume!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Calitate ridicată</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon inclus</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>Cum pot obține asistență?</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>Alăturați-vă comunității noastre în creștere de dezvoltatori care construiesc următoarea generație de aplicații web.</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>Gata pentru K8s / Swarm</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Verificare Lint</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Menține o Calitate Ridicată a Codului</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Panou de administrare</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown în HTML</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modelele sunt validate pe ambele laturi, client și server, pe baza anotărilor de date.</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>Gestionarea multiplelor fuse orare</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>Suport pentru mai multe furnizori de baze de date</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Instrumente Muzicale</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>Necesită CASL sau similar</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>Necesită Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Necesită logică complexă de autentificare</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Necesită configurare/plugin-uri</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>Necesită configurarea ESLint/Prettier</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>Necesită Jetstream sau Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>Necesită Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Necesită configurare manuală</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>Necesită Medialibrary</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>Necesită Passport sau similar</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>Necesită Spatie sau similar</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>Necesită configurare Spring Security</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Necesită plugin-uri de la terți</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>Necesită TypeORM sau similar</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Fără dependență de niciun furnizor de cloud. Rulează oriunde, oricând.</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Capabil offline</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Un Click Start</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrare OpenID Connect</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>Configurație Docker &amp; K8s optimizată</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM și Migrații</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>Gata de utilizare</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>Descoperirea și sincronizarea permisiunilor</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Pre-configurat și testat</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>Pipelines CI/CD preconfigurate specifice pentru GitLab.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>Pipelines preconfigurate pentru dev/prod</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Portocală de Calitate</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>Citește documentația</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>Necesită configurarea Laravel Socialite</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>Necesită configurarea Spring Security</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>Design Responsiv</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Începe cu o singură comandă &apos;docker run&apos;.</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>Pornește fără nicio configurare</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>Încetează să scrii cod boilerplate.</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>Acesta este un proiect tipic, de unde începem călătoria...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Câmpuri conștiente de fusul orar</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Încrederea aplicațiilor de tip producție, inclusiv AnduinOS, StatHub și Warp. Nu doar împărtășim acest cod; îi folosim pentru întreaga noastră afacere.</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>Ce spun dezvoltatorii noștri</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>De ce să alegeți Aiursoft Template?</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>De ce să folosești Șablonul Aiursoft?</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>Fără configurare (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>Fără Configurare</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>Lint cu toleranță zero</value>
   </data>
 
 </root>

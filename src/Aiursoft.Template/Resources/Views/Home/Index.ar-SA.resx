@@ -39,6 +39,12 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>احقق المزيد مع قالب Aiursoft</value>
   </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>موقع الإدارة مضمن</value>
+  </data>
+  <data name="AI Driven Translation" xml:space="preserve">
+    <value>الترجمة المدفوعة بالذكاء الاصطناعي</value>
+  </data>
   <data name="AI Readable" xml:space="preserve">
     <value>قابل للقراءة بواسطة الذكاء الاصطناعي</value>
   </data>
@@ -66,6 +72,9 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>الضغط التلقائي والخصوصية</value>
+  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>النشر التلقائي</value>
   </data>
@@ -83,6 +92,9 @@
   </data>
   <data name="Automatic Time Zone Handling" xml:space="preserve">
     <value>التعامل التلقائي مع التوقيت الزمني</value>
+  </data>
+  <data name="Automatic UTC/Local conversion" xml:space="preserve">
+    <value>التحويل التلقائي بين توقيت UTC والتوقيت المحلي</value>
   </data>
   <data name="Automatic, AI-driven translation into 28 languages for global reach." xml:space="preserve">
     <value>ترجمة آلية مدعومة بالذكاء الاصطناعي إلى 28 لغة للوصول إلى جمهور عالمي.</value>
@@ -123,8 +135,14 @@
   <data name="Built-in" xml:space="preserve">
     <value>مدمج</value>
   </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>لوحة تحكم إدارية مدمجة</value>
+  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>مصادقة مدمجة</value>
+  </data>
+  <data name="Built-in Job Queue GUI" xml:space="preserve">
+    <value>واجهة مستخدم مدمجة لطابور المهام</value>
   </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>إدارة المستخدمين المدمجة</value>
@@ -153,11 +171,23 @@
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>coordination بسلاسة</value>
   </data>
+  <data name="Core Routing &amp; DI" xml:space="preserve">
+    <value>التوجيه الأساسي وحقن التبعيات</value>
+  </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>تقرير التغطية</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>متعدد المنصات</value>
+  </data>
+  <data name="Custom dev required" xml:space="preserve">
+    <value>يتطلب تطوير مخصص</value>
+  </data>
+  <data name="Custom development required" xml:space="preserve">
+    <value>يتطلب تطويرًا مخصصًا</value>
+  </data>
+  <data name="Dashboard for background tasks" xml:space="preserve">
+    <value>لوحة تحكم للمهام الخلفية</value>
   </data>
   <data name="Dashboard Website" xml:space="preserve">
     <value>موقع لوحة التحكم</value>
@@ -170,6 +200,9 @@
   </data>
   <data name="Deep integration testing with Authentik. Compatible with Okta." xml:space="preserve">
     <value>اختبارات دمج عميقة مع Authentik. متوافقة مع Okta.</value>
+  </data>
+  <data name="Deep integration with DotLang AI" xml:space="preserve">
+    <value>تكامل عميق مع DotLang AI</value>
   </data>
   <data name="Default SQLite database, no configuration needed." xml:space="preserve">
     <value>قاعدة بيانات SQLite افتراضية، لا حاجة إلى تهيئة</value>
@@ -219,14 +252,23 @@
   <data name="Enforced" xml:space="preserve">
     <value>مُطبَّق</value>
   </data>
+  <data name="Enforced quality gate" xml:space="preserve">
+    <value>بوابة جودة مفروضة</value>
+  </data>
   <data name="Enterprise C#" xml:space="preserve">
     <value>C# المؤسسي</value>
+  </data>
+  <data name="Enterprise Features" xml:space="preserve">
+    <value>ميزات المؤسسات</value>
   </data>
   <data name="Enterprise Ready" xml:space="preserve">
     <value>جاهز للشركات</value>
   </data>
   <data name="Enterprise Security" xml:space="preserve">
     <value>الأمان المؤسسي</value>
+  </data>
+  <data name="Entity Framework Core included" xml:space="preserve">
+    <value>تضمين Entity Framework Core</value>
   </data>
   <data name="FAQ" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
@@ -243,6 +285,12 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>يتميز بنظام مدمج لإدارة الملفات مع ضغط تلقائي للصور الشخصية.</value>
   </data>
+  <data name="File Mgmt &amp; Optimization" xml:space="preserve">
+    <value>إدارة الملفات والتحسين</value>
+  </data>
+  <data name="Fine-grained RBAC" xml:space="preserve">
+    <value>التحكم في الوصول القائم على الأدوار (RBAC) الدقيق</value>
+  </data>
   <data name="Flexible API" xml:space="preserve">
     <value>واجهة برمجة تطبيقات مرنة</value>
   </data>
@@ -251,6 +299,9 @@
   </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>مؤسس ومهندس في Aiursoft</value>
+  </data>
+  <data name="Framework vs. Solution" xml:space="preserve">
+    <value>الإطار مقابل الحل</value>
   </data>
   <data name="Free" xml:space="preserve">
     <value>مجاني</value>
@@ -279,8 +330,17 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>كاملة بدون اتصال</value>
   </data>
+  <data name="Generic configuration" xml:space="preserve">
+    <value>إعداد عام</value>
+  </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>ملف Docker عام فقط</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
+  </data>
+  <data name="GitLab CI/CD Native" xml:space="preserve">
+    <value>GitLab CI/CD أصلي</value>
   </data>
   <data name="Global Scale" xml:space="preserve">
     <value>النطاق العالمي</value>
@@ -297,6 +357,9 @@
   <data name="Hands-on tutorials suitable for computer science interns." xml:space="preserve">
     <value>دروس تطبيقية مناسبة لمتدربين علوم الحاسوب.</value>
   </data>
+  <data name="Handwritten based on Policies" xml:space="preserve">
+    <value>مكتوب يدويًا بناءً على السياسات</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>مرحبًا أيها العالم!</value>
   </data>
@@ -308,6 +371,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>جودة عالية</value>
+  </data>
+  <data name="Horizon included" xml:space="preserve">
+    <value>Horizon مضمن</value>
   </data>
   <data name="How can I get support?" xml:space="preserve">
     <value>كيف يمكنني الحصول على الدعم؟</value>
@@ -354,11 +420,17 @@
   <data name="Join our growing community of developers building the next generation of web applications." xml:space="preserve">
     <value>انضم إلى مجتمع المطورين الناشئ لدينا الذي يبني الجيل التالي من تطبيقات الويب.</value>
   </data>
+  <data name="K8s / Swarm Ready" xml:space="preserve">
+    <value>جاهز لـ K8s / Swarm</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>فحص اللينت</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>الحفاظ على جودة الرمز العالي</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>لوحة تحكم الإدارة</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>تحويل Markdown إلى HTML</value>
@@ -372,6 +444,9 @@
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>يتم التحقق من النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
   </data>
+  <data name="Multi-timezone Handling" xml:space="preserve">
+    <value>التعامل مع مناطق زمنية متعددة</value>
+  </data>
   <data name="Multiple Database Provider Support" xml:space="preserve">
     <value>دعم مزود قواعد البيانات متعددة</value>
   </data>
@@ -384,11 +459,56 @@
   <data name="Music Tools" xml:space="preserve">
     <value>أدوات الموسيقى</value>
   </data>
+  <data name="Needs CASL or similar" xml:space="preserve">
+    <value>يتطلب CASL أو ما شابه</value>
+  </data>
+  <data name="Needs Celery + Flower" xml:space="preserve">
+    <value>يتطلب Celery + Flower</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>يتطلب منطق مصادقة معقد</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>يتطلب إعدادات/إضافات</value>
+  </data>
+  <data name="Needs ESLint/Prettier setup" xml:space="preserve">
+    <value>يتطلب إعداد ESLint/Prettier</value>
+  </data>
+  <data name="Needs Jetstream or Filament" xml:space="preserve">
+    <value>يتطلب Jetstream أو Filament</value>
+  </data>
+  <data name="Needs Laravel Sail" xml:space="preserve">
+    <value>يتطلب Laravel Sail</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>يتطلب إعدادًا يدويًا</value>
+  </data>
+  <data name="Needs Medialibrary" xml:space="preserve">
+    <value>يتطلب مكتبة الوسائط</value>
+  </data>
+  <data name="Needs Passport or similar" xml:space="preserve">
+    <value>يتطلب Passport أو ما شابه</value>
+  </data>
+  <data name="Needs Spatie or similar" xml:space="preserve">
+    <value>يتطلب Spatie أو ما شابه</value>
+  </data>
+  <data name="Needs Spring Security config" xml:space="preserve">
+    <value>يتطلب تكوين Spring Security</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>يتطلب إضافات من جهات خارجية</value>
+  </data>
+  <data name="Needs TypeORM or similar" xml:space="preserve">
+    <value>يتطلب TypeORM أو ما شابه</value>
+  </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>لا يعتمد على أي مزود سحابي. شغّل في أي مكان وفي أي وقت.</value>
   </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>قادر على العمل دون اتصال</value>
+  </data>
+  <data name="OIDC &amp; SSO" xml:space="preserve">
+    <value>OIDC &amp; SSO</value>
   </data>
   <data name="One Click Start" xml:space="preserve">
     <value>ابدأ بنقرة واحدة</value>
@@ -399,8 +519,26 @@
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>دمج OpenID Connect</value>
   </data>
+  <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
+    <value>تكوين Docker و K8s محسن</value>
+  </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>نموذج كائن العلائقي وهجرات قاعدة البيانات</value>
+  </data>
+  <data name="Out-of-the-box" xml:space="preserve">
+    <value>جاهز للاستخدام فوراً</value>
+  </data>
+  <data name="Permission discovery and sync" xml:space="preserve">
+    <value>اكتشاف الصلاحيات ومزامنتها</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>مُهيأة مسبقًا ومُختبرة</value>
+  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>ممرات CI/CD المُهيأة مسبقًا بشكل خاص لـ GitLab.</value>
+  </data>
+  <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
+    <value>خطوط أنابيب مُعدّة مسبقًا للتطوير والإنتاج</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>بوابة الجودة</value>
@@ -410,6 +548,12 @@
   </data>
   <data name="Read the document" xml:space="preserve">
     <value>اقرأ المستند</value>
+  </data>
+  <data name="Requires Laravel Socialite config" xml:space="preserve">
+    <value>يتطلب إعداد Laravel Socialite</value>
+  </data>
+  <data name="Requires Spring Security configuration" xml:space="preserve">
+    <value>يتطلب تكوين Spring Security</value>
   </data>
   <data name="Responsive Design" xml:space="preserve">
     <value>تصميم متجاوب</value>
@@ -462,6 +606,9 @@
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>ابدأ بتنفيذ أمر واحد فقط هو &apos;docker run&apos;.</value>
   </data>
+  <data name="Starts without any configuration" xml:space="preserve">
+    <value>يبدأ بدون أي إعداد</value>
+  </data>
   <data name="Stop Coding Boilerplate." xml:space="preserve">
     <value>توقّف عن كتابة الكود المتكرر.</value>
   </data>
@@ -510,6 +657,9 @@
   <data name="This is a template project, where we start the voyager..." xml:space="preserve">
     <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>حقول مدركة للمنطقة الزمنية</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>مُوثوق به من قبل تطبيقات إنتاجية بما في ذلك AnduinOS وStatHub وWarp. لا نشارك هذا الكود فقط؛ بل نُدير عملنا بالكامل عليه.</value>
   </data>
@@ -537,6 +687,9 @@
   <data name="What our developers say" xml:space="preserve">
     <value>ماذا يقول مطورونا</value>
   </data>
+  <data name="Why choose Aiursoft Template?" xml:space="preserve">
+    <value>لماذا تختار قالب Aiursoft؟</value>
+  </data>
   <data name="Why use the Aiursoft Template?" xml:space="preserve">
     <value>لماذا تستخدم قالب Aiursoft؟</value>
   </data>
@@ -558,8 +711,14 @@
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
+  <data name="Zero Config (SQLite)" xml:space="preserve">
+    <value>تكوين صفري (SQLite)</value>
+  </data>
   <data name="Zero Configuration" xml:space="preserve">
     <value>توصيل صفر</value>
+  </data>
+  <data name="Zero Tolerance Lint" xml:space="preserve">
+    <value>فحص صارم بدون تسامح</value>
   </data>
 
 </root>
