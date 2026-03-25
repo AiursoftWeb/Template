@@ -27,6 +27,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [GitMirrorServer](https://gitlab.aiursoft.com/aiursoft/gitmirrorserver)
 * [CppRunner](https://gitlab.aiursoft.com/aiursoft/cpprunner)
 * [OllamaGateway](https://gitlab.aiursoft.com/aiursoft/ollamagateway)
+* [Polls](https://gitlab.aiursoft.com/aiursoft/polls)
 
 ## Try
 
