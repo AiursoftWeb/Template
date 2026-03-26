@@ -10,6 +10,7 @@ using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Aiursoft.ClickhouseLoggerProvider;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Diagnostics.CodeAnalysis;
@@ -19,6 +20,11 @@ namespace Aiursoft.Template;
 [ExcludeFromCodeCoverage]
 public class Startup : IWebStartup
 {
+    public void ConfigureLogging(IConfiguration configuration, IWebHostEnvironment environment, ILoggingBuilder logging)
+    {
+        logging.AddClickhouse(options => configuration.GetSection("Clickhouse").Bind(options));
+    }
+
     public void ConfigureServices(IConfiguration configuration, IWebHostEnvironment environment, IServiceCollection services)
     {
         // AppSettings.
