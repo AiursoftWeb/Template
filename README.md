@@ -28,6 +28,9 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [CppRunner](https://gitlab.aiursoft.com/aiursoft/cpprunner)
 * [OllamaGateway](https://gitlab.aiursoft.com/aiursoft/ollamagateway)
 * [Polls](https://gitlab.aiursoft.com/aiursoft/polls)
+* [WeChatExam](https://gitlab.aiursoft.com/aiursoft/wechatexam)
+* [MusicExam](https://gitlab.aiursoft.com/aiursoft/musicexam)
+* [CoprHome](https://gitlab.aiursoft.com/aiursoft/corphome)
 
 ## Try
 
