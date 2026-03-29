@@ -20,11 +20,6 @@ namespace Aiursoft.Template;
 [ExcludeFromCodeCoverage]
 public class Startup : IWebStartup
 {
-    public void ConfigureLogging(IConfiguration configuration, IWebHostEnvironment environment, ILoggingBuilder logging)
-    {
-        logging.AddClickhouse(options => configuration.GetSection("Clickhouse").Bind(options));
-    }
-
     public void ConfigureServices(IConfiguration configuration, IWebHostEnvironment environment, IServiceCollection services)
     {
         // AppSettings.
@@ -41,6 +36,11 @@ public class Startup : IWebStartup
                 new SqliteSupportedDb(allowCache: allowCache, splitQuery: true),
                 new InMemorySupportedDb()
             ]);
+
+        services.AddLogging(builder =>
+        {
+            builder.AddClickhouse(options => configuration.GetSection("Logging:Clickhouse").Bind(options));
+        });
 
         // Authentication and Authorization
         services.AddTemplateAuth(configuration);
