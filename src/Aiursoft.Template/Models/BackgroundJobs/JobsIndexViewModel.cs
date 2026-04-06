@@ -1,4 +1,5 @@
-using Aiursoft.Template.Services.BackgroundJobs;
+using Aiursoft.Canon.BackgroundJobs;
+using Aiursoft.Canon.ScheduledTasks;
 using Aiursoft.UiStack.Layout;
 
 namespace Aiursoft.Template.Models.BackgroundJobs;

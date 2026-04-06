@@ -1,3 +1,4 @@
+using Aiursoft.Canon.BackgroundJobs;
 using Aiursoft.Template.Entities;
 using Aiursoft.Template.Services.FileStorage;
 using Microsoft.EntityFrameworkCore;

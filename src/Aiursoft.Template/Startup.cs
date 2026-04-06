@@ -1,4 +1,7 @@
 using Aiursoft.CSTools.Tools;
+using Aiursoft.Canon.TaskQueue;
+using Aiursoft.Canon.BackgroundJobs;
+using Aiursoft.Canon.ScheduledTasks;
 using Aiursoft.DbTools.Switchable;
 using Aiursoft.Scanner;
 using Aiursoft.Template.Configuration;
@@ -6,7 +9,7 @@ using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Services.Authentication;
-using Aiursoft.Template.Services.BackgroundJobs;
+using Aiursoft.Template.Services.BackgroundJobs.Jobs;
 using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
@@ -53,14 +56,12 @@ public class Startup : IWebStartup
         services.AddSingleton<NavigationState<Startup>>();
 
         // Background job infrastructure
-        services.AddSingleton<Services.BackgroundJobs.ServiceTaskQueue>();
-        services.AddSingleton<Services.BackgroundJobs.BackgroundJobRegistry>();
-        services.AddHostedService<Services.BackgroundJobs.QueueWorkerService>();
-        services.AddHostedService<Services.BackgroundJobs.JobSchedulerService>();
+        services.AddTaskQueueEngine();
+        services.AddScheduledTaskEngine();
 
         // Background jobs
-        var dummyJob = services.RegisterBackgroundJob<Services.BackgroundJobs.Jobs.DummyJob>();
-        var orphanAvatarCleanupJob = services.RegisterBackgroundJob<Services.BackgroundJobs.Jobs.OrphanAvatarCleanupJob>();
+        services.RegisterBackgroundJob<DummyJob>();
+        var orphanAvatarCleanupJob = services.RegisterBackgroundJob<OrphanAvatarCleanupJob>();
 
         // Scheduled tasks (attach a schedule to any registered background job)
         services.RegisterScheduledTask(

@@ -1,3 +1,5 @@
+using Aiursoft.Canon.BackgroundJobs;
+
 namespace Aiursoft.Template.Services.BackgroundJobs.Jobs;
 
 /// <summary>
