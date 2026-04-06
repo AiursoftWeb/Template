@@ -7,7 +7,7 @@ namespace Aiursoft.Template.Services.BackgroundJobs;
 /// A queue system for background jobs with dependency injection support.
 /// Each queue processes jobs sequentially, but different queues can process jobs in parallel.
 /// </summary>
-public class BackgroundJobQueue
+public class ServiceTaskQueue
 {
     private readonly ConcurrentDictionary<Guid, JobInfo> _allJobs = new();
     private readonly ConcurrentDictionary<string, ConcurrentQueue<Guid>> _queuesByName = new();
@@ -47,6 +47,34 @@ public class BackgroundJobQueue
         where TService : notnull
     {
         return QueueWithDependency(typeof(TService).Name, typeof(TService).Name, job);
+    }
+
+    /// <summary>
+    /// Queue a job using a runtime <paramref name="serviceType"/> resolved from DI.
+    /// The <paramref name="job"/> receives the resolved service cast to <typeparamref name="TService"/>.
+    /// Use this when the concrete type is only known at runtime (e.g. from BackgroundJobRegistry).
+    /// </summary>
+    public Guid QueueWithDependency<TService>(
+        string queueName,
+        string jobName,
+        Func<TService, Task> job,
+        Type serviceType)
+        where TService : notnull
+    {
+        var jobInfo = new JobInfo
+        {
+            QueueName = queueName,
+            JobName = jobName,
+            ServiceType = serviceType,
+            JobAction = async (service) => await job((TService)service)
+        };
+
+        _allJobs[jobInfo.JobId] = jobInfo;
+
+        var queue = _queuesByName.GetOrAdd(queueName, _ => new ConcurrentQueue<Guid>());
+        queue.Enqueue(jobInfo.JobId);
+
+        return jobInfo.JobId;
     }
 
     /// <summary>

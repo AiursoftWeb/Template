@@ -6,6 +6,7 @@ using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Template.InMemory;
 using Aiursoft.Template.MySql;
 using Aiursoft.Template.Services.Authentication;
+using Aiursoft.Template.Services.BackgroundJobs;
 using Aiursoft.Template.Sqlite;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
@@ -51,9 +52,21 @@ public class Startup : IWebStartup
         services.AddAssemblyDependencies(typeof(Startup).Assembly);
         services.AddSingleton<NavigationState<Startup>>();
 
-        // Background job queue
-        services.AddSingleton<Services.BackgroundJobs.BackgroundJobQueue>();
+        // Background job infrastructure
+        services.AddSingleton<Services.BackgroundJobs.ServiceTaskQueue>();
+        services.AddSingleton<Services.BackgroundJobs.BackgroundJobRegistry>();
         services.AddHostedService<Services.BackgroundJobs.QueueWorkerService>();
+        services.AddHostedService<Services.BackgroundJobs.JobSchedulerService>();
+
+        // Background jobs
+        var dummyJob = services.RegisterBackgroundJob<Services.BackgroundJobs.Jobs.DummyJob>();
+        var orphanAvatarCleanupJob = services.RegisterBackgroundJob<Services.BackgroundJobs.Jobs.OrphanAvatarCleanupJob>();
+
+        // Scheduled tasks (attach a schedule to any registered background job)
+        services.RegisterScheduledTask(
+            registration: orphanAvatarCleanupJob,
+            period:     TimeSpan.FromHours(6),
+            startDelay: TimeSpan.FromMinutes(5));
 
         // Controllers and localization
         services.AddControllersWithViews()

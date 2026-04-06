@@ -6,7 +6,7 @@ namespace Aiursoft.Template.Services.BackgroundJobs;
 /// Background service that processes jobs from the CanonQueue.
 /// </summary>
 public class QueueWorkerService(
-    BackgroundJobQueue backgroundJobQueue,
+    ServiceTaskQueue taskQueue,
     IServiceScopeFactory serviceScopeFactory,
     ILogger<QueueWorkerService> logger) : IHostedService, IDisposable
 {
@@ -16,7 +16,7 @@ public class QueueWorkerService(
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        logger.LogInformation("Queue Worker Service is starting");
+        logger.LogInformation("Task Queue Worker is starting");
 
         // Process jobs every 100ms
         _timer = new Timer(ProcessJobs, null, TimeSpan.Zero, TimeSpan.FromMilliseconds(100));
@@ -37,12 +37,12 @@ public class QueueWorkerService(
 
         try
         {
-            var queues = backgroundJobQueue.GetQueuesWithPendingJobs().ToList();
+            var queues = taskQueue.GetQueuesWithPendingJobs().ToList();
 
             foreach (var queueName in queues)
             {
                 // Try to get next job for this queue (will return null if queue is already processing)
-                var job = backgroundJobQueue.TryDequeueNextJob(queueName);
+                var job = taskQueue.TryDequeueNextJob(queueName);
                 if (job != null)
                 {
                     // Process job asynchronously without blocking the timer
@@ -60,7 +60,7 @@ public class QueueWorkerService(
     {
         try
         {
-            logger.LogInformation("Processing job {JobId} ({JobName}) from queue {QueueName}",
+            logger.LogInformation("Processing task {TaskId} ({TaskName}) from queue {QueueName}",
                 job.JobId, job.JobName, job.QueueName);
 
             // Create a scope for dependency injection
@@ -73,18 +73,18 @@ public class QueueWorkerService(
             await job.JobAction(service);
 
             // Mark as success
-            backgroundJobQueue.CompleteJob(job.JobId, true);
+            taskQueue.CompleteJob(job.JobId, true);
 
-            logger.LogInformation("Job {JobId} ({JobName}) completed successfully",
+            logger.LogInformation("Task {TaskId} ({TaskName}) completed successfully",
                 job.JobId, job.JobName);
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Job {JobId} ({JobName}) failed with error: {Error}",
+            logger.LogError(ex, "Task {TaskId} ({TaskName}) failed with error: {Error}",
                 job.JobId, job.JobName, ex.Message);
 
             // Mark as failed with error message
-            backgroundJobQueue.CompleteJob(job.JobId, false, ex.ToString());
+            taskQueue.CompleteJob(job.JobId, false, ex.ToString());
         }
     }
 
@@ -92,18 +92,18 @@ public class QueueWorkerService(
     {
         try
         {
-            logger.LogInformation("Cleaning up old jobs");
-            backgroundJobQueue.CleanupOldJobs(TimeSpan.FromHours(1));
+            logger.LogInformation("Task Queue Worker: cleaning up old task records");
+            taskQueue.CleanupOldJobs(TimeSpan.FromHours(1));
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Error cleaning up old jobs");
+            logger.LogError(ex, "Task Queue Worker: failed to clean up old task records");
         }
     }
 
     public Task StopAsync(CancellationToken cancellationToken)
     {
-        logger.LogInformation("Queue Worker Service is stopping");
+        logger.LogInformation("Task Queue Worker is stopping");
 
         _timer?.Change(Timeout.Infinite, 0);
         _cleanupTimer?.Change(Timeout.Infinite, 0);

@@ -10,11 +10,16 @@ using Aiursoft.Template.Services;
 namespace Aiursoft.Template.Controllers;
 
 /// <summary>
-/// Controller for managing background jobs.
+/// Controller for the background job administration UI at <c>/Jobs</c>.
+/// Displays all registered background jobs and their recent execution history.
+/// Allows administrators to manually trigger any registered job.
 /// </summary>
 [Authorize]
 [LimitPerMin]
-public class JobsController(BackgroundJobQueue backgroundJobQueue) : Controller
+public class JobsController(
+    ServiceTaskQueue taskQueue,
+    BackgroundJobRegistry jobRegistry,
+    IEnumerable<ScheduledTaskRegistration> scheduledTasks) : Controller
 {
     [Authorize(Policy = AppPermissionNames.CanViewBackgroundJobs)]
     [RenderInNavBar(
@@ -28,72 +33,62 @@ public class JobsController(BackgroundJobQueue backgroundJobQueue) : Controller
     public IActionResult Index()
     {
         var oneHourAgo = TimeSpan.FromHours(1);
-        var recentCompleted = backgroundJobQueue.GetRecentCompletedJobs(oneHourAgo);
-        var pending = backgroundJobQueue.GetPendingJobs();
-        var processing = backgroundJobQueue.GetProcessingJobs();
+        var recentCompleted = taskQueue.GetRecentCompletedJobs(oneHourAgo);
+        var pending         = taskQueue.GetPendingJobs();
+        var processing      = taskQueue.GetProcessingJobs();
 
-        // Merge all jobs and sort by queued time descending (newest first)
         var allJobs = pending
             .Concat(processing)
             .Concat(recentCompleted)
             .OrderByDescending(j => j.QueuedAt)
             .ToList();
 
+        var lastRunAtByJobType = taskQueue.GetAllJobs()
+            .Select(j => new
+            {
+                j.ServiceType,
+                LastRunAt = j.CompletedAt ?? j.StartedAt
+            })
+            .Where(x => x.LastRunAt.HasValue)
+            .GroupBy(x => x.ServiceType)
+            .ToDictionary(
+                g => g.Key,
+                g => g.Max(x => x.LastRunAt!.Value));
+
         var viewModel = new JobsIndexViewModel
         {
-            AllRecentJobs = allJobs
+            RegisteredJobs = jobRegistry.GetAll(),
+            ScheduledTasks = scheduledTasks
+                .OrderBy(t => t.JobType.Name)
+                .ToList(),
+            LastRunAtByJobType = lastRunAtByJobType,
+            AllRecentJobs  = allJobs
         };
 
         return this.StackView(viewModel);
     }
 
+    /// <summary>
+    /// Manually triggers an immediate, one-off run of the background job identified
+    /// by <paramref name="jobTypeName"/>. This is a fire-and-forget enqueue — the
+    /// response redirects immediately while the job runs in the background.
+    /// </summary>
     [HttpPost]
     [Authorize(Policy = AppPermissionNames.CanViewBackgroundJobs)]
     [ValidateAntiForgeryToken]
-    public IActionResult CreateTestJobA()
+    public IActionResult Trigger(string jobTypeName)
     {
-        return CreateTestJob("Queue A", "Job A");
-    }
-
-    [HttpPost]
-    [Authorize(Policy = AppPermissionNames.CanViewBackgroundJobs)]
-    [ValidateAntiForgeryToken]
-    public IActionResult CreateTestJobB()
-    {
-        return CreateTestJob("Queue B", "Job B");
-    }
-
-    private IActionResult CreateTestJob(string queueName, string jobPrefix)
-    {
-        // Queue a test job that sleeps for 15-30 seconds and has 10% chance of failure
-        backgroundJobQueue.QueueWithDependency<ILogger<JobsController>>(
-            queueName: queueName,
-            jobName: $"{jobPrefix} {DateTime.UtcNow:HH:mm:ss}",
-            job: async (logger) =>
-            {
-                var sleepSeconds = Random.Shared.Next(15, 31); // Random 15-30 seconds
-                logger.LogInformation("Test job started, sleeping for {SleepSeconds} seconds...", sleepSeconds);
-                await Task.Delay(TimeSpan.FromSeconds(sleepSeconds));
-
-                // 10% chance of failure
-                if (Random.Shared.Next(0, 100) < 10)
-                {
-                    logger.LogError("Test job intentionally failed!");
-                    throw new Exception("Random test failure (10% chance)");
-                }
-
-                logger.LogInformation("Test job completed successfully!");
-            });
-
+        jobRegistry.TriggerNow(jobTypeName);
         return RedirectToAction(nameof(Index));
     }
 
+    /// <summary>Cancels a pending (not yet started) job.</summary>
     [HttpPost]
     [Authorize(Policy = AppPermissionNames.CanViewBackgroundJobs)]
     [ValidateAntiForgeryToken]
     public IActionResult Cancel(Guid jobId)
     {
-        backgroundJobQueue.CancelJob(jobId);
+        taskQueue.CancelJob(jobId);
         return RedirectToAction(nameof(Index));
     }
 }
