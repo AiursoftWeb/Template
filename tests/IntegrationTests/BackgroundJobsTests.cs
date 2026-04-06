@@ -244,12 +244,15 @@ public class BackgroundJobsTests : TestBase
         var queue = Server!.Services.GetRequiredService<ServiceTaskQueue>();
         var initialTaskCount = queue.GetAllTasks().Count();
 
-        // Step 2: 创建测试Job A
-        var createJobResponse = await PostForm("/Jobs/CreateTestJobA", new Dictionary<string, string>(), tokenUrl: "/Jobs");
+        // Step 2: 通过 Trigger 端点触发 DummyJob
+        var triggerResponse = await PostForm("/Jobs/Trigger", new Dictionary<string, string>
+        {
+            { "jobTypeName", "DummyJob" }
+        }, tokenUrl: "/Jobs");
 
         // Step 3: 应该重定向回Jobs页面
-        Assert.AreEqual(HttpStatusCode.Found, createJobResponse.StatusCode);
-        var redirectUrl = createJobResponse.Headers.Location?.OriginalString;
+        Assert.AreEqual(HttpStatusCode.Found, triggerResponse.StatusCode);
+        var redirectUrl = triggerResponse.Headers.Location?.OriginalString;
         Assert.IsTrue(redirectUrl == "/Jobs/Index" || redirectUrl == "/Jobs");
 
         // Step 4: 验证任务已被创建
@@ -257,11 +260,11 @@ public class BackgroundJobsTests : TestBase
         var currentTaskCount = queue.GetAllTasks().Count();
         Assert.IsGreaterThan(initialTaskCount, currentTaskCount);
 
-        // Step 5: 验证创建的是Queue A的任务
+        // Step 5: 验证创建的是 DummyJob 队列的任务
         var tasks = queue.GetAllTasks().ToList();
-        var queueATask = tasks.FirstOrDefault(t => t.QueueName == "Queue A");
-        Assert.IsNotNull(queueATask);
-        Assert.StartsWith("Job A", queueATask.TaskName);
+        var dummyTask = tasks.FirstOrDefault(t => t.QueueName == "DummyJob");
+        Assert.IsNotNull(dummyTask);
+        Assert.AreEqual(TaskTriggerSource.Manual, dummyTask.TriggerSource);
     }
 
     [TestMethod]
@@ -272,22 +275,28 @@ public class BackgroundJobsTests : TestBase
 
         var queue = Server!.Services.GetRequiredService<ServiceTaskQueue>();
 
-        // Step 2: 创建Job A
-        await PostForm("/Jobs/CreateTestJobA", new Dictionary<string, string>(), tokenUrl: "/Jobs");
+        // Step 2: 触发 DummyJob
+        await PostForm("/Jobs/Trigger", new Dictionary<string, string>
+        {
+            { "jobTypeName", "DummyJob" }
+        }, tokenUrl: "/Jobs");
 
-        // Step 3: 创建Job B
-        await PostForm("/Jobs/CreateTestJobB", new Dictionary<string, string>(), tokenUrl: "/Jobs");
+        // Step 3: 触发 OrphanAvatarCleanupJob
+        await PostForm("/Jobs/Trigger", new Dictionary<string, string>
+        {
+            { "jobTypeName", "OrphanAvatarCleanupJob" }
+        }, tokenUrl: "/Jobs");
 
         // Step 4: 等待任务入队
         await Task.Delay(500);
 
         // Step 5: 验证两个队列都有任务
         var tasks = queue.GetAllTasks().ToList();
-        var queueATasks = tasks.Where(t => t.QueueName == "Queue A").ToList();
-        var queueBTasks = tasks.Where(t => t.QueueName == "Queue B").ToList();
+        var dummyTasks   = tasks.Where(t => t.QueueName == "DummyJob").ToList();
+        var orphanTasks  = tasks.Where(t => t.QueueName == "OrphanAvatarCleanupJob").ToList();
 
-        Assert.IsNotEmpty(queueATasks, "Queue A should have at least one task");
-        Assert.IsNotEmpty(queueBTasks, "Queue B should have at least one task");
+        Assert.IsNotEmpty(dummyTasks,  "DummyJob queue should have at least one task");
+        Assert.IsNotEmpty(orphanTasks, "OrphanAvatarCleanupJob queue should have at least one task");
     }
 
     [TestMethod]

@@ -3,7 +3,7 @@ using Aiursoft.Template.Entities;
 using Aiursoft.Template.Services.FileStorage;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aiursoft.Template.Services.BackgroundJobs.Jobs;
+namespace Aiursoft.Template.Services.BackgroundJobs;
 
 /// <summary>
 /// Scans the avatar storage directory and deletes any image file that is no longer

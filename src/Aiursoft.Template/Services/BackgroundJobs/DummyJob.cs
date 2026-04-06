@@ -1,6 +1,6 @@
 using Aiursoft.Canon.BackgroundJobs;
 
-namespace Aiursoft.Template.Services.BackgroundJobs.Jobs;
+namespace Aiursoft.Template.Services.BackgroundJobs;
 
 /// <summary>
 /// A dummy background job used to demonstrate and test the background job framework.
