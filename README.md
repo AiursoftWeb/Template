@@ -23,14 +23,15 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [Tracer](https://gitlab.aiursoft.com/aiursoft/tracer)
 * [Warp](https://gitlab.aiursoft.com/aiursoft/warp)
 * [AiurDrive](https://gitlab.aiursoft.com/aiursoft/aiurdrive)
-* [EmployeeCenter](https://gitlab.aiursoft.com/aiursoft/employeecenter)
-* [GitMirrorServer](https://gitlab.aiursoft.com/aiursoft/gitmirrorserver)
+* [EmployeeC enter](https://gitlab.aiursoft.com/aiursoft/employeecenter)
+* [Git Mirror Server](https://gitlab.aiursoft.com/aiursoft/gitmirrorserver)
 * [CppRunner](https://gitlab.aiursoft.com/aiursoft/cpprunner)
-* [OllamaGateway](https://gitlab.aiursoft.com/aiursoft/ollamagateway)
+* [Ollama Gateway](https://gitlab.aiursoft.com/aiursoft/ollamagateway)
 * [Polls](https://gitlab.aiursoft.com/aiursoft/polls)
 * [WeChatExam](https://gitlab.aiursoft.com/aiursoft/wechatexam)
 * [MusicExam](https://gitlab.aiursoft.com/aiursoft/musicexam)
 * [CoprHome](https://gitlab.aiursoft.com/aiursoft/corphome)
+* [Events Recorder](https://gitlab.aiursoft.com/aiursoft/eventsrecorder)
 
 ## Try
 
