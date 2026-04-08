@@ -33,20 +33,29 @@ public class UsersController(
         LinkOrder = 1)]
     public async Task<IActionResult> Index()
     {
+        // Fetch all users, roles, and the user-role mapping in 2 queries to avoid N+1.
         var allUsers = await context.Users.ToListAsync();
-        var usersWithRoles = new List<UserWithRolesViewModel>();
-        foreach (var user in allUsers)
+
+        var userRoleNames = await context.UserRoles
+            .Join(context.Roles,
+                ur => ur.RoleId,
+                r => r.Id,
+                (ur, r) => new { ur.UserId, RoleName = r.Name! })
+            .ToListAsync();
+
+        var rolesByUserId = userRoleNames
+            .GroupBy(x => x.UserId)
+            .ToDictionary(g => g.Key, g => (IList<string>)g.Select(x => x.RoleName).ToList());
+
+        var usersWithRoles = allUsers.Select(user => new UserWithRolesViewModel
         {
-            usersWithRoles.Add(new UserWithRolesViewModel
-            {
-                Id = user.Id,
-                UserName = user.UserName!,
-                DisplayName = user.DisplayName,
-                Email = user.Email!,
-                AvatarRelativePath = user.AvatarRelativePath,
-                Roles = await userManager.GetRolesAsync(user)
-            });
-        }
+            Id = user.Id,
+            UserName = user.UserName!,
+            DisplayName = user.DisplayName,
+            Email = user.Email!,
+            AvatarRelativePath = user.AvatarRelativePath,
+            Roles = rolesByUserId.GetValueOrDefault(user.Id, [])
+        }).ToList();
 
         return this.StackView(new IndexViewModel
         {
