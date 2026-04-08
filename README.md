@@ -32,6 +32,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [MusicExam](https://gitlab.aiursoft.com/aiursoft/musicexam)
 * [CoprHome](https://gitlab.aiursoft.com/aiursoft/corphome)
 * [Events Recorder](https://gitlab.aiursoft.com/aiursoft/eventsrecorder)
+* [Translate](https://gitlab.aiursoft.com/aiursoft/translate)
 
 ## Try
 
