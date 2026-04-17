@@ -1,9 +1,9 @@
 # Template - A sample project
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/blob/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/template/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
 [![Test Coverage](https://gitlab.aiursoft.com/aiursoft/template/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
-[![Man hours](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/template.svg)](https://manhours.aiursoft.com/r/gitlab.aiursoft.com/aiursoft/template.html)
+[![Man hours](https://manhours.aiursoft.com/r/github.com/aiursoftweb/template.svg)](https://manhours.aiursoft.com/r/github.com/aiursoftweb/template.html)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Ftemplate.aiursoft.com)](https://template.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/template.svg)](https://hub.docker.com/r/aiursoft/template)
 
@@ -15,24 +15,24 @@ Default user name is `admin@default.com` and default password is `admin123`.
 
 ## Projects using Aiursoft Template
 
-* [Stathub](https://gitlab.aiursoft.com/aiursoft/stathub)
-* [MarkToHtml](https://gitlab.aiursoft.com/aiursoft/marktohtml)
-* [MusicTools](https://gitlab.aiursoft.com/aiursoft/musictools)
-* [AnduinOS Home](https://gitlab.aiursoft.com/anduin/AnduinOS-Home)
-* [Manhours](https://gitlab.aiursoft.com/aiursoft/manhours)
-* [Tracer](https://gitlab.aiursoft.com/aiursoft/tracer)
-* [Warp](https://gitlab.aiursoft.com/aiursoft/warp)
-* [AiurDrive](https://gitlab.aiursoft.com/aiursoft/aiurdrive)
-* [EmployeeC enter](https://gitlab.aiursoft.com/aiursoft/employeecenter)
-* [Git Mirror Server](https://gitlab.aiursoft.com/aiursoft/gitmirrorserver)
-* [CppRunner](https://gitlab.aiursoft.com/aiursoft/cpprunner)
-* [Ollama Gateway](https://gitlab.aiursoft.com/aiursoft/ollamagateway)
-* [Polls](https://gitlab.aiursoft.com/aiursoft/polls)
-* [WeChatExam](https://gitlab.aiursoft.com/aiursoft/wechatexam)
-* [MusicExam](https://gitlab.aiursoft.com/aiursoft/musicexam)
-* [CoprHome](https://gitlab.aiursoft.com/aiursoft/corphome)
-* [Events Recorder](https://gitlab.aiursoft.com/aiursoft/eventsrecorder)
-* [Translate](https://gitlab.aiursoft.com/aiursoft/translate)
+* [Stathub](https://github.com/aiursoftweb/stathub)
+* [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
+* [MusicTools](https://github.com/aiursoftweb/musictools)
+* [AnduinOS Home](https://github.com/aiursoftweb/AnduinOS-Home)
+* [Manhours](https://github.com/aiursoftweb/manhours)
+* [Tracer](https://github.com/aiursoftweb/tracer)
+* [Warp](https://github.com/aiursoftweb/warp)
+* [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
+* [EmployeeC enter](https://github.com/aiursoftweb/employeecenter)
+* [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
+* [CppRunner](https://github.com/aiursoftweb/cpprunner)
+* [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
+* [Polls](https://github.com/aiursoftweb/polls)
+* [WeChatExam](https://github.com/aiursoftweb/wechatexam)
+* [MusicExam](https://github.com/aiursoftweb/musicexam)
+* [CoprHome](https://github.com/aiursoftweb/corphome)
+* [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
+* [Translate](https://github.com/aiursoftweb/translate)
 
 ## Try
 
@@ -45,13 +45,13 @@ The following script will install\update this app on your Ubuntu server. Support
 On your Ubuntu server, run the following command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.com/aiursoft/template/-/raw/master/install.sh | sudo bash
+curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash
 ```
 
 Of course it is suggested that append a custom port number to the command:
 
 ```bash
-curl -sL https://gitlab.aiursoft.com/aiursoft/template/-/raw/master/install.sh | sudo bash -s 8080
+curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash -s 8080
 ```
 
 It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
