@@ -1,4 +1,4 @@
-# Template - A sample project
+# Template
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/template/blob/master/LICENSE)
 [![Pipeline stat](https://gitlab.aiursoft.com/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
@@ -23,7 +23,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [Tracer](https://github.com/aiursoftweb/tracer)
 * [Warp](https://github.com/aiursoftweb/warp)
 * [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
-* [EmployeeC enter](https://github.com/aiursoftweb/employeecenter)
+* [EmployeeCenter](https://github.com/aiursoftweb/employeecenter)
 * [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
 * [CppRunner](https://github.com/aiursoftweb/cpprunner)
 * [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
