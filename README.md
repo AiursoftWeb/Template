@@ -33,6 +33,7 @@ Default user name is `admin@default.com` and default password is `admin123`.
 * [CoprHome](https://github.com/aiursoftweb/corphome)
 * [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
 * [Translate](https://github.com/aiursoftweb/translate)
+* [Apkg](https://github.com/aiursoftweb/apkg)
 
 ## Try
 
