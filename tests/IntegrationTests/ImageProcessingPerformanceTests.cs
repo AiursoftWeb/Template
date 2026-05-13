@@ -539,13 +539,17 @@ public class ImageProcessingPerformanceTests : TestBase
             }
         }
 
-        using var paint = new SKPaint { IsAntialias = false };
-        var rectW = Math.Max(1, width / 5);
-        var rectH = Math.Max(1, height / 5);
-        for (int i = 0; i < 5; i++)
+        var paint = new SKPaint();
+        paint.IsAntialias = false;
+        using (paint)
         {
-            paint.Color = TestColors[i];
-            canvas.DrawRect(i * rectW, i * rectH, rectW, rectH, paint);
+            var rectW = Math.Max(1, width / 5);
+            var rectH = Math.Max(1, height / 5);
+            for (int i = 0; i < 5; i++)
+            {
+                paint.Color = TestColors[i];
+                canvas.DrawRect(i * rectW, i * rectH, rectW, rectH, paint);
+            }
         }
         canvas.Flush();
 
@@ -597,12 +601,17 @@ public class ImageProcessingPerformanceTests : TestBase
         canvas.Clear(SKColors.Transparent);
 
         // Draw opaque red rect in the top-left quadrant (0,0)-(100,100)
-        using var paint = new SKPaint { IsAntialias = false, Color = SKColors.Red };
-        canvas.DrawRect(0, 0, 100, 100, paint);
+        var paint = new SKPaint();
+        paint.IsAntialias = false;
+        paint.Color = SKColors.Red;
+        using (paint)
+        {
+            canvas.DrawRect(0, 0, 100, 100, paint);
 
-        // Draw semi-transparent blue rect in the center overlapping slightly
-        paint.Color = new SKColor(0, 0, 255, 128);
-        canvas.DrawRect(50, 50, 100, 100, paint);
+            // Draw semi-transparent blue rect in the center overlapping slightly
+            paint.Color = new SKColor(0, 0, 255, 128);
+            canvas.DrawRect(50, 50, 100, 100, paint);
+        }
 
         // Bottom-right quadrant (100,100)-(200,200) remains transparent
         canvas.Flush();
