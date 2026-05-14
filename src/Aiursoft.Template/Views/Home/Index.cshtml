@@ -658,12 +658,12 @@
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs CASL or similar"]"></i></td>
                     </tr>
                     <tr>
-                        <td class="text-start fw-medium">@Localizer["Built-in Job Queue GUI"]</td>
-                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Dashboard for background tasks"]"></i></td>
+                        <td class="text-start fw-medium">@Localizer["Job Queue & Scheduling GUI"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Dashboard for background and scheduled tasks"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Celery + Flower"]"></i></td>
-                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Horizon included"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Horizon + Task Scheduling"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
                     </tr>
                     <tr>
@@ -703,6 +703,15 @@
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Generic configuration"]"></i></td>
                     </tr>
                     <tr>
+                        <td class="text-start fw-medium">@Localizer["Health Checks & Probes"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Pre-configured /healthz and readiness probes"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Health Checks middleware available"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Actuator health endpoints built-in"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs django-health-check package"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Health check package available"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Terminus integration available"]"></i></td>
+                    </tr>
+                    <tr>
                         <td class="text-start fw-medium">@Localizer["GitLab CI/CD Native"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Pre-configured pipelines for dev/prod"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
@@ -719,6 +728,15 @@
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Flake8/Pylint setup needed"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Pint or similar needed"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs ESLint/Prettier setup"]"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="text-start fw-medium">@Localizer["Integration Testing Harness"]</td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["In-memory DB, temp FS, and HTTP simulation"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["WebApplicationFactory available"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Test slices with MockMvc"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["TestCase with test client"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Feature tests available"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Testing module available"]"></i></td>
                     </tr>
                 </tbody>
             </table>
