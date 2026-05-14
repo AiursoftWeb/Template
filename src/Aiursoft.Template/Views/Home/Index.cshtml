@@ -624,8 +624,8 @@
                     <tr>
                         <td class="text-start fw-medium">@Localizer["Zero Config (SQLite)"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Starts without any configuration"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs manual configuration"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs manual configuration"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Quick setup with NuGet packages"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Quick setup with H2 database"]"></i></td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
@@ -642,8 +642,8 @@
                     <tr>
                         <td class="text-start fw-medium">@Localizer["OIDC & SSO"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Pre-configured and tested"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs complex authentication logic"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Requires Spring Security configuration"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in OpenID Connect middleware"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in OAuth2/OIDC client support"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs third-party plugins"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Requires Laravel Socialite config"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Passport or similar"]"></i></td>
@@ -651,8 +651,8 @@
                     <tr>
                         <td class="text-start fw-medium">@Localizer["Fine-grained RBAC"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Permission discovery and sync"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Handwritten based on Policies"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Spring Security config"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in Policy-based authorization"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in method-level security"]"></i></td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Out-of-the-box"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs Spatie or similar"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs CASL or similar"]"></i></td>
@@ -678,10 +678,10 @@
                     <tr>
                         <td class="text-start fw-medium">@Localizer["Multi-timezone Handling"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Automatic UTC/Local conversion"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
-                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Timezone-aware fields"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["TimeZoneInfo API available"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["java.time API available"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in timezone support with USE_TZ"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Built-in timezone configuration"]"></i></td>
                         <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
                     </tr>
                     <tr>
@@ -714,10 +714,10 @@
                     <tr>
                         <td class="text-start fw-medium">@Localizer["Zero Tolerance Lint"]</td>
                         <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Enforced quality gate"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
-                        <td><i class="fas fa-times-circle text-danger" data-bs-toggle="tooltip" title="@Localizer["Custom development required"]"></i></td>
+                        <td><i class="fas fa-check-circle text-success" data-bs-toggle="tooltip" title="@Localizer["Built-in Roslyn Analyzers"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Checkstyle or similar needed"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Flake8/Pylint setup needed"]"></i></td>
+                        <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Pint or similar needed"]"></i></td>
                         <td><i class="fas fa-exclamation-circle text-warning" data-bs-toggle="tooltip" title="@Localizer["Needs ESLint/Prettier setup"]"></i></td>
                     </tr>
                 </tbody>
