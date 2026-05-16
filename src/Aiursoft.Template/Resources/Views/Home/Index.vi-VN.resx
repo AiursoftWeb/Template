@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Đạt được nhiều hơn với Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Các điểm cuối sức khỏe của Actuator được tích hợp sẵn</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Bao gồm trang quản trị</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Giao diện quản lý hàng đợi tác vụ tích hợp sẵn</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Bảo mật mức phương thức tích hợp sẵn</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Hỗ trợ client OAuth2/OIDC tích hợp sẵn</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Middleware OpenID Connect tích hợp sẵn</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Xác thực dựa trên chính sách tích hợp sẵn</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Trình phân tích Roslyn tích hợp sẵn</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Cấu hình múi giờ tích hợp sẵn</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Hỗ trợ múi giờ tích hợp với USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Cần Checkstyle hoặc tương tự</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Được tích hợp hỗ trợ Docker để triển khai đơn giản và nhất quán.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Yêu cầu phát triển tùy chỉnh</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Bảng điều khiển cho các tác vụ nền và theo lịch trình</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Bảng điều khiển cho các tác vụ nền</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>nhanh hơn</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Kiểm tra tính năng có sẵn</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Tính năng</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC chi tiết</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Cần thiết lập Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API linh hoạt</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Viết tay dựa trên Chính sách</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Có gói kiểm tra sức khỏe</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Kiểm tra sức khỏe &amp; Probes</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Middleware Health Checks có sẵn</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Xin chào thế giới!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Chất lượng cao</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Lên lịch tác vụ</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Đã bao gồm Horizon</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Hỗ trợ IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>Cơ sở dữ liệu trong bộ nhớ, hệ thống tệp tạm thời và mô phỏng HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Đã bao gồm</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Quản lý Tập tin Tích hợp</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Bộ công cụ Kiểm thử Tích hợp</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Thân thiện với thực tập sinh</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Có phải Aiursoft Template được sử dụng miễn phí không?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Có sẵn API java.time</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Giao diện người dùng Hàng đợi và Lên lịch Tác vụ</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Tham gia thảo luận</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Cần cấu hình/phần mở rộng</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Cần gói django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Cần thiết lập ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Phát hiện và đồng bộ quyền</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Cần Pint hoặc tương tự</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Cấu hình sẵn các probe /healthz và readiness</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Đã được cấu hình sẵn và kiểm tra</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Cổng chất lượng</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Cài đặt nhanh với cơ sở dữ liệu H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Cài đặt nhanh với các gói NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Ủy quyền RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Trưởng nhóm Kỹ thuật</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Hỗ trợ tích hợp Terminus</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Kiểm tra các slice bằng MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase với client kiểm thử</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Mô-đun kiểm thử có sẵn</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Nền tảng doanh nghiệp .NET chính xác, đã được kiểm chứng qua thực tế. Từ Xác thực đến Trí tuệ nhân tạo, chúng tôi đã giải quyết những phần khó khăn để bạn không phải lo lắng.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Trường nhận biết múi giờ</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>API TimeZoneInfo có sẵn</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Được tin tưởng bởi các ứng dụng sản xuất cấp độ cao, bao gồm AnduinOS, StatHub, và Warp. Chúng tôi không chỉ chia sẻ mã nguồn này; chúng tôi vận hành toàn bộ doanh nghiệp của mình dựa trên nó.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Xem trên GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory có sẵn</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Chào mừng</value>

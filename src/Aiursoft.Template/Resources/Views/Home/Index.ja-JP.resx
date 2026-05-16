@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Templateでさらに多くのことを実現</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>組み込みのアクチュエータヘルスエンドポイント</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>管理サイトが含まれています</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>内蔵ジョブキューGUI</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>組み込みメソッドレベルのセキュリティ</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>OAuth2/OIDC クライアントサポート内蔵</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>組み込みのOpenID Connectミドルウェア</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>組み込みポリシーベースの認可</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>組み込み Roslyn アナライザー</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>内蔵タイムゾーン設定</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>USE_TZによる組み込みタイムゾーンサポート</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>組み込みユーザー管理</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyleまたは同等のツールが必要</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Dockerサポートを備えており、簡単で一貫性のあるデプロイが可能になります。</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>カスタム開発が必要です</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>バックグラウンドおよびスケジュールされたタスクのダッシュボード</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>バックグラウンドタスクのダッシュボード</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>より迅速に</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>機能テスト利用可能</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>機能</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>細粒度 RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint の設定が必要</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>柔軟なAPI</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>ポリシーに基づく手動実装</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>ヘルスチェックパッケージが利用可能</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>ヘルスチェックとプローブ</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks ミドルウェア利用可能</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>こんにちは、世界！</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>高品質</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + タスクスケジューリング</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon 搭載</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDEサポート</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>インメモリDB、一時ファイルシステム、HTTPシミュレーション</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>含まれる</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>統合ファイル管理</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>統合テストハーネス</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>インターンフレンドリー</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Templateは無料で使用できますか？</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API 利用可能</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>ジョブキュー＆スケジューリングGUI</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>ディスカッションに参加</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>設定またはプラグインが必要です</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>django-health-check パッケージが必要です</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ESLint/Prettier の設定が必要です</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>権限の検出と同期</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pintまたは同等のものが必要</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>事前設定済み /healthz および準備状態プローブ</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>事前設定済みかつテスト済み</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>品質ゲート</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>H2データベースでクイックセットアップ</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>NuGet パッケージでクイックセットアップ</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC認可</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>テクニカルリード</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Terminus統合機能利用可能</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>MockMvcでテストスライスを行う</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>テストクライアント付きのTestCase</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>テストモジュール利用可能</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>決定的な、実戦で検証された .NET エンタープライズ基盤。認証から AI まで、難しい部分はすべて解決済みなので、あなたはそれらを心配する必要がありません。</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>タイムゾーン対応フィールド</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API 利用可能</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>AnduinOS、StatHub、Warpを含むプロダクショングレードのアプリケーションに信頼されています。このコードを単に共有するだけでなく、私たちのビジネス全体をこのコードで運用しています。</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>GitHubで表示</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory が利用可能</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ようこそ</value>
