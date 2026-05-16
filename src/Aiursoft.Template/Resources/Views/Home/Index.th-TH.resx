@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>บรรลุผลได้มากขึ้นด้วย Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>มี endpoints ตรวจสอบสุขภาพของ Actuator มาให้แล้ว</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>รวมเว็บไซต์ผู้ดูแลระบบ</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>GUI แถวคิวงานในตัว</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>ความปลอดภัยระดับเมธอดในตัว</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>การรองรับไคลเอนต์ OAuth2/OIDC ในตัว</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>มิดเดิลแวร์ OpenID Connect ในตัว</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>การอนุญาตตามนโยบายที่มีอยู่แล้วในตัว</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>ตัววิเคราะห์ Roslyn ในตัว</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>การกำหนดค่าเขตเวลาแบบในตัว</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>รองรับโซนเวลาในตัวพร้อม USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>การจัดการผู้ใช้ในตัว</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>จำเป็นต้องใช้ Checkstyle หรือเครื่องมือที่คล้ายกัน</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>มาพร้อมการสนับสนุน Docker สำหรับการปรับใช้งานที่ง่ายและมีความสม่ำเสมอ</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>ต้องพัฒนาเพิ่มเติมเอง</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>แดชบอร์ดสำหรับงานพื้นหลังและงานตามกำหนดเวลา</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>แดชบอร์ดสำหรับงานพื้นหลัง</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>เร็วขึ้น</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>มีฟีเจอร์เทสต์</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>คุณสมบัติ</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC แบบละเอียด</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>ต้องตั้งค่า Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API ที่ยืดหยุ่น</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>เขียนขึ้นเองโดยอิงตาม Policies</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>มีแพ็กเกจตรวจสอบสถานะสุขภาพ</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>การตรวจสอบสุขภาพและการตรวจจับ</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>มี Health Checks middleware</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>สวัสดีชาวโลก!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>คุณภาพสูง</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + การกำหนดงาน</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon รวมมาให้แล้ว</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>การรองรับ IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>ฐานข้อมูลในหน่วยความจำ, ระบบไฟล์ชั่วคราว, และการจำลอง HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>รวมไว้แล้ว</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>การจัดการไฟล์แบบครบวงจร</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>ชุดทดสอบการผสานรวม</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>เหมาะสำหรับผู้ฝึกงาน</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Template ใช้ฟรีหรือไม่?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>มี java.time API ให้ใช้</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>ระบบคิวงานและการจัดตารางเวลา GUI</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>เข้าร่วมการสนทนา</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>ต้องการการตั้งค่า/ปลั๊กอิน</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>จำเป็นต้องใช้แพ็กเกจ django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ต้องการการตั้งค่า ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>การค้นพบและการซิงค์สิทธิ์</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>ต้องติดตั้ง Pint หรือเครื่องมือคล้ายกัน</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>ตั้งค่าล่วงหน้าสำหรับโพรบ /healthz และโพรบความพร้อมใช้งาน</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>ตั้งค่าล่วงหน้าและผ่านการทดสอบแล้ว</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>เกตเวย์คุณภาพ</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>ติดตั้งง่ายด้วยฐานข้อมูล H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>ติดตั้งด่วนด้วยแพ็คเกจ NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>การอนุญาตตามบทบาท RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>หัวหน้าฝ่ายเทคนิค</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>พร้อมใช้งาน Terminus integration</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>ทดสอบสไลซ์ด้วย MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase พร้อมไคลเอนต์ทดสอบ</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>มีโมดูลทดสอบ</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>พื้นฐานองค์กร .NET ที่เป็นที่สุดและผ่านการทดสอบในสนามรบแล้ว ตั้งแต่การยืนยันตัวตน (Auth) ไปจนถึงปัญญาประดิษฐ์ (AI) เราได้แก้ปัญหาที่ยากลำบากแล้ว เพื่อให้คุณไม่ต้องทำเอง</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>ฟิลด์ที่ตระหนักถึงเขตเวลา</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>มี API TimeZoneInfo</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>ได้รับการไว้วางใจจากแอปพลิเคชันระดับการผลิต รวมถึง AnduinOS, StatHub, และ Warp เรายังไม่เพียงแค่แบ่งปันโค้ดเท่านั้น แต่เราใช้โค้ดนี้ในการดำเนินธุรกิจทั้งหมดของเรา</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>ดูบน GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>มี WebApplicationFactory</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ยินดีต้อนรับ</value>

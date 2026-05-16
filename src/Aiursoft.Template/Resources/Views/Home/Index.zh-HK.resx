@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>使用 Aiursoft 模板成就更多</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>內建 Actuator 健康檢查端點</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>內置管理網站</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>內置工作隊列圖形介面</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>內建方法層級安全性</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>內置 OAuth2/OIDC 客戶端支援</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>內建 OpenID Connect 中間件</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>內置基於策略的授權</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>內建 Roslyn 分析器</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>內建時區設定</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>內建時區支援，使用 USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>內建用戶管理</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>需要 Checkstyle 或類似工具</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>內建 Docker 支援，可簡化並確保部署的一致性。</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>需要自訂開發</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>用於背景及排程任務的控制面板</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>後台任務儀表板</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>更快</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>可用功能測試</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>功能</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>細粒度基於角色的訪問控制</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>需要設定 Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>彈性 API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>基於策略手寫</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>可用健康檢查套件</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>健康檢查與探測</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>可用健康檢查中間件</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>你好世界！</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>高質素</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + 任務排程</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>內置 Horizon</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE 支援</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>記憶體資料庫、臨時檔案系統及 HTTP 模擬</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>包含在內</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>整合式檔案管理</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>集成測試框架</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>實習生友好</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>使用 Aiursoft Template 係咪免費㗎？</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>提供 java.time API</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>工作佇列與排程 GUI</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>參與討論</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>需要配置/插件</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>需要 django-health-check 套件</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>需要設定 ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>權限發現與同步</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>需要 Pint 或類似工具</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>預先配置的 /healthz 和就緒探針</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>預先配置並經過測試</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>品質門檻</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>使用 H2 資料庫快速設定</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>使用 NuGet 套件快速設定</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>基於角色的存取控制授權</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>技術主管</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>提供 Terminus 整合</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>使用 MockMvc 測試切片</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>使用測試客戶端的測試用例</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>可用測試模組</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>最穩健、經過實戰考驗的 .NET 企業級基礎架構。從身份認證到人工智能，我們已解決所有難題，讓你無需再煩惱。</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>時區感知欄位</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>提供 TimeZoneInfo API</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>由包括 AnduinOS、StatHub 和 Warp 在內的生產級應用程式信賴。我們不僅分享這段程式碼；我們更將整個業務運作於其上。</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>在 GitHub 查看</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>提供 WebApplicationFactory</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>歡迎</value>

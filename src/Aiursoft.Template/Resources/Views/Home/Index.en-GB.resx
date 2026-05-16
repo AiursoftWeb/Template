@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Achieve more with Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Actuator health endpoints built-in</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Admin site included</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Built-in Job Queue GUI</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Built-in method-level security</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Built-in OAuth2/OIDC client support</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Built-in OpenID Connect middleware</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Built-in policy-based authorisation</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Built-in Roslyn Analyzers</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Built-in timezone configuration</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Built-in timezone support with USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Built-in User Management</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyle or similar required</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Comes with Docker support for simplified and consistent deployments.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Custom development required</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Dashboard for background and scheduled tasks</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Dashboard for background tasks</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>quicker</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Feature tests available</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Features</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Fine-grained RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint setup required</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Flexible API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Hand-crafted based on Policies</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Health check package available</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Health Checks &amp; Probes</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks middleware available</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hello World!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>High Quality</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Task Scheduling</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon included</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE Support</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>In-memory DB, temp FS, and HTTP simulation</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Included</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Integrated File Management</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Integration Testing Harness</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Intern-friendly</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Is it free to use Aiursoft Template?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API available</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Job Queue &amp; Scheduling GUI</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Join the Discussion</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Requires configuration/plugins</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Requires django-health-check package</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Needs ESLint/Prettier configuration</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Permission discovery and sync</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint or similar required</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Pre-configured /healthz and readiness probes</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Pre-configured and tested</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Quality Gate</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Quick setup with H2 database</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Quick setup with NuGet packages</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC Authorisation</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Technical Lead</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Terminus integration available</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Test slices with MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase with test client</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Testing module available</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Timezone-aware fields</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API available</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>View on GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory available</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome</value>
