@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Достигайте большего с Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Встроенные конечные точки здоровья Actuator</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Сайт администратора включен</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Встроенный интерфейс очереди задач</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Встроенная безопасность на уровне методов</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Встроенная поддержка клиента OAuth2/OIDC</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Встроенное промежуточное ПО OpenID Connect</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Встроенная политика на основе авторизации</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Встроенные анализаторы Roslyn</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Встроенная настройка часовых поясов</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Встроенная поддержка часовых поясов с USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Встроенное управление пользователями</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Требуется Checkstyle или аналог</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Имеет поддержку Docker для упрощённого и согласованного развертывания.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Требуется индивидуальная разработка</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Панель управления для фоновых и запланированных задач</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Панель управления фоновыми задачами</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>быстрее</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Доступны функциональные тесты</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Возможности</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Детализированный RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Требуется настройка Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Гибкая API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ручная реализация на основе политик</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Пакет для проверки доступности доступен</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Проверки работоспособности и зондирование</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Доступен middleware для проверок состояния</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Здравствуй, мир!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Высокое качество</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + планирование задач</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon включен</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Поддержка IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>In-memory DB, temp FS, and HTTP simulation</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Включено</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Интегрированное управление файлами</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Средство интеграционного тестирования</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Дружелюбно для стажеров</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Бесплатно ли использовать Aiursoft Template?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Доступен API java.time</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Интерфейс управления очередью заданий и планировщиком</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Присоединиться к обсуждениям</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Требуется настройка/плагины</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Требуется пакет django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Требуется настройка ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Обнаружение и синхронизация разрешений</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Требуется Pint или аналогичный инструмент</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Предварительно настроенные зонды /healthz и готовности</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Предварительно настроено и протестировано</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Контроль качества</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Быстрая настройка с базой данных H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Быстрая настройка с помощью пакетов NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Авторизация RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Ведущий разработчик</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Доступна интеграция с Terminus</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Тестирование срезов с помощью MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase с тестовым клиентом</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Доступен модуль тестирования</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Окончательная, проверенная на практике основа для корпоративных решений на .NET. От аутентификации до искусственного интеллекта — мы уже решили сложные задачи, чтобы вы не тратили на это время.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Поля с учетом часового пояса</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>Доступен API TimeZoneInfo</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надёжно проверено приложениями промышленного уровня, включая AnduinOS, StatHub и Warp. Мы не просто делимся этим кодом; мы используем его для ведения всей своей бизнес-деятельности.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Просмотреть на GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory доступен</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Добро пожаловать</value>
