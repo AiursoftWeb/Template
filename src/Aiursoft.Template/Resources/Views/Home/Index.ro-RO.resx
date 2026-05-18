@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Realizați mai multe cu Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Endpoint-uri de sănătate Actuator integrate</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Site de administrare inclus</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Interfață GUI integrată pentru coada de sarcini</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Securitate la nivel de metodă încorporată</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Suport client OAuth2/OIDC integrat</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Middleware OpenID Connect integrat</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Autorizare bazată pe politici încorporată</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Analizoare Roslyn integrate</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Configurare integrată a fusului orar</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Suport integrat pentru fus orar cu USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestionare Utilizatori Integrată</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Se necesită Checkstyle sau similar</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Include suport pentru Docker pentru implementări simplificate și consistente.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Este necesară dezvoltarea personalizată</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Panou de control pentru sarcinile din fundal și programate</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Panou de control pentru sarcini în fundal</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>mai rapid</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Testele de funcționalitate disponibile</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Funcționalități</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC cu granulație fină</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Configurare Flake8/Pylint necesară</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API flexibilă</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Scriere manuală bazată pe politici</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Pachet de verificare a sănătății disponibil</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Verificări de sănătate și sonde</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Middleware pentru verificări de stare disponibil</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Salut Lume!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Calitate ridicată</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Programarea sarcinilor</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon inclus</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Suport pentru IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>Bază de date în memorie, sistem de fișiere temporar și simulare HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Inclus</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Gestionare Integrată a Fișierelor</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Cadrul de testare integrată</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Prietenos pentru stagiar</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Este gratuit să folosești Aiursoft Template?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>API java.time disponibil</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Interfața grafică pentru coada de job-uri și planificare</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Alătură-te discuțiilor</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Necesită configurare/plugin-uri</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Necesită pachetul django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Necesită configurarea ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Descoperirea și sincronizarea permisiunilor</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint sau similar necesar</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Probes /healthz și de stare preconfigurate</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Pre-configurat și testat</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Portocală de Calitate</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Configurare rapidă cu baza de date H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Configurare rapidă cu pachete NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorizare RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Conducător Tehnic</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Integrare Terminus disponibilă</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Testează secțiuni cu MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase cu client de testare</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Modul de testare disponibil</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Fundamentul definitiv, testat în practică pentru întreprinderi în .NET. De la Autentificare până la Inteligență Artificială, am rezolvat părțile dificile, astfel încât să nu aibă nevoie să le rezolvi tu.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Câmpuri conștiente de fusul orar</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>API TimeZoneInfo disponibilă</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Încrederea aplicațiilor de tip producție, inclusiv AnduinOS, StatHub și Warp. Nu doar împărtășim acest cod; îi folosim pentru întreaga noastră afacere.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Vizualizează pe GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory disponibil</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bun venit</value>

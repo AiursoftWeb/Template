@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>एक्टुएटर स्वास्थ्य एंडपॉइंट्स इनबिल्ट</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>प्रशासनिक साइट शामिल है</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>निर्मित नौकरी कतार GUI</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>बिल्ट-इन विधि-स्तर सुरक्षा</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>बिल्ट-इन OAuth2/OIDC क्लाइंट समर्थन</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>बिल्ट-इन OpenID Connect मीडिलवेयर</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>बिल्ट-इन पॉलिसी-आधारित प्राधिकरण</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>बिल्ट-इन रोस्लिन विश्लेषक</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>बिल्ट-इन टाइमज़ोन कॉन्फ़िगरेशन</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>USE_TZ के साथ अंतर्निहित टाइमज़ोन समर्थन</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyle या इसी तरह का उपकरण आवश्यक है</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Docker समर्थन के साथ आता है सरल और सुसंगत डेप्लॉयमेंट के लिए।</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>कस्टम विकास आवश्यक है</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>पृष्ठभूमि और नियोजित कार्यों के लिए डैशबोर्ड</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>पृष्ठभूमि कार्यों के लिए डैशबोर्ड</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>तेज़</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>फीचर टेस्ट उपलब्ध हैं</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>विशेषताएँ</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>सूक्ष्म-स्तरीय RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint सेटअप की आवश्यकता</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>लचीला API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>नीतियों के आधार पर हस्तलिखित</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>हेल्थ चेक पैकेज उपलब्ध है</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>स्वास्थ्य जाँच और प्रोब</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks middleware उपलब्ध है</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>नमस्ते दुनिया!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>उच्च गुणवत्ता</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>हॉरिज़न + कार्य शेड्यूलिंग</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>हॉराइज़न शामिल है</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE समर्थन</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>इन-मेमोरी डीबी, अस्थायी फाइल सिस्टम और HTTP सिमुलेशन</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>शामिल</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>एकीकृत फ़ाइल प्रबंधन</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>इंटीग्रेशन टेस्टिंग हार्नेस</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>इंटर्न फ्रेंडली</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>क्या Aiursoft Template का उपयोग करना मुफ़्त है?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API उपलब्ध है</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>जॉब क्यू और शेड्यूलिंग GUI</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>चर्चाओं में शामिल हों</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>django-health-check पैकेज की आवश्यकता है</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ESLint/Prettier सेटअप की आवश्यकता है</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>अनुमति खोज और समन्वय</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint या समान आवश्यक है</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>प्री-कॉन्फ़िगर /healthz और रेडिनेस प्रोब्स</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>गुणवत्ता गेट</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>H2 डेटाबेस के साथ तेज़ सेटअप</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>NuGet पैकेजों के साथ तेज़ सेटअप</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC प्राधिकरण</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>तकनीकी लीड</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>टर्मिनस एकीकरण उपलब्ध</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>MockMvc के साथ स्लाइस परीक्षण करें</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>टेस्टकेस टेस्ट क्लाइंट के साथ</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>परीक्षण मॉड्यूल उपलब्ध है</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>निर्णायक, युद्ध-परीक्षित .NET उद्यम स्थापना। प्राथमिकता से एआई तक, हमने कठिन हिस्सों को हल कर दिया है ताकि आपको इसकी आवश्यकता न हो।</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>समय क्षेत्र-जागरूक क्षेत्र</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API उपलब्ध है</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>उत्पादन-ग्रेड एप्लिकेशन जैसे AnduinOS, StatHub, और Warp द्वारा विश्वास किया गया। हम सिर्फ इस कोड को साझा नहीं करते; हम अपने पूरे व्यवसाय को इस पर चलाते हैं।</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>GitHub पर देखें</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory उपलब्ध है</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>स्वागत है</value>

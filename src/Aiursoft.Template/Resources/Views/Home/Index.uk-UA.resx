@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Досягайте більшого з Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Вбудовані кінцеві точки здоров&apos;я актуатора</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Адмін-панель у складі</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Вбудований GUI черги завдань</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Вбудована захист на рівні методів</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Вбудована підтримка OAuth2/OIDC клієнта</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Вбудована проміжна компонента OpenID Connect</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Вбудована авторизація на основі політик</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Вбудовані аналізатори Roslyn</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Вбудована конфігурація часових поясів</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Вбудована підтримка часових поясів із USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Вбудоване керування користувачами</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Потрібен Checkstyle або аналогічний інструмент</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Містить підтримку Docker для спрощення та узгодження розгортання.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Потрібна індивідуальна розробка</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Панель керування для фонових та запланованих завдань</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Панель керування фоновими завданнями</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>швидше</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Доступні функціональні тести</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Особливості</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Деталізований RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Потрібно налаштувати Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Гнучкий API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ручна реалізація на основі політик</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>доступний пакет перевірки стану</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Перевірки стану та зонди</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Доступне проміжне програмне забезпечення для перевірки стану</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Привіт, Світе!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Висока якість</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + планування завдань</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon включено</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Підтримка IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>База даних в оперативній пам&apos;яті, тимчасова ФС та імітація HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Включено</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Інтегроване управління файлами</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Інтеграційне тестове середовище</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Для стажерів</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Чи безкоштовно використовувати Aiursoft Template?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Доступний API java.time</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Інтерфейс графічного керування чергою завдань та плануванням</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Приєднатися до обговорень</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Потребує конфігурації/плагінів</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Потрібен пакет django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Потрібна налаштування ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Виявлення та синхронізація дозволів</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Потрібен Pint або аналогічний інструмент</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Заздалегідь налаштовані зонди /healthz та готовності</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Налаштовано та протестовано</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Якість</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Швидке налаштування з базою даних H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Швидка налаштування з пакетами NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Авторизація RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Технічний лідер</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Інтеграція з Terminus доступна</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Тестування фрагментів за допомогою MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase з тестовим клієнтом</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Доступний модуль тестування</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Визначна, випробувана на практиці основа .NET для бізнес-рішень. Від Auth до AI — ми вирішили складні завдання, щоб ви не мали цього робити.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Поля з урахуванням часових поясів</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>API TimeZoneInfo доступна</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надійний для продуктивних додатків, зокрема AnduinOS, StatHub та Warp. Ми не просто ділимося цим кодом; ми використовуємо його для всієї своєї діяльності.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Переглянути на GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>Доступний WebApplicationFactory</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Ласкаво просимо</value>

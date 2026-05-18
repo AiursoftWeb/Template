@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Raih lebih banyak dengan Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Endpoint kesehatan Actuator sudah termasuk</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Situs admin disertakan</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>GUI Antrian Pekerjaan Terintegrasi</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Keamanan tingkat metode bawaan</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Dukungan klien OAuth2/OIDC bawaan</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Middleware OpenID Connect bawaan</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Otorisasi berbasis Kebijakan bawaan</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Analyzer Roslyn bawaan</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Konfigurasi zona waktu bawaan</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Dukungan zona waktu bawaan dengan USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Manajemen Pengguna Bawaan</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyle atau yang serupa diperlukan</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Datang dengan dukungan Docker untuk penyebaran yang disederhanakan dan konsisten.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Pengembangan khusus diperlukan</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Dasbor untuk tugas latar belakang dan terjadwal</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Dasbor untuk tugas latar belakang</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>lebih cepat</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Uji fitur tersedia</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Fitur</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC Berbutir Halus</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Diperlukan pengaturan Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>API Fleksibel</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ditulis manual berdasarkan Kebijakan</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Paket pemeriksaan kesehatan tersedia</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Pemeriksaan Kesehatan &amp; Probe</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Middleware Health Checks tersedia</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Halo Dunia!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Kualitas Tinggi</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Penjadwalan Tugas</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon disertakan</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Dukungan IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>DB in-memori, FS sementara, dan simulasi HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Termasuk</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Manajemen File Terintegrasi</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Kerangka Pengujian Integrasi</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Ramah untuk Magang</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Apakah Aiursoft Template gratis digunakan?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>API java.time tersedia</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Antarmuka GUI Antrian &amp; Penjadwalan Pekerjaan</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Bergabung dalam Diskusi</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Membutuhkan konfigurasi/plugin</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Memerlukan paket django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Membutuhkan pengaturan ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Penemuan dan sinkronisasi izin</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint atau yang serupa diperlukan</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Probe /healthz dan kesiapan yang telah dikonfigurasi sebelumnya</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Prakonfigurasi dan teruji</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Gate Kualitas</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Pengaturan cepat dengan basis data H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Pengaturan cepat dengan paket NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Otorisasi RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Pemimpin Teknis</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Integrasi Terminus tersedia</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Uji irisan dengan MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase dengan klien pengujian</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Modul pengujian tersedia</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Dasar perusahaan .NET yang pasti dan telah teruji dalam pertempuran. Dari Otentikasi hingga Kecerdasan Buatan, kami telah menyelesaikan bagian-bagian sulit sehingga Anda tidak perlu melakukannya.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Bidang yang menyadari zona waktu</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>API TimeZoneInfo tersedia</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Dipercaya oleh aplikasi produksi berkualitas tinggi termasuk AnduinOS, StatHub, dan Warp. Kami tidak hanya berbagi kode ini; kami menjalankan seluruh bisnis kami berdasarkan kode ini.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Lihat di GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory tersedia</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Selamat datang</value>

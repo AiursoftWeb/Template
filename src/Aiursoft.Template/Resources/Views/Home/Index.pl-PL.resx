@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Osiągaj więcej z Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Wbudowane punkty końcowe zdrowia Actuator</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Zawarta strona administracyjna</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Wbudowany interfejs GUI kolejki zadań</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Wbudowane zabezpieczenia na poziomie metod</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Wbudowana obsługa klienta OAuth2/OIDC</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Wbudowany middleware OpenID Connect</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Wbudowane autoryzowanie oparte na zasadach</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Wbudowane analizatory Roslyn</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Wbudowana konfiguracja stref czasowych</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Wbudowane wsparcie dla stref czasowych z USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Wbudowane zarządzanie użytkownikami</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Wymagany Checkstyle lub podobny</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Zawiera obsługę Dockera dla uproszczonych i spójnych wdrożeń.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Wymagane dostosowanie</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Panel do zadań w tle i harmonogramu</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Pulpit dla zadań w tle</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>szybciej</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Dostępne testy funkcjonalne</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Funkcje</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Ziarnistość RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Wymagane skonfigurowanie Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Elastyczne API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ręcznie napisane na podstawie zasad (Policies)</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Dostępny pakiet do sprawdzania stanu zdrowia</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Kontrola stanu i sondy</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Dostępne middleware do kontroli zdrowia</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Witaj Świecie!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Wysoka jakość</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Harmonogramowanie zadań</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon dołączony</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Wsparcie dla IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>Baza danych w pamięci, tymczasowy system plików i symulacja HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Dołączone</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Zintegrowany System Zarządzania Plikami</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Platform do testów integracyjnych</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Przyjazny dla praktykantów</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Czy korzystanie z Aiursoft Template jest bezpłatne?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Dostępne API java.time</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Interfejs graficzny kolejki zadań i harmonogramowania</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Dołącz do Dyskusji</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Wymaga konfiguracji/wtyczek</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Wymaga pakietu django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Wymaga konfiguracji ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Wykrywanie i synchronizacja uprawnień</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Wymagane jest Pint lub podobne narzędzie</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Skonfigurowane sondy /healthz i gotowości</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Wstępnie skonfigurowane i przetestowane</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Brama jakości</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Szybkie skonfigurowanie z bazą H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Szybka konfiguracja za pomocą pakietów NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autoryzacja RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Kierownik Techniczny</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>dostępna integracja z Terminus</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Testowanie fragmentów za pomocą MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase z klientem testowym</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Moduł testowy dostępny</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Definitywny, sprawdzony w praktyce fundament dla firmowego środowiska .NET. Od uwierzytelniania po sztuczną inteligencję — rozwiązaliśmy trudne problemy, dzięki czemu nie musisz tego robić sam.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Pola uwzględniające strefy czasowe</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>API TimeZoneInfo jest dostępna</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Uwierzytelnione przez aplikacje produkcyjne, w tym AnduinOS, StatHub i Warp. Nie tylko udostępniamy ten kod; działamy na nim całą swoją firmę.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Zobacz na GitHubie</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>Dostępna klasa WebApplicationFactory</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Witaj</value>
