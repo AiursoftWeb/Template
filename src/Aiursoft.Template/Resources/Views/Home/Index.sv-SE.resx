@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Uppnå mer med Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Inbyggda Actuator-hälsoslutpunkter</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Admin-sida inbegripen</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Inbyggd GUI för jobbkö</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Inbyggd metodnivåsäkerhet</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Inbyggt stöd för OAuth2/OIDC-klient</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Inbyggt OpenID Connect-middleware</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Inbyggt policybaserad behörighetskontroll</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Inbyggda Roslyn-analyser</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Inbyggd tidszonkonfiguration</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Inbyggt stöd för tidszoner med USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Inbyggd användarhantering</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyle eller liknande krävs</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Kommer med Docker-stöd för en förbättrad och konsekvent distribution.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Kräver anpassad utveckling</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Översikt över bakgrunds- och schemalagda uppgifter</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Dashboard för bakgrundsprocesser</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>snabbare</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Funktionstester tillgängliga</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Funktioner</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Finjusterad RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint-installation krävs</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Flexibel API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Manuellt skrivna baserade på Policies</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Health check-paket tillgängligt</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Hälsokontroller och sondberedskap</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks-middleware tillgänglig</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hej Världen!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Hög kvalitet</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + uppgiftsplanering</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon ingår</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE-stöd</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>In-memory-databas, tillfällig filsystem och HTTP-simulering</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Inkluderat</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Integrerad filhantering</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Ramverk för integrations tester</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Internvänligt</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Är det gratis att använda Aiursoft Template?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API tillgänglig</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Hanteringspanel för jobbkö och schemaläggning</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Delta i diskussioner</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Kräver konfiguration/tillägg</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Kräver django-health-check-paketet</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Kräver inställning av ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Upptäckt och synkronisering av behörigheter</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint eller liknande krävs</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Förkonfigurerade /healthz- och beredskapsprober</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Förkonfigurerat och testat</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Kvalitetsport</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Snabb installation med H2-databas</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Snabb installation med NuGet-paket</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-auktorisering</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Teknisk ledare</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Terminus-integration tillgänglig</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Testa slices med MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase med testklient</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Testmodul tillgänglig</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Den definitiva, testade .NET-fundamentet för företag. Från Auth till AI har vi löst de svåra delarna så att du inte behöver göra det.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Fält med tidszonstöd</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API tillgänglig</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Tillit av produktionsklara applikationer inklusive AnduinOS, StatHub och Warp. Vi delar inte bara koden; vi kör hela vårt företag på den.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Visa på GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory tillgänglig</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Välkommen</value>
