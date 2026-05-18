@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Aiursoft Template ile daha fazlasını başarın</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Actuator sağlık uç noktaları yerleşik</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Yönetim sitesi dahil</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Yerleşik İş Kuyruğu Arayüzü</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Yöntem düzeyinde yerleşik güvenlik</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Dahili OAuth2/OIDC istemci desteği</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Dahili OpenID Connect ara katmanı</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Yerleşik İlçe Tabanlı Yetkilendirme</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Dahili Roslyn Analizcileri</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Dahili saat dilimi yapılandırması</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>USE_TZ ile yerleşik saat dilimi desteği</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Dahili Kullanıcı Yönetimi</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Checkstyle veya benzeri araçlar gerekli</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Kolay ve tutarlı dağıtımlar için Docker desteğiyle birlikte gelir.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Özel geliştirme gerekli</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Arka plan ve zamanlanmış görevler için kontrol paneli</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Arka plan görevleri için kontrol paneli</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>daha hızlı</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Özellik testleri mevcut</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Özellikler</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>İnce taneli RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint kurulumu gerekli</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Esnek API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Politikalar temelinde elle yazılmış</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Sağlık denetimi paketi mevcut</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Sağlık Kontrolleri ve Probes</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks middleware mevcut</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Merhaba Dünya!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Yüksek Kalite</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Görev Zamanlama</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon dahil</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE Desteği</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>İn-memori veritabanı, geçici dosya sistemi ve HTTP simülasyonu</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Dahil</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Entegre Dosya Yönetimi</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Entegrasyon Testi Araç Seti</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Yeni Başlayanlar İçin Uygun</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Aiursoft Template&apos;ı kullanmak ücretsiz mi?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API mevcut</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>İş Kuyruğu ve Zamanlama Arayüzü</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Tartışmalara Katıl</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Yapılandırma/eklenti gerektirir</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>django-health-check paketi gerekli</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ESLint/Prettier kurulumu gerekli</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>İzin keşfi ve senkronizasyonu</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint veya benzeri gerekli</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Önceden yapılandırılmış /healthz ve hazırlık kontrolleri</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Ön yapılandırılmış ve test edilmiş</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Kalite Kapısı</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>H2 veritabanı ile hızlı kurulum</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>NuGet paketleriyle hızlı kurulum</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC Yetkilendirmesi</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Teknik Lider</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Terminus entegrasyonu mevcut</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>MockMvc ile dilim testleri</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestClient ile TestCase</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Test modülü mevcut</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Kesin, savaştan sıyrılmış .NET enterprise temeli. Kimlik doğrulamadan yapay zekâya kadar, zor kısımları çözdük, sizin için yapmanıza gerek kalmadı.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Zaman dilimi farkındalığına sahip alanlar</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API mevcut</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>AnduinOS, StatHub ve Warp gibi üretim düzeyindeki uygulamalar tarafından güvenilir. Sadece bu kodu paylaşmakla kalmıyoruz; tamamen bu kodla işimizi yürütüyoruz.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>GitHub&apos;da Görüntüle</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory mevcut</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Hoş Geldiniz</value>

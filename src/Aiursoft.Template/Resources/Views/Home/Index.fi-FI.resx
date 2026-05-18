@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Saavuta enemmän Aiursoft Templatella</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Actuatorin terveydentilan päätepisteet sisäänrakennettuna</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Hallintaportaali sisältyy</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Sisäänrakennettu työjonojen käyttöliittymä</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Sisäänrakennettu menetelmätason turvallisuus</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Sisäänrakennettu OAuth2/OIDC-asiakastuki</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Sisäänrakennettu OpenID Connect -välimuisti</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Sisäänrakennettu Käytäntöpohjainen valtuutus</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Sisäänrakennetut Roslyn-analyysit</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Sisäänrakennettu aikavyöhykeasetukset</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Sisäänrakennettu aikavyöhyketuki USE_TZ:n kanssa</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Sisäänrakennettu käyttäjienhallinta</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Tarkistus tai vastaava tarvitaan</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Sisältää Docker-tukea yksinkertaistettuja ja yhdenmukaisia käyttöönottoja varten.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Mukautettu kehitys vaaditaan</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Ohjauspaneeli taustatehtäville ja ajoitetuille tehtäville</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Taustatehtävien ohjauspaneeli</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>nopeammin</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Ominaisuustestit saatavilla</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Ominaisuudet</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Hienojakoinen RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Flake8/Pylint-asetus tarvitaan</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Joustava API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Käsin kirjoitettu perustuen Policies-käytäntöihin</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Health check -paketti saatavilla</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Terveystarkistukset &amp; sondit</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Health Checks -välimuisti saatavilla</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Hei maailma!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Korkea laatu</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + tehtävien ajoitus</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Horizon mukana</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>IDE-tuki</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>In-memory-tietokanta, väliaikainen tiedostojärjestelmä ja HTTP-simulaatio</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Sisältyy</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Integroitu tiedostonhallinta</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Integraatiotestauskehys</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Ammattikoulutuksessa opiskeleville sopiva</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Onko Aiursoft Templaten käyttö ilmaista?</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API käytettävissä</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Työjonon ja ajoituksen hallintapaneeli</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Liity keskusteluun</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Vaatii konfiguraatiota tai lisäosia</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Tarvitsee django-health-check-pakettea</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Vaatii ESLint/Prettier-asetukset</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Oikeuksien havaitseminen ja synkronointi</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Pint tai vastaava tarvitaan</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Ennakkoon määritetyt /healthz- ja readiness-luotettavuuskojeet</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Ennalta määritetty ja testattu</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Laatuportti</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Nopea aset H2-tietokannalla</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Nopea asennus NuGet-pakettien avulla</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Tekninen Päällikkö</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Terminus-integraatio saatavilla</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Testaa osia MockMvc:lla</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>TestCase testiklientillä</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Testausmoduuli saatavilla</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Määritelmällinen, kovasti testattu .NET-yritysperusta. Autentikoinnista tekoälyyn, olemme ratkaisseet vaikeat osiot, jotta sinun ei tarvitse.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Aikavyöhyketietoiset kentät</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>TimeZoneInfo API käytettävissä</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Luotettu tuotantotasoisissa sovelluksissa, kuten AnduinOS, StatHub ja Warp. Emme vain jakaneet tätä koodia; käytämme sitä koko liiketoimintamme käynnistämiseen.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Näytä GitHubissa</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>WebApplicationFactory saatavilla</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Tervetuloa</value>

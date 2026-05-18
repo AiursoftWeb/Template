@@ -39,6 +39,9 @@
   <data name="Achieve more with Aiursoft Template" xml:space="preserve">
     <value>Κερδίστε περισσότερα με το Aiursoft Template</value>
   </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Ενσωματωμένα σημεία τέλους υγείας Actuator</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Περιλαμβάνεται το διαχειριστικό site</value>
   </data>
@@ -144,8 +147,32 @@
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Ενσωματωμένη GUI Ουράς Εργασιών</value>
   </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Ενσωματωμένη ασφάλεια σε επίπεδο μεθόδου</value>
+  </data>
+  <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
+    <value>Ενσωματωμένη υποστήριξη πελάτη OAuth2/OIDC</value>
+  </data>
+  <data name="Built-in OpenID Connect middleware" xml:space="preserve">
+    <value>Ενσωματωμένο μεσολαβητικό OpenID Connect</value>
+  </data>
+  <data name="Built-in Policy-based authorization" xml:space="preserve">
+    <value>Ενσωματωμένη εξουσιοδότηση βάσει πολιτικής</value>
+  </data>
+  <data name="Built-in Roslyn Analyzers" xml:space="preserve">
+    <value>Ενσωματωμένοι αναλυτές Roslyn</value>
+  </data>
+  <data name="Built-in timezone configuration" xml:space="preserve">
+    <value>Ενσωματωμένη διαμόρφωση ζώνης ώρας</value>
+  </data>
+  <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
+    <value>Ενσωματωμένη υποστήριξη ζώνης ώρας με USE_TZ</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Ενσωματωμένη Διαχείριση Χρηστών</value>
+  </data>
+  <data name="Checkstyle or similar needed" xml:space="preserve">
+    <value>Απαιτείται Checkstyle ή παρόμοιο</value>
   </data>
   <data name="Comes with Docker support for simplified and consistent deployments." xml:space="preserve">
     <value>Διαθέτει υποστήριξη για Docker για απλούς και συνεκτικούς τρόπους μεταφοράς.</value>
@@ -185,6 +212,9 @@
   </data>
   <data name="Custom development required" xml:space="preserve">
     <value>Απαιτείται προσαρμοσμένη ανάπτυξη</value>
+  </data>
+  <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
+    <value>Πίνακας ελέγχου για εργασίες παρασκηνίου και προγραμματισμένες εργασίες</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Πίνακας ελέγχου για εργασίες υποβάθρου</value>
@@ -276,6 +306,9 @@
   <data name="faster" xml:space="preserve">
     <value>γρηγορότερα</value>
   </data>
+  <data name="Feature tests available" xml:space="preserve">
+    <value>Διαθέσιμα δοκιμές χαρακτηριστικών</value>
+  </data>
   <data name="Features" xml:space="preserve">
     <value>Λειτουργίες</value>
   </data>
@@ -290,6 +323,9 @@
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Λεπτομερής RBAC</value>
+  </data>
+  <data name="Flake8/Pylint setup needed" xml:space="preserve">
+    <value>Απαιτείται ρύθμιση Flake8/Pylint</value>
   </data>
   <data name="Flexible API" xml:space="preserve">
     <value>Ευέλικτη API</value>
@@ -360,6 +396,15 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Γραμμένο χειροκίνητα με βάση τα Policies</value>
   </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>Διαθέσιμο πακέτο ελέγχου υγείας</value>
+  </data>
+  <data name="Health Checks &amp; Probes" xml:space="preserve">
+    <value>Έλεγχοι Υγείας &amp; Probes</value>
+  </data>
+  <data name="Health Checks middleware available" xml:space="preserve">
+    <value>Διαθέσιμο middleware ελέγχου υγείας</value>
+  </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Γεια σου Κόσμε!</value>
   </data>
@@ -371,6 +416,9 @@
   </data>
   <data name="High Quality" xml:space="preserve">
     <value>Υψηλής Ποιότητας</value>
+  </data>
+  <data name="Horizon + Task Scheduling" xml:space="preserve">
+    <value>Horizon + Προγραμματισμός Εργασιών</value>
   </data>
   <data name="Horizon included" xml:space="preserve">
     <value>Περιλαμβάνεται το Horizon</value>
@@ -387,6 +435,9 @@
   <data name="IDE Support" xml:space="preserve">
     <value>Υποστήριξη IDE</value>
   </data>
+  <data name="In-memory DB, temp FS, and HTTP simulation" xml:space="preserve">
+    <value>Μνήμη DB, προσωρινό FS και προσομοίωση HTTP</value>
+  </data>
   <data name="Included" xml:space="preserve">
     <value>Συμπεριλαμβανόμενο</value>
   </data>
@@ -399,6 +450,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Ενσωματωμένη Διαχείριση Αρχείων</value>
   </data>
+  <data name="Integration Testing Harness" xml:space="preserve">
+    <value>Πλαίσιο Ενοποιημένου Δοκιμών</value>
+  </data>
   <data name="Intern Friendly" xml:space="preserve">
     <value>Φιλικό για εντερν</value>
   </data>
@@ -410,6 +464,12 @@
   </data>
   <data name="Is it free to use Aiursoft Template?" xml:space="preserve">
     <value>Είναι δωρεάν η χρήση του Aiursoft Template;</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Διαθέσιμο API java.time</value>
+  </data>
+  <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
+    <value>Διεπαφή Χρήστη Γραφείου Ουράς Εργασιών &amp; Προγραμματισμού</value>
   </data>
   <data name="Join Discussions" xml:space="preserve">
     <value>Συμμετέχετε στις Συζητήσεις</value>
@@ -471,6 +531,9 @@
   <data name="Needs config/plugins" xml:space="preserve">
     <value>Απαιτεί ρυθμίσεις/επεκτάσεις</value>
   </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Απαιτείται το πακέτο django-health-check</value>
+  </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Απαιτείται ρύθμιση ESLint/Prettier</value>
   </data>
@@ -531,6 +594,12 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Ανίχνευση και συγχρονισμός δικαιωμάτων</value>
   </data>
+  <data name="Pint or similar needed" xml:space="preserve">
+    <value>Απαιτείται το Pint ή παρόμοιο</value>
+  </data>
+  <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
+    <value>Προδιαμορφωμένοι ανιχνευτές /healthz και ετοιμότητας</value>
+  </data>
   <data name="Pre-configured and tested" xml:space="preserve">
     <value>Προ-διαμορφωμένο και δοκιμασμένο</value>
   </data>
@@ -542,6 +611,12 @@
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Ποιότητα Πύλης</value>
+  </data>
+  <data name="Quick setup with H2 database" xml:space="preserve">
+    <value>Γρήγορη ρύθμιση με βάση δεδομένων H2</value>
+  </data>
+  <data name="Quick setup with NuGet packages" xml:space="preserve">
+    <value>Γρήγορη ρύθμιση με πακέτα NuGet</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Εξουσιοδότηση RBAC</value>
@@ -639,6 +714,18 @@
   <data name="Technical Lead" xml:space="preserve">
     <value>Τεχνικός Υπεύθυνος</value>
   </data>
+  <data name="Terminus integration available" xml:space="preserve">
+    <value>Διαθέσιμη ενσωμάτωση Terminus</value>
+  </data>
+  <data name="Test slices with MockMvc" xml:space="preserve">
+    <value>Δοκιμάστε φέτες με το MockMvc</value>
+  </data>
+  <data name="TestCase with test client" xml:space="preserve">
+    <value>Δοκιμαστική περίπτωση με πελάτη δοκιμής</value>
+  </data>
+  <data name="Testing module available" xml:space="preserve">
+    <value>Διαθέσιμο module δοκιμών</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Η αποφασιστική, δοκιμασμένη στην πράξη βάση επιχειρηματικών εφαρμογών .NET. Από την Αυθεντικοποίηση μέχρι την Τεχνητή Νοημοσύνη, έχουμε λύσει τα δύσκολα μέρη, ώστε να μην χρειαστεί να τα κάνετε εσείς.</value>
   </data>
@@ -660,6 +747,9 @@
   <data name="Timezone-aware fields" xml:space="preserve">
     <value>Πεδία με συνειδητότητα ζώνης ώρας</value>
   </data>
+  <data name="TimeZoneInfo API available" xml:space="preserve">
+    <value>Διαθέσιμο API TimeZoneInfo</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Εμπιστεύεται εφαρμογές προσαρμοσμένες για παραγωγή, συμπεριλαμβανομένων AnduinOS, StatHub και Warp. Δεν μοιραζόμαστε απλώς αυτόν τον κώδικα· τρέχουμε την επιχείρησή μας εντελώς με αυτόν.</value>
   </data>
@@ -677,6 +767,9 @@
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Προβολή στο GitHub</value>
+  </data>
+  <data name="WebApplicationFactory available" xml:space="preserve">
+    <value>Διαθέσιμο το WebApplicationFactory</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Καλώς ήρθατε</value>
