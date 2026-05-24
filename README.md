@@ -35,6 +35,8 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 * [Translate](https://github.com/aiursoftweb/translate)
 * [Apkg](https://github.com/aiursoftweb/apkg)
 * [HowToCook Viewer](https://github.com/aiursoftweb/howtocookviewer)
+* [Kanban](https://github.com/aiursoftweb/kanban)
+* [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
 
 ## Try
 
