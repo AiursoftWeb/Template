@@ -114,6 +114,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Background Job Processing</value>
   </data>
+  <data name="Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn&apos;t spend a week writing login systems, configuring CI/CD, or dealing with OIDC." xml:space="preserve">
+    <value>Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn&apos;t spend a week writing login systems, configuring CI/CD, or dealing with OIDC.</value>
+  </data>
   <data name="Beginner Friendly" xml:space="preserve">
     <value>Beginner Friendly</value>
   </data>
@@ -812,9 +815,6 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Zero Tolerance Lint</value>
-  </data>
-  <data name="Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC." xml:space="preserve">
-    <value>Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC.</value>
   </data>
 
 </root>
