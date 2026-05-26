@@ -114,6 +114,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
+  <data name="Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn&apos;t spend a week writing login systems, configuring CI/CD, or dealing with OIDC." xml:space="preserve">
+    <value>裸金属框架提供了锤子和钉子，而 Aiursoft Template 交付的是一个精装修、可直接入住的完整家园。我们尊重像 ASP.NET、Spring Boot 或 Django 这样优秀的框架，但我们知道在 {0} 年，您不应该花一周时间编写登录系统、配置 CI/CD 或处理 OIDC。</value>
+  </data>
   <data name="Beginner Friendly" xml:space="preserve">
     <value>新手友好</value>
   </data>
@@ -812,9 +815,6 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>零容忍代码检查</value>
-  </data>
-  <data name="Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC." xml:space="preserve">
-    <value>裸金属框架提供了锤子和钉子，而 Aiursoft Template 交付的是一个精装修、可直接入住的完整家园。我们尊重像 ASP.NET、Spring Boot 或 Django 这样优秀的框架，但我们知道在 {0} 年，您不应该花一周时间编写登录系统、配置 CI/CD 或处理 OIDC。</value>
   </data>
 
 </root>
