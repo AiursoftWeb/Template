@@ -813,5 +813,8 @@
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Zero Tolerance Lint</value>
   </data>
+  <data name="Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC." xml:space="preserve">
+    <value>Bare-metal frameworks provide the hammer and nails, while Aiursoft Template delivers a finished, ready-to-move-in home. We respect great frameworks like ASP.NET, Spring Boot or Django, but we know that in {0}, you shouldn't spend a week writing login systems, configuring CI/CD, or dealing with OIDC.</value>
+  </data>
 
 </root>
