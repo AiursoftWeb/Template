@@ -1,0 +1,40 @@
+<Project Sdk="Aiursoft.Apkg.Sdk">
+  <PropertyGroup>
+    <PackageName>aiursoft-template</PackageName>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageAuthors>Anduin Xue &lt;anduin@aiursoft.com&gt;</PackageAuthors>
+    <PackageDescription>Aiursoft Template Web Application</PackageDescription>
+    <TargetDistro>anduinos</TargetDistro>
+    <TargetSuites>resolute questing</TargetSuites>
+    <TargetArchitectures>amd64 arm64</TargetArchitectures>
+    <Component>main</Component>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PrebuildCommand Run="rm -rf bin/publish" />
+    <PrebuildCommand Run="npm ci --prefix wwwroot" />
+    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained --runtime linux-x64 --output bin/publish/" Condition="'$(Arch)' == 'amd64'" />
+    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained --runtime linux-arm64 --output bin/publish/" Condition="'$(Arch)' == 'arm64'" />
+    <PrebuildCommand Run="cp -r wwwroot/* bin/publish/wwwroot/" />
+    <PrebuildCommand Run="sed -i 's|DataSource=app.db|DataSource=/var/lib/aiursoft-template/app.db|g' bin/publish/appsettings.json" />
+    <PrebuildCommand Run="sed -i 's|/tmp/data|/var/lib/aiursoft-template/storage|g' bin/publish/appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Dependency Include="dotnet-runtime-10.0" />
+    <Dependency Include="aspnetcore-runtime-10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IncludeFolder Include="bin/publish/" Target="/usr/share/aiursoft-template" />
+    <ConfFile Include="bin/publish/appsettings.json" Target="/etc/aiursoft-template/appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PostInstallScript Include="postinst.sh" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SystemdUnit Include="aiursoft-template.service" AutoEnable="true" />
+  </ItemGroup>
+</Project>
