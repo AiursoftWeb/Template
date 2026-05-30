@@ -5,9 +5,11 @@
     <PackageAuthors>Anduin Xue &lt;anduin@aiursoft.com&gt;</PackageAuthors>
     <PackageDescription>Aiursoft Template Web Application</PackageDescription>
     <TargetDistro>anduinos</TargetDistro>
-    <TargetSuites>resolute questing</TargetSuites>
+    <TargetSuites>noble-webapps questing-webapps resolute-webapps</TargetSuites>
     <TargetArchitectures>amd64 arm64</TargetArchitectures>
     <Component>main</Component>
+    <DependencyCheckUrl>https://mirror.aiursoft.com/ubuntu</DependencyCheckUrl>
+    <DependencyCheckSuiteMap>noble-webapps=noble-updates questing-webapps=questing resolute-webapps=resolute</DependencyCheckSuiteMap>
   </PropertyGroup>
 
   <ItemGroup>
