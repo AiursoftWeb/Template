@@ -60,6 +60,20 @@ curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo ba
 
 It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
 
+### apt package filesystem layout
+
+When installed via `apt install aiursoft-template`, the following paths are created:
+
+| Role | Path | `apt remove` | `apt purge` |
+|------|------|:---:|:---:|
+| Working directory & binaries | `/usr/share/aiursoft-template/` | ✓ | ✓ |
+| Config file | `/etc/aiursoft-template/appsettings.json` | | ✓ |
+| Runtime data (DB, storage, keys) | `/var/lib/aiursoft-template/` | | |
+| systemd unit | `/lib/systemd/system/aiursoft-template.service` | ✓ | ✓ |
+
+The config file is a dpkg conffile — kept on `remove`, deleted only on `purge`.
+Runtime data under `/var/lib/aiursoft-template/` is user data and intentionally never removed by dpkg.
+
 ## Run manually
 
 Requirements about how to run
