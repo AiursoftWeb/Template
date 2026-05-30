@@ -11,6 +11,7 @@ KillSignal=SIGINT
 SyslogIdentifier=aiursoft-template
 User=www-data
 Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=HOME=/var/lib/aiursoft-template
 
 [Install]
 WantedBy=multi-user.target
