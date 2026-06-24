@@ -30,7 +30,7 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 * [Polls](https://github.com/aiursoftweb/polls)
 * [WeChatExam](https://github.com/aiursoftweb/wechatexam)
 * [MusicExam](https://github.com/aiursoftweb/musicexam)
-* [CoprHome](https://github.com/aiursoftweb/corphome)
+* [CorpHome](https://github.com/aiursoftweb/corphome)
 * [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
 * [Translate](https://github.com/aiursoftweb/translate)
 * [Apkg](https://github.com/aiursoftweb/apkg)
