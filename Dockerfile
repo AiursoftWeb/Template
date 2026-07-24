@@ -10,6 +10,10 @@ WORKDIR /src
 COPY ${CSPROJ_PATH}wwwroot/package.json ${CSPROJ_PATH}wwwroot/package-lock.json* ${CSPROJ_PATH}wwwroot/.npmrc* /src/${CSPROJ_PATH}wwwroot/
 RUN npm install --prefix "${CSPROJ_PATH}wwwroot" --loglevel verbose
 
+# Build frontend (slims node_modules to only "keep" declared packages)
+COPY ${CSPROJ_PATH}wwwroot/build.mjs /src/${CSPROJ_PATH}wwwroot/build.mjs
+RUN npm run build --prefix "${CSPROJ_PATH}wwwroot"
+
 # ============================
 # Prepare Building Environment
 FROM --platform=$BUILDPLATFORM hub.aiursoft.com/aiursoft/internalimages/dotnet AS build-env
