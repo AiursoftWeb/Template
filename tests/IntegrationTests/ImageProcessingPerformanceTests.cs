@@ -4,7 +4,6 @@ using SkiaSharp;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
 
-#pragma warning disable MSTEST0036 // Shadowing base TestInitialize/TestCleanup is intentional — we need to call base
 [TestClass]
 public class ImageProcessingPerformanceTests : TestBase
 {
@@ -14,18 +13,11 @@ public class ImageProcessingPerformanceTests : TestBase
     private static readonly SKColor[] TestColors = [SKColors.Red, SKColors.Green, SKColors.Blue, SKColors.Gold, SKColors.Fuchsia];
 
     [TestInitialize]
-    public new async Task CreateServer()
+    public void InitializeServices()
     {
-        await base.CreateServer();
         _service = GetService<ImageProcessingService>();
         _storage = GetService<StorageService>();
         _testPrefix = $"perf-test-{Guid.NewGuid():N}";
-    }
-
-    [TestCleanup]
-    public new async Task CleanServer()
-    {
-        await base.CleanServer();
     }
 
     // ── Format Support Tests ──
