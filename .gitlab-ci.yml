@@ -132,7 +132,7 @@ deploy_public_nuget:
 
 deploy_docker_all:
     stage: deploy
-    timeout: 1h
+    timeout: 3h
     environment: production
     needs:
         - lint
