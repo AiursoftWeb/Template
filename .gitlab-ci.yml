@@ -32,7 +32,13 @@ variables:
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
 
+.branch_or_merge_request:
+    rules:
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+        - if: '$CI_COMMIT_BRANCH'
+
 restore:
+    extends: .branch_or_merge_request
     stage: build
     script:
         - |
@@ -41,6 +47,7 @@ restore:
             (echo "Restore failed again. Retrying in 20 seconds..." && sleep 20 && dotnet restore --no-cache --configfile nuget.config)
 
 build:
+    extends: .branch_or_merge_request
     stage: build
     needs:
         - restore
@@ -48,6 +55,7 @@ build:
         - dotnet build -maxcpucount:1 --no-self-contained
 
 lint:
+    extends: .branch_or_merge_request
     stage: lint
     needs:
         - build
@@ -61,6 +69,7 @@ lint:
             - ./analyze_output.xml
 
 test:
+    extends: .branch_or_merge_request
     stage: test
     needs:
         - build
@@ -88,6 +97,7 @@ test:
                 path: ./Cobertura.xml
 
 validate_docker:
+    extends: .branch_or_merge_request
     stage: validate
     timeout: 3h
     needs:
@@ -97,10 +107,15 @@ validate_docker:
         - docker buildx use aiur-global-builder
         - docker buildx build . --platform linux/amd64,linux/arm64
     rules:
-        - exists:
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+          exists:
+              - Dockerfile
+        - if: '$CI_COMMIT_BRANCH'
+          exists:
               - Dockerfile
 
 validate_apkg:
+    extends: .branch_or_merge_request
     stage: validate
     needs:
         - build
@@ -119,6 +134,7 @@ validate_apkg:
             done
 
 pack:
+    extends: .branch_or_merge_request
     stage: publish
     needs:
         - lint
