@@ -104,17 +104,17 @@ validate_apkg:
     needs:
         - build
     script:
+        - "which apkg || dotnet tool install Aiursoft.Apkg.Client --global --add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config -v d"
         - |
-            mapfile -d '' -t aosproj_files < <(find . -type f -name '*.aosproj' -print0)
-
-            if [ "${#aosproj_files[@]}" -eq 0 ]; then
+            aosproj_files=$(find . -type f -name '*.aosproj')
+            if [ -z "$aosproj_files" ]; then
               echo "No .aosproj files found. Skipping APKG validation."
               exit 0
             fi
 
-            for aosproj_file in "${aosproj_files[@]}"; do
+            echo "$aosproj_files" | while IFS= read -r aosproj_file; do
               echo "Building APKG project: $aosproj_file"
-              dotnet build "$aosproj_file" --configuration Release
+              apkg build --path "$(dirname "$aosproj_file")" --all || exit 1
             done
 
 pack:
