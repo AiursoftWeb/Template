@@ -6,6 +6,15 @@ stages:
     - publish
     - deploy
 
+# Prefer the merge request pipeline once a branch has an open MR, so the same
+# validation suite is not run twice for a single push.
+workflow:
+    rules:
+        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+        - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+          when: never
+        - if: '$CI_COMMIT_BRANCH'
+
 before_script:
     # Inject internal NuGet mirror for CI. The checked-in nuget.config only has
     # nuget.org so external contributors can build; CI overwrites it at runtime
@@ -97,21 +106,15 @@ test:
                 path: ./Cobertura.xml
 
 validate_docker:
-    extends: .branch_or_merge_request
     stage: validate
     timeout: 3h
     needs:
-        - job: build
-          optional: true
+        - build
     script:
         - docker buildx use aiur-global-builder
         - docker buildx build . --platform linux/amd64,linux/arm64
     rules:
-        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-          exists:
-              - Dockerfile
-        - if: '$CI_COMMIT_BRANCH'
-          exists:
+        - exists:
               - Dockerfile
 
 validate_apkg:
