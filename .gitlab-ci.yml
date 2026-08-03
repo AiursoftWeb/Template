@@ -176,13 +176,8 @@ deploy_docker_all:
         max: 2
     environment: production
     needs:
-        - lint
-        - test
-        - validate_apkg
-        # validate_docker is absent when this template has no Dockerfile. If the
-        # job exists, deployment still waits for it to succeed.
-        - job: validate_docker
-          optional: true
+        - job: pack
+          artifacts: false
     script:
         - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
         - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then HUB_NAMESPACE="anduin2019"; else HUB_NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
