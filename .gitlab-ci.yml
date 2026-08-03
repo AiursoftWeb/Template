@@ -155,7 +155,7 @@ deploy_docker_all:
 
               while [ "$attempt" -le 3 ]; do
                 echo "Building and pushing multi-arch image to $target (attempt $attempt/3)..."
-                if timeout --foreground 15m docker buildx build . \
+                if timeout --foreground 75m docker buildx build . \
                   --platform linux/amd64,linux/arm64 \
                   --tag "$target" \
                   --push; then
