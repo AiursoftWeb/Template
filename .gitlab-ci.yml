@@ -91,7 +91,8 @@ validate_docker:
     stage: validate
     timeout: 3h
     needs:
-        - build
+        - job: build
+          optional: true
     script:
         - docker buildx use aiur-global-builder
         - docker buildx build . --platform linux/amd64,linux/arm64
