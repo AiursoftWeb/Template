@@ -41,13 +41,7 @@ variables:
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
 
-.branch_or_merge_request:
-    rules:
-        - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
-        - if: '$CI_COMMIT_BRANCH'
-
 restore:
-    extends: .branch_or_merge_request
     stage: build
     script:
         - |
@@ -56,7 +50,6 @@ restore:
             (echo "Restore failed again. Retrying in 20 seconds..." && sleep 20 && dotnet restore --no-cache --configfile nuget.config)
 
 build:
-    extends: .branch_or_merge_request
     stage: build
     needs:
         - restore
@@ -64,7 +57,6 @@ build:
         - dotnet build -maxcpucount:1 --no-self-contained
 
 lint:
-    extends: .branch_or_merge_request
     stage: lint
     needs:
         - build
@@ -78,7 +70,6 @@ lint:
             - ./analyze_output.xml
 
 test:
-    extends: .branch_or_merge_request
     stage: test
     needs:
         - build
@@ -118,7 +109,6 @@ validate_docker:
               - Dockerfile
 
 validate_apkg:
-    extends: .branch_or_merge_request
     stage: validate
     needs:
         - build
@@ -137,12 +127,13 @@ validate_apkg:
             done
 
 pack:
-    extends: .branch_or_merge_request
     stage: publish
     needs:
         - lint
         - test
         - validate_apkg
+        # validate_docker is absent when this template has no Dockerfile. If the
+        # job exists, pack still waits for it to succeed.
         - job: validate_docker
           optional: true
     script:
@@ -192,18 +183,20 @@ deploy_docker_all:
         - lint
         - test
         - validate_apkg
+        # validate_docker is absent when this template has no Dockerfile. If the
+        # job exists, deployment still waits for it to succeed.
         - job: validate_docker
           optional: true
     script:
         - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
         - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then HUB_NAMESPACE="anduin2019"; else HUB_NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
-        
+
         - LOCAL_TARGET_COM="hub.aiursoft.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG"
         - PUBLIC_TARGET="$HUB_NAMESPACE/$CI_PROJECT_NAME:$TAG"
-        
+
         - echo "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        
+
         - docker buildx use aiur-global-builder
         - |
             build_and_push() {
