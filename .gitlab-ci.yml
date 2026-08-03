@@ -139,7 +139,7 @@ pack:
           optional: true
     script:
         - dotnet build -maxcpucount:1 --configuration Release --no-self-contained *.sln
-        - dotnet pack -maxcpucount:1 --configuration Release *.sln || echo "Some packaging failed!"
+        - dotnet pack -maxcpucount:1 --configuration Release *.sln
     artifacts:
         expire_in: 1 week
         paths:
