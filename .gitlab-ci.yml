@@ -1,7 +1,5 @@
 stages:
     - build
-    - lint
-    - test
     - validate
     - publish
     - deploy
@@ -37,7 +35,7 @@ before_script:
     - "dotnet --info"
 
 variables:
-    GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID"
+    GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
     CUSTOM_NUGET_ARGS: "--add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config"
@@ -58,7 +56,7 @@ build:
         - dotnet build -maxcpucount:1 --no-self-contained
 
 lint:
-    stage: lint
+    stage: validate
     needs:
         - build
     script:
@@ -71,7 +69,7 @@ lint:
             - ./analyze_output.xml
 
 test:
-    stage: test
+    stage: validate
     needs:
         - build
     coverage: '/TOTAL_COVERAGE=(\d+.\d+)/'
@@ -163,7 +161,6 @@ deploy_public_nuget:
     environment: production
     needs:
         - pack
-        - deploy_local_nuget
     script:
         - |
             for file in $(find . -name "*.nupkg"); do
@@ -175,6 +172,8 @@ deploy_public_nuget:
 deploy_docker_all:
     stage: deploy
     timeout: 3h
+    retry:
+        max: 2
     environment: production
     needs:
         - lint
@@ -197,8 +196,7 @@ deploy_docker_all:
         - docker buildx use aiur-global-builder
         # Both required destinations must succeed. China replication is handled
         # asynchronously by puller_cn after the home-registry push completes.
-        - ./scripts/docker_push.sh "$LOCAL_TARGET_COM"
-        - ./scripts/docker_push.sh "$PUBLIC_TARGET"
+        - docker buildx build . --platform linux/amd64,linux/arm64 --tag "$LOCAL_TARGET_COM" --tag "$PUBLIC_TARGET" --push
 
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
