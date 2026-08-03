@@ -2,6 +2,7 @@ stages:
     - build
     - lint
     - test
+    - validate
     - publish
     - deploy
 
@@ -86,11 +87,44 @@ test:
                 coverage_format: cobertura
                 path: ./Cobertura.xml
 
+validate_docker:
+    stage: validate
+    timeout: 3h
+    needs:
+        - build
+    script:
+        - docker buildx use aiur-global-builder
+        - docker buildx build . --platform linux/amd64,linux/arm64
+    rules:
+        - exists:
+              - Dockerfile
+
+validate_apkg:
+    stage: validate
+    needs:
+        - build
+    script:
+        - |
+            mapfile -d '' -t aosproj_files < <(find . -type f -name '*.aosproj' -print0)
+
+            if [ "${#aosproj_files[@]}" -eq 0 ]; then
+              echo "No .aosproj files found. Skipping APKG validation."
+              exit 0
+            fi
+
+            for aosproj_file in "${aosproj_files[@]}"; do
+              echo "Building APKG project: $aosproj_file"
+              dotnet build "$aosproj_file" --configuration Release
+            done
+
 pack:
     stage: publish
     needs:
         - lint
         - test
+        - validate_apkg
+        - job: validate_docker
+          optional: true
     script:
         - dotnet build -maxcpucount:1 --configuration Release --no-self-contained *.sln
         - dotnet pack -maxcpucount:1 --configuration Release *.sln || echo "Some packaging failed!"
@@ -137,6 +171,9 @@ deploy_docker_all:
     needs:
         - lint
         - test
+        - validate_apkg
+        - job: validate_docker
+          optional: true
     script:
         - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
         - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then HUB_NAMESPACE="anduin2019"; else HUB_NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
