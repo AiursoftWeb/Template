@@ -68,12 +68,13 @@ public class AvatarTests : TestBase
         // 3. Test Clear EXIF (Default download)
         var downloadResponse = await Http.GetAsync(uploadResult.InternetPath);
         downloadResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", downloadResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("attachment", downloadResponse.Content.Headers.ContentDisposition?.DispositionType);
 
         // 4. Test Compression
         var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
         compressedResponse.EnsureSuccessStatusCode();
-        Assert.AreEqual("image/gif", compressedResponse.Content.Headers.ContentType?.MediaType);
+        Assert.AreEqual("application/octet-stream", compressedResponse.Content.Headers.ContentType?.MediaType);
     }
 
     [TestMethod]
@@ -228,7 +229,7 @@ public class AvatarTests : TestBase
         var uploadResult = await uploadResponse.Content.ReadFromJsonAsync<UploadResult>();
         Assert.IsNotNull(uploadResult);
 
-        // Try to compress it. FilesController.Download will call physicalPath.IsStaticImage() 
+        // Try to compress it. FilesController.Download will call physicalPath.IsStaticImage()
         // which might return true based on extension, but SKBitmap.Decode will fail.
         var compressedResponse = await Http.GetAsync(uploadResult.InternetPath + "?w=100");
 
