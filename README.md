@@ -39,6 +39,7 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 * [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
 * [DocsViewer](https://github.com/aiursoftweb/docsviewer)
 * [S360](https://github.com/aiursoftweb/s360)
+* [AlertCenter](https://github.com/aiursoftweb/alertcenter)
 
 ## Try
 
