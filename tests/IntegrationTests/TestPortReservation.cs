@@ -10,7 +10,7 @@ internal sealed class TestPortReservation : IDisposable
     private Socket? _socket;
     public int Port { get; }
 
-    public TestPortReservation(int preferredPort = 0)
+    public TestPortReservation()
     {
         const int maxAttempts = 4;
         for (var attempt = 1; ; attempt++)
@@ -19,7 +19,7 @@ internal sealed class TestPortReservation : IDisposable
             try
             {
                 socket.ExclusiveAddressUse = true;
-                socket.Bind(new IPEndPoint(IPAddress.Any, attempt == 1 ? preferredPort : 0));
+                socket.Bind(new IPEndPoint(IPAddress.Any, 0));
                 socket.Listen(512);
                 _socket = socket;
                 Port = ((IPEndPoint)socket.LocalEndPoint!).Port;
