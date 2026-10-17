@@ -2,7 +2,6 @@ using System.Net;
 using Aiursoft.DbTools;
 using Aiursoft.Template.Entities;
 using Microsoft.AspNetCore.Identity;
-using Aiursoft.CSTools.Tools;
 using static Aiursoft.WebTools.Extends;
 
 namespace Aiursoft.Template.Tests.IntegrationTests;
@@ -11,13 +10,12 @@ namespace Aiursoft.Template.Tests.IntegrationTests;
 public class SpecialAccountTests
 {
     private HttpClient _http = null!;
-    private IHost _server = null!;
-    private int _port;
+    private IHost? _server;
 
     [TestInitialize]
     public async Task Setup()
     {
-        _port = Network.GetAvailablePort();
+        using var reservation = new TestPortReservation();
         var cookieContainer = new CookieContainer();
         var handler = new HttpClientHandler
         {
@@ -26,24 +24,41 @@ public class SpecialAccountTests
         };
         _http = new HttpClient(handler)
         {
-            BaseAddress = new Uri($"http://localhost:{_port}")
+            BaseAddress = new Uri($"http://localhost:{reservation.Port}")
         };
 
         // Set environment variable for default role
         Environment.SetEnvironmentVariable("AppSettings__DefaultRole", "Administrators");
         
-        _server = await AppAsync<Startup>([], port: _port);
-        await _server.UpdateDbAsync<TemplateDbContext>();
-        await _server.SeedAsync();
-        await _server.StartAsync();
+        try
+        {
+            _server = await AppAsync<Startup>([], port: reservation.Port);
+            reservation.ConfigureServer(_server);
+            await _server.UpdateDbAsync<TemplateDbContext>();
+            await _server.SeedAsync();
+            await _server.StartAsync();
+        }
+        catch
+        {
+            _server?.Dispose();
+            _server = null;
+            Environment.SetEnvironmentVariable("AppSettings__DefaultRole", null);
+            throw;
+        }
     }
 
     [TestCleanup]
     public async Task Teardown()
     {
-        await _server.StopAsync();
-        _server.Dispose();
-        Environment.SetEnvironmentVariable("AppSettings__DefaultRole", null);
+        try
+        {
+            if (_server != null) await _server.StopAsync();
+        }
+        finally
+        {
+            _server?.Dispose();
+            Environment.SetEnvironmentVariable("AppSettings__DefaultRole", null);
+        }
     }
 
     [TestMethod]
@@ -62,7 +77,7 @@ public class SpecialAccountTests
         Assert.AreEqual(HttpStatusCode.Found, registerResponse.StatusCode);
 
         // Verify role
-        using (var scope = _server.Services.CreateScope())
+        using (var scope = _server!.Services.CreateScope())
         {
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
             var user = await userManager.FindByEmailAsync(email);
