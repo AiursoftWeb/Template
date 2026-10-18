@@ -11,6 +11,10 @@ workflow:
         - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
         - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
           when: never
+        - if: '$CI_COMMIT_BRANCH == "master"'
+          variables:
+              S360_PURPOSE: baseline
+              S360_CHECK_KEY: "$S360_BASELINE_KEY"
         - if: '$CI_COMMIT_BRANCH'
 
 before_script:
@@ -28,6 +32,7 @@ before_script:
       NUGETEOF
     - "export PATH=$PATH:$HOME/.dotnet/tools"
     - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
+    - "which s360 || dotnet tool install Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS"
     - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
@@ -36,6 +41,8 @@ variables:
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+    S360_PURPOSE: review
+    S360_CHECK_KEY: ""
     CUSTOM_NUGET_ARGS: "--add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config"
 
 restore:
@@ -54,23 +61,7 @@ build:
         # Audit and compile the same restore output in this job. Shared caches
         # retain their original source even after changing nuget.config.
         - dotnet restore --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
-        - |
-            # Match the production publish rules below. Every MR is review-only.
-            audit_purpose=review
-            unset S360_CHECK_KEY
-            if [ "$CI_PIPELINE_SOURCE" != "merge_request_event" ] && [ "${CI_COMMIT_BRANCH:-}" = "master" ]; then
-              if [ "${CI_COMMIT_REF_PROTECTED:-false}" != "true" ]; then
-                echo "Production dependency reports require a protected master branch." >&2
-                exit 1
-              fi
-              export S360_CHECK_KEY="${S360_BASELINE_KEY:?Production baseline credential is required}"
-              audit_purpose=baseline
-            fi
-            : "${S360_SERVER:?S360 endpoint is required}"
-            s360_tools=$(mktemp -d)
-            trap 'rm -rf "$s360_tools"' EXIT
-            dotnet tool install Aiursoft.S360.Client --tool-path "$s360_tools" --version '1.*' $CUSTOM_NUGET_ARGS
-            "$s360_tools/s360" check --path . --ecosystem nuget --purpose "$audit_purpose"
+        - s360 check --ecosystem nuget --purpose "$S360_PURPOSE"
         - dotnet build -maxcpucount:1 --no-self-contained --no-restore
     retry:
         max: 2
