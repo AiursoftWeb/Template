@@ -47,13 +47,13 @@ Try a running Template [here](https://template.aiursoft.com).
 
 ## Install with Docker
 
-Run the installer with the app name and an optional port (default: `5000`):
+Run the installer with the desired port (omit it to choose an available port):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh | sudo bash -s -- template 8080
+curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh | sudo bash -s -- 8080
 ```
 
-Confirm the installation when prompted, then open `http://localhost:8080`.
+Installation starts after three seconds; press Ctrl+C to cancel. Then open `http://localhost:8080`.
 
 ### apt package filesystem layout
 

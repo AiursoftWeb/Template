@@ -1,17 +1,49 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Usage: sudo bash install.sh template [port]
-app_name="${1:-}"
-port="${2:-5000}"
-if [[ $# -lt 1 || $# -gt 2 || ! "$app_name" =~ ^[a-z0-9][a-z0-9-]*$ || ! "$port" =~ ^[0-9]{1,5}$ ]]; then
-    echo "Usage: sudo bash install.sh <app-name> [port]" >&2
+# Keep the original no-argument and port-only invocation working.
+app_name="template"
+port=""
+case $# in
+    0) ;;
+    1)
+        if [[ "$1" =~ ^[0-9]+$ ]]; then
+            port="$1"
+        else
+            app_name="$1"
+            port=5000
+        fi
+        ;;
+    2) app_name="$1"; port="$2" ;;
+    *) echo "Usage: sudo bash install.sh [port] or <app-name> [port]" >&2; exit 1 ;;
+esac
+if [[ ! "$app_name" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+    echo "Invalid application name." >&2
     exit 1
 fi
-port=$((10#$port))
-if (( port < 1 || port > 65535 )); then
-    echo "Port must be between 1 and 65535." >&2
-    exit 1
+if [[ -n "$port" ]]; then
+    if [[ ! "$port" =~ ^[0-9]{1,5}$ ]]; then
+        echo "Port must be between 1 and 65535." >&2
+        exit 1
+    fi
+    port=$((10#$port))
+    if (( port < 1 || port > 65535 )); then
+        echo "Port must be between 1 and 65535." >&2
+        exit 1
+    fi
+else
+    # Preserve the original automatic port range, and keep it stable on restart.
+    if ! command -v ss >/dev/null 2>&1; then
+        echo "Install iproute2 to choose a port automatically, or supply a port." >&2
+        exit 1
+    fi
+    while :; do
+        port=$(shuf -i 40000-65000 -n 1)
+        listeners=$(ss -H -ltn)
+        if ! grep -qE ":$port[[:space:]]" <<< "$listeners"; then
+            break
+        fi
+    done
 fi
 if (( EUID != 0 )); then
     echo "Run this installer with sudo." >&2
@@ -19,23 +51,21 @@ if (( EUID != 0 )); then
 fi
 
 # Existing source/package installations need an explicit data migration.
-if [[ -e "/etc/systemd/system/$app_name.service" || -e "/lib/systemd/system/aiursoft-$app_name.service" ]]; then
+if [[ -e "/etc/systemd/system/$app_name.service" || -e "/lib/systemd/system/$app_name.service" || -e "/usr/lib/systemd/system/$app_name.service" || -e "/lib/systemd/system/aiursoft-$app_name.service" ]]; then
     echo "An existing systemd installation was found. Migrate its configuration and data before using Docker." >&2
     exit 1
 fi
 
 image="docker.io/aiursoft/$app_name:latest"
-echo "This will install Docker if needed and run $image on port $port."
+echo "This will install Docker if needed and run $image (host port: $port)."
 echo "Configuration and data will use the '$app_name-data' Docker volume."
-answer=""
-if { exec 3</dev/tty; } 2>/dev/null; then
-    read -r -p "Continue? [y/N] " answer <&3 || answer=""
-    exec 3<&-
-fi
-case "$answer" in
-    y|Y) ;;
-    *) echo "Installation cancelled."; exit 0 ;;
-esac
+echo "Installation starts in three seconds. Press Ctrl+C to cancel."
+trap 'echo "Installation cancelled."; exit 130' INT
+for seconds in 3 2 1; do
+    echo "$seconds..."
+    sleep 1
+done
+trap - INT
 
 if ! command -v docker >/dev/null 2>&1; then
     . /etc/os-release
@@ -75,6 +105,28 @@ docker run --detach --name "$app_name" --restart unless-stopped \
     --publish "$port:5000" \
     --mount "type=volume,source=$app_name-data,target=/data" \
     "$image"
+
+# Older callers use systemctl restart <app> after installation.
+if [[ -d /run/systemd/system ]]; then
+    docker_command=$(command -v docker)
+    cat > "/etc/systemd/system/$app_name.service" <<EOF
+[Unit]
+Description=$app_name Docker container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=$docker_command start $app_name
+ExecStop=$docker_command stop $app_name
+
+[Install]
+WantedBy=multi-user.target
+EOF
+    systemctl daemon-reload
+    systemctl enable --now "$app_name"
+fi
 
 echo "Container created. Open http://localhost:$port after the application starts."
 echo "Configuration and data are stored in the '$app_name-data' Docker volume."
