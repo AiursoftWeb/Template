@@ -53,7 +53,7 @@ restore:
                 echo "Production dependency reports require a protected master branch." >&2
                 exit 1
               fi
-              export S360_CHECK_KEY="${S360_BASELINE_KEY:?Protected production baseline credential is required}"
+              export S360_CHECK_KEY="${S360_BASELINE_KEY:?Production baseline credential is required}"
               audit_purpose=baseline
             fi
             : "${S360_SERVER:?S360 endpoint is required}"
