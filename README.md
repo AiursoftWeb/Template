@@ -45,23 +45,16 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 
 Try a running Template [here](https://template.aiursoft.com).
 
-## Run in Ubuntu
+## Install with Docker
 
-The following script will install\update this app on your Ubuntu server. Supports Ubuntu 25.04.
-
-On your Ubuntu server, run the following command:
+Download the installer from GitHub and run it with the app name and an optional port (default: `5000`):
 
 ```bash
-curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh -o install.sh
+sudo bash install.sh template 8080
 ```
 
-Of course it is suggested that append a custom port number to the command:
-
-```bash
-curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash -s 8080
-```
-
-It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
+Confirm the installation when prompted, then open `http://localhost:8080`.
 
 ### apt package filesystem layout
 
@@ -101,7 +94,7 @@ Then run the following commands in a Linux shell:
 image=aiursoft/template
 appName=template
 sudo docker pull $image
-sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
+sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 --mount type=volume,source=$appName-data,target=/data $image
 ```
 
 That will start a web server at `http://localhost:5000` and you can test the app.
