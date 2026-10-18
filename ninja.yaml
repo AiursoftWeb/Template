@@ -1,6 +1,10 @@
 configVersion: 1
-httpProfiles:
-  - company-source
+http:
+  profiles:
+    company-source:
+      origin: https://gitlab.aiursoft.com
+      headersFromEnv:
+        PRIVATE-TOKEN: NINJA_SOURCE_TOKEN
 files:
   - name: .editorconfig
     contentUri: https://gitlab.aiursoft.com/api/v4/projects/aiursoft%2Ftemplate/repository/files/.editorconfig/raw?ref=master
