@@ -47,6 +47,7 @@ restore:
         - |
             # Match the production publish rules below. Every MR is review-only.
             audit_purpose=review
+            unset S360_CHECK_KEY
             if [ "$CI_PIPELINE_SOURCE" != "merge_request_event" ] && [ "${CI_COMMIT_BRANCH:-}" = "master" ]; then
               if [ "${CI_COMMIT_REF_PROTECTED:-false}" != "true" ]; then
                 echo "Production dependency reports require a protected master branch." >&2
@@ -55,7 +56,7 @@ restore:
               export S360_CHECK_KEY="${S360_BASELINE_KEY:?Protected production baseline credential is required}"
               audit_purpose=baseline
             fi
-            : "${S360_SERVER:?S360 endpoint is required}" "${S360_CHECK_KEY:?S360 check credential is required}"
+            : "${S360_SERVER:?S360 endpoint is required}"
             s360_tools=$(mktemp -d)
             trap 'rm -rf "$s360_tools"' EXIT
             dotnet tool install Aiursoft.S360.Client --tool-path "$s360_tools" --version '1.*' $CUSTOM_NUGET_ARGS
