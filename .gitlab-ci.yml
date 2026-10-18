@@ -14,9 +14,8 @@ workflow:
         - if: '$CI_COMMIT_BRANCH'
 
 before_script:
-    # Inject internal NuGet mirror for CI. The checked-in nuget.config only has
-    # nuget.org so external contributors can build; CI overwrites it at runtime
-    # to prefer the internal mirror (faster) with nuget.org as automatic fallback.
+    # CI uses the company NuGet source approved by S360. Keep nuget.org in the
+    # checked-in config for external contributors, but do not bypass CI policy.
     - |
       cat > nuget.config << 'NUGETEOF'
       <?xml version="1.0" encoding="utf-8"?>
@@ -24,7 +23,6 @@ before_script:
           <packageSources>
               <clear />
               <add key="aiursoft" value="https://nuget.aiursoft.com/v3/index.json" />
-              <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
           </packageSources>
       </configuration>
       NUGETEOF
@@ -43,7 +41,8 @@ variables:
 restore:
     stage: build
     script:
-        - dotnet restore --disable-parallel --no-cache --configfile nuget.config
+        # Shared caches retain the original source even after changing nuget.config.
+        - dotnet restore --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - |
             # Match the production publish rules below. Every MR is review-only.
             audit_purpose=review
