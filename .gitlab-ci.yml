@@ -41,7 +41,18 @@ variables:
 restore:
     stage: build
     script:
-        # Shared caches retain the original source even after changing nuget.config.
+        - dotnet restore --disable-parallel --no-cache --configfile nuget.config
+    retry:
+        max: 2
+        when: script_failure
+
+build:
+    stage: build
+    needs:
+        - restore
+    script:
+        # Audit and compile the same restore output in this job. Shared caches
+        # retain their original source even after changing nuget.config.
         - dotnet restore --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - |
             # Match the production publish rules below. Every MR is review-only.
@@ -60,17 +71,11 @@ restore:
             trap 'rm -rf "$s360_tools"' EXIT
             dotnet tool install Aiursoft.S360.Client --tool-path "$s360_tools" --version '1.*' $CUSTOM_NUGET_ARGS
             "$s360_tools/s360" check --path . --ecosystem nuget --purpose "$audit_purpose"
+        - dotnet build -maxcpucount:1 --no-self-contained --no-restore
     retry:
         max: 2
         # Policy rejection must stop immediately, without retrying the audit.
         when: runner_system_failure
-
-build:
-    stage: build
-    needs:
-        - restore
-    script:
-        - dotnet build -maxcpucount:1 --no-self-contained
 
 lint:
     stage: validate
