@@ -32,7 +32,7 @@ before_script:
       NUGETEOF
     - "export PATH=$PATH:$HOME/.dotnet/tools"
     - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
-    - "which s360 || dotnet tool install Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS"
+    - "dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS"
     - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
