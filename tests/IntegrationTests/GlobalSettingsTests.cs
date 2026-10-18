@@ -13,6 +13,45 @@ namespace Aiursoft.Template.Tests.IntegrationTests;
 public class GlobalSettingsTests : TestBase
 {
     [TestMethod]
+    public async Task SecretSettingsAreEncryptedHiddenAndRespectConfigurationOverrides()
+    {
+        const string key = "IntegrationTest_Secret";
+        var definition = new Models.GlobalSettingDefinition
+        {
+            Key = key, Name = "Test secret", Description = "Test only", DefaultValue = "",
+            Type = Models.SettingType.Secret
+        };
+        SettingsMap.Definitions.Add(definition);
+        try
+        {
+            using var scope = Server!.Services.CreateScope();
+            var settings = scope.ServiceProvider.GetRequiredService<GlobalSettingsService>();
+            await settings.UpdateSettingAsync(key, "private-test-value");
+            var db = scope.ServiceProvider.GetRequiredService<TemplateDbContext>();
+            var stored = await db.GlobalSettings.SingleAsync(item => item.Key == key);
+            Assert.StartsWith("protected:v1:", stored.Value!);
+            Assert.DoesNotContain("private-test-value", stored.Value!);
+            Assert.AreEqual("private-test-value", await settings.GetSettingValueAsync(key));
+            await LoginAsAdmin();
+            var html = await Http.GetStringAsync("/GlobalSettings/Index");
+            Assert.Contains(key, html);
+            Assert.DoesNotContain("private-test-value", html);
+            Assert.DoesNotContain(stored.Value!, html);
+            var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+            configuration[$"GlobalSettings:{key}"] = "override-test-value";
+            scope.ServiceProvider.GetRequiredService<Microsoft.Extensions.Caching.Memory.IMemoryCache>().Remove($"global-setting-{key}");
+            Assert.AreEqual("override-test-value", await settings.GetSettingValueAsync(key));
+            await Assert.ThrowsExactlyAsync<InvalidOperationException>(() => settings.UpdateSettingAsync(key, "replacement"));
+            Assert.DoesNotContain("override-test-value", await Http.GetStringAsync("/GlobalSettings/Index"));
+            configuration[$"GlobalSettings:{key}"] = null;
+            scope.ServiceProvider.GetRequiredService<Microsoft.Extensions.Caching.Memory.IMemoryCache>().Remove($"global-setting-{key}");
+            await settings.UpdateSettingAsync(key, "");
+            Assert.AreEqual("", await settings.GetSettingValueAsync(key));
+        }
+        finally { SettingsMap.Definitions.Remove(definition); }
+    }
+
+    [TestMethod]
     public async Task TestAllowUserAdjustNicknameSetting()
     {
         // 1. Login as admin
