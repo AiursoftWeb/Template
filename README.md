@@ -45,23 +45,20 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 
 Try a running Template [here](https://template.aiursoft.com).
 
-## Run in Ubuntu
+## Install with Docker
 
-The following script will install\update this app on your Ubuntu server. Supports Ubuntu 25.04.
+The standalone installer reuses an available Docker Engine. If Docker is missing, it installs the distribution's `docker.io` package on Debian, Ubuntu and AnduinOS, or uses [Docker's official installer](https://github.com/docker/docker-install) on supported RHEL, CentOS and Fedora systems. The latter configures Docker's package repository. Other systems need Docker installed first.
 
-On your Ubuntu server, run the following command:
-
-```bash
-curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash
-```
-
-Of course it is suggested that append a custom port number to the command:
+Download the script from GitHub and run it with the application name and an optional host port (default: `5000`):
 
 ```bash
-curl -sL https://github.com/aiursoftweb/template/raw/master/install.sh | sudo bash -s 8080
+curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh -o install.sh
+sudo bash install.sh template 8080
 ```
 
-It will install the app as a systemd service, and start it automatically. Binary files will be located at `/opt/apps`. Service files will be located at `/etc/systemd/system`.
+This pulls `docker.io/aiursoft/template:latest` and starts a container with automatic restart and the `template-data` volume mounted at `/data`. Configuration, SQLite data and uploaded files persist in that volume. View startup progress with `sudo docker logs template`, then open `http://localhost:8080`.
+
+The script leaves existing containers and systemd installations unchanged and exits if it finds either. Migrating an older installation requires copying its configuration and data separately; this installer does not migrate or update it. Removing a container does not require removing its data volume.
 
 ### apt package filesystem layout
 
@@ -101,7 +98,7 @@ Then run the following commands in a Linux shell:
 image=aiursoft/template
 appName=template
 sudo docker pull $image
-sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 -v /var/www/$appName:/data $image
+sudo docker run -d --name $appName --restart unless-stopped -p 5000:5000 --mount type=volume,source=$appName-data,target=/data $image
 ```
 
 That will start a web server at `http://localhost:5000` and you can test the app.
