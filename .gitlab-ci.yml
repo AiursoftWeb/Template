@@ -44,9 +44,26 @@ restore:
     stage: build
     script:
         - dotnet restore --disable-parallel --no-cache --configfile nuget.config
+        - |
+            # Match the production publish rules below. Every MR is review-only.
+            audit_purpose=review
+            if [ "$CI_PIPELINE_SOURCE" != "merge_request_event" ] && [ "${CI_COMMIT_BRANCH:-}" = "master" ]; then
+              if [ "${CI_COMMIT_REF_PROTECTED:-false}" != "true" ]; then
+                echo "Production dependency reports require a protected master branch." >&2
+                exit 1
+              fi
+              export S360_CHECK_KEY="${S360_BASELINE_KEY:?Protected production baseline credential is required}"
+              audit_purpose=baseline
+            fi
+            : "${S360_SERVER:?S360 endpoint is required}" "${S360_CHECK_KEY:?S360 check credential is required}"
+            s360_tools=$(mktemp -d)
+            trap 'rm -rf "$s360_tools"' EXIT
+            dotnet tool install Aiursoft.S360.Client --tool-path "$s360_tools" --version '1.*' $CUSTOM_NUGET_ARGS
+            "$s360_tools/s360" check --path . --ecosystem nuget --purpose "$audit_purpose"
     retry:
         max: 2
-        when: script_failure
+        # Policy rejection must stop immediately, without retrying the audit.
+        when: runner_system_failure
 
 build:
     stage: build
