@@ -24,6 +24,19 @@ if [[ -e "/etc/systemd/system/$app_name.service" || -e "/lib/systemd/system/aiur
     exit 1
 fi
 
+image="docker.io/aiursoft/$app_name:latest"
+echo "This will install Docker if needed and run $image on port $port."
+echo "Configuration and data will use the '$app_name-data' Docker volume."
+answer=""
+if { exec 3</dev/tty; } 2>/dev/null; then
+    read -r -p "Continue? [y/N] " answer <&3 || answer=""
+    exec 3<&-
+fi
+case "$answer" in
+    y|Y) ;;
+    *) echo "Installation cancelled."; exit 0 ;;
+esac
+
 if ! command -v docker >/dev/null 2>&1; then
     . /etc/os-release
     case " ${ID:-} ${ID_LIKE:-} " in
@@ -57,7 +70,6 @@ if docker container inspect "$app_name" >/dev/null 2>&1; then
     exit 1
 fi
 
-image="docker.io/aiursoft/$app_name:latest"
 docker pull "$image"
 docker run --detach --name "$app_name" --restart unless-stopped \
     --publish "$port:5000" \

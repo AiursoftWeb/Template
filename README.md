@@ -47,18 +47,14 @@ Try a running Template [here](https://template.aiursoft.com).
 
 ## Install with Docker
 
-The standalone installer reuses an available Docker Engine. If Docker is missing, it installs the distribution's `docker.io` package on Debian, Ubuntu and AnduinOS, or uses [Docker's official installer](https://github.com/docker/docker-install) on supported RHEL, CentOS and Fedora systems. The latter configures Docker's package repository. Other systems need Docker installed first.
-
-Download the script from GitHub and run it with the application name and an optional host port (default: `5000`):
+Download the installer from GitHub and run it with the app name and an optional port (default: `5000`):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh -o install.sh
 sudo bash install.sh template 8080
 ```
 
-This pulls `docker.io/aiursoft/template:latest` and starts a container with automatic restart and the `template-data` volume mounted at `/data`. Configuration, SQLite data and uploaded files persist in that volume. View startup progress with `sudo docker logs template`, then open `http://localhost:8080`.
-
-The script leaves existing containers and systemd installations unchanged and exits if it finds either. Migrating an older installation requires copying its configuration and data separately; this installer does not migrate or update it. Removing a container does not require removing its data volume.
+Confirm the installation when prompted, then open `http://localhost:8080`.
 
 ### apt package filesystem layout
 
