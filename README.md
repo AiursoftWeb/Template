@@ -108,14 +108,6 @@ The docker image has the following context:
 | Data path   | /data                           |
 | Config path | /data/appsettings.json          |
 
-## CI alerts
-
-Master pipelines report their final result through `alertcenter ci report` (CLI 10.8.0 or later) when the runner provides `ALERTCENTER_SERVER` and `ALERTCENTER_API_KEY`. The shared GitLab App key needs query, create, metadata patch, severity and mitigate permissions. It is passed explicitly on every CLI invocation.
-
-The first failure creates a Sev3 incident; the third consecutive failure escalates it to Sev2. Success mitigates the existing incident and resets the counter. A later failure creates a new incident. Successful pipelines never create an incident when none exists. State lives in incident Metadata and is isolated by GitLab server, project ID and branch. Repeated results do not increment the counter; a successful retry of the same pipeline takes precedence over its failure. Older pipeline IDs are ignored once an incident has recorded a newer result. Before the first incident exists, successful runs leave no ordering watermark.
-
-Reporting jobs serialize per project/ref and persist pending actions so retries can finish an interrupted update. They do not read GitLab pipeline history. Reporting failures remain visible as allowed job failures without changing the build result. Merge request pipelines have no reporting jobs, and cancellation does not schedule a report.
-
 ## How to contribute
 
 There are many ways to contribute to the project: logging bugs, submitting pull requests, reporting issues, and creating suggestions.
