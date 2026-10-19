@@ -19,6 +19,13 @@ workflow:
         - if: '$CI_COMMIT_BRANCH'
 
 before_script:
+    - |
+      set -- ./*.sln
+      if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+        echo "Expected exactly one .sln file in the repository root." >&2
+        exit 1
+      fi
+      export SOLUTION_FILE="$1"
     # CI uses the company NuGet source approved by S360. Keep nuget.org in the
     # checked-in config for external contributors, but do not bypass CI policy.
     - |
@@ -49,7 +56,7 @@ variables:
 restore:
     stage: build
     script:
-        - dotnet restore --disable-parallel --no-cache --configfile nuget.config
+        - dotnet restore "$SOLUTION_FILE" --disable-parallel --no-cache --configfile nuget.config
     retry:
         max: 2
         when: script_failure
@@ -61,9 +68,9 @@ build:
     script:
         # Audit and compile the same restore output in this job. Shared caches
         # retain their original source even after changing nuget.config.
-        - dotnet restore --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
-        - s360 check --ecosystem nuget --purpose "$S360_PURPOSE"
-        - dotnet build -maxcpucount:1 --no-self-contained --no-restore
+        - dotnet restore "$SOLUTION_FILE" --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
+        - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
+        - dotnet build "$SOLUTION_FILE" -maxcpucount:1 --no-self-contained --no-restore
     retry:
         max: 2
         # Policy rejection must stop immediately, without retrying the audit.
@@ -91,7 +98,7 @@ test:
         - build
     coverage: '/TOTAL_COVERAGE=(\d+.\d+)/'
     script:
-        - dotnet test *.sln --collect:"XPlat Code Coverage" --logger "junit;MethodFormat=Class;FailureBodyFormat=Verbose" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByAttribute=GeneratedCodeAttribute
+        - dotnet test "$SOLUTION_FILE" --collect:"XPlat Code Coverage" --logger "junit;MethodFormat=Class;FailureBodyFormat=Verbose" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.ExcludeByAttribute=GeneratedCodeAttribute
         - reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"." -reporttypes:"cobertura"
         - COVERAGE_VALUE=$(grep -oPm 1 'line-rate="\K([0-9.]+)' "./Cobertura.xml")
         - COVERAGE_PERCENTAGE=$(echo "scale=2; $COVERAGE_VALUE * 100" | bc)
@@ -153,8 +160,8 @@ pack:
         - job: validate_docker
           optional: true
     script:
-        - dotnet build -maxcpucount:1 --configuration Release --no-self-contained -p:GeneratePackageOnBuild=false *.sln
-        - dotnet pack -maxcpucount:1 --configuration Release --no-build *.sln
+        - dotnet build -maxcpucount:1 --configuration Release --no-self-contained -p:GeneratePackageOnBuild=false "$SOLUTION_FILE"
+        - dotnet pack -maxcpucount:1 --configuration Release --no-build "$SOLUTION_FILE"
     artifacts:
         expire_in: 1 week
         paths:
