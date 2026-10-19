@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
+# Repository configuration.
+app_name="template"
+extra_docker_args=()
+
 set -euo pipefail
 
 # Keep the original no-argument and port-only invocation working.
-app_name="template"
 port=""
 case $# in
     0) ;;
@@ -17,7 +20,7 @@ case $# in
     2) app_name="$1"; port="$2" ;;
     *) echo "Usage: sudo bash install.sh [port] or <app-name> [port]" >&2; exit 1 ;;
 esac
-if [[ ! "$app_name" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+if [[ ! "$app_name" =~ ^[a-zA-Z0-9][a-zA-Z0-9-]*$ ]]; then
     echo "Invalid application name." >&2
     exit 1
 fi
@@ -50,13 +53,15 @@ if (( EUID != 0 )); then
     exit 1
 fi
 
+image_name="${app_name,,}"
+
 # Existing source/package installations need an explicit data migration.
-if [[ -e "/etc/systemd/system/$app_name.service" || -e "/lib/systemd/system/$app_name.service" || -e "/usr/lib/systemd/system/$app_name.service" || -e "/lib/systemd/system/aiursoft-$app_name.service" ]]; then
+if [[ -e "/etc/systemd/system/$app_name.service" || -e "/lib/systemd/system/$app_name.service" || -e "/usr/lib/systemd/system/$app_name.service" || -e "/lib/systemd/system/aiursoft-$image_name.service" ]]; then
     echo "An existing systemd installation was found. Migrate its configuration and data before using Docker." >&2
     exit 1
 fi
 
-image="docker.io/aiursoft/$app_name:latest"
+image="docker.io/aiursoft/$image_name:latest"
 echo "This will install Docker if needed and run $image (host port: $port)."
 echo "Configuration and data will use the '$app_name-data' Docker volume."
 echo "Installation starts in three seconds. Press Ctrl+C to cancel."
@@ -104,6 +109,7 @@ docker pull "$image"
 docker run --detach --name "$app_name" --restart unless-stopped \
     --publish "$port:5000" \
     --mount "type=volume,source=$app_name-data,target=/data" \
+    "${extra_docker_args[@]}" \
     "$image"
 
 # Older callers use systemctl restart <app> after installation.
