@@ -1,4 +1,5 @@
 stages:
+    - s360
     - build
     - validate
     - publish
@@ -40,7 +41,6 @@ before_script:
       NUGETEOF
     - "export PATH=$PATH:$HOME/.dotnet/tools"
     - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
-    - "dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS"
     - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
@@ -53,27 +53,32 @@ variables:
     S360_CHECK_KEY: ""
     CUSTOM_NUGET_ARGS: "--add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config"
 
-restore:
-    stage: build
+s360:
+    stage: s360
     script:
-        - dotnet restore "$SOLUTION_FILE" --disable-parallel --no-cache --configfile nuget.config
+        - dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS
+        - dotnet restore "$SOLUTION_FILE" --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
+        - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
+    artifacts:
+        expire_in: 1 day
+        paths:
+            - "**/packages.lock.json"
     retry:
         max: 2
-        when: script_failure
+        # Policy rejection must stop immediately, without retrying the audit.
+        when: runner_system_failure
 
 build:
     stage: build
     needs:
-        - restore
+        - s360
     script:
-        # Audit and compile the same restore output in this job. Shared caches
-        # retain their original source even after changing nuget.config.
-        - dotnet restore "$SOLUTION_FILE" --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
-        - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
+        # Job directories differ. Restore the audited versions and content hashes
+        # from the lock files instead of reusing another job's absolute paths.
+        - dotnet restore "$SOLUTION_FILE" --locked-mode --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - dotnet build "$SOLUTION_FILE" -maxcpucount:1 --no-self-contained --no-restore
     retry:
         max: 2
-        # Policy rejection must stop immediately, without retrying the audit.
         when: runner_system_failure
 
 lint:
