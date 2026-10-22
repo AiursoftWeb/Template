@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>Dockerized til nem implementering</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Dokumentation</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>Dynamisk Navigationslinje</value>
   </data>

@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>Docker hóa để triển khai dễ dàng</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Tài liệu</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>Thanh Điều Hướng Động</value>
   </data>

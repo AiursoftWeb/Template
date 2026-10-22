@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>Docker化以方便部署</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>文件說明</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>動態導航欄</value>
   </data>
