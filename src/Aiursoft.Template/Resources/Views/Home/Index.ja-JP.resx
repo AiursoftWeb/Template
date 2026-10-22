@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>Docker対応でデプロイが簡単</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>ドキュメント</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>動的ナビゲーションバー</value>
   </data>

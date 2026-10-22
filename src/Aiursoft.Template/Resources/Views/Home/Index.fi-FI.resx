@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>Docker-keittävä helppokäyttöinen käyttöönotto</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>Dokumentaatio</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>Dynaaminen navigointipalkki</value>
   </data>

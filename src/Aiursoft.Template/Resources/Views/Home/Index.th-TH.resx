@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>ใช้ Docker สำหรับการติดตั้งอย่างง่าย</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>เอกสารประกอบ</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>แถบนำทางแบบไดนามิก</value>
   </data>

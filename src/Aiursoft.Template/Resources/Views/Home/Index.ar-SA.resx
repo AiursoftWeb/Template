@@ -267,6 +267,9 @@
   <data name="Dockerized for Easy Deployment" xml:space="preserve">
     <value>مُحَوَّل إلى دوكير لDeployment سهل</value>
   </data>
+  <data name="Documentation" xml:space="preserve">
+    <value>التوثيق</value>
+  </data>
   <data name="Dynamic Navigation Bar" xml:space="preserve">
     <value>شريط التنقل الديناميكي</value>
   </data>
