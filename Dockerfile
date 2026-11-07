@@ -7,8 +7,8 @@ FROM --platform=$BUILDPLATFORM hub.aiursoft.com/node:24-alpine AS npm-env
 ARG CSPROJ_PATH
 WORKDIR /src
 # Only copy package files to take advantage of Docker cache
-COPY ${CSPROJ_PATH}wwwroot/package.json ${CSPROJ_PATH}wwwroot/package-lock.json* ${CSPROJ_PATH}wwwroot/.npmrc* /src/${CSPROJ_PATH}wwwroot/
-RUN npm install --prefix "${CSPROJ_PATH}wwwroot" --loglevel verbose
+COPY ${CSPROJ_PATH}wwwroot/package.json ${CSPROJ_PATH}wwwroot/package-lock.json ${CSPROJ_PATH}wwwroot/.npmrc* /src/${CSPROJ_PATH}wwwroot/
+RUN npm ci --prefix "${CSPROJ_PATH}wwwroot" --loglevel verbose
 
 # Build frontend (slims node_modules to only "keep" declared packages)
 COPY ${CSPROJ_PATH}wwwroot/build.mjs /src/${CSPROJ_PATH}wwwroot/build.mjs
