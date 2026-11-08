@@ -69,8 +69,10 @@ s360:
 
 s360_npm:
     stage: s360
+    before_script: []
     script:
-        - dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS
+        - export PATH="$PATH:$HOME/.dotnet/tools"
+        - dotnet tool update Aiursoft.S360.Client --global --add-source https://nuget.aiursoft.com/v3/index.json
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
