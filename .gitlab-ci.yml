@@ -38,7 +38,8 @@ before_script:
           </packageSources>
       </configuration>
       NUGETEOF
-    - export PATH="$HOME/.dotnet/tools:$PATH"
+    # External tools come from the Runner. Never install or update them here.
+    - export PATH="$CI_TOOLS_DIR:$HOME/.dotnet/tools:$PATH"
     - |
       if ! command -v dotnet >/dev/null 2>&1; then
         echo "Required Runner tool 'dotnet' is missing. Provision it in the Runner image." >&2
@@ -54,10 +55,31 @@ before_script:
         echo "Required Runner tool 'reportgenerator' is missing. Provision it in the Runner image." >&2
         exit 1
       fi
+    # Refresh internal clients from Nupkg in this job's own directory.
+    - mkdir -p "$CI_TOOLS_DIR"
+    - |
+      cat > "$CI_TOOLS_DIR/nuget.config" << 'NUGETEOF'
+      <?xml version="1.0" encoding="utf-8"?>
+      <configuration>
+          <packageSources>
+              <clear />
+              <add key="nupkg" value="https://nupkg.aiursoft.com/v3/index.json" />
+          </packageSources>
+      </configuration>
+      NUGETEOF
+    - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_TOOLS_DIR" --configfile "$CI_TOOLS_DIR/nuget.config"
+    - dotnet tool update Aiursoft.Apkg.Client --tool-path "$CI_TOOLS_DIR" --configfile "$CI_TOOLS_DIR/nuget.config"
+    - '"$CI_TOOLS_DIR/s360" --version'
+    - '"$CI_TOOLS_DIR/apkg" --version'
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
+# after_script has a fresh shell; keep the path in a CI variable.
+after_script:
+    - rm -rf "$CI_TOOLS_DIR"
+
 variables:
+    CI_TOOLS_DIR: "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID"
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
@@ -67,11 +89,6 @@ variables:
 s360:
     stage: s360
     script:
-        - |
-          if ! command -v s360 >/dev/null 2>&1; then
-            echo "Required Runner tool 's360' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         - dotnet restore "$SOLUTION_FILE" --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
     artifacts:
@@ -85,14 +102,7 @@ s360:
 
 s360_npm:
     stage: s360
-    before_script: []
     script:
-        - export PATH="$HOME/.dotnet/tools:$PATH"
-        - |
-          if ! command -v s360 >/dev/null 2>&1; then
-            echo "Required Runner tool 's360' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -182,11 +192,6 @@ validate_apkg:
     needs:
         - build
     script:
-        - |
-          if ! command -v apkg >/dev/null 2>&1; then
-            echo "Required Runner tool 'apkg' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
