@@ -87,7 +87,7 @@ public class UsersController(
 
         var permissions = AppPermissions.GetAllPermissions()
             .Where(p => allPermissionValues.Contains(p.Key))
-            .OrderBy(p => p.Name)
+            .OrderBy(p => p.Name, StringComparer.CurrentCulture)
             .ToList();
 
         return this.StackView(new DetailsViewModel
