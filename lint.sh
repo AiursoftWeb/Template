@@ -41,12 +41,7 @@ if [ -z "$CI" ]; then
 fi
 
 echo "Checking for JetBrains ReSharper Global Tools..."
-if ! command -v jb &> /dev/null; then
-    echo "Required tool 'jb' is missing. Install JetBrains ReSharper Global Tools before running lint." >&2
-    exit 1
-else
-    echo "jb is already installed."
-fi
+command -v jb || { echo "Required tool 'jb' is missing." >&2; exit 1; }
 
 echo "Restoring dependencies..."
 dotnet restore --no-cache --configfile nuget.config || \
