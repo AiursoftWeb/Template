@@ -38,9 +38,14 @@ before_script:
           </packageSources>
       </configuration>
       NUGETEOF
-    - "export PATH=$PATH:$HOME/.dotnet/tools"
-    - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
-    - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
+    - export PATH="$HOME/.dotnet/tools:$PATH"
+    - |
+      for tool in dotnet jb reportgenerator; do
+        if ! command -v "$tool" >/dev/null 2>&1; then
+          printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+          exit 1
+        fi
+      done
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
@@ -50,12 +55,17 @@ variables:
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
     S360_PURPOSE: review
     S360_CHECK_KEY: ""
-    CUSTOM_NUGET_ARGS: "--add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config"
 
 s360:
     stage: s360
     script:
-        - dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS
+        - |
+          for tool in s360; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         - dotnet restore "$SOLUTION_FILE" --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
     artifacts:
@@ -71,8 +81,14 @@ s360_npm:
     stage: s360
     before_script: []
     script:
-        - export PATH="$PATH:$HOME/.dotnet/tools"
-        - dotnet tool update Aiursoft.S360.Client --global --add-source https://nuget.aiursoft.com/v3/index.json
+        - export PATH="$HOME/.dotnet/tools:$PATH"
+        - |
+          for tool in s360; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -162,7 +178,13 @@ validate_apkg:
     needs:
         - build
     script:
-        - "which apkg || dotnet tool install Aiursoft.Apkg.Client --global $CUSTOM_NUGET_ARGS -v d"
+        - |
+          for tool in apkg; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
