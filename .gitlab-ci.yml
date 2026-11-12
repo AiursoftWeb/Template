@@ -28,7 +28,7 @@ before_script:
       export SOLUTION_FILE="$1"
     # CI uses the company NuGet source approved by S360. Keep nuget.org in the
     # checked-in config for external contributors, but do not bypass CI policy.
-    - &internal_nuget_config |
+    - |
       cat > nuget.config << 'NUGETEOF'
       <?xml version="1.0" encoding="utf-8"?>
       <configuration>
@@ -38,8 +38,8 @@ before_script:
           </packageSources>
       </configuration>
       NUGETEOF
-    # Runner tools are provisioned centrally; jobs must never install or update them.
-    - export PATH="$HOME/.dotnet/tools:$PATH"
+    # External tools come from the Runner. Never install or update them here.
+    - export PATH="$CI_TOOLS_DIR:$HOME/.dotnet/tools:$PATH"
     - |
       if ! command -v dotnet >/dev/null 2>&1; then
         echo "Required Runner tool 'dotnet' is missing. Provision it in the Runner image." >&2
@@ -55,20 +55,31 @@ before_script:
         echo "Required Runner tool 'reportgenerator' is missing. Provision it in the Runner image." >&2
         exit 1
       fi
+    # Refresh internal clients from Nupkg in this job's own directory.
+    - mkdir -p "$CI_TOOLS_DIR"
     - |
-      dotnet tool list --global | awk '
-        $1 == "jetbrains.resharper.globaltools" { jb = ($2 == "2026.2.4.1"); print }
-        $1 == "dotnet-reportgenerator-globaltool" { report = ($2 == "5.5.12"); print }
-        END {
-          if (!jb || !report) {
-            print "Expected Runner tools: ReSharper 2026.2.4.1 and ReportGenerator 5.5.12." > "/dev/stderr"
-            exit 1
-          }
-        }'
+      cat > "$CI_TOOLS_DIR/nuget.config" << 'NUGETEOF'
+      <?xml version="1.0" encoding="utf-8"?>
+      <configuration>
+          <packageSources>
+              <clear />
+              <add key="nupkg" value="https://nupkg.aiursoft.com/v3/index.json" />
+          </packageSources>
+      </configuration>
+      NUGETEOF
+    - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_TOOLS_DIR" --configfile "$CI_TOOLS_DIR/nuget.config"
+    - dotnet tool update Aiursoft.Apkg.Client --tool-path "$CI_TOOLS_DIR" --configfile "$CI_TOOLS_DIR/nuget.config"
+    - '"$CI_TOOLS_DIR/s360" --version'
+    - '"$CI_TOOLS_DIR/apkg" --version'
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
+# after_script has a fresh shell; keep the path in a CI variable.
+after_script:
+    - rm -rf "$CI_TOOLS_DIR"
+
 variables:
+    CI_TOOLS_DIR: "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID"
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
@@ -78,11 +89,6 @@ variables:
 s360:
     stage: s360
     script:
-        - |
-          if ! command -v s360 >/dev/null 2>&1; then
-            echo "Required Runner tool 's360' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         # Preserve independently verified origin evidence; compilation uses Nupkg.
         - dotnet restore "$SOLUTION_FILE" --source https://nuget.aiursoft.com/v3/index.json --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
@@ -97,15 +103,7 @@ s360:
 
 s360_npm:
     stage: s360
-    before_script:
-        - *internal_nuget_config
     script:
-        - export PATH="$HOME/.dotnet/tools:$PATH"
-        - |
-          if ! command -v s360 >/dev/null 2>&1; then
-            echo "Required Runner tool 's360' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -195,11 +193,6 @@ validate_apkg:
     needs:
         - build
     script:
-        - |
-          if ! command -v apkg >/dev/null 2>&1; then
-            echo "Required Runner tool 'apkg' is missing. Provision it in the Runner image." >&2
-            exit 1
-          fi
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
