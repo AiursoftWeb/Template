@@ -40,21 +40,9 @@ before_script:
       NUGETEOF
     # External tools come from the Runner. Never install or update them here.
     - export PATH="$CI_TOOLS_DIR:$HOME/.dotnet/tools:$PATH"
-    - |
-      if ! command -v dotnet >/dev/null 2>&1; then
-        echo "Required Runner tool 'dotnet' is missing. Provision it in the Runner image." >&2
-        exit 1
-      fi
-    - |
-      if ! command -v jb >/dev/null 2>&1; then
-        echo "Required Runner tool 'jb' is missing. Provision it in the Runner image." >&2
-        exit 1
-      fi
-    - |
-      if ! command -v reportgenerator >/dev/null 2>&1; then
-        echo "Required Runner tool 'reportgenerator' is missing. Provision it in the Runner image." >&2
-        exit 1
-      fi
+    - command -v dotnet          || { echo "Runner is missing dotnet." >&2; exit 1; }
+    - command -v jb              || { echo "Runner is missing jb." >&2; exit 1; }
+    - command -v reportgenerator || { echo "Runner is missing reportgenerator." >&2; exit 1; }
     # Refresh internal clients from Nupkg in this job's own directory.
     - mkdir -p "$CI_TOOLS_DIR"
     - |
