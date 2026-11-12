@@ -261,3 +261,11 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
   "AllowedHosts": "*"
 }
 ```
+
+## Build package sources
+
+Local contributor builds use public NuGet/npm sources by default. GitLab compilation
+uses Nupkg/Nopkg; dependency versions and integrity values remain locked. S360
+independently checks the original sources before the build.
+Docker builds use public package sources unless `NUGET_SOURCE` and `NPM_REGISTRY`
+build arguments explicitly select the internal registries.

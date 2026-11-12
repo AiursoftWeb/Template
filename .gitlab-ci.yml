@@ -28,13 +28,13 @@ before_script:
       export SOLUTION_FILE="$1"
     # CI uses the company NuGet source approved by S360. Keep nuget.org in the
     # checked-in config for external contributors, but do not bypass CI policy.
-    - |
+    - &internal_nuget_config |
       cat > nuget.config << 'NUGETEOF'
       <?xml version="1.0" encoding="utf-8"?>
       <configuration>
           <packageSources>
               <clear />
-              <add key="aiursoft" value="https://nuget.aiursoft.com/v3/index.json" />
+              <add key="aiursoft" value="https://nupkg.aiursoft.com/v3/index.json" />
           </packageSources>
       </configuration>
       NUGETEOF
@@ -50,13 +50,14 @@ variables:
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
     S360_PURPOSE: review
     S360_CHECK_KEY: ""
-    CUSTOM_NUGET_ARGS: "--add-source https://nuget.aiursoft.com/v3/index.json --configfile ./nuget.config"
+    CUSTOM_NUGET_ARGS: "--add-source https://nupkg.aiursoft.com/v3/index.json --configfile ./nuget.config"
 
 s360:
     stage: s360
     script:
         - dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS
-        - dotnet restore "$SOLUTION_FILE" --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
+        # Preserve independently verified origin evidence; compilation uses Nupkg.
+        - dotnet restore "$SOLUTION_FILE" --source https://nuget.aiursoft.com/v3/index.json --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
     artifacts:
         expire_in: 1 day
@@ -69,10 +70,11 @@ s360:
 
 s360_npm:
     stage: s360
-    before_script: []
+    before_script:
+        - *internal_nuget_config
     script:
         - export PATH="$PATH:$HOME/.dotnet/tools"
-        - dotnet tool update Aiursoft.S360.Client --global --add-source https://nuget.aiursoft.com/v3/index.json
+        - dotnet tool update Aiursoft.S360.Client --global $CUSTOM_NUGET_ARGS
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -152,7 +154,7 @@ validate_docker:
         - build
     script:
         - docker buildx use aiur-global-builder
-        - docker buildx build . --platform linux/amd64,linux/arm64
+        - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/
     rules:
         - exists:
               - Dockerfile
@@ -241,7 +243,7 @@ deploy_docker_all:
         - docker buildx use aiur-global-builder
         # Both required destinations must succeed. China replication is handled
         # asynchronously by puller_cn after the home-registry push completes.
-        - docker buildx build . --platform linux/amd64,linux/arm64 --tag "$LOCAL_TARGET_COM" --tag "$PUBLIC_TARGET" --push
+        - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ --tag "$LOCAL_TARGET_COM" --tag "$PUBLIC_TARGET" --push
 
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
