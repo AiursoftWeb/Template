@@ -38,11 +38,18 @@ before_script:
           </packageSources>
       </configuration>
       NUGETEOF
-    # Tools belong to this job, not the persistent shell Runner home.
-    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH:$HOME/.dotnet/tools"
-    # Keep the existing JB baseline; its upgrade is a separate reviewed task.
-    - command -v jb
-    - "dotnet tool update dotnet-reportgenerator-globaltool --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
+    # Audit/publish clients stay job-local. Reuse the fixed Runner tool baseline.
+    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$HOME/.dotnet/tools:$PATH"
+    - |
+      dotnet tool list --global | awk '
+        $1 == "jetbrains.resharper.globaltools" { jb = ($2 == "2026.2.4.1"); print }
+        $1 == "dotnet-reportgenerator-globaltool" { report = ($2 == "5.5.12"); print }
+        END {
+          if (!jb || !report) {
+            print "Expected Runner tools: ReSharper 2026.2.4.1 and ReportGenerator 5.5.12." > "/dev/stderr"
+            exit 1
+          }
+        }'
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
