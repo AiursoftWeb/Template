@@ -266,6 +266,9 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
 
 Local contributor builds use public NuGet/npm sources by default. GitLab compilation
 uses Nupkg/Nopkg; dependency versions and integrity values remain locked. S360
-independently checks the original sources before the build.
+independently verifies the actual packages served by Nupkg before the build.
 Docker builds use public package sources unless `NUGET_SOURCE` and `NPM_REGISTRY`
 build arguments explicitly select the internal registries.
+
+Internal NuGet publishing uses a dedicated `NUPKG_API_KEY` bound to the publishing
+account and its package ownership. The legacy feed key is not reused.

@@ -61,8 +61,7 @@ variables:
 s360:
     stage: s360
     script:
-        # Preserve independently verified origin evidence; compilation uses Nupkg.
-        - dotnet restore "$SOLUTION_FILE" --source https://nuget.aiursoft.com/v3/index.json --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
+        - dotnet restore "$SOLUTION_FILE" --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
     artifacts:
         expire_in: 1 day
@@ -203,7 +202,7 @@ deploy_local_nuget:
     script:
         - |
             for file in $(find . -name "*.nupkg"); do
-              dotnet nuget push "$file" --api-key "$LOCAL_NUGET_API_KEY" --source "https://nuget.aiursoft.com/v3/index.json" --skip-duplicate || exit 1;
+              dotnet nuget push "$file" --api-key "$NUPKG_API_KEY" --source "https://nupkg.aiursoft.com/v3/index.json" --skip-duplicate || exit 1;
             done
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
