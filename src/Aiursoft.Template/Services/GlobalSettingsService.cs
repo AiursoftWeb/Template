@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.DataProtection;
 using System.Security.Cryptography;
-using System.Globalization;
 
 namespace Aiursoft.Template.Services;
 
@@ -98,7 +97,7 @@ public class GlobalSettingsService(
                 }
                 break;
             case SettingType.Number:
-                if (!double.TryParse(value, NumberStyles.Float | NumberStyles.AllowThousands, CultureInfo.CurrentCulture, out _))
+                if (!double.TryParse(value, out _))
                 {
                     throw new InvalidOperationException($"Value '{value}' is not a valid number for setting {key}.");
                 }

@@ -39,8 +39,9 @@ before_script:
       </configuration>
       NUGETEOF
     # Tools belong to this job, not the persistent shell Runner home.
-    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH"
-    - "dotnet tool update JetBrains.ReSharper.GlobalTools --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
+    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH:$HOME/.dotnet/tools"
+    # Keep the existing JB baseline; its upgrade is a separate reviewed task.
+    - command -v jb
     - "dotnet tool update dotnet-reportgenerator-globaltool --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
@@ -78,7 +79,7 @@ s360_npm:
     before_script:
         - *internal_nuget_config
     script:
-        - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH"
+        - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH:$HOME/.dotnet/tools"
         - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID" $CUSTOM_NUGET_ARGS
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
