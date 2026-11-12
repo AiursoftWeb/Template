@@ -39,8 +39,8 @@ before_script:
       </configuration>
       NUGETEOF
     - "export PATH=$PATH:$HOME/.dotnet/tools"
-    - "which jb || dotnet tool install JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
-    - "which reportgenerator || dotnet tool install dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
+    - "dotnet tool update JetBrains.ReSharper.GlobalTools --global $CUSTOM_NUGET_ARGS -v d"
+    - "dotnet tool update dotnet-reportgenerator-globaltool --global $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
@@ -164,7 +164,7 @@ validate_apkg:
     needs:
         - build
     script:
-        - "which apkg || dotnet tool install Aiursoft.Apkg.Client --global $CUSTOM_NUGET_ARGS -v d"
+        - "dotnet tool update Aiursoft.Apkg.Client --global $CUSTOM_NUGET_ARGS -v d"
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
