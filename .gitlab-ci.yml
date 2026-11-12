@@ -38,8 +38,15 @@ before_script:
           </packageSources>
       </configuration>
       NUGETEOF
-    # Audit/publish clients stay job-local. Reuse the fixed Runner tool baseline.
-    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$HOME/.dotnet/tools:$PATH"
+    # Runner tools are provisioned centrally; jobs must never install or update them.
+    - export PATH="$HOME/.dotnet/tools:$PATH"
+    - |
+      for tool in dotnet jb reportgenerator; do
+        if ! command -v "$tool" >/dev/null 2>&1; then
+          printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+          exit 1
+        fi
+      done
     - |
       dotnet tool list --global | awk '
         $1 == "jetbrains.resharper.globaltools" { jb = ($2 == "2026.2.4.1"); print }
@@ -53,22 +60,23 @@ before_script:
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
 
-# Keep tool archives outside the repository/artifact scan and remove this job only.
-after_script:
-    - rm -rf "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID"
-
 variables:
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
     S360_PURPOSE: review
     S360_CHECK_KEY: ""
-    CUSTOM_NUGET_ARGS: "--add-source https://nupkg.aiursoft.com/v3/index.json --configfile ./nuget.config"
 
 s360:
     stage: s360
     script:
-        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID" $CUSTOM_NUGET_ARGS
+        - |
+          for tool in s360; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         # Preserve independently verified origin evidence; compilation uses Nupkg.
         - dotnet restore "$SOLUTION_FILE" --source https://nuget.aiursoft.com/v3/index.json --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
@@ -86,8 +94,14 @@ s360_npm:
     before_script:
         - *internal_nuget_config
     script:
-        - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH:$HOME/.dotnet/tools"
-        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID" $CUSTOM_NUGET_ARGS
+        - export PATH="$HOME/.dotnet/tools:$PATH"
+        - |
+          for tool in s360; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -177,7 +191,13 @@ validate_apkg:
     needs:
         - build
     script:
-        - "dotnet tool update Aiursoft.Apkg.Client --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
+        - |
+          for tool in apkg; do
+            if ! command -v "$tool" >/dev/null 2>&1; then
+              printf "Required Runner tool '%s' is missing. Provision it in the Runner image.\n" "$tool" >&2
+              exit 1
+            fi
+          done
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
