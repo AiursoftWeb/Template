@@ -39,11 +39,15 @@ before_script:
       </configuration>
       NUGETEOF
     # Tools belong to this job, not the persistent shell Runner home.
-    - export PATH="$CI_PROJECT_DIR/.ci-tools:$PATH"
-    - "dotnet tool update JetBrains.ReSharper.GlobalTools --tool-path \"$CI_PROJECT_DIR/.ci-tools\" $CUSTOM_NUGET_ARGS -v d"
-    - "dotnet tool update dotnet-reportgenerator-globaltool --tool-path \"$CI_PROJECT_DIR/.ci-tools\" $CUSTOM_NUGET_ARGS -v d"
+    - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH"
+    - "dotnet tool update JetBrains.ReSharper.GlobalTools --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
+    - "dotnet tool update dotnet-reportgenerator-globaltool --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
     - 'echo "Hostname: $(hostname)"'
     - "dotnet --info"
+
+# Keep tool archives outside the repository/artifact scan and remove this job only.
+after_script:
+    - rm -rf "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID"
 
 variables:
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
@@ -56,7 +60,7 @@ variables:
 s360:
     stage: s360
     script:
-        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_PROJECT_DIR/.ci-tools" $CUSTOM_NUGET_ARGS
+        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID" $CUSTOM_NUGET_ARGS
         # Preserve independently verified origin evidence; compilation uses Nupkg.
         - dotnet restore "$SOLUTION_FILE" --source https://nuget.aiursoft.com/v3/index.json --use-lock-file --disable-parallel --no-cache --configfile nuget.config --packages "$CI_PROJECT_DIR/obj/s360-packages"
         - s360 check --path "$SOLUTION_FILE" --ecosystem nuget --purpose "$S360_PURPOSE"
@@ -74,8 +78,8 @@ s360_npm:
     before_script:
         - *internal_nuget_config
     script:
-        - export PATH="$CI_PROJECT_DIR/.ci-tools:$PATH"
-        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_PROJECT_DIR/.ci-tools" $CUSTOM_NUGET_ARGS
+        - export PATH="$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID:$PATH"
+        - dotnet tool update Aiursoft.S360.Client --tool-path "$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID" $CUSTOM_NUGET_ARGS
         - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
     rules:
         - exists:
@@ -165,7 +169,7 @@ validate_apkg:
     needs:
         - build
     script:
-        - "dotnet tool update Aiursoft.Apkg.Client --tool-path \"$CI_PROJECT_DIR/.ci-tools\" $CUSTOM_NUGET_ARGS -v d"
+        - "dotnet tool update Aiursoft.Apkg.Client --tool-path \"$CI_BUILDS_DIR/.ci-tools/$CI_JOB_ID\" $CUSTOM_NUGET_ARGS -v d"
         - |
             aosproj_files=$(find . -type f -name '*.aosproj')
             if [ -z "$aosproj_files" ]; then
