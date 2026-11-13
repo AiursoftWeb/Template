@@ -36,6 +36,7 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 * [Translate](https://github.com/aiursoftweb/translate)
 * [Apkg](https://github.com/aiursoftweb/apkg)
 * [Nupkg](https://github.com/aiursoftweb/nupkg)
+* [Nopkg](https://github.com/aiursoftweb/nopkg)
 * [HowToCook Viewer](https://github.com/aiursoftweb/howtocookviewer)
 * [Kanban](https://github.com/aiursoftweb/kanban)
 * [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
@@ -261,16 +262,3 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
   "AllowedHosts": "*"
 }
 ```
-
-## Build package sources
-
-Local contributor builds use public NuGet/npm sources by default. GitLab compilation
-uses Nupkg/Nopkg; dependency versions and integrity values remain locked. S360
-independently verifies the actual packages served by Nupkg before the build.
-Docker builds use public package sources unless `NUGET_SOURCE` and `NPM_REGISTRY`
-build arguments explicitly select the internal registries.
-
-Internal NuGet publishing uses a dedicated `NUPKG_API_KEY` bound to the publishing
-account and its package ownership. The legacy feed key is not reused.
-
-Internal NuGet publishing is enabled by a protected `NUPKG_API_KEY` credential; public NuGet publishing remains separate. Configure the dedicated key and package ownership before enabling internal releases.
