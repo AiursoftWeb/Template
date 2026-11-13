@@ -1,7 +1,7 @@
 <Project Sdk="Aiursoft.Apkg.Sdk">
   <PropertyGroup>
     <PackageName>aiursoft-template</PackageName>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <PackageAuthors>Anduin Xue &lt;anduin@aiursoft.com&gt;</PackageAuthors>
     <PackageDescription>Aiursoft Template Web Application</PackageDescription>
     <TargetDistro>anduinos</TargetDistro>
@@ -15,8 +15,8 @@
   <ItemGroup>
     <PrebuildCommand Run="rm -rf bin/publish" />
     <PrebuildCommand Run="npm ci --prefix wwwroot" />
-    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained --runtime linux-x64 --output bin/publish/" Condition="'$(Arch)' == 'amd64'" />
-    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained --runtime linux-arm64 --output bin/publish/" Condition="'$(Arch)' == 'arm64'" />
+    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained -p:UseAppHost=false --runtime linux-x64 --output bin/publish/" Condition="'$(Arch)' == 'amd64'" />
+    <PrebuildCommand Run="dotnet publish Aiursoft.Template.csproj --configuration Release --no-self-contained -p:UseAppHost=false --runtime linux-arm64 --output bin/publish/" Condition="'$(Arch)' == 'arm64'" />
     <PrebuildCommand Run="cp -r wwwroot/* bin/publish/wwwroot/" />
     <PrebuildCommand Run="sed -i 's|DataSource=app.db|DataSource=/var/lib/aiursoft-template/app.db|g' bin/publish/appsettings.json" />
     <PrebuildCommand Run="sed -i 's|/tmp/data|/var/lib/aiursoft-template/storage|g' bin/publish/appsettings.json" />

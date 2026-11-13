@@ -55,6 +55,7 @@ variables:
     GIT_CLONE_PATH: "$CI_BUILDS_DIR/$CI_PROJECT_NAME/$CI_PIPELINE_ID/$CI_JOB_ID"
     MSBUILDDISABLENODEREUSE: "1"
     DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+    npm_config_registry: "https://nopkg.aiursoft.com/npm/"
     S360_PURPOSE: review
     S360_CHECK_KEY: ""
 
@@ -75,7 +76,7 @@ s360:
 s360_npm:
     stage: s360
     script:
-        - s360 check --path . --ecosystem npm --npm-lockfile-only --purpose "$S360_PURPOSE"
+        - s360 check --path . --ecosystem npm --npm-lockfile-only --npm-registry "$npm_config_registry" --purpose "$S360_PURPOSE"
     rules:
         - exists:
               - "**/package.json"
