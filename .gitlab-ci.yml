@@ -206,7 +206,7 @@ deploy_local_nuget:
               dotnet nuget push "$file" --api-key "$NUPKG_API_KEY" --source "https://nupkg.aiursoft.com/v3/index.json" --skip-duplicate || exit 1;
             done
     rules:
-        - if: '$CI_COMMIT_BRANCH == "master"'
+        - if: '$CI_COMMIT_BRANCH == "master" && $NUPKG_API_KEY'
 
 deploy_public_nuget:
     stage: deploy

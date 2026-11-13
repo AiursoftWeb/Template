@@ -272,3 +272,5 @@ build arguments explicitly select the internal registries.
 
 Internal NuGet publishing uses a dedicated `NUPKG_API_KEY` bound to the publishing
 account and its package ownership. The legacy feed key is not reused.
+
+Internal NuGet publishing is enabled by a protected `NUPKG_API_KEY` credential; public NuGet publishing remains separate. Configure the dedicated key and package ownership before enabling internal releases.
