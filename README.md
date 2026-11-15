@@ -14,7 +14,9 @@ Template is a sample project.
 
 Default user name is `admin@default.com` and default password is `Admin@123456!`.
 
-## Projects using Aiursoft Template
+## Overview
+
+### Projects using Aiursoft Template
 
 * [Stathub](https://github.com/aiursoftweb/stathub)
 * [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
@@ -44,6 +46,10 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 * [S360](https://github.com/aiursoftweb/s360)
 * [AlertCenter](https://github.com/aiursoftweb/alertcenter)
 * [ChessServer](https://github.com/aiursoftweb/chessserver)
+
+## CLI & SDK
+
+Template itself does not publish a CLI tool or a standalone SDK. Applications that provide clients document their actual installation commands, authentication and first request here.
 
 ## Try
 
@@ -112,15 +118,13 @@ The docker image has the following context:
 | Data path   | /data                           |
 | Config path | /data/appsettings.json          |
 
-## How to contribute
+## Usage
 
-There are many ways to contribute to the project: logging bugs, submitting pull requests, reporting issues, and creating suggestions.
+Sign in with the initial local account to explore user and role management, files, settings and the shared application UI. Use the configuration below to choose local accounts or OIDC for your deployment.
 
-Even if you with push rights on the repository, you should create a personal fork and create feature branches there when you need them. This keeps the main repository clean and your workflow cruft out of sight.
+## Configuration
 
-We're also interested in your feedback on the future of this project. You can submit a suggestion or feature request through the issue tracker. To make this process more effective, we're asking that these include more information to help define them more clearly.
-
-## Configuration Guide
+<a id="configuration-guide"></a>
 
 The defaults run as a standalone application with SQLite, local accounts, local file storage, and no ClickHouse server. Change a setting only after preparing the dependency named in its comment.
 
@@ -262,3 +266,40 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
   "AllowedHosts": "*"
 }
 ```
+
+## Documentation
+
+The [application configuration](src/Aiursoft.Template/appsettings.json) documents the available settings. The [shared file manifest](ninja.yaml) identifies files maintained across derived applications.
+
+### README structure
+
+Derived application READMEs select applicable level-two sections from this README, keeping their exact names and order:
+
+1. `Overview`
+2. `CLI & SDK`
+3. `Try`
+4. `Install with Docker`
+5. `Run manually`
+6. `Run in Microsoft Visual Studio`
+7. `Run in Docker`
+8. `Usage`
+9. `Configuration`
+10. `Documentation`
+11. `How to contribute`
+12. `License`
+
+Omit sections that do not apply. Keep the project name, badges and short description above the sections. Place product features in `Overview`, client installation and SDK availability in `CLI & SDK`, task examples and permission requirements in `Usage`, and reference links in `Documentation`. Product-specific topics use level-three or deeper headings within these sections; they do not introduce new level-two sections. Keep existing link anchors working when reorganizing topics.
+
+Document only available packages and tested commands. Source-only clients must include build instructions rather than a tool installation command. Keep each application's commands, permissions, dependencies and deployment details accurate; the shared structure does not make product behavior identical. README content remains project-specific rather than being copied wholesale by NugetNinja.
+
+## How to contribute
+
+There are many ways to contribute to the project: logging bugs, submitting pull requests, reporting issues, and creating suggestions.
+
+Even if you with push rights on the repository, you should create a personal fork and create feature branches there when you need them. This keeps the main repository clean and your workflow cruft out of sight.
+
+We're also interested in your feedback on the future of this project. You can submit a suggestion or feature request through the issue tracker. To make this process more effective, we're asking that these include more information to help define them more clearly.
+
+## License
+
+Licensed under the [MIT License](LICENSE).
