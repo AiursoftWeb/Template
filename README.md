@@ -124,7 +124,7 @@ Sign in with the initial local account to explore user and role management, file
 
 ## Configuration
 
-<a id="configuration-guide"></a>
+<a name="configuration-guide"></a>
 
 The defaults run as a standalone application with SQLite, local accounts, local file storage, and no ClickHouse server. Change a setting only after preparing the dependency named in its comment.
 
