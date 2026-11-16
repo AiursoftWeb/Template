@@ -1,4 +1,6 @@
-# Template - A sample project
+# Aiursoft Template - A sample project
+
+<a name="template---a-sample-project"></a>
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/template/blob/master/LICENSE)
 [![Pipeline stat](https://badge-proxy.aiursoft.com/aiursoft/template/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/template/-/pipelines)
@@ -16,40 +18,9 @@ Default user name is `admin@default.com` and default password is `Admin@123456!`
 
 ## Overview
 
-### Projects using Aiursoft Template
+### What is Template?
 
-* [Stathub](https://github.com/aiursoftweb/stathub)
-* [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
-* [MusicTools](https://github.com/aiursoftweb/musictools)
-* [AnduinOS Home](https://github.com/aiursoftweb/AnduinOS-Home)
-* [Manhours](https://github.com/aiursoftweb/manhours)
-* [Tracer](https://github.com/aiursoftweb/tracer)
-* [Warp](https://github.com/aiursoftweb/warp)
-* [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
-* [EmployeeCenter](https://github.com/aiursoftweb/employeecenter)
-* [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
-* [CppRunner](https://github.com/aiursoftweb/cpprunner)
-* [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
-* [Polls](https://github.com/aiursoftweb/polls)
-* [WeChatExam](https://github.com/aiursoftweb/wechatexam)
-* [MusicExam](https://github.com/aiursoftweb/musicexam)
-* [CorpHome](https://github.com/aiursoftweb/corphome)
-* [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
-* [Translate](https://github.com/aiursoftweb/translate)
-* [Apkg](https://github.com/aiursoftweb/apkg)
-* [Nupkg](https://github.com/aiursoftweb/nupkg)
-* [Nopkg](https://github.com/aiursoftweb/nopkg)
-* [HowToCook Viewer](https://github.com/aiursoftweb/howtocookviewer)
-* [Kanban](https://github.com/aiursoftweb/kanban)
-* [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
-* [DocsViewer](https://github.com/aiursoftweb/docsviewer)
-* [S360](https://github.com/aiursoftweb/s360)
-* [AlertCenter](https://github.com/aiursoftweb/alertcenter)
-* [ChessServer](https://github.com/aiursoftweb/chessserver)
-
-## CLI & SDK
-
-Template itself does not publish a CLI tool or a standalone SDK. Applications that provide clients document their actual installation commands, authentication and first request here.
+Template is a sample project.
 
 ## Try
 
@@ -122,6 +93,70 @@ The docker image has the following context:
 
 Sign in with the initial local account to explore user and role management, files, settings and the shared application UI. Use the configuration below to choose local accounts or OIDC for your deployment.
 
+### Projects using Aiursoft Template
+
+* [Stathub](https://github.com/aiursoftweb/stathub)
+* [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
+* [MusicTools](https://github.com/aiursoftweb/musictools)
+* [AnduinOS Home](https://github.com/aiursoftweb/AnduinOS-Home)
+* [Manhours](https://github.com/aiursoftweb/manhours)
+* [Tracer](https://github.com/aiursoftweb/tracer)
+* [Warp](https://github.com/aiursoftweb/warp)
+* [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
+* [EmployeeCenter](https://github.com/aiursoftweb/employeecenter)
+* [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
+* [CppRunner](https://github.com/aiursoftweb/cpprunner)
+* [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
+* [Polls](https://github.com/aiursoftweb/polls)
+* [WeChatExam](https://github.com/aiursoftweb/wechatexam)
+* [MusicExam](https://github.com/aiursoftweb/musicexam)
+* [CorpHome](https://github.com/aiursoftweb/corphome)
+* [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
+* [Translate](https://github.com/aiursoftweb/translate)
+* [Apkg](https://github.com/aiursoftweb/apkg)
+* [Nupkg](https://github.com/aiursoftweb/nupkg)
+* [Nopkg](https://github.com/aiursoftweb/nopkg)
+* [HowToCook Viewer](https://github.com/aiursoftweb/howtocookviewer)
+* [Kanban](https://github.com/aiursoftweb/kanban)
+* [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
+* [DocsViewer](https://github.com/aiursoftweb/docsviewer)
+* [S360](https://github.com/aiursoftweb/s360)
+* [AlertCenter](https://github.com/aiursoftweb/alertcenter)
+* [ChessServer](https://github.com/aiursoftweb/chessserver)
+
+### README structure
+
+Derived application READMEs select applicable level-two sections from this README, keeping their exact names and order:
+
+1. `Overview`
+2. `CLI & SDK`
+3. `Try`
+4. `Install with Docker`
+5. `Run manually`
+6. `Run in Microsoft Visual Studio`
+7. `Run in Docker`
+8. `Usage`
+9. `Configuration`
+10. `Documentation`
+11. `How to contribute`
+12. `License`
+
+Omit sections that do not apply. Keep the project name, badges and short description above the sections. Place product features in `Overview`, client installation and SDK availability in `CLI & SDK`, task examples and permission requirements in `Usage`, and reference links in `Documentation`. Product-specific topics use level-three or deeper headings within these sections; they do not introduce new level-two sections. Keep existing link anchors working when reorganizing topics.
+
+Document only available packages and tested commands. Source-only clients must include build instructions rather than a tool installation command. Keep each application's commands, permissions, dependencies and deployment details accurate; the shared structure does not make product behavior identical. README content remains project-specific rather than being copied wholesale by NugetNinja.
+
+### Client availability
+
+<a name="cli--sdk"></a>
+
+Template itself does not publish a CLI tool or a standalone SDK. Applications that provide clients document their actual installation commands, authentication and first request here.
+
+The standard heading formula for Template-derived ASP.NET Core applications is:
+
+`AOW {CCSA:Optional} {T:Optional}I RRR U {ANYTHING:Optional} CS {D:Optional}HL`
+
+Use `Aiursoft <project name>` as the title, followed by `Overview` and its `What is <project name>?` subsection. When clients exist, select `CLI`, `SDK`, and `Android app` under `CLI & SDK` in that order. `Try` requires a real demo; `Documentation` is optional. Keep product-specific subsections under `Usage`. Keep full configuration and its comments in `Configuration`, followed by `Shared settings`. An applicable `apt package filesystem layout` remains under the installation section. Preserve existing content and link anchors when reorganizing the README.
+
 ## Configuration
 
 <a name="configuration-guide"></a>
@@ -173,11 +208,11 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
 
     // File extensions allowed to open after content-signature validation. Empty means no extra audio, video, or SVG.
     // Supported values are mp3, mp4, ogg, svg, wav, and webm. This does not grant upload permission.
-    "SafeInlineMediaExtensions": [],
+    "SafeInlineMediaExtensions": ["svg"],
 
     // SVG opens only when svg is enabled above and its Workspace path starts with an entry in this list.
     // Example: [ "markdown-images" ]. Empty means every SVG downloads.
-    "SafeInlineSvgSubfolders": [],
+    "SafeInlineSvgSubfolders": ["project-logo"],
 
     // These values are copied into newly issued signed upload tokens; existing tokens keep their old policy.
     "UploadPolicy": {
@@ -267,30 +302,18 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
 }
 ```
 
+### Shared settings
+
+- `ConnectionStrings` selects the database provider and connection. Prepare the external database before choosing MySQL; keep the SQLite file persistent when using SQLite.
+- `Storage` configures local application files. Keep the storage directory persistent and use the documented hostname and upload policies for shared downloads.
+- `AppSettings` controls authentication and account synchronization. Choose local accounts or configure the OIDC authority, client and `/signin-oidc` callback; use environment variables for credentials.
+- Uncommented `GlobalSettings` entries override the database-backed administration settings. Leave entries commented to use the stored values or application defaults.
+- `Logging:LogLevel` controls application and framework verbosity. Configure the optional ClickHouse exporter only when its server and credentials are ready.
+- `AllowedHosts` is the ASP.NET Core Host-header allowlist, not a CORS setting.
+
 ## Documentation
 
 The [application configuration](src/Aiursoft.Template/appsettings.json) documents the available settings. The [shared file manifest](ninja.yaml) identifies files maintained across derived applications.
-
-### README structure
-
-Derived application READMEs select applicable level-two sections from this README, keeping their exact names and order:
-
-1. `Overview`
-2. `CLI & SDK`
-3. `Try`
-4. `Install with Docker`
-5. `Run manually`
-6. `Run in Microsoft Visual Studio`
-7. `Run in Docker`
-8. `Usage`
-9. `Configuration`
-10. `Documentation`
-11. `How to contribute`
-12. `License`
-
-Omit sections that do not apply. Keep the project name, badges and short description above the sections. Place product features in `Overview`, client installation and SDK availability in `CLI & SDK`, task examples and permission requirements in `Usage`, and reference links in `Documentation`. Product-specific topics use level-three or deeper headings within these sections; they do not introduce new level-two sections. Keep existing link anchors working when reorganizing topics.
-
-Document only available packages and tested commands. Source-only clients must include build instructions rather than a tool installation command. Keep each application's commands, permissions, dependencies and deployment details accurate; the shared structure does not make product behavior identical. README content remains project-specific rather than being copied wholesale by NugetNinja.
 
 ## How to contribute
 
