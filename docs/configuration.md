@@ -49,11 +49,11 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
 
     // File extensions allowed to open after content-signature validation. Empty means no extra audio, video, or SVG.
     // Supported values are mp3, mp4, ogg, svg, wav, and webm. This does not grant upload permission.
-    "SafeInlineMediaExtensions": [],
+    "SafeInlineMediaExtensions": ["svg"],
 
     // SVG opens only when svg is enabled above and its Workspace path starts with an entry in this list.
     // Example: [ "markdown-images" ]. Empty means every SVG downloads.
-    "SafeInlineSvgSubfolders": [],
+    "SafeInlineSvgSubfolders": ["project-logo"],
 
     // These values are copied into newly issued signed upload tokens; existing tokens keep their old policy.
     "UploadPolicy": {

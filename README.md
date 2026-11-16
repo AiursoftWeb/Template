@@ -16,19 +16,52 @@ Aiursoft Template is an ASP.NET Core application foundation with shared accounts
 
 Use Template as the starting point for an application that needs local or OIDC sign-in, permission-based access, shared UI components and persistent storage. See [projects using Template](docs/development.md#projects-using-aiursoft-template) for examples.
 
+<a name="projects-using-aiursoft-template"></a>
+
+### Projects using Aiursoft Template
+
+* [Stathub](https://github.com/aiursoftweb/stathub)
+* [MarkToHtml](https://github.com/aiursoftweb/marktohtml)
+* [MusicTools](https://github.com/aiursoftweb/musictools)
+* [AnduinOS Home](https://github.com/aiursoftweb/AnduinOS-Home)
+* [Manhours](https://github.com/aiursoftweb/manhours)
+* [Tracer](https://github.com/aiursoftweb/tracer)
+* [Warp](https://github.com/aiursoftweb/warp)
+* [AiurDrive](https://github.com/aiursoftweb/aiurdrive)
+* [EmployeeCenter](https://github.com/aiursoftweb/employeecenter)
+* [Git Mirror Server](https://github.com/aiursoftweb/gitmirrorserver)
+* [CppRunner](https://github.com/aiursoftweb/cpprunner)
+* [Ollama Gateway](https://github.com/aiursoftweb/ollamagateway)
+* [Polls](https://github.com/aiursoftweb/polls)
+* [WeChatExam](https://github.com/aiursoftweb/wechatexam)
+* [MusicExam](https://github.com/aiursoftweb/musicexam)
+* [CorpHome](https://github.com/aiursoftweb/corphome)
+* [Events Recorder](https://github.com/aiursoftweb/eventsrecorder)
+* [Translate](https://github.com/aiursoftweb/translate)
+* [Apkg](https://github.com/aiursoftweb/apkg)
+* [Nupkg](https://github.com/aiursoftweb/nupkg)
+* [Nopkg](https://github.com/aiursoftweb/nopkg)
+* [HowToCook Viewer](https://github.com/aiursoftweb/howtocookviewer)
+* [Kanban](https://github.com/aiursoftweb/kanban)
+* [MoongladeV2](https://github.com/aiursoftweb/moongladev2)
+* [DocsViewer](https://github.com/aiursoftweb/docsviewer)
+* [S360](https://github.com/aiursoftweb/s360)
+* [AlertCenter](https://github.com/aiursoftweb/alertcenter)
+* [ChessServer](https://github.com/aiursoftweb/chessserver)
+
 ## Try
 
 Try [Aiursoft Template](https://template.aiursoft.com).
 
 ## Install with Docker
 
-Run the installer with the desired port:
+Run the installer with the desired port (omit it to choose an available port):
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/aiursoftweb/template/master/install.sh | sudo bash -s -- 8080
 ```
 
-Open `http://localhost:8080` after installation completes.
+Installation starts after three seconds; press Ctrl+C to cancel. Open `http://localhost:8080` after installation completes.
 
 ## Run manually
 
@@ -98,19 +131,202 @@ See [the usage guide](https://template-docs.aiursoft.com/) for more examples.
 
 ## Configuration
 
-See [the configuration reference](docs/configuration.md) for available settings. Environment variable names use double underscores, such as `Logging__LogLevel__Default`.
+### Configuration file and defaults
+
+The defaults run as a standalone application with SQLite, local accounts, local file storage, and no ClickHouse server. Change a setting only after preparing the dependency named in its comment.
+
+The Docker image copies this file to `/data/appsettings.json` on its first start and keeps that copy on later starts. Mount `/data` as a persistent volume. To override a value without editing the file, use an environment variable with double underscores, such as `Storage__Path` or `AppSettings__OIDC__ClientSecret`.
+
+```jsonc
+{
+  "ConnectionStrings": {
+    // True: cache EF Core query results in this process. False: read from the database on every query.
+    "AllowCache": "True",
+
+    // Sqlite: use a local database file and no database server. MySql: use an external MySQL server.
+    // When changing this value, also replace DefaultConnection with a connection string for that provider.
+    "DbType": "Sqlite",
+    // With Sqlite, this creates app.db in the process working directory and applies migrations at startup.
+    "DefaultConnection": "DataSource=app.db;Cache=Shared"
+
+    // MySql requires a reachable server, database, user, and password. The application applies migrations at startup.
+    // sudo docker run -d --name db -e MYSQL_RANDOM_ROOT_PASSWORD=true -e MYSQL_DATABASE=template -e MYSQL_USER=template -e MYSQL_PASSWORD=template_password -p 3306:3306 hub.aiursoft.com/mysql
+    //"DbType": "MySql",
+    //"DefaultConnection": "Server=localhost;Database=template;Uid=template;Pwd=template_password;"
+  },
+  "Storage": {
+    // Writable local directory for public Workspace files and token-protected private Vault files.
+    // This is not an S3 or MinIO bucket.
+    // The Docker image changes /tmp/data to /data; mount /data as a persistent volume in production.
+    "Path": "/tmp/data",
+
+    // Optional second hostname for this application's own /download endpoints; this is not an S3 or MinIO URL.
+    // Example: set https://files.example.com, point that DNS name to this server, and add this Caddy route:
+    // files.example.com {
+    //     reverse_proxy 127.0.0.1:5000
+    // }
+    // Replace 127.0.0.1:5000 with the same upstream used by the web UI. Leave empty to use the UI hostname.
+    "PublicOrigin": "",
+
+    // False: verified images and configured media can open on the normal web hostname.
+    // True: inline viewing works only through PublicOrigin; the same request on the UI hostname downloads the file.
+    // True requires PublicOrigin plus DNS, TLS, and a reverse-proxy route to this same application instance.
+    "RequireDedicatedInlineOrigin": false,
+
+    // False: only verified images and SafeInlineMediaExtensions open in the browser; every other file downloads.
+    // True: every file type may open through PublicOrigin, and HTML or SVG scripts may run there.
+    // True requires RequireDedicatedInlineOrigin=true and a PublicOrigin that receives no application cookies.
+    "AllowArbitraryInlineOnDedicatedOrigin": false,
+
+    // File extensions allowed to open after content-signature validation. Empty means no extra audio, video, or SVG.
+    // Supported values are mp3, mp4, ogg, svg, wav, and webm. This does not grant upload permission.
+    "SafeInlineMediaExtensions": ["svg"],
+
+    // SVG opens only when svg is enabled above and its Workspace path starts with an entry in this list.
+    // Example: [ "markdown-images" ]. Empty means every SVG downloads.
+    "SafeInlineSvgSubfolders": ["project-logo"],
+
+    // These values are copied into newly issued signed upload tokens; existing tokens keep their old policy.
+    "UploadPolicy": {
+      // False: a valid signed upload token is enough. True: the uploader must also be signed in to this application.
+      "RequireAuthenticatedUser": false,
+
+      // False: preserve spaces in uploaded file names. True: save each space as a hyphen.
+      "ReplaceSpacesWithHyphens": false
+    }
+  },
+  "AppSettings": {
+    // Local: use built-in accounts and passwords. OIDC: redirect sign-in to an external identity provider.
+    // OIDC also requires the OIDC section below and a provider callback URL of https://<web-host>/signin-oidc.
+    "AuthProvider": "Local",
+
+    // Empty: assign no automatic role. Otherwise, assign this role to every new local or OIDC user.
+    // With Local, create the role first. With OIDC, the application creates it during account synchronization.
+    "DefaultRole": "",
+
+    // False: sign-in ends when the browser session closes. True: issue a persistent sign-in cookie.
+    "PersistsSignIn": false,
+
+    // This section is used only when AuthProvider is OIDC.
+    "OIDC": {
+      // Provider discovery base URL. It must be reachable by the application and should use HTTPS in production.
+      "Authority": "https://auth.aiursoft.com/application/o/template",
+      // Client identifier created for this application in the OIDC provider.
+      "ClientId": "",
+      // Client secret created by the provider. Set AppSettings__OIDC__ClientSecret instead of committing a real secret.
+      "ClientSecret": "",
+
+      // Claim containing role names. On every login, local roles are replaced by these roles plus DefaultRole.
+      "RolePropertyName": "groups",
+      // Required claim used as the local username when an OIDC account is first created.
+      "UsernamePropertyName": "preferred_username",
+      // Required claim copied to the local display name on every login.
+      "UserDisplayNamePropertyName": "name",
+      // Required unique email claim. The provider must keep it verified, unique, and stable.
+      "EmailPropertyName": "email",
+      // Required immutable account identifier. Keep this mapped to the standard OIDC sub claim.
+      "UserIdentityPropertyName": "sub"
+    },
+
+    // This section is used only when AuthProvider is Local.
+    "Local": {
+      // True: show self-registration and allow new local accounts. False: existing users can sign in, but cannot register.
+      "AllowRegister": true,
+      // True: require only six characters. False: require eight characters with upper, lower, digit, and symbol.
+      "AllowWeakPassword": true
+    }
+  },
+  "GlobalSettings": {
+    // Leave an entry commented to use the database value or built-in default.
+    // Uncommenting an entry forces that value and overrides changes made in the administration UI.
+
+    // True: users may change their display nickname. False: only administrators control it.
+    // "Allow_User_Adjust_Nickname": "True",
+    // Text shown as the brand name in the footer.
+    // "BrandName": "Aiursoft",
+    // URL opened when a user clicks the footer brand name.
+    // "BrandHomeUrl": "https://www.aiursoft.com/",
+    // Mainland China ICP license number. Empty hides it.
+    // "Icp": "",
+    // Application name shown in the web interface.
+    // "ProjectName": "Aiursoft Template"
+  },
+  "Logging": {
+    "LogLevel": {
+      // Minimum level for application logs. Typical values: Debug, Information, Warning, Error, or None.
+      "Default": "Information",
+      // Separate minimum level for ASP.NET Core framework logs; Warning reduces routine request noise.
+      "Microsoft.AspNetCore": "Warning"
+    },
+    "Clickhouse": {
+      // False: do not send logs to ClickHouse. True: create TableName at startup and send logs in batches.
+      // Before enabling, provide a reachable ClickHouse server and valid credentials in ConnectionString.
+      "Enabled": false,
+      // ClickHouse host, protocol, port, credentials, and database. Used only when Enabled is true.
+      "ConnectionString": "Host=localhost;Protocol=http;Port=8123;User=default;Password=;Database=AspNetCoreLogs",
+      // ClickHouse table created and used for application logs when Enabled is true.
+      "TableName": "TemplateLogs"
+    }
+  },
+  // ASP.NET Core Host-header allowlist; this is not a CORS setting.
+  // * accepts every hostname. In production, use semicolon-separated names such as example.com;www.example.com.
+  "AllowedHosts": "*"
+}
+```
+
+### Environment overrides
+
+ASP.NET Core configuration keys use double underscores in environment variables. For example:
+
+```bash
+Storage__Path=/data
+AppSettings__AuthProvider=OIDC
+AppSettings__OIDC__ClientSecret=replace-with-your-client-secret
+Logging__LogLevel__Default=Warning
+```
+
+Pass the required overrides with Docker's `-e` option or the environment mechanism of your service manager. Configure both `ConnectionStrings__DbType` and `ConnectionStrings__DefaultConnection` when selecting MySQL. Prepare the database and identity provider before enabling them, and keep the data volume when replacing the application container.
+
+### Configuration reference
+
+The [application configuration](src/Aiursoft.Template/appsettings.json) contains the source defaults. The settings above are documented here so that installation and configuration can be completed from this README.
 
 <a name="configuration-guide"></a>
 
-The defaults use SQLite, local accounts and local file storage. Configure optional MySQL, OIDC or ClickHouse dependencies only after preparing the required services. The [configuration guide](docs/configuration.md) explains each setting.
+The configuration above covers the shared application settings. See [configuration and persistence](docs/configuration.md) for the same reference in a standalone document.
 
 ## Documentation
 
 - [User and application development documentation](https://template-docs.aiursoft.com/)
 - [Configuration and persistence](docs/configuration.md)
 - [Build, tests and README conventions](docs/development.md)
-- <a name="projects-using-aiursoft-template"></a>[Projects using Template](docs/development.md#projects-using-aiursoft-template)
-- <a name="cli--sdk"></a><a name="readme-structure"></a>[README structure](docs/development.md#readme-structure)
+- [Projects using Template](#projects-using-aiursoft-template)
+- <a name="cli--sdk"></a>[README structure](#readme-structure)
+
+### README structure
+
+Web applications keep the same base sections, common prose and command layout. Replace only project parameters and the declared product-specific content. The ordered section catalog is:
+
+1. `Overview`
+2. `CLI & SDK` (optional client capability)
+3. `Try`
+4. `Install with Docker`
+5. `Run manually`
+6. `Run in Microsoft Visual Studio`
+7. `Run in Docker`
+8. `Usage`
+9. `Configuration`
+10. `Documentation`
+11. `How to contribute`
+12. `License`
+
+Only optional capability sections may be omitted. Keep the project name, badges and short description above the sections. Put product features in Overview, client installation and SDK availability in CLI & SDK, task examples and permissions in Usage, and reference links in Documentation. Product topics use level-three or deeper headings inside these sections.
+
+Client capabilities extend the same Web README rather than introducing a separate format. New capability headings must first be added to this catalog before consumers use them. Keep existing section links working when moving topics. Document only published packages and verified commands; source-only clients use build instructions. README bodies remain project-specific and are not copied wholesale by NugetNinja.
+
+Keep the common prose as well as the section order identical for applications using the same template. Replace project names, package and image names, source paths and URLs with the current project's values. Product-specific descriptions, examples and configuration belong in Overview, Usage and Configuration. Client capabilities use the fixed CLI & SDK section; they do not require another complete Web README format.
+
+Keep configuration examples, field explanations, defaults and important usage instructions in the README. Detailed documentation supplements this information; it does not replace it.
 
 ## How to contribute
 

@@ -80,3 +80,7 @@ Keep the common prose as well as the section order identical for applications us
 * [S360](https://github.com/aiursoftweb/s360)
 * [AlertCenter](https://github.com/aiursoftweb/alertcenter)
 * [ChessServer](https://github.com/aiursoftweb/chessserver)
+
+## README information completeness
+
+Keep full configuration examples, field comments, defaults, persistence requirements and important usage instructions in the README. Detailed guides supplement the README. They must not be used to remove existing configuration or examples merely to shorten the document.
