@@ -81,6 +81,9 @@
   <data name="Auto compression and privacy" xml:space="preserve">
     <value>Compression automatique et confidentialité</value>
   </data>
+  <data name="Automatic AI localization in 29 languages." xml:space="preserve">
+    <value>Localisation automatique par IA en 29 langues.</value>
+  </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>Traduction automatique par IA en 28 langues.</value>
   </data>
