@@ -23,6 +23,10 @@ public abstract class TestBase
         Http = new HttpClient(handler);
     }
 
+    protected virtual string[] ServerArguments => [];
+
+    protected virtual Task PrepareServerAsync(IHost server) => Task.CompletedTask;
+
     [TestInitialize]
     public virtual async Task CreateServer()
     {
@@ -31,8 +35,9 @@ public abstract class TestBase
         _storagePath = Directory.CreateTempSubdirectory("AiursoftTests-").FullName;
         try
         {
-            Server = await AppAsync<Startup>([$"Storage:Path={_storagePath}"], port: reservation.Port);
+            Server = await AppAsync<Startup>([..ServerArguments, $"Storage:Path={_storagePath}"], port: reservation.Port);
             reservation.ConfigureServer(Server);
+            await PrepareServerAsync(Server);
             await Server.UpdateDbAsync<TemplateDbContext>();
             await Server.SeedAsync();
             await Server.StartAsync();
