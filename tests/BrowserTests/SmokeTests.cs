@@ -11,7 +11,7 @@ public class SmokeTests : BrowserTestBase
         await NavigateAsync("/");
         await Expect(Page.Locator("#main-slogan")).ToBeVisibleAsync();
 
-        const string assetRoot = "/UIStack/dist/";
+        const string assetRoot = "/node_modules/@aiursoft/uistack/dist/";
         var css = Page.WaitForResponseAsync(response => new Uri(response.Url).AbsolutePath == assetRoot + "css/app.css");
         var js = Page.WaitForResponseAsync(response => new Uri(response.Url).AbsolutePath == assetRoot + "js/app.js");
         await NavigateAsync("/Dashboard/Index");
