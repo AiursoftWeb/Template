@@ -81,6 +81,9 @@
   <data name="Auto compression and privacy" xml:space="preserve">
     <value>Otomatik sıkıştırma ve gizlilik</value>
   </data>
+  <data name="Automatic AI localization in 29 languages." xml:space="preserve">
+    <value>29 dilde otomatik yapay zeka yerelleştirmesi.</value>
+  </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>28 dilde otomatik yapay zeka çevirisi.</value>
   </data>
