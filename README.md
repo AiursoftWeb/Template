@@ -315,25 +315,6 @@ The Docker image copies this file to `/data/appsettings.json` on its first start
 
 The [application configuration](src/Aiursoft.Template/appsettings.json) documents the available settings. The [shared file manifest](ninja.yaml) identifies files maintained across derived applications.
 
-## Playwright 浏览器测试
-
-GitLab 的 `browser_test` 在无头 Google Chrome 中运行 `Browser` 分类的 MSTest 测试。测试启动真实的本地 Kestrel，使用 InMemory 数据库、测试种子和独立临时存储，不需要生产数据库或身份服务。普通测试 job 不运行浏览器用例；启用后，浏览器验证失败会阻止打包和部署。
-
-Runner 需预装 Google Chrome Stable（`google-chrome`）及其系统依赖，并确保 Playwright 能通过 `chrome` 通道启动浏览器。CI 不会下载浏览器。开发机装好 Chrome 后，可只运行模板冒烟测试：
-
-```bash
-dotnet test tests/Aiursoft.Template.Tests.csproj --filter 'TestCategory=Browser&FullyQualifiedName~SmokeTests'
-```
-
-GitLab 会保留 JUnit 报告，以及浏览器用例失败时可用的截图和 `trace.zip`，保留期为一天。请只使用合成测试数据，因为 trace 会记录页面和请求。
-
-### 下游项目接入
-
-1. 通过模板升级或手动迁移 `tests/BrowserTests/`、`Microsoft.Playwright` 引用和 `TestBase` 的扩展点。确认测试项目已加入解决方案，保留 `tests/BrowserTests/BrowserTestBase.cs` 作为 CI 启用标记。NugetNinja 同步 `.gitlab-ci.yml`，不会同步这些测试源码。
-2. 保留适合本项目的通用冒烟检查。若项目更换了首页、登录或 Dashboard，请把断言迁移到对应页面。
-3. 新增继承 `BrowserTestBase` 的 `[TestClass]` 编写业务流程。可使用 `ServerArguments` 提供测试配置，覆盖 `PrepareServerAsync` 在数据库初始化前配置可替换选项，或在测试中通过 `GetService<T>()` 播种业务数据。需要替换已注册服务时，请在构建测试宿主前完成 DI 注册；浏览器直接发起的外部请求可用 `Page.RouteAsync` 模拟。未来可覆盖 `BrowserType` 和 `LaunchOptions`，并在 Runner 预配相应浏览器。
-4. 在第一个接入 MR 中确认 `browser_test` 被创建并产生 JUnit 报告。尚未迁移的项目不会创建该 job。
-
 ## How to contribute
 
 There are many ways to contribute to the project: logging bugs, submitting pull requests, reporting issues, and creating suggestions.
