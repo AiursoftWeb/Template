@@ -221,70 +221,33 @@ deploy_public_nuget:
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
 
-.docker_release:
+deploy_docker_all:
     stage: deploy
-    environment: production
     timeout: 3h
-    retry: 2
+    retry:
+        max: 2
+    environment: production
     resource_group: docker-latest
-    variables:
-        HOME_IMAGE: "hub.aiursoft.com/$CI_PROJECT_PATH"
-    rules:
-        - if: '$CI_COMMIT_BRANCH == "master"'
-          exists: [Dockerfile]
-
-build_docker_image:
-    extends: .docker_release
     needs:
         - job: pack
           artifacts: false
     script:
-        - &login_home printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
-        - |
-            # A retried build must not replace a newer release already in the home registry.
-            release="$CI_PIPELINE_ID.$CI_JOB_ID"
-            auth=$(printf '%s:%s' "$LOCAL_DOCKER_USERNAME" "$LOCAL_DOCKER_PASSWORD" | base64 -w0)
-            current=$(mktemp)
-            trap 'rm -f "$current"' EXIT
-            status=$(printf 'Authorization: Basic %s\n' "$auth" | curl -sS -H @- -o "$current" -w '%{http_code}' \
-              -H 'Accept: application/vnd.oci.image.index.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json' \
-              "https://hub.aiursoft.com/v2/$CI_PROJECT_PATH/manifests/latest")
-            case "$status" in
-              200) previous=$(jq -ner 'input | select(.schemaVersion == 2) | .annotations["com.aiursoft.gitlab.release"] // "0"' "$current") ;;
-              404) previous=0 ;;
-              *) echo "Cannot read $HOME_IMAGE:latest (HTTP $status)." >&2; exit 1 ;;
-            esac
-            if [[ $(printf '%s\n' "$previous" "$release" | sort -V | tail -1) != "$release" ]]; then
-              echo "Home registry already has newer release $previous. Skipping build $release."
-              exit 0
-            fi
-        - >
-            docker buildx build . --builder aiur-global-builder --platform linux/amd64,linux/arm64
-            --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/
-            --tag "$HOME_IMAGE:latest" --annotation "index:com.aiursoft.gitlab.release=$release" --output type=registry,oci-mediatypes=true
+        - if [ "$CI_COMMIT_REF_NAME" = "master" ]; then TAG="latest"; else TAG="$CI_COMMIT_REF_NAME"; fi
+        - if [ "$CI_PROJECT_NAMESPACE" = "anduin" ]; then HUB_NAMESPACE="anduin2019"; else HUB_NAMESPACE="$CI_PROJECT_NAMESPACE"; fi
 
-deploy_docker_all:
-    extends: .docker_release
-    needs: [build_docker_image]
-    variables:
-        GIT_STRATEGY: empty
-    before_script:
-        - export DOCKER_CONFIG="$CI_PROJECT_DIR/.docker"
-        - *login_home
-        - printf '%s\n' "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    script:
-        - |
-            namespace="$CI_PROJECT_NAMESPACE"
-            if [[ "$namespace" == anduin ]]; then namespace=anduin2019; fi
-            target="docker.io/$namespace/$CI_PROJECT_NAME:latest"
-            digest() { docker buildx imagetools inspect --format '{{json .Manifest}}' "$1" | jq -er .digest; }
-            expected=$(digest "$HOME_IMAGE:latest")
-            docker buildx imagetools create --tag "$target" "$HOME_IMAGE@$expected"
-            actual=$(digest "$target")
-            if [[ "$actual" != "$expected" ]]; then
-              echo "Expected $expected at $target, got $actual." >&2
-              exit 1
-            fi
-            echo "Docker Hub has $target at $expected"
-    after_script:
-        - rm -f "$CI_PROJECT_DIR/.docker/config.json"
+        - LOCAL_TARGET_COM="hub.aiursoft.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:$TAG"
+        - PUBLIC_TARGET="$HUB_NAMESPACE/$CI_PROJECT_NAME:$TAG"
+
+        - echo "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+        - docker buildx use aiur-global-builder
+        # Both required destinations must succeed. China replication is handled
+        # asynchronously by puller_cn after the home-registry push completes.
+        - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ --tag "$LOCAL_TARGET_COM" --push
+        - docker buildx imagetools create --tag "$PUBLIC_TARGET" "$LOCAL_TARGET_COM"
+
+    rules:
+        - if: '$CI_COMMIT_BRANCH == "master"'
+          exists:
+              - Dockerfile
