@@ -223,6 +223,7 @@ deploy_public_nuget:
 
 .docker_release:
     stage: deploy
+    environment: production
     timeout: 3h
     retry: 2
     resource_group: docker-latest
@@ -234,7 +235,6 @@ deploy_public_nuget:
 
 build_docker_image:
     extends: .docker_release
-    environment: { name: production, action: prepare }
     needs:
         - job: pack
           artifacts: false
@@ -250,7 +250,7 @@ build_docker_image:
               -H 'Accept: application/vnd.oci.image.index.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json' \
               "https://hub.aiursoft.com/v2/$CI_PROJECT_PATH/manifests/latest")
             case "$status" in
-              200) previous=$(jq -er '.annotations["com.aiursoft.gitlab.release"] // "0"' "$current") ;;
+              200) previous=$(jq -ner 'input | select(.schemaVersion == 2) | .annotations["com.aiursoft.gitlab.release"] // "0"' "$current") ;;
               404) previous=0 ;;
               *) echo "Cannot read $HOME_IMAGE:latest (HTTP $status)." >&2; exit 1 ;;
             esac
@@ -265,7 +265,6 @@ build_docker_image:
 
 deploy_docker_all:
     extends: .docker_release
-    environment: production
     needs: [build_docker_image]
     variables:
         GIT_STRATEGY: empty
