@@ -245,26 +245,32 @@ build_docker_image:
     script:
         - printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
         - |
+            staged_image="$HOME_IMAGE:ci-$CI_PIPELINE_ID-$CI_JOB_ID"
             docker buildx build . --builder aiur-global-builder --platform linux/amd64,linux/arm64 \
               --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json \
               --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ \
-              --tag "$HOME_IMAGE:ci-$CI_PIPELINE_ID-$CI_JOB_ID" \
+              --tag "$staged_image" \
               --annotation "index:com.aiursoft.gitlab.release=$CI_PIPELINE_ID.$CI_JOB_ID" \
               --metadata-file image-build.json --push
-            jq -e --arg release "$CI_PIPELINE_ID.$CI_JOB_ID" \
-              '{release: $release, digest: (."containerimage.digest" | strings | select(test("^sha256:[0-9a-f]{64}$")))}' \
-              image-build.json > image-release.json
-            echo "Staged $HOME_IMAGE:ci-$CI_PIPELINE_ID-$CI_JOB_ID"
-            cat image-release.json
+            digest=$(jq -er '."containerimage.digest" | strings | select(test("^sha256:[0-9a-f]{64}$"))' image-build.json)
+            docker buildx imagetools inspect --raw "$staged_image" > image-index.json
+            printf '%s  image-index.json\n' "${digest#sha256:}" | sha256sum --check
+            echo "Staged $staged_image at $digest"
     artifacts:
         expire_in: 1 week
         paths:
-            - image-release.json
+            - image-index.json
 
 deploy_docker_all:
     extends: .docker_release
     environment: production
     resource_group: docker-latest
+    allow_failure:
+        exit_codes: 42 # Superseded releases do not count as successful deployments.
+    retry:
+        max: 2
+        when: [runner_system_failure, stuck_or_timeout_failure, job_execution_timeout, api_failure]
+        exit_codes: 1
     variables:
         GIT_STRATEGY: empty
     needs:
@@ -273,8 +279,9 @@ deploy_docker_all:
     before_script: []
     script:
         - |
-            digest=$(jq -er .digest image-release.json)
-            candidate_release=$(jq -er .release image-release.json)
+            trap 'exit 1' ERR
+            digest="sha256:$(sha256sum image-index.json | cut -d' ' -f1)"
+            candidate_release=$(jq -er '.annotations["com.aiursoft.gitlab.release"] | select(test("^[0-9]+\\.[0-9]+$"))' image-index.json)
             source="$HOME_IMAGE@$digest"
             hub_namespace="$CI_PROJECT_NAMESPACE"
             if [ "$hub_namespace" = "anduin" ]; then hub_namespace=anduin2019; fi
@@ -285,8 +292,9 @@ deploy_docker_all:
             trap 'rm -rf -- "$DOCKER_CONFIG"' EXIT
             printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
             # Only a missing tag is a first release. A registry or login error must stop publication.
-            http_status=$(curl --silent --show-error --output current-index.json --write-out '%{http_code}' \
-              --user "$LOCAL_DOCKER_USERNAME:$LOCAL_DOCKER_PASSWORD" \
+            registry_auth=$(printf '%s:%s' "$LOCAL_DOCKER_USERNAME" "$LOCAL_DOCKER_PASSWORD" | base64 -w0)
+            http_status=$(printf 'Authorization: Basic %s\n' "$registry_auth" | \
+              curl --silent --show-error --header @- --output current-index.json --write-out '%{http_code}' \
               --header 'Accept: application/vnd.oci.image.index.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json' \
               "https://hub.aiursoft.com/v2/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/manifests/latest")
             case "$http_status" in
@@ -297,7 +305,7 @@ deploy_docker_all:
             # Pipeline then build job orders retries even when two builds use the same Git commit.
             if [ "$(printf '%s\n' "$current_release" "$candidate_release" | sort -V | tail -1)" != "$candidate_release" ]; then
               echo "Release $candidate_release was superseded by $current_release. Both latest tags were left untouched."
-              exit 0
+              exit 42
             fi
 
             publish() {
