@@ -150,7 +150,6 @@ validate_docker:
     needs:
         - build
     script:
-        - docker buildx version
         - docker buildx use aiur-global-builder
         - docker buildx build . --platform linux/amd64,linux/arm64 --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/
     rules:
@@ -225,101 +224,68 @@ deploy_public_nuget:
 .docker_release:
     stage: deploy
     timeout: 3h
-    retry:
-        max: 2
+    retry: 2
+    resource_group: docker-latest
     variables:
-        HOME_IMAGE: "hub.aiursoft.com/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME"
+        HOME_IMAGE: "hub.aiursoft.com/$CI_PROJECT_PATH"
     rules:
         - if: '$CI_COMMIT_BRANCH == "master"'
-          exists:
-              - Dockerfile
+          exists: [Dockerfile]
 
 build_docker_image:
     extends: .docker_release
-    environment:
-        name: production
-        action: prepare
+    environment: { name: production, action: prepare }
     needs:
         - job: pack
           artifacts: false
     script:
-        - printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
+        - &login_home printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
         - |
-            staged_image="$HOME_IMAGE:ci-$CI_PIPELINE_ID-$CI_JOB_ID"
-            docker buildx build . --builder aiur-global-builder --platform linux/amd64,linux/arm64 \
-              --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json \
-              --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ \
-              --tag "$staged_image" \
-              --annotation "index:com.aiursoft.gitlab.release=$CI_PIPELINE_ID.$CI_JOB_ID" \
-              --metadata-file image-build.json --output type=registry,oci-mediatypes=true
-            digest=$(jq -er '."containerimage.digest" | strings | select(test("^sha256:[0-9a-f]{64}$"))' image-build.json)
-            docker buildx imagetools inspect --raw "$staged_image" > image-index.json
-            printf '%s  image-index.json\n' "${digest#sha256:}" | sha256sum --check
-            jq -e --arg release "$CI_PIPELINE_ID.$CI_JOB_ID" '.annotations["com.aiursoft.gitlab.release"] == $release' image-index.json > /dev/null
-            echo "Staged $staged_image at $digest"
-    artifacts:
-        expire_in: 1 week
-        paths:
-            - image-index.json
+            # A retried build must not replace a newer release already in the home registry.
+            release="$CI_PIPELINE_ID.$CI_JOB_ID"
+            auth=$(printf '%s:%s' "$LOCAL_DOCKER_USERNAME" "$LOCAL_DOCKER_PASSWORD" | base64 -w0)
+            current=$(mktemp)
+            trap 'rm -f "$current"' EXIT
+            status=$(printf 'Authorization: Basic %s\n' "$auth" | curl -sS -H @- -o "$current" -w '%{http_code}' \
+              -H 'Accept: application/vnd.oci.image.index.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json' \
+              "https://hub.aiursoft.com/v2/$CI_PROJECT_PATH/manifests/latest")
+            case "$status" in
+              200) previous=$(jq -er '.annotations["com.aiursoft.gitlab.release"] // "0"' "$current") ;;
+              404) previous=0 ;;
+              *) echo "Cannot read $HOME_IMAGE:latest (HTTP $status)." >&2; exit 1 ;;
+            esac
+            if [[ $(printf '%s\n' "$previous" "$release" | sort -V | tail -1) != "$release" ]]; then
+              echo "Home registry already has newer release $previous. Skipping build $release."
+              exit 0
+            fi
+        - >
+            docker buildx build . --builder aiur-global-builder --platform linux/amd64,linux/arm64
+            --build-arg NUGET_SOURCE=https://nupkg.aiursoft.com/v3/index.json --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/
+            --tag "$HOME_IMAGE:latest" --annotation "index:com.aiursoft.gitlab.release=$release" --output type=registry,oci-mediatypes=true
 
 deploy_docker_all:
     extends: .docker_release
     environment: production
-    resource_group: docker-latest
-    allow_failure:
-        exit_codes: 42 # Superseded releases do not count as successful deployments.
-    retry:
-        max: 2
-        when: [runner_system_failure, stuck_or_timeout_failure, job_execution_timeout, api_failure]
-        exit_codes: 1
+    needs: [build_docker_image]
     variables:
         GIT_STRATEGY: empty
-    needs:
-        - job: build_docker_image
-          artifacts: true
-    before_script: []
+    before_script:
+        - export DOCKER_CONFIG="$CI_PROJECT_DIR/.docker"
+        - *login_home
+        - printf '%s\n' "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     script:
         - |
-            trap 'exit 1' ERR
-            digest="sha256:$(sha256sum image-index.json | cut -d' ' -f1)"
-            candidate_release=$(jq -er '.annotations["com.aiursoft.gitlab.release"] | select(test("^[0-9]+\\.[0-9]+$"))' image-index.json)
-            source="$HOME_IMAGE@$digest"
-            hub_namespace="$CI_PROJECT_NAMESPACE"
-            if [ "$hub_namespace" = "anduin" ]; then hub_namespace=anduin2019; fi
-            public_image="docker.io/$hub_namespace/$CI_PROJECT_NAME"
-
-            export DOCKER_CONFIG
-            DOCKER_CONFIG=$(mktemp -d)
-            trap 'rm -rf -- "$DOCKER_CONFIG"' EXIT
-            printf '%s\n' "$LOCAL_DOCKER_PASSWORD" | docker login hub.aiursoft.com -u "$LOCAL_DOCKER_USERNAME" --password-stdin
-            # Only a missing tag is a first release. A registry or login error must stop publication.
-            registry_auth=$(printf '%s:%s' "$LOCAL_DOCKER_USERNAME" "$LOCAL_DOCKER_PASSWORD" | base64 -w0)
-            http_status=$(printf 'Authorization: Basic %s\n' "$registry_auth" | \
-              curl --silent --show-error --header @- --output current-index.json --write-out '%{http_code}' \
-              --header 'Accept: application/vnd.oci.image.index.v1+json, application/vnd.docker.distribution.manifest.list.v2+json, application/vnd.oci.image.manifest.v1+json, application/vnd.docker.distribution.manifest.v2+json' \
-              "https://hub.aiursoft.com/v2/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME/manifests/latest")
-            case "$http_status" in
-              200) current_release=$(jq -er '.annotations["com.aiursoft.gitlab.release"] // "0.0" | select(test("^[0-9]+\\.[0-9]+$"))' current-index.json) ;;
-              404) current_release=0.0 ;;
-              *) echo "Could not read $HOME_IMAGE:latest (HTTP $http_status)." >&2; exit 1 ;;
-            esac
-            # Pipeline then build job orders retries even when two builds use the same Git commit.
-            if [ "$(printf '%s\n' "$current_release" "$candidate_release" | sort -V | tail -1)" != "$candidate_release" ]; then
-              echo "Release $candidate_release was superseded by $current_release. Both latest tags were left untouched."
-              exit 42
+            namespace="$CI_PROJECT_NAMESPACE"
+            if [[ "$namespace" == anduin ]]; then namespace=anduin2019; fi
+            target="docker.io/$namespace/$CI_PROJECT_NAME:latest"
+            digest() { docker buildx imagetools inspect --format '{{json .Manifest}}' "$1" | jq -er .digest; }
+            expected=$(digest "$HOME_IMAGE:latest")
+            docker buildx imagetools create --tag "$target" "$HOME_IMAGE@$expected"
+            actual=$(digest "$target")
+            if [[ "$actual" != "$expected" ]]; then
+              echo "Expected $expected at $target, got $actual." >&2
+              exit 1
             fi
-
-            publish() {
-              docker buildx imagetools create --tag "$1:latest" "$source"
-              docker buildx imagetools inspect --raw "$1:latest" > published-index.json
-              actual="sha256:$(sha256sum published-index.json | cut -d' ' -f1)"
-              if [ "$actual" != "$digest" ]; then
-                echo "Expected $1:latest at $digest, registry returned $actual." >&2
-                return 1
-              fi
-              echo "Published $1:latest at $digest"
-            }
-            # The China mirror can pick up the home release while Docker Hub is still syncing.
-            publish "$HOME_IMAGE"
-            printf '%s\n' "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            publish "$public_image"
+            echo "Docker Hub has $target at $expected"
+    after_script:
+        - rm -f "$CI_PROJECT_DIR/.docker/config.json"
