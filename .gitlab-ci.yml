@@ -251,10 +251,11 @@ build_docker_image:
               --build-arg NPM_REGISTRY=https://nopkg.aiursoft.com/npm/ \
               --tag "$staged_image" \
               --annotation "index:com.aiursoft.gitlab.release=$CI_PIPELINE_ID.$CI_JOB_ID" \
-              --metadata-file image-build.json --push
+              --metadata-file image-build.json --output type=registry,oci-mediatypes=true
             digest=$(jq -er '."containerimage.digest" | strings | select(test("^sha256:[0-9a-f]{64}$"))' image-build.json)
             docker buildx imagetools inspect --raw "$staged_image" > image-index.json
             printf '%s  image-index.json\n' "${digest#sha256:}" | sha256sum --check
+            jq -e --arg release "$CI_PIPELINE_ID.$CI_JOB_ID" '.annotations["com.aiursoft.gitlab.release"] == $release' image-index.json > /dev/null
             echo "Staged $staged_image at $digest"
     artifacts:
         expire_in: 1 week
